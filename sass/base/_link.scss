@@ -1,0 +1,55 @@
+/*
+Link
+
+Markup: html/link.html
+
+Styleguide text.link
+*/
+
+a {
+  &:hover,
+  &:active,
+  &:focus {
+    color: $grey-base;
+    text-decoration: underline;
+  }
+
+  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    @extend .is-external;
+  }
+  @media print {
+    &:after {
+      content: none !important;
+    }
+  }
+}
+
+p a {
+  text-decoration: underline;
+}
+
+.is-external {
+  position: relative;
+  &:after {
+    @extend .icon--after;
+    @extend .icon--external;
+    font-size: 75%;
+    margin-left: 0.4em;
+    margin-right: 0.2em;
+  }
+}
+
+// External link specific adjustments
+.page-content {
+  ul,
+  p {
+    a {
+      &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+
+        &.btn {
+          padding-right: 2.1em;
+        }
+      }
+    }
+  }
+}

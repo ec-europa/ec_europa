@@ -1,0 +1,53 @@
+/*
+Feedback message
+
+Markup: html/feedback-message.html
+
+Styleguide form.feedback-message
+*/
+.feedback-message {
+  color: $grey-dark;
+  max-width: none;
+
+  &.is-disabled {
+    color: $form-control-color-disabled;
+  }
+
+  &.is-error {
+    background-color: $grey-light;
+    padding: 12px;
+
+    // Error icon.
+    &:before {
+      content: '';
+      background: url('../images/svg/error.svg') no-repeat;
+      background-size: 1.5em;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 12px;
+      display: inline-block;
+      margin-bottom: -4px;
+    }
+  }
+  @extend .hidden-print;
+}
+
+@include breakpoint(screen-xs-min) {
+  .feedback-message {
+    &.is-error {
+      &:before {
+        margin-bottom: -6px;
+      }
+    }
+  }
+}
+
+.no-svg {
+  .feedback-message {
+    &.is-error {
+      &:before {
+        background: url('../images/png/error.png') no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/*
+Lists
+
+Markup: html/lists.html
+
+Styleguide text.lists
+*/
+
+ul,
+ol {
+  padding-left: 18px;
+}
+
+.region-content {
+  ul,
+  ol {
+    @extend .paragraph;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding-left: 18px;
+  }
+}

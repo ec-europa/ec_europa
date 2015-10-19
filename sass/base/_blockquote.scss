@@ -1,0 +1,62 @@
+/*
+Blockquote
+
+Markup: html/blockquote.html
+
+Styleguide text.blockquote
+*/
+
+$small-quote-size: 1em;
+$small-quote-width: 0.5em;
+
+blockquote,
+.blockquote {
+  @extend .paragraph;
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: $font-size-big;
+  color: $grey-dark;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.6em 1.5em;
+  clear: both;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+
+  // Drupal fix.
+  p {
+    line-height: inherit;
+    display: inline;
+  }
+  &:before {
+    content: open-quote;
+  }
+
+  &:after {
+    content: close-quote;
+  }
+}
+
+.blockquote--small {
+  padding-left: 0;
+  font-size: $font-size-little;
+  font-style: normal;
+  color: $text-color;
+  font-family: $font-family-base;
+  margin-bottom: 0;
+}
+
+
+// State
+.no-svg {
+  blockquote {
+    p {
+      &:before,
+      &:after {
+        background-image: url('../images/png/quote.png');
+      }
+    }
+  }
+}

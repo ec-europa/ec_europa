@@ -1,0 +1,83 @@
+/*
+Search form
+
+Markup: html/search-form.html
+
+Styleguide: siteheader.searchform
+*/
+.search-form {
+  overflow: hidden;
+  border: 1px solid $grey;
+  margin-bottom: 1em;
+  @extend .hidden-print;
+}
+
+.search-form__textfield-wrapper {
+  margin: 0;
+  width: 83%;
+  float: left;
+}
+
+.search-form__textfield {
+  margin: 0;
+  border: none;
+  width: 83%;
+  float: left;
+}
+
+.search-form__btn {
+  @extend .icon;
+  @extend .icon--search;
+  width: 17%;
+  float: left;
+  text-indent: 10em;
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  min-height: 2.75em;
+  border: none !important;
+
+  &:before {
+    text-indent: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    width: 100%;
+    line-height: 1.9em;
+  }
+}
+
+.front {
+  .search-form__btn {
+    border: 1px solid #fff !important;
+  }
+}
+
+@include breakpoint(screen-xs-min) {
+  .search-form__textfield {
+    width: 67%;
+  }
+
+  .search-form__btn {
+    text-indent: 0;
+    width: 33%;
+
+    &:before {
+      display: none !important;
+    }
+  }
+}
+
+@include breakpoint(screen-md-min) {
+  .search-form {
+    width: 340px;
+  }
+}
+
+.front {
+  .search-form {
+    border: none;
+  }
+}

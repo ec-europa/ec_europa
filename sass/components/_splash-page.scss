@@ -1,0 +1,187 @@
+/*
+Splash Page
+
+Markup: html/splash-page.html
+
+Styleguide splashpage
+*/
+
+// Local variables
+$table-border: 1px solid #245898;
+$padding-splash-xl: 2em; // 52px
+
+.splash-page {
+
+  &__site-header {
+    background: #ffffff;
+
+    .logo {
+      margin: 16px auto 40px auto;
+      float: none;
+      background: url("../images/svg/logo.svg") center center no-repeat;
+      background-origin: content-box;
+
+      .no-svg & {
+        background-image: url("../images/png/logo.png") center center no-repeat;
+      }
+    }
+
+    @include breakpoint(screen-xs-min) {
+      .logo {
+        width: 290px;
+        height: 153px;
+      }
+    }
+
+    @include breakpoint(screen-sm-min) {
+      .logo {
+        width: 378px;
+        height: 193px;
+      }
+    }
+
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+
+    h2 {
+      display: none;
+      color: #ffffff;
+      font-size: $font-size-mid;
+      padding-top: $padding-splash-xl;
+      padding-bottom: $padding-splash-xl;
+      clear:both;
+    }
+  }
+
+  &__helper-text {
+    color: #ffffff;
+    font-size: $font-size-little;
+    margin-top: $padding-splash-xl;
+    clear: both;
+
+    p {
+      max-width: 100%;
+    }
+
+  }
+
+  &__btn-language {
+    background: #ffffff;
+    margin-bottom: 4px;
+    width: 100%;
+    text-align: left !important; // overriding bootstrap btn class
+
+    &:hover {
+      color: #000000;
+      background: $yellow-light;
+    }
+
+    &.icon--check:before {
+      display: none;
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    padding: 0.5em 0 0.5em 1em;
+    font-size: $font-size-little;
+    font-weight: normal;
+    color: #ffffff;
+    display: none;
+
+    &:hover {
+      color: #ffffff;
+    }
+
+    &:after {
+      content: "X";
+      float: right;
+      display: inline-block;
+      border: 1px solid #ffffff;
+      margin-left: 0.5em;
+      width: 1.6em;
+      height: 1.6em;
+      border-radius: 1.1em;
+      text-align: center;
+    }
+  }
+
+  &--overlay {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 68, 148, 0.95);
+    overflow-x: auto;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    text-align: left;
+
+    h2 {
+      display: block;
+    }
+
+    .splash-page__btn-language {
+      &.is-active {
+        color: #000000;
+        background: $yellow-light;
+        box-shadow: none;
+      }
+      &.icon--check:before {
+        float: right;
+        display: block;
+      }
+    }
+
+    .splash-page__btn-close {
+      display: block;
+    }
+
+  }
+}
+
+// Drupal-specific hacks
+// specific to a case of having a page
+body {
+  &.disablescroll {
+    overflow: hidden;
+  }
+}
+.page-splash {
+  background: rgba(0, 68, 148, 1);
+}
+
+.splash-page {
+  &__helper-text {
+    table {
+      width: 100%;
+    }
+    tbody {
+      border-bottom: $table-border;
+
+      tr {
+        border-top: $table-border;
+        clear: both;
+
+        th {
+          vertical-align: top;
+          min-width: 6em;
+          font-weight: bold;
+          padding-top: 0.6em;
+        }
+
+        td, th {
+          padding: 0.6em 0 0.6em 0;
+        }
+      }
+    }
+  }
+}

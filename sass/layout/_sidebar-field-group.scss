@@ -1,0 +1,24 @@
+.sidebar-field-group {
+  @extend .row;
+
+  h2 {
+    @extend .col-md-12;
+  }
+}
+
+.sidebar-field-group--important {
+  padding-top: 30px;
+}
+
+.sidebar-field-group__main {
+  @extend .col-sm-8;
+}
+
+.sidebar-field-group__sidebar {
+  @extend .col-sm-4;
+}
+
+// Drupal.
+.front .sidebar-field-group {
+  @extend .sidebar-field-group--important;
+}

@@ -1,0 +1,16 @@
+/*
+Paragraphs
+
+Markup: html/paragraphs.html
+
+Styleguide text.paragraphs
+*/
+
+.paragraph {
+  margin-bottom: 0.8em;
+  max-width: 32em;
+}
+
+p {
+  @extend .paragraph;
+}

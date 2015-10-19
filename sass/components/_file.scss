@@ -1,0 +1,78 @@
+/*
+File
+
+File component used to show info about the file that can be downloaded
+by clicking on the component
+
+Markup: html/file.html
+
+Styleguide file
+*/
+
+.file {
+  @extend .paragraph;
+  background: $grey-lighter;
+  padding: 1.333em 1.333em 1.333em 1.333em;
+  overflow: hidden;
+  @extend .hidden-print;
+}
+
+.file__icon {
+  float: left;
+  margin-right: 1.333em;
+  &:before {
+    color: $grey;
+    font-size: 2.778em;
+  }
+}
+
+.file__metadata {
+  line-height: 1;
+}
+
+.file__title {
+  font-weight: bold;
+  line-height: initial;
+}
+
+.file__language {
+  font-weight: bold;
+  font-size: $font-size-little;
+  display: block;
+  line-height: initial;
+  margin-top: 0.556em;
+}
+
+.file__info {
+  font-size: $font-size-xsmall;
+  line-height: initial;
+  margin-top: 0.556em;
+}
+
+.file__btn {
+  margin-bottom: 0;
+  margin-top: 0.778em;
+  width: 10.5em;
+
+  &:after {
+    @extend .icon--after;
+    @extend .icon--download;
+  }
+}
+
+@include breakpoint(screen-msm-min) {
+  .file__metadata,
+  .file__btn {
+    overflow: hidden;
+  }
+
+  .file__metadata {
+    float: left;
+    width: 15em;
+  }
+
+  .file__btn {
+    float: right;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,26 @@
+/*
+Facet tag
+
+Markup: html/facet-tag.html
+
+Styleguide forms.facettag
+*/
+
+.facet-tag {
+  display: inline-block;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+
+  & > * {
+    display: inline-block;
+  }
+  @extend .hidden-print;
+}
+
+.facet-tag__value {
+  background: $grey-light;
+  padding: 0.1em 0.5em;
+  margin-left: 0.5em;
+  font-weight: bold;
+  border-radius: 0.9em;
+}

@@ -1,0 +1,125 @@
+.feedback-form {
+  margin: 0;
+}
+
+.feedback-form__wrapper {
+  border-top: 1px solid $brand-primary;
+  background: #fff;
+  &:hover,
+  &:active,
+  &:focus,
+  &.is-open {
+    background: $grey-lightest;
+  }
+  @extend .hidden-print;
+}
+
+// Feedback form
+.feedback-form__trigger {
+  text-decoration: none;
+  color: $brand-primary;
+  display: block;
+  padding: 0.667em 0 0.556em;
+  font-size: $font-size-little;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.feedback-form__content {
+  margin: 0.8em 0 2em;
+}
+
+.feedback-form__text {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-left: 1.944em;
+}
+
+.feedback-form__btn {
+  width: 12em;
+
+  .icon {
+    font-size: $font-size-xsmall;
+  }
+}
+
+// Bootstrap accordion
+#feedback-form__accordion {
+  margin-bottom: 1em;
+  border: 1px solid #575757;
+
+  .accordion-group {
+    border-top: 1px solid #575757;
+    padding:10px;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    .accordion-toggle {
+      background: url('../images/svg/checkbox-checked--blue.svg') no-repeat;
+      line-height: 20px;
+      padding-left: 25px;
+      color: $brand-primary;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      text-decoration: none;
+      font-size: $font-size-little;
+
+      &.collapsed {
+        background: url('../images/svg/checkbox-unchecked--grey.svg') no-repeat;
+        color: #404040;
+        font-weight: 400;
+
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .accordion-body {
+      padding-left: 25px;
+      .accordion-inner {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+@include breakpoint(screen-sm-min) {
+  .feedback-form__text {
+    float: left;
+    width: 10.111em;
+    padding-top: 8px;
+  }
+
+  .feedback-form__btn {
+    margin-left: 12.055em;
+    font-size: 1em; // TEMP, until buttons have styling
+  }
+
+  #feedback-form__accordion {
+    overflow: hidden;
+  }
+}
+
+
+.no-svg {
+  // Bootstrap accordion
+  #feedback-form__accordion {
+    .accordion-group {
+      .accordion-toggle {
+        background: url('../images/png/checkbox.png') no-repeat;
+
+        &.collapsed {
+          background-position: 0 -21px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/*
+Button group
+
+Custom bootstrap button group
+
+Markup: html/btn-group.html
+
+Styleguide buttons.group
+*/
+
+.btn-group {
+  margin-top: 1em;
+  @extend .hidden-print;
+
+  .btn {
+   margin-right: 0.4em;
+   margin-bottom: 0;
+
+   &:last-child {
+     margin-right: 0;
+   }
+  }
+}

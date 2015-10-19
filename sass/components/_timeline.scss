@@ -1,0 +1,51 @@
+/*
+Timeline
+
+Markup: html/timeline.html
+
+Styleguide timeline
+*/
+.timeline {
+  border-left: 4px solid $yellow-light;
+  padding-left: 1.667em;
+  padding-bottom: 0.833em;
+  position: relative;
+
+  .timeline__item-title {
+    font-weight: bold;
+    &:before {
+      content: '';
+      position: absolute;
+      background: #fff;
+      border: 3px solid $grey-dark;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      left: -0.5em;
+      margin-top: 0.2em;
+    }
+  }
+
+  .timeline__text {
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    ul,
+    ol {
+      padding-left: 18px;
+    }
+
+    & > * {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+@include breakpoint(screen-xs-min) {
+  .timeline {
+    .timeline__item-title {
+      &:before {
+        margin-left: 2px;
+      }
+    }
+  }
+}

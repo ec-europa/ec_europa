@@ -1,0 +1,8 @@
+.padding-reset {
+  padding:0 !important;
+}
+
+// States
+.is-not-animating {
+  @include transition(none);
+}

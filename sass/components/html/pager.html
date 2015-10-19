@@ -1,0 +1,28 @@
+<ul class="pager">
+    <li class="pager__item pager__back">
+        <a class="pager__btn" href="/filter?value=test&amp;page=1" title="Back">
+            <span class="pager__back-arrow icon icon--left"></span>
+            <span class="pager__back-text sr-only">Previous</span>
+        </a>
+    </li>
+    <li class="pager__item pager__combo">
+        <span class="pager__combo-upper">
+            <select class="pager__combo-dropdown">
+                <option value="/filter?value=test">Page 1</option>
+                <option value="/filter?value=test&amp;page=1">Page 2</option>
+                <option value="" selected="selected">Page 3</option>
+                <option value="/filter?value=test&amp;page=3">Page 4</option>
+            </select>
+        </span>
+        <span class="pager__combo-container">
+            <span class="pager__combo-current">page 3</span>
+            <span class="pager__combo-total">of 4</span>
+        </span>
+    </li>
+    <li class="pager__item pager__forward">
+        <a class="pager__btn" href="/filter?value=test&amp;page=3" title="Forward">
+            <span class="pager__forward-text">Next</span>
+            <span class="pager__forward-arrow icon icon--right"></span>
+        </a>
+    </li>
+</ul>

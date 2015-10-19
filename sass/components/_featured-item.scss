@@ -1,0 +1,41 @@
+/*
+Featured item
+
+Markup: html/featured-item.html
+
+Styleguide featureditem
+*/
+
+.featured-item {
+  background-color: $grey-lighter;
+  padding: 15px 0px;
+  border-left: 0.556em solid $yellow-light;
+  width: 100%;
+  float: left;
+  margin-bottom: 1.667em;
+}
+
+.featured-item__image {
+  @extend .col-md-5;
+
+  picture {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.featured-item__content {
+  @extend .col-md-7;
+
+  p {
+    font-size: $font-size-little;
+  }
+
+  h3 {
+
+    a {
+      color: $grey-base;
+    }
+  }
+}

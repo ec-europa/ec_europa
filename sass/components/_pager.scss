@@ -1,0 +1,178 @@
+/*
+Pager
+
+Depends on 'icon' component for showing back/forward arrows.
+
+Markup: html/pager.html
+
+Styleguide pager
+*/
+
+.pager {
+  font-weight: bold;
+  margin: 15px auto;
+  overflow: hidden;
+}
+
+.pager__item {
+  list-style: none;
+  float: left;
+}
+
+.pager__btn {
+  color: #fff;
+  background: $blue-dark;
+  display: block;
+  font-size: $font-size-little;
+  margin: 0;
+  padding: 30px 35px;
+  line-height: 1em;
+  text-align: center;
+
+  &:hover, &:focus,
+  &:active, &:visited {
+    color: #fff;
+  }
+}
+
+// back as a child of pager
+.pager__back {
+  width: 45%;
+
+  // Ajax throbber should not make button larger in height
+  .pager__btn {
+    height: 80px;
+    overflow: hidden;
+  }
+}
+
+.pager__back-arrow {
+  display: inline-block;
+  height: 20px;
+  width: 10px;
+  position: relative;
+  left: -5px;
+  font-size: 1.3em;
+}
+
+// forward as a child of pager
+.pager__forward {
+  display: inline-block;
+  float: right;
+  width: 45%;
+  text-align: right;
+  margin-right: 10px;
+
+  // Ajax throbber should not make button larger in height
+  .pager__btn {
+    height: 80px;
+    overflow: hidden;
+  }
+}
+
+.pager__forward-arrow {
+  padding-left: 10px;
+  height: 20px;
+  display: inline-block;
+  font-size: 1.3em;
+  position: relative;
+}
+
+.pager__forward-text {
+  display: none;
+}
+
+.pager__combo {
+  display: none;
+  background: $grey-lighter;
+  font-size: $font-size-little;
+  text-align: center;
+  margin: 0 3px;
+  height: 80px;
+  width: 180px;
+
+  &.first {
+    margin-left: 83px;
+  }
+}
+
+.pager__combo-upper {
+  position: relative;
+}
+
+.pager__combo-dropdown {
+  background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 125px center;
+  background-size: 15px 10px;
+  border: none;
+  color: $blue-dark;
+  cursor: pointer;
+  display: block;
+  margin-top: 15px;
+  padding: 0 29%;
+  width: 100%;
+  clear: both;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.pager__combo-container {
+  display: inline-block;
+}
+
+.pager__combo-current {
+  display: none;
+  padding-top: 20px;
+}
+
+.pager__combo-total {
+  display: inline-block;
+  font-weight: normal;
+}
+
+.no-js {
+  .pager__combo-current {
+    display: inline-block;
+  }
+  .pager__combo-dropdown {
+    display: none;
+  }
+}
+
+.no-svg {
+  .pager__combo-dropdown {
+    background-image: url("../images/png/arrow-down-blue.png");
+  }
+}
+
+@media (min-width: 530px) {
+  .pager {
+    width: 460px;
+  }
+
+  .pager__combo {
+    display: block;
+  }
+  .pager__back {
+    width: auto;
+    .pager__btn {
+      width: 80px;
+    }
+  }
+  .pager__forward {
+    float: none;
+    width: 160px;
+  }
+  .pager__forward-text {
+    display: inline;
+    padding-left: 15px;
+    padding-top: 4px;
+    float: left;
+  }
+}
+
+// Drupal-specific hack.
+.region-content ul.pager {
+  margin: 15px auto;
+}

@@ -1,0 +1,120 @@
+/*
+Language select (Page)
+
+Page specific language selection.
+
+Markup: html/lang-select-page.html
+
+.lang-select-page               - Default, background is light
+.lang-select-page--dark         - Background is dark blue or a picture
+.lang-select-page--transparent  - Transparent background
+.lang-select-page--dropdown     - When JS converts the ul to select
+
+Styleguide: langselect
+*/
+
+.lang-select-page {
+  @extend .hidden-print;
+
+  background: $grey-lightest;
+  border-bottom: 1px solid $grey;
+  font-size: $font-size-xsmall;
+  width:100%;
+
+  .front & {
+    display: none;
+  }
+}
+
+.icon.lang-select-page__icon {
+  @extend .hidden-print;
+
+  float:left;
+  margin: 0 0.7em 0 0;
+  font-size: 2em;
+  padding: 0;
+
+  &:before {
+    padding-top:30%;
+    float: left;
+  }
+}
+
+.lang-select-page__unavailable {
+  text-decoration: line-through;
+}
+
+ul.lang-select-page__list {
+  float:left;
+  padding: 0;
+  margin: 0;
+
+  .lang-select-page__option {
+    list-style: none;
+    float: left;
+    padding: 0.85em;
+
+    a {
+      display: block;
+    }
+
+    &.is-selected {
+      background: $yellow-light;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
+
+.lang-select-page--dark {
+  border: none;
+}
+
+.lang-select-page--transparent {
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+
+  select.lang-select-page__list {
+    background-color: $blue-darker;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    line-height: 3.2;
+
+    &:hover, &:active {
+      border: 0;
+    }
+
+    & > option {
+      background: $blue-darker;
+    }
+
+    &:after {
+      @extend .icon--after;
+      @extend .icon--arrow-down;
+    }
+  }
+
+  .lang-select-page__option {
+    a { color: #fff; }
+  }
+}
+
+@include breakpoint(screen-sm-min) {
+  .lang-select-page__option {
+    display: inline-block;
+  }
+  .lang-select-page__unavailable {
+    margin-right: 3em;
+  }
+}
+
+select.lang-select-page__list {
+  @extend .hidden-print;
+  background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
+  border-radius: 0;
+  padding-left: 0.5em;
+  width: 10em;
+  cursor: pointer;
+}

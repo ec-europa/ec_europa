@@ -1,0 +1,39 @@
+/*
+Social Media
+
+Social Media Links
+
+Markup: html/social-media-links.html
+
+Styleguide social
+*/
+
+.social-media-links {
+  background-color: $grey-lighter;
+  padding: 30px;
+  .social-media-links__list {
+    list-style-type: none;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  @extend .hidden-print;
+}
+
+.social-media-links__item {
+  margin-bottom: 0.7em;
+  & > a {
+    width: 100%;
+    display: block;
+
+    &:before {
+      margin-bottom: 0px;
+    }
+    &:after, &.is-external:after {
+      display: none !important;
+    }
+  }
+  &--noicon {
+    font-size: 0.8em;
+    margin-top: 1.2em;
+  }
+}

@@ -1,0 +1,241 @@
+/*
+Buttons
+
+Custom bootstrap buttons styling
+
+Markup: html/btn.html
+
+.btn-default     - Button default
+.btn-primary     - Button primary
+.btn-secondary   - Button secondary
+.btn-ctn         - Button call to action
+.btn-ctn--border - Button call to action with border
+.btn-menu        - BUtton menu
+
+Styleguide buttons
+*/
+@mixin white-space-reset() {
+  white-space: normal;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  line-height: 1.667;
+}
+
+.btn {
+  margin-bottom: 1em;
+  line-height: 1;
+  border-radius: 0;
+  border-width: 2px;
+  font-weight: $font-weight-bold;
+  padding: 0.75em 1em;
+  min-height: 2.75em;
+  font-size: $font-size-little;
+  text-decoration: none;
+  @extend .hidden-print;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    @include box-shadow(none);
+  }
+
+  &:focus {
+    outline: 2px solid $yellow-light;
+    border-color: $yellow-light;
+  }
+
+  &:after {
+    line-height: inherit;
+    position: static;
+  }
+
+  &.btn-default {
+    border-color: $brand-primary;
+    color: $brand-primary;
+    background: none;
+
+    &:hover {
+      background: $brand-primary;
+      color: #fff;
+    }
+
+    &:active,
+    &:focus {
+      background: #fff;
+      color: $brand-primary;
+    }
+  }
+
+  &.btn-primary {
+    border-color: $brand-primary;
+
+    &:hover,
+    &:active {
+      background: #fff;
+      color: $brand-primary;
+    }
+
+    &:focus {
+      color: #fff;
+      background: $brand-primary;
+    }
+  }
+
+  &.btn-secondary {
+    border-color: #fff;
+    background: #fff;
+    color: $brand-primary;
+  }
+
+  &.btn-ctn {
+    background: $yellow-light;
+    color: #000;
+    @include white-space-reset();
+
+    &:hover,
+    &:active {
+      border-color: $text-color;
+      background: #fff;
+    }
+
+    &:focus {
+      border-color: $text-color;
+      outline-color: $text-color;
+    }
+
+    &:after {
+      margin-left: 10px;
+      font-size: 0.8em;
+      @extend .icon--after;
+      @extend .icon--right;
+    }
+  }
+
+  &.btn-menu {
+    border-color: $brand-primary;
+    background: $brand-primary;
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+
+    &:active,
+    &:focus {
+      outline: 2px solid $yellow-light;
+    }
+
+    &:focus {
+      border-color: $yellow-light;
+      outline-color: $yellow-light;
+    }
+
+    &:after {
+      margin-left: 6px !important;
+      font-size: 0.45em;
+      top: -2px;
+      position: relative;
+      transition: all 0.3s ease 0s;
+      @extend .icon--after;
+      @extend .icon--arrow-down;
+    }
+
+    &.is-collapsed {
+      &:after {
+        @include rotate(180deg);
+      }
+    }
+  }
+}
+
+.btn-ctn--border {
+  background: $yellow-light;
+  color: #000;
+  border-color: #000;
+  &:hover,
+  &:active {
+    border-color: #000;
+  }
+
+  &:focus {
+    border-color: $text-color;
+    outline-color: $text-color;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+
+// Class that can be also used on a button wrapper since there are sometimes
+// situations where button is wrapped in unnecessary markup coming from a CMS
+.btn--no-margin-bottom {
+  & * {
+    margin-bottom: 0 !important;
+  }
+}
+
+/*
+Button block
+
+Button block component
+
+Markup: html/btn-block.html
+
+Styleguide buttons.btn-block
+*/
+.btn-block {
+  width: 100%;
+  max-width: 450px;
+  text-align: left;
+  margin-bottom: -2px;
+  @include white-space-reset();
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+
+  & + .btn-block {
+    margin-top: 0;
+  }
+}
+
+/*
+Button Search
+
+Button search component
+
+Markup: html/btn-search.html
+
+Styleguide buttons.btn-search
+*/
+.btn.btn-search {
+  border-color: #fff;
+  background: $grey-light;
+  color: $grey-dark;
+}
+
+
+// External link specific adjustments
+a.btn {
+  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    padding-right: 2.1em;
+    &:after {
+      position: absolute;
+      line-height: 1.4 !important;
+    }
+
+    // Reseting for .btn-block
+    &.btn-block {
+      padding-right: 1em;
+
+      &:after {
+        position: static;
+        line-height: inherit;
+      }
+    }
+  }
+}

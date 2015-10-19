@@ -1,0 +1,65 @@
+.top-bar {
+  padding: 15px 0 10px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+@include breakpoint(screen-xs-min) {
+  .block-nexteuropa-europa-search,
+  .site-menu__toggle {
+    float: left;
+  }
+
+  .block-nexteuropa-europa-search {
+    width: 75%;
+  }
+
+  .site-menu__toggle {
+    width: 25%;
+    padding-left: 15px;
+  }
+}
+
+@include breakpoint(screen-md-min) {
+  .top-bar {
+    width: auto;
+    float: right;
+    position: relative;
+    top: 6px;
+
+    & > .region {
+      padding: 0;
+      margin: 0;
+    }
+
+    .block-nexteuropa-europa-search {
+      width: auto;
+      padding-left: 15px;
+    }
+
+    .site-menu__toggle {
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.front {
+  .top-bar {
+    @extend .block--full-width;
+    width: auto;
+    background: $brand-primary;
+    padding-bottom: 0;
+  }
+
+  @include breakpoint(screen-md-min) {
+    .top-bar {
+      float: none;
+      position: static;
+    }
+
+    .top-bar__wrapper {
+      float: right;
+    }
+  }
+}

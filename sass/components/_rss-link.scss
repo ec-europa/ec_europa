@@ -1,0 +1,66 @@
+/*
+Breadcrumb
+
+Markup: html/rss-link.html
+
+Styleguide rsslink
+*/
+$rss-link-icon-height: 40px;
+
+.rss-link {
+  float: right;
+  margin-bottom: 15px;
+  position: relative;
+
+  a {
+    float: left;
+    line-height: 40px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      .rss-link__text {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.rss-link__wrapper {
+  overflow: hidden;
+}
+
+.rss-link__label {
+  float: left;
+  margin-bottom: 0;
+  margin-right: 10px;
+  line-height: $rss-link-icon-height;
+}
+
+.rss-link__icon {
+  float: left;
+  padding-left: 80px;
+  z-index: 10;
+  &:before {
+    width: 100%;
+  }
+}
+
+.rss-link__text {
+  font-size: $font-size-little;
+  font-weight: normal;
+  text-decoration: underline;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+
+@include breakpoint(screen-md-min) {
+  .rss-link__wrapper {
+    float: right;
+  }
+
+  .rss-link {
+    margin-bottom: 0;
+  }
+}

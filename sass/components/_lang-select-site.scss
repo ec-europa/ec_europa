@@ -1,0 +1,76 @@
+/*
+Language select (Site)
+
+Language selector that is used across the whole site
+
+Markup: html/lang-select-site.html
+
+Styleguide: siteheader.langselect
+*/
+
+.lang-select-site {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: $grid-gutter-width / 2;
+  @extend .hidden-print;
+
+  .lang-select-site__link {
+    color: inherit;
+    display: inline-block;
+    text-align: center;
+    font-size: $font-size-little;
+    font-weight: bold;
+    padding: 7.5px 15px;
+    border: 2px solid transparent;
+
+    &:focus {
+      border-color: $yellow-light;
+    }
+  }
+
+  .lang-select-site__label {
+    margin-right: 0.556em;
+  }
+
+  .lang-select-site__code {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    color: $brand-primary;
+    width: $font-size-xsmall * 2;
+  }
+
+  .lang-select-site__code-text {
+    position: relative;
+    top: -3px;
+    font-size: $font-size-xsmall;
+    color: #fff;
+  }
+
+  .lang-select-site__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $brand-primary;
+    font-size: $font-size-xsmall * 2;
+    line-height: 1;
+    display: inline-block;
+  }
+}
+
+@include breakpoint(screen-md-min) {
+  .lang-select-site {
+    position: static;
+    float: left;
+  }
+}
+
+.front {
+  @include breakpoint(screen-md-min) {
+    .lang-select-site {
+      position: absolute;
+      float: none;
+    }
+  }
+}
