@@ -31,6 +31,14 @@ $spacing-bottom-listing__title: 0.7em;
   // margin-bottom: 1.667em;
 }
 
+.listing__wrapper--maxwidth {
+  @extend .row;
+
+  .listing {
+    @extend .col-md-8;
+  }
+}
+
 .listing__item {
   border-bottom: 1px solid $grey-light;
   overflow: hidden;
@@ -316,6 +324,13 @@ Markup: html/listing--teaser.html
 
 Styleguide listing.teaser
 */
+
+.listing--priorities {
+  .meta {
+    display: none;
+  }
+}
+
 .listing--teaser,
 ul.listing--teaser {
   .listing__item-link {

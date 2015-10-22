@@ -71,7 +71,7 @@ Styleguide page-header
 .page-header {
   a {
     color: #fff;
-    &:hover {
+    &:hover:not(.breadcrumb__link) {
       color:$yellow-light;
     }
 
@@ -93,4 +93,5 @@ Styleguide page-header
 // Drupal.
 .front .page-header {
   @extend .page-header--featured;
+  padding: 0;
 }

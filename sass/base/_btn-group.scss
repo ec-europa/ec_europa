@@ -5,6 +5,8 @@ Custom bootstrap button group
 
 Markup: html/btn-group.html
 
+.btn-group--row-two    - Two column button block.
+
 Styleguide buttons.group
 */
 
@@ -19,5 +21,22 @@ Styleguide buttons.group
    &:last-child {
      margin-right: 0;
    }
+  }
+}
+
+.btn-group--row-two {
+  width: 100%;
+  .btn {
+    margin-left: 0 !important;
+    margin-bottom: -2px;
+    float: left;
+    width: 48.5%;
+    &:nth-child(odd) {
+      margin-right: 3%;
+      clear: left;
+    }
+    &:nth-child(even) {
+      margin-right: 0;
+    }
   }
 }

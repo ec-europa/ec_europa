@@ -8,6 +8,21 @@ Styleguide contextnav
 
 .context-nav {
   @extend .row;
+
+  &__expander {
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    color: $blue-dark;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__hidden {
+    display: none;
+  }
 }
 
 .context-nav__label {
@@ -31,7 +46,7 @@ Styleguide contextnav
 .context-nav__item {
   display: inline-block;
   &:after {
-    content: ",";
+    content: " |";
     margin-right: 4px;
   }
 
@@ -46,5 +61,13 @@ Styleguide contextnav
 @include breakpoint(screen-md-min) {
   .context-nav__items {
     margin-bottom: 0;
+  }
+}
+
+
+// Drupal specific override for the node-person-name display mode.
+.context-nav__item {
+  .view-mode-name {
+    display: inline-block;
   }
 }

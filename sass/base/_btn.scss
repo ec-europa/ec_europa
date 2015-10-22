@@ -191,7 +191,7 @@ Styleguide buttons.btn-block
   width: 100%;
   max-width: 450px;
   text-align: left;
-  margin-bottom: -2px;
+  margin-bottom: -2px !important;
   @include white-space-reset();
 
   &:last-child {

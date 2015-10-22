@@ -146,13 +146,13 @@
 <section class="main-content">
   <!-- Page Header -->
   <div class="page-header">
-  <?php if (!empty($page['header_bottom'])): ?>
-    <nav class="page-navigation" role="navigation">
-      <div class="container-fluid">
-        <?php print render($page['header_bottom']); ?>
-      </div>
-    </nav>
-  <?php endif; ?>
+    <?php if (!empty($page['header_bottom'])): ?>
+      <nav class="page-navigation" role="navigation">
+        <div class="container-fluid">
+          <?php print render($page['header_bottom']); ?>
+        </div>
+      </nav>
+    <?php endif; ?>
     <div class="container-fluid">
       <div class="row padding-reset">
         <div class="col-lg-9">

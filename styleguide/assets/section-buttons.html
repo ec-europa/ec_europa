@@ -434,11 +434,31 @@
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Example
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="btn-group">
+          <div class="btn-group [modifier class]">
   <a href="#" class="btn btn-primary">Button primary</a>
+  <a href="#" class="btn btn-default">Button default</a>
+  <a href="#" class="btn btn-default">Button default</a>
+  <a href="#" class="btn btn-default">Button default</a>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .btn-group--row-two
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Two column button block.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="btn-group btn-group--row-two">
+  <a href="#" class="btn btn-primary">Button primary</a>
+  <a href="#" class="btn btn-default">Button default</a>
+  <a href="#" class="btn btn-default">Button default</a>
   <a href="#" class="btn btn-default">Button default</a>
 </div>
 
@@ -446,8 +466,10 @@
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;btn-group [modifier class]&quot;&gt;
   &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Button primary&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;Button default&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;Button default&lt;/a&gt;
   &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;Button default&lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
