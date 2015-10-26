@@ -58,12 +58,12 @@
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lte IE 9]>
-    <script src="<?php print $theme_path . '/js/matchMedia.js'; ?>"></script>
-    <script src="<?php print $theme_path . '/js/matchMedia.addListener.js'; ?>"></script>
+    <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.js'; ?>"></script>
+    <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.addListener.js'; ?>"></script>
   <![endif]-->
   <!--[if lt IE 9]>
-    <script src="<?php print $theme_path . '/js/html5.js'; ?>"></script>
-    <script src="<?php print $theme_path . '/js/respond.min.js'; ?>"></script>
+    <script src="<?php print $theme_path . '/js/libraries/html5shiv.min.js'; ?>"></script>
+    <script src="<?php print $theme_path . '/js/libraries/respond.min.js'; ?>"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>
