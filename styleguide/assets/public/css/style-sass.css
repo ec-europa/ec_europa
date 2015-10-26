@@ -5846,7 +5846,7 @@ Custom bootstrap button group
 
 Markup: html/btn-group.html
 
-.btn-group--row-two    - Two column button block.
+.btn-group-row-two    - Two column button block.
 
 Styleguide buttons.group
 */
@@ -5858,17 +5858,17 @@ Styleguide buttons.group
     .btn-group .btn:last-child, .btn-group .inpage-nav__navbar .inpage-nav__toggle:last-child, .inpage-nav__navbar .btn-group .inpage-nav__toggle:last-child {
       margin-right: 0; }
 
-.btn-group--row-two {
+.btn-group-row-two {
   width: 100%; }
-  .btn-group--row-two .btn, .btn-group--row-two .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .btn-group--row-two .inpage-nav__toggle {
+  .btn-group-row-two .btn, .btn-group-row-two .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .btn-group-row-two .inpage-nav__toggle {
     margin-left: 0 !important;
     margin-bottom: -2px;
     float: left;
     width: 48.5%; }
-    .btn-group--row-two .btn:nth-child(odd), .btn-group--row-two .inpage-nav__navbar .inpage-nav__toggle:nth-child(odd), .inpage-nav__navbar .btn-group--row-two .inpage-nav__toggle:nth-child(odd) {
+    .btn-group-row-two .btn:nth-child(odd), .btn-group-row-two .inpage-nav__navbar .inpage-nav__toggle:nth-child(odd), .inpage-nav__navbar .btn-group-row-two .inpage-nav__toggle:nth-child(odd) {
       margin-right: 3%;
       clear: left; }
-    .btn-group--row-two .btn:nth-child(even), .btn-group--row-two .inpage-nav__navbar .inpage-nav__toggle:nth-child(even), .inpage-nav__navbar .btn-group--row-two .inpage-nav__toggle:nth-child(even) {
+    .btn-group-row-two .btn:nth-child(even), .btn-group-row-two .inpage-nav__navbar .inpage-nav__toggle:nth-child(even), .inpage-nav__navbar .btn-group-row-two .inpage-nav__toggle:nth-child(even) {
       margin-right: 0; }
 
 /*
