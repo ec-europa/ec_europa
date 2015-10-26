@@ -1,3 +1,6 @@
+/**
+ * @file
+ */
 'use strict';
 
 module.exports = function (grunt) {
@@ -39,7 +42,7 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          // includes files within path and its sub-directories
+          // Includes files within path and its sub-directories.
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['js/**'], dest: 'styleguide/assets/public/'}
@@ -47,7 +50,7 @@ module.exports = function (grunt) {
       },
       all: {
         files: [
-          // includes files within path and its sub-directories
+          // Includes files within path and its sub-directories.
           {expand: true, src: ['sass/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['bootstrap-sass/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['bootstrap/**'], dest: 'styleguide/assets/public/'},

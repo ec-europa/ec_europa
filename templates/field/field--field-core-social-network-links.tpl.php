@@ -4,6 +4,7 @@
  * Default template implementation to display the value of a field.
  *
  * This file is not used and is here as a starting point for customization only.
+ *
  * @see theme_field()
  *
  * Available variables:

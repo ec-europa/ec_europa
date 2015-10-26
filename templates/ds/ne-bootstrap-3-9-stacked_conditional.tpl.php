@@ -12,7 +12,7 @@
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
   <!-- Page Header -->
-  <div class="page-header<?php if (isset($header_back)) echo ' page-header--image'; ?>">
+  <div class="page-header<?php if (isset($header_back)) {echo ' page-header--image';} ?>">
     <nav class="page-navigation" role="navigation">
       <div class="container-fluid">
         <?php print render($header_bottom); ?>

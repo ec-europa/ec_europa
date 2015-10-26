@@ -22,7 +22,7 @@
     <?php if ($flip) : ?>
       <div class="tab-content <?php print $pane_classes; ?>">
         <?php foreach ($panes as $index => $pane) : ?>
-          <div id="<?php print $pane['id']; ?>" class="tab-pane <?php if ($index === $active) print 'active'; ?>">
+          <div id="<?php print $pane['id']; ?>" class="tab-pane <?php if ($index === $active) {print 'active';} ?>">
             <?php print $pane['content']; ?>
           </div>
         <?php endforeach; ?>
@@ -32,7 +32,7 @@
     <?php if (!$is_single) : ?>
       <ul class="nav<?php print $nav_classes; ?>">
         <?php foreach ($navs as $index => $nav) : ?>
-          <li class="<?php if ($index === $active) print 'active'; ?>">
+          <li class="<?php if ($index === $active) {print 'active';} ?>">
             <?php print $nav['content']; ?>
           </li>
         <?php endforeach; ?>
@@ -42,7 +42,7 @@
     <?php if (!$flip) : ?>
       <div class="tab-content <?php print $pane_classes; ?>">
         <?php foreach ($panes as $index => $pane) : ?>
-          <div id="<?php print $pane['id']; ?>" class="<?php if ($index === $active) print 'active'; ?>">
+          <div id="<?php print $pane['id']; ?>" class="<?php if ($index === $active) {print 'active';} ?>">
             <h2 class="tab-title"><?php print $pane['title']; ?></h2>
             <?php print $pane['content']; ?>
           </div>

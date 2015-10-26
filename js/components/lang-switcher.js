@@ -1,3 +1,6 @@
+/**
+ * @file
+ */
 (function ($) {
   $.fn.selectify = function(options) {
     this.each(function() {
@@ -110,22 +113,22 @@
 
       if (typeof enquire !== 'undefined') {
         enquire.register(Drupal.europa.breakpoints.small, {
-          // desktop
+          // Desktop.
           match : function() {
             pageLanguageSelector.trigger('show.list');
             pageLanguageSelector.trigger('hide.dropdown');
           },
-          // mobile
+          // Mobile.
           unmatch : function() {
             $(window).on('resize', function(){
-              if(listIsWider()){
+              if (listIsWider()) {
                 pageLanguageSelector.trigger('hide.list');
                 pageLanguageSelector.trigger('show.dropdown');
               }
             });
           },
           setup: function() {
-            if(listIsWider()){
+            if (listIsWider()) {
               pageLanguageSelector.trigger('hide.list');
               pageLanguageSelector.trigger('show.dropdown');
             }

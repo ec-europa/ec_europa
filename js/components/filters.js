@@ -1,3 +1,6 @@
+/**
+ * @file
+ */
 (function ($) {
   Drupal.behaviors.europa_filters = {
 
@@ -11,13 +14,13 @@
           $resultsCount   = $('.filters__result-count'),
           $itemsNumber    = $('.filters__items-number');
 
-      // Checking if IE8 is used
+      // Checking if IE8 is used.
       var oldIE = false;
       if ($('html').is('.ie8')) {
         oldIE = true;
       }
 
-      // Function for hiding Submit and Reset buttons
+      // Function for hiding Submit and Reset buttons.
       var hideFilterButtons = function() {
         $('.filters__btn-collapse, .filters__btn-reset--small').hide();
       }
@@ -26,7 +29,7 @@
         $('.filters__btn-collapse, .filters__btn-reset--small').show();
       }
 
-      // Adding buttons for the filters
+      // Adding buttons for the filters.
       if ($resultsCount.is(':visible') && !$('.filters__btn-collapse').length) {
         $resultsCount
           .append(
@@ -49,7 +52,7 @@
       });
 
       // Runs only once.
-      // Add throbber next to content type and items count text
+      // Add throbber next to content type and items count text.
       $filters.once('filters', function() {
         throbber = '<div class="ajax-progress ajax-progress-throbber"><i class="icon icon--spinner is-spinning"></i></div>';
         $(document)
@@ -63,21 +66,20 @@
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register('screen and (min-width: 992px)', {
-            // desktop
+            // Desktop.
             match : function() {
                 $filtersWrapper = $(".filters__wrapper");
 
               $filtersSubmit.addClass('ctools-auto-submit-click');
 
-              // Opening filters when changing to desktop
+              // Opening filters when changing to desktop.
               $filters
                 .removeClass('collapse')
                 .addClass('collapse in')
                 .attr('aria-expanded', true)
                 .removeAttr('style');
 
-
-              // Hiding filter buttons
+              // Hiding filter buttons.
               hideFilterButtons();
 
               $filters.children('.close').remove();
@@ -85,9 +87,9 @@
                 $filtersWrapper.children().unwrap("<div class='filters__wrapper'></div>");
               }
             },
-            // mobile
+            // Mobile.
             unmatch : function() {
-              // Showing buttons on viewport switch
+              // Showing buttons on viewport switch.
               showFilterButtons();
 
               $filters.wrapInner("<div class='filters__wrapper'></div>");
@@ -101,13 +103,14 @@
 
             setup: function() {
               // IE8 fix - showing the element containing the filters.
-              if($(window).width() > 991) {
+              if ($(window).width() > 991) {
                 $filters
                   .removeClass('collapse')
                   .addClass('collapse in')
                   .attr('aria-expanded', true)
                   .removeAttr('style');
-              } else {
+              }
+              else {
                 $filters.addClass('collapse');
               }
               $filtersSubmit.removeClass('ctools-auto-submit-click');
@@ -136,7 +139,8 @@
             },
           });
         }
-      }); // end of .once()
+      });
+      // End of .once()
     }
   };
 })(jQuery);

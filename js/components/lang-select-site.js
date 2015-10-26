@@ -1,3 +1,6 @@
+/**
+ * @file
+ */
 (function ($) {
     Drupal.behaviors.europa_pager = {
       attach: function(context) {

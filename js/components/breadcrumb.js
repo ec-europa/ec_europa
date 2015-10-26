@@ -1,3 +1,6 @@
+/**
+ * @file
+ */
 (function ($) {
   Drupal.behaviors.europa_breadcrumb = {
     attach: function (context) {
@@ -7,19 +10,19 @@
         var $breadcrumbWrapper = $('#breadcrumb');
         $breadcrumbWrapper.addClass('breadcrumb--collapsible');
 
-        // Global selectors
+        // Global selectors.
         var $breadcrumbSegmentsWrapper = $breadcrumbWrapper.children('.breadcrumb__segments-wrapper'),
             $breadcrumbSegments = $breadcrumbSegmentsWrapper.children('.breadcrumb__segment'),
             $breadcrumbSegmentFirst = $breadcrumbSegmentsWrapper.children('.breadcrumb__segment--first'),
             $breadcrumbSegmentSecond = $breadcrumbSegmentFirst.next();
 
-        // Calculating items that are not hidden
+        // Calculating items that are not hidden.
         var $breadcrumbVisibleSegments = $breadcrumbSegments.not('.is-hidden');
 
         // Hiding breadcrumb segments when there is not enough space.
         function toggleBreadcrumbSegments() {
           for (var i = 0; i < $breadcrumbVisibleSegments.length; i++) {
-            // Calculating sizes
+            // Calculating sizes.
             var breadcrumbCalculations = {};
             breadcrumbCalculations.wrapperWidth = $breadcrumbWrapper.width();
             breadcrumbCalculations.width = $breadcrumbSegmentsWrapper.width();
@@ -29,13 +32,13 @@
               breadcrumbCalculations.itemsWidth += $(this).outerWidth(true);
             });
 
-            // Local variables
+            // Local variables.
             var $lastHiddenItem = $breadcrumbSegments.siblings('.is-hidden').last(),
                 lastHiddenItemWidth = $lastHiddenItem.width();
 
             // Hiding segments.
-            if(breadcrumbCalculations.wrapperWidth <= breadcrumbCalculations.itemsWidth) {
-              if($breadcrumbSegmentSecond.hasClass('is-hidden')) {
+            if (breadcrumbCalculations.wrapperWidth <= breadcrumbCalculations.itemsWidth) {
+              if ($breadcrumbSegmentSecond.hasClass('is-hidden')) {
                 $lastHiddenItem.next().not('.breadcrumb__segment--last').addClass('is-hidden');
               }
               else {
@@ -45,8 +48,8 @@
             }
 
             // Showing segments.
-            if((breadcrumbCalculations.itemsWidth + lastHiddenItemWidth) < breadcrumbCalculations.wrapperWidth) {
-              if($lastHiddenItem.hasClass('is-hidden')) {
+            if ((breadcrumbCalculations.itemsWidth + lastHiddenItemWidth) < breadcrumbCalculations.wrapperWidth) {
+              if ($lastHiddenItem.hasClass('is-hidden')) {
                 $lastHiddenItem.removeClass('is-hidden');
               }
               else {
@@ -76,11 +79,11 @@
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register(Drupal.europa.breakpoints.medium, {
-            // desktop
+            // Desktop.
             match : function() {
               $breadcrumbWrapper.removeClass('is-open');
 
-              if($breadcrumbButton) {
+              if ($breadcrumbButton) {
                 $breadcrumbButton.hide();
               }
 
@@ -90,9 +93,9 @@
                 toggleBreadcrumbSegments();
               });
             },
-            // mobile
+            // Mobile.
             unmatch : function() {
-              if($breadcrumbButton) {
+              if ($breadcrumbButton) {
                 $breadcrumbButton.show();
               }
               $breadcrumbSegments.removeClass('is-hidden');

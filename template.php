@@ -118,11 +118,11 @@ function europa_form_element(&$variables) {
   }
   if (!empty($element['#name'])) {
     $attributes['class'][] = 'form-item-' . strtr($element['#name'], array(
-        ' ' => '-',
-        '_' => '-',
-        '[' => '-',
-        ']' => '',
-      ));
+      ' ' => '-',
+      '_' => '-',
+      '[' => '-',
+      ']' => '',
+    ));
   }
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {

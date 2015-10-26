@@ -1,3 +1,6 @@
+/**
+ * @file
+ */
 (function ($) {
   Drupal.europa = Drupal.europa || {};
   Drupal.europa.breakpoints = Drupal.europa.breakpoints || {};
@@ -15,15 +18,15 @@
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register('screen and (max-width: 479px)', {
-            // setup
+            // Setup.
             setup : function() {
               $this.siblings('.tab-content').children().addClass('tab-pane');
             },
-            // mobile
+            // Mobile.
             match : function() {
               $this.siblings('.tab-content').children().removeClass('tab-pane');
             },
-            // desktop
+            // Desktop.
             unmatch: function() {
               $this.siblings('.tab-content').children().addClass('tab-pane');
             },
@@ -40,11 +43,11 @@
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register(Drupal.europa.breakpoints.small, {
-            // desktop
+            // Desktop.
             match : function() {
               Drupal.behaviors.equal_blocks.fixBlockHeights($equal_height_block, false);
             },
-            // mobile
+            // Mobile.
             unmatch : function() {
               Drupal.behaviors.equal_blocks.fixBlockHeights($equal_height_block, true);
             },
