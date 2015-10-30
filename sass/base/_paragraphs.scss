@@ -14,3 +14,7 @@ Styleguide text.paragraphs
 p {
   @extend .paragraph;
 }
+
+.paragraph--width-auto {
+  width: auto;
+}

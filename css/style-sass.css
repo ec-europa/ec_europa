@@ -6214,11 +6214,15 @@ Markup: html/nav-tabs-right.html
 
 Styleguide navtabs.nav-tabs-right
 */
-.nav-tabs-right {
+ul.nav-tabs-right {
   text-align: right; }
-  .nav-tabs-right li {
+  ul.nav-tabs-right li {
     display: inline-block;
     float: none; }
+    ul.nav-tabs-right li a {
+      font-size: inherit; }
+      ul.nav-tabs-right li a:hover {
+        border-bottom: inherit; }
 
 @media (min-width: 992px) {
   .nav-tabs-right {
@@ -6251,6 +6255,9 @@ Styleguide text.paragraphs
 .region-content ol, p, .file {
   margin-bottom: 0.8em;
   max-width: 32em; }
+
+.paragraph--width-auto {
+  width: auto; }
 
 /*
 Radio
@@ -6415,6 +6422,9 @@ Styleguide form.textarea
     position: static; }
   .front .top-bar__wrapper {
     float: right; } }
+
+.page-bottom-header {
+  margin-top: -1px; }
 
 .page-content {
   margin-top: 60px;
@@ -8693,26 +8703,26 @@ Styleguide page-header
     font-size: 1.222em;
     line-height: 1.5;
     color: #fff; }
-  .page-header__top,
-  .page-header__main,
-  .page-header__bottom {
+  .page-header .page-header__top,
+  .page-header .page-header__main,
+  .page-header .page-header__bottom {
     display: block;
     width: 100%; }
-  .page-header__top {
+  .page-header .page-header__top {
     text-transform: uppercase; }
-  .page-header__main {
+  .page-header .page-header__main {
     line-height: 1.428571429; }
-  .page-header__bottom {
+  .page-header .page-header__bottom {
     font-size: 26px; }
-  .page-header--featured, .front .page-header {
+  .page-header .page-header--featured, .page-header .front .page-header, .front .page-header .page-header {
     background: #004494;
     color: #fff;
     line-height: 1.5; }
-    .page-header--featured h2, .front .page-header h2 {
+    .page-header .page-header--featured h2, .page-header .front .page-header h2, .front .page-header .page-header h2 {
       color: #fff; }
-    .page-header--featured p, .front .page-header p {
+    .page-header .page-header--featured p, .page-header .front .page-header p, .front .page-header .page-header p {
       font-size: 1.667em; }
-  .page-header--image {
+  .page-header .page-header--image {
     background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
     background-repeat: no-repeat;
     background-size: cover;
@@ -9333,5 +9343,18 @@ Styleguide timeline
 @media (min-width: 480px) {
   .timeline .timeline__item-title:before {
     margin-left: 2px; } }
+
+/*
+Top image
+
+Markup: html/top-image.html
+
+Styleguide top-image
+*/
+.top-image {
+  overflow: hidden; }
+  .top-image picture {
+    display: block;
+    text-align: center; }
 
 /*# sourceMappingURL=style-sass.css.map */

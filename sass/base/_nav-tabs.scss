@@ -92,11 +92,17 @@ Markup: html/nav-tabs-right.html
 
 Styleguide navtabs.nav-tabs-right
 */
-.nav-tabs-right {
+ul.nav-tabs-right {
   text-align: right;
-  & li {
+  li {
     display: inline-block;
     float: none;
+    a {
+      font-size: inherit;
+      &:hover {
+        border-bottom: inherit;
+      }
+    }
   }
 }
 

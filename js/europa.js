@@ -1,6 +1,12 @@
 /**
  * @file
+<<<<<<< HEAD:lib/themes/europa/js/europa.js
  */
+=======
+ * JS file for Europa theme.
+ */
+
+>>>>>>> 0f44a62ded9bbab15711fb9e523c328b4ef48475:project/themes/europa/js/europa.js
 (function ($) {
   Drupal.europa = Drupal.europa || {};
   Drupal.europa.breakpoints = Drupal.europa.breakpoints || {};
@@ -94,10 +100,53 @@
         for (i = 0, max = $blocks.length; i < max; i++) {
           var $block = $blocks[i].equalHeight();
           // if(stop) {
-          //   $block.stop();
+          // $block.stop();
           // }
         }
       });
     }
   };
+
+  var trackElements = [];
+  var errorEventSent = 'Piwik, trackEvent was not fired up.';
+  /**
+   * Acts like a wrapper for Piwik push method.
+   *
+   * For Piwik parameters refer to {@see https://developer.piwik.org/guides/tracking-javascript-guide}
+   *
+   * @param int {triggerValue}
+   *   How many times should the call be triggered by page load
+   *   Accepts 0,1 (0 for always and 1 just for one time).
+   * @param str {action}
+   *   Defines Action in piwik.
+   * @param str {category}
+   *   Defines category in piwik.
+   * @param {value}
+   *  Defines category in piwik.
+   * @param {data}
+   *  Defines category in piwik.
+   */
+  PiwikDTT = {
+    sendTrack: function(triggerValue, action, category, value, data) {
+      if (typeof action === "undefined" || action === null || action === '') {
+        action = "trackEvent";
+      }
+      // Trigger only once.
+      if (triggerValue == 1) {
+        var innerElements = (triggerValue + action + category + value + data);
+        if ($.inArray(innerElements, trackElements) === -1) {
+          trackElements.push(innerElements);
+          if (typeof _paq != 'undefined') {
+            _paq.push([action, category, value, data]);
+          }
+        }
+      }
+      // Always trigger.
+      if (triggerValue == 0) {
+        if (typeof _paq != 'undefined') {
+          _paq.push([action, category, value, data]);
+        }
+      }
+    }
+  }
 })(jQuery);

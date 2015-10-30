@@ -45,14 +45,6 @@
           <span class="kss-nav__ref">2</span
           ><span class="kss-nav__name">Breadcrumb</span>
         </a>
-        <ul class="kss-nav__menu-child">
-            <li class="kss-nav__menu-item">
-              <a href="section-breadcrumb.html#kssref-breadcrumb-collapsible">
-                <span class="kss-nav__ref">2.1</span
-                ><span class="kss-nav__name">Breadcrumb collapsible</span>
-              </a>
-            </li>
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-buttons.html">
@@ -209,19 +201,21 @@
           <span class="kss-nav__ref">29</span
           ><span class="kss-nav__name">Top image</span>
         </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
       </li>
     </ul>
   </nav>
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-breadcrumb" class="kss-section kss-section--depth-1">
+      <div     id="kssref-top-image" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
-        <a class="kss-title__permalink" href="#kssref-breadcrumb">
-          <span class="kss-title__ref">2</span
-          >Breadcrumb
+        <a class="kss-title__permalink" href="#kssref-top-image">
+          <span class="kss-title__ref">29</span
+          >Top image
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h1>
@@ -234,101 +228,35 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
-  <span class="element-invisible">You are here:</span>
-  <ol class="breadcrumb__segments-wrapper">
-    <li class="breadcrumb__segment breadcrumb__segment--first">
-      <a href="#" class="breadcrumb__link">European Commission</a>
-    </li>
-    <li class="breadcrumb__segment">
-      <a href="#" class="breadcrumb__link">Path 1</a>
-    </li>
-    <li class="breadcrumb__segment breadcrumb__segment--last">
-      <a href="#" class="breadcrumb__link">Path2</a>
-    </li>
-  </ol>
-</nav>
+          <div class="top-image">
+  <picture title="Picture title">
+    <!--[if IE 9]><video style="display: none;"><![endif]-->
+    <source srcset="http://placehold.it/480x167 1x" media="(max-width:479px)">
+    <source srcset="http://placehold.it/1280x445 1x" media="(min-width:960px)">
+    <source srcset="http://placehold.it/960x334 1x" media="(min-width:480px)">
+    <!--[if IE 9]></video><![endif]-->
+    <img srcset="http://placehold.it/1280x450 1280w" alt="Picture title" title="Picture title">
+  </picture>
+</div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;breadcrumb&quot; role=&quot;navigation&quot; aria-label=&quot;breadcrumbs&quot;&gt;
-  &lt;span class=&quot;element-invisible&quot;&gt;You are here:&lt;/span&gt;
-  &lt;ol class=&quot;breadcrumb__segments-wrapper&quot;&gt;
-    &lt;li class=&quot;breadcrumb__segment breadcrumb__segment--first&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link&quot;&gt;European Commission&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;breadcrumb__segment&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link&quot;&gt;Path 1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;breadcrumb__segment breadcrumb__segment--last&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link&quot;&gt;Path2&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/nav&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;top-image&quot;&gt;
+  &lt;picture title=&quot;Picture title&quot;&gt;
+    &lt;!--[if IE 9]&gt;&lt;video style=&quot;display: none;&quot;&gt;&lt;![endif]--&gt;
+    &lt;source srcset=&quot;http://placehold.it/480x167 1x&quot; media=&quot;(max-width:479px)&quot;&gt;
+    &lt;source srcset=&quot;http://placehold.it/1280x445 1x&quot; media=&quot;(min-width:960px)&quot;&gt;
+    &lt;source srcset=&quot;http://placehold.it/960x334 1x&quot; media=&quot;(min-width:480px)&quot;&gt;
+    &lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;
+    &lt;img srcset=&quot;http://placehold.it/1280x450 1280w&quot; alt=&quot;Picture title&quot; title=&quot;Picture title&quot;&gt;
+  &lt;/picture&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
 
       </div>
-      <section id="kssref-breadcrumb-collapsible" class="kss-section kss-section--depth-2">
-
-    <div class="kss-style">
-      <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-breadcrumb-collapsible">
-          <span class="kss-title__ref">2.1</span
-          >Breadcrumb collapsible
-          <span class="kss-title__permalink-hash">#permalink</span>
-        </a>
-      </h2>
-
-
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
-        </div>
-        <div class="kss-modifier__example">
-          <nav id="breadcrumb" class="breadcrumb breadcrumb--collapsible" role="navigation" aria-label="breadcrumbs">
-  <span class="element-invisible">You are here:</span>
-  <ol class="breadcrumb__segments-wrapper">
-    <li class="breadcrumb__segment breadcrumb__segment--first">
-      <a href="#" class="breadcrumb__link">European Commission</a>
-    </li>
-    <li class="breadcrumb__segment">
-      <a href="#" class="breadcrumb__link">Path 1</a>
-    </li>
-    <li class="breadcrumb__segment breadcrumb__segment--last">
-      <a href="#" class="breadcrumb__link">Path2</a>
-    </li>
-  </ol>
-  <span class="breadcrumb__btn-separator">...</span>
-</nav>
-
-        </div>
-      </div>
-
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav id=&quot;breadcrumb&quot; class=&quot;breadcrumb breadcrumb--collapsible&quot; role=&quot;navigation&quot; aria-label=&quot;breadcrumbs&quot;&gt;
-  &lt;span class=&quot;element-invisible&quot;&gt;You are here:&lt;/span&gt;
-  &lt;ol class=&quot;breadcrumb__segments-wrapper&quot;&gt;
-    &lt;li class=&quot;breadcrumb__segment breadcrumb__segment--first&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link&quot;&gt;European Commission&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;breadcrumb__segment&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link&quot;&gt;Path 1&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;breadcrumb__segment breadcrumb__segment--last&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link&quot;&gt;Path2&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;span class=&quot;breadcrumb__btn-separator&quot;&gt;...&lt;/span&gt;
-&lt;/nav&gt;
-</code></pre>
-      </div>
-
-      </section>
 </article>
 
 <!-- SCRIPTS -->
