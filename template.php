@@ -7,7 +7,7 @@
 /**
  * Implements hook_js_alter().
  */
-function europa_js_alter(&$js) {
+function europa_js_alter (&$js) {
   $base_theme_path = drupal_get_path('theme', 'bootstrap');
   $path_fancybox = libraries_get_path('fancybox');
 
