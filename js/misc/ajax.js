@@ -1,11 +1,12 @@
 /**
  * @file
+ * Overriding some of the default ajax behaviors.
  */
+
 (function ($) {
 
   /**
-   * Override Drupal's AJAX prototype beforeSend function so it can append the
-   * throbber inside the pager links.
+   * Override Drupal's AJAX prototype beforeSend to append the throbber to pager.
    */
   Drupal.ajax.prototype.beforeSend = function (xmlhttprequest, options) {
     // For forms without file inputs, the jQuery Form plugin serializes the form
@@ -14,7 +15,7 @@
     // with file inputs, the jQuery Form plugin uses the browser's normal form
     // submission mechanism, but captures the response in a hidden IFRAME. In this
     // circumstance, it calls this handler first, and then appends hidden fields
-    // to the form to submit the values in options.extraData. There is no simple
+    // to the form to submit the values sin options.extraData. There is no simple
     // way to know which submission mechanism will be used, so we add to extraData
     // regardless, and allow it to be ignored in the former case.
     if (this.form) {
