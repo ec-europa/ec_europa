@@ -1,12 +1,8 @@
 /**
  * @file
-<<<<<<< HEAD:lib/themes/europa/js/europa.js
- */
-=======
  * JS file for Europa theme.
  */
 
->>>>>>> 0f44a62ded9bbab15711fb9e523c328b4ef48475:project/themes/europa/js/europa.js
 (function ($) {
   Drupal.europa = Drupal.europa || {};
   Drupal.europa.breakpoints = Drupal.europa.breakpoints || {};
