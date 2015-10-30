@@ -1,6 +1,8 @@
 /**
  * @file
+ * Site level language switcher related behaviors.
  */
+
 (function ($) {
     Drupal.behaviors.europa_pager = {
       attach: function(context) {

@@ -1,6 +1,8 @@
 /**
  * @file
+ * Exposed filter related behaviors.
  */
+
 (function ($) {
   Drupal.behaviors.europa_filters = {
 
@@ -40,8 +42,7 @@
               ' data-toggle="collapse" data-target="#' + Drupal.settings.europa.exposedBlockId + '"' +
               ' aria-expanded="false" aria-controls="collapseFilters">' +
                 refineText +
-              '</button>' +
-            '</div>'
+              '</button></div>'
           );
       }
 

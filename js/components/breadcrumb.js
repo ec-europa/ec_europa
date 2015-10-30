@@ -1,6 +1,8 @@
 /**
  * @file
+ * Breadcrumb related behaviors.
  */
+
 (function ($) {
   Drupal.behaviors.europa_breadcrumb = {
     attach: function (context) {

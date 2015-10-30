@@ -1,6 +1,8 @@
 /**
  * @file
+ * Page level language switcher related behaviors.
  */
+
 (function ($) {
   $.fn.selectify = function(options) {
     this.each(function() {

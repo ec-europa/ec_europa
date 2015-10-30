@@ -1,6 +1,8 @@
 /**
  * @file
+ * Tasks for building the styleguide an css.
  */
+
 'use strict';
 
 module.exports = function (grunt) {
