@@ -1,10 +1,6 @@
 /**
  * @file
-<<<<<<< HEAD:lib/themes/europa/js/components/filters.js
  * Exposed filter related behaviors.
-=======
- * Contains custom filtering logic.
->>>>>>> 14357719795bd856c5313eeb355934e098a06b13:project/themes/europa/js/components/filters.js
  */
 
 (function ($) {
@@ -144,11 +140,7 @@
           });
         }
       });
-<<<<<<< HEAD:lib/themes/europa/js/components/filters.js
-      // End of .once()
-=======
       // End of .once().
->>>>>>> 14357719795bd856c5313eeb355934e098a06b13:project/themes/europa/js/components/filters.js
     }
   };
 })(jQuery);

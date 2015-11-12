@@ -1,26 +1,7 @@
 /**
  * @file
-<<<<<<< HEAD:lib/themes/europa/js/components/lang-switcher.js
- * Page level language switcher related behaviors.
- */
-
-(function ($) {
-  $.fn.selectify = function(options) {
-    this.each(function() {
-
-      var attachDropDown = function() {
-        var $list  = $(settings.listSelector),
-          listClass = $list.attr('class');
-
-        $list.each(function() {
-          var $select = $('<select />').addClass(listClass);
-
-          $(this).find('li').each(function() {
-            var currentClass = $(this).attr('class');
-=======
  * Page level language switcher.
  */
->>>>>>> 14357719795bd856c5313eeb355934e098a06b13:project/themes/europa/js/components/lang-switcher.js
 
 (function ($) {
   'use strict';
@@ -68,30 +49,9 @@
           selected: 'is-selected'
         });
 
-<<<<<<< HEAD:lib/themes/europa/js/components/lang-switcher.js
-      if (typeof enquire !== 'undefined') {
-        enquire.register(Drupal.europa.breakpoints.small, {
-          // Desktop.
-          match : function() {
-            pageLanguageSelector.trigger('show.list');
-            pageLanguageSelector.trigger('hide.dropdown');
-          },
-          // Mobile.
-          unmatch : function() {
-            $(window).on('resize', function(){
-              if (listIsWider()) {
-                pageLanguageSelector.trigger('hide.list');
-                pageLanguageSelector.trigger('show.dropdown');
-              }
-            });
-          },
-          setup: function() {
-            if (listIsWider()) {
-=======
         var overflowToggle = function () {
           switch (pageSwitcher.itemsOverflow()) {
             case true:
->>>>>>> 14357719795bd856c5313eeb355934e098a06b13:project/themes/europa/js/components/lang-switcher.js
               pageLanguageSelector.trigger('hide.list');
               pageLanguageSelector.trigger('show.dropdown');
               break;
