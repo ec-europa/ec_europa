@@ -679,7 +679,7 @@ function europa_easy_breadcrumb($variables) {
  * @return string
  *   HTML markup.
  */
-function _europa_file_markup($file, array $url) {
+function _europa_file_markup($file, array $url, $modifier = NULL) {
   switch ($file->type) {
     case 'image':
       $file_class = 'file--image';
@@ -700,6 +700,11 @@ function _europa_file_markup($file, array $url) {
       $file_class = 'file--document';
       $file_icon_class = 'icon--file';
       break;
+  }
+
+  // If we have a modifier, just append it to the class.
+  if ($modifier && !empty($modifier)) {
+    $file_class .= ' ' . $modifier;
   }
 
   $file_icon = '<span class="file__icon icon ' . $file_icon_class . '"></span>';
@@ -731,7 +736,9 @@ function _europa_file_markup($file, array $url) {
     'html' => TRUE,
   );
 
-  $file_btn = l(t('Download'), $url['path'], array_merge($options, $url['options']));
+  $file_text = t('Download') . '<span class="sr-only">' . $file_extension  . ' - ' . format_size($file->filesize) . '</span>';
+
+  $file_btn = l($file_text, $url['path'], array_merge($options, $url['options']));
 
   return '<div class="file ' . $file_class . '">' . $file_icon . $file_metadata . $file_btn . '</div>';
 }
@@ -795,6 +802,8 @@ function europa_preprocess_block(&$variables) {
 
   // Page-level language switcher.
   if (isset($block->bid) && $block->bid === 'language_selector_page-language_selector_page') {
+    // selectify.js is the library to convert between ul and select.
+    drupal_add_js(drupal_get_path('theme', 'europa') . '/js/selectify.js');
     drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/lang-switcher.js');
 
     // Initialize variables.

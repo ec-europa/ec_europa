@@ -1,5 +1,6 @@
 /**
  * @file
+<<<<<<< HEAD:lib/themes/europa/js/components/lang-switcher.js
  * Page level language switcher related behaviors.
  */
 
@@ -16,103 +17,58 @@
 
           $(this).find('li').each(function() {
             var currentClass = $(this).attr('class');
+=======
+ * Page level language switcher.
+ */
+>>>>>>> 14357719795bd856c5313eeb355934e098a06b13:project/themes/europa/js/components/lang-switcher.js
 
-            switch (currentClass) {
-              case 'lang-select-page__option is-selected':
-                var $option = $('<option />');
-                $option.html($(this).html()).attr('selected', true);;
-                $select.append($option);
-                break;
+(function ($) {
+  'use strict';
 
-              case 'lang-select-page__option lang-select-page__other':
-                var $option = $('<option />');
-                $option.attr('value', $(this).find('a').attr('href')).html($(this).html());
-                $select.append($option);
-                break;
-            }
-          });
-
-          if (!$list.parent().find('select').length) {
-            $list.parent().append($select);
-            settings.listWrapper.find('select').hide();
-            $select.on({
-              change: function(event) {
-                var optionHref = $(this).val(),
-                  $item = $list.find('li'),
-                  $location = $item.children('a[href="' + optionHref + '"]');
-
-                window.location.href = $location.attr('href');
-              }
-            });
-          }
-        });
-      };
-      var hideDropDown = function() {
-        settings.listWrapper.find('select').hide();
-      };
-      var hideList = function() {
-        settings.listWrapper
-          .find(settings.listSelector)
-          .find(settings.other)
-          .hide();
-        settings.listWrapper
-          .find(settings.listSelector)
-          .find(settings.selected)
-          .hide();
-      };
-      var showDropDown = function() {
-        settings.listWrapper.find('select').show();
-      };
-      var showList = function() {
-        $(settings.listWrapper)
-          .find(settings.listSelector)
-          .find(settings.other)
-          .show();
-        $(settings.listWrapper)
-          .find(settings.listSelector)
-          .find(settings.selected)
-          .show();
-      };
-      var settings = $.extend({
-        listWrapper: $(this),
-        listSelector: 'ul',
-        item: 'li',
-        other: '.item__other',
-        selected: '.item--selected'
-      }, options);
-
-      settings.listWrapper.on('hide.dropdown', hideDropDown);
-      settings.listWrapper.on('hide.list', hideList);
-      settings.listWrapper.on('show.dropdown', showDropDown);
-      settings.listWrapper.on('show.list', showList);
-      attachDropDown();
-    });
-  };
-
-  /**
-   * Returns true if list is bigger than wrapper.
-   */
-  function listIsWider(){
-    var $wrapper = $('.lang-select-page'),
-      $list = $('.lang-select-page__list'),
-      $icon = $('.lang-select-page__icon');
-
-    if ($list.length && $list.is(':visible') && $wrapper.length) {
-      // 40px of buffer in wrapper which is compensated due to font icon changing size.
-      return ($list.outerWidth() + $icon.outerWidth() > $wrapper.outerWidth() - 40);
+  var pageSwitcher = {
+    wrapClass: '.lang-select-page',
+    listClass: '.lang-select-page__list',
+    itemClass: '.lang-select-page__option',
+    iconClass: '.lang-select-page__icon',
+    unavClass: '.lang-select-page__unavailable',
+    wrapWidth: function() {
+      return $(pageSwitcher.wrapClass).outerWidth();
+    },
+    listWidth: function() {
+      return $(pageSwitcher.listClass).outerWidth();
+    },
+    iconWidth: function() {
+      return $(pageSwitcher.iconClass).outerWidth();
+    },
+    unavailableWidth: function() {
+      return $(pageSwitcher.unavClass).outerWidth();
+    },
+    itemsWidth: function() {
+      var overallWidth = 0;
+      $(pageSwitcher.listClass).children(pageSwitcher.itemClass).each(function() {
+        overallWidth += $(this).outerWidth();
+      });
+      return overallWidth;
+    },
+    itemsOverflow: function() {
+      var availableSpace = pageSwitcher.wrapWidth() - pageSwitcher.iconWidth() - pageSwitcher.unavailableWidth();
+      return pageSwitcher.itemsWidth() > availableSpace - 20;
     }
-  }
+  };
 
   Drupal.behaviors.languageSwitcherPage = {
     attach: function(context) {
-      var pageLanguageSelector = $('.lang-select-page');
-      pageLanguageSelector.selectify({
-        listSelector: 'ul.lang-select-page__list',
-        item: 'lang-select-page__option',
-        other: '.lang-select-page__other',
-        selected: '.is-selected'
-      });
+      $('#block-language-selector-page-language-selector-page').once('lang-select-page', function(){
+        var pageLanguageSelector = $('.lang-select-page');
+        pageLanguageSelector.selectify({
+          listSelector: 'lang-select-page__list',
+          item: 'lang-select-page__option',
+          other: 'lang-select-page__other',
+          unavailable: 'lang-select-page__unavailable',
+          selected: 'is-selected'
+        });
 
+<<<<<<< HEAD:lib/themes/europa/js/components/lang-switcher.js
       if (typeof enquire !== 'undefined') {
         enquire.register(Drupal.europa.breakpoints.small, {
           // Desktop.
@@ -131,12 +87,41 @@
           },
           setup: function() {
             if (listIsWider()) {
+=======
+        var overflowToggle = function () {
+          switch (pageSwitcher.itemsOverflow()) {
+            case true:
+>>>>>>> 14357719795bd856c5313eeb355934e098a06b13:project/themes/europa/js/components/lang-switcher.js
               pageLanguageSelector.trigger('hide.list');
               pageLanguageSelector.trigger('show.dropdown');
-            }
+              break;
+
+            case false:
+              pageLanguageSelector.trigger('show.list');
+              pageLanguageSelector.trigger('hide.dropdown');
+              break;
           }
-        }, true);
-      }
+        };
+
+        if (typeof enquire !== 'undefined') {
+          // Runs on device width change.
+          enquire.register(Drupal.europa.breakpoints.medium, {
+            // Desktop case.
+            match : function() {
+              $(window).resize(function() {
+                overflowToggle();
+              });
+            },
+            // Mobile case.
+            unmatch : function() {
+              $(window).off('resize');
+            },
+            setup: function() {
+              overflowToggle();
+            }
+          });
+        }
+      });
     }
   };
 })(jQuery);

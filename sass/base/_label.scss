@@ -6,7 +6,18 @@ Markup: html/label.html
 Styleguide form.label
 */
 
-.label {
+form {
+  .label {
+    @extend .form_label;
+  }
+}
+
+
+label {
+  @extend .form_label;
+}
+
+.form_label {
   color: $form-control-text-color;
   font-size: $font-size-little;
   display: block;
@@ -16,8 +27,4 @@ Styleguide form.label
   &.is-disabled {
     color: $form-control-color-disabled;
   }
-}
-
-label {
-  @extend .label;
 }

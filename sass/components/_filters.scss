@@ -125,6 +125,14 @@ Styleguide forms.filters
       width: 12px;
     }
   }
+
+  html {
+    &.js {
+      .filters__btn-submit {
+        display: inline-block;
+      }
+    }
+  }
 }
 
 @include breakpoint(screen-md-min) {
@@ -139,14 +147,16 @@ Styleguide forms.filters
     display: none;
   }
 
-  .js {
-    .filters__btn-submit {
-      display: none;
-    }
-
-    &.ie8 {
+  html {
+    &.js {
       .filters__btn-submit {
-        display: block;
+        display: none;
+      }
+
+      &.ie8 {
+        .filters__btn-submit {
+          display: block;
+        }
       }
     }
   }

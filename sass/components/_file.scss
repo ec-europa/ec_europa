@@ -6,6 +6,8 @@ by clicking on the component
 
 Markup: html/file.html
 
+.file--widebar  - Full width download box
+
 Styleguide file
 */
 
@@ -60,6 +62,46 @@ Styleguide file
   }
 }
 
+.file--widebar {
+  @extend .row;
+  max-width: 100%;
+
+  margin-left: 0;
+
+  .file__icon {
+    @extend .col-xs-1;
+    margin-right: 0;
+    padding-left: 0;
+    height: 2.556em;
+    overflow: hidden;
+
+    @media (max-width: $screen-sm-min) {
+      min-width: 60px;
+    }
+
+    &:before {
+      font-size: 2.556em;
+    }
+  }
+
+  .file__metadata {
+    @extend .col-md-7;
+    @extend .col-sm-8;
+    @extend .col-xs-10;
+    padding-left: 0;
+  }
+
+  .file__btn {
+    @extend .col-md-4;
+    @extend .col-sm-3;
+    @extend .col-xs-12;
+
+    @media (max-width: $screen-sm-min) {
+      margin-top: 15px;
+    }
+  }
+}
+
 @include breakpoint(screen-msm-min) {
   .file__metadata,
   .file__btn {
@@ -76,3 +118,4 @@ Styleguide file
     margin-top: 0;
   }
 }
+

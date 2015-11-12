@@ -76,11 +76,16 @@ ul.lang-select-page__list {
   color: #fff;
 
   select.lang-select-page__list {
+    // firefox hide arrow
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+
     background-color: $blue-darker;
     border: 0;
     color: #fff;
     font-weight: bold;
-    line-height: 3.2;
+    line-height: 3.4em;
 
     &:hover, &:active {
       border: 0;
@@ -93,6 +98,12 @@ ul.lang-select-page__list {
     &:after {
       @extend .icon--after;
       @extend .icon--arrow-down;
+    }
+  }
+
+  @-moz-document url-prefix() {
+    select.lang-select-page__list {
+      height: 3.4em;
     }
   }
 
@@ -117,4 +128,10 @@ select.lang-select-page__list {
   padding-left: 0.5em;
   width: 10em;
   cursor: pointer;
+}
+
+// Drupal-specific hack after having the header in the content area.
+// Change comes from dynamic header image now being DS.
+.region-content .page-header ul.lang-select-page__list {
+  max-width: inherit;
 }

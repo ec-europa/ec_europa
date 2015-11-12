@@ -8,6 +8,10 @@ Styleguide form.select
 
 .select {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+
   // Hover state.
   &:hover,
   &.is-hovered {

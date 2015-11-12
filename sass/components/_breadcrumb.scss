@@ -18,7 +18,7 @@ $breadcrumb-heigth: 2.778em;
   position: relative;
   border-radius: 0;
   overflow: hidden;
-  line-height: 1;
+  line-height: normal;
   @extend .hidden-print;
 
   ol,
@@ -32,10 +32,9 @@ $breadcrumb-heigth: 2.778em;
 }
 
 .breadcrumb__segment {
-  min-height: $breadcrumb-heigth;
   display: none;
   position: relative;
-  padding: 1em 1.4em 0.8em 0;
+  margin: 1em 0 0.8em;
 }
 
 .breadcrumb__link {
@@ -160,18 +159,17 @@ Styleguide breadcrumb.collapsible
   }
 
   .breadcrumb__link {
-    padding-right: 17px;
-    position: relative;
+    display: inline-block;
+
+    span {
+      vertical-align: middle;
+    }
 
     &:after {
       @extend .breadcrumb__link-arrow;
-      position: absolute;
-      right: 0;
-      top: 16%;
-    }
-
-    span {
-      line-height: 1;
+      vertical-align: middle;
+      position: relative;
+      top: 1px;
     }
   }
 
@@ -204,15 +202,9 @@ Styleguide breadcrumb.collapsible
   &.is-open {
     .breadcrumb__link {
       display: block;
-      padding-right: 0;
-      &:after {
-        position: static;
-        @include translate(0, 0);
-      }
     }
 
     .breadcrumb__text {
-      display: inline;
       white-space: normal;
       overflow: visible;
       max-width: none;

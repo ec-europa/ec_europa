@@ -1,0 +1,73 @@
+/*
+Labels
+
+Markup: html/labels.html
+
+.label--default  - Default
+.label--primary - Primary
+.label--success - Success
+.label--info - Info
+.label--warning - Warning
+.label--danger - Danger
+.label--highlight - Highlight
+
+Styleguide labels
+*/
+
+$label_text_color_light: #fff;
+
+.label {
+  border-radius: 0;
+  font-weight: normal;
+  color: $grey-base;
+}
+
+.label--default {
+  @extend .label-default;
+  color: $label_text_color_light;
+}
+
+.label--primary {
+  @extend .label-primary;
+  color: $label_text_color_light;
+}
+
+.label--success {
+  @extend .label-success;
+  color: $label_text_color_light;
+}
+
+.label--info {
+  @extend .label-info;
+  color: $label_text_color_light;
+}
+
+.label--warning {
+  @extend .label-warning;
+  color: $label_text_color_light;
+}
+
+.label--danger {
+  @extend .label-danger;
+  color: $label_text_color_light;
+}
+
+.label--highlight {
+  color: $grey-base;
+  background-color: $yellow-light;
+  &.label--meta {
+    &:after{
+      content: "";
+      margin: 0;
+    }
+  }
+}
+
+.label--meta {
+  @extend .meta__item;
+  padding: 0.25em 0.5em 0.3em 0.5em;
+  font-size: 90%;
+  top: -0.075em;
+  margin-right: 0.8em;
+  position: relative;
+}

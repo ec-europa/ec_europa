@@ -1,0 +1,63 @@
+/*
+Date Block
+
+Date components
+
+Markup: html/date-block.html
+
+Styleguide date-block
+*/
+$agenda-yellow: #FED437;
+
+.date-block {
+  float: left;
+  background: $grey-lightest;
+  border-bottom: 0.222em solid $agenda-yellow;
+  width: 5.5em;
+  margin-right: 0.75em;
+  min-width: 5.556em;
+  padding: 0.85em 0em 0.4em 0em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -0.667em;
+    right: -0.200em;
+    width: 0;
+  	height: 0;
+  	border-top: 1em solid transparent;
+  	border-bottom: 1em solid transparent;
+  	border-right:1em solid #fff;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
+.date-block__day-text {
+  @extend .date-block__element;
+  font-size: $font-size-little;
+  line-height: 1;
+}
+
+.date-block__day {
+  @extend .date-block__element;
+  font-size: $font-size-huge;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+.date-block__month {
+  @extend .date-block__element;
+  font-size: 1.111em;
+  line-height: 1;
+}
+
+
+.date-block__element {
+  width: 100%;
+  float: left;
+}

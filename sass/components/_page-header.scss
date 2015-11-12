@@ -58,13 +58,13 @@ Styleguide page-header
       font-size: $font-size-h2;
     }
   }
+}
 
-  .page-header--image {
-    background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+.page-header--image {
+  background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 // External link specific adjustments

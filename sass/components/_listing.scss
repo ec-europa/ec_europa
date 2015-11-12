@@ -27,6 +27,15 @@ $spacing-bottom-listing__title: 0.7em;
   }
 }
 
+.listing__date {
+  float: left;
+}
+.listing__column-main {
+  .listing__with {
+    margin-top: 0px;
+  }
+}
+
 .listing__wrapper {
   // margin-bottom: 1.667em;
 }
@@ -155,6 +164,32 @@ $spacing-bottom-listing__title: 0.7em;
   }
 }
 
+// Modifier to add line on the left
+.listing--line-left {
+  .listing__title {
+    padding: 0 !important;
+  }
+
+  // Teaser listing
+  .listing--teaser {
+    padding-left: 0;
+  }
+
+  .listing__item {
+    border-top: none;
+    border-bottom: none;
+    border-left: 5px solid $blue-dark;
+    margin-top: 0.85em;
+    margin-bottom: 1em;
+    padding: 0.4em 0 0.4em 0.7em;
+
+    .listing__item-link {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
 .listing--no-link {
   .listing__item {
     padding-top: 0.5em;
@@ -183,6 +218,23 @@ $spacing-bottom-listing__title: 0.7em;
 .listing--title-medium {
   .listing__title {
     font-size: $font-size-h3;
+  }
+}
+
+.listing--person {
+  .listing__meta {
+    text-transform: uppercase;
+  }
+  .listing__meta .label {
+    font-weight: normal;
+  }
+  .listing__item-link {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+  .listing__title + * {
+    line-height: 1.3;
+    margin-top: 0;
   }
 }
 
@@ -269,6 +321,8 @@ Listing components
 
 Markup: html/listing--title.html
 
+.listing--line-left - Listing line left
+
 Styleguide listing.title
 */
 .listing--title,
@@ -321,6 +375,7 @@ Markup: html/listing--teaser.html
 .listing--title-large - Listing title large
 .listing--title-medium - Listing title medium
 .listing--short-spaced - Listing short spaced
+.listing--line-left - Listing line left
 
 Styleguide listing.teaser
 */
@@ -426,4 +481,45 @@ Styleguide listing.column-left
       margin-bottom: 0;
     }
   }
+}
+
+/*
+Listing Agenda
+
+Listing components
+
+Markup: html/listing--agenda.html
+
+Styleguide listing.agenda
+*/
+.listing--agenda {
+
+  p {
+    margin: 0;
+  }
+
+  .listing__item {
+    padding-top: 0.85em;
+    padding-bottom: 1em;
+  }
+
+  .meta {
+    margin-bottom: 0;
+  }
+
+  .listing__meta-item {
+    text-transform: uppercase;
+  }
+
+  h3 {
+    &.listing__title {
+      font-size: $font-size-medium;
+      color: $grey-base;
+    }
+  }
+
+  .listing__author {
+    font-size: $font-size-little;
+  }
+
 }

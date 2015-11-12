@@ -63,14 +63,14 @@
           <span class="kss-nav__ref">5</span
           ><span class="kss-nav__name">Date Block</span>
         </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-datepicker.html">
           <span class="kss-nav__ref">6</span
           ><span class="kss-nav__name">Datepicker</span>
         </a>
-        <ul class="kss-nav__menu-child">
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-featureditem.html">
@@ -215,22 +215,20 @@
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-datepicker" class="kss-section kss-section--depth-1">
+      <div     id="kssref-date-block" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
-        <a class="kss-title__permalink" href="#kssref-datepicker">
-          <span class="kss-title__ref">6</span
-          >Datepicker
+        <a class="kss-title__permalink" href="#kssref-date-block">
+          <span class="kss-title__ref">5</span
+          >Date Block
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h1>
 
 
       <div class="kss-description">
-        <p>This example is based on jQuery Datepicker widget. It requires both jQuery and jQuery UI libraries.<br/>
-Also, it assumes that the default CSS styles from jQuery UI are included as well.<br/>
-The CSS applied from styleguide is an override over the default CSS of jQuery UI.<br/></p>
+        <p>Date components</p>
 
       </div>
     </div>
@@ -240,25 +238,25 @@ The CSS applied from styleguide is an override over the default CSS of jQuery UI
           Example
         </div>
         <div class="kss-modifier__example">
-          <script src="public/js/components/datepicker/jquery.ui.datepicker.min.js"></script>
-<script src="public/js/components/datepicker/datepicker.js"></script>
-<link rel="stylesheet" href="public/css/jquery.ui.core.min.css">
-<link rel="stylesheet" href="public/css/jquery.ui.datepicker.min.css">
-
-<label for="datepicker">Date:</label>
-<input class="form-control" type="text" id="datepicker">
+          <div class="clearfix"> <!-- only required for the styleguide -->
+  <div class="date-block">
+    <span class="date-block__day-text">Monday</span>
+    <span class="date-block__day">12</span>
+    <span class="date-block__month">Oct</span>
+  </div>
+</div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;script src=&quot;public/js/components/datepicker/jquery.ui.datepicker.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;public/js/components/datepicker/datepicker.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;public/css/jquery.ui.core.min.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;public/css/jquery.ui.datepicker.min.css&quot;&gt;
-
-&lt;label for=&quot;datepicker&quot;&gt;Date:&lt;/label&gt;
-&lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;datepicker&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;clearfix&quot;&gt; &lt;!-- only required for the styleguide --&gt;
+  &lt;div class=&quot;date-block&quot;&gt;
+    &lt;span class=&quot;date-block__day-text&quot;&gt;Monday&lt;/span&gt;
+    &lt;span class=&quot;date-block__day&quot;&gt;12&lt;/span&gt;
+    &lt;span class=&quot;date-block__month&quot;&gt;Oct&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
 

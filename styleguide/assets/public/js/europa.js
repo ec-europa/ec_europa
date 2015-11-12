@@ -1,3 +1,8 @@
+/**
+ * @file
+ * JS file for Europa theme.
+ */
+
 (function ($) {
   Drupal.europa = Drupal.europa || {};
   Drupal.europa.breakpoints = Drupal.europa.breakpoints || {};
@@ -15,18 +20,18 @@
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register('screen and (max-width: 479px)', {
-            // setup
+            // Setup.
             setup : function() {
               $this.siblings('.tab-content').children().addClass('tab-pane');
             },
-            // mobile
+            // Mobile.
             match : function() {
               $this.siblings('.tab-content').children().removeClass('tab-pane');
             },
-            // desktop
+            // Desktop.
             unmatch: function() {
               $this.siblings('.tab-content').children().addClass('tab-pane');
-            },
+            }
           });
         }
       });
@@ -40,14 +45,14 @@
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register(Drupal.europa.breakpoints.small, {
-            // desktop
+            // Desktop.
             match : function() {
               Drupal.behaviors.equal_blocks.fixBlockHeights($equal_height_block, false);
             },
-            // mobile
+            // Mobile.
             unmatch : function() {
               Drupal.behaviors.equal_blocks.fixBlockHeights($equal_height_block, true);
-            },
+            }
           });
         }
       });
@@ -86,15 +91,50 @@
         else {
           $blocks.push($wrapper.find('.listing__item-link > :first-child'));
         }
-
-        var i, max;
-        for (i = 0, max = $blocks.length; i < max; i++) {
-          var $block = $blocks[i].equalHeight();
-          // if(stop) {
-          //   $block.stop();
-          // }
-        }
       });
     }
   };
+
+  var trackElements = [];
+  var errorEventSent = 'Piwik, trackEvent was not fired up.';
+  /**
+   * Acts like a wrapper for Piwik push method.
+   *
+   * For Piwik parameters refer to {@see https://developer.piwik.org/guides/tracking-javascript-guide}
+   *
+   * @param int {triggerValue}
+   *   How many times should the call be triggered by page load
+   *   Accepts 0,1 (0 for always and 1 just for one time).
+   * @param str {action}
+   *   Defines Action in piwik.
+   * @param str {category}
+   *   Defines category in piwik.
+   * @param {value}
+   *  Defines category in piwik.
+   * @param {data}
+   *  Defines category in piwik.
+   */
+  PiwikDTT = {
+    sendTrack: function(triggerValue, action, category, value, data) {
+      if (typeof action === "undefined" || action === null || action === '') {
+        action = "trackEvent";
+      }
+      // Trigger only once.
+      if (triggerValue == 1) {
+        var innerElements = (triggerValue + action + category + value + data);
+        if ($.inArray(innerElements, trackElements) === -1) {
+          trackElements.push(innerElements);
+          if (typeof _paq != 'undefined') {
+            _paq.push([action, category, value, data]);
+          }
+        }
+      }
+      // Always trigger.
+      if (triggerValue == 0) {
+        if (typeof _paq != 'undefined') {
+          _paq.push([action, category, value, data]);
+        }
+      }
+    }
+  }
 })(jQuery);
