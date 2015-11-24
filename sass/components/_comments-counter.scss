@@ -1,0 +1,17 @@
+/*
+Comments counter
+
+Markup: html/comments-counter.html
+
+Styleguide comments.counter
+*/
+
+.comments-counter {
+  background: url('../images/svg/comments.svg') no-repeat center left;
+  background-size: 0.889em;
+  margin-top: 0.556em;
+  padding-left: 1.389em;
+  font-size: $font-size-xsmall;
+  color: $brand-primary;
+  display: block;
+}

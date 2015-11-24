@@ -133,3 +133,10 @@ $external_link_pattern: 'href^="http"';
 $grid-float-breakpoint:     $screen-lg-min;
 //** Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+// Used languages.
+$languages: ("bg", "cs", "da", "de", "el",
+  "en", "es", "et", "fi", "fr", "ga",
+  "hr", "hu", "it", "lt", "lv", "mt",
+  "nl", "pl", "pt", "ro", "sk", "sl",
+  "sv");

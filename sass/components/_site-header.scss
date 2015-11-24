@@ -19,7 +19,6 @@ Styleguide: siteheader
   }
   @media print {
     -webkit-print-color-adjust: exact;
-    background-color: $brand-primary !important;
   }
 
   & > .container-fluid {
@@ -33,5 +32,6 @@ Styleguide: siteheader
   }
   .site-header__logo {
     top: 0;
+    margin-bottom: 0;
   }
 }

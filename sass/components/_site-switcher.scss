@@ -15,6 +15,7 @@ Styleguide: siteswitcher
   background: $grey-lightest;
   display: block;
   font-size: $font-size-little;
+  @extend .hidden-print;
 }
 
 .site-switcher__list {

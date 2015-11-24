@@ -8,11 +8,13 @@ Styleguide timeline
 .timeline {
   border-left: 4px solid $yellow-light;
   padding-left: 1.667em;
-  padding-bottom: 0.833em;
+  padding-bottom: 0;
+  padding-top: 2em;
   position: relative;
 
   .timeline__item-title {
     font-weight: bold;
+    line-height: 1em;
     &:before {
       content: '';
       position: absolute;
@@ -21,23 +23,44 @@ Styleguide timeline
       height: 14px;
       width: 14px;
       border-radius: 50%;
-      left: -0.5em;
+      left: -0.6em;
       margin-top: 0.2em;
     }
   }
-
   .timeline__text {
     margin-top: 0.2em;
     margin-bottom: 1em;
     ul,
     ol {
-      padding-left: 18px;
+      padding-left: 0;
+      list-style: none !important;
     }
-
+    ul > li {
+      color: $grey-dark !important;
+    }
     & > * {
       margin-bottom: 0 !important;
     }
   }
+}
+
+.btn {
+  &.btn-time-line {
+    @extend .btn-ctn;
+    margin-bottom: 0;
+
+    &:after {
+      content: '\e616';
+    }
+  }
+}
+
+.timeline--nopadding {
+  padding-top: 0.5em;
+}
+
+.view-biography-timeline .view-footer {
+  margin-top: 1em !important;
 }
 
 @include breakpoint(screen-xs-min) {

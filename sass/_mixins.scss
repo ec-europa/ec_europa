@@ -32,3 +32,19 @@
     }
   }
 }
+
+// Language generator.
+@mixin languages_logo($path-and-filename, $modifier-and-file-extension) {
+  @each $item in $languages {
+    &.language-#{$item} {
+      .logo {
+        background-image: url("#{$path-and-filename}#{$item}#{$modifier-and-file-extension}");
+      }
+      @media print {
+        .logo:before {
+          content: url("#{$path-and-filename}#{$item}#{$modifier-and-file-extension}");
+        }
+      }
+    }
+  }
+}

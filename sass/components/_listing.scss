@@ -62,7 +62,8 @@ $spacing-bottom-listing__title: 0.7em;
   &:hover,
   &:active,
   &:focus {
-    .listing__title {
+    a .listing__title,
+    a.listing__title {
       text-decoration: underline;
       color: $grey-base;
     }
@@ -222,12 +223,6 @@ $spacing-bottom-listing__title: 0.7em;
 }
 
 .listing--person {
-  .listing__meta {
-    text-transform: uppercase;
-  }
-  .listing__meta .label {
-    font-weight: normal;
-  }
   .listing__item-link {
     padding-bottom: 1em;
     padding-top: 1em;
@@ -333,7 +328,7 @@ ul.listing--title {
     &:hover,
     &:active,
     &:focus {
-      .listing__title {
+      a .listing__title {
         text-decoration: none;
       }
     }
@@ -505,10 +500,6 @@ Styleguide listing.agenda
 
   .meta {
     margin-bottom: 0;
-  }
-
-  .listing__meta-item {
-    text-transform: uppercase;
   }
 
   h3 {

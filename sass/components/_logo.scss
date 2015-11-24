@@ -1,6 +1,6 @@
-// Logo
+// Ec logo small (svg)
 //
-// Ec logo
+// Default EC logo.
 //
 // Markup: html/logo.html
 //
@@ -19,48 +19,128 @@
   background: url('../images/svg/logo.svg') no-repeat;
 }
 
+// EC logo small (png)
+//
+// Ec logo without SVG.
+//
+// Markup: html/logo-no-svg.html
+//
+// Styleguide siteheader.logo-no-svg
+
+.no-svg {
+  .logo {
+    background-image: url('../images/png/logo.png');
+  }
+}
+
+// EC logo front (svg)
+//
+// Ec logo on front page, large size, svg file.
+//
+// Markup: html/logo-front.html
+//
+// .language-bg - Bulgarian
+// .language-cs - Czech
+// .language-da - Danish
+// .language-de - German
+// .language-et - Estonian
+// .language-el - Greek
+// .language-en - English
+// .language-es - Spanish
+// .language-fr - French
+// .language-ga - Irish/Gaeilge
+// .language-hr - Croatian
+// .language-it - Italian
+// .language-lv - Latvian
+// .language-lt - Lithuanian
+// .language-hu - Hungarian
+// .language-mt - Maltese
+// .language-nl - Dutch
+// .language-pl - Polish
+// .language-pt - Portuguese
+// .language-ro - Romanian
+// .language-sk - Slovak
+// .language-sl - Slovene
+// .language-fi - Finnish
+// .language-sv - Swedish
+//
+// Styleguide siteheader.logo-front
+
 .front {
   .logo {
     float: none;
     
-    width: 250px;
-    height: 130px;
+    width: 225px;
+    height: 82px;
     margin: 16px auto 40px auto;
 
     background: url('../images/svg/logo--big.svg') center center no-repeat;
     background-size: 100%;
   }
+  @include languages_logo('../images/svg/logo/logo--', '.svg');
 
   @include breakpoint(screen-xs-min) {
     .logo {
-      width: 290px;
-      height: 153px;
+      width: 340px;
+      height: 124px;
     }
   }
 
   @include breakpoint(screen-sm-min) {
     .logo {
-      width: 378px;
-      height: 193px;
+      width: 450px;
+      height: 164px;
     }
   }
 }
 
 @media print {
   .logo:before {
-    content: url('../images/svg/logo.svg');
+    content: url('../images/svg/logo--big.svg');
   }
 }
 
+// EC logo front (png)
+//
+// Ec logo on front page, large size, png file.
+//
+// Markup: html/logo-front-no-svg.html
+//
+// .language-bg - Bulgarian
+// .language-cs - Czech
+// .language-da - Danish
+// .language-de - German
+// .language-et - Estonian
+// .language-el - Greek
+// .language-en - English
+// .language-es - Spanish
+// .language-fr - French
+// .language-ga - Irish/Gaeilge
+// .language-hr - Croatian
+// .language-it - Italian
+// .language-lv - Latvian
+// .language-lt - Lithuanian
+// .language-hu - Hungarian
+// .language-mt - Maltese
+// .language-nl - Dutch
+// .language-pl - Polish
+// .language-pt - Portuguese
+// .language-ro - Romanian
+// .language-sk - Slovak
+// .language-sl - Slovene
+// .language-fi - Finnish
+// .language-sv - Swedish
+//
+// Styleguide siteheader.logo-front
+
 .no-svg {
-  .logo {
-    background-image: url('../images/png/logo.png');
-  }
   .front {
     .logo {
       background-image: url('../images/png/logo--big.png');
       width: 378px;
       height: 193px;
     }
+
+    @include languages_logo('../images/png/logo/logo--', '.png');
   }
 }

@@ -637,6 +637,7 @@ function europa_easy_breadcrumb($variables) {
 
       if ($i == 0) {
         $classes[] = 'breadcrumb__segment--first';
+        $attributes['class'][] = 'is-internal';
         $attributes += array('rel' => 'home');
       }
       elseif ($i == ($s - 1)) {
@@ -947,6 +948,10 @@ function europa_preprocess_image(&$variables) {
  */
 function europa_preprocess_html(&$variables) {
   $variables['theme_path'] = base_path() . path_to_theme();
+  $language = $variables['language'];
+  if (isset($language->prefix)) {
+    $variables['classes_array'][] = 'language-' . $language->prefix;
+  }
 }
 
 /**

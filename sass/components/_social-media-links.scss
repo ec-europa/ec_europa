@@ -19,6 +19,12 @@ Styleguide social
   @extend .hidden-print;
 }
 
+.social-media-links__label {
+  margin-bottom: 0.8em;
+  display: block;
+  width: 100%; 
+}
+
 .social-media-links__item {
   margin-bottom: 0.7em;
   & > a {
@@ -32,8 +38,9 @@ Styleguide social
       display: none !important;
     }
   }
-  &--noicon {
-    font-size: 0.8em;
-    margin-top: 1.2em;
-  }
+}
+
+.social-media-links__item--noicon {
+  font-size: 0.8em;
+  margin-top: 1.2em;
 }

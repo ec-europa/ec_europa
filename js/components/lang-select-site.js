@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-    Drupal.behaviors.europa_pager = {
+    Drupal.behaviors.europa_lang_select_site = {
       attach: function(context) {
         var $overlay = $('.splash-page--overlay'),
             overlay = '.splash-page--overlay',

@@ -35,14 +35,15 @@
       if ($resultsCount.is(':visible') && !$('.filters__btn-collapse').length) {
         $resultsCount
           .append(
-            '<div class="btn-group">' +
-              '<button class="btn btn-default filters__btn-reset--small">' + clearAll +
-              '</button>' +
-              '<button class="btn btn-primary filters__btn-collapse" type="button"' +
-              ' data-toggle="collapse" data-target="#' + Drupal.settings.europa.exposedBlockId + '"' +
-              ' aria-expanded="false" aria-controls="collapseFilters">' +
-                refineText +
-              '</button></div>'
+            '<div class="btn-group"> \
+            <button class="btn btn-default filters__btn-reset--small hidden js-showonsubmit">' + clearAll + '\
+            </button> \
+              <button class="btn btn-primary filters__btn-collapse" type="button"  \
+                data-toggle="collapse" data-target="#' + Drupal.settings.europa.exposedBlockId + '"  \
+                aria-expanded="false" aria-controls="collapseFilters">  \
+                ' + refineText + '  \
+              </button> \
+            </div>'
           );
       }
 

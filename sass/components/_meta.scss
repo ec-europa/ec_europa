@@ -41,11 +41,6 @@ Styleguide meta
       display: none;
     }
   }
-
-  // Fix for Drupal markup output that cannot be easly removed in some cases.
-  p {
-    font-size: inherit !important;
-  }
 }
 
 .meta__item--type {
@@ -55,4 +50,17 @@ Styleguide meta
 .meta--header {
   font-size: $font-size-little;
   margin:1.5em 0 0;
+}
+
+// Drupal fix due to basic_html text formatter settings that are generating
+// <p> tag
+.meta {
+  .meta__item {
+    p {
+      font-size: inherit !important;
+      display: inline;
+      line-height: inherit;
+      max-width: none;
+    }
+  }
 }

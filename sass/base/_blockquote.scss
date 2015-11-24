@@ -11,16 +11,15 @@ $small-quote-width: 0.5em;
 
 blockquote,
 .blockquote {
-  @extend .paragraph;
-  font-family: $font-family-serif;
+  max-width: 24em;
+  border-left: 0.417em solid $yellow-light;
   font-style: italic;
   font-size: $font-size-big;
-  color: $grey-dark;
+  line-height: 1.5;
   margin-left: 0;
   margin-right: 0;
-  padding: 0.6em 1.5em;
+  padding: 0.6em 0 0.6em 1.2em;
   clear: both;
-  border: none;
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -46,17 +45,4 @@ blockquote,
   color: $text-color;
   font-family: $font-family-base;
   margin-bottom: 0;
-}
-
-
-// State
-.no-svg {
-  blockquote {
-    p {
-      &:before,
-      &:after {
-        background-image: url('../images/png/quote.png');
-      }
-    }
-  }
 }

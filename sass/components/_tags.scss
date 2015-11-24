@@ -1,0 +1,49 @@
+/*
+Tags
+
+Tags component used to display tag section that is typically displayed under a content
+
+Markup: html/tags.html
+
+Styleguide tags
+*/
+
+.tags {
+  padding-bottom: 0.8em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tags__label {
+  float: left;
+  text-transform: uppercase;
+  margin-right: 1em;
+  margin-top: 0.1em;
+}
+
+.tags__items {
+  float: left;
+  overflow: hidden;
+}
+
+.tags__item {
+  display: inline-block;
+  margin-right: 0.4em;
+  margin-bottom: 0.4em;
+  a {
+    background: $grey-light;
+    border-radius: 5px;
+    color: $text-color;
+    display: inline-block;
+    font-size: $font-size-little;
+    line-height: 1;
+    padding: 0.5em;
+    text-transform: lowercase;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

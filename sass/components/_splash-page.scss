@@ -22,7 +22,7 @@ $padding-splash-xl: 2em; // 52px
       background-origin: content-box;
 
       .no-svg & {
-        background-image: url("../images/png/logo.png") center center no-repeat;
+        background: url("../images/png/logo--big.png") center center no-repeat;
       }
     }
 
