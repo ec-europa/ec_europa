@@ -8126,7 +8126,6 @@ Styleguide listing
 
 .listing__item {
   border-bottom: 1px solid #e2e2e2;
-  overflow: hidden;
   list-style: none;
   list-style-image: none;
   padding-top: 0;
