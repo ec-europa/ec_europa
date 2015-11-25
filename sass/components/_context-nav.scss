@@ -8,6 +8,7 @@ Styleguide contextnav
 
 .context-nav {
   @extend .row;
+  font-size: $font-size-little;
 
   &__expander {
     border: none;

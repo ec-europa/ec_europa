@@ -6219,7 +6219,7 @@ Styleguide form.textarea
   margin-bottom: 30px; }
 
 .main-content {
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .page-navigation {
   background: #004494; }
@@ -6287,7 +6287,7 @@ Styleguide form.textarea
   Placeholder for adding a background on the .footer-top
 */
 .footer-top {
-  overflow-x: hidden;
+  overflow: hidden;
   background: #f2f2f2;
   margin-bottom: 1px; }
   .footer-top .container-fluid, .footer-top .section__group--full-width > *, .footer-top .block--full-width > *, .footer-top .front .top-bar > *, .front .footer-top .top-bar > *, .footer-top .field--full-width > * {
@@ -6591,16 +6591,17 @@ Markup: html/context-nav.html
 
 Styleguide contextnav
 */
-.context-nav__expander {
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  color: #004494; }
-  .context-nav__expander:hover {
-    text-decoration: underline; }
-
-.context-nav__hidden {
-  display: none; }
+.context-nav {
+  font-size: 0.889em; }
+  .context-nav__expander {
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #004494; }
+    .context-nav__expander:hover {
+      text-decoration: underline; }
+  .context-nav__hidden {
+    display: none; }
 
 .context-nav__label {
   display: block;
@@ -9231,7 +9232,7 @@ Markup: html/site-header.html
 Styleguide: siteheader
 */
 .site-header {
-  overflow-x: hidden;
+  overflow: hidden;
   color: #004494;
   padding: 14px 0;
   position: relative; }
