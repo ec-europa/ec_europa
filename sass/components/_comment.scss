@@ -1,0 +1,97 @@
+/*
+Comment
+
+Markup: html/comment.html
+
+Styleguide comment
+*/
+
+.comments__wrapper {
+}
+
+.comments__count {
+  padding: 25px 15px;
+}
+
+.comment__image {
+  display: none;
+
+  & img {
+    border: 1px solid $yellow-light;
+    padding: 1px;
+    max-width: 125px;
+  }
+}
+.comment__meta {
+  font-size: $font-size-xsmall;
+  padding-bottom: 15px;
+}
+
+.comment__body {
+  background: #fff;
+  font-size: $font-size-little;
+  padding: 20px 25px;
+  position: relative;
+}
+
+.comment__title {
+  color: black;
+  border-top: 1px solid $yellow-light;
+  display: block;
+  font-weight: bold;
+  font-size: $font-size-medium;
+  padding: 15px 0;
+}
+
+.comment__author {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.comment__date {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.btn-add-comment {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+// Drupal-specific rule.
+.comment {
+  .list-inline {
+    padding-left: 0;
+    li {
+      padding-left: 0;
+    }
+  }
+}
+
+@include breakpoint(screen-md-min) {
+  .comment__image {
+    @extend .col-md-2;
+
+    display: block;
+  }
+
+  .comment__body {
+    @extend .col-md-6;
+
+    &:before {
+      right: 100%;
+      top: 8%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-right-color: #fff;
+      border-width: 15px;
+      margin-top: -15px;
+    }
+  }
+}
