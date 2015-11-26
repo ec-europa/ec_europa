@@ -148,6 +148,10 @@ function europa_form_element(&$variables) {
       // bootstrap class here.
       if (!in_array('form-item-QueryText', $attributes['class'])) {
         $attributes['class'][] = 'form-group';
+        // Apply an extra wrapper class to our select list.
+        if ($element['#type'] == 'select') {
+          $attributes['class'][] = 'form-select';
+        }
       }
     }
   }
@@ -952,6 +956,13 @@ function europa_preprocess_html(&$variables) {
   if (isset($language->prefix)) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
   }
+
+  // If it is IE 9, we can add an extra class.
+  if (preg_match('/MSIE 9.0/i', $_SERVER['HTTP_USER_AGENT'])) {
+    // Add a class to the html.
+    $variables['classes_array'][] = 'ie9';
+  }
+
 }
 
 /**

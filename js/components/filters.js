@@ -142,6 +142,13 @@
         }
       });
       // End of .once().
+      // Specific logic for internet explorer 9.
+      if ($('body').hasClass('ie9')) {
+        // Append it with our arrow.
+        $('.form-select').each(function() {
+          $(this).append('<span class="select-list-arrow"></span>');
+        });
+      }
     }
   };
 })(jQuery);

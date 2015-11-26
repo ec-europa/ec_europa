@@ -6134,15 +6134,94 @@ Markup: html/select.html
 
 Styleguide form.select
 */
-.select, select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 0.01px;
-  text-overflow: ''; }
-  .select:hover, select:hover, .select.is-hovered, select.is-hovered {
+.ie9 .form-select {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-right: 0; }
+  .ie9 .form-select select {
+    background: none;
+    z-index: 99;
+    width: 115%; }
+  .ie9 .form-select .select-list-arrow {
+    z-index: 50;
+    width: 2.75em;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/png/arrow-down.png"), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPYvGXrfwAHVgMcljm2ggAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat, repeat;
+    background-size: 1.1em 0.6134969325em, 2.75em 100%;
+    background-position: center center;
+    cursor: pointer; }
+  .ie9 .form-select:hover select {
     border-color: #004494; }
+  .ie9 .form-select:hover .select-list-arrow {
+    background: url("../images/png/arrow-down.png"), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNgcJnyHwAC+AHYTZq+IgAAAABJRU5ErkJggg==);
+    background-size: 1.1em 0.6134969325em, 2.75em 100%;
+    background-position: center center;
+    background-repeat: no-repeat, repeat; }
+
+.select, select {
+  /* Hide the arrow */
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  text-indent: 0.01px;
+  text-overflow: '';
+  cursor: pointer; }
+  .select::-ms-expand, select::-ms-expand {
+    display: none; }
+  .select.form-control, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+    background: url("../images/svg/arrow-down.svg"), linear-gradient(to bottom, #b3b4b5, #b3b4b5);
+    background-repeat: no-repeat;
+    background-position: right 0.764em center, right;
+    background-size: 1em 1em, 2.75em 100% !important;
+    transition: none;
+    padding-right: 50px; }
+    .no-svg .select.form-control, .no-svg select.form-control, .no-svg .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .ui-datepicker .ui-datepicker-header .ui-datepicker-title .no-svg select {
+      background: url("../images/png/arrow-down.png"), linear-gradient(to bottom, #b3b4b5, #b3b4b5); }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .select.form-control, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+        background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
+  .select:hover, select:hover {
+    border-color: #004494;
+    background: url("../images/svg/arrow-down.svg"), linear-gradient(to bottom, #004494, #004494);
+    background-repeat: no-repeat;
+    background-position: right 0.764em center, right;
+    background-size: 1em 1em, 2.75em 100% !important;
+    transition: none; }
+    .no-svg .select:hover, .no-svg select:hover {
+      background: url("../images/png/arrow-down.png"), linear-gradient(to bottom, #004494, #004494); }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .select:hover, select:hover {
+        background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
   .select.is-down, select.is-down {
-    border-color: #575757; }
+    border-color: #575757;
+    background: url("../images/svg/arrow-down.svg"), linear-gradient(to bottom, #575757, #575757);
+    background-repeat: no-repeat;
+    background-position: right 0.764em center, right;
+    background-size: 1em 1em, 2.75em 100% !important;
+    transition: none; }
+    .no-svg .select.is-down, .no-svg select.is-down {
+      background: url("../images/png/arrow-down.png"), linear-gradient(to bottom, #575757, #575757); }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .select.is-down, select.is-down {
+        background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
+  .select:focus, select:focus {
+    background: url("../images/svg/arrow-down.svg"), linear-gradient(to bottom, #ffd617, #ffd617);
+    background-repeat: no-repeat;
+    background-position: right 0.764em center, right;
+    background-size: 1em 1em, 2.75em 100% !important;
+    transition: none; }
+    .no-svg .select:focus, .no-svg select:focus {
+      background: url("../images/png/arrow-down.png"), linear-gradient(to bottom, #ffd617, #ffd617); }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .select:focus, select:focus {
+        background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
 
 /*
 Text Input
