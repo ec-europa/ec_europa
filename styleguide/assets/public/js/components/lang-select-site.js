@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Site level language switcher related behaviors.
+ */
+
 (function ($) {
     Drupal.behaviors.europa_lang_select_site = {
       attach: function(context) {
