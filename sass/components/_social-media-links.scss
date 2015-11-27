@@ -19,12 +19,6 @@ Styleguide social
   @extend .hidden-print;
 }
 
-.social-media-links__label {
-  margin-bottom: 0.8em;
-  display: block;
-  width: 100%; 
-}
-
 .social-media-links__item {
   margin-bottom: 0.7em;
   & > a {
@@ -38,9 +32,38 @@ Styleguide social
       display: none !important;
     }
   }
+  &--noicon {
+    font-size: 0.8em;
+    margin-top: 1.2em;
+  }
 }
 
-.social-media-links__item--noicon {
-  font-size: 0.8em;
-  margin-top: 1.2em;
+.social-media-links--horizontal {
+  li {
+    float: none !important;
+  }
+  ul.wtShareNetworks {
+    max-width: none !important;
+  }
+}
+
+
+// Extending for social bookmark kit web tools.
+.wtShareList {
+  @extend .social-media-links__item;
+  a[href^="http"]:not(.is-internal):after {
+    display: none !important;
+  }
+  background: transparent !important;
+  ul {
+    @extend .social-media-links__list;
+  }
+  a.wtShareMore {
+    @extend .social-media-links__item--noicon;
+  }
+  .wtShareLink {
+    @extend .social-media-links__item;
+    font-size: 18px;
+    background: transparent !important;
+  }
 }
