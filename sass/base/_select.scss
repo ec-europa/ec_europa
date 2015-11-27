@@ -26,7 +26,7 @@ Styleguide form.select
     position: absolute;
     top: 0;
     right: 0;
-    background: url("../images/png/arrow-down.png"),  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPYvGXrfwAHVgMcljm2ggAAAABJRU5ErkJggg==);
+    background: url("../images/png/arrow-down--white.png"),  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMI/w8AAbABVyRmoCYAAAAASUVORK5CYII=);
     background-repeat: no-repeat, repeat;
     background-size: $font-size-medium + 0.10em (20em / 32.6em) * $font-size-medium, $form-control-height 100%;
     background-position: center center;
@@ -39,7 +39,7 @@ Styleguide form.select
     }
 
     .select-list-arrow {
-      background: url("../images/png/arrow-down.png"),  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNgcJnyHwAC+AHYTZq+IgAAAABJRU5ErkJggg==);
+      background: url("../images/png/arrow-down--white.png"),  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNgcJnyHwAC+AHYTZq+IgAAAABJRU5ErkJggg==);
       background-size: $font-size-medium + 0.10em (20em / 32.6em) * $font-size-medium, $form-control-height 100%;
       background-position: center center;
       background-repeat: no-repeat, repeat;
@@ -62,7 +62,7 @@ Styleguide form.select
   }
 
   &.form-control {
-    @include select-list-arrow($grey);
+    @include select-list-arrow($form-control-border-color);
     // To not make it overlap.
     padding-right: 50px;
   }
@@ -75,13 +75,7 @@ Styleguide form.select
 
   // Down state.
   &.is-down {
-    border-color: $form-control-border-select-color-down;
-    @include select-list-arrow($form-control-border-select-color-down);
-  }
-
-  // Focus state.
-  &:focus {
-    @include select-list-arrow($yellow-light);
+    @include select-list-arrow(#ffffff);
   }
 
 }

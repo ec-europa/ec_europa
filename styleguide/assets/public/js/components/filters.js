@@ -1,6 +1,6 @@
 /**
  * @file
- * Contains custom filtering logic.
+ * Exposed filter related behaviors.
  */
 
 (function ($) {
