@@ -9421,6 +9421,8 @@ Styleguide social
   background: transparent !important; }
   .social-media-links--webtool-vertical .wtShareList a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList a[href^="http"]:not(.is-internal):after {
     display: none !important; }
+  .social-media-links--webtool-vertical .wtShareList li, .social-media-links--webtool-horizontal .wtShareList li {
+    float: none; }
   .social-media-links--webtool-vertical .wtShareList a.wtShareMore, .social-media-links--webtool-horizontal .wtShareList a.wtShareMore {
     font-size: 0.8em;
     margin-top: 1.2em; }
@@ -9428,10 +9430,10 @@ Styleguide social
     font-size: 18px;
     background: transparent !important; }
 
-.social-media-links--webtool-horizontal li {
-  float: none !important; }
+.social-media-links--webtool-horizontal .wtShareList li {
+  float: left; }
 
-.social-media-links--webtool-horizontal ul.wtShareNetworks {
+.social-media-links--webtool-horizontal .wtShareList ul.wtShareNetworks {
   max-width: none !important; }
 
 /*

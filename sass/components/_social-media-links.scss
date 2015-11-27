@@ -55,6 +55,9 @@ Styleguide social
     ul {
       @extend .social-media-links__list;
     }
+    li {
+      float: none;
+    }
     a.wtShareMore {
       font-size: 0.8em;
       margin-top: 1.2em;
@@ -69,10 +72,13 @@ Styleguide social
 
 .social-media-links--webtool-horizontal {
   @extend .social-media-links--webtool-vertical;
-  li {
-    float: none !important;
+  .wtShareList {
+    li {
+      float: left;
+    }
+    ul.wtShareNetworks {
+      max-width: none !important;
+    }
   }
-  ul.wtShareNetworks {
-    max-width: none !important;
-  }
+
 }
