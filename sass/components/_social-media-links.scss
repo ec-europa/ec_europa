@@ -70,8 +70,9 @@ Styleguide social
   }
 }
 
-.social-media-links--webtool-horizontal {
+  .social-media-links--webtool-horizontal {
   @extend .social-media-links--webtool-vertical;
+  clear: both;
   .wtShareList {
     li {
       float: left;

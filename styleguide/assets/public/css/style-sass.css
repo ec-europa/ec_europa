@@ -9430,11 +9430,12 @@ Styleguide social
     font-size: 18px;
     background: transparent !important; }
 
-.social-media-links--webtool-horizontal .wtShareList li {
-  float: left; }
-
-.social-media-links--webtool-horizontal .wtShareList ul.wtShareNetworks {
-  max-width: none !important; }
+.social-media-links--webtool-horizontal {
+  clear: both; }
+  .social-media-links--webtool-horizontal .wtShareList li {
+    float: left; }
+  .social-media-links--webtool-horizontal .wtShareList ul.wtShareNetworks {
+    max-width: none !important; }
 
 /*
 Splash Page
