@@ -6132,6 +6132,10 @@ Select
 
 Markup: html/select.html
 
+:hover      - Select hover
+:focus      - Select focus
+.is-down    - Select is-down
+
 Styleguide form.select
 */
 .ie9 .form-select {
