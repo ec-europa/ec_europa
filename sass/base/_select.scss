@@ -75,7 +75,7 @@ Styleguide form.select
 
   // Down state.
   &.is-down {
-    @include select-list-arrow(#ffffff);
+    @include select-list-arrow(#ffffff, true);
   }
 
 }

@@ -6200,13 +6200,13 @@ Styleguide form.select
       .select:hover, select:hover {
         background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
   .select.is-down, select.is-down {
-    background: url("../images/svg/arrow-down--white.svg"), linear-gradient(to bottom, #ffffff, #ffffff);
+    background: url("../images/svg/arrow-down.svg"), linear-gradient(to bottom, #ffffff, #ffffff);
     background-repeat: no-repeat;
     background-position: right 0.764em center, right;
     background-size: 1.1em 0.6134969325em, 2.75em 100% !important;
     transition: none; }
     .no-svg .select.is-down, .no-svg select.is-down {
-      background: url("../images/png/arrow-down--white.png"), linear-gradient(to bottom, #ffffff, #ffffff); }
+      background: url("../images/png/arrow-down.png"), linear-gradient(to bottom, #ffffff, #ffffff); }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       .select.is-down, select.is-down {
         background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
