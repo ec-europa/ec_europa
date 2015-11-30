@@ -45,7 +45,6 @@
             <?php if (!empty($messages)): ?>
               <?php print $messages; ?>
             <?php endif; ?>
-
             <?php print $top; ?>
           </section>
         <?php endif; ?>
