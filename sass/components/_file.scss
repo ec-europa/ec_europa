@@ -7,12 +7,14 @@ by clicking on the component
 Markup: html/file.html
 
 .file--widebar  - Full width download box
+.file--bare - Strip down version
 
 Styleguide file
 */
 
 .file {
   @extend .paragraph;
+  clear: both;
   background: $grey-lighter;
   padding: 1.333em 1.333em 1.333em 1.333em;
   overflow: hidden;
@@ -103,6 +105,37 @@ Styleguide file
 
     @media (max-width: $screen-sm-min) {
       margin-top: 15px;
+    }
+  }
+}
+
+// Modifications in the translations under a normal file.
+.file--bare {
+  background: none;
+  border-top: 1px solid $grey;
+  padding: 0.5em 0;
+  margin: 0 1.333em 0 0;
+
+  .file__icon, .file__language {
+    display: none;
+  }
+}
+
+.file__translations {
+  overflow: hidden;
+  margin-bottom: 1em;
+
+  .file__translations-control {
+    margin-bottom: 0.3em;
+    padding: 0 1.333em;
+  }
+
+  .file__translations-table {
+    tr:last-child {
+      .file {
+        border-bottom: 1px solid $grey;
+        margin-bottom: 0.3em;
+      }
     }
   }
 }

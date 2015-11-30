@@ -7057,10 +7057,12 @@ by clicking on the component
 Markup: html/file.html
 
 .file--widebar  - Full width download box
+.file--bare - Strip down version
 
 Styleguide file
 */
 .file {
+  clear: both;
   background: #ececec;
   padding: 1.333em 1.333em 1.333em 1.333em;
   overflow: hidden; }
@@ -7118,6 +7120,24 @@ Styleguide file
   @media (max-width: 768px) {
     .file--widebar .file__btn {
       margin-top: 15px; } }
+
+.file--bare {
+  background: none;
+  border-top: 1px solid #b3b4b5;
+  padding: 0.5em 0;
+  margin: 0 1.333em 0 0; }
+  .file--bare .file__icon, .file--bare .file__language {
+    display: none; }
+
+.file__translations {
+  overflow: hidden;
+  margin-bottom: 1em; }
+  .file__translations .file__translations-control {
+    margin-bottom: 0.3em;
+    padding: 0 1.333em; }
+  .file__translations .file__translations-table tr:last-child .file {
+    border-bottom: 1px solid #b3b4b5;
+    margin-bottom: 0.3em; }
 
 @media (min-width: 622px) {
   .file__metadata,
@@ -7404,6 +7424,7 @@ Markup: html/icon.html
 .icon--up - Up icon
 .icon--right - Right icon
 .icon--down - Down icon
+.icon--down-blue - Down icon, blue
 .icon--left - Left icon
 .icon--file - File icon
 .icon--audio - Audio icon
@@ -7500,8 +7521,13 @@ Styleguide: icon
 .icon--breadcrumb, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
   content: '\e617' !important; }
 
-.icon--down:before {
+.icon--down:before, .icon--down-blue:before {
   content: '\e616'; }
+
+.icon--down-blue {
+  color: #004494;
+  padding-left: 0.2em;
+  padding-top: 0.1em; }
 
 .icon--left:before {
   content: '\e619'; }
