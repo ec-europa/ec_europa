@@ -7476,8 +7476,7 @@ Styleguide: icon
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon--after, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after, .is-external:after, a[href^="http"]:not(.is-internal):after, .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before, .file__btn:after, .lang-select-page--transparent select.lang-select-page__list:after, .listing__read-more:after, .listing__title--arrow:after, .listing--cta .listing__title:after,
-.site-menu .listing__item .listing__title:after, .notification__content .notification__btn:after {
+.icon--after, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after, .is-external:after, a[href^="http"]:not(.is-internal):after, .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before, .file__btn:after, .lang-select-page--transparent select.lang-select-page__list:after, .listing__read-more:after, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .listing__item .listing__title:after, .notification__content .notification__btn:after {
   text-decoration: none;
   font-family: 'EuropaIcons';
   speak: none;
@@ -7527,8 +7526,7 @@ Styleguide: icon
 .icon--up:before {
   content: '\e618'; }
 
-.icon--right, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .icon--right:before, .listing__read-more:after, .listing__title--arrow:after, .listing--cta .listing__title:after,
-.site-menu .listing__item .listing__title:after, .notification__content .notification__btn:after {
+.icon--right, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .icon--right:before, .listing__read-more:after, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .listing__item .listing__title:after, .notification__content .notification__btn:after {
   content: '\e617'; }
 
 .icon--breadcrumb, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
@@ -8336,8 +8334,7 @@ Styleguide listing
   position: relative;
   padding-right: 1.3em; }
 
-.listing__title--arrow:after, .listing--cta .listing__title:after,
-.site-menu .listing__item .listing__title:after {
+.listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .listing__item .listing__title:after {
   margin-left: 10px;
   margin-top: 2px;
   font-size: 1.2em;
@@ -9110,13 +9107,13 @@ Styleguide page-header
   color: #fff; }
   .page-header a:hover:not(.breadcrumb__link, .btn) {
     color: #ffd617; }
-  .page-header a[href^="http"]:not(.is-internal) {
+  .page-header a[href^="http"]:not(.is-internal, .listing__title) {
     padding-right: 1.1em;
     display: inline-block; }
-    .page-header a[href^="http"]:not(.is-internal):after {
+    .page-header a[href^="http"]:not(.is-internal, .listing__title):after {
       position: absolute;
       line-height: 2.2; }
-    .page-header a[href^="http"]:not(.is-internal).btn, .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal) {
+    .page-header a[href^="http"]:not(.is-internal, .listing__title).btn, .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title), .inpage-nav__navbar .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title) {
       padding-right: 2.1em; }
 
 .front .page-header {
@@ -9500,17 +9497,14 @@ Styleguide: siteheader.searchform
 .front .search-form {
   border: none; }
 
-.site-menu .listing__item a.listing__title,
 .site-menu .listing__item .listing__title {
   color: #000;
   padding: 0.5em 0; }
-  .site-menu .listing__item a.listing__title:after,
   .site-menu .listing__item .listing__title:after {
     margin-left: 0.5em;
     margin-top: 5px;
     font-size: 0.8em;
-    line-height: normal; }
-  .site-menu .listing__item a.listing__title + *,
+    line-height: 0.8em; }
   .site-menu .listing__item .listing__title + * {
     margin-top: 0; }
 

@@ -76,7 +76,7 @@ Styleguide page-header
       color:$yellow-light;
     }
 
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title) {
       padding-right: 1.1em;
       display: inline-block;
       &:after {

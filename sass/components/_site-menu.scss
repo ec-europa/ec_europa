@@ -4,7 +4,6 @@
     @extend .btn-ctn--border;
   }
   .listing__item {
-    a.listing__title,
     .listing__title {
       color: #000;
       padding: 0.5em 0;
@@ -13,7 +12,7 @@
         margin-left: 0.5em;
         margin-top: 5px;
         font-size: 0.8em;
-        line-height: normal;
+        line-height: 0.8em;
       }
 
       & + * {
