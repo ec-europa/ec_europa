@@ -72,7 +72,7 @@ Styleguide page-header
 .page-header {
   a {
     color: #fff;
-    &:hover:not(.breadcrumb__link) {
+    &:hover:not(.breadcrumb__link, .btn) {
       color:$yellow-light;
     }
 
