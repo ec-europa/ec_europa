@@ -81,6 +81,8 @@
           <span class="kss-nav__ref">9</span
           ><span class="kss-nav__name">Expandable</span>
         </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-featureditem.html">
@@ -99,8 +101,6 @@
           <span class="kss-nav__ref">12</span
           ><span class="kss-nav__name">File</span>
         </a>
-        <ul class="kss-nav__menu-child">
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-footer.html">
@@ -239,79 +239,93 @@
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-file" class="kss-section kss-section--depth-1">
+      <div     id="kssref-expandable" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
-        <a class="kss-title__permalink" href="#kssref-file">
-          <span class="kss-title__ref">12</span
-          >File
+        <a class="kss-title__permalink" href="#kssref-expandable">
+          <span class="kss-title__ref">9</span
+          >Expandable
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h1>
 
 
-      <div class="kss-description">
-        <p>File component used to show info about the file that can be downloaded
-by clicking on the component</p>
-
-      </div>
     </div>
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Examples
-        </div>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
+          Example
         </div>
         <div class="kss-modifier__example">
-          <div class="file [modifier class]">
-  <span class="file__icon icon icon--file"></span>
-  <div class="file__metadata">
-    <span class="file__title">File title example</span>
-    <span class="file__language">English</span>
-    <div class="file__info">200 kB - PDF - 4 pages</div>
+          <div class="expandable [modifier class]">
+  <div class="expandable__group">
+    <a href="#jobs-growth-investment-and-competitiveness" class="collapsed expandable__toggle" data-toggle="collapse" aria-expanded="false">
+      <h3>
+        <span class="icon icon--yellowbg icon--growth"></span>Jobs, Growth, Investment and Competitiveness
+      </h3>
+    </a>
+    <div id="jobs-growth-investment-and-competitiveness" class="expandable__content collapse">
+      <p>Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.</p>
+    </div>
   </div>
-  <a class="file__btn btn btn-default">Download
-    <span class="sr-only">PDF - 200 kB</span>
-  </a>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .file--widebar
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Full width download box
-        </div>
-        <div class="kss-modifier__example">
-          <div class="file file--widebar">
-  <span class="file__icon icon icon--file"></span>
-  <div class="file__metadata">
-    <span class="file__title">File title example</span>
-    <span class="file__language">English</span>
-    <div class="file__info">200 kB - PDF - 4 pages</div>
+  <div class="expandable__group">
+    <a href="#energy-union" class="collapsed pseudo-class-hover expandable__toggle" data-toggle="collapse" aria-expanded="false">
+      <h3>
+        <span class="icon icon--yellowbg icon--energy"></span>Energy Union
+      </h3>
+    </a>
+    <div id="energy-union" class="expandable__content collapse">
+      <p>Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.</p>
+    </div>
   </div>
-  <a class="file__btn btn btn-default">Download
-    <span class="sr-only">PDF - 200 kB</span>
-  </a>
+  <div class="expandable__group">
+    <a href="#digital-single-market" class="collapsed expandable__toggle" data-toggle="collapse" aria-expanded="false">
+      <h3>
+        <span class="icon icon--yellowbg icon--digital"></span>Digital Single Market
+      </h3>
+    </a>
+    <div id="digital-single-market" class="expandable__content">
+      <p>Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.</p>
+    </div>
+  </div>
 </div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;file [modifier class]&quot;&gt;
-  &lt;span class=&quot;file__icon icon icon--file&quot;&gt;&lt;/span&gt;
-  &lt;div class=&quot;file__metadata&quot;&gt;
-    &lt;span class=&quot;file__title&quot;&gt;File title example&lt;/span&gt;
-    &lt;span class=&quot;file__language&quot;&gt;English&lt;/span&gt;
-    &lt;div class=&quot;file__info&quot;&gt;200 kB - PDF - 4 pages&lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;expandable [modifier class]&quot;&gt;
+  &lt;div class=&quot;expandable__group&quot;&gt;
+    &lt;a href=&quot;#jobs-growth-investment-and-competitiveness&quot; class=&quot;collapsed expandable__toggle&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot;&gt;
+      &lt;h3&gt;
+        &lt;span class=&quot;icon icon--yellowbg icon--growth&quot;&gt;&lt;/span&gt;Jobs, Growth, Investment and Competitiveness
+      &lt;/h3&gt;
+    &lt;/a&gt;
+    &lt;div id=&quot;jobs-growth-investment-and-competitiveness&quot; class=&quot;expandable__content collapse&quot;&gt;
+      &lt;p&gt;Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-  &lt;a class=&quot;file__btn btn btn-default&quot;&gt;Download
-    &lt;span class=&quot;sr-only&quot;&gt;PDF - 200 kB&lt;/span&gt;
-  &lt;/a&gt;
+  &lt;div class=&quot;expandable__group&quot;&gt;
+    &lt;a href=&quot;#energy-union&quot; class=&quot;collapsed pseudo-class-hover expandable__toggle&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot;&gt;
+      &lt;h3&gt;
+        &lt;span class=&quot;icon icon--yellowbg icon--energy&quot;&gt;&lt;/span&gt;Energy Union
+      &lt;/h3&gt;
+    &lt;/a&gt;
+    &lt;div id=&quot;energy-union&quot; class=&quot;expandable__content collapse&quot;&gt;
+      &lt;p&gt;Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;expandable__group&quot;&gt;
+    &lt;a href=&quot;#digital-single-market&quot; class=&quot;collapsed expandable__toggle&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot;&gt;
+      &lt;h3&gt;
+        &lt;span class=&quot;icon icon--yellowbg icon--digital&quot;&gt;&lt;/span&gt;Digital Single Market
+      &lt;/h3&gt;
+    &lt;/a&gt;
+    &lt;div id=&quot;digital-single-market&quot; class=&quot;expandable__content&quot;&gt;
+      &lt;p&gt;Bullfights. Bull hockey. Do you like this? The bull is stabbed, prodded, beaten. The bull is wounded. The bull is tired before the matador ever steps into the ring. Now, is that victory? Of course it is. Wanna know the secret to winning? Creative sportsmanship. In other words, one has to rig the game.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
       </div>
