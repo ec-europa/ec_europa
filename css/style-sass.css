@@ -9503,8 +9503,7 @@ Styleguide: siteheader.searchform
   .site-menu .listing__item .listing__title:after {
     margin-left: 0.5em;
     margin-top: 5px;
-    font-size: 0.8em;
-    line-height: 0.8em; }
+    font-size: 0.8em; }
   .site-menu .listing__item .listing__title + * {
     margin-top: 0; }
 
