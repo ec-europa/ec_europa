@@ -47,7 +47,6 @@ module.exports = function (grunt) {
           // Includes files within path and its sub-directories.
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['js/**'], dest: 'styleguide/assets/public/'}
         ]
       },
       all: {
@@ -58,7 +57,6 @@ module.exports = function (grunt) {
           {expand: true, src: ['bootstrap/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['js/**'], dest: 'styleguide/assets/public/'}
         ]
       }
     }
