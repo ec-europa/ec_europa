@@ -1060,14 +1060,6 @@ function europa_preprocess_views_view(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_views_view().
- */
-function europa_preprocess_views_view_unformatted(&$variables) {
-  $variables['additional_classes'][] = 'listing__item';
-  $variables['additional_classes_array'] = implode(' ', $variables['additional_classes']);
-}
-
-/**
  * Implements theme_pager().
  */
 function europa_pager($variables) {
