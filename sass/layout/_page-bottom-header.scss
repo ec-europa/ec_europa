@@ -48,6 +48,10 @@
         float: none;
         margin: 0.5em 0;
       }
+
+      .field--labeled-align .field__items {
+        margin-left: 0;
+      }
     }
   }
 }
