@@ -119,6 +119,11 @@
         else {
           $blocks.push($wrapper.find('.listing__item-link > :first-child'));
         }
+
+        var i, max;
+        for (i = 0, max = $blocks.length; i < max; i++) {
+          var $block = $blocks[i].equalHeight();
+        }
       });
     }
   };

@@ -232,6 +232,28 @@ $spacing-bottom-listing__title: 0.7em;
   }
 }
 
+.listing--nostripe {
+  padding: 30px;
+
+  .listing__item {
+    border: none;
+
+    &:first-child {
+      border: none;
+
+      .listing__item-link {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      .listing__item-link {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
 .listing--cta {
   .listing__item-link {
     padding-right: 1.667em;
