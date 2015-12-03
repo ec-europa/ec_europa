@@ -2734,7 +2734,7 @@ select[multiple].input-lg,
 .btn-danger {
   color: #fff;
   background-color: #ff2423;
-  border-color: #ff0b09; }
+  border-color: #ff0b0a; }
   .btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active,
   .open > .btn-danger.dropdown-toggle {
     color: #fff;
@@ -2751,7 +2751,7 @@ select[multiple].input-lg,
   fieldset[disabled] .btn-danger:active,
   fieldset[disabled] .btn-danger.active {
     background-color: #ff2423;
-    border-color: #ff0b09; }
+    border-color: #ff0b0a; }
   .btn-danger .badge {
     color: #ff2423;
     background-color: #fff; }
@@ -9131,15 +9131,15 @@ Styleguide page-header
 
 .page-header a {
   color: #fff; }
-  .page-header a:hover:not(.breadcrumb__link) {
+  .page-header a:hover:not(.breadcrumb__link, .btn) {
     color: #ffd617; }
-  .page-header a[href^="http"]:not(.is-internal) {
+  .page-header a[href^="http"]:not(.is-internal, .listing__title) {
     padding-right: 1.1em;
     display: inline-block; }
-    .page-header a[href^="http"]:not(.is-internal):after {
+    .page-header a[href^="http"]:not(.is-internal, .listing__title):after {
       position: absolute;
       line-height: 2.2; }
-    .page-header a[href^="http"]:not(.is-internal).btn, .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal) {
+    .page-header a[href^="http"]:not(.is-internal, .listing__title).btn, .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title), .inpage-nav__navbar .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title) {
       padding-right: 2.1em; }
 
 .front .page-header {
