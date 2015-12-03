@@ -2734,7 +2734,7 @@ select[multiple].input-lg,
 .btn-danger {
   color: #fff;
   background-color: #ff2423;
-  border-color: #ff0b09; }
+  border-color: #ff0b0a; }
   .btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active,
   .open > .btn-danger.dropdown-toggle {
     color: #fff;
@@ -2751,7 +2751,7 @@ select[multiple].input-lg,
   fieldset[disabled] .btn-danger:active,
   fieldset[disabled] .btn-danger.active {
     background-color: #ff2423;
-    border-color: #ff0b09; }
+    border-color: #ff0b0a; }
   .btn-danger .badge {
     color: #ff2423;
     background-color: #fff; }
