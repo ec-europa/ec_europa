@@ -156,8 +156,8 @@
         </div>
       </nav>
     <?php endif; ?>
-    <div class="container-fluid">
-      <div class="row padding-reset page-header__hero-title">
+    <div class="container-fluid page-header__hero-title">
+      <div class="row padding-reset">
         <div class="col-lg-9">
           <?php print render($title_prefix); ?>
           <?php if (isset($page['custom_title'])): ?>
