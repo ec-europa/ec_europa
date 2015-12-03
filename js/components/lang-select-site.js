@@ -37,6 +37,8 @@
         // Hide frame on click.
         $overlay.on('click', closeBtn, function(event){
           closeSplashScreen();
+          // Prevent the actual close a href to trigger. This should only work
+          // if javascript is disabled.
           event.preventDefault();
         });
 
