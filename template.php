@@ -954,7 +954,9 @@ function europa_preprocess_html(&$variables) {
   }
   $menu_item = menu_get_item();
   if (isset($menu_item['path']) && $menu_item['path'] == 'splash' && !variable_get('splash_screen_title_value', FALSE)) {
-    $variables['head_title'] = variable_get('site_name');
+    $site_name = variable_get('site_name');
+    $variables['head_title'] = $site_name;
+    drupal_set_title($site_name);
   }
 }
 
