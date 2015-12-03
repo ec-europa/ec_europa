@@ -8489,6 +8489,9 @@ Styleguide listing.agenda
 .listing--agenda .meta {
   margin-bottom: 0; }
 
+.listing--agenda .listing__item-link {
+  padding: 0; }
+
 .listing--agenda h3.listing__title {
   font-size: 1em;
   color: #404040; }
