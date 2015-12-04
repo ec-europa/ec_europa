@@ -957,12 +957,28 @@ function europa_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
   }
 
-  // If it is IE 9, we can add an extra class.
-  if (preg_match('/MSIE 9.0/i', $_SERVER['HTTP_USER_AGENT'])) {
-    // Add a class to the html.
-    $variables['classes_array'][] = 'ie9';
-  }
+  // Add the ie9 only css.
+  drupal_add_css(
+    path_to_theme() . '/css/ie9.css',
+    array(
+      'browsers' => array(
+        'IE' => 'IE 9',
+        '!IE' => FALSE,
+      ),
+    )
+  );
+  // Add conditional js.
+  $ie9_js = array(
+    '#tag' => 'script',
+    '#attributes' => array(
+      'src' => path_to_theme() . '/js/ie9.js',
+    ),
+    '#prefix' => '<!--[if IE 9]>',
+    '#suffix' => '</script><![endif]-->',
+  );
+  drupal_add_html_head($ie9_js, 'ie9_js');
 
+  // Override splash screen title.
   $menu_item = menu_get_item();
   if (isset($menu_item['path']) && $menu_item['path'] == 'splash' && !variable_get('splash_screen_title_value', FALSE)) {
     $site_name = variable_get('site_name');
