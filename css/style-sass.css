@@ -7449,7 +7449,6 @@ Markup: html/icon.html
 .icon--up - Up icon
 .icon--right - Right icon
 .icon--down - Down icon
-.icon--down-blue - Down icon, blue
 .icon--left - Left icon
 .icon--file - File icon
 .icon--audio - Audio icon
@@ -7514,6 +7513,9 @@ Styleguide: icon
 .icon--external, .is-external:after, a[href^="http"]:not(.is-internal):after, .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after, .icon--external:before {
   content: '\e61a' !important; }
 
+.icon--blue-dark {
+  color: #004494; }
+
 .icon--arrow-up, .icon--arrow-up:before {
   content: '\e61e'; }
 
@@ -7553,13 +7555,8 @@ Styleguide: icon
 .icon--breadcrumb, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
   content: '\e617' !important; }
 
-.icon--down:before, .icon--down-blue:before {
+.icon--down:before {
   content: '\e616'; }
-
-.icon--down-blue {
-  color: #004494;
-  padding-left: 0.2em;
-  padding-top: 0.1em; }
 
 .icon--left:before {
   content: '\e619'; }
