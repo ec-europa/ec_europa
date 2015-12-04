@@ -28,13 +28,26 @@
         $(overlay).show();
         $(body).addClass('disablescroll');
 
-        // Hide frame on click.
-        $overlay.on('click', closeBtn, function(event){
+        // Hide frame helper function.
+        var closeSplashScreen = function(event){
           $(overlay).hide();
           $(body).removeClass('disablescroll');
+        };
+
+        // Hide frame on click.
+        $overlay.on('click', closeBtn, function(event){
+          closeSplashScreen();
           // Prevent the actual close a href to trigger. This should only work
           // if javascript is disabled.
           event.preventDefault();
+        });
+
+        // Hide frame on pressing ESC.
+        $(document).keyup(function(e) {
+          // Escape key maps to keycode '27'.
+          if (e.keyCode == 27) {
+            closeSplashScreen();
+          }
         });
 
         // Prevent the default click, if javascript is disabled this link
