@@ -952,6 +952,12 @@ function europa_preprocess_html(&$variables) {
   if (isset($language->prefix)) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
   }
+  $menu_item = menu_get_item();
+  if (isset($menu_item['path']) && $menu_item['path'] == 'splash' && !variable_get('splash_screen_title_value', FALSE)) {
+    $site_name = variable_get('site_name');
+    $variables['head_title'] = $site_name;
+    drupal_set_title($site_name);
+  }
 }
 
 /**
@@ -1057,14 +1063,6 @@ function europa_preprocess_views_view(&$variables) {
   if (module_exists('dt_exposed_filter_data')) {
     $variables['active_filters'] = _dt_exposed_filter_data_get_exposed_filter_output();
   }
-}
-
-/**
- * Implements hook_preprocess_views_view().
- */
-function europa_preprocess_views_view_unformatted(&$variables) {
-  $variables['additional_classes'][] = 'listing__item';
-  $variables['additional_classes_array'] = implode(' ', $variables['additional_classes']);
 }
 
 /**

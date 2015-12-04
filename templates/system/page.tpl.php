@@ -156,7 +156,7 @@
         </div>
       </nav>
     <?php endif; ?>
-    <div class="container-fluid">
+    <div class="container-fluid page-header__hero-title">
       <div class="row padding-reset">
         <div class="col-lg-9">
           <?php print render($title_prefix); ?>

@@ -61,6 +61,10 @@ Styleguide page-header
   }
 }
 
+.page-header__hero-title {
+  padding-top: 2.39em;
+}
+
 .page-header--image {
   background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
   background-repeat: no-repeat;
@@ -72,11 +76,11 @@ Styleguide page-header
 .page-header {
   a {
     color: #fff;
-    &:hover:not(.breadcrumb__link) {
+    &:hover:not(.breadcrumb__link, .btn) {
       color:$yellow-light;
     }
 
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title) {
       padding-right: 1.1em;
       display: inline-block;
       &:after {
