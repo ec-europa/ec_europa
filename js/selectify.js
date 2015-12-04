@@ -35,21 +35,21 @@
             switch (currentClass) {
               // Skip if it's unavailable.
               case String(settings.item + ' ' + settings.unavailable):
-              break;
+                break;
 
               // Build an option element, selected state.
               case String(settings.item + ' ' + settings.selected):
                 var $option = $('<option />');
                 $option.html($(this).html()).attr('selected', true);
                 $select.append($option);
-              break;
+                break;
 
               // Build a regular option element.
               case String(settings.item + ' ' + settings.other):
                 var $option = $('<option />');
                 $option.attr('value', $(this).find('a').attr('href')).html($(this).html());
                 $select.append($option);
-              break;
+                break;
             }
           });
           // Add the select to the DOM. Only if it's not already added.

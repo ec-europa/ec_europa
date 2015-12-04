@@ -963,6 +963,13 @@ function europa_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'ie9';
   }
 
+  $menu_item = menu_get_item();
+  if (isset($menu_item['path']) && $menu_item['path'] == 'splash' && !variable_get('splash_screen_title_value', FALSE)) {
+    $site_name = variable_get('site_name');
+    $variables['head_title'] = $site_name;
+    drupal_set_title($site_name);
+  }
+
 }
 
 /**
