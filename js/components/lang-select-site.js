@@ -28,7 +28,7 @@
         $(overlay).show();
         $(body).addClass('disablescroll');
 
-        // Hide frame on click.
+        // Hide frame helper function.
         var closeSplashScreen = function(event){
           $(overlay).hide();
           $(body).removeClass('disablescroll');
@@ -42,9 +42,9 @@
           event.preventDefault();
         });
 
-        // When ESC press.
+        // Hide frame on pressing ESC.
         $(document).keyup(function(e) {
-          // Escape key maps to keycode `27`.
+          // Escape key maps to keycode '27'.
           if (e.keyCode == 27) {
             closeSplashScreen();
           }
