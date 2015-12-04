@@ -8912,7 +8912,7 @@ Styleguide meta
 
 .meta--header {
   font-size: 0.889em;
-  margin: 1.5em 0 0; }
+  margin: 0 0 0.15em; }
 
 .meta .meta__item p, .meta .label--meta p {
   font-size: inherit !important;
@@ -9099,6 +9099,9 @@ Styleguide page-header
       color: #fff; }
     .page-header .page-header--featured p, .page-header .front .page-header p, .front .page-header .page-header p {
       font-size: 1.667em; }
+
+.page-header__hero-title {
+  padding-top: 2.39em; }
 
 .page-header--image {
   background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
