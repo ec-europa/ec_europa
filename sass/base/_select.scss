@@ -3,25 +3,43 @@ Select
 
 Markup: html/select.html
 
+:hover      - Select hover
+:focus      - Select focus
+.is-down    - Select is-down
+
 Styleguide form.select
 */
-
 .select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  /* Hide the arrow */
+  appearance:none;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
   text-indent: 0.01px;
   text-overflow: '';
+  cursor: pointer;
+
+  // Fix for IE 10+.
+  &::-ms-expand {
+    display: none;
+  }
+
+  &.form-control {
+    @include select-list-arrow($form-control-border-color);
+    // To not make it overlap.
+    padding-right: 50px;
+  }
 
   // Hover state.
-  &:hover,
-  &.is-hovered {
+  &:hover {
     border-color: $form-control-border-select-color-hover;
+    @include select-list-arrow($form-control-border-select-color-hover);
   }
 
   // Down state.
   &.is-down {
-    border-color: $form-control-border-select-color-down;
+    @include select-list-arrow(#ffffff, true);
   }
+
 }
 
 select {
