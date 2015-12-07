@@ -5404,6 +5404,15 @@ button.close {
   #skip-link, .social-media-links {
     display: none !important; } }
 
+/**
+* Single responsibility helper/utility classes.
+* Logic: equal to inline styling.
+* @see: http://davidtheclark.com/on-utility-classes/
+*/
+.clear-bottom-spacing {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important; }
+
 .padding-reset {
   padding: 0 !important; }
 
