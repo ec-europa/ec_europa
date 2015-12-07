@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: ['**/*.{scss,sass}', 'sass/**/*.html'],
-        tasks: ['clean', 'sass', 'kss', 'copy:main'],
+        tasks: ['clean', 'sass', 'shell', 'copy:main'],
         options: {
           livereload: true
         }
@@ -30,15 +30,9 @@ module.exports = function (grunt) {
         }
       }
     },
-    kss: {
-      options: {
-        template: 'styleguide/template/custom',
-        css:      'public/css/style-sass.css'
-      },
-      dist: {
-        files: {
-          'styleguide/assets': ['sass']
-        }
+    shell: {
+      kss: {
+        command: './node_modules/.bin/kss-node sass styleguide/assets --template styleguide/template/custom --css public/css/style-sass.css'
       }
     },
     copy: {
@@ -66,10 +60,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-kss');
+  grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('styleguide', ['clean', 'sass', 'kss', 'copy:main']);
+  grunt.registerTask('styleguide', ['clean', 'sass', 'shell', 'copy:main']);
   grunt.registerTask('copyall', ['copy:all']);
+  grunt.registerTask('kss', ['shell']);
 
 };

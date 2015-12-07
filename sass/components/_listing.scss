@@ -523,6 +523,10 @@ Styleguide listing.agenda
     margin-bottom: 0;
   }
 
+  .listing__item-link {
+    padding: 0;
+  }
+
   h3 {
     &.listing__title {
       font-size: $font-size-medium;
