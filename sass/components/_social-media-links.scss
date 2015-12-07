@@ -64,13 +64,13 @@ Styleguide social
     }
     .wtShareLink {
       @extend .social-media-links__item;
-      font-size: 18px;
+      font-size: $font-size-medium;
       background: transparent !important;
     }
   }
 }
 
-  .social-media-links--webtool-horizontal {
+.social-media-links--webtool-horizontal {
   @extend .social-media-links--webtool-vertical;
   clear: both;
   .wtShareList {
@@ -81,5 +81,4 @@ Styleguide social
       max-width: none !important;
     }
   }
-
 }
