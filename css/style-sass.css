@@ -6661,17 +6661,19 @@ Styleguide comment
   margin-left: 15px;
   margin-top: 15px; }
 
-.comment .list-inline {
-  padding-left: 0; }
-  .comment .list-inline li {
+.comment {
+  margin-bottom: 1em; }
+  .comment .list-inline {
     padding-left: 0; }
+    .comment .list-inline li {
+      padding-left: 0; }
 
 @media (min-width: 992px) {
   .comment__image {
     display: block; }
   .comment__body:before {
     right: 100%;
-    top: 8%;
+    top: 15%;
     border: solid transparent;
     content: " ";
     height: 0;

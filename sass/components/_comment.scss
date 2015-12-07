@@ -59,8 +59,10 @@ Styleguide comment
   margin-top: 15px;
 }
 
-// Drupal-specific rule.
 .comment {
+  margin-bottom: 1em;
+
+  // Drupal-specific rule.
   .list-inline {
     padding-left: 0;
     li {
@@ -81,7 +83,7 @@ Styleguide comment
 
     &:before {
       right: 100%;
-      top: 8%;
+      top: 15%;
       border: solid transparent;
       content: " ";
       height: 0;
