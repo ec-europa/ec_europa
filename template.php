@@ -148,6 +148,10 @@ function europa_form_element(&$variables) {
       // bootstrap class here.
       if (!in_array('form-item-QueryText', $attributes['class'])) {
         $attributes['class'][] = 'form-group';
+        // Apply an extra wrapper class to our select list.
+        if ($element['#type'] == 'select') {
+          $attributes['class'][] = 'form-select';
+        }
       }
     }
   }
@@ -952,12 +956,36 @@ function europa_preprocess_html(&$variables) {
   if (isset($language->prefix)) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
   }
+
+  // Add the ie9 only css.
+  drupal_add_css(
+    path_to_theme() . '/css/ie9.css',
+    array(
+      'browsers' => array(
+        'IE' => 'IE 9',
+        '!IE' => FALSE,
+      ),
+    )
+  );
+  // Add conditional js.
+  $ie9_js = array(
+    '#tag' => 'script',
+    '#attributes' => array(
+      'src' => path_to_theme() . '/js/ie9.js',
+    ),
+    '#prefix' => '<!--[if IE 9]>',
+    '#suffix' => '</script><![endif]-->',
+  );
+  drupal_add_html_head($ie9_js, 'ie9_js');
+
+  // Override splash screen title.
   $menu_item = menu_get_item();
   if (isset($menu_item['path']) && $menu_item['path'] == 'splash' && !variable_get('splash_screen_title_value', FALSE)) {
     $site_name = variable_get('site_name');
     $variables['head_title'] = $site_name;
     drupal_set_title($site_name);
   }
+
 }
 
 /**
