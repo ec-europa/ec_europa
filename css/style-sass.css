@@ -5409,7 +5409,7 @@ button.close {
 * Logic: equal to inline styling.
 * @see: http://davidtheclark.com/on-utility-classes/
 */
-.clear-bottom-spacing {
+.clear-bottom-spacing, .clear-page-content-bottom-spacing .page-content {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important; }
 
