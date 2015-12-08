@@ -1354,7 +1354,7 @@ pre {
   .listing__wrapper--row-two .listing:after {
     clear: both; }
 
-.col-xs-1, .file--widebar .file__icon, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .comment__image, .col-lg-2, .col-xs-3, .col-sm-3, .file--widebar .file__btn, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .sidebar-field-group__sidebar, .col-md-4, .section--row-three .section__item, .file--widebar .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .listing__wrapper--two-columns .listing, .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .file--widebar .file__metadata, .col-lg-7, .col-xs-8, .col-sm-8, .sidebar-field-group__main, .file--widebar .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file--widebar .file__metadata, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file--widebar .file__btn, .col-sm-12, .col-md-12, .sidebar-field-group h2, .col-lg-12 {
+.col-xs-1, .file--widebar .file__icon, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .comment__image, .col-lg-2, .col-xs-3, .col-sm-3, .file--widebar .file__btn, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .sidebar-field-group__sidebar, .col-md-4, .section--row-three .section__item, .file--widebar .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .listing__wrapper--two-columns .listing, .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .file--widebar .file__metadata, .col-lg-7, .col-xs-8, .col-sm-8, .sidebar-field-group__main, .file--widebar .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file--widebar .file__metadata, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file--widebar .file__btn, .col-sm-12, .col-md-12, .sidebar-field-group h2, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1623,7 +1623,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .comment__image, .col-md-3, .context-nav__label, .col-md-4, .section--row-three .section__item, .file--widebar .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .file--widebar .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12, .sidebar-field-group h2 {
+  .col-md-1, .col-md-2, .comment__image, .col-md-3, .context-nav__label, .col-md-4, .section--row-three .section__item, .file--widebar .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .file--widebar .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12, .sidebar-field-group h2 {
     float: left; }
   .col-md-1 {
     width: 8.3333333333%; }
@@ -1635,7 +1635,7 @@ pre {
     width: 33.3333333333%; }
   .col-md-5, .featured-item__image {
     width: 41.6666666667%; }
-  .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item {
+  .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item {
     width: 50%; }
   .col-md-7, .featured-item__content, .file--widebar .file__metadata {
     width: 58.3333333333%; }
@@ -6667,7 +6667,6 @@ Styleguide comment
   margin-left: 10px; }
 
 .btn-add-comment {
-  margin-left: 15px;
   margin-top: 15px; }
 
 .comment {

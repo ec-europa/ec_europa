@@ -7,6 +7,11 @@ Styleguide comment
 */
 
 .comments__wrapper {
+
+}
+
+.comment__form-wrapper {
+  @extend .col-md-6;
 }
 
 .comments__count {
@@ -55,7 +60,6 @@ Styleguide comment
 }
 
 .btn-add-comment {
-  margin-left: 15px;
   margin-top: 15px;
 }
 
@@ -74,7 +78,6 @@ Styleguide comment
 @include breakpoint(screen-md-min) {
   .comment__image {
     @extend .col-md-2;
-
     display: block;
   }
 
