@@ -6,9 +6,13 @@ Markup: html/comment.html
 Styleguide comment
 */
 
-.comments__wrapper {
+// Local helpers.
+$ten: 0.556em;
+$fifteen: 0.833em;
+$twenty: 1.111em;
+$twenty-five: 1.389em;
 
-}
+.comments__wrapper {}
 
 .comment__form-wrapper {
   @extend .col-md-6;
@@ -17,48 +21,54 @@ Styleguide comment
 }
 
 .comments__count {
-  padding: 25px 15px;
+  padding: $twenty-five $ten;
 }
 
 .comment__image {
   display: none;
 
-  & img {
+  img {
     border: 1px solid $yellow-light;
     padding: 1px;
-    max-width: 125px;
+    max-width: 6.944em;
   }
 }
 .comment__meta {
-  font-size: $font-size-xsmall;
-  padding-bottom: 15px;
+  color: $grey-dark;
+  font-size: $font-size-little;
+  padding-bottom: $fifteen;
+  text-transform: uppercase;
+  a {
+    color: $grey-dark;
+  }
 }
+
+.comment__meta-separator {}
 
 .comment__body {
   background: #fff;
   font-size: $font-size-little;
-  padding: 20px 25px;
+  padding: $twenty $twenty-five;
   position: relative;
 }
 
 .comment__title {
-  color: black;
+  color: $grey-base;
   border-top: 1px solid $yellow-light;
   display: block;
   font-weight: bold;
   font-size: $font-size-medium;
-  padding: 15px 0;
+  padding: $fifteen 0;
 }
 
 .comment__author {
   display: inline-block;
-  text-transform: uppercase;
-  margin-right: 10px;
+  margin-right: $ten;
 }
 
 .comment__date {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 0 $ten;
 }
 
 .comment__btn-add-wrap {
@@ -66,7 +76,7 @@ Styleguide comment
 }
 
 .comment__btn-add {
-  margin-top: 15px;
+  margin-top: $ten;
 }
 
 .comment {
@@ -101,8 +111,8 @@ Styleguide comment
       pointer-events: none;
       border-color: rgba(255, 255, 255, 0);
       border-right-color: #fff;
-      border-width: 15px;
-      margin-top: -15px;
+      border-width: $ten;
+      margin-top: -$ten;
     }
   }
 }

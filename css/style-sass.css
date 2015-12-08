@@ -6634,47 +6634,50 @@ Styleguide comment
   padding-right: 0; }
 
 .comments__count {
-  padding: 25px 15px; }
+  padding: 1.389em 0.556em; }
 
 .comment__image {
   display: none; }
   .comment__image img {
     border: 1px solid #ffd617;
     padding: 1px;
-    max-width: 125px; }
+    max-width: 6.944em; }
 
 .comment__meta {
-  font-size: 0.778em;
-  padding-bottom: 15px; }
+  color: #575757;
+  font-size: 0.889em;
+  padding-bottom: 0.833em;
+  text-transform: uppercase; }
+  .comment__meta a {
+    color: #575757; }
 
 .comment__body {
   background: #fff;
   font-size: 0.889em;
-  padding: 20px 25px;
+  padding: 1.111em 1.389em;
   position: relative; }
 
 .comment__title {
-  color: black;
+  color: #404040;
   border-top: 1px solid #ffd617;
   display: block;
   font-weight: bold;
   font-size: 1em;
-  padding: 15px 0; }
+  padding: 0.833em 0; }
 
 .comment__author {
   display: inline-block;
-  text-transform: uppercase;
-  margin-right: 10px; }
+  margin-right: 0.556em; }
 
 .comment__date {
   display: inline-block;
-  margin-left: 10px; }
+  margin-left: 0 0.556em; }
 
 .comment__btn-add-wrap {
   padding-left: 0; }
 
 .comment__btn-add {
-  margin-top: 15px; }
+  margin-top: 0.556em; }
 
 .comment {
   margin-bottom: 1em; }
@@ -6697,8 +6700,8 @@ Styleguide comment
     pointer-events: none;
     border-color: rgba(255, 255, 255, 0);
     border-right-color: #fff;
-    border-width: 15px;
-    margin-top: -15px; } }
+    border-width: 0.556em;
+    margin-top: -0.556em; } }
 
 /*
 Comments counter
