@@ -6629,6 +6629,10 @@ Markup: html/comment.html
 
 Styleguide comment
 */
+.comment__form-wrapper {
+  padding-left: 0;
+  padding-right: 0; }
+
 .comments__count {
   padding: 25px 15px; }
 
@@ -6666,7 +6670,10 @@ Styleguide comment
   display: inline-block;
   margin-left: 10px; }
 
-.btn-add-comment {
+.comment__btn-add-wrap {
+  padding-left: 0; }
+
+.comment__btn-add {
   margin-top: 15px; }
 
 .comment {
