@@ -49,6 +49,7 @@ Styleguide social
   .wtShareList {
     @extend .social-media-links__item;
     background: transparent !important;
+    padding: 0;
     a[href^="http"]:not(.is-internal):after {
       display: none !important;
     }
@@ -58,6 +59,10 @@ Styleguide social
     li {
       float: none;
     }
+    a {
+      width: 100%;
+      margin-bottom: 0 !important;
+    }
     a.wtShareMore {
       font-size: 0.8em;
       margin-top: 1.2em;
@@ -65,7 +70,6 @@ Styleguide social
     .wtShareLink {
       @extend .social-media-links__item;
       font-size: $font-size-medium;
-      background: transparent !important;
     }
   }
 }
@@ -79,6 +83,9 @@ Styleguide social
     }
     ul.wtShareNetworks {
       max-width: none !important;
+    }
+    a {
+      width: inherit;
     }
   }
 }
