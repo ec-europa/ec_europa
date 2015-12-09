@@ -62,6 +62,11 @@ settings[bootstrap_region_well-sidebar_first] = ''
 ; --------------
 settings[bootstrap_tooltip_enabled] = 0
 
+; Anchors
+; --------------
+settings[bootstrap_anchors_fix] = 0
+settings[bootstrap_anchors_smooth_scrolling] = 0
+
 ; Popover
 ; --------------
 settings[bootstrap_popover_enabled] = 1
