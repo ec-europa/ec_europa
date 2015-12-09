@@ -148,6 +148,10 @@ function europa_form_element(&$variables) {
       // bootstrap class here.
       if (!in_array('form-item-QueryText', $attributes['class'])) {
         $attributes['class'][] = 'form-group';
+        // Apply an extra wrapper class to our select list.
+        if ($element['#type'] == 'select') {
+          $attributes['class'][] = 'form-select';
+        }
       }
     }
   }
@@ -607,8 +611,6 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
   $form['search_input_group']['#suffix'] = '';
   $form['search_input_group']['europa_search_submit']['#attributes']['class'][] = 'search-form__btn';
   $form['search_input_group']['QueryText']['#attributes']['class'][] = 'search-form__textfield';
-  // Popover to notify the user that the search is not fully functional.
-  $form['search_input_group']['europa_search_submit']['#disabled'] = TRUE;
 }
 
 /**
@@ -952,6 +954,36 @@ function europa_preprocess_html(&$variables) {
   if (isset($language->prefix)) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
   }
+
+  // Add the ie9 only css.
+  drupal_add_css(
+    path_to_theme() . '/css/ie9.css',
+    array(
+      'browsers' => array(
+        'IE' => 'IE 9',
+        '!IE' => FALSE,
+      ),
+    )
+  );
+  // Add conditional js.
+  $ie9_js = array(
+    '#tag' => 'script',
+    '#attributes' => array(
+      'src' => path_to_theme() . '/js/ie9.js',
+    ),
+    '#prefix' => '<!--[if IE 9]>',
+    '#suffix' => '</script><![endif]-->',
+  );
+  drupal_add_html_head($ie9_js, 'ie9_js');
+
+  // Override splash screen title.
+  $menu_item = menu_get_item();
+  if (isset($menu_item['path']) && $menu_item['path'] == 'splash' && !variable_get('splash_screen_title_value', FALSE)) {
+    $site_name = variable_get('site_name');
+    $variables['head_title'] = $site_name;
+    drupal_set_title($site_name);
+  }
+
 }
 
 /**
@@ -1071,14 +1103,6 @@ function europa_preprocess_views_view(&$variables) {
   if (module_exists('dt_exposed_filter_data')) {
     $variables['active_filters'] = _dt_exposed_filter_data_get_exposed_filter_output();
   }
-}
-
-/**
- * Implements hook_preprocess_views_view().
- */
-function europa_preprocess_views_view_unformatted(&$variables) {
-  $variables['additional_classes'][] = 'listing__item';
-  $variables['additional_classes_array'] = implode(' ', $variables['additional_classes']);
 }
 
 /**
