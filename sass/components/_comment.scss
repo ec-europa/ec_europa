@@ -1,0 +1,118 @@
+/*
+Comment
+
+Markup: html/comment.html
+
+Styleguide comment
+*/
+
+// Local helpers.
+$ten: 0.556em;
+$fifteen: 0.833em;
+$twenty: 1.111em;
+$twenty-five: 1.389em;
+
+.comments__wrapper {}
+
+.comment__form-wrapper {
+  @extend .col-md-6;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.comments__count {
+  padding: $twenty-five $ten;
+}
+
+.comment__image {
+  display: none;
+
+  img {
+    border: 1px solid $yellow-light;
+    padding: 1px;
+    max-width: 6.944em;
+  }
+}
+.comment__meta {
+  color: $grey-dark;
+  font-size: $font-size-little;
+  padding-bottom: $fifteen;
+  text-transform: uppercase;
+  a {
+    color: $grey-dark;
+  }
+}
+
+.comment__meta-separator {}
+
+.comment__body {
+  background: #fff;
+  font-size: $font-size-little;
+  padding: $twenty $twenty-five;
+  position: relative;
+}
+
+.comment__title {
+  color: $grey-base;
+  border-top: 1px solid $yellow-light;
+  display: block;
+  font-weight: bold;
+  font-size: $font-size-medium;
+  padding: $fifteen 0;
+}
+
+.comment__author {
+  display: inline-block;
+  margin-right: $ten;
+}
+
+.comment__date {
+  display: inline-block;
+  margin-left: 0 $ten;
+}
+
+.comment__btn-add-wrap {
+  padding-left: 0;
+}
+
+.comment__btn-add {
+  margin-top: $fifteen;
+}
+
+.comment {
+  margin-bottom: 1em;
+
+  // Drupal-specific rule.
+  .list-inline {
+    padding-left: 0;
+    li {
+      padding-left: 0;
+    }
+  }
+}
+
+@include breakpoint(screen-md-min) {
+  .comment__image {
+    @extend .col-md-2;
+    display: block;
+  }
+
+  .comment__body {
+    @extend .col-md-6;
+
+    &:before {
+      right: 100%;
+      top: 15%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-right-color: #fff;
+      border-width: $ten;
+      margin-top: -$ten;
+    }
+  }
+}
