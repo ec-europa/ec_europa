@@ -22,7 +22,7 @@ Styleguide social
 .social-media-links__label {
   margin-bottom: 0.8em;
   display: block;
-  width: 100%; 
+  width: 100%;
 }
 
 .social-media-links__item {
@@ -38,9 +38,54 @@ Styleguide social
       display: none !important;
     }
   }
+  &--noicon {
+    font-size: 0.8em;
+    margin-top: 1.2em;
+  }
 }
 
-.social-media-links__item--noicon {
-  font-size: 0.8em;
-  margin-top: 1.2em;
+.social-media-links--webtool-vertical {
+  // Extending for social bookmark kit web tools.
+  .wtShareList {
+    @extend .social-media-links__item;
+    background: transparent !important;
+    padding: 0;
+    a[href^="http"]:not(.is-internal):after {
+      display: none !important;
+    }
+    ul {
+      @extend .social-media-links__list;
+    }
+    li {
+      float: none;
+    }
+    a {
+      width: 100%;
+      margin-bottom: 0 !important;
+    }
+    a.wtShareMore {
+      font-size: 0.8em;
+      margin-top: 1.2em;
+    }
+    .wtShareLink {
+      @extend .social-media-links__item;
+      font-size: $font-size-medium;
+    }
+  }
+}
+
+.social-media-links--webtool-horizontal {
+  @extend .social-media-links--webtool-vertical;
+  clear: both;
+  .wtShareList {
+    li {
+      float: left;
+    }
+    ul.wtShareNetworks {
+      max-width: none !important;
+    }
+    a {
+      width: inherit;
+    }
+  }
 }
