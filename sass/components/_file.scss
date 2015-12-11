@@ -146,13 +146,8 @@ Styleguide file
     }
   }
 
-  .file__translations-table {
-    tr:last-child {
-      .file {
-        border-bottom: 1px solid $grey;
-        margin-bottom: 0.3em;
-      }
-    }
+  .file__translations-list {
+    width: 100%;
   }
 }
 

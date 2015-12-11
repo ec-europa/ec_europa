@@ -8,7 +8,7 @@
     attach: function(context) {
       "use strict";
       var $button = $('.file__translations-control'),
-          $translations = $('.file__translations-table');
+          $translations = $('.file__translations-list');
 
       $button.click(function() {
         var self = this;
