@@ -4,6 +4,9 @@
 // Importing bootstrap variables
 @import "mixins";
 
+// Importing simple helpers
+@import "helpers";
+
 // Base
 @import "base/helpers";
 @import "base/img";
@@ -45,6 +48,7 @@
 @import "components/banner";
 @import "components/block";
 @import "components/breadcrumb";
+@import "components/comment";
 @import "components/comments-counter";
 @import "components/context-nav";
 @import "components/date-block";

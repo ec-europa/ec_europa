@@ -17,7 +17,7 @@
  */
 ?>
 <nav class="splash-page__container">
-  <h2><span class="icon icon--generic-lang"></span> <?php print $header_text; ?></h2>
+  <h2 lang="<?php print $language_current; ?>"><span class="icon icon--generic-lang"></span> <?php print $header_text; ?></h2>
 
   <?php print $languages_list; ?>
 

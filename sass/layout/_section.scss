@@ -49,6 +49,11 @@
   overflow: hidden;
 }
 
+.section__group--highlight-grey-lightest {
+  @extend .section__group--highlight-grey;
+  background-color: $grey-lightest;
+}
+
 .section__group--highlight-yellow {
   background-color: $yellow-light;
   overflow: hidden;
