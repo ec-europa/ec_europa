@@ -112,7 +112,6 @@ Styleguide file
 // Modifications in the translations under a normal file.
 .file--bare {
   background: none;
-  border-top: 1px solid $grey;
   padding: 0.5em 0;
   margin: 0 1.333em 0 0;
 
@@ -151,6 +150,13 @@ Styleguide file
   }
 
   .file__translations-item {
+    border-top: 1px solid $grey;
+    list-style: none;
+  }
+
+  .file__translations-details {
+    border-top: 1px solid $grey;
+    font-size: $font-size-little;
     list-style: none;
   }
 }

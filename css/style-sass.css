@@ -7283,7 +7283,6 @@ Styleguide file
 
 .file--bare {
   background: none;
-  border-top: 1px solid #b3b4b5;
   padding: 0.5em 0;
   margin: 0 1.333em 0 0; }
   .file--bare .file__icon, .file--bare .file__language {
@@ -7308,6 +7307,11 @@ Styleguide file
   .file__translations .file__translations-list {
     width: 100%; }
   .file__translations .file__translations-item {
+    border-top: 1px solid #b3b4b5;
+    list-style: none; }
+  .file__translations .file__translations-details {
+    border-top: 1px solid #b3b4b5;
+    font-size: 0.889em;
     list-style: none; }
 
 @media (min-width: 622px) {
