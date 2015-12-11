@@ -6764,6 +6764,9 @@ Styleguide contextnav
 .context-nav__item .view-mode-name {
   display: inline-block; }
 
+.context-nav__item > * {
+  display: inline; }
+
 /*
 Date Block
 
