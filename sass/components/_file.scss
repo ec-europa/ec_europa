@@ -129,6 +129,12 @@ Styleguide file
     padding: 0 1.333em;
     outline: none;
 
+    &:active, &:hover, &:focus {
+      text-decoration: none;
+      color: $blue-dark;
+    }
+
+    // The arrow, rotating on collapse change.
     &:after {
       margin-left: 10px !important;
       position: relative;
@@ -147,17 +153,21 @@ Styleguide file
 
   .file__translations-list {
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .file__translations-item {
     border-top: 1px solid $grey;
     list-style: none;
+    margin: 0 1.389em;
   }
 
+  // "Looking for another language ..."
   .file__translations-details {
-    border-top: 1px solid $grey;
+    @extend .file__translations-item;
     font-size: $font-size-little;
-    list-style: none;
+    padding-top: 0.5em;
   }
 }
 

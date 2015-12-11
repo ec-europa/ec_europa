@@ -7295,6 +7295,9 @@ Styleguide file
     margin-bottom: 0.3em;
     padding: 0 1.333em;
     outline: none; }
+    .file__translations .file__translations-control:active, .file__translations .file__translations-control:hover, .file__translations .file__translations-control:focus {
+      text-decoration: none;
+      color: #004494; }
     .file__translations .file__translations-control:after {
       margin-left: 10px !important;
       position: relative;
@@ -7305,14 +7308,16 @@ Styleguide file
       -o-transform: rotate(180deg);
       transform: rotate(180deg); }
   .file__translations .file__translations-list {
-    width: 100%; }
-  .file__translations .file__translations-item {
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+  .file__translations .file__translations-item, .file__translations .file__translations-details {
     border-top: 1px solid #b3b4b5;
-    list-style: none; }
+    list-style: none;
+    margin: 0 1.389em; }
   .file__translations .file__translations-details {
-    border-top: 1px solid #b3b4b5;
     font-size: 0.889em;
-    list-style: none; }
+    padding-top: 0.5em; }
 
 @media (min-width: 622px) {
   .file__metadata,
