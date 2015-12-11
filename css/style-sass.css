@@ -7307,6 +7307,8 @@ Styleguide file
       transform: rotate(180deg); }
   .file__translations .file__translations-list {
     width: 100%; }
+  .file__translations .file__translations-item {
+    list-style: none; }
 
 @media (min-width: 622px) {
   .file__metadata,

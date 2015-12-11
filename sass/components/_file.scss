@@ -149,6 +149,10 @@ Styleguide file
   .file__translations-list {
     width: 100%;
   }
+
+  .file__translations-item {
+    list-style: none;
+  }
 }
 
 @include breakpoint(screen-msm-min) {
