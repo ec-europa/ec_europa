@@ -138,6 +138,12 @@ Styleguide file
       @extend .icon--down;
       @extend .icon--blue-dark;
     }
+
+    &.is-collapsed {
+      &:after {
+        @include rotate(180deg);
+      }
+    }
   }
 
   .file__translations-table {

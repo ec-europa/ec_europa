@@ -7300,6 +7300,11 @@ Styleguide file
       margin-left: 10px !important;
       position: relative;
       transition: all 0.3s ease 0s; }
+    .file__translations .file__translations-control.is-collapsed:after {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg); }
   .file__translations .file__translations-table tr:last-child .file {
     border-bottom: 1px solid #b3b4b5;
     margin-bottom: 0.3em; }
