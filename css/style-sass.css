@@ -7709,8 +7709,10 @@ Styleguide: icon
 .icon--breadcrumb, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
   content: '\e617' !important; }
 
-.icon--down:before {
+.icon--down, .file__translations .file__translations-control:after {
   content: '\e616'; }
+  .icon--down:before {
+    content: '\e616'; }
 
 .icon--left:before {
   content: '\e619'; }
