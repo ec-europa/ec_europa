@@ -14,7 +14,6 @@ Styleguide file
 
 .file {
   @extend .paragraph;
-  clear: both;
   background: $grey-lighter;
   padding: 1.333em 1.333em 1.333em 1.333em;
   overflow: hidden;
