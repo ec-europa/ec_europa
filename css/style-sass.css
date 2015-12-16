@@ -6265,6 +6265,39 @@ Styleguide form.textarea
 .page-bottom-header {
   margin-top: -1px; }
 
+.page-bottom-header--full-grey {
+  background: #f2f2f2;
+  padding: 1em 0; }
+  .page-bottom-header--full-grey .listing__item {
+    border: none;
+    overflow: visible; }
+    .page-bottom-header--full-grey .listing__item:first-child {
+      border: none; }
+    .page-bottom-header--full-grey .listing__item .field {
+      margin: 0.5em 0 0; }
+    .page-bottom-header--full-grey .listing__item img {
+      float: right;
+      margin-top: -2em; }
+  .page-bottom-header--full-grey .field--labeled .field__label {
+    padding: 0;
+    font-size: 0.889em;
+    font-weight: 600; }
+  .page-bottom-header--full-grey .btn-default {
+    margin: 0.5em 0 0; }
+
+@media screen and (max-width: 768px) {
+  .page-bottom-header--full-grey .listing__item .field--labeled {
+    margin: 0.5em 0; }
+    .page-bottom-header--full-grey .listing__item .field--labeled .field__label,
+    .page-bottom-header--full-grey .listing__item .field--labeled .field__items {
+      padding: 0;
+      width: 100%; }
+  .page-bottom-header--full-grey .listing__item img {
+    float: none;
+    margin: 0.5em 0; }
+  .page-bottom-header--full-grey .listing__item .field--labeled-align .field__items {
+    margin-left: 0; } }
+
 .page-content {
   margin-top: 60px;
   margin-bottom: 30px; }
@@ -8157,6 +8190,7 @@ Markup: html/labels.html
 .label--info - Info
 .label--warning - Warning
 .label--danger - Danger
+.label--upper - Uppercase label
 .label--highlight - Highlight
 
 Styleguide labels
@@ -8183,6 +8217,11 @@ Styleguide labels
 
 .label--danger {
   color: #fff; }
+
+.label--upper, .listing--2rows .listing__item .field--field-biography-tagline {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 0.8em; }
 
 .label--highlight {
   color: #404040;
@@ -8369,6 +8408,9 @@ Styleguide listing
 .listing__column-main .listing__with {
   margin-top: 0px; }
 
+.listing__wrapper {
+  margin-bottom: 1.667em; }
+
 .listing__item {
   border-bottom: 1px solid #e2e2e2;
   list-style: none;
@@ -8428,6 +8470,10 @@ Styleguide listing
   .listing__title + * {
     font-size: 0.889em;
     margin-top: 0.7em; }
+
+.listing__wrapper--forthy {
+  border-top: 1px solid #e2e2e2;
+  max-width: 40em; }
 
 .listing--no-padding {
   padding-left: 0 !important; }
@@ -8677,6 +8723,73 @@ Styleguide listing.agenda
 
 .listing--agenda .listing__author {
   font-size: 0.889em; }
+
+/*
+Listing  2blocks
+
+Listing components
+
+Markup: html/listing--2rows.html
+
+
+Styleguide listing.listing--2rows
+*/
+.listing--2rows .listing__item {
+  padding: 1em 0;
+  position: relative; }
+  .listing--2rows .listing__item .listing__top {
+    min-height: 120px; }
+    .listing--2rows .listing__item .listing__top img {
+      position: absolute;
+      right: 0;
+      top: 1em; }
+  .listing--2rows .listing__item .field {
+    margin: 0.5em 0 0; }
+  .listing--2rows .listing__item .listing__title + * {
+    font-size: inherit; }
+  .listing--2rows .listing__item .field__label,
+  .listing--2rows .listing__item .field-title {
+    padding: 0;
+    font-size: 0.889em;
+    font-weight: 600;
+    float: left;
+    width: 25%; }
+  .listing--2rows .listing__item .field-title {
+    padding-top: 0.5em; }
+  .listing--2rows .listing__item .listing__bottom {
+    clear: both; }
+    .listing--2rows .listing__item .listing__bottom ul {
+      list-style-position: inside;
+      margin-bottom: 0;
+      padding-left: 0; }
+    .listing--2rows .listing__item .listing__bottom .field-name-body .field-items {
+      padding-left: 15px;
+      width: 75%;
+      display: inline-block; }
+  .listing--2rows .listing__item .field--field-social-networks a {
+    margin-top: 0.5em;
+    display: block;
+    font-size: 0.8em; }
+    .listing--2rows .listing__item .field--field-social-networks a::after, .listing--2rows .listing__item .field--field-social-networks a::before {
+      display: none; }
+
+@media screen and (max-width: 480px) {
+  .listing--2rows .listing__item .field--labeled .field__label,
+  .listing--2rows .listing__item .field--labeled .field__items {
+    padding: 0;
+    width: 100%; }
+  .listing--2rows .listing__item .field-title {
+    width: 100%;
+    margin-bottom: 0.3em; }
+  .listing--2rows .listing__item .field--field-social-networks a {
+    float: left;
+    margin-right: 1em; }
+  .listing--2rows .listing__item .listing__bottom ul {
+    padding: 0; } }
+
+@media screen and (max-width: 768px) {
+  .listing--2rows .listing__item .listing__top img {
+    position: static; } }
 
 .logo {
   display: block;

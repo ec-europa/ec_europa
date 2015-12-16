@@ -990,6 +990,8 @@ function europa_preprocess_html(&$variables) {
  * Implements hook_preprocess_node().
  */
 function europa_preprocess_node(&$variables) {
+  $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
+  $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
   // If it is our priority listing page. we set the contents of our preprocess
   // block.
   if (isset($variables['type']) == 'basic_page' && $variables['nid'] == variable_get('dt_priority_page_id', '')) {
@@ -1008,6 +1010,15 @@ function europa_preprocess_node(&$variables) {
   // Override node_url if Legacy Link is set.
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
+  }
+
+  if ($variables['view_mode'] == 'team_cabinet_member') {
+    $node_title = filter_xss($variables['node']->title);
+    $node_nid = $variables['node']->nid;
+    $class = array('field__title');
+    $variables['title_prefix'] = '<h3 class="listing__title">';
+    $variables['title'] = l($node_title, 'node/' . $node_nid, $attributes = array($class));
+    $variables['title_suffix'] = '</h3>';
   }
 }
 
@@ -1052,8 +1063,11 @@ function europa_preprocess_page(&$variables) {
           $variables['node']->header_bottom = $variables['page']['header_bottom'];
           unset($variables['page']['header_bottom']);
         }
-
         ctools_class_add($layout['layout']);
+
+        if (isset($node->ds_switch) && $node->ds_switch != 'college') {
+          $variables['node']->header_bottom_modifier = 'page-bottom-header--full-grey';
+        }
 
         // This disables message-printing on ALL page displays.
         $variables['show_messages'] = FALSE;
