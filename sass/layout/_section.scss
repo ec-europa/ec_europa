@@ -59,6 +59,10 @@
   overflow: hidden;
 }
 
+.section__group--no-margin {
+  margin-top: 0 !important;
+}
+
 @include breakpoint(screen-lg-min) {
   .section__group--full-width {
     margin-left: -100%;

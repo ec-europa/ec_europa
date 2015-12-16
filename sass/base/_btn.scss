@@ -218,6 +218,28 @@ Styleguide buttons.btn-search
   color: $grey-dark;
 }
 
+/*
+Button Collapse
+
+Button collapse element
+
+Markup: html/btn-collapse.html
+
+Styleguide buttons.btn-
+*/
+.btn-collapse {
+  @extend .btn-default;
+
+  span {
+    padding-right: 0.3em;
+  }
+
+  &:hover {
+    span {
+      text-decoration: underline;
+    }
+  }
+}
 
 // External link specific adjustments
 a.btn {

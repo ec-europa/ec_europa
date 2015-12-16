@@ -38,6 +38,24 @@
     }
   };
 
+  Drupal.behaviors.collapsing = {
+    attach: function (context) {
+      hideText = Drupal.t('Hide');
+      showText = Drupal.t('Show');
+
+      $('button[data-toggle=collapse]').each(function() {
+        var dependentId = $(this).attr('data-target');
+        var toggler = $(dependentId).hasClass('in') ? hideText : showText;
+        var fillMe = $(this).find('span');
+        fillMe.text(toggler);
+        $(this).click(function() {
+          toggler = $(this).find('span').text() ==  hideText ? showText : hideText;
+          fillMe.text(toggler);
+        });
+      });
+    }
+  };
+
   Drupal.behaviors.commissioner_timeline = {
     attach: function(context) {
       var $timelineSelector = $('.timeline');

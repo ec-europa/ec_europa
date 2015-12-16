@@ -539,3 +539,42 @@ Styleguide listing.agenda
   }
 
 }
+
+.bio--top {
+  min-height:130px;
+  position: relative;
+  border-bottom: 1px solid $grey-light;
+
+  .group-bio-col {
+    position: static;
+  }
+
+  .group-bio-top-footer {
+    position: absolute;
+    bottom: 0;
+
+    * {
+      float: left;
+    }
+  }
+}
+
+.contact-details,
+.press-contact-details {
+  float: left;
+  width: 50%;
+  padding-bottom: 2em;
+
+  p {
+    margin: 0.3em 0;
+  }
+}
+
+.press-contact-details {
+  border-left: 2px solid #ccc;
+  padding-left: 3em;
+}
+
+.view-id-contact.view-display-id-block {
+  padding-left: 20%;
+}

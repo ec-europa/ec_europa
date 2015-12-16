@@ -2606,28 +2606,36 @@ select[multiple].input-lg,
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.btn-default {
+.btn-default, .btn-collapse {
   color: #333;
   background-color: #fff;
   border-color: #ccc; }
-  .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:hover, .btn-collapse:hover, .btn-default:focus, .btn-collapse:focus, .btn-default.focus, .focus.btn-collapse, .btn-default:active, .btn-collapse:active, .btn-default.active, .active.btn-collapse,
+  .open > .btn-default.dropdown-toggle,
+  .open > .dropdown-toggle.btn-collapse {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .btn-collapse:active, .btn-default.active, .active.btn-collapse,
+  .open > .btn-default.dropdown-toggle,
+  .open > .dropdown-toggle.btn-collapse {
     background-image: none; }
-  .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active,
+  .btn-default.disabled, .disabled.btn-collapse, .btn-default.disabled:hover, .disabled.btn-collapse:hover, .btn-default.disabled:focus, .disabled.btn-collapse:focus, .btn-default.disabled.focus, .disabled.focus.btn-collapse, .btn-default.disabled:active, .disabled.btn-collapse:active, .btn-default.disabled.active, .disabled.active.btn-collapse, .btn-default[disabled], [disabled].btn-collapse, .btn-default[disabled]:hover, [disabled].btn-collapse:hover, .btn-default[disabled]:focus, [disabled].btn-collapse:focus, .btn-default[disabled].focus, [disabled].focus.btn-collapse, .btn-default[disabled]:active, [disabled].btn-collapse:active, .btn-default[disabled].active, [disabled].active.btn-collapse,
   fieldset[disabled] .btn-default,
+  fieldset[disabled] .btn-collapse,
   fieldset[disabled] .btn-default:hover,
+  fieldset[disabled] .btn-collapse:hover,
   fieldset[disabled] .btn-default:focus,
+  fieldset[disabled] .btn-collapse:focus,
   fieldset[disabled] .btn-default.focus,
+  fieldset[disabled] .focus.btn-collapse,
   fieldset[disabled] .btn-default:active,
-  fieldset[disabled] .btn-default.active {
+  fieldset[disabled] .btn-collapse:active,
+  fieldset[disabled] .btn-default.active,
+  fieldset[disabled] .active.btn-collapse {
     background-color: #fff;
     border-color: #ccc; }
-  .btn-default .badge {
+  .btn-default .badge, .btn-collapse .badge {
     color: #fff;
     background-color: #333; }
 
@@ -5514,14 +5522,14 @@ Styleguide buttons
   .btn:after, .inpage-nav__navbar .inpage-nav__toggle:after {
     line-height: inherit;
     position: static; }
-  .btn.btn-default, .inpage-nav__navbar .btn-default.inpage-nav__toggle {
+  .btn.btn-default, .btn.btn-collapse, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle, .inpage-nav__navbar .btn-default.inpage-nav__toggle {
     border-color: #004494;
     color: #004494;
     background: none; }
-    .btn.btn-default:hover, .inpage-nav__navbar .btn-default.inpage-nav__toggle:hover {
+    .btn.btn-default:hover, .btn.btn-collapse:hover, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:hover, .inpage-nav__navbar .btn-default.inpage-nav__toggle:hover {
       background: #004494;
       color: #fff; }
-    .btn.btn-default:active, .inpage-nav__navbar .btn-default.inpage-nav__toggle:active, .btn.btn-default:focus, .inpage-nav__navbar .btn-default.inpage-nav__toggle:focus {
+    .btn.btn-default:active, .btn.btn-collapse:active, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:active, .inpage-nav__navbar .btn-default.inpage-nav__toggle:active, .btn.btn-default:focus, .btn.btn-collapse:focus, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:focus, .inpage-nav__navbar .btn-default.inpage-nav__toggle:focus {
       background: #fff;
       color: #004494; }
   .btn.btn-primary, .inpage-nav__navbar .btn-primary.inpage-nav__toggle {
@@ -5626,6 +5634,21 @@ Styleguide buttons.btn-search
   border-color: #fff;
   background: #e2e2e2;
   color: #575757; }
+
+/*
+Button Collapse
+
+Button collapse element
+
+Markup: html/btn-collapse.html
+
+Styleguide buttons.btn-
+*/
+.btn-collapse span {
+  padding-right: 0.3em; }
+
+.btn-collapse:hover span {
+  text-decoration: underline; }
 
 a.btn[href^="http"]:not(.is-internal), .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal) {
   padding-right: 2.1em; }
@@ -6318,6 +6341,9 @@ Styleguide form.textarea
 .section__group--highlight-yellow {
   background-color: #ffd617;
   overflow: hidden; }
+
+.section__group--no-margin {
+  margin-top: 0 !important; }
 
 @media (min-width: 1200px) {
   .section__group--full-width {
@@ -8680,6 +8706,34 @@ Styleguide listing.agenda
 
 .listing--agenda .listing__author {
   font-size: 0.889em; }
+
+.bio--top {
+  min-height: 130px;
+  position: relative;
+  border-bottom: 1px solid #e2e2e2; }
+  .bio--top .group-bio-col {
+    position: static; }
+  .bio--top .group-bio-top-footer {
+    position: absolute;
+    bottom: 0; }
+    .bio--top .group-bio-top-footer * {
+      float: left; }
+
+.contact-details,
+.press-contact-details {
+  float: left;
+  width: 50%;
+  padding-bottom: 2em; }
+  .contact-details p,
+  .press-contact-details p {
+    margin: 0.3em 0; }
+
+.press-contact-details {
+  border-left: 2px solid #ccc;
+  padding-left: 3em; }
+
+.view-id-contact.view-display-id-block {
+  padding-left: 20%; }
 
 .logo {
   display: block;
