@@ -35,7 +35,7 @@
     <?php endif; ?>
   </div>
   <?php if(!empty($bottom_header)): ?>
-    <div class="page-bottom-header">
+    <div class="page-bottom-header <?php if (isset($header_bottom_modifier)) {print $header_bottom_modifier;} ?>">
       <<?php print $bottom_header_wrapper; ?> class="<?php print $bottom_header_classes; ?>">
         <?php print $bottom_header; ?>
       </<?php print $bottom_header_wrapper; ?>>

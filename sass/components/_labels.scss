@@ -9,6 +9,7 @@ Markup: html/labels.html
 .label--info - Info
 .label--warning - Warning
 .label--danger - Danger
+.label--upper - Uppercase label
 .label--highlight - Highlight
 
 Styleguide labels
@@ -50,6 +51,12 @@ $label_text_color_light: #fff;
 .label--danger {
   @extend .label-danger;
   color: $label_text_color_light;
+}
+
+.label--upper {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 0.8em;
 }
 
 .label--highlight {

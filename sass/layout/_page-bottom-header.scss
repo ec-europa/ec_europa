@@ -1,3 +1,61 @@
-.page-bottom-header{
+.page-bottom-header {
   margin-top: -1px;
+}
+
+.page-bottom-header--full-grey {
+  background: $grey-lightest;
+  padding: 1em 0;
+
+  .listing__item {
+    border: none;
+    overflow: visible;
+
+    &:first-child {
+      border: none;
+    }
+
+    .field {
+      margin: 0.5em 0 0;
+    }
+
+    img {
+      float: right;
+      margin-top: -2em;
+    }
+  }
+
+  .field--labeled .field__label {
+    padding: 0;
+    font-size: $font-size-little;
+    font-weight: 600;
+  }
+
+  .btn-default {
+    margin: 0.5em 0 0;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .page-bottom-header--full-grey {
+    .listing__item {
+      .field--labeled {
+        margin: 0.5em 0;
+
+        .field__label,
+        .field__items {
+          padding: 0;
+          width: 100%;
+        }
+      }
+
+      img {
+        float: none;
+        margin: 0.5em 0;
+      }
+
+      .field--labeled-align .field__items {
+        margin-left: 0;
+      }
+    }
+  }
 }
