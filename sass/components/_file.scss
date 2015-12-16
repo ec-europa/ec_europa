@@ -7,6 +7,7 @@ by clicking on the component
 Markup: html/file.html
 
 .file--widebar  - Full width download box
+.file--bare - Strip down version
 
 Styleguide file
 */
@@ -104,6 +105,68 @@ Styleguide file
     @media (max-width: $screen-sm-min) {
       margin-top: 15px;
     }
+  }
+}
+
+// Modifications in the translations under a normal file.
+.file--bare {
+  background: none;
+  padding: 0.5em 0;
+  margin: 0 1.333em 0 0;
+
+  .file__icon, .file__language {
+    display: none;
+  }
+}
+
+.file__translations {
+  overflow: hidden;
+  margin-bottom: 1em;
+
+  .file__translations-control {
+    margin-bottom: 0.3em;
+    padding: 0 1.333em;
+    outline: none;
+
+    &:active, &:hover, &:focus {
+      text-decoration: none;
+      color: $blue-dark;
+    }
+
+    // The arrow, rotating on collapse change.
+    &:after {
+      margin-left: 10px !important;
+      position: relative;
+      transition: all 0.3s ease 0s;
+      @extend .icon--after;
+      @extend .icon--down;
+      @extend .icon--blue-dark;
+    }
+
+    &.is-collapsed {
+      &:after {
+        @include rotate(180deg);
+      }
+    }
+  }
+
+  .file__translations-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .file__translations-item {
+    border-top: 1px solid $grey;
+    list-style: none;
+    margin: 0 1.389em;
+  }
+
+  // "Looking for another language ..."
+  .file__translations-details {
+    @extend .file__translations-item;
+    font-size: $font-size-little;
+    padding-top: 0.5em;
   }
 }
 

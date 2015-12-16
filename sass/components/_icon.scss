@@ -104,6 +104,11 @@ Styleguide: icon
   }
 }
 
+// Only color change using global $blue-dark.
+.icon--blue-dark {
+  color: $blue-dark;
+}
+
 .icon--arrow-up {
   content: '\e61e';
 }
@@ -190,6 +195,7 @@ Styleguide: icon
 }
 
 .icon--down {
+  content: '\e616';
   &:before {
     content: '\e616';
   }
