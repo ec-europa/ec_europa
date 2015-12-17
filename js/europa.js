@@ -49,7 +49,7 @@
         var fillMe = $(this).find('span');
         fillMe.text(toggler);
         $(this).click(function() {
-          toggler = $(this).find('span').text() ==  hideText ? showText : hideText;
+          toggler = $(this).find('span').text() == hideText ? showText : hideText;
           fillMe.text(toggler);
         });
       });
