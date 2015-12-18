@@ -63,6 +63,11 @@
   margin-top: 0 !important;
 }
 
+.section__group--bottom-header {
+  margin-top: -60px !important;
+  padding: 1.667em 0 0 !important;
+}
+
 @include breakpoint(screen-lg-min) {
   .section__group--full-width {
     margin-left: -100%;

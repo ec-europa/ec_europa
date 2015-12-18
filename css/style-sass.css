@@ -6288,39 +6288,6 @@ Styleguide form.textarea
 .page-bottom-header {
   margin-top: -1px; }
 
-.page-bottom-header--full-grey {
-  background: #f2f2f2;
-  padding: 1em 0; }
-  .page-bottom-header--full-grey .listing__item {
-    border: none;
-    overflow: visible; }
-    .page-bottom-header--full-grey .listing__item:first-child {
-      border: none; }
-    .page-bottom-header--full-grey .listing__item .field {
-      margin: 0.5em 0 0; }
-    .page-bottom-header--full-grey .listing__item img {
-      float: right;
-      margin-top: -2em; }
-  .page-bottom-header--full-grey .field--labeled .field__label {
-    padding: 0;
-    font-size: 0.889em;
-    font-weight: 600; }
-  .page-bottom-header--full-grey .btn-default, .page-bottom-header--full-grey .btn-collapse {
-    margin: 0.5em 0 0; }
-
-@media screen and (max-width: 768px) {
-  .page-bottom-header--full-grey .listing__item .field--labeled {
-    margin: 0.5em 0; }
-    .page-bottom-header--full-grey .listing__item .field--labeled .field__label,
-    .page-bottom-header--full-grey .listing__item .field--labeled .field__items {
-      padding: 0;
-      width: 100%; }
-  .page-bottom-header--full-grey .listing__item img {
-    float: none;
-    margin: 0.5em 0; }
-  .page-bottom-header--full-grey .listing__item .field--labeled-align .field__items {
-    margin-left: 0; } }
-
 .page-content {
   margin-top: 60px;
   margin-bottom: 30px; }
@@ -6377,6 +6344,10 @@ Styleguide form.textarea
 
 .section__group--no-margin {
   margin-top: 0 !important; }
+
+.section__group--bottom-header {
+  margin-top: -60px !important;
+  padding: 1.667em 0 0 !important; }
 
 @media (min-width: 1200px) {
   .section__group--full-width {
@@ -8754,7 +8725,7 @@ Styleguide listing.agenda
   font-size: 0.889em; }
 
 /*
-Listing  2blocks
+Listing  2rows
 
 Listing components
 
@@ -8802,33 +8773,60 @@ Styleguide listing.listing--2rows
     .listing--2rows .listing__item .field--field-social-networks a::after, .listing--2rows .listing__item .field--field-social-networks a::before {
       display: none; }
 
-.bio--top {
-  min-height: 130px;
-  position: relative;
+.listing__item--contact {
+  border: none;
+  overflow: visible; }
+  .listing__item--contact:first-child {
+    border: none; }
+  .listing__item--contact .field {
+    margin: 0.5em 0 0; }
+  .listing__item--contact img {
+    float: right;
+    margin-top: -2em; }
+  .listing__item--contact .field--labeled .field__label {
+    padding: 0;
+    font-size: 0.889em;
+    font-weight: 600; }
+  .listing__item--contact .btn-default, .listing__item--contact .btn-collapse {
+    margin: 0.5em 0 0; }
+
+@media screen and (max-width: 768px) {
+  .listing__item--contact .field--labeled {
+    margin: 0.5em 0; }
+    .listing__item--contact .field--labeled .field__label,
+    .listing__item--contact .field--labeled .field__items {
+      padding: 0;
+      width: 100%; }
+  .listing__item--contact img {
+    float: none;
+    margin: 0.5em 0; }
+  .listing__item--contact .field--labeled-align .field__items {
+    margin-left: 0; } }
+
+.bio--top.listing {
   border-bottom: 1px solid #e2e2e2; }
-  .bio--top .group-bio-col {
+
+#team .field {
+  margin-bottom: 0.5em; }
+
+.listing__item--bio {
+  min-height: 160px;
+  position: relative; }
+  .listing__item--bio .group-bio-col {
     position: static; }
-  .bio--top .group-bio-top-footer {
+  .listing__item--bio .group-bio-top-footer {
     position: absolute;
     bottom: 0; }
-    .bio--top .group-bio-top-footer * {
-      float: left; }
+    .listing__item--bio .group-bio-top-footer * {
+      float: left;
+      margin-bottom: 0; }
 
-.contact-details,
-.press-contact-details {
-  float: left;
-  width: 50%;
-  padding-bottom: 2em; }
-  .contact-details p,
-  .press-contact-details p {
-    margin: 0.3em 0; }
+.section__group--full-width .listing__wrapper--two-columns .listing:first-child p {
+  margin: 0.3em 0; }
 
-.press-contact-details {
+.section__group--full-width .listing__wrapper--two-columns .listing:last-child {
   border-left: 2px solid #ccc;
   padding-left: 3em; }
-
-.view-id-contact.view-display-id-block {
-  padding-left: 20%; }
 
 @media screen and (max-width: 480px) {
   .listing--2rows .listing__item .field--labeled .field__label,

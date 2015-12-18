@@ -546,7 +546,7 @@ Styleguide listing.agenda
 }
 
 /*
-Listing  2blocks
+Listing  2rows
 
 Listing components
 
@@ -629,10 +629,71 @@ Styleguide listing.listing--2rows
   }
 }
 
-.bio--top {
-  min-height:130px;
-  position: relative;
+// Listing item contact
+.listing__item--contact {
+  border: none;
+  overflow: visible;
+
+  &:first-child {
+    border: none;
+  }
+
+  .field {
+    margin: 0.5em 0 0;
+  }
+
+  img {
+    float: right;
+    margin-top: -2em;
+  }
+
+  .field--labeled .field__label {
+    padding: 0;
+    font-size: $font-size-little;
+    font-weight: 600;
+  }
+
+  .btn-default {
+    margin: 0.5em 0 0;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .listing__item--contact {
+    .field--labeled {
+      margin: 0.5em 0;
+
+      .field__label,
+      .field__items {
+        padding: 0;
+        width: 100%;
+      }
+    }
+
+    img {
+      float: none;
+      margin: 0.5em 0;
+    }
+
+    .field--labeled-align .field__items {
+      margin-left: 0;
+    }
+  }
+}
+
+.bio--top.listing {
   border-bottom: 1px solid $grey-light;
+}
+
+// This has to be generalized, the field component doesn't provide margins.
+#team .field {
+  margin-bottom: 0.5em;
+}
+
+// Listing item bio
+.listing__item--bio {
+  min-height:160px;
+  position: relative;
 
   .group-bio-col {
     position: static;
@@ -644,28 +705,18 @@ Styleguide listing.listing--2rows
 
     * {
       float: left;
+      margin-bottom: 0;
     }
   }
 }
 
-.contact-details,
-.press-contact-details {
-  float: left;
-  width: 50%;
-  padding-bottom: 2em;
-
-  p {
-    margin: 0.3em 0;
-  }
+.section__group--full-width .listing__wrapper--two-columns .listing:first-child p {
+  margin: 0.3em 0;
 }
 
-.press-contact-details {
+.section__group--full-width .listing__wrapper--two-columns .listing:last-child {
   border-left: 2px solid #ccc;
   padding-left: 3em;
-}
-
-.view-id-contact.view-display-id-block {
-  padding-left: 20%;
 }
 
 @media screen and (max-width: $screen-xs) {
