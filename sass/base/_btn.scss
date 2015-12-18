@@ -230,12 +230,16 @@ Styleguide buttons.btn-
 .btn-collapse {
   @extend .btn-default;
 
-  span {
-    padding-right: 0.3em;
+  span::after {
+    content: "\00a0";
   }
 
-  &:hover {
-    span {
+  &:hover,
+  &:focus {
+    span,
+    span::after,
+    span::before {
+      //border-bottom: 2px solid #fff;
       text-decoration: underline;
     }
   }

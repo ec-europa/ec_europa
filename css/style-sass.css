@@ -5644,10 +5644,14 @@ Markup: html/btn-collapse.html
 
 Styleguide buttons.btn-
 */
-.btn-collapse span {
-  padding-right: 0.3em; }
+.btn-collapse span::after {
+  content: "\00a0"; }
 
-.btn-collapse:hover span {
+.btn-collapse:hover span,
+.btn-collapse:hover span::after,
+.btn-collapse:hover span::before, .btn-collapse:focus span,
+.btn-collapse:focus span::after,
+.btn-collapse:focus span::before {
   text-decoration: underline; }
 
 a.btn[href^="http"]:not(.is-internal), .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal) {
