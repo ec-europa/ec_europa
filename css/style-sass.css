@@ -5644,15 +5644,27 @@ Markup: html/btn-collapse.html
 
 Styleguide buttons.btn-
 */
-.btn-collapse span::after {
+.btn-collapse span.toggling-text::after {
   content: "\00a0"; }
 
-.btn-collapse:hover span,
-.btn-collapse:hover span::after,
-.btn-collapse:hover span::before, .btn-collapse:focus span,
-.btn-collapse:focus span::after,
-.btn-collapse:focus span::before {
+.btn-collapse:hover span.toggling-text,
+.btn-collapse:hover span.toggling-text::after, .btn-collapse:focus span.toggling-text,
+.btn-collapse:focus span.toggling-text::after {
   text-decoration: underline; }
+
+.btn-collapse .icon, .btn-collapse .search-form__btn {
+  margin-left: 0.3em; }
+  .btn-collapse .icon::before, .btn-collapse .search-form__btn::before {
+    vertical-align: bottom; }
+
+.btn-collapse:hover:not(:focus) .icon::before, .btn-collapse:hover:not(:focus) .search-form__btn::before {
+  color: #fff; }
+
+.btn-collapse.collapsed:span.icon, .btn-collapse.collapsed.search-form__btn:span {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
 
 a.btn[href^="http"]:not(.is-internal), .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal) {
   padding-right: 2.1em; }
@@ -5918,6 +5930,9 @@ Styleguide text.link
 a:hover, a:active, a:focus {
   color: #404040;
   text-decoration: underline; }
+
+a.smaller {
+  font-size: 0.8em; }
 
 @media print {
   a:after {
@@ -6326,6 +6341,9 @@ Styleguide form.textarea
     margin-bottom: 0; }
   .section__group + .section__group--highlight-grey, .nav-tabs--with-content + .tab-content > * + .section__group--highlight-grey, .section__group + .section__group--highlight-grey-lightest, .nav-tabs--with-content + .tab-content > * + .section__group--highlight-grey-lightest {
     margin-top: 2em; }
+
+.section__group + .section__group, .nav-tabs--with-content + .tab-content > * + .section__group, .nav-tabs--with-content + .tab-content > .section__group + *, .nav-tabs--with-content + .tab-content > * + * {
+  padding: 1em 0; }
 
 .section__group--full-width {
   margin-left: -15px;
@@ -8824,9 +8842,25 @@ Styleguide listing.listing--2rows
   .listing__item--bio .group-bio-top-footer {
     position: absolute;
     bottom: 0; }
-    .listing__item--bio .group-bio-top-footer * {
+    .listing__item--bio .group-bio-top-footer .field {
+      margin-right: 1em;
+      display: table-cell;
+      vertical-align: bottom;
+      padding-right: 1em; }
+    .listing__item--bio .group-bio-top-footer .dt_social_network_links {
       float: left;
+      margin-right: 0.3em; }
+      .listing__item--bio .group-bio-top-footer .dt_social_network_links a::after,
+      .listing__item--bio .group-bio-top-footer .dt_social_network_links a::before {
+        display: none; }
+    .listing__item--bio .group-bio-top-footer * {
       margin-bottom: 0; }
+
+.listing__read-more + .free-text {
+  margin-top: 2em; }
+
+.view-biography-declaration {
+  margin-top: 1.5em; }
 
 .section__group--full-width .listing__wrapper--two-columns .listing:first-child p {
   margin: 0.3em 0; }

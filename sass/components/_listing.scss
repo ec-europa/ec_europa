@@ -706,11 +706,36 @@ Styleguide listing.listing--2rows
     position: absolute;
     bottom: 0;
 
-    * {
+    .field {
+      margin-right: 1em;
+      display: table-cell;
+      vertical-align: bottom;
+      padding-right: 1em;
+    }
+
+    .dt_social_network_links {
       float: left;
+      margin-right: 0.3em;
+
+      a::after,
+      a::before {
+        display: none;
+      }
+    }
+
+    * {
       margin-bottom: 0;
     }
   }
+}
+
+.listing__read-more + .free-text {
+  margin-top: 2em;
+}
+
+// Spare css line, this refers to the "declaration of interests" section in the bio.
+.view-biography-declaration {
+  margin-top: 1.5em;
 }
 
 .section__group--full-width .listing__wrapper--two-columns .listing:first-child p {
@@ -739,7 +764,7 @@ Styleguide listing.listing--2rows
         margin-bottom: 0.3em;
       }
 
-      .field--field-social-networks  a {
+      .field--field-social-networks a {
         float: left;
         margin-right: 1em;
       }

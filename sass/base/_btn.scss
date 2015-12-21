@@ -230,17 +230,35 @@ Styleguide buttons.btn-
 .btn-collapse {
   @extend .btn-default;
 
-  span::after {
+  span.toggling-text::after {
     content: "\00a0";
   }
 
   &:hover,
   &:focus {
-    span,
-    span::after,
-    span::before {
-      //border-bottom: 2px solid #fff;
+    span.toggling-text,
+    span.toggling-text::after {
       text-decoration: underline;
+    }
+  }
+
+  .icon {
+    margin-left: 0.3em;
+
+    &::before {
+      vertical-align: bottom;
+    }
+  }
+
+  &:hover:not(:focus) {
+    .icon::before {
+      color: #fff;
+    }
+  }
+
+  &.collapsed {
+    &:span.icon {
+      @include rotate(180deg);
     }
   }
 }

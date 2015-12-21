@@ -46,8 +46,9 @@
       $('button[data-toggle=collapse]').each(function() {
         var dependentId = $(this).attr('data-target');
         var toggler = $(dependentId).hasClass('in') ? hideText : showText;
-        $(this).prepend('<span>' + toggler + '</span>');
-        var fillMe = $(this).find('span');
+        var fillMe = $('.toggling-text', $(this));
+        fillMe.text(toggler);
+
         $(this).click(function() {
           toggler = fillMe.text() == hideText ? showText : hideText;
           fillMe.text(toggler);
