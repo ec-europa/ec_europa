@@ -8584,6 +8584,11 @@ Styleguide listing
   position: relative;
   padding-right: 1.3em; }
 
+.listing__read-more {
+  margin-top: 0.5em; }
+  .listing__read-more + .free-text {
+    margin-top: 1.5em; }
+
 .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .listing__item .listing__title:after {
   margin-left: 10px;
   margin-top: 2px;
@@ -8856,9 +8861,6 @@ Styleguide listing.listing--2rows
     .listing__item--bio .group-bio-top-footer * {
       margin-bottom: 0; }
 
-.listing__read-more + .free-text {
-  margin-top: 2em; }
-
 .view-biography-declaration {
   margin-top: 1.5em; }
 
@@ -8884,6 +8886,26 @@ Styleguide listing.listing--2rows
     padding: 0; } }
 
 @media screen and (max-width: 768px) {
+  .section__group--full-width .listing__wrapper--two-columns .listing:last-child {
+    padding: 1em 0 0 1em;
+    border-left: none;
+    border-top: 2px solid #ccc; }
+  .listing__wrapper--two-columns .listing {
+    margin-top: 1em; }
+  .section .listing__wrapper {
+    margin-bottom: 0; }
+  .bio--top .col-md-2, .bio--top .comment__image {
+    float: left; }
+  .bio--top .group-bio-col {
+    float: left; }
+  .listing__item--bio img {
+    margin-bottom: 0.5em; }
+  .listing__item--bio .group-bio-top-footer {
+    position: static;
+    margin-top: 0.5em; }
+    .listing__item--bio .group-bio-top-footer .field {
+      margin-top: 0.5em;
+      display: inline-block; }
   .listing--2rows .listing__item .listing__top img {
     position: static; } }
 
