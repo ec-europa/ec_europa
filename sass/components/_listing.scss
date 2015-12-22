@@ -139,6 +139,11 @@ $spacing-bottom-listing__title: 0.7em;
   }
 }
 
+.listing__title--grey-dark {
+  @extend .listing__title;
+  color: $grey-dark;
+}
+
 .listing__wrapper--forthy {
   border-top: 1px solid #e2e2e2;
   max-width: 40em;
@@ -566,13 +571,22 @@ Styleguide listing.listing--2rows
     position: relative;
 
     .listing__top {
-      min-height: 120px;
+      min-height: 130px;
+      position: relative;
 
       img {
         position: absolute;
         right: 0;
-        top: 1em;
+        top: 0;
       }
+
+      .listing__top__footer {
+        position: absolute;
+        bottom: 0;
+        width:100%;
+      }
+
+
     }
 
     .field--field-biography-tagline {
@@ -604,9 +618,9 @@ Styleguide listing.listing--2rows
       clear: both;
 
       ul {
-        list-style-position: inside;
         margin-bottom: 0;
         padding-left: 0;
+        margin-left: 1em;
       }
 
       .field-name-body .field-items {

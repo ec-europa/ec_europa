@@ -1011,15 +1011,6 @@ function europa_preprocess_node(&$variables) {
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
   }
-
-  if ($variables['view_mode'] == 'team_cabinet_member') {
-    $node_title = filter_xss($variables['node']->title);
-    $node_nid = $variables['node']->nid;
-    $class = array('field__title');
-    $variables['title_prefix'] = '<h3 class="listing__title">';
-    $variables['title'] = l($node_title, 'node/' . $node_nid, $attributes = array($class));
-    $variables['title_suffix'] = '</h3>';
-  }
 }
 
 /**
