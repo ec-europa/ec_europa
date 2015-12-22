@@ -7166,7 +7166,8 @@ Styleguide field
   .field--labeled .field__label {
     display: block;
     clear: both;
-    font-size: 0.889em; }
+    font-size: 0.889em;
+    line-height: 2em; }
   .field--labeled .field__items {
     display: block; }
 
@@ -8783,7 +8784,8 @@ Styleguide listing.listing--2rows
     float: left;
     width: 25%; }
   .listing--2rows .listing__item .field-title {
-    padding-top: 0.5em; }
+    padding-top: 0.5em;
+    line-height: 1em; }
   .listing--2rows .listing__item .listing__bottom {
     clear: both; }
     .listing--2rows .listing__item .listing__bottom ul {
