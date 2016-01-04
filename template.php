@@ -649,10 +649,6 @@ function europa_easy_breadcrumb($variables) {
       $content = '<span class="breadcrumb__text">' . check_plain(decode_entities($item['content'])) . '</span>';
       $class = implode(' ', $classes);
       if (isset($item['url'])) {
-        // Ugly hotfix.
-        // TODO: Remove when following issue is fixed:
-        // @see https://webgate.ec.europa.eu/CITnet/jira/browse/NEXTEUROPA-4457
-        $item['url'] = $item['url'] == '<front>' ? '' : $item['url'];
         $full_item = l($content, $item['url'], array('attributes' => $attributes, 'html' => TRUE));
       }
       else {
