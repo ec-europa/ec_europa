@@ -6434,6 +6434,26 @@ Styleguide form.textarea
       padding-left: 15px;
       padding-right: 15px; } }
 
+.field-group {
+  overflow: hidden;
+  width: 100%; }
+
+.field-group--inline .field {
+  float: left;
+  margin-right: 1.111em; }
+  .field-group--inline .field:last-child {
+    margin-right: 0; }
+
+.field-group--inline-bottom {
+  display: table;
+  width: auto; }
+  .field-group--inline-bottom .field {
+    display: table-cell;
+    padding-right: 1.111em;
+    vertical-align: bottom; }
+    .field-group--inline-bottom .field:last-child {
+      padding-right: 0; }
+
 /*
 Banner
 
@@ -8248,7 +8268,7 @@ Styleguide labels
 .label--danger {
   color: #fff; }
 
-.label--upper, .listing--2rows .listing__item .field--field-biography-tagline {
+.label--upper {
   text-transform: uppercase;
   text-align: left;
   font-size: 0.8em; }
@@ -8780,19 +8800,6 @@ Styleguide listing.listing--2rows
       position: absolute;
       right: 0;
       top: 1em; }
-  .listing--2rows .listing__item .field {
-    margin: 0.5em 0 0; }
-  .listing--2rows .listing__item .listing__title + * {
-    font-size: inherit; }
-  .listing--2rows .listing__item .field__label,
-  .listing--2rows .listing__item .field-title {
-    padding: 0;
-    font-size: 0.889em;
-    font-weight: 600;
-    float: left;
-    width: 25%; }
-  .listing--2rows .listing__item .field-title {
-    padding-top: 0.5em; }
   .listing--2rows .listing__item .listing__bottom {
     clear: both; }
     .listing--2rows .listing__item .listing__bottom ul {
@@ -8845,28 +8852,6 @@ Styleguide listing.listing--2rows
 
 #team .field {
   margin-bottom: 0.5em; }
-
-.listing__item--bio {
-  min-height: 160px;
-  position: relative; }
-  .listing__item--bio .group-bio-col {
-    position: static; }
-  .listing__item--bio .group-bio-top-footer {
-    position: absolute;
-    bottom: 0; }
-    .listing__item--bio .group-bio-top-footer .field {
-      margin-right: 1em;
-      display: table-cell;
-      vertical-align: bottom;
-      padding-right: 1em; }
-    .listing__item--bio .group-bio-top-footer .dt_social_network_links {
-      float: left;
-      margin-right: 0.3em; }
-      .listing__item--bio .group-bio-top-footer .dt_social_network_links a::after,
-      .listing__item--bio .group-bio-top-footer .dt_social_network_links a::before {
-        display: none; }
-    .listing__item--bio .group-bio-top-footer * {
-      margin-bottom: 0; }
 
 .view-biography-declaration {
   margin-top: 1.5em; }

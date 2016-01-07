@@ -1,0 +1,32 @@
+// Helper wrapper for field components
+
+.field-group {
+  overflow: hidden;
+  width: 100%;
+}
+
+.field-group--inline {
+  .field {
+    float: left;
+    margin-right: 1.111em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.field-group--inline-bottom {
+  display: table;
+  width: auto;
+
+  .field {
+    display: table-cell;
+    padding-right: 1.111em;
+    vertical-align: bottom;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
