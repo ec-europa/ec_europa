@@ -263,6 +263,13 @@ Styleguide buttons.btn-
   }
 }
 
+.no-js {
+  .btn-collapse {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 // External link specific adjustments
 a.btn {
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {

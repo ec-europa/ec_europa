@@ -5666,6 +5666,10 @@ Styleguide buttons.btn-
   -o-transform: rotate(180deg);
   transform: rotate(180deg); }
 
+.no-js .btn-collapse {
+  display: none;
+  visibility: hidden; }
+
 a.btn[href^="http"]:not(.is-internal), .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal) {
   padding-right: 2.1em; }
   a.btn[href^="http"]:not(.is-internal):after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):after {
@@ -5839,6 +5843,10 @@ body {
   @media (min-width: 480px) {
     body {
       font-size: 18px; } }
+
+.no-js .collapse {
+  display: block;
+  visibility: visible; }
 
 /*
 Typography
@@ -8416,14 +8424,6 @@ Markup: html/listing.html
 
 Styleguide listing
 */
-.listing__read-more {
-  text-align: right;
-  font-weight: 600;
-  display: block;
-  text-transform: uppercase; }
-  .listing__read-more:after {
-    font-size: 0.778em; }
-
 .listing__date {
   float: left; }
 
@@ -8585,7 +8585,14 @@ Styleguide listing
   padding-right: 1.3em; }
 
 .listing__read-more {
-  margin-top: 0.5em; }
+  margin-top: 0.5em;
+  text-align: right;
+  font-weight: 600;
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.889em; }
+  .listing__read-more:after {
+    font-size: 0.778em; }
   .listing__read-more + .free-text {
     margin-top: 1.5em; }
 

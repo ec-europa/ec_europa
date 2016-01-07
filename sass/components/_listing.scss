@@ -11,20 +11,6 @@ $spacing-top-listing__title: 0.9em;
 $spacing-bottom-listing__title: 0.7em;
 
 .listing {
-
-  &__read-more {
-    text-align: right;
-    font-weight: $font-weight-bold;
-    display: block;
-    text-transform: uppercase;
-
-
-    &:after {
-      @extend .icon--after;
-      @extend .icon--right;
-      font-size: $font-size-xsmall;
-    }
-  }
 }
 
 .listing__date {
@@ -294,6 +280,17 @@ $spacing-bottom-listing__title: 0.7em;
 
 .listing__read-more {
   margin-top: 0.5em;
+  text-align: right;
+  font-weight: $font-weight-bold;
+  display: block;
+  text-transform: uppercase;
+  font-size: $font-size-little;
+
+  &:after {
+    @extend .icon--after;
+    @extend .icon--right;
+    font-size: $font-size-xsmall;
+  }
 
   & + .free-text {
     margin-top: 1.5em;
@@ -837,4 +834,3 @@ Styleguide listing.listing--2rows
     }
   }
 }
-
