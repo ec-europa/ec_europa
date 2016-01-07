@@ -1029,9 +1029,6 @@ function _europa_prepare_external_home(&$variables) {
   global $language;
   $delimiter = variable_get('language_suffix_delimiter', '_');
   $suffix = $delimiter . $language->prefix;
-
-  // Small fix to maxe the link to the start page use the alias with language.
-  $variables['front_page'] = url('<front>');
   // Set a variable containing the external url to point to.
   $variables['external_home'] = 'http://ec.europa.eu/index' . $suffix . '.htm';
 
