@@ -618,12 +618,12 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
  */
 function _europa_breadcrumb_menu(&$variables) {
   $menu_links = menu_tree('menu-breadcrumb-menu');
-  kpr($menu_links);
+
   if (!empty($menu_links)) {
     $i = 0;
     foreach ($menu_links as $key => $menu_item) {
       if (is_numeric($key)) {
-        $variables['breadcrumb'][] = array(
+        $new_items[] = array(
           'content' => $menu_item['#title'],
           'class' => '',
           'url' => $menu_item['#href'],
@@ -631,6 +631,8 @@ function _europa_breadcrumb_menu(&$variables) {
         $i++;
       }
     }
+    // The menu is used as the starting point of the breadcrumb.
+    $variables['breadcrumb'] = array_merge($new_items, $variables['breadcrumb']);
   }
   // Alter the number of segments in the breadcrumb.
   $variables['segments_quantity'] = $variables['segments_quantity'] + $i;
