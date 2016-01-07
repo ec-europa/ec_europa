@@ -1031,8 +1031,6 @@ function _europa_prepare_external_home(&$variables) {
   $suffix = $delimiter . $language->prefix;
   // Set a variable containing the external url to point to.
   $variables['external_home'] = 'http://ec.europa.eu/index' . $suffix . '.htm';
-
-  return $variables;
 }
 
 /**
