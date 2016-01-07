@@ -9167,6 +9167,9 @@ Styleguide listing.listing--2rows
   .no-svg .front.language-sv .logo:before {
     content: url("../images/png/logo/logo--sv.png"); } }
 
+.site-header__logo::before, .site-header__logo::after {
+  display: none !important; }
+
 /*
 Meta
 
