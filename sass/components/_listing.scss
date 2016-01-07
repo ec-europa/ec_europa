@@ -580,6 +580,31 @@ Styleguide listing.listing--2rows
       }
     }
 
+    .field--field-biography-tagline {
+      @extend .label--upper;
+    }
+
+    .field {
+      margin: 0.5em 0 0;
+    }
+
+    .listing__title + * {
+      font-size: inherit;
+    }
+
+    .field__label,
+    .field-title {
+      padding: 0;
+      font-size: $font-size-little;
+      font-weight: 600;
+      float: left;
+      width: 25%;
+    }
+
+    .field-title {
+      padding-top: 0.5em;
+    }
+
     .listing__bottom {
       clear: both;
 
@@ -673,6 +698,42 @@ Styleguide listing.listing--2rows
   margin-bottom: 0.5em;
 }
 
+// Listing item bio
+.listing__item--bio {
+  min-height: 160px;
+  position: relative;
+
+  .group-bio-col {
+    position: static;
+  }
+
+  .group-bio-top-footer {
+    position: absolute;
+    bottom: 0;
+
+    .field {
+      margin-right: 1em;
+      display: table-cell;
+      vertical-align: bottom;
+      padding-right: 1em;
+    }
+
+    .dt_social_network_links {
+      float: left;
+      margin-right: 0.3em;
+
+      a::after,
+      a::before {
+        display: none;
+      }
+    }
+
+    * {
+      margin-bottom: 0;
+    }
+  }
+}
+
 // Spare css line, this refers to the "declaration of interests" section in the bio.
 .view-biography-declaration {
   margin-top: 1.5em;
@@ -688,6 +749,11 @@ Styleguide listing.listing--2rows
 }
 
 @media screen and (max-width: $screen-xs) {
+
+  .listing__item--bio {
+    img {
+    }
+  }
 
   .listing--2rows {
 

@@ -3,10 +3,15 @@
 .field-group {
   overflow: hidden;
   width: 100%;
+
+  .field {
+    margin-top: 0.5em;
+  }
 }
 
 .field-group--inline {
   .field {
+    margin-top: 0;
     float: left;
     margin-right: 1.111em;
 
@@ -22,6 +27,7 @@
 
   .field {
     display: table-cell;
+    margin-top: 0;
     padding-right: 1.111em;
     vertical-align: bottom;
 
