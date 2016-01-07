@@ -614,10 +614,34 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
 }
 
 /**
+ * Generate the first breadcrumb items basing on a custom menu.
+ */
+function _europa_breadcrumb_menu(&$variables) {
+  $menu_links = menu_tree('menu-breadcrumb-menu');
+  kpr($menu_links);
+  if (!empty($menu_links)) {
+    $i = 0;
+    foreach ($menu_links as $key => $menu_item) {
+      if (is_numeric($key)) {
+        $variables['breadcrumb'][] = array(
+          'content' => $menu_item['#title'],
+          'class' => '',
+          'url' => $menu_item['#href'],
+        );
+        $i++;
+      }
+    }
+  }
+  // Alter the number of segments in the breadcrumb.
+  $variables['segments_quantity'] = $variables['segments_quantity'] + $i;
+
+}
+
+/**
  * Override theme_easy_breadcrumb().
  */
-function europa_easy_breadcrumb($variables) {
-  _europa_prepare_external_home($variables);
+function europa_easy_breadcrumb(&$variables) {
+  _europa_breadcrumb_menu($variables);
   $breadcrumb = $variables['breadcrumb'];
   $segments_quantity = $variables['segments_quantity'];
   $html = '';
@@ -642,7 +666,6 @@ function europa_easy_breadcrumb($variables) {
         $classes[] = 'breadcrumb__segment--first';
         $attributes['class'][] = 'is-internal';
         $attributes += array('rel' => 'home');
-        $item['url'] = $variables['external_home'];
       }
       elseif ($i == ($s - 1)) {
         $classes[] = 'breadcrumb__segment--last';
@@ -1022,22 +1045,9 @@ function europa_preprocess_node(&$variables) {
 }
 
 /**
- * Helper function to set a variable for the "external home page".
- */
-function _europa_prepare_external_home(&$variables) {
-  // Prepare the url for the "external" homepage.
-  global $language;
-  $delimiter = variable_get('language_suffix_delimiter', '_');
-  $suffix = $delimiter . $language->prefix;
-  // Set a variable containing the external url to point to.
-  $variables['external_home'] = 'http://ec.europa.eu/index' . $suffix . '.htm';
-}
-
-/**
  * Implements hook_preprocess_page().
  */
 function europa_preprocess_page(&$variables) {
-  _europa_prepare_external_home($variables);
   // Small fix to maxe the link to the start page use the alias with language.
   $variables['front_page'] = url('<front>');
   // Add information about the number of sidebars.

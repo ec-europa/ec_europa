@@ -95,7 +95,7 @@
 
 <header class="site-header" role="banner">
   <div class="container-fluid">
-    <a href="<?php print $external_home; ?>" class="logo site-header__logo" title="<?php print t('Home - European Commission Beta'); ?>"></a>
+    <a href="<?php print $front_page; ?>" class="logo site-header__logo" title="<?php print t('Home - European Commission Beta'); ?>"></a>
     <?php if($is_front): ?>
       <p class="site-slogan"><?php print $site_slogan; ?></p>
     <?php endif; ?>
