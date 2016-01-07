@@ -32,8 +32,12 @@
   }
 }
 
-.section__group + .section__group {
-  padding: 1em 0;
+.section__group--collapsible {
+  padding: 0 !important;
+
+  & > * {
+    padding: 1.667em 0 !important;
+  }
 }
 
 .section__group--full-width {

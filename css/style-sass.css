@@ -5424,6 +5424,12 @@ button.close {
 .padding-reset {
   padding: 0 !important; }
 
+.col-separator-left {
+  border-left: 1px solid #b3b4b5; }
+
+.col-separator-right {
+  border-right: 1px solid #b3b4b5; }
+
 .is-not-animating {
   -webkit-transition: none;
   -o-transition: none;
@@ -6350,8 +6356,10 @@ Styleguide form.textarea
   .section__group + .section__group--highlight-grey, .nav-tabs--with-content + .tab-content > * + .section__group--highlight-grey, .section__group + .section__group--highlight-grey-lightest, .nav-tabs--with-content + .tab-content > * + .section__group--highlight-grey-lightest {
     margin-top: 2em; }
 
-.section__group + .section__group, .nav-tabs--with-content + .tab-content > * + .section__group, .nav-tabs--with-content + .tab-content > .section__group + *, .nav-tabs--with-content + .tab-content > * + * {
-  padding: 1em 0; }
+.section__group--collapsible {
+  padding: 0 !important; }
+  .section__group--collapsible > * {
+    padding: 1.667em 0 !important; }
 
 .section__group--full-width {
   margin-left: -15px;
