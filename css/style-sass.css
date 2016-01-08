@@ -7929,7 +7929,7 @@ Styleguide: icon
     transform: rotate(359deg); } }
 
 /*
-Icon
+Icon Social
 
 Social network icons
 
@@ -7954,6 +7954,12 @@ Styleguide icon.social
     left: 0; }
   .icon-social:hover {
     cursor: pointer; }
+
+.icon-social--blog:before {
+  background: url("../images/svg/icons/social/blog.svg") no-repeat; }
+
+.icon-social--blog:hover:before {
+  background-image: url("../images/svg/icons/social/blog_hover.svg"); }
 
 .icon-social--blogger:before {
   background: url("../images/svg/icons/social/blogger.svg") no-repeat; }
@@ -8003,6 +8009,12 @@ Styleguide icon.social
 .icon-social--skype:hover:before {
   background-image: url("../images/svg/icons/social/skype_hover.svg"); }
 
+.icon-social--storify:before {
+  background: url("../images/svg/icons/social/storify.svg") no-repeat; }
+
+.icon-social--storify:hover:before {
+  background-image: url("../images/svg/icons/social/storify_hover.svg"); }
+
 .icon-social--twitter:before {
   background: url("../images/svg/icons/social/twitter.svg") no-repeat #ffffff; }
 
@@ -8014,6 +8026,12 @@ Styleguide icon.social
 
 .icon-social--youtube:hover:before {
   background-image: url("../images/svg/icons/social/youtube_hover.svg"); }
+
+.no-svg .icon-social--blog:before {
+  background-image: url("../images/png/icons/social/blog.png"); }
+
+.no-svg .icon-social--blog:hover:before {
+  background-image: url("../images/png/icons/social/blog_hover.png"); }
 
 .no-svg .icon-social--blogger:before {
   background-image: url("../images/png/icons/social/blogger.png"); }
@@ -8062,6 +8080,12 @@ Styleguide icon.social
 
 .no-svg .icon-social--skype:hover:before {
   background-image: url("../images/png/icons/social/skype_hover.png"); }
+
+.no-svg .icon-social--storify:before {
+  background-image: url("../images/png/icons/social/storify.png"); }
+
+.no-svg .icon-social--storify:hover:before {
+  background-image: url("../images/png/icons/social/storify_hover.png"); }
 
 .no-svg .icon-social--twitter:before {
   background-image: url("../images/png/icons/social/twitter.png"); }
