@@ -218,6 +218,57 @@ Styleguide buttons.btn-search
   color: $grey-dark;
 }
 
+/*
+Button Collapse
+
+Button collapse element
+
+Markup: html/btn-collapse.html
+
+Styleguide buttons.btn-
+*/
+.btn-collapse {
+  @extend .btn-default;
+
+  span.toggling-text::after {
+    content: "\00a0";
+  }
+
+  &:hover,
+  &:focus {
+    span.toggling-text,
+    span.toggling-text::after {
+      text-decoration: underline;
+    }
+  }
+
+  .icon {
+    margin-left: 0.3em;
+
+    &::before {
+      vertical-align: bottom;
+    }
+  }
+
+  &:hover:not(:focus) {
+    .icon::before {
+      color: #fff;
+    }
+  }
+
+  &.collapsed {
+    &:span.icon {
+      @include rotate(180deg);
+    }
+  }
+}
+
+.no-js {
+  .btn-collapse {
+    display: none;
+    visibility: hidden;
+  }
+}
 
 // External link specific adjustments
 a.btn {

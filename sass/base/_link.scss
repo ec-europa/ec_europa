@@ -17,6 +17,11 @@ a {
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
     @extend .is-external;
   }
+
+  &.smaller {
+    font-size: 0.8em;
+  }
+
   @media print {
     &:after {
       content: none !important;
