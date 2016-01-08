@@ -1080,15 +1080,6 @@ function europa_preprocess_page(&$variables) {
 function europa_preprocess_views_view(&$variables) {
   $view = $variables['view'];
 
-  if ($view->style_plugin->definition['theme'] == 'views_view_unformatted') {
-    $variables['classes_array'][] = 'listing';
-
-    if (isset($view->style_plugin->row_plugin->options['view_mode'])) {
-      $view_mode = $view->style_plugin->row_plugin->options['view_mode'];
-      $variables['classes_array'][] = 'listing--' . $view_mode;
-    }
-  }
-
   // Checking if exposed filters are set and add variable that stores active
   // filters.
   if (module_exists('dt_exposed_filter_data')) {

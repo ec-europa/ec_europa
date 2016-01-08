@@ -8472,7 +8472,8 @@ Styleguide listing
   list-style: none;
   list-style-image: none;
   padding-top: 0;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  overflow: hidden; }
   .listing__item:first-child {
     border-top: 1px solid #e2e2e2; }
   .listing__item:hover a .listing__title, .listing__item:hover a .listing__title--grey-dark,
@@ -8534,8 +8535,7 @@ Styleguide listing
   color: #575757; }
 
 .listing__wrapper--forthy {
-  border-top: 1px solid #e2e2e2;
-  max-width: 40em; }
+  border-top: 1px solid #e2e2e2; }
 
 .listing--no-padding {
   padding-left: 0 !important; }
@@ -8869,19 +8869,6 @@ Styleguide listing.listing--2rows
     .listing--2rows .listing__item .field--field-social-networks a::after, .listing--2rows .listing__item .field--field-social-networks a::before {
       display: none; }
 
-#team .field {
-  margin-bottom: 0.5em; }
-
-.view-biography-declaration {
-  margin-top: 1.5em; }
-
-.section__group--full-width .listing__wrapper--two-columns .listing:first-child p {
-  margin: 0.3em 0; }
-
-.section__group--full-width .listing__wrapper--two-columns .listing:last-child {
-  border-left: 2px solid #ccc;
-  padding-left: 3em; }
-
 @media screen and (max-width: 480px) {
   .listing--2rows .listing__item .field--labeled .field__label,
   .listing--2rows .listing__item .field--labeled .field__items {
@@ -8897,26 +8884,8 @@ Styleguide listing.listing--2rows
     padding: 0; } }
 
 @media screen and (max-width: 768px) {
-  .section__group--full-width .listing__wrapper--two-columns .listing:last-child {
-    padding: 1em 0 0 1em;
-    border-left: none;
-    border-top: 2px solid #ccc; }
   .listing__wrapper--two-columns .listing {
     margin-top: 1em; }
-  .section .listing__wrapper {
-    margin-bottom: 0; }
-  .bio--top .col-md-2, .bio--top .comment__image {
-    float: left; }
-  .bio--top .group-bio-col {
-    float: left; }
-  .listing__item--bio img {
-    margin-bottom: 0.5em; }
-  .listing__item--bio .group-bio-top-footer {
-    position: static;
-    margin-top: 0.5em; }
-    .listing__item--bio .group-bio-top-footer .field {
-      margin-top: 0.5em;
-      display: inline-block; }
   .listing--2rows .listing__item .listing__top img {
     position: static; } }
 

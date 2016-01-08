@@ -40,6 +40,7 @@ $spacing-bottom-listing__title: 0.7em;
   list-style-image: none;
   padding-top: 0;
   padding-bottom: 0;
+  overflow: hidden;
   &:first-child {
     border-top: 1px solid $grey-light;
   }
@@ -132,7 +133,6 @@ $spacing-bottom-listing__title: 0.7em;
 
 .listing__wrapper--forthy {
   border-top: 1px solid #e2e2e2;
-  max-width: 40em;
 }
 
 .listing--no-padding {
@@ -652,25 +652,6 @@ Styleguide listing.listing--2rows
   }
 }
 
-// This has to be generalized, the field component doesn't provide margins.
-#team .field {
-  margin-bottom: 0.5em;
-}
-
-// Spare css line, this refers to the "declaration of interests" section in the bio.
-.view-biography-declaration {
-  margin-top: 1.5em;
-}
-
-.section__group--full-width .listing__wrapper--two-columns .listing:first-child p {
-  margin: 0.3em 0;
-}
-
-.section__group--full-width .listing__wrapper--two-columns .listing:last-child {
-  border-left: 2px solid #ccc;
-  padding-left: 3em;
-}
-
 @media screen and (max-width: $screen-xs) {
 
   .listing--2rows {
@@ -702,44 +683,9 @@ Styleguide listing.listing--2rows
 }
 
 @media screen and (max-width: $screen-sm) {
-  .section__group--full-width .listing__wrapper--two-columns .listing:last-child {
-    padding: 1em 0 0 1em;
-    border-left: none;
-    border-top: 2px solid #ccc;
-  }
 
   .listing__wrapper--two-columns .listing {
     margin-top: 1em;
-  }
-
-  .section .listing__wrapper {
-    margin-bottom: 0;
-  }
-
-  .bio--top {
-    .col-md-2 {
-      float: left;
-    }
-
-    .group-bio-col {
-      float: left;
-    }
-  }
-
-  .listing__item--bio {
-    img {
-      margin-bottom: 0.5em;
-    }
-
-    .group-bio-top-footer {
-      position: static;
-      margin-top: 0.5em;
-
-      .field {
-        margin-top: 0.5em;
-        display: inline-block;
-      }
-    }
   }
 
   .listing--2rows {
