@@ -38,7 +38,7 @@
     }
   };
 
-  Drupal.behaviors.commissioner_timeline = {
+  Drupal.behaviors.timeline = {
     attach: function(context) {
       var $timelineSelector = $('.timeline');
       $($timelineSelector).once('timeline', function(){
@@ -64,7 +64,7 @@
         }
       });
     }
-  }
+  };
 
   Drupal.behaviors.equal_blocks = {
     attach: function (context) {
@@ -128,6 +128,34 @@
     }
   };
 
+  Drupal.behaviors.europa_collapse = {
+    attach: function (context) {
+      Drupal.europa.collapsing();
+    }
+  };
+
+  Drupal.europa.collapsing = function(showText, hideText) {
+    if (!showText) {
+      showText = Drupal.t("Show");
+    }
+
+    if (!hideText) {
+      hideText = Drupal.t("Hide");
+    }
+
+    $('button[data-toggle=collapse]').each(function() {
+      var dependentId = $(this).attr('data-target');
+      var toggler = $(dependentId).hasClass('in') ? hideText : showText;
+      var fillMe = $('.toggling-text', $(this));
+      fillMe.text(toggler);
+
+      $(this).click(function() {
+        toggler = fillMe.text() == hideText ? showText : hideText;
+        fillMe.text(toggler);
+      });
+    });
+  };
+
   var trackElements = [];
   var errorEventSent = 'Piwik, trackEvent was not fired up.';
   /**
@@ -163,11 +191,11 @@
         }
       }
       // Always trigger.
-      if (triggerValue == 0) {
+      if (triggerValue === 0) {
         if (typeof _paq != 'undefined') {
           _paq.push([action, category, value, data]);
         }
       }
     }
-  }
+  };
 })(jQuery);

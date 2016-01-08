@@ -11,7 +11,11 @@
   <?php if (isset($title_suffix['contextual_links'])): ?>
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
-  <a href="<?php print $node_url; ?>" class="listing__item-link">
+  <?php if (!isset($prevent_link)): ?>
+    <a href="<?php print $node_url; ?>" class="listing__item-link">
+  <?php else: ?>
+    <div class="listing__item-link">
+  <?php endif; ?>
     <?php if (!empty($second)): ?>
       <<?php print $second_wrapper; ?> class="listing__column-second column-second <?php print $second_classes; ?>">
         <?php print $second; ?>
@@ -20,7 +24,11 @@
     <<?php print $main_wrapper; ?> class="listing__column-main column-main <?php print $main_classes; ?>">
       <?php print $main; ?>
     </<?php print $main_wrapper; ?>>
-  </a>
+  <?php if (!isset($prevent_link)): ?>
+    </a>
+  <?php else: ?>
+    </div>
+  <?php endif; ?>
 </<?php print $layout_wrapper ?>>
 
 
