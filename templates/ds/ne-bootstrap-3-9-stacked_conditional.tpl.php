@@ -47,7 +47,8 @@
             <?php print $top; ?>
           </section>
         <?php endif; ?>
-
+      </div>
+      <div class="row">
         <a id="main-content" tabindex="-1"></a>
         <?php if (isset($left) && !empty($left)): ?>
           <<?php print $left_wrapper; ?> class="col-lg-3 <?php print $left_classes; ?>">

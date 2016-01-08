@@ -32,6 +32,14 @@
   }
 }
 
+.section__group--collapsible {
+  padding: 0 !important;
+
+  & > * {
+    padding: 1.667em 0 !important;
+  }
+}
+
 .section__group--full-width {
   margin-left: -$grid-gutter-width / 2;
   margin-right: -$grid-gutter-width / 2;
@@ -57,6 +65,15 @@
 .section__group--highlight-yellow {
   background-color: $yellow-light;
   overflow: hidden;
+}
+
+.section__group--no-margin {
+  margin-top: 0 !important;
+}
+
+.section__group--bottom-header {
+  margin-top: -60px !important;
+  padding: 1.667em 0 0 !important;
 }
 
 @include breakpoint(screen-lg-min) {
