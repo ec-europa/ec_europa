@@ -8456,7 +8456,8 @@ Styleguide listing
 
 .listing__column-main {
   width: 100%;
-  padding-left: 0; }
+  padding-left: 0;
+  float: left; }
 
 .listing__title {
   color: #004494;

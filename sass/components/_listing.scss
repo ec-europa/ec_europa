@@ -119,8 +119,9 @@ $spacing-bottom-listing__title: 0.7em;
 .listing__column-main {
   width: 100%;
   padding-left: 0;
+  float: left;
 }
- 
+
 
 .listing__title {
   color: $brand-primary;
