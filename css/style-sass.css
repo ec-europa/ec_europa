@@ -8842,63 +8842,8 @@ Styleguide listing.listing--2rows
     .listing--2rows .listing__item .field--field-social-networks a::after, .listing--2rows .listing__item .field--field-social-networks a::before {
       display: none; }
 
-.listing__item--contact {
-  border: none;
-  overflow: visible; }
-  .listing__item--contact:first-child {
-    border: none; }
-  .listing__item--contact .field {
-    margin: 0.5em 0 0; }
-  .listing__item--contact img {
-    float: right;
-    margin-top: -2em; }
-  .listing__item--contact .field--labeled .field__label {
-    padding: 0;
-    font-size: 0.889em;
-    font-weight: 600; }
-  .listing__item--contact .btn-default, .listing__item--contact .btn-collapse {
-    margin: 0.5em 0 0; }
-
-@media screen and (max-width: 768px) {
-  .listing__item--contact .field--labeled {
-    margin: 0.5em 0; }
-    .listing__item--contact .field--labeled .field__label,
-    .listing__item--contact .field--labeled .field__items {
-      padding: 0;
-      width: 100%; }
-  .listing__item--contact img {
-    float: none;
-    margin: 0.5em 0; }
-  .listing__item--contact .field--labeled-align .field__items {
-    margin-left: 0; } }
-
-.bio--top.listing {
-  border-bottom: 1px solid #e2e2e2; }
-
 #team .field {
   margin-bottom: 0.5em; }
-
-.listing__item--bio {
-  min-height: 160px;
-  position: relative; }
-  .listing__item--bio .group-bio-col {
-    position: static; }
-  .listing__item--bio .group-bio-top-footer {
-    position: absolute;
-    bottom: 0; }
-    .listing__item--bio .group-bio-top-footer .field {
-      margin-right: 1em;
-      display: table-cell;
-      vertical-align: bottom;
-      padding-right: 1em; }
-    .listing__item--bio .group-bio-top-footer .dt_social_network_links {
-      float: left;
-      margin-right: 0.3em; }
-      .listing__item--bio .group-bio-top-footer .dt_social_network_links a::after,
-      .listing__item--bio .group-bio-top-footer .dt_social_network_links a::before {
-        display: none; }
-    .listing__item--bio .group-bio-top-footer * {
-      margin-bottom: 0; }
 
 .view-biography-declaration {
   margin-top: 1.5em; }

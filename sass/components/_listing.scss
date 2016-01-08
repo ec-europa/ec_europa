@@ -637,101 +637,9 @@ Styleguide listing.listing--2rows
   }
 }
 
-// Listing item contact
-.listing__item--contact {
-  border: none;
-  overflow: visible;
-
-  &:first-child {
-    border: none;
-  }
-
-  .field {
-    margin: 0.5em 0 0;
-  }
-
-  img {
-    float: right;
-    margin-top: -2em;
-  }
-
-  .field--labeled .field__label {
-    padding: 0;
-    font-size: $font-size-little;
-    font-weight: 600;
-  }
-
-  .btn-default {
-    margin: 0.5em 0 0;
-  }
-}
-
-@media screen and (max-width: $screen-sm) {
-  .listing__item--contact {
-    .field--labeled {
-      margin: 0.5em 0;
-
-      .field__label,
-      .field__items {
-        padding: 0;
-        width: 100%;
-      }
-    }
-
-    img {
-      float: none;
-      margin: 0.5em 0;
-    }
-
-    .field--labeled-align .field__items {
-      margin-left: 0;
-    }
-  }
-}
-
-.bio--top.listing {
-  border-bottom: 1px solid $grey-light;
-}
-
 // This has to be generalized, the field component doesn't provide margins.
 #team .field {
   margin-bottom: 0.5em;
-}
-
-// Listing item bio
-.listing__item--bio {
-  min-height: 160px;
-  position: relative;
-
-  .group-bio-col {
-    position: static;
-  }
-
-  .group-bio-top-footer {
-    position: absolute;
-    bottom: 0;
-
-    .field {
-      margin-right: 1em;
-      display: table-cell;
-      vertical-align: bottom;
-      padding-right: 1em;
-    }
-
-    .dt_social_network_links {
-      float: left;
-      margin-right: 0.3em;
-
-      a::after,
-      a::before {
-        display: none;
-      }
-    }
-
-    * {
-      margin-bottom: 0;
-    }
-  }
 }
 
 // Spare css line, this refers to the "declaration of interests" section in the bio.
@@ -749,11 +657,6 @@ Styleguide listing.listing--2rows
 }
 
 @media screen and (max-width: $screen-xs) {
-
-  .listing__item--bio {
-    img {
-    }
-  }
 
   .listing--2rows {
 
