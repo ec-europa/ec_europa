@@ -8494,7 +8494,8 @@ Styleguide listing
   list-style: none;
   list-style-image: none;
   padding-top: 0;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  overflow: hidden; }
   .listing__item:first-child {
     border-top: 1px solid #e2e2e2; }
   .listing__item:hover a .listing__title,
