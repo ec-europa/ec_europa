@@ -649,10 +649,6 @@ function europa_easy_breadcrumb($variables) {
       $content = '<span class="breadcrumb__text">' . check_plain(decode_entities($item['content'])) . '</span>';
       $class = implode(' ', $classes);
       if (isset($item['url'])) {
-        // Ugly hotfix.
-        // TODO: Remove when following issue is fixed:
-        // @see https://webgate.ec.europa.eu/CITnet/jira/browse/NEXTEUROPA-4457
-        $item['url'] = $item['url'] == '<front>' ? '' : $item['url'];
         $full_item = l($content, $item['url'], array('attributes' => $attributes, 'html' => TRUE));
       }
       else {
@@ -992,6 +988,7 @@ function europa_preprocess_html(&$variables) {
 function europa_preprocess_node(&$variables) {
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
+
   // If it is our priority listing page. we set the contents of our preprocess
   // block.
   if (isset($variables['type']) == 'basic_page' && $variables['nid'] == variable_get('dt_priority_page_id', '')) {
@@ -1017,6 +1014,9 @@ function europa_preprocess_node(&$variables) {
  * Implements hook_preprocess_page().
  */
 function europa_preprocess_page(&$variables) {
+  // Small fix to maxe the link to the start page use the alias with language.
+  $variables['front_page'] = url('<front>');
+
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class'] = 'col-md-6';

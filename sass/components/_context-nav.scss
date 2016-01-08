@@ -71,4 +71,7 @@ Styleguide contextnav
   .view-mode-name {
     display: inline-block;
   }
+  & > * {
+    display: inline;
+  }
 }

@@ -17,6 +17,13 @@ body {
   }
 }
 
+.no-js {
+  .collapse {
+    display: block;
+    visibility: visible;
+  }
+}
+
 
 /*
 Typography
