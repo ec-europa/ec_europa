@@ -769,7 +769,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL) {
 
   $file_btn = l($file_text, $url['path'], array_merge($options, $url['options']));
 
-  return '<div class="file ' . $file_class . '">' . $file_icon . $file_metadata . $file_btn . '</div>';
+  return '<div class="file file--widebar ' . $file_class . '">' . $file_icon . $file_metadata . $file_btn . '</div>';
 }
 
 /**

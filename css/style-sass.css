@@ -7360,17 +7360,21 @@ Styleguide file
   max-width: 100%;
   margin-left: 0; }
   .file--widebar .file__icon {
-    margin-right: 0;
     padding-left: 0;
+    margin-right: 5px;
+    margin-left: -5px;
     height: 2.556em;
     overflow: hidden; }
     @media (max-width: 768px) {
       .file--widebar .file__icon {
-        min-width: 60px; } }
+        min-width: 3.333em; } }
     .file--widebar .file__icon:before {
       font-size: 2.556em; }
   .file--widebar .file__metadata {
     padding-left: 0; }
+    @media (max-width: 768px) {
+      .file--widebar .file__metadata {
+        float: none; } }
   @media (max-width: 768px) {
     .file--widebar .file__btn {
       margin-top: 15px; } }
@@ -7381,7 +7385,15 @@ Styleguide file
   margin: 0; }
   .file--bare .file__btn {
     padding-right: 0;
-    text-align: right; }
+    text-align: right;
+    float: right; }
+  @media (max-width: 768px) {
+    .file--bare .file__btn {
+      text-align: left;
+      float: left;
+      padding-left: 0;
+      margin: 0;
+      border: none; } }
   .file--bare .file__icon, .file--bare .file__language {
     display: none; }
 

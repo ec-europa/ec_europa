@@ -76,13 +76,16 @@ Styleguide file
 
   .file__icon {
     @extend .col-xs-1;
-    margin-right: 0;
     padding-left: 0;
+    // We remove 5px on the left (as the image has some whitespace) as it causes a wrong looking margin. Then we add
+    // back the margin on the right, to have more spacing between those fields.
+    margin-right: 5px;
+    margin-left: -5px;
     height: 2.556em;
     overflow: hidden;
 
     @media (max-width: $screen-sm-min) {
-      min-width: 60px;
+      min-width: 3.333em;
     }
 
     &:before {
@@ -95,6 +98,9 @@ Styleguide file
     @extend .col-sm-8;
     @extend .col-xs-10;
     padding-left: 0;
+    @media (max-width: $screen-sm-min) {
+      float: none;
+    }
   }
 
   .file__btn {
@@ -117,6 +123,17 @@ Styleguide file
   .file__btn {
     padding-right: 0;
     text-align: right;
+    float: right;
+  }
+
+  @media (max-width: $screen-sm-min) {
+    .file__btn {
+      text-align: left;
+      float: left;
+      padding-left: 0;
+      margin: 0;
+      border: none;
+    }
   }
 
   .file__icon, .file__language {
