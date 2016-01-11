@@ -782,6 +782,13 @@ function _europa_file_markup($file, array $url, $modifier = NULL) {
  */
 function europa_file_link($variables) {
   $file = $variables['file'];
+
+  // Submit the language along witht the file.
+  $langcode = $GLOBALS['language_content']->language;
+  if (!empty($langcode)) {
+    $file->language = $langcode;
+  }
+
   $url['path'] = file_create_url($file->uri);
   $url['options'] = array();
 
@@ -793,6 +800,13 @@ function europa_file_link($variables) {
  */
 function europa_file_entity_download_link($variables) {
   $file = $variables['file'];
+
+  // Submit the language along witht the file.
+  $langcode = $GLOBALS['language_content']->language;
+  if (!empty($langcode)) {
+    $file->language = $langcode;
+  }
+
   $uri = file_entity_download_uri($file);
 
   return _europa_file_markup($file, $uri);
