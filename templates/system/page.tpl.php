@@ -162,14 +162,6 @@
           <?php print render($title_prefix); ?>
           <?php if (isset($page['custom_title'])): ?>
             <?php print render($page['custom_title']); ?>
-          <?php else: ?>
-            <h1>
-                <?php if (drupal_is_front_page() && !empty($site_name)): ?>
-                  <?php print $site_name; ?>
-                <?php elseif (!empty($title)): ?>
-                  <?php print $title; ?>
-                <?php endif; ?>
-            </h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
 
