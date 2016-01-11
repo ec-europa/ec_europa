@@ -40,6 +40,7 @@ $spacing-bottom-listing__title: 0.7em;
   list-style-image: none;
   padding-top: 0;
   padding-bottom: 0;
+  overflow: hidden;
   &:first-child {
     border-top: 1px solid $grey-light;
   }
@@ -103,9 +104,9 @@ $spacing-bottom-listing__title: 0.7em;
 }
 
 .listing__column-main {
-  float: left;
   width: 100%;
   padding-left: 0;
+  float: left;
 }
 
 
