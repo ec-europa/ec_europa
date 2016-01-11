@@ -7378,7 +7378,10 @@ Styleguide file
 .file--bare {
   background: none;
   padding: 0.5em 0;
-  margin: 0 1.333em 0 0; }
+  margin: 0; }
+  .file--bare .file__btn {
+    padding-right: 0;
+    text-align: right; }
   .file--bare .file__icon, .file--bare .file__language {
     display: none; }
 
@@ -9290,6 +9293,9 @@ Styleguide listing.listing--2rows
 @media print {
   .no-svg .front.language-sv .logo:before {
     content: url("../images/png/logo/logo--sv.png"); } }
+
+.site-header__logo::before, .site-header__logo::after {
+  display: none !important; }
 
 /*
 Meta
