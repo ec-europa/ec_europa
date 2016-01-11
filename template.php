@@ -741,7 +741,12 @@ function _europa_file_markup($file, array $url, $modifier = NULL) {
   $file_name = $file->uri;
   $file_extension = strtoupper(pathinfo($file_name, PATHINFO_EXTENSION));
 
-  $file_info = '<div class="file__info">' . $file_size . ' - ' . $file_extension . '</div>';
+  $file_language = '';
+  if (isset($file->language)) {
+    $file_language = '<span class="file__contentlanguage">' . _dt_shared_functions_get_language_obj($file->language) . ' </span>';
+  }
+
+  $file_info = '<div class="file__info">' . $file_language . '(' . $file_size . ' - ' . $file_extension . ')</div>';
 
   // Use the description as the link text if available.
   if (!empty($file->description)) {
