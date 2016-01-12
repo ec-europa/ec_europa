@@ -128,8 +128,11 @@ Styleguide file
     padding-right: 0;
     text-align: right;
     float: right;
-    @media (min-width: $screen-md-min) {
-      text-align: center;
+    border: none;
+
+    &:hover {
+      color: $text-colorg;
+      background: none;
     }
   }
 
@@ -139,7 +142,6 @@ Styleguide file
       float: left;
       padding-left: 0;
       margin: 0;
-      border: none;
     }
   }
 

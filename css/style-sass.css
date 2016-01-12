@@ -7389,17 +7389,17 @@ Styleguide file
   .file--bare .file__btn {
     padding-right: 0;
     text-align: right;
-    float: right; }
-    @media (min-width: 992px) {
-      .file--bare .file__btn {
-        text-align: center; } }
+    float: right;
+    border: none; }
+    .file--bare .file__btn:hover {
+      color: #404040;
+      background: none; }
   @media (max-width: 768px) {
     .file--bare .file__btn {
       text-align: left;
       float: left;
       padding-left: 0;
-      margin: 0;
-      border: none; } }
+      margin: 0; } }
   .file--bare .file__icon, .file--bare .file__language {
     display: none; }
 
