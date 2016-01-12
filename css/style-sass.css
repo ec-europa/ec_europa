@@ -7390,6 +7390,9 @@ Styleguide file
     padding-right: 0;
     text-align: right;
     float: right; }
+    @media (min-width: 992px) {
+      .file--bare .file__btn {
+        text-align: center; } }
   @media (max-width: 768px) {
     .file--bare .file__btn {
       text-align: left;
