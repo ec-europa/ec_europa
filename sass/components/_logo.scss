@@ -69,7 +69,7 @@
 .front {
   .logo {
     float: none;
-    
+
     width: 225px;
     height: 82px;
     margin: 16px auto 40px auto;
@@ -142,5 +142,13 @@
     }
 
     @include languages_logo('../images/png/logo/logo--', '.png');
+  }
+}
+
+// If the logo is linking to an external page do not show the external icon.
+.site-header__logo {
+  &::before,
+  &::after {
+    display: none !important;
   }
 }
