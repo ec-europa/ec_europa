@@ -704,11 +704,15 @@ function europa_easy_breadcrumb(&$variables) {
  *   File object.
  * @param array $url
  *   Url depending on field type.
+ * @param string $modifier
+ *   Class modefier for the file block element.
+ * @param bool $subfile
+ *   True/False parameter to set if it is a subfile.
  *
  * @return string
  *   HTML markup.
  */
-function _europa_file_markup($file, array $url, $modifier = NULL) {
+function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FALSE) {
   switch ($file->type) {
     case 'image':
       $file_class = 'file--image';
@@ -741,21 +745,40 @@ function _europa_file_markup($file, array $url, $modifier = NULL) {
   $file_name = $file->uri;
   $file_extension = strtoupper(pathinfo($file_name, PATHINFO_EXTENSION));
 
-  $file_language = '';
+  // Get our full language string.
   if (isset($file->language)) {
-    $file_language = '<span class="file__contentlanguage">' . _dt_shared_functions_get_language_obj($file->language) . ' </span>';
+    $file_language_string = _dt_shared_functions_get_language_obj($file->language);
   }
 
-  $file_info = '<div class="file__info">' . $file_language . '(' . $file_size . ' - ' . $file_extension . ')</div>';
+  // If we have a full language string and it's not a subfile, we add it to the
+  // file information.
+  $file_language = '';
+  if (isset($file_language_string) && !$subfile) {
+    $file_language = '<span class="file__contentlanguage">' . $file_language_string . ' </span>';
+  }
 
-  // Use the description as the link text if available.
-  if (!empty($file->description)) {
-    $file_title = '<span class="file__title">' . $file->description . '</span>';
-    $options['attributes']['title'] = check_plain($file->filename);
+  // File information and title setter.
+  if ($subfile) {
+    $file_info_string = $file_size . ' - ' . $file_extension;
+    $title_string = $file_language_string . ' ' . t('version');
   }
   else {
-    $file_title = '<span class="file__title">' . $file->filename . '</span>';
+    $file_info_string = $file_language . '(' . $file_size . ' - ' . $file_extension . ')';
+
+    // Use the description as the link text if available.
+    if (!empty($file->description)) {
+      $title_string = $file->description;
+      $options['attributes']['title'] = check_plain($file->filename);
+    }
+    else {
+      $title_string = $file->filename;
+    }
   }
+
+  // File markup parts.
+  $file_info = '<div class="file__info">' . $file_info_string . '</div>';
+
+  $file_title = '<span class="file__title">' . $title_string . '</span>';
 
   $file_metadata = '<div class="file__metadata">' . $file_title . $file_info . '</div>';
 
