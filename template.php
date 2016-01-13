@@ -704,11 +704,15 @@ function europa_easy_breadcrumb(&$variables) {
  *   File object.
  * @param array $url
  *   Url depending on field type.
+ * @param string $modifier
+ *   Class modefier for the file block element.
+ * @param bool $subfile
+ *   True/False parameter to set if it is a subfile.
  *
  * @return string
  *   HTML markup.
  */
-function _europa_file_markup($file, array $url, $modifier = NULL) {
+function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FALSE) {
   switch ($file->type) {
     case 'image':
       $file_class = 'file--image';
@@ -741,16 +745,40 @@ function _europa_file_markup($file, array $url, $modifier = NULL) {
   $file_name = $file->uri;
   $file_extension = strtoupper(pathinfo($file_name, PATHINFO_EXTENSION));
 
-  $file_info = '<div class="file__info">' . $file_size . ' - ' . $file_extension . '</div>';
+  // Get our full language string.
+  if (isset($file->language)) {
+    $file_language_string = _dt_shared_functions_get_language_obj($file->language);
+  }
 
-  // Use the description as the link text if available.
-  if (!empty($file->description)) {
-    $file_title = '<span class="file__title">' . $file->description . '</span>';
-    $options['attributes']['title'] = check_plain($file->filename);
+  // If we have a full language string and it's not a subfile, we add it to the
+  // file information.
+  $file_language = '';
+  if (isset($file_language_string) && !$subfile) {
+    $file_language = '<span class="file__contentlanguage">' . $file_language_string . ' </span>';
+  }
+
+  // File information and title setter.
+  if ($subfile) {
+    $file_info_string = $file_size . ' - ' . $file_extension;
+    $title_string = $file_language_string . ' ' . t('version');
   }
   else {
-    $file_title = '<span class="file__title">' . $file->filename . '</span>';
+    $file_info_string = $file_language . '(' . $file_size . ' - ' . $file_extension . ')';
+
+    // Use the description as the link text if available.
+    if (!empty($file->description)) {
+      $title_string = $file->description;
+      $options['attributes']['title'] = check_plain($file->filename);
+    }
+    else {
+      $title_string = $file->filename;
+    }
   }
+
+  // File markup parts.
+  $file_info = '<div class="file__info">' . $file_info_string . '</div>';
+
+  $file_title = '<span class="file__title">' . $title_string . '</span>';
 
   $file_metadata = '<div class="file__metadata">' . $file_title . $file_info . '</div>';
 
@@ -769,7 +797,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL) {
 
   $file_btn = l($file_text, $url['path'], array_merge($options, $url['options']));
 
-  return '<div class="file ' . $file_class . '">' . $file_icon . $file_metadata . $file_btn . '</div>';
+  return '<div class="file file--widebar ' . $file_class . '">' . $file_icon . $file_metadata . $file_btn . '</div>';
 }
 
 /**
@@ -777,6 +805,13 @@ function _europa_file_markup($file, array $url, $modifier = NULL) {
  */
 function europa_file_link($variables) {
   $file = $variables['file'];
+
+  // Submit the language along witht the file.
+  $langcode = $GLOBALS['language_content']->language;
+  if (!empty($langcode)) {
+    $file->language = $langcode;
+  }
+
   $url['path'] = file_create_url($file->uri);
   $url['options'] = array();
 
@@ -788,6 +823,13 @@ function europa_file_link($variables) {
  */
 function europa_file_entity_download_link($variables) {
   $file = $variables['file'];
+
+  // Submit the language along witht the file.
+  $langcode = $GLOBALS['language_content']->language;
+  if (!empty($langcode)) {
+    $file->language = $langcode;
+  }
+
   $uri = file_entity_download_uri($file);
 
   return _europa_file_markup($file, $uri);
