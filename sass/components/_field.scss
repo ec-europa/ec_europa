@@ -29,6 +29,8 @@ Styleguide field
     display: block;
     clear: both;
     font-size: $font-size-little;
+    line-height: 2em;
+    font-weight: $font-weight-bold;
   }
 
   .field__items {

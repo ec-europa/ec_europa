@@ -7244,7 +7244,9 @@ Styleguide field
   .field--labeled .field__label {
     display: block;
     clear: both;
-    font-size: 0.889em; }
+    font-size: 0.889em;
+    line-height: 2em;
+    font-weight: 600; }
   .field--labeled .field__items {
     display: block; }
 
@@ -8344,7 +8346,7 @@ Styleguide labels
 .label--danger {
   color: #fff; }
 
-.label--upper, .listing--2rows .listing__item .field--field-biography-tagline {
+.label--upper {
   text-transform: uppercase;
   text-align: left;
   font-size: 0.8em; }
@@ -8597,10 +8599,6 @@ Styleguide listing
   .listing__title + * {
     font-size: 0.889em;
     margin-top: 0.7em; }
-
-.listing__wrapper--forthy {
-  border-top: 1px solid #e2e2e2;
-  max-width: 40em; }
 
 .listing--no-padding {
   padding-left: 0 !important; }
@@ -8865,106 +8863,6 @@ Styleguide listing.agenda
 
 .listing--agenda .listing__author {
   font-size: 0.889em; }
-
-/*
-Listing  2rows
-
-Listing components
-
-Markup: html/listing--2rows.html
-
-
-Styleguide listing.listing--2rows
-*/
-.listing--2rows .listing__item {
-  padding: 1em 0;
-  position: relative; }
-  .listing--2rows .listing__item .listing__top {
-    min-height: 120px; }
-    .listing--2rows .listing__item .listing__top img {
-      position: absolute;
-      right: 0;
-      top: 1em; }
-  .listing--2rows .listing__item .field {
-    margin: 0.5em 0 0; }
-  .listing--2rows .listing__item .listing__title + * {
-    font-size: inherit; }
-  .listing--2rows .listing__item .field__label,
-  .listing--2rows .listing__item .field-title {
-    padding: 0;
-    font-size: 0.889em;
-    font-weight: 600;
-    float: left;
-    width: 25%; }
-  .listing--2rows .listing__item .field-title {
-    padding-top: 0.5em; }
-  .listing--2rows .listing__item .listing__bottom {
-    clear: both; }
-    .listing--2rows .listing__item .listing__bottom ul {
-      list-style-position: inside;
-      margin-bottom: 0;
-      padding-left: 0; }
-    .listing--2rows .listing__item .listing__bottom .field-name-body .field-items {
-      padding-left: 15px;
-      width: 75%;
-      display: inline-block; }
-  .listing--2rows .listing__item .field--field-social-networks a {
-    margin-top: 0.5em;
-    display: block;
-    font-size: 0.8em; }
-    .listing--2rows .listing__item .field--field-social-networks a::after, .listing--2rows .listing__item .field--field-social-networks a::before {
-      display: none; }
-
-#team .field {
-  margin-bottom: 0.5em; }
-
-.view-biography-declaration {
-  margin-top: 1.5em; }
-
-.section__group--full-width .listing__wrapper--two-columns .listing:first-child p {
-  margin: 0.3em 0; }
-
-.section__group--full-width .listing__wrapper--two-columns .listing:last-child {
-  border-left: 2px solid #ccc;
-  padding-left: 3em; }
-
-@media screen and (max-width: 480px) {
-  .listing--2rows .listing__item .field--labeled .field__label,
-  .listing--2rows .listing__item .field--labeled .field__items {
-    padding: 0;
-    width: 100%; }
-  .listing--2rows .listing__item .field-title {
-    width: 100%;
-    margin-bottom: 0.3em; }
-  .listing--2rows .listing__item .field--field-social-networks a {
-    float: left;
-    margin-right: 1em; }
-  .listing--2rows .listing__item .listing__bottom ul {
-    padding: 0; } }
-
-@media screen and (max-width: 768px) {
-  .section__group--full-width .listing__wrapper--two-columns .listing:last-child {
-    padding: 1em 0 0 1em;
-    border-left: none;
-    border-top: 2px solid #ccc; }
-  .listing__wrapper--two-columns .listing {
-    margin-top: 1em; }
-  .section .listing__wrapper {
-    margin-bottom: 0; }
-  .bio--top .col-md-2, .bio--top .comment__image {
-    float: left; }
-  .bio--top .group-bio-col {
-    float: left; }
-  .listing__item--bio img {
-    margin-bottom: 0.5em; }
-  .listing__item--bio .group-bio-top-footer {
-    position: static;
-    margin-top: 0.5em; }
-    .listing__item--bio .group-bio-top-footer .field {
-      margin-top: 0.5em;
-      display: inline-block; }
-  .listing--2rows .listing__item .listing__top img {
-    position: static; } }
 
 .logo {
   display: block;

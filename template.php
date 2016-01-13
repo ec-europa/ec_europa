@@ -1088,15 +1088,6 @@ function europa_preprocess_node(&$variables) {
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
   }
-
-  if ($variables['view_mode'] == 'team_cabinet_member') {
-    $node_title = filter_xss($variables['node']->title);
-    $node_nid = $variables['node']->nid;
-    $class = array('field__title');
-    $variables['title_prefix'] = '<h3 class="listing__title">';
-    $variables['title'] = l($node_title, 'node/' . $node_nid, $attributes = array($class));
-    $variables['title_suffix'] = '</h3>';
-  }
 }
 
 /**
@@ -1167,15 +1158,6 @@ function europa_preprocess_page(&$variables) {
  */
 function europa_preprocess_views_view(&$variables) {
   $view = $variables['view'];
-
-  if ($view->style_plugin->definition['theme'] == 'views_view_unformatted') {
-    $variables['classes_array'][] = 'listing';
-
-    if (isset($view->style_plugin->row_plugin->options['view_mode'])) {
-      $view_mode = $view->style_plugin->row_plugin->options['view_mode'];
-      $variables['classes_array'][] = 'listing--' . $view_mode;
-    }
-  }
 
   // Checking if exposed filters are set and add variable that stores active
   // filters.

@@ -38,7 +38,7 @@
     <div class="container-fluid">
       <div class="row">
         <?php if(!empty($top) || !empty($local_tabs) || !empty($messages)): ?>
-          <section class="section col-md-12 <?php print $top_classes; ?>">
+          <section class="section section--content-top col-md-12 <?php print $top_classes; ?>">
             <?php print $top; ?>
             <?php if (!empty($local_tabs)): ?>
               <?php print $local_tabs; ?>
@@ -48,7 +48,8 @@
             <?php endif; ?>
           </section>
         <?php endif; ?>
-
+      </div>
+      <div class="row">
         <a id="main-content" tabindex="-1"></a>
         <section class="section col-md-12 <?php print $central_classes; ?>">
           <?php print $central; ?>
