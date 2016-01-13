@@ -5941,16 +5941,16 @@ Markup: html/link.html
 
 Styleguide text.link
 */
-a {
-  color: #004494; }
-  a:hover, a:active, a:focus {
-    color: #404040;
-    text-decoration: underline; }
-  a.smaller {
-    font-size: 0.8em; }
-  @media print {
-    a:after {
-      content: none !important; } }
+a:hover, a:active, a:focus {
+  color: #404040;
+  text-decoration: underline; }
+
+a.smaller {
+  font-size: 0.8em; }
+
+@media print {
+  a:after {
+    content: none !important; } }
 
 p a {
   text-decoration: underline; }
