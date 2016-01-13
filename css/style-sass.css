@@ -5941,16 +5941,16 @@ Markup: html/link.html
 
 Styleguide text.link
 */
-a:hover, a:active, a:focus {
-  color: #404040;
-  text-decoration: underline; }
-
-a.smaller {
-  font-size: 0.8em; }
-
-@media print {
-  a:after {
-    content: none !important; } }
+a {
+  color: #004494; }
+  a:hover, a:active, a:focus {
+    color: #404040;
+    text-decoration: underline; }
+  a.smaller {
+    font-size: 0.8em; }
+  @media print {
+    a:after {
+      content: none !important; } }
 
 p a {
   text-decoration: underline; }
@@ -8539,13 +8539,14 @@ Styleguide listing
   float: left; }
 
 .listing__title {
-  color: #004494;
   font-family: Arial, sans-serif;
   font-size: 1em;
   padding: 0;
   display: inline-block;
   line-height: 1.3;
   position: relative; }
+  a .listing__title {
+    color: #004494; }
   .listing__title + * {
     font-size: 0.889em;
     margin-top: 0.7em; }
