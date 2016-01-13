@@ -60,6 +60,21 @@ $spacing-bottom-listing__title: 0.7em;
   }
 }
 
+@mixin _listing_external_link_mixin() {
+  &:after {
+    display: none !important;
+  }
+  .listing__title {
+    @extend .is-external;
+    padding-right: 1.2em;
+
+    &:after {
+      position: absolute;
+      line-height: 1.6;
+    }
+  }
+}
+
 .listing__item-link {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -74,17 +89,13 @@ $spacing-bottom-listing__title: 0.7em;
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    &:after {
-      display: none !important;
-    }
-    .listing__title {
-      @extend .is-external;
-      padding-right: 1.2em;
-
-      &:after {
-        position: absolute;
-        line-height: 1.6;
+    .site-political & {
+      &:not(#{$ec_url_patterns}) {
+        @include _listing_external_link_mixin();
       }
+    }
+    .site-information & {
+      @include _listing_external_link_mixin();
     }
   }
 }

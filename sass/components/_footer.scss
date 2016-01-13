@@ -178,13 +178,24 @@ a.footer__site-switcher {
 }
 
 // External link specific adjustments
+@mixin _footer_external_link_mixin() {
+  &:after {
+    position: absolute;
+    line-height: 2.2;
+  }
+}
 .footer {
   a {
     padding-right: 1.1em !important;
+
     &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-      &:after {
-        position: absolute;
-        line-height: 2.2;
+      .site-political & {
+        &:not(#{$ec_url_patterns}) {
+          @include _footer_external_link_mixin();
+        }
+      }
+      .site-information & {
+        @include _footer_external_link_mixin();
       }
     }
   }

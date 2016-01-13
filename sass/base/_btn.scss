@@ -271,22 +271,32 @@ Styleguide buttons.btn-
 }
 
 // External link specific adjustments
+@mixin _btn_external_link_mixin() {
+  padding-right: 2.1em;
+  &:after {
+    position: absolute;
+    line-height: 1.4 !important;
+  }
+
+  // Reseting for .btn-block
+  &.btn-block {
+    padding-right: 1em;
+
+    &:after {
+      position: static;
+      line-height: inherit;
+    }
+  }
+}
 a.btn {
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    padding-right: 2.1em;
-    &:after {
-      position: absolute;
-      line-height: 1.4 !important;
-    }
-
-    // Reseting for .btn-block
-    &.btn-block {
-      padding-right: 1em;
-
-      &:after {
-        position: static;
-        line-height: inherit;
+    .site-political & {
+      &:not(#{$ec_url_patterns}) {
+        @include _btn_external_link_mixin();
       }
+    }
+    .site-information & {
+      @include _btn_external_link_mixin();
     }
   }
 }

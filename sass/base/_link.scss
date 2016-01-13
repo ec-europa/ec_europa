@@ -5,6 +5,10 @@ Markup: html/link.html
 
 Styleguide text.link
 */
+// Default external link mixin.
+@mixin _external_link_mixin() {
+  @extend .is-external;
+}
 
 a {
   &:hover,
@@ -15,8 +19,16 @@ a {
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    @extend .is-external;
+    .site-political & {
+      &:not(#{$ec_url_patterns}) {
+        @include _external_link_mixin();
+      }
+    }
+    .site-information & {
+      @include _external_link_mixin();
+    }
   }
+
 
   &.smaller {
     font-size: 0.8em;
@@ -45,14 +57,23 @@ p a {
 }
 
 // External link specific adjustments
+@mixin _link_external_link_mixin() {
+  &.btn {
+    padding-right: 2.1em;
+  }
+}
 .page-content {
   ul,
   p {
     a {
       &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-
-        &.btn {
-          padding-right: 2.1em;
+        .site-political & {
+          &:not(#{$ec_url_patterns}) {
+            @include _link_external_link_mixin();
+          }
+        }
+        .site-information & {
+          @include _link_external_link_mixin();
         }
       }
     }
