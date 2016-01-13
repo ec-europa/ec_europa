@@ -989,7 +989,6 @@ function europa_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'site-information';
   }
 
-
   // Add the ie9 only css.
   drupal_add_css(
     path_to_theme() . '/css/ie9.css',
