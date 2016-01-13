@@ -14,9 +14,10 @@ a {
     text-decoration: underline;
   }
 
-  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+  &#{"[" + $external_link_pattern + "]"}:not(.is-internal):not(#{$ec_url_patterns}) {
     @extend .is-external;
   }
+
 
   &.smaller {
     font-size: 0.8em;
@@ -49,7 +50,7 @@ p a {
   ul,
   p {
     a {
-      &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+      &#{"[" + $external_link_pattern + "]"}:not(.is-internal):not(#{$ec_url_patterns}) {
 
         &.btn {
           padding-right: 2.1em;

@@ -73,7 +73,7 @@ Styleguide notification
 .notification {
   a {
     padding-right: 1.1em;
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    &#{"[" + $external_link_pattern + "]"}:not(.is-internal):not(#{$ec_url_patterns}) {
       &:after {
         position: absolute;
         line-height: 2.2;

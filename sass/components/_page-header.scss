@@ -80,7 +80,7 @@ Styleguide page-header
       color:$yellow-light;
     }
 
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title) {
+    &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title):not(#{$ec_url_patterns}) {
       padding-right: 1.1em;
       display: inline-block;
       &:after {

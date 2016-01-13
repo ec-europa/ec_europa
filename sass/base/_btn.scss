@@ -272,7 +272,7 @@ Styleguide buttons.btn-
 
 // External link specific adjustments
 a.btn {
-  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+  &#{"[" + $external_link_pattern + "]"}:not(.is-internal):not(#{$ec_url_patterns}) {
     padding-right: 2.1em;
     &:after {
       position: absolute;

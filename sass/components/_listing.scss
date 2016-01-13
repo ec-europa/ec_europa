@@ -73,7 +73,7 @@ $spacing-bottom-listing__title: 0.7em;
     text-decoration: none;
   }
 
-  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+  &#{"[" + $external_link_pattern + "]"}:not(.is-internal):not(#{$ec_url_patterns}) {
     &:after {
       display: none !important;
     }
@@ -86,6 +86,7 @@ $spacing-bottom-listing__title: 0.7em;
         line-height: 1.6;
       }
     }
+
   }
 }
 
