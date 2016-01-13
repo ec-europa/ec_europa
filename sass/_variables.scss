@@ -73,6 +73,9 @@ $col-10: percentage((10/ $grid-columns));
 $col-11: percentage((11/ $grid-columns));
 $col-12: percentage((12/ $grid-columns));
 
+// Grid sizes without percentages.
+$col-1-no-percentage: (85 / $grid-columns);
+
 // Form control
 $form-control-height:                             2.750em; //44px basing on form control base font size.
 

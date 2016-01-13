@@ -80,6 +80,8 @@ Styleguide file
 
   .file__icon {
     @extend .col-xs-1;
+    @extend .col-md-1;
+    @extend .col-sm-1;
     padding-left: 0;
     // We remove 5px on the left (as the image has some whitespace) as it causes a wrong looking margin. Then we add
     // back the margin on the right, to have more spacing between those fields.
@@ -87,14 +89,20 @@ Styleguide file
     margin-left: -5px;
     height: 2.556em;
     overflow: hidden;
-
-    @media (max-width: $screen-sm-min) {
-      min-width: 3.333em;
-    }
+    text-align: center;
 
     &:before {
       font-size: 2.556em;
     }
+
+    // Make it self scaling.
+    @media (max-width: 650px) {
+      &:before {
+        font-size: 1.556em; // Fallback for <IE10.
+        font-size: #{$col-1-no-percentage}vw!important;
+      }
+    }
+
   }
 
   .file__metadata {
@@ -102,9 +110,9 @@ Styleguide file
     @extend .col-sm-8;
     @extend .col-xs-10;
     padding-left: 0;
-    @media (max-width: $screen-sm-min) {
-      float: none;
-    }
+    //@media (max-width: $screen-sm-min) {
+    //  float: none;
+    //}
   }
 
   .file__btn {
