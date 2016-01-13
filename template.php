@@ -981,6 +981,15 @@ function europa_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
   }
 
+  // Add site information. This is just a temporary solution.
+  if (module_exists('dt_core_pol')) {
+    $variables['classes_array'][] = 'site-political';
+  }
+  elseif (module_exists('dt_core_info')) {
+    $variables['classes_array'][] = 'site-information';
+  }
+
+
   // Add the ie9 only css.
   drupal_add_css(
     path_to_theme() . '/css/ie9.css',

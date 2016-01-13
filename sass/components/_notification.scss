@@ -70,13 +70,25 @@ Styleguide notification
 }
 
 // External link specific adjustments
+@mixin _notification_external_link_mixin() {
+  &:after {
+    position: absolute;
+    line-height: 2.2;
+  }
+}
+
 .notification {
   a {
     padding-right: 1.1em;
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal):not(#{$ec_url_patterns}) {
-      &:after {
-        position: absolute;
-        line-height: 2.2;
+
+    &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+      .site-political & {
+        &:not(#{$ec_url_patterns}) {
+          @include _notification_external_link_mixin();
+        }
+      }
+      .site-information & {
+        @include _notification_external_link_mixin();
       }
     }
   }

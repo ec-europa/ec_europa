@@ -271,22 +271,32 @@ Styleguide buttons.btn-
 }
 
 // External link specific adjustments
-a.btn {
-  &#{"[" + $external_link_pattern + "]"}:not(.is-internal):not(#{$ec_url_patterns}) {
-    padding-right: 2.1em;
+@mixin _btn_external_link_mixin() {
+  padding-right: 2.1em;
+  &:after {
+    position: absolute;
+    line-height: 1.4 !important;
+  }
+
+  // Reseting for .btn-block
+  &.btn-block {
+    padding-right: 1em;
+
     &:after {
-      position: absolute;
-      line-height: 1.4 !important;
+      position: static;
+      line-height: inherit;
     }
-
-    // Reseting for .btn-block
-    &.btn-block {
-      padding-right: 1em;
-
-      &:after {
-        position: static;
-        line-height: inherit;
+  }
+}
+a.btn {
+  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    .site-political & {
+      &:not(#{$ec_url_patterns}) {
+        @include _btn_external_link_mixin();
       }
+    }
+    .site-information & {
+      @include _btn_external_link_mixin();
     }
   }
 }
