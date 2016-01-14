@@ -1115,6 +1115,8 @@ function europa_preprocess_page(&$variables) {
     $variables['footer_column_class'] = 'col-sm-12';
   }
 
+  $variables['page_logo_title'] = t('Home - @sitename', array('@sitename' => variable_get('site_name', 'European Commission')));
+
   $node = &$variables['node'];
 
   if (isset($node)) {
