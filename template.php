@@ -625,7 +625,8 @@ function _europa_breadcrumb_menu(&$variables) {
     $i = 0;
     foreach ($menu_links as $key => $menu_item) {
       if (is_numeric($key)) {
-        if (!($is_front && $menu_item['#href'] != '<front>')) {
+        // We don't want to show the home link in the home page.
+        if (!($front && $menu_item['#href'] == '<front>')) {
           $new_items[] = array(
             'content' => $menu_item['#title'],
             'class' => '',
