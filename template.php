@@ -619,17 +619,20 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
 function _europa_breadcrumb_menu(&$variables) {
   $menu_links = menu_tree('menu-breadcrumb-menu');
   $new_items = array();
+  $front = drupal_is_front_page();
 
   if (!empty($menu_links)) {
     $i = 0;
     foreach ($menu_links as $key => $menu_item) {
       if (is_numeric($key)) {
-        $new_items[] = array(
-          'content' => $menu_item['#title'],
-          'class' => '',
-          'url' => $menu_item['#href'],
-        );
-        $i++;
+        if (!($is_front && $menu_item['#href'] != '<front>')) {
+          $new_items[] = array(
+            'content' => $menu_item['#title'],
+            'class' => '',
+            'url' => $menu_item['#href'],
+          );
+          $i++;
+        }
       }
     }
 
