@@ -627,11 +627,7 @@ function _europa_breadcrumb_menu(&$variables) {
       if (is_numeric($key)) {
         // We don't want to show the home link in the home page.
         if (!($front && $menu_item['#href'] == '<front>')) {
-          $new_items[] = array(
-            'content' => $menu_item['#title'],
-            'class' => '',
-            'url' => $menu_item['#href'],
-          );
+          $new_items[] = _easy_breadcrumb_build_item($menu_item['#title'], array(), $menu_item['#href']);
           $i++;
         }
       }
@@ -641,7 +637,7 @@ function _europa_breadcrumb_menu(&$variables) {
       // The menu is used as the starting point of the breadcrumb.
       $variables['breadcrumb'] = array_merge($new_items, $variables['breadcrumb']);
       // Alter the number of segments in the breadcrumb.
-      $variables['segments_quantity'] = $variables['segments_quantity'] + $i;
+      $variables['segments_quantity'] += $i;
     }
   }
 }
