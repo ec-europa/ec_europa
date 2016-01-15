@@ -140,6 +140,12 @@ $spacing-bottom-listing__title: 0.7em;
   }
 }
 
+a {
+  &.listing__title {
+    color: $brand-primary;
+  }
+}
+
 .listing--no-padding {
   padding-left: 0 !important;
 }

@@ -8600,6 +8600,9 @@ Styleguide listing
     font-size: 0.889em;
     margin-top: 0.7em; }
 
+a.listing__title {
+  color: #004494; }
+
 .listing--no-padding {
   padding-left: 0 !important; }
 
