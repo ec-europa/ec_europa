@@ -97,7 +97,7 @@
 <header class="site-header" role="banner">
   <div class="container-fluid">
     <a href="<?php print $front_page; ?>" class="logo site-header__logo" title="<?php print $page_logo_title; ?>"></a>
-    <?php if($is_front): ?>
+    <?php if($is_front && !empty($site_slogan)): ?>
       <p class="site-slogan"><?php print $site_slogan; ?></p>
     <?php endif; ?>
 
