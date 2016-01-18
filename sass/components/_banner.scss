@@ -25,13 +25,18 @@ Styleguide banner.video
 
 $quote_border_offset: 0.556em;
 
-.banner {
-  margin-top: 1.667em;
-}
-
 .banner--quote {
   border-left: $quote_border_offset solid $yellow-light;
   padding-left: $quote_border_offset;
+  @include make-md-column(8);
+
+  blockquote {
+    font-size: $font-size-little;
+    padding-left: 0;
+    border-left: none;
+    margin-bottom: 0;
+    max-width: none;
+  }
 }
 
 .banner__author {

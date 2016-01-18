@@ -6409,6 +6409,9 @@ Styleguide form.textarea
     margin-left: -100%;
     margin-right: -100%; } }
 
+.section--content-top {
+  padding-bottom: 3.334em; }
+
 .section--row-two .section__item {
   margin-top: 15px; }
   .section--row-two .section__item:nth-child(odd) {
@@ -6505,12 +6508,23 @@ Markup: html/banner-video.html
 
 Styleguide banner.video
 */
-.banner {
-  margin-top: 1.667em; }
-
 .banner--quote {
   border-left: 0.556em solid #ffd617;
-  padding-left: 0.556em; }
+  padding-left: 0.556em;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .banner--quote {
+      float: left;
+      width: 66.6666666667%; } }
+  .banner--quote blockquote {
+    font-size: 0.889em;
+    padding-left: 0;
+    border-left: none;
+    margin-bottom: 0;
+    max-width: none; }
 
 .banner__author {
   font-size: 0.778em;
