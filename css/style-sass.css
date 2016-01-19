@@ -8414,6 +8414,7 @@ Styleguide: siteheader.langselect
   .lang-select-site .lang-select-site__code-text {
     position: relative;
     top: -3px;
+    left: -2px;
     font-size: 0.778em;
     color: #fff; }
   .lang-select-site .lang-select-site__icon {
