@@ -51,7 +51,7 @@
       <div class="row">
         <a id="main-content" tabindex="-1"></a>
         <?php if (isset($left) && !empty($left)): ?>
-          <<?php print $left_wrapper; ?> class="col-lg-3 <?php print $left_classes; ?>">
+          <<?php print $left_wrapper; ?> class="col-md-3 <?php print $left_classes; ?>">
             <?php print $left; ?>
           </<?php print $left_wrapper; ?>>
         <?php endif; ?>

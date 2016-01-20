@@ -1,13 +1,15 @@
+$section-spacing: 1.667em;
+
 .section {
-  padding-bottom: 1.667em;
+  padding-bottom: $section-spacing;
 
   & ~ .section {
-    padding-top: 1.667em;
+    padding-top: $section-spacing;
   }
 }
 
 .section__group {
-  padding: 1.667em 0;
+  padding: $section-spacing 0;
 
   &:first-child {
     padding-top: 0;
@@ -36,7 +38,7 @@
   padding: 0 !important;
 
   & > * {
-    padding: 1.667em 0 !important;
+    padding: $section-spacing 0 !important;
   }
 }
 
@@ -73,7 +75,7 @@
 
 .section__group--bottom-header {
   margin-top: -60px !important;
-  padding: 1.667em 0 0 !important;
+  padding: $section-spacing 0 0 !important;
 }
 
 @include breakpoint(screen-lg-min) {
@@ -88,6 +90,10 @@
   .section--row-two {
     @extend .row;
   }
+}
+
+.section--content-top {
+  padding-bottom: $section-spacing * 2;
 }
 
 .section--row-two {
