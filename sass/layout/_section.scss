@@ -1,6 +1,11 @@
 $section-spacing: 1.667em;
 
 .section {
+  .section--row-two,
+  .section--row-three {
+    @extend .row;
+    padding-bottom: $section-spacing;
+  }
   padding-bottom: $section-spacing;
 
   & ~ .section {
@@ -9,7 +14,7 @@ $section-spacing: 1.667em;
 }
 
 .section__group {
-  padding: $section-spacing 0;
+  padding: 0 0 $section-spacing;
 
   &:first-child {
     padding-top: 0;
@@ -78,20 +83,6 @@ $section-spacing: 1.667em;
   padding: $section-spacing 0 0 !important;
 }
 
-@include breakpoint(screen-lg-min) {
-  .section__group--full-width {
-    margin-left: -100%;
-    margin-right: -100%;
-  }
-}
-
-.section {
-  .section--row-three,
-  .section--row-two {
-    @extend .row;
-  }
-}
-
 .section--content-top {
   padding-bottom: $section-spacing * 2;
 }
@@ -110,6 +101,13 @@ $section-spacing: 1.667em;
   .section__item {
     @extend .col-md-4;
     margin-top: 15px;
+  }
+}
+
+@include breakpoint(screen-lg-min) {
+  .section__group--full-width {
+    margin-left: -100%;
+    margin-right: -100%;
   }
 }
 
