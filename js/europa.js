@@ -146,12 +146,18 @@
     $('button[data-toggle=collapse]').each(function() {
       var dependentId = $(this).attr('data-target');
       var toggler = $(dependentId).hasClass('in') ? hideText : showText;
+      var arrow = $('.icon', $(this));
       var fillMe = $('.toggling-text', $(this));
       fillMe.text(toggler);
 
       $(this).click(function() {
+        var up = 'icon--up';
+        var down = 'icon--down';
+        var add = arrow.hasClass(down) ? up : down;
+        var rem = arrow.hasClass(down) ? down : up;
         toggler = fillMe.text() == hideText ? showText : hideText;
         fillMe.text(toggler);
+        arrow.addClass(add).removeClass(rem);
       });
     });
   };
