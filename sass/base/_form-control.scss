@@ -29,4 +29,8 @@ Styleguide form
     background-color: $form-control-background-color-disabled;
   }
   @extend .hidden-print;
+
+  &.select {
+    border-width: 1px;
+  }
 }

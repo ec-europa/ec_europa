@@ -5640,6 +5640,8 @@ Styleguide buttons.btn-search
   border-color: #fff;
   background: #e2e2e2;
   color: #575757; }
+  .btn.btn-search:hover, .inpage-nav__navbar .btn-search.inpage-nav__toggle:hover {
+    background: #e2e2e2; }
 
 /*
 Button Collapse
@@ -5837,6 +5839,8 @@ Styleguide form
   .form-control.is-disabled, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-disabled {
     color: #b3b4b5;
     background-color: #e2e2e2; }
+  .form-control.select, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+    border-width: 1px; }
 
 /*
 Form Group
