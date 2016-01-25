@@ -151,6 +151,16 @@ $icon-size: 40px;
   }
 }
 
+.icon-social--instagram {
+  &:before {
+    background: url('../images/svg/icons/social/instagram.svg') no-repeat;
+  }
+
+  &:hover:before {
+    background-image: url('../images/svg/icons/social/instagram_hover.svg');
+  }
+}
+
 .no-svg {
   .icon-social--blog {
     &:before {
@@ -269,6 +279,16 @@ $icon-size: 40px;
 
     &:hover:before {
       background-image: url('../images/png/icons/social/youtube_hover.png');
+    }
+  }
+
+  .icon-social--instagram {
+    &:before {
+      background-image: url('../images/png/icons/social/instagram.png');
+    }
+
+    &:hover:before {
+      background-image: url('../images/png/icons/social/instagram_hover.png');
     }
   }
 }

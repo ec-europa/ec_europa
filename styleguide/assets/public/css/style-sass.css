@@ -8081,6 +8081,12 @@ Styleguide icon.social
 .icon-social--youtube:hover:before {
   background-image: url("../images/svg/icons/social/youtube_hover.svg"); }
 
+.icon-social--instagram:before {
+  background: url("../images/svg/icons/social/instagram.svg") no-repeat; }
+
+.icon-social--instagram:hover:before {
+  background-image: url("../images/svg/icons/social/instagram_hover.svg"); }
+
 .no-svg .icon-social--blog:before {
   background-image: url("../images/png/icons/social/blog.png"); }
 
@@ -8152,6 +8158,12 @@ Styleguide icon.social
 
 .no-svg .icon-social--youtube:hover:before {
   background-image: url("../images/png/icons/social/youtube_hover.png"); }
+
+.no-svg .icon-social--instagram:before {
+  background-image: url("../images/png/icons/social/instagram.png"); }
+
+.no-svg .icon-social--instagram:hover:before {
+  background-image: url("../images/png/icons/social/instagram_hover.png"); }
 
 /*
 Inpage navigation
