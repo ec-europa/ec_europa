@@ -617,8 +617,9 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
  * Generate the first breadcrumb items basing on a custom menu.
  */
 function _europa_breadcrumb_menu(&$variables) {
-  $menu_links = menu_tree('menu-breadcrumb-menu');
+  $menu_links = menu_tree('menu-dt-breadcrumb-menu');
   $new_items = array();
+  global $language;
   $front = drupal_is_front_page();
 
   if (!empty($menu_links)) {
@@ -627,7 +628,9 @@ function _europa_breadcrumb_menu(&$variables) {
       if (is_numeric($key)) {
         // We don't want to show the home link in the home page.
         if (!($front && $menu_item['#href'] == '<front>')) {
-          $new_items[] = _easy_breadcrumb_build_item($menu_item['#title'], array(), $menu_item['#href']);
+          $options = array('language' => $language);
+          $title = token_replace($menu_item['#title'], $menu_item, $options);
+          $new_items[] = _easy_breadcrumb_build_item($title, array(), $menu_item['#href']);
           $i++;
         }
       }
