@@ -7,8 +7,7 @@ Markup: html/listing.html
 
 Styleguide listing
 */
-$spacing-top-listing__title: 0.9em;
-$spacing-bottom-listing__title: 0.7em;
+
 
 .listing {
 }
@@ -38,8 +37,7 @@ $spacing-bottom-listing__title: 0.7em;
   border-bottom: 1px solid $grey-light;
   list-style: none;
   list-style-image: none;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: $font-size-mid 0;
   overflow: hidden;
   &:first-child {
     border-top: 1px solid $grey-light;
@@ -76,8 +74,6 @@ $spacing-bottom-listing__title: 0.7em;
 }
 
 .listing__item-link {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
   display: block;
   overflow: hidden;
   color: $grey-base;
@@ -136,7 +132,6 @@ $spacing-bottom-listing__title: 0.7em;
 
   & + * {
     font-size: $font-size-little;
-    margin-top: $spacing-bottom-listing__title;
   }
 }
 
@@ -147,7 +142,9 @@ a {
 }
 
 .listing--no-padding {
-  padding-left: 0 !important;
+  ul {
+    padding-left: 0 !important;
+  }
 }
 
 .listing--no-border {
@@ -157,25 +154,13 @@ a {
 }
 
 .listing--short-spaced {
-  .listing__item-link {
-    padding-top: 0.5em !important;
-    padding-bottom: 0 !important;
-  }
-
   .listing__item {
-    &:first-child {
-      .listing__item-link {
-        padding-top: 0 !important;
-      }
-    }
+    padding: 0.5em 0 !important;
   }
 }
 
 // Modifier to add line on the left
 .listing--line-left {
-  .listing__title {
-    padding: 0 !important;
-  }
 
   // Teaser listing
   .listing--teaser {
@@ -183,24 +168,10 @@ a {
   }
 
   .listing__item {
-    border-top: none;
-    border-bottom: none;
+    border: none;
     border-left: 5px solid $blue-dark;
-    margin-top: 0.85em;
-    margin-bottom: 1em;
-    padding: 0.4em 0 0.4em 0.7em;
-
-    .listing__item-link {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-}
-
-.listing--no-link {
-  .listing__item {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding: $font-size-mid/2 0 $font-size-mid/2 $font-size-mid;
+    margin: $font-size-mid/2 0;
   }
 }
 
@@ -213,9 +184,6 @@ a {
 }
 
 .listing--title-large {
-  .listing__item {
-    margin-bottom: 15px;
-  }
 
   .listing__title {
     font-size: $font-size-h2;
@@ -265,15 +233,14 @@ a {
 }
 
 .listing--cta {
-  .listing__item-link {
-    padding-right: 1.667em;
-    padding-left: 1.667em;
-  }
+
   .listing__item {
     border: none;
+    background-color: $brand-primary;
+    padding: $font-size-mid $font-size-huge 0;
+
     .listing__title,
     a {
-      background-color: $brand-primary;
       color: #ffffff;
     }
 
@@ -284,10 +251,16 @@ a {
         color: #ffffff;
       }
     }
+
+    &:last-child {
+      padding-bottom: $font-size-mid;
+    }
   }
+
   .listing__title {
     position: relative;
     padding-right: 1.3em;
+
     &:after {
       @extend .listing__title--arrow;
     }
@@ -372,9 +345,13 @@ Styleguide listing.title
 */
 .listing--title,
 ul.listing--title {
-  padding: 0;
 
   .listing__item {
+
+    .listing__title {
+      margin: 0;
+    }
+
     &:hover,
     &:active,
     &:focus {
@@ -394,8 +371,6 @@ ul.listing--title {
   a.listing__title,
   a .listing__title {
     display: block;
-    padding-top: $spacing-top-listing__title;
-    padding-bottom: $spacing-bottom-listing__title;
     padding-right: 2em;
   }
 
@@ -415,7 +390,7 @@ Listing components
 
 Markup: html/listing--teaser.html
 
-.listing--cta  - Listing CTA
+.listing--cta - Listing CTA
 .listing--no-padding - Listing no padding
 .listing--title-large - Listing title large
 .listing--title-medium - Listing title medium
@@ -431,18 +406,8 @@ Styleguide listing.teaser
   }
 }
 
-.listing--teaser,
-ul.listing--teaser {
-  .listing__item-link {
-    padding-top: 0.85em;
-    padding-bottom: 1em;
-  }
-}
-
 /*
-Listing layouts
-
-Listing components
+Listing column left
 
 Markup: html/listing--column-left.html
 

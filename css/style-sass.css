@@ -8563,8 +8563,7 @@ Styleguide listing
   border-bottom: 1px solid #e2e2e2;
   list-style: none;
   list-style-image: none;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 1.222em 0;
   overflow: hidden; }
   .listing__item:first-child {
     border-top: 1px solid #e2e2e2; }
@@ -8578,8 +8577,6 @@ Styleguide listing
     margin-bottom: 0; }
 
 .listing__item-link {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
   display: block;
   overflow: hidden;
   color: #404040; }
@@ -8625,53 +8622,33 @@ Styleguide listing
   a .listing__title {
     color: #004494; }
   .listing__title + * {
-    font-size: 0.889em;
-    margin-top: 0.7em; }
+    font-size: 0.889em; }
 
 a.listing__title {
   color: #004494; }
 
-.listing--no-padding {
+.listing--no-padding ul {
   padding-left: 0 !important; }
 
 .listing--no-border .listing__item {
   border: none !important; }
 
-.listing--short-spaced .listing__item-link {
-  padding-top: 0.5em !important;
-  padding-bottom: 0 !important; }
-
-.listing--short-spaced .listing__item:first-child .listing__item-link {
-  padding-top: 0 !important; }
-
-.listing--line-left .listing__title {
-  padding: 0 !important; }
+.listing--short-spaced .listing__item {
+  padding: 0.5em 0 !important; }
 
 .listing--line-left .listing--teaser {
   padding-left: 0; }
 
 .listing--line-left .listing__item {
-  border-top: none;
-  border-bottom: none;
+  border: none;
   border-left: 5px solid #004494;
-  margin-top: 0.85em;
-  margin-bottom: 1em;
-  padding: 0.4em 0 0.4em 0.7em; }
-  .listing--line-left .listing__item .listing__item-link {
-    padding-top: 0;
-    padding-bottom: 0; }
-
-.listing--no-link .listing__item {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em; }
+  padding: 0.611em 0 0.611em 1.222em;
+  margin: 0.611em 0; }
 
 .listing--title-large .listing__title,
 .listing--title-medium .listing__title {
   margin-top: 0.2em;
   margin-bottom: 0.4em; }
-
-.listing--title-large .listing__item {
-  margin-bottom: 15px; }
 
 .listing--title-large .listing__title {
   font-size: 1.667em; }
@@ -8701,18 +8678,17 @@ a.listing__title {
     .listing--nostripe .listing__item:last-child .listing__item-link {
       padding-bottom: 0; }
 
-.listing--cta .listing__item-link {
-  padding-right: 1.667em;
-  padding-left: 1.667em; }
-
 .listing--cta .listing__item {
-  border: none; }
+  border: none;
+  background-color: #004494;
+  padding: 1.222em 1.667em 0; }
   .listing--cta .listing__item .listing__title,
   .listing--cta .listing__item a {
-    background-color: #004494;
     color: #ffffff; }
   .listing--cta .listing__item:hover .listing__title, .listing--cta .listing__item:active .listing__title, .listing--cta .listing__item:focus .listing__title {
     color: #ffffff; }
+  .listing--cta .listing__item:last-child {
+    padding-bottom: 1.222em; }
 
 .listing--cta .listing__title {
   position: relative;
@@ -8770,32 +8746,34 @@ Markup: html/listing--title.html
 
 Styleguide listing.title
 */
-.listing--title,
-ul.listing--title {
-  padding: 0; }
-  .listing--title .listing__item:hover a .listing__title, .listing--title .listing__item:active a .listing__title, .listing--title .listing__item:focus a .listing__title,
-  ul.listing--title .listing__item:hover a .listing__title,
-  ul.listing--title .listing__item:active a .listing__title,
-  ul.listing--title .listing__item:focus a .listing__title {
-    text-decoration: none; }
-  .listing--title .listing__item-link,
-  .listing--title .listing__title,
-  ul.listing--title .listing__item-link,
-  ul.listing--title .listing__title {
-    padding: 0;
-    margin: 0;
-    display: block; }
-  .listing--title a.listing__title,
-  .listing--title a .listing__title,
-  ul.listing--title a.listing__title,
-  ul.listing--title a .listing__title {
-    display: block;
-    padding-top: 0.9em;
-    padding-bottom: 0.7em;
-    padding-right: 2em; }
-  .listing--title a.listing__title:after,
-  ul.listing--title a.listing__title:after {
-    line-height: 1.6; }
+.listing--title .listing__item .listing__title,
+ul.listing--title .listing__item .listing__title {
+  margin: 0; }
+
+.listing--title .listing__item:hover a .listing__title, .listing--title .listing__item:active a .listing__title, .listing--title .listing__item:focus a .listing__title,
+ul.listing--title .listing__item:hover a .listing__title,
+ul.listing--title .listing__item:active a .listing__title,
+ul.listing--title .listing__item:focus a .listing__title {
+  text-decoration: none; }
+
+.listing--title .listing__item-link,
+.listing--title .listing__title,
+ul.listing--title .listing__item-link,
+ul.listing--title .listing__title {
+  padding: 0;
+  margin: 0;
+  display: block; }
+
+.listing--title a.listing__title,
+.listing--title a .listing__title,
+ul.listing--title a.listing__title,
+ul.listing--title a .listing__title {
+  display: block;
+  padding-right: 2em; }
+
+.listing--title a.listing__title:after,
+ul.listing--title a.listing__title:after {
+  line-height: 1.6; }
 
 /*
 Listing teaser
@@ -8804,7 +8782,7 @@ Listing components
 
 Markup: html/listing--teaser.html
 
-.listing--cta  - Listing CTA
+.listing--cta - Listing CTA
 .listing--no-padding - Listing no padding
 .listing--title-large - Listing title large
 .listing--title-medium - Listing title medium
@@ -8816,15 +8794,8 @@ Styleguide listing.teaser
 .listing--priorities .meta {
   display: none; }
 
-.listing--teaser .listing__item-link,
-ul.listing--teaser .listing__item-link {
-  padding-top: 0.85em;
-  padding-bottom: 1em; }
-
 /*
-Listing layouts
-
-Listing components
+Listing column left
 
 Markup: html/listing--column-left.html
 
