@@ -6907,7 +6907,7 @@ Styleguide date-block
   width: 5.5em;
   margin-right: 0.75em;
   min-width: 5.556em;
-  padding: 0.85em 0em 0.4em 0em;
+  padding: 0.7em;
   text-align: center;
   position: relative;
   overflow: hidden; }
@@ -8893,7 +8893,7 @@ Styleguide listing.agenda
   color: #404040; }
 
 .listing--agenda .listing__author {
-  font-size: 0.889em; }
+  font-size: 0.833em; }
 
 .logo {
   display: block;
