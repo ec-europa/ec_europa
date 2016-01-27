@@ -300,7 +300,7 @@ a {
   font-weight: $font-weight-bold;
   display: block;
   text-transform: uppercase;
-  font-size: $font-size-little;
+  font-size: $font-size-tiny;
 
   &:after {
     @extend .icon--after;
