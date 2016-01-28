@@ -8457,7 +8457,6 @@ Page specific language selection.
 Markup: html/lang-select-page.html
 
 .lang-select-page               - Default, background is light
-.lang-select-page--dark         - Background is dark blue or a picture
 .lang-select-page--transparent  - Transparent background
 .lang-select-page--dropdown     - When JS converts the ul to select
 
@@ -8468,8 +8467,6 @@ Styleguide: langselect
   border-bottom: 1px solid #b3b4b5;
   font-size: 0.778em;
   width: 100%; }
-  .front .lang-select-page {
-    display: none; }
 
 .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn {
   float: left;
@@ -8498,9 +8495,6 @@ ul.lang-select-page__list {
       font-weight: bold;
       color: #000; }
 
-.lang-select-page--dark {
-  border: none; }
-
 .lang-select-page--transparent {
   background: transparent;
   border-bottom: 1px solid #fff;
@@ -8522,6 +8516,8 @@ ul.lang-select-page__list {
 @-moz-document url-prefix() {
   .lang-select-page--transparent select.lang-select-page__list {
     height: 3.4em; } }
+  .lang-select-page--transparent .lang-select-page__option.is-selected, .lang-select-page--transparent .lang-select-page__option.is-selected a {
+    color: #000; }
   .lang-select-page--transparent .lang-select-page__option a {
     color: #fff; }
 
@@ -8541,11 +8537,16 @@ select.lang-select-page__list {
 .region-content .page-header ul.lang-select-page__list {
   max-width: inherit; }
 
+.front .lang-select-page {
+  display: none; }
+
 #kssref-langselect .kss-modifier__wrapper {
   overflow: hidden; }
 
 #kssref-langselect .kss-modifier__example {
-  min-height: 1; }
+  height: auto;
+  overflow: hidden;
+  padding: 2em; }
 
 #kssref-langselect .kss-modifier__name,
 #kssref-langselect .kss-markup.kss-style,

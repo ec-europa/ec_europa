@@ -6,7 +6,6 @@ Page specific language selection.
 Markup: html/lang-select-page.html
 
 .lang-select-page               - Default, background is light
-.lang-select-page--dark         - Background is dark blue or a picture
 .lang-select-page--transparent  - Transparent background
 .lang-select-page--dropdown     - When JS converts the ul to select
 
@@ -20,10 +19,6 @@ Styleguide: langselect
   border-bottom: 1px solid $grey;
   font-size: $font-size-xsmall;
   width:100%;
-
-  .front & {
-    display: none;
-  }
 }
 
 .icon.lang-select-page__icon {
@@ -66,10 +61,6 @@ ul.lang-select-page__list {
   }
 }
 
-.lang-select-page--dark {
-  border: none;
-}
-
 .lang-select-page--transparent {
   background: transparent;
   border-bottom: 1px solid #fff;
@@ -108,7 +99,12 @@ ul.lang-select-page__list {
   }
 
   .lang-select-page__option {
-    a { color: #fff; }
+    &.is-selected, &.is-selected a {
+      color: #000;
+    }
+    a {
+      color: #fff;
+    }
   }
 }
 
@@ -130,21 +126,30 @@ select.lang-select-page__list {
   cursor: pointer;
 }
 
-// Drupal-specific hack after having the header in the content area.
-// Change comes from dynamic header image now being DS.
+// Drupal specifics
+
+// Dynamic header image now being DS.
 .region-content .page-header ul.lang-select-page__list {
   max-width: inherit;
 }
 
-// Styleguide
+// Front page should never have secondary language switcher.
+.lang-select-page {
+  .front & {
+    display: none;
+  }
+}
 
+// Styleguide
 #kssref-langselect {
   .kss-modifier__wrapper {
     overflow: hidden;
   }
 
   .kss-modifier__example {
-    min-height: 1;
+    height: auto;
+    overflow: hidden;
+    padding: 2em;
   }
 
   .kss-modifier__name,
