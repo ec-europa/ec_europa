@@ -1011,19 +1011,9 @@ function europa_preprocess_field(&$variables) {
     if ($allow_attribute) {
       // The default language code.
       $content_langcode = $GLOBALS['language_content']->language;
-      // Only if it is not set, or different from the $langcode we display the
-      // extra attribute.
-      if (!isset($variables['element']['#language']) || $variables['element']['#language'] == LANGUAGE_NONE) {
-        $field_language = $content_langcode;
-      }
-      elseif ($variables['element']['#language'] <> $content_langcode) {
-        $field_language = $variables['element']['#language'];
-      }
-      else {
-        $field_language = $content_langcode;
-      }
-      if (isset($field_language)) {
-        $variables['attributes_array']['lang'] = $field_language;
+      // When the language is different from content.
+      if (isset($variables['element']['#language']) && $variables['element']['#language'] <> LANGUAGE_NONE && $variables['element']['#language'] <> $content_langcode) {
+        $variables['attributes_array']['lang'] = $variables['element']['#language'];
       }
     }
   }
