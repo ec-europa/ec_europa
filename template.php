@@ -514,6 +514,7 @@ function _europa_field_component_listing($variables, $config) {
 function europa_field($variables) {
   $element = $variables['element'];
   $field_type = isset($element['#field_type']) ? $element['#field_type'] : NULL;
+
   switch ($field_type) {
     case 'entityreference':
       if ($element['#formatter'] == 'entityreference_entity_view') {
@@ -597,7 +598,7 @@ function europa_field($variables) {
     $output .= '</div>';
 
     // Render the top-level DIV.
-    $output = '<div class="field field--' . strtr($variables['element']['#field_name'], '_', '-') . ' ' . implode(' ', $classes) . '">' . $output . '</div>';
+    $output = '<div ' . $variables['attributes'] . ' class="field field--' . strtr($variables['element']['#field_name'], '_', '-') . ' ' . implode(' ', $classes) . '">' . $output . '</div>';
   }
 
   return $output;
@@ -996,6 +997,38 @@ function europa_preprocess_field(&$variables) {
       $variables['element']['after'] = l(t('Other social networks'), variable_get('dt_core_other_social_networks_link', 'http://europa.eu/contact/social-networks/index_en.htm'));
       break;
   }
+
+  if ($variables['element']['#field_type'] <> 'ds') {
+    // Get more field information.
+    $field = field_info_field($variables['element']['#field_name']);
+    // Inintialize parameter.
+    $allow_attribute = TRUE;
+    // If it is not a tranlateable entityreference field we should continue.
+    if ($field['type'] == "entityreference" && $field['translatable'] == 0) {
+      $allow_attribute = FALSE;
+    }
+
+    if ($allow_attribute) {
+      // The default language code.
+      $content_langcode = $GLOBALS['language_content']->language;
+      // Only if it is not set, or different from the $langcode we display the extra
+      // attribute.
+      if (!isset($variables['element']['#language']) || $variables['element']['#language'] == LANGUAGE_NONE) {
+        $field_language = $content_langcode;
+      }
+      elseif ($variables['element']['#language'] <> $content_langcode) {
+        $field_language = $variables['element']['#language'];
+      }
+      else {
+        $field_language = $content_langcode;
+      }
+      if (isset($field_language)) {
+        $variables['attributes_array']['lang'] = $field_language;
+      }
+    }
+  }
+  // Set the attributes to the element.
+  $variables['attributes'] = empty($variables['attributes_array']) ? '' : drupal_attributes($variables['attributes_array']);
 }
 
 /**
@@ -1091,6 +1124,9 @@ function europa_preprocess_node(&$variables) {
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
   }
+
+  // Add the language attribute.
+  $variables['attributes_array']['lang'] = entity_translation_get_existing_language('node', $variables['node']);
 }
 
 /**
