@@ -30,7 +30,7 @@ Styleguide: langselect
   @extend .hidden-print;
 
   float:left;
-  margin: 0 0.7em 0 0;
+  margin: 0;
   font-size: 2em;
   padding: 0;
 
@@ -134,4 +134,10 @@ select.lang-select-page__list {
 // Change comes from dynamic header image now being DS.
 .region-content .page-header ul.lang-select-page__list {
   max-width: inherit;
+}
+
+// Styleguide
+
+#kssref-langselect .kss-modifier__wrapper {
+
 }

@@ -32,7 +32,7 @@ module.exports = function (grunt) {
     },
     shell: {
       kss: {
-        command: './node_modules/.bin/kss-node sass styleguide/assets --template styleguide/template/custom --css public/css/style-sass.css'
+        command: './node_modules/.bin/kss-node sass styleguide/assets --template styleguide/template/custom --css public/css/style-sass.css --helpers styleguide/template/helpers'
       }
     },
     copy: {
