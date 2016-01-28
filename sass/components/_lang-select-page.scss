@@ -138,6 +138,22 @@ select.lang-select-page__list {
 
 // Styleguide
 
-#kssref-langselect .kss-modifier__wrapper {
+#kssref-langselect {
+  .kss-modifier__wrapper {
+    overflow: hidden;
+  }
 
+  .kss-modifier__example {
+    min-height: 1;
+  }
+
+  .kss-modifier__name,
+  .kss-markup.kss-style,
+  .kss-modifier__description {
+    clear: both;
+  }
+
+  .lang-select-page--transparent {
+    background: $blue-dark;
+  }
 }
