@@ -8456,9 +8456,7 @@ Page specific language selection.
 
 Markup: html/lang-select-page.html
 
-.lang-select-page               - Default, background is light
 .lang-select-page--transparent  - Transparent background
-.lang-select-page--dropdown     - When JS converts the ul to select
 
 Styleguide: langselect
 */
@@ -8495,6 +8493,13 @@ ul.lang-select-page__list {
       font-weight: bold;
       color: #000; }
 
+select.lang-select-page__list {
+  background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
+  border-radius: 0;
+  padding-left: 0.5em;
+  width: 10em;
+  cursor: pointer; }
+
 .lang-select-page--transparent {
   background: transparent;
   border-bottom: 1px solid #fff;
@@ -8526,13 +8531,6 @@ ul.lang-select-page__list {
     display: inline-block; }
   .lang-select-page__unavailable {
     margin-right: 3em; } }
-
-select.lang-select-page__list {
-  background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
-  border-radius: 0;
-  padding-left: 0.5em;
-  width: 10em;
-  cursor: pointer; }
 
 .region-content .page-header ul.lang-select-page__list {
   max-width: inherit; }
