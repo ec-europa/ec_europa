@@ -8624,7 +8624,7 @@ Styleguide listing.g
   padding-left: 0; }
 
 .listing--line-left .listing__item {
-  border: none;
+  border-top: none !important;
   border-left: 5px solid #004494;
   padding: 0.611em 0 0.611em 1.222em;
   margin: 0.611em 0; }
