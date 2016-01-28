@@ -8746,34 +8746,33 @@ Markup: html/listing--title.html
 
 Styleguide listing.title
 */
-.listing--title .listing__item .listing__title,
-ul.listing--title .listing__item .listing__title {
-  margin: 0; }
-
-.listing--title .listing__item:hover a .listing__title, .listing--title .listing__item:active a .listing__title, .listing--title .listing__item:focus a .listing__title,
-ul.listing--title .listing__item:hover a .listing__title,
-ul.listing--title .listing__item:active a .listing__title,
-ul.listing--title .listing__item:focus a .listing__title {
-  text-decoration: none; }
-
-.listing--title .listing__item-link,
-.listing--title .listing__title,
-ul.listing--title .listing__item-link,
-ul.listing--title .listing__title {
-  padding: 0;
-  margin: 0;
-  display: block; }
-
-.listing--title a.listing__title,
-.listing--title a .listing__title,
-ul.listing--title a.listing__title,
-ul.listing--title a .listing__title {
-  display: block;
-  padding-right: 2em; }
-
-.listing--title a.listing__title:after,
-ul.listing--title a.listing__title:after {
-  line-height: 1.6; }
+.listing--title,
+ul.listing--title {
+  padding: 0; }
+  .listing--title .listing__item .listing__title,
+  ul.listing--title .listing__item .listing__title {
+    margin: 0; }
+  .listing--title .listing__item:hover a .listing__title, .listing--title .listing__item:active a .listing__title, .listing--title .listing__item:focus a .listing__title,
+  ul.listing--title .listing__item:hover a .listing__title,
+  ul.listing--title .listing__item:active a .listing__title,
+  ul.listing--title .listing__item:focus a .listing__title {
+    text-decoration: none; }
+  .listing--title .listing__item-link,
+  .listing--title .listing__title,
+  ul.listing--title .listing__item-link,
+  ul.listing--title .listing__title {
+    padding: 0;
+    margin: 0;
+    display: block; }
+  .listing--title a.listing__title,
+  .listing--title a .listing__title,
+  ul.listing--title a.listing__title,
+  ul.listing--title a .listing__title {
+    display: block;
+    padding-right: 2em; }
+  .listing--title a.listing__title:after,
+  ul.listing--title a.listing__title:after {
+    line-height: 1.6; }
 
 /*
 Listing teaser
