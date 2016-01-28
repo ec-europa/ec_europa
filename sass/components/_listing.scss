@@ -1,168 +1,141 @@
+// SUMMARY (Components, elments, modifiers)
+// .listing component
+//   Elements:
+//     .listing__wrapper
+//      Element modifiers:
+//       .listing__wrapper--maxwidth
+//       .listing__wrapper--two-columns
+//       .listing__wrapper--three-columns
+//       .listing__wrapper--row-two
+//       .listing__wrapper--row-three
+//
+//     .listing__title
+//      Element modifiers: .listing__title--arrow
+//
+//     .listing__item
+//     .listing__column-main
+//      Element modifiers:
+//       .listing__column-main--sidebar-next
+//
+//     .listing__column-second
+//      Element modifiers:
+//       .listing__column-second--no-link
+//
+//     .listing__item-link
+//     .listing__date
+//
+//
+//   Component modifiers:
+//     .listing--short-spaced
+//     .listing--line-left
+//     .listing--title
+//     .listing--title-large
+//     .listing--title-medium
+//     .listing--person
+//     .listing--nostripe
+//     .listing--cta
+//     .listing--no-border
+//     .listing--no-padding
+//     .listing--agenda
+//     .listing--column-left
+//
+
 /*
 Listing
 
-Listing components
+Component used to render list of entities, usually the landing page of a class.
+It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.
 
 Markup: html/listing.html
 
 Styleguide listing
 */
 
+/*
+Listing column left
+
+This is actually a modifier that applies changes to the listing__item element
+
+Markup: html/listing--column-left.html
+
+Styleguide listing.a
+*/
+
+
+/*
+Listing two columns
+
+Markup: html/listing__wrapper--two-columns.html
+
+.listing__wrapper--two-columns - Listing with two columns
+
+Styleguide listing.c
+*/
+
+/*
+Listing three columns
+
+Markup: html/listing__wrapper--three-columns.html
+
+.listing__wrapper--three-columns - Listing with three colums
+
+Styleguide listing.d
+*/
+
+/*
+Simple listing (title + text) modifiers
+
+Markup: html/listing--teaser.html
+
+.listing__wrapper--maxwidth - Listing with a maxwidth
+.listing--cta - Listing CTA
+.listing--no-padding - Listing no padding
+.listing--short-spaced - Listing short spaced
+.listing--line-left - Listing line left
+.listing--no-border - Listing with no border
+.listing--nostripe - Listing with no stripe
+
+Styleguide listing.e
+*/
+
+/*
+Listing title
+
+Listing title is the component modifier used to style a list of titles.
+
+Markup: html/listing--title.html
+
+.listing--title-large - Listing title large
+.listing--title-medium - Listing title medium
+
+Styleguide listing.f
+*/
+
+/*
+Listing Agenda
+
+Listing for event like entities.
+
+Markup: html/listing--agenda.html
+
+Styleguide listing.g
+*/
+
+// Fixes for the styleguide.
+.kss-description > p {
+  max-width: none;
+}
+
+#kssref-listing section[id^="kssref-listing-"] .kss-modifier__example:first-child {
+  display: none;
+}
 
 .listing {
 }
 
-.listing__date {
-  float: left;
-}
-.listing__column-main {
-  .listing__with {
-    margin-top: 0px;
-  }
-}
-
-.listing__wrapper {
-  margin-bottom: 1.667em;
-}
-
-.listing__wrapper--maxwidth {
-  @extend .row;
-
-  .listing {
-    @extend .col-md-8;
-  }
-}
-
-.listing__item {
-  border-bottom: 1px solid $grey-light;
-  list-style: none;
-  list-style-image: none;
-  padding: $font-size-mid 0;
-  overflow: hidden;
-  &:first-child {
-    border-top: 1px solid $grey-light;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    a .listing__title,
-    a.listing__title {
-      text-decoration: underline;
-      color: $grey-base;
-    }
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-}
-
-@mixin _listing_external_link_mixin() {
-  &:after {
-    display: none !important;
-  }
-  .listing__title {
-    @extend .is-external;
-    padding-right: 1.2em;
-
-    &:after {
-      position: absolute;
-      line-height: 1.6;
-    }
-  }
-}
-
-.listing__item-link {
-  display: block;
-  overflow: hidden;
-  color: $grey-base;
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-  }
-
-  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    .site-political & {
-      &:not(#{$ec_url_patterns}) {
-        @include _listing_external_link_mixin();
-      }
-    }
-    .site-information & {
-      @include _listing_external_link_mixin();
-    }
-  }
-}
-
-.listing__column-second {
-  width: 100%;
-  margin: 0.2em 0 0.8em 0;
-}
-
-.listing__column-second--no-link {
-  padding-bottom: 0.85em;
-  margin: 0;
-
-  .btn {
-    margin-bottom: 0;
-  }
-}
-
-.listing__column-main {
-  width: 100%;
-  padding-left: 0;
-  float: left;
-}
-
-
-.listing__title {
-  font-family: $font-family-sans-serif;
-  font-size: 1em;
-  padding: 0;
-  display: inline-block;
-  line-height: 1.3;
-  position: relative;
-  @extend .h3;
-
-  a & {
-    color: $brand-primary;
-  }
-
-  & + * {
-    font-size: $font-size-little;
-  }
-}
-
-a {
-  &.listing__title {
-    color: $brand-primary;
-  }
-}
-
-.listing--no-padding {
-  ul {
-    padding-left: 0 !important;
-  }
-}
-
-.listing--no-border {
-  .listing__item {
-    border: none !important;
-  }
-}
-
-.listing--short-spaced {
-  .listing__item {
-    padding: 0.5em 0 !important;
-  }
-}
-
-// Modifier to add line on the left
+// Modifier to add line on the left.
 .listing--line-left {
 
-  // Teaser listing
   .listing--teaser {
     padding-left: 0;
   }
@@ -175,174 +148,14 @@ a {
   }
 }
 
-.listing--title-large,
-.listing--title-medium {
-  .listing__title {
-    margin-top: 0.2em;
-    margin-bottom: 0.4em;
+// .listing--priorities modifier.
+.listing--priorities {
+  .meta {
+    display: none;
   }
 }
 
-.listing--title-large {
-
-  .listing__title {
-    font-size: $font-size-h2;
-  }
-}
-
-.listing--title-medium {
-  .listing__title {
-    font-size: $font-size-h3;
-  }
-}
-
-.listing--person {
-  .listing__item-link {
-    padding-bottom: 1em;
-    padding-top: 1em;
-  }
-  .listing__title + * {
-    line-height: 1.3;
-    margin-top: 0;
-  }
-  .listing__item:first-child {
-    border-top: none;
-  }
-}
-
-.listing--nostripe {
-  padding: 30px;
-
-  .listing__item {
-    border: none;
-
-    &:first-child {
-      border: none;
-
-      .listing__item-link {
-        padding-top: 0;
-      }
-    }
-
-    &:last-child {
-      .listing__item-link {
-        padding-bottom: 0;
-      }
-    }
-  }
-}
-
-.listing--cta {
-
-  .listing__item {
-    border: none;
-    background-color: $brand-primary;
-    padding: $font-size-mid $font-size-huge 0;
-
-    .listing__title,
-    a {
-      color: #ffffff;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      .listing__title {
-        color: #ffffff;
-      }
-    }
-
-    &:last-child {
-      padding-bottom: $font-size-mid;
-    }
-  }
-
-  .listing__title {
-    position: relative;
-    padding-right: 1.3em;
-
-    &:after {
-      @extend .listing__title--arrow;
-    }
-  }
-}
-
-.listing__read-more {
-  margin-top: 0.5em;
-  text-align: right;
-  font-weight: $font-weight-bold;
-  display: block;
-  text-transform: uppercase;
-  font-size: $font-size-tiny;
-
-  &:after {
-    @extend .icon--after;
-    @extend .icon--right;
-    font-size: $font-size-xsmall;
-  }
-
-  & + .free-text {
-    margin-top: 1.5em;
-  }
-}
-
-.listing__title--arrow {
-  &:after {
-    margin-left: 10px;
-    margin-top: 2px;
-    font-size: 1.2em;
-    position: absolute;
-    @extend .icon--after;
-    @extend .icon--right;
-  }
-}
-
-@include breakpoint(screen-xs-min) {
-  .listing__column-second {
-    float: right;
-    width: 25%;
-    padding-left: 15px;
-    margin: 0;
-
-    & + .listing__column-main {
-      width: 75%;
-    }
-  }
-
-  .listing__column-second--no-link {
-    width: 100%;
-    padding-left: 0;
-  }
-}
-
-@include breakpoint(screen-msm-min) {
-  .listing__column-main--sidebar-next {
-    width: 66.6%;
-  }
-
-  .listing__column-second--no-link {
-    float: right;
-    width: 33.3%;
-    padding-left: 15px;
-    padding-top: 0.85em;
-
-    .btn {
-      margin-top: 1.667em;
-    }
-  }
-}
-
-/*
-Listing title
-
-Listing components
-
-Markup: html/listing--title.html
-
-.listing--line-left - Listing line left
-
-Styleguide listing.title
-*/
+// .listing--title modifier-
 .listing--title,
 ul.listing--title {
   padding: 0;
@@ -383,37 +196,392 @@ ul.listing--title {
     }
   }
 }
+.listing--title {
+  .listing__title {
 
-/*
-Listing teaser
-
-Listing components
-
-Markup: html/listing--teaser.html
-
-.listing--cta - Listing CTA
-.listing--no-padding - Listing no padding
-.listing--title-large - Listing title large
-.listing--title-medium - Listing title medium
-.listing--short-spaced - Listing short spaced
-.listing--line-left - Listing line left
-
-Styleguide listing.teaser
-*/
-
-.listing--priorities {
-  .meta {
-    display: none;
+    &:hover {
+      text-decoration: underline !important;
+    }
   }
 }
 
-/*
-Listing column left
+// .listing--title-large modifier.
+.listing--title-large,
+.listing--title-medium {
+  .listing__title {
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+  }
+}
 
-Markup: html/listing--column-left.html
+.listing--title-large {
 
-Styleguide listing.column-left
-*/
+  .listing__title {
+    font-size: $font-size-h2;
+  }
+}
+
+// .listing--title-medium modifier.
+.listing--title-medium {
+  .listing__title {
+    font-size: $font-size-h3;
+  }
+}
+
+
+// .listing--agenda modifier.
+.listing--agenda {
+
+  p {
+    margin: 0;
+  }
+
+  .listing__item {
+    padding-top: 0.85em;
+    padding-bottom: 1em;
+  }
+
+  .meta {
+    margin-bottom: 0;
+  }
+
+  .listing__item-link {
+    padding: 0;
+  }
+
+  h3 {
+    &.listing__title {
+      font-size: $font-size-medium;
+      color: $grey-base;
+    }
+  }
+
+  .listing__author {
+    font-size: $font-size-tiny;
+  }
+}
+
+// .listing--person modifier.
+.listing--person {
+  .listing__item-link {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+  .listing__title + * {
+    line-height: 1.3;
+    margin-top: 0;
+  }
+  .listing__item:first-child {
+    border-top: none;
+  }
+}
+
+// .listing--nostripe modifier.
+.listing--nostripe {
+  padding: 30px;
+
+  .listing__item {
+    border: none;
+
+    &:first-child {
+      border: none;
+
+      .listing__item-link {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      .listing__item-link {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+// .listing--cta modifier.
+.listing--cta {
+
+  .listing__item {
+    border: none;
+    background-color: $brand-primary;
+    padding: $font-size-mid $font-size-huge 0;
+
+    .listing__title,
+    a {
+      color: #ffffff;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      .listing__title {
+        color: #ffffff;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: $font-size-mid;
+    }
+  }
+
+  .listing__title {
+    position: relative;
+    padding-right: 1.3em;
+
+    &:after {
+      @extend .listing__title--arrow;
+    }
+  }
+}
+
+// .listing--no-padding modifier.
+.listing--no-padding {
+  ul {
+    padding-left: 0 !important;
+  }
+}
+
+// .listing--no-border modifier.
+.listing--no-border {
+  .listing__item {
+    border: none !important;
+  }
+}
+
+// .listing--short-spaced modifier.
+.listing--short-spaced {
+  .listing__item {
+    padding: 0.5em 0 !important;
+  }
+}
+
+a {
+  &.listing__title {
+    color: $brand-primary;
+  }
+}
+
+
+// .listing__date element.
+.listing__date {
+  float: left;
+}
+
+// .listing__column-main element.
+
+.listing__column-main {
+  .listing__with {
+    margin-top: 0px;
+  }
+}
+
+// .listing__wrapper element.
+.listing__wrapper {
+  margin-bottom: 1.667em;
+}
+
+// .listing__wrapper--maxwidth.
+.listing__wrapper--maxwidth {
+  @extend .row;
+
+  .listing {
+    @extend .col-md-8;
+  }
+}
+
+// .listing__item element.
+
+.listing__item {
+  border-bottom: 1px solid $grey-lighter;
+  list-style: none;
+  list-style-image: none;
+  padding: $font-size-mid 0;
+  overflow: hidden;
+
+  &:first-child {
+    border-top: 1px solid $grey-lighter;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    a .listing__title,
+    a.listing__title {
+      text-decoration: underline;
+      color: $grey-base;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@mixin _listing_external_link_mixin() {
+  &:after {
+    display: none !important;
+  }
+  .listing__title {
+    @extend .is-external;
+    padding-right: 1.2em;
+
+    &:after {
+      position: absolute;
+      line-height: 1.6;
+    }
+  }
+}
+
+
+// .listing__item-link element
+
+.listing__item-link {
+  display: block;
+  overflow: hidden;
+  color: $grey-base;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    .site-political & {
+      &:not(#{$ec_url_patterns}) {
+        @include _listing_external_link_mixin();
+      }
+    }
+    .site-information & {
+      @include _listing_external_link_mixin();
+    }
+  }
+}
+
+
+// .listing__column-second element
+//   Modifiers:
+//    .listing__column-second--no-link
+// .listing__column-main element:
+//   Modifiers:
+//    .listing__column-main--sidebar-next
+
+// For all the screens.
+.listing__column-second {
+  width: 100%;
+  margin: 0.2em 0 0.8em 0;
+}
+
+.listing__column-main {
+  width: 100%;
+  padding-left: 0;
+  float: left;
+}
+
+.listing__column-second--no-link {
+  padding-bottom: 0.85em;
+  margin: 0;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
+// Min-width: 480px.
+// The variable to use here should be $screen-phone.
+@include breakpoint(screen-xs-min) {
+  .listing__column-second {
+    float: right;
+    width: 25%;
+    padding-left: 15px;
+    margin: 0;
+
+    & + .listing__column-main {
+      width: 75%;
+    }
+  }
+
+  .listing__column-second--no-link {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+// Min-width: 622px.
+@include breakpoint(screen-msm-min) {
+  .listing__column-main--sidebar-next {
+    width: 66.6%;
+  }
+
+  .listing__column-second--no-link {
+    float: right;
+    width: 33.3%;
+    padding-left: 15px;
+    padding-top: 0.85em;
+
+    .btn {
+      margin-top: 1.667em;
+    }
+  }
+}
+
+
+// .listing__title element.
+//  Modifiers: .listing__title--arrow.
+
+.listing__title {
+  font-family: $font-family-sans-serif;
+  font-size: 1em;
+  padding: 0;
+  display: inline-block;
+  line-height: 1.3;
+  position: relative;
+  @extend .h3;
+
+  a & {
+    color: $brand-primary;
+  }
+
+  & + * {
+    font-size: $font-size-little;
+  }
+}
+
+// .listing__title--arrow.
+.listing__title--arrow {
+  &:after {
+    margin-left: 10px;
+    margin-top: 2px;
+    font-size: 1.2em;
+    position: absolute;
+    @extend .icon--after;
+    @extend .icon--right;
+  }
+}
+
+
+// .listing__read_more element.
+.listing__read-more {
+  margin-top: 0.5em;
+  text-align: right;
+  font-weight: $font-weight-bold;
+  display: block;
+  text-transform: uppercase;
+  font-size: $font-size-tiny;
+
+  &:after {
+    @extend .icon--after;
+    @extend .icon--right;
+    font-size: $font-size-xsmall;
+  }
+
+  & + .free-text {
+    margin-top: 1.5em;
+  }
+}
+
+// .listing--column-left modifier.
 .listing--column-left {
   .listing__column-main {
     width: auto;
@@ -494,43 +662,3 @@ Styleguide listing.column-left
   }
 }
 
-/*
-Listing Agenda
-
-Listing components
-
-Markup: html/listing--agenda.html
-
-Styleguide listing.agenda
-*/
-.listing--agenda {
-
-  p {
-    margin: 0;
-  }
-
-  .listing__item {
-    padding-top: 0.85em;
-    padding-bottom: 1em;
-  }
-
-  .meta {
-    margin-bottom: 0;
-  }
-
-  .listing__item-link {
-    padding: 0;
-  }
-
-  h3 {
-    &.listing__title {
-      font-size: $font-size-medium;
-      color: $grey-base;
-    }
-  }
-
-  .listing__author {
-    font-size: $font-size-tiny;
-  }
-
-}
