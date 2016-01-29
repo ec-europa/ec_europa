@@ -17,6 +17,8 @@ Demonstrates the language switcher for mobile and small viewports.
 
 Markup: html/lang-select-page-dropdown.html
 
+.lang-select-page--transparent  - Transparent background
+
 Styleguide: langselect.dropdown
 */
 
@@ -150,7 +152,8 @@ select.lang-select-page__list {
 }
 
 // Styleguide
-#kssref-langselect {
+#kssref-langselect,
+#kssref-langselect-dropdown {
   .kss-modifier__wrapper {
     overflow: hidden;
   }

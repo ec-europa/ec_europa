@@ -283,12 +283,10 @@
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <script src="public/js/components/lang-switcher/selectify.js"></script>
-<script src="public/js/components/lang-switcher/lang-switcher.js"></script>
-<div class="lang-select-page [modifier class]">
+          <div class="lang-select-page [modifier class]">
   <span class="lang-select-page__icon icon icon--generic-lang"></span>
   <ul class="lang-select-page__list">
-    <li class="lang-select-page__option lang-select-page__unavailable">Francais</li>
+    <li class="lang-select-page__option lang-select-page__unavailable">Français</li>
     <li class="lang-select-page__option is-selected"><a href="/en">English</a></li>
     <li class="lang-select-page__option"><a href="/nl">Nederlands</a></li>
     <li class="lang-select-page__option"><a href="/hr">hrvatski</a></li>
@@ -306,12 +304,10 @@
           Transparent background
         </div>
         <div class="kss-modifier__example lang-select-page--transparent">
-          <script src="public/js/components/lang-switcher/selectify.js"></script>
-<script src="public/js/components/lang-switcher/lang-switcher.js"></script>
-<div class="lang-select-page lang-select-page--transparent">
+          <div class="lang-select-page lang-select-page--transparent">
   <span class="lang-select-page__icon icon icon--generic-lang"></span>
   <ul class="lang-select-page__list">
-    <li class="lang-select-page__option lang-select-page__unavailable">Francais</li>
+    <li class="lang-select-page__option lang-select-page__unavailable">Français</li>
     <li class="lang-select-page__option is-selected"><a href="/en">English</a></li>
     <li class="lang-select-page__option"><a href="/nl">Nederlands</a></li>
     <li class="lang-select-page__option"><a href="/hr">hrvatski</a></li>
@@ -325,12 +321,10 @@
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;script src=&quot;public/js/components/lang-switcher/selectify.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;public/js/components/lang-switcher/lang-switcher.js&quot;&gt;&lt;/script&gt;
-&lt;div class=&quot;lang-select-page [modifier class]&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;lang-select-page [modifier class]&quot;&gt;
   &lt;span class=&quot;lang-select-page__icon icon icon--generic-lang&quot;&gt;&lt;/span&gt;
   &lt;ul class=&quot;lang-select-page__list&quot;&gt;
-    &lt;li class=&quot;lang-select-page__option lang-select-page__unavailable&quot;&gt;Francais&lt;/li&gt;
+    &lt;li class=&quot;lang-select-page__option lang-select-page__unavailable&quot;&gt;Français&lt;/li&gt;
     &lt;li class=&quot;lang-select-page__option is-selected&quot;&gt;&lt;a href=&quot;/en&quot;&gt;English&lt;/a&gt;&lt;/li&gt;
     &lt;li class=&quot;lang-select-page__option&quot;&gt;&lt;a href=&quot;/nl&quot;&gt;Nederlands&lt;/a&gt;&lt;/li&gt;
     &lt;li class=&quot;lang-select-page__option&quot;&gt;&lt;a href=&quot;/hr&quot;&gt;hrvatski&lt;/a&gt;&lt;/li&gt;
@@ -363,29 +357,114 @@
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Example
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="lang-select-page">
+          <div class="lang-select-page [modifier class]">
   <span class="lang-select-page__icon icon icon--generic-lang"></span>
-  <select name="" id="">
-    <option value="english">English</option>
-    <option value="french">French</option>
+  <ul class="lang-select-page__list">
+    <li class="lang-select-page__option lang-select-page__unavailable">Français</li>
+    <li style="display: none;" class="lang-select-page__option is-selected"><a href="/en">English</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/nl">Nederlands</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/hr">hrvatski</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/it">italiano</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/lv">latviesu</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/hu">magyar</a></li>
+  </ul>
+  <select style="display: inline-block;" class="lang-select-page__list">
+    <option selected="selected">English</option>
+    <option value="/nl">
+      <a href="/nl">Nederlands</a>
+    </option>
+    <option value="/hr">
+      <a href="/hr">hrvatski</a>
+    </option>
+    <option value="/it">
+      <a href="/it">italiano</a>
+    </option>
+    <option value="/lv">
+      <a href="/lv">latviesu</a>
+    </option>
+    <option value="/hu">
+      <a href="/hu">magyar</a>
+    </option>
   </select>
 </div>
-
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .lang-select-page--transparent
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Transparent background
+        </div>
+        <div class="kss-modifier__example lang-select-page--transparent">
+          <div class="lang-select-page lang-select-page--transparent">
+  <span class="lang-select-page__icon icon icon--generic-lang"></span>
+  <ul class="lang-select-page__list">
+    <li class="lang-select-page__option lang-select-page__unavailable">Français</li>
+    <li style="display: none;" class="lang-select-page__option is-selected"><a href="/en">English</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/nl">Nederlands</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/hr">hrvatski</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/it">italiano</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/lv">latviesu</a></li>
+    <li style="display: none;" class="lang-select-page__option"><a href="/hu">magyar</a></li>
+  </ul>
+  <select style="display: inline-block;" class="lang-select-page__list">
+    <option selected="selected">English</option>
+    <option value="/nl">
+      <a href="/nl">Nederlands</a>
+    </option>
+    <option value="/hr">
+      <a href="/hr">hrvatski</a>
+    </option>
+    <option value="/it">
+      <a href="/it">italiano</a>
+    </option>
+    <option value="/lv">
+      <a href="/lv">latviesu</a>
+    </option>
+    <option value="/hu">
+      <a href="/hu">magyar</a>
+    </option>
+  </select>
+</div>
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;lang-select-page&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;lang-select-page [modifier class]&quot;&gt;
   &lt;span class=&quot;lang-select-page__icon icon icon--generic-lang&quot;&gt;&lt;/span&gt;
-  &lt;select name=&quot;&quot; id=&quot;&quot;&gt;
-    &lt;option value=&quot;english&quot;&gt;English&lt;/option&gt;
-    &lt;option value=&quot;french&quot;&gt;French&lt;/option&gt;
+  &lt;ul class=&quot;lang-select-page__list&quot;&gt;
+    &lt;li class=&quot;lang-select-page__option lang-select-page__unavailable&quot;&gt;Français&lt;/li&gt;
+    &lt;li style=&quot;display: none;&quot; class=&quot;lang-select-page__option is-selected&quot;&gt;&lt;a href=&quot;/en&quot;&gt;English&lt;/a&gt;&lt;/li&gt;
+    &lt;li style=&quot;display: none;&quot; class=&quot;lang-select-page__option&quot;&gt;&lt;a href=&quot;/nl&quot;&gt;Nederlands&lt;/a&gt;&lt;/li&gt;
+    &lt;li style=&quot;display: none;&quot; class=&quot;lang-select-page__option&quot;&gt;&lt;a href=&quot;/hr&quot;&gt;hrvatski&lt;/a&gt;&lt;/li&gt;
+    &lt;li style=&quot;display: none;&quot; class=&quot;lang-select-page__option&quot;&gt;&lt;a href=&quot;/it&quot;&gt;italiano&lt;/a&gt;&lt;/li&gt;
+    &lt;li style=&quot;display: none;&quot; class=&quot;lang-select-page__option&quot;&gt;&lt;a href=&quot;/lv&quot;&gt;latviesu&lt;/a&gt;&lt;/li&gt;
+    &lt;li style=&quot;display: none;&quot; class=&quot;lang-select-page__option&quot;&gt;&lt;a href=&quot;/hu&quot;&gt;magyar&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;select style=&quot;display: inline-block;&quot; class=&quot;lang-select-page__list&quot;&gt;
+    &lt;option selected=&quot;selected&quot;&gt;English&lt;/option&gt;
+    &lt;option value=&quot;/nl&quot;&gt;
+      &lt;a href=&quot;/nl&quot;&gt;Nederlands&lt;/a&gt;
+    &lt;/option&gt;
+    &lt;option value=&quot;/hr&quot;&gt;
+      &lt;a href=&quot;/hr&quot;&gt;hrvatski&lt;/a&gt;
+    &lt;/option&gt;
+    &lt;option value=&quot;/it&quot;&gt;
+      &lt;a href=&quot;/it&quot;&gt;italiano&lt;/a&gt;
+    &lt;/option&gt;
+    &lt;option value=&quot;/lv&quot;&gt;
+      &lt;a href=&quot;/lv&quot;&gt;latviesu&lt;/a&gt;
+    &lt;/option&gt;
+    &lt;option value=&quot;/hu&quot;&gt;
+      &lt;a href=&quot;/hu&quot;&gt;magyar&lt;/a&gt;
+    &lt;/option&gt;
   &lt;/select&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
       </div>
 
       </section>

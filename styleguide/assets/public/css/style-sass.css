@@ -8467,6 +8467,8 @@ Demonstrates the language switcher for mobile and small viewports.
 
 Markup: html/lang-select-page-dropdown.html
 
+.lang-select-page--transparent  - Transparent background
+
 Styleguide: langselect.dropdown
 */
 .lang-select-page {
@@ -8547,20 +8549,26 @@ select.lang-select-page__list {
 .front .lang-select-page {
   display: none; }
 
-#kssref-langselect .kss-modifier__wrapper {
+#kssref-langselect .kss-modifier__wrapper,
+#kssref-langselect-dropdown .kss-modifier__wrapper {
   overflow: hidden; }
 
-#kssref-langselect .kss-modifier__example {
+#kssref-langselect .kss-modifier__example,
+#kssref-langselect-dropdown .kss-modifier__example {
   height: auto;
   overflow: hidden;
   padding: 2em; }
 
 #kssref-langselect .kss-modifier__name,
 #kssref-langselect .kss-markup.kss-style,
-#kssref-langselect .kss-modifier__description {
+#kssref-langselect .kss-modifier__description,
+#kssref-langselect-dropdown .kss-modifier__name,
+#kssref-langselect-dropdown .kss-markup.kss-style,
+#kssref-langselect-dropdown .kss-modifier__description {
   clear: both; }
 
-#kssref-langselect .lang-select-page--transparent {
+#kssref-langselect .lang-select-page--transparent,
+#kssref-langselect-dropdown .lang-select-page--transparent {
   background: #004494; }
 
 /*
