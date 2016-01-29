@@ -8475,6 +8475,7 @@ Styleguide: langselect.dropdown
   background: #f2f2f2;
   border-bottom: 1px solid #b3b4b5;
   font-size: 0.778em;
+  overflow: hidden;
   width: 100%; }
 
 .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn {
@@ -8506,10 +8507,16 @@ ul.lang-select-page__list {
 
 select.lang-select-page__list {
   background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
+  border: 0;
   border-radius: 0;
+  cursor: pointer;
+  font-weight: bold;
   padding-left: 0.5em;
-  width: 10em;
-  cursor: pointer; }
+  line-height: 3.4em;
+  height: 3.4em;
+  width: 10em; }
+  select.lang-select-page__list:hover {
+    background-size: unset !important; }
 
 .lang-select-page--transparent {
   background: transparent;
@@ -8520,10 +8527,7 @@ select.lang-select-page__list {
     text-indent: 0.01px;
     text-overflow: '';
     background-color: #012b58;
-    border: 0;
-    color: #fff;
-    font-weight: bold;
-    line-height: 3.4em; }
+    color: #fff; }
     .lang-select-page--transparent select.lang-select-page__list:hover, .lang-select-page--transparent select.lang-select-page__list:active {
       border: 0; }
     .lang-select-page--transparent select.lang-select-page__list > option {

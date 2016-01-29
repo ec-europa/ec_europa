@@ -28,6 +28,7 @@ Styleguide: langselect.dropdown
   background: $grey-lightest;
   border-bottom: 1px solid $grey;
   font-size: $font-size-xsmall;
+  overflow: hidden;
   width:100%;
 }
 
@@ -74,10 +75,18 @@ ul.lang-select-page__list {
 select.lang-select-page__list {
   @extend .hidden-print;
   background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
+  border: 0;
   border-radius: 0;
-  padding-left: 0.5em;
-  width: 10em;
   cursor: pointer;
+  font-weight: bold;
+  padding-left: 0.5em;
+  line-height: 3.4em;
+  height: 3.4em;
+  width: 10em;
+  &:hover {
+    // select component is using a font icon with too much specificity that has to be overridden.
+    background-size: unset !important;
+  }
 }
 
 .lang-select-page--transparent {
@@ -92,10 +101,7 @@ select.lang-select-page__list {
     text-overflow: '';
 
     background-color: $blue-darker;
-    border: 0;
     color: #fff;
-    font-weight: bold;
-    line-height: 3.4em;
 
     &:hover, &:active {
       border: 0;
