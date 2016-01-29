@@ -8724,7 +8724,8 @@ ul.listing--title {
   color: #404040; }
 
 .listing--agenda .listing__author {
-  font-size: 0.833em; }
+  font-size: 0.833em;
+  margin-top: 1em; }
 
 .listing--person .listing__item-link {
   padding-bottom: 1em;
