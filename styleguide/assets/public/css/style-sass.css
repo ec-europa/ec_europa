@@ -5421,6 +5421,18 @@ button.close {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important; }
 
+#kss-node .kss-modifier__wrapper {
+  overflow: hidden; }
+
+.kss-modifier__example {
+  height: auto;
+  overflow: hidden; }
+
+.kss-modifier__name,
+.kss-markup.kss-style,
+.kss-modifier__description {
+  clear: both; }
+
 .padding-reset {
   padding: 0 !important; }
 
@@ -8553,23 +8565,9 @@ select.lang-select-page__list {
 .front .lang-select-page {
   display: none; }
 
-#kssref-langselect .kss-modifier__wrapper,
-#kssref-langselect-dropdown .kss-modifier__wrapper {
-  overflow: hidden; }
-
 #kssref-langselect .kss-modifier__example,
 #kssref-langselect-dropdown .kss-modifier__example {
-  height: auto;
-  overflow: hidden;
   padding: 2em; }
-
-#kssref-langselect .kss-modifier__name,
-#kssref-langselect .kss-markup.kss-style,
-#kssref-langselect .kss-modifier__description,
-#kssref-langselect-dropdown .kss-modifier__name,
-#kssref-langselect-dropdown .kss-markup.kss-style,
-#kssref-langselect-dropdown .kss-modifier__description {
-  clear: both; }
 
 #kssref-langselect .lang-select-page--transparent,
 #kssref-langselect-dropdown .lang-select-page--transparent {
