@@ -1,44 +1,66 @@
 // Fixes for the styleguide.
-.kss-description > p {
-  max-width: none;
-}
-
-.kss-modifier__name,
-.kss-modifier__description {
-  background: $grey-lighter;
-  padding: 1em;
-}
-
-.kss-modifier__name::before {
-  content: "[Modifier] ";
-  font-size: $font-size-h3;
-}
-
-.kss-markup {
-  visibility: hidden;
-  max-height: 40px;
-  overflow: hidden;
-  position: relative;
-
-  &::before {
-    content: "Show html markup";
-    position: absolute;
-    visibility: visible;
-    right: 0;
-    background: $grey-base;
-    color: #fff;
-    padding: 0.2em 1em;
-    cursor: pointer;
-    font-weight: 600;
+#kss-node {
+  .kss-description > p {
+    max-width: none;
   }
 
-  &:hover {
-    visibility: visible;
-    max-height: none;
+  .kss-modifier__name,
+  .kss-modifier__description {
+    margin: 2.4em 0;
+    padding: 0.6em;
+    display: inline-block;
+    float: none;
+  }
+
+  .kss-modifier__name {
+    background: $brand-primary;
+    color: #fff;
+    width: 40%;
+    margin-left: -0.6em;
 
     &::before {
-      background: $grey-lighter;
-      color: $blue-dark;
+      content: "[Modifier] ";
+      font-size: $font-size-h5;
+      clear: both;
+    }
+  }
+
+  .kss-modifier__description {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    font-weight: bold;
+    width: 63%;
+    margin: 2.4em -0.9em 3em -0.5em;
+  }
+
+  .kss-markup {
+    visibility: hidden;
+    max-height: 40px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: "Show html markup";
+      position: absolute;
+      visibility: visible;
+      right: 0;
+      background: $grey-base;
+      color: #fff;
+      padding: 0.2em 1em;
+      cursor: pointer;
+      font-weight: 600;
+      clear: both;
+    }
+
+    &:hover {
+      visibility: visible;
+      max-height: none;
+
+      &::before {
+        background: $grey-lighter;
+        color: $blue-dark;
+      }
     }
   }
 }

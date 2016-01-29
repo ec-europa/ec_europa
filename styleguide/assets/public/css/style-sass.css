@@ -10286,24 +10286,40 @@ Styleguide top-image
     display: block;
     text-align: center; }
 
-.kss-description > p {
+#kss-node .kss-description > p {
   max-width: none; }
 
-.kss-modifier__name,
-.kss-modifier__description {
-  background: #ececec;
-  padding: 1em; }
+#kss-node .kss-modifier__name,
+#kss-node .kss-modifier__description {
+  margin: 2.4em 0;
+  padding: 0.6em;
+  display: inline-block;
+  float: none; }
 
-.kss-modifier__name::before {
-  content: "[Modifier] ";
-  font-size: 1.333em; }
+#kss-node .kss-modifier__name {
+  background: #004494;
+  color: #fff;
+  width: 40%;
+  margin-left: -0.6em; }
+  #kss-node .kss-modifier__name::before {
+    content: "[Modifier] ";
+    font-size: 1em;
+    clear: both; }
 
-.kss-markup {
+#kss-node .kss-modifier__description {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  font-weight: bold;
+  width: 63%;
+  margin: 2.4em -0.9em 3em -0.5em; }
+
+#kss-node .kss-markup {
   visibility: hidden;
   max-height: 40px;
   overflow: hidden;
   position: relative; }
-  .kss-markup::before {
+  #kss-node .kss-markup::before {
     content: "Show html markup";
     position: absolute;
     visibility: visible;
@@ -10312,11 +10328,12 @@ Styleguide top-image
     color: #fff;
     padding: 0.2em 1em;
     cursor: pointer;
-    font-weight: 600; }
-  .kss-markup:hover {
+    font-weight: 600;
+    clear: both; }
+  #kss-node .kss-markup:hover {
     visibility: visible;
     max-height: none; }
-    .kss-markup:hover::before {
+    #kss-node .kss-markup:hover::before {
       background: #ececec;
       color: #004494; }
 
