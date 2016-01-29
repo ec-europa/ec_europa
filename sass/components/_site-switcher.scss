@@ -19,13 +19,15 @@ Styleguide: siteswitcher
 }
 
 .site-switcher__list {
-  padding: 0;
   list-style: none;
   margin: 0;
+  overflow: hidden;
+  padding: 0;
 }
 
 .site-switcher__option {
   display: inline-block;
+  float: left;
   text-align: center;
   vertical-align: middle;
   width: 50%;
@@ -85,16 +87,9 @@ Styleguide: siteswitcher
 
 .site-switcher--footer {
   border-bottom: 1px solid $grey-lightest;
-  overflow: visible;
+  overflow: hidden;
 
   .site-switcher__list {
-    @media (min-width: 510px) {
-      & {
-        float: right;
-      }
-    }
-
-
     &:first-child {
       border-left: none;
     }
@@ -124,8 +119,14 @@ Styleguide: siteswitcher
   }
 }
 
-@include breakpoint(screen-msm-min) {
+@include breakpoint(screen-md-min) {
   .site-switcher__option {
     width: auto;
+  }
+
+  .site-switcher--footer {
+    .site-switcher__list {
+      float: right;
+    }
   }
 }

@@ -9814,12 +9814,14 @@ Styleguide: siteswitcher
   font-size: 0.889em; }
 
 .site-switcher__list {
-  padding: 0;
   list-style: none;
-  margin: 0; }
+  margin: 0;
+  overflow: hidden;
+  padding: 0; }
 
 .site-switcher__option {
   display: inline-block;
+  float: left;
   text-align: center;
   vertical-align: middle;
   width: 50%; }
@@ -9858,10 +9860,7 @@ Styleguide: siteswitcher
 
 .site-switcher--footer {
   border-bottom: 1px solid #f2f2f2;
-  overflow: visible; }
-  @media (min-width: 510px) {
-    .site-switcher--footer .site-switcher__list {
-      float: right; } }
+  overflow: hidden; }
   .site-switcher--footer .site-switcher__list:first-child {
     border-left: none; }
   .site-switcher--footer .site-switcher__option.is-selected > a {
@@ -9880,9 +9879,11 @@ Styleguide: siteswitcher
       border-width: 10px;
       margin-left: -10px; }
 
-@media (min-width: 622px) {
+@media (min-width: 992px) {
   .site-switcher__option {
-    width: auto; } }
+    width: auto; }
+  .site-switcher--footer .site-switcher__list {
+    float: right; } }
 
 /*
 Search form
