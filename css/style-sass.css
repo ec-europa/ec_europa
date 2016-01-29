@@ -9880,7 +9880,7 @@ Styleguide: siteswitcher
       border-width: 10px;
       margin-left: -10px; }
 
-@media (min-width: 510px) {
+@media (min-width: 622px) {
   .site-switcher__option {
     width: auto; } }
 

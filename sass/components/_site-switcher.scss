@@ -124,7 +124,7 @@ Styleguide: siteswitcher
   }
 }
 
-@media (min-width: 510px) {
+@include breakpoint(screen-msm-min) {
   .site-switcher__option {
     width: auto;
   }
