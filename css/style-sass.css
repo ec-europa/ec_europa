@@ -8452,13 +8452,22 @@ Styleguide: siteheader.langselect
 /*
 Language select (Page)
 
-Page specific language selection.
+Language selector for a page content.
 
 Markup: html/lang-select-page.html
 
 .lang-select-page--transparent  - Transparent background
 
 Styleguide: langselect
+*/
+/*
+Language select (Dropdown)
+
+Demonstrates the language switcher for mobile and small viewports.
+
+Markup: html/lang-select-page-dropdown.html
+
+Styleguide: langselect.dropdown
 */
 .lang-select-page {
   background: #f2f2f2;

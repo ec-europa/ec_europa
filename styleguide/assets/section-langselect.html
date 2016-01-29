@@ -148,6 +148,12 @@
           ><span class="kss-nav__name">Language select (Page)</span>
         </a>
         <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-langselect.html#kssref-langselect-dropdown">
+                <span class="kss-nav__ref">19.1</span
+                ><span class="kss-nav__name">Language select (Dropdown)</span>
+              </a>
+            </li>
         </ul>
       </li>
       <li class="kss-nav__menu-item">
@@ -264,7 +270,7 @@
 
 
       <div class="kss-description">
-        <p>Page specific language selection.</p>
+        <p>Language selector for a page content.</p>
 
       </div>
     </div>
@@ -277,8 +283,8 @@
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <script src="public/js/components/lang-switcher/lang-switcher.js"></script>
-<script src="public/js/components/lang-switcher/selectify.js"></script>
+          <script src="public/js/components/lang-switcher/selectify.js"></script>
+<script src="public/js/components/lang-switcher/lang-switcher.js"></script>
 <div class="lang-select-page [modifier class]">
   <span class="lang-select-page__icon icon icon--generic-lang"></span>
   <ul class="lang-select-page__list">
@@ -300,8 +306,8 @@
           Transparent background
         </div>
         <div class="kss-modifier__example lang-select-page--transparent">
-          <script src="public/js/components/lang-switcher/lang-switcher.js"></script>
-<script src="public/js/components/lang-switcher/selectify.js"></script>
+          <script src="public/js/components/lang-switcher/selectify.js"></script>
+<script src="public/js/components/lang-switcher/lang-switcher.js"></script>
 <div class="lang-select-page lang-select-page--transparent">
   <span class="lang-select-page__icon icon icon--generic-lang"></span>
   <ul class="lang-select-page__list">
@@ -319,8 +325,8 @@
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;script src=&quot;public/js/components/lang-switcher/lang-switcher.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;public/js/components/lang-switcher/selectify.js&quot;&gt;&lt;/script&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;script src=&quot;public/js/components/lang-switcher/selectify.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;public/js/components/lang-switcher/lang-switcher.js&quot;&gt;&lt;/script&gt;
 &lt;div class=&quot;lang-select-page [modifier class]&quot;&gt;
   &lt;span class=&quot;lang-select-page__icon icon icon--generic-lang&quot;&gt;&lt;/span&gt;
   &lt;ul class=&quot;lang-select-page__list&quot;&gt;
@@ -337,6 +343,52 @@
       </div>
 
       </div>
+      <section id="kssref-langselect-dropdown" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-langselect-dropdown">
+          <span class="kss-title__ref">19.1</span
+          >Language select (Dropdown)
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Demonstrates the language switcher for mobile and small viewports.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="lang-select-page">
+  <span class="lang-select-page__icon icon icon--generic-lang"></span>
+  <select name="" id="">
+    <option value="english">English</option>
+    <option value="french">French</option>
+  </select>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;lang-select-page&quot;&gt;
+  &lt;span class=&quot;lang-select-page__icon icon icon--generic-lang&quot;&gt;&lt;/span&gt;
+  &lt;select name=&quot;&quot; id=&quot;&quot;&gt;
+    &lt;option value=&quot;english&quot;&gt;English&lt;/option&gt;
+    &lt;option value=&quot;french&quot;&gt;French&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
 </article>
 
 <!-- SCRIPTS -->
