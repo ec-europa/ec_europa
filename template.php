@@ -593,7 +593,7 @@ function europa_field($variables) {
     $output .= '<div class="field__items"' . $variables['content_attributes'] . '>';
     foreach ($variables['items'] as $delta => $item) {
       // We should pass along the parent object if we have access to it.
-      if (isset($variables['element']['#object']) && isset($item['#file'])) {
+      if (isset($item['#file']) && isset($variables['element']['#object'])) {
         $item['#file']->entity = $variables['element']['#object'];
       }
       $output .= drupal_render($item);
