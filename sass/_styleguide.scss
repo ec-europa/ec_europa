@@ -63,8 +63,8 @@
       max-height: none;
 
       &::before {
-        background: $grey-lighter;
-        color: $blue-dark;
+        background: transparent;
+        font-size: 0px;
       }
     }
   }

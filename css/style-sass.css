@@ -10342,7 +10342,7 @@ Styleguide top-image
     visibility: visible;
     max-height: none; }
     #kss-node .kss-markup:hover::before {
-      background: #ececec;
-      color: #004494; }
+      background: transparent;
+      font-size: 0px; }
 
 /*# sourceMappingURL=style-sass.css.map */
