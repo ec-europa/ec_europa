@@ -8547,58 +8547,80 @@ Listing
 Component used to render list of entities, usually the landing page of a class.
 It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.
 
-Styleguide listing.0
+Styleguide listing
 */
 /*
 Listing default
 
-Default implementation of the listing component
+Default implementation of the listing component.
 
 Markup: html/listing.html
 
-Styleguide listing.0.1
+Styleguide listing.1
 */
 /*
 Listing column left
 
-This is actually a modifier that applies changes to the listing__item element
+This is actually a modifier that applies changes to the listing__item element.
 
 Markup: html/listing--column-left.html
 
 .listing__column-second--no-link
 .listing__column-main--sidebar-next
 
-Styleguide listing.0.2
+Styleguide listing.1.1
 */
 /*
 Listing layouts
 
-Styleguide listing.1
+Listing layouts are implemented as modifiers of the listing__wrapper element which is actually the container of the component.
+
+Styleguide listing.2
 */
 /*
 Listing two columns
 
-This is a way to put two listings in two different columns
+This is a way to put two listings in two different columns.
 
 Markup: html/listing__wrapper--two-columns.html
 
-Styleguide listing.1.1
+Styleguide listing.2.1
 */
 /*
 Listing three columns
 
-This is a way to put three listings in three different columns
+This is a way to put three listings in three different columns.
 
 Markup: html/listing__wrapper--three-columns.html
 
-Styleguide listing.1.2
+Styleguide listing.2.2
+*/
+/*
+Listing item two rows
+
+This is a way to put two listing_item in the same row.
+
+Markup: html/listing__wrapper--row-two.html
+
+Styleguide listing.2.3
+*/
+/*
+Listing item three rows
+
+This is a way to put three listing_item in the same row.
+
+Markup: html/listing__wrapper--row-three.html
+
+Styleguide listing.2.4
 */
 /*
 Simple listing (title + text) modifiers
 
+In this section we collect many modifiers, in the example the listing--teaser version of the component has been used.
+
 Markup: html/listing--teaser.html
 
-.listing__wrapper--maxwidth - Listing with a maxwidth
+.listing__wrapper--fullwidth - Listing without a maxwidth
 .listing--cta - Listing CTA
 .listing--no-padding - Listing no padding
 .listing--short-spaced - Listing short spaced
@@ -8606,7 +8628,7 @@ Markup: html/listing--teaser.html
 .listing--no-border - Listing with no border
 .listing--nostripe - Listing with no stripe
 
-Styleguide listing.2
+Styleguide listing.3
 */
 /*
 Listing title
@@ -8618,7 +8640,7 @@ Markup: html/listing--title.html
 .listing--title-large - Listing title large
 .listing--title-medium - Listing title medium
 
-Styleguide listing.3
+Styleguide listing.4
 */
 /*
 Listing Agenda
@@ -8627,7 +8649,7 @@ Listing for event like entities.
 
 Markup: html/listing--agenda.html
 
-Styleguide listing.4
+Styleguide listing.5
 */
 .listing--line-left .listing--teaser {
   padding-left: 0; }
@@ -8725,15 +8747,19 @@ ul.listing--title {
     .listing--nostripe .listing__item:last-child .listing__item-link {
       padding-bottom: 0; }
 
+.listing--cta .listing__item-link {
+  padding: 1.222em;
+  background-color: #004494; }
+
 .listing--cta .listing__item {
-  border: none;
-  background-color: #004494;
-  padding: 1.222em 1.667em 0; }
+  border: none; }
   .listing--cta .listing__item .listing__title,
   .listing--cta .listing__item a {
     color: #ffffff; }
   .listing--cta .listing__item:hover .listing__title, .listing--cta .listing__item:active .listing__title, .listing--cta .listing__item:focus .listing__title {
     color: #ffffff; }
+  .listing--cta .listing__item:first-child {
+    border-top: none; }
   .listing--cta .listing__item:last-child {
     padding-bottom: 1.222em; }
 
@@ -8898,7 +8924,7 @@ a.listing__title {
   clear: left; }
 
 .listing__wrapper--row-three .listing__item {
-  margin-top: 15px; }
+  margin-top: 30px; }
 
 @media (min-width: 992px) {
   .listing__wrapper--two-columns .listing {
