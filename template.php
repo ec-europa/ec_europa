@@ -593,6 +593,10 @@ function europa_field($variables) {
   else {
     $output .= '<div class="field__items"' . $variables['content_attributes'] . '>';
     foreach ($variables['items'] as $delta => $item) {
+      // We should pass along the parent object if we have access to it.
+      if (isset($item['#file']) && isset($variables['element']['#object'])) {
+        $item['#file']->entity = $variables['element']['#object'];
+      }
       $output .= drupal_render($item);
     }
     $output .= '</div>';
@@ -770,12 +774,19 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
     $file_info_string = $file_language . '(' . $file_size . ' - ' . $file_extension . ')';
 
     // Use the description as the link text if available.
-    if (!empty($file->description)) {
-      $title_string = $file->description;
-      $options['attributes']['title'] = check_plain($file->filename);
+    if (isset($file->entity)) {
+      // We have access to the entity, so we can use that title.
+      $file_wrapper = entity_metadata_wrapper('node', $file->entity);
+      $title_string = $file_wrapper->title->value();
     }
     else {
-      $title_string = $file->filename;
+      if (!empty($file->description)) {
+        $title_string = $file->description;
+        $options['attributes']['title'] = check_plain($file->filename);
+      }
+      else {
+        $title_string = $file->filename;
+      }
     }
   }
 
