@@ -514,6 +514,7 @@ function _europa_field_component_listing($variables, $config) {
 function europa_field($variables) {
   $element = $variables['element'];
   $field_type = isset($element['#field_type']) ? $element['#field_type'] : NULL;
+
   switch ($field_type) {
     case 'entityreference':
       if ($element['#formatter'] == 'entityreference_entity_view') {
@@ -592,12 +593,16 @@ function europa_field($variables) {
   else {
     $output .= '<div class="field__items"' . $variables['content_attributes'] . '>';
     foreach ($variables['items'] as $delta => $item) {
+      // We should pass along the parent object if we have access to it.
+      if (isset($item['#file']) && isset($variables['element']['#object'])) {
+        $item['#file']->entity = $variables['element']['#object'];
+      }
       $output .= drupal_render($item);
     }
     $output .= '</div>';
 
     // Render the top-level DIV.
-    $output = '<div class="field field--' . strtr($variables['element']['#field_name'], '_', '-') . ' ' . implode(' ', $classes) . '">' . $output . '</div>';
+    $output = '<div ' . $variables['attributes'] . ' class="field field--' . strtr($variables['element']['#field_name'], '_', '-') . ' ' . implode(' ', $classes) . '">' . $output . '</div>';
   }
 
   return $output;
@@ -769,12 +774,19 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
     $file_info_string = $file_language . '(' . $file_size . ' - ' . $file_extension . ')';
 
     // Use the description as the link text if available.
-    if (!empty($file->description)) {
-      $title_string = $file->description;
-      $options['attributes']['title'] = check_plain($file->filename);
+    if (isset($file->entity)) {
+      // We have access to the entity, so we can use that title.
+      $file_wrapper = entity_metadata_wrapper('node', $file->entity);
+      $title_string = $file_wrapper->title->value();
     }
     else {
-      $title_string = $file->filename;
+      if (!empty($file->description)) {
+        $title_string = $file->description;
+        $options['attributes']['title'] = check_plain($file->filename);
+      }
+      else {
+        $title_string = $file->filename;
+      }
     }
   }
 
@@ -996,6 +1008,28 @@ function europa_preprocess_field(&$variables) {
       $variables['element']['after'] = l(t('Other social networks'), variable_get('dt_core_other_social_networks_link', 'http://europa.eu/contact/social-networks/index_en.htm'));
       break;
   }
+
+  if ($variables['element']['#field_type'] <> 'ds') {
+    // Get more field information.
+    $field = field_info_field($variables['element']['#field_name']);
+    // Inintialize parameter.
+    $allow_attribute = TRUE;
+    // If it is not a tranlateable entityreference field we should continue.
+    if ($field['type'] == "entityreference" && $field['translatable'] == 0) {
+      $allow_attribute = FALSE;
+    }
+
+    if ($allow_attribute) {
+      // The default language code.
+      $content_langcode = $GLOBALS['language_content']->language;
+      // When the language is different from content.
+      if (isset($variables['element']['#language']) && $variables['element']['#language'] <> LANGUAGE_NONE && $variables['element']['#language'] <> $content_langcode) {
+        $variables['attributes_array']['lang'] = $variables['element']['#language'];
+      }
+    }
+  }
+  // Set the attributes to the element.
+  $variables['attributes'] = empty($variables['attributes_array']) ? '' : drupal_attributes($variables['attributes_array']);
 }
 
 /**
@@ -1091,6 +1125,9 @@ function europa_preprocess_node(&$variables) {
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
   }
+
+  // Add the language attribute.
+  $variables['attributes_array']['lang'] = entity_translation_get_existing_language('node', $variables['node']);
 }
 
 /**
