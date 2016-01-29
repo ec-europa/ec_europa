@@ -8667,14 +8667,17 @@ Styleguide listing.5
 .listing--title,
 ul.listing--title {
   padding: 0; }
-  .listing--title .listing__item .listing__title,
-  ul.listing--title .listing__item .listing__title {
-    margin: 0; }
-  .listing--title .listing__item:hover a .listing__title, .listing--title .listing__item:active a .listing__title, .listing--title .listing__item:focus a .listing__title,
-  ul.listing--title .listing__item:hover a .listing__title,
-  ul.listing--title .listing__item:active a .listing__title,
-  ul.listing--title .listing__item:focus a .listing__title {
-    text-decoration: none; }
+  .listing--title .listing__item,
+  ul.listing--title .listing__item {
+    padding: 0.61em 0; }
+    .listing--title .listing__item .listing__title,
+    ul.listing--title .listing__item .listing__title {
+      margin: 0; }
+    .listing--title .listing__item:hover a .listing__title, .listing--title .listing__item:active a .listing__title, .listing--title .listing__item:focus a .listing__title,
+    ul.listing--title .listing__item:hover a .listing__title,
+    ul.listing--title .listing__item:active a .listing__title,
+    ul.listing--title .listing__item:focus a .listing__title {
+      text-decoration: none; }
   .listing--title .listing__item-link,
   .listing--title .listing__title,
   ul.listing--title .listing__item-link,
