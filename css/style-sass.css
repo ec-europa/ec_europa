@@ -8546,6 +8546,7 @@ Listing
 
 Component used to render list of entities, usually the landing page of a class.
 It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.
+The width of the element listing__item is limited to 32em, a modifier is available to reset this limit, the first two examples are using that.
 
 Styleguide listing
 */
@@ -8564,9 +8565,6 @@ Listing column left
 This is actually a modifier that applies changes to the listing__item element.
 
 Markup: html/listing--column-left.html
-
-.listing__column-second--no-link
-.listing__column-main--sidebar-next
 
 Styleguide listing.1.1
 */
@@ -8620,7 +8618,6 @@ In this section we collect many modifiers, in the example the listing--teaser ve
 
 Markup: html/listing--teaser.html
 
-.listing__wrapper--fullwidth - Listing without a maxwidth
 .listing--cta - Listing CTA
 .listing--no-padding - Listing no padding
 .listing--short-spaced - Listing short spaced
@@ -8651,6 +8648,9 @@ Markup: html/listing--agenda.html
 
 Styleguide listing.5
 */
+.listing {
+  padding: 0; }
+
 .listing--line-left .listing--teaser {
   padding-left: 0; }
 
@@ -8798,7 +8798,8 @@ a.listing__title {
   list-style: none;
   list-style-image: none;
   padding: 1.22em 0 1.11em;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 32em; }
   .listing__item:first-child {
     border-top: 1px solid #ececec; }
   .listing__item:hover a .listing__title,
@@ -8809,6 +8810,9 @@ a.listing__title {
     color: #404040; }
   .listing__item p {
     margin-bottom: 0; }
+
+.listing__item--fullwidth {
+  max-width: none; }
 
 .listing__item-link {
   display: block;

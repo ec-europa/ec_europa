@@ -295,7 +295,8 @@
 
       <div class="kss-description">
         <p>Component used to render list of entities, usually the landing page of a class.
-It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.</p>
+It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.
+The width of the element listing__item is limited to 32em, a modifier is available to reset this limit, the first two examples are using that.</p>
 
       </div>
     </div>
@@ -327,7 +328,7 @@ It defines the following modifiers: Listing with no border, Listing with no stri
         <div class="kss-modifier__example">
           <div class="listing__wrapper">
   <div class="listing ">
-    <div class="listing__item">
+    <div class="listing__item listing__item--fullwidth">
       <a href="#" class="listing__item-link">
         <div class="listing__column-second">
           <img src="http://placehold.it/300x200">
@@ -347,7 +348,7 @@ It defines the following modifiers: Listing with no border, Listing with no stri
       </a>
     </div>
 
-    <div class="listing__item">
+    <div class="listing__item listing__item--fullwidth">
       <a href="#" class="listing__item-link">
         <div class="listing__column-second">
           <img src="http://placehold.it/300x200">
@@ -374,7 +375,7 @@ It defines the following modifiers: Listing with no border, Listing with no stri
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper&quot;&gt;
   &lt;div class=&quot;listing &quot;&gt;
-    &lt;div class=&quot;listing__item&quot;&gt;
+    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
       &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
         &lt;div class=&quot;listing__column-second&quot;&gt;
           &lt;img src=&quot;http://placehold.it/300x200&quot;&gt;
@@ -394,7 +395,7 @@ It defines the following modifiers: Listing with no border, Listing with no stri
       &lt;/a&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;listing__item&quot;&gt;
+    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
       &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
         &lt;div class=&quot;listing__column-second&quot;&gt;
           &lt;img src=&quot;http://placehold.it/300x200&quot;&gt;
@@ -432,8 +433,6 @@ It defines the following modifiers: Listing with no border, Listing with no stri
 
       <div class="kss-description">
         <p>This is actually a modifier that applies changes to the listing__item element.</p>
-<p>.listing<strong>column-second--no-link
-.listing</strong>column-main--sidebar-next</p>
 
       </div>
     </div>
@@ -445,7 +444,7 @@ It defines the following modifiers: Listing with no border, Listing with no stri
         <div class="kss-modifier__example">
           <div class="listing__wrapper">
   <div class="listing listing--column-left">
-    <div class="listing__item">
+    <div class="listing__item listing__item--fullwidth">
       <a href="#" class="listing__item-link">
         <div class="listing__column-second">
           <img src="http://placehold.it/80x80">
@@ -462,9 +461,9 @@ It defines the following modifiers: Listing with no border, Listing with no stri
         </div>
       </a>
     </div>
-    <div class="listing__item">
+    <div class="listing__item listing__item--fullwidth">
       <a href="#" class="listing__item-link">
-        <div class="listing__column-second">
+        <div class="listing__column-second ">
           <img src="http://placehold.it/80x80">
         </div>
         <div class="listing__column-main">
@@ -488,7 +487,7 @@ It defines the following modifiers: Listing with no border, Listing with no stri
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper&quot;&gt;
   &lt;div class=&quot;listing listing--column-left&quot;&gt;
-    &lt;div class=&quot;listing__item&quot;&gt;
+    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
       &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
         &lt;div class=&quot;listing__column-second&quot;&gt;
           &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
@@ -505,9 +504,9 @@ It defines the following modifiers: Listing with no border, Listing with no stri
         &lt;/div&gt;
       &lt;/a&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;listing__item&quot;&gt;
+    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
       &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-        &lt;div class=&quot;listing__column-second&quot;&gt;
+        &lt;div class=&quot;listing__column-second &quot;&gt;
           &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
         &lt;/div&gt;
         &lt;div class=&quot;listing__column-main&quot;&gt;
@@ -927,31 +926,6 @@ It defines the following modifiers: Listing with no border, Listing with no stri
         </div>
         <div class="kss-modifier__example">
           <div class="listing__wrapper [modifier class]">
-  <ul class="listing listing--teaser">
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
-        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
-      </a>
-    </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
-        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
-      </a>
-    </li>
-  </ul>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .listing__wrapper--fullwidth
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Listing without a maxwidth
-        </div>
-        <div class="kss-modifier__example">
-          <div class="listing__wrapper listing__wrapper--fullwidth">
   <ul class="listing listing--teaser">
     <li class="listing__item">
       <a href="#" class="listing__item-link">
