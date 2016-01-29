@@ -7,7 +7,7 @@
   // Add sidebar classes so that we can apply the correct width in css.
 ?>
 
-<div <?php print $attributes; ?> class="<?php print $classes; ?>">
+<div <?php print $layout_attributes; ?> class="<?php print $classes; ?>">
   <?php if (isset($title_suffix['contextual_links'])): ?>
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
