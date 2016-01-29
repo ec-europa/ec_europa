@@ -5424,6 +5424,9 @@ button.close {
 .padding-reset {
   padding: 0 !important; }
 
+.padding-wysiwyg-body {
+  padding: 0 10px; }
+
 .col-separator-left {
   border-left: 1px solid #b3b4b5; }
 
