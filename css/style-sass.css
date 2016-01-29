@@ -10289,6 +10289,10 @@ Styleguide top-image
 #kss-node .kss-description > p {
   max-width: none; }
 
+#kss-node .kss-modifier__wrapper {
+  float: left;
+  width: 100%; }
+
 #kss-node .kss-modifier__name,
 #kss-node .kss-modifier__description {
   margin: 2.4em 0;

@@ -4,6 +4,11 @@
     max-width: none;
   }
 
+  .kss-modifier__wrapper {
+    float: left;
+    width: 100%;
+  }
+
   .kss-modifier__name,
   .kss-modifier__description {
     margin: 2.4em 0;
