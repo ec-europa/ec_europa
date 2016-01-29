@@ -8547,9 +8547,16 @@ Listing
 Component used to render list of entities, usually the landing page of a class.
 It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.
 
+Styleguide listing.0
+*/
+/*
+Listing default
+
+Default implementation of the listing component
+
 Markup: html/listing.html
 
-Styleguide listing
+Styleguide listing.0.1
 */
 /*
 Listing column left
@@ -8558,25 +8565,33 @@ This is actually a modifier that applies changes to the listing__item element
 
 Markup: html/listing--column-left.html
 
-Styleguide listing.a
+.listing__column-second--no-link
+.listing__column-main--sidebar-next
+
+Styleguide listing.0.2
+*/
+/*
+Listing layouts
+
+Styleguide listing.1
 */
 /*
 Listing two columns
 
+This is a way to put two listings in two different columns
+
 Markup: html/listing__wrapper--two-columns.html
 
-.listing__wrapper--two-columns - Listing with two columns
-
-Styleguide listing.c
+Styleguide listing.1.1
 */
 /*
 Listing three columns
 
+This is a way to put three listings in three different columns
+
 Markup: html/listing__wrapper--three-columns.html
 
-.listing__wrapper--three-columns - Listing with three colums
-
-Styleguide listing.d
+Styleguide listing.1.2
 */
 /*
 Simple listing (title + text) modifiers
@@ -8591,7 +8606,7 @@ Markup: html/listing--teaser.html
 .listing--no-border - Listing with no border
 .listing--nostripe - Listing with no stripe
 
-Styleguide listing.e
+Styleguide listing.2
 */
 /*
 Listing title
@@ -8603,7 +8618,7 @@ Markup: html/listing--title.html
 .listing--title-large - Listing title large
 .listing--title-medium - Listing title medium
 
-Styleguide listing.f
+Styleguide listing.3
 */
 /*
 Listing Agenda
@@ -8612,14 +8627,8 @@ Listing for event like entities.
 
 Markup: html/listing--agenda.html
 
-Styleguide listing.g
+Styleguide listing.4
 */
-.kss-description > p {
-  max-width: none; }
-
-#kssref-listing section[id^="kssref-listing-"] .kss-modifier__example:first-child {
-  display: none; }
-
 .listing--line-left .listing--teaser {
   padding-left: 0; }
 
@@ -10249,5 +10258,39 @@ Styleguide top-image
   .top-image picture {
     display: block;
     text-align: center; }
+
+.kss-description > p {
+  max-width: none; }
+
+.kss-modifier__name,
+.kss-modifier__description {
+  background: #ececec;
+  padding: 1em; }
+
+.kss-modifier__name::before {
+  content: "[Modifier] ";
+  font-size: 1.333em; }
+
+.kss-markup {
+  visibility: hidden;
+  max-height: 40px;
+  overflow: hidden;
+  position: relative; }
+  .kss-markup::before {
+    content: "Show html markup";
+    position: absolute;
+    visibility: visible;
+    right: 0;
+    background: #404040;
+    color: #fff;
+    padding: 0.2em 1em;
+    cursor: pointer;
+    font-weight: 600; }
+  .kss-markup:hover {
+    visibility: visible;
+    max-height: none; }
+    .kss-markup:hover::before {
+      background: #ececec;
+      color: #004494; }
 
 /*# sourceMappingURL=style-sass.css.map */

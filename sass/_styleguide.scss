@@ -1,0 +1,44 @@
+// Fixes for the styleguide.
+.kss-description > p {
+  max-width: none;
+}
+
+.kss-modifier__name,
+.kss-modifier__description {
+  background: $grey-lighter;
+  padding: 1em;
+}
+
+.kss-modifier__name::before {
+  content: "[Modifier] ";
+  font-size: $font-size-h3;
+}
+
+.kss-markup {
+  visibility: hidden;
+  max-height: 40px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "Show html markup";
+    position: absolute;
+    visibility: visible;
+    right: 0;
+    background: $grey-base;
+    color: #fff;
+    padding: 0.2em 1em;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  &:hover {
+    visibility: visible;
+    max-height: none;
+
+    &::before {
+      background: $grey-lighter;
+      color: $blue-dark;
+    }
+  }
+}

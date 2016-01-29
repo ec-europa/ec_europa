@@ -46,9 +46,17 @@ Listing
 Component used to render list of entities, usually the landing page of a class.
 It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.
 
+Styleguide listing.0
+*/
+
+/*
+Listing default
+
+Default implementation of the listing component
+
 Markup: html/listing.html
 
-Styleguide listing
+Styleguide listing.0.1
 */
 
 /*
@@ -58,28 +66,36 @@ This is actually a modifier that applies changes to the listing__item element
 
 Markup: html/listing--column-left.html
 
-Styleguide listing.a
+.listing__column-second--no-link
+.listing__column-main--sidebar-next
+
+Styleguide listing.0.2
 */
 
+/*
+Listing layouts
+
+Styleguide listing.1
+*/
 
 /*
 Listing two columns
 
+This is a way to put two listings in two different columns
+
 Markup: html/listing__wrapper--two-columns.html
 
-.listing__wrapper--two-columns - Listing with two columns
-
-Styleguide listing.c
+Styleguide listing.1.1
 */
 
 /*
 Listing three columns
 
+This is a way to put three listings in three different columns
+
 Markup: html/listing__wrapper--three-columns.html
 
-.listing__wrapper--three-columns - Listing with three colums
-
-Styleguide listing.d
+Styleguide listing.1.2
 */
 
 /*
@@ -95,7 +111,7 @@ Markup: html/listing--teaser.html
 .listing--no-border - Listing with no border
 .listing--nostripe - Listing with no stripe
 
-Styleguide listing.e
+Styleguide listing.2
 */
 
 /*
@@ -108,7 +124,7 @@ Markup: html/listing--title.html
 .listing--title-large - Listing title large
 .listing--title-medium - Listing title medium
 
-Styleguide listing.f
+Styleguide listing.3
 */
 
 /*
@@ -118,17 +134,10 @@ Listing for event like entities.
 
 Markup: html/listing--agenda.html
 
-Styleguide listing.g
+Styleguide listing.4
 */
 
-// Fixes for the styleguide.
-.kss-description > p {
-  max-width: none;
-}
 
-#kssref-listing section[id^="kssref-listing-"] .kss-modifier__example:first-child {
-  display: none;
-}
 
 .listing {
 }
@@ -189,16 +198,15 @@ ul.listing--title {
   }
 
   a.listing__title {
-
-    // External icon specific fixes
     &:after {
       line-height: 1.6;
     }
   }
 }
+
+// listing--title modifier.
 .listing--title {
   .listing__title {
-
     &:hover {
       text-decoration: underline !important;
     }
@@ -267,10 +275,12 @@ ul.listing--title {
     padding-bottom: 1em;
     padding-top: 1em;
   }
+
   .listing__title + * {
     line-height: 1.3;
     margin-top: 0;
   }
+
   .listing__item:first-child {
     border-top: none;
   }
@@ -356,10 +366,8 @@ ul.listing--title {
   }
 }
 
-a {
-  &.listing__title {
-    color: $brand-primary;
-  }
+a.listing__title {
+  color: $brand-primary;
 }
 
 
@@ -391,7 +399,6 @@ a {
 }
 
 // .listing__item element.
-
 .listing__item {
   border-bottom: 1px solid $grey-lighter;
   list-style: none;
@@ -435,7 +442,6 @@ a {
 
 
 // .listing__item-link element
-
 .listing__item-link {
   display: block;
   overflow: hidden;
@@ -458,14 +464,6 @@ a {
     }
   }
 }
-
-
-// .listing__column-second element
-//   Modifiers:
-//    .listing__column-second--no-link
-// .listing__column-main element:
-//   Modifiers:
-//    .listing__column-main--sidebar-next
 
 // For all the screens.
 .listing__column-second {
