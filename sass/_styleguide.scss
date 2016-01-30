@@ -41,32 +41,6 @@
   }
 
   .kss-markup {
-    visibility: hidden;
-    max-height: 40px;
-    overflow: hidden;
-    position: relative;
-
-    &::before {
-      content: "Show html markup";
-      position: absolute;
-      visibility: visible;
-      right: 0;
-      background: $grey-base;
-      color: #fff;
-      padding: 0.2em 1em;
-      cursor: pointer;
-      font-weight: 600;
-      clear: both;
-    }
-
-    &:hover {
-      visibility: visible;
-      max-height: none;
-
-      &::before {
-        background: transparent;
-        font-size: 0px;
-      }
-    }
+    @include show_hide();
   }
 }

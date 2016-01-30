@@ -1,47 +1,47 @@
-// SUMMARY (Components, elments, modifiers)
-// .listing component
+// SUMMARY (Components, elements, modifiers)
+//
+// .listing (component)
 //   Elements:
-//     .listing__wrapper
-//      Element modifiers:
-//       .listing__wrapper--maxwidth
-//       .listing__wrapper--two-columns
-//       .listing__wrapper--three-columns
-//       .listing__wrapper--row-two
-//       .listing__wrapper--row-three
+//    .listing__wrapper
+//     Element modifiers:
+//      .listing__wrapper--maxwidth
+//      .listing__wrapper--two-columns
+//      .listing__wrapper--three-columns
+//      .listing__wrapper--row-two
+//      .listing__wrapper--row-three
 //
-//     .listing__title
-//      Element modifiers: .listing__title--arrow
+//    .listing__title
+//     Element modifiers: .listing__title--arrow
 //
-//     .listing__item
-//      Element modifiers:
-//       .listing__item--fullwidth
+//    .listing__item
+//     Element modifiers:
+//      .listing__item--fullwidth
 //
-//     .listing__column-main
-//      Element modifiers:
-//       .listing__column-main--sidebar-next
+//    .listing__column-main
+//     Element modifiers:
+//      .listing__column-main--sidebar-next
 //
-//     .listing__column-second
-//      Element modifiers:
-//       .listing__column-second--no-link
+//    .listing__column-second
+//     Element modifiers:
+//      .listing__column-second--no-link
 //
-//     .listing__item-link
-//     .listing__date
+//    .listing__item-link
+//    .listing__date
 //
 //
 //   Component modifiers:
-//     .listing--short-spaced
-//     .listing--line-left
-//     .listing--title
-//     .listing--title-large
-//     .listing--title-medium
-//     .listing--person
-//     .listing--nostripe
-//     .listing--cta
-//     .listing--no-border
-//     .listing--no-padding
-//     .listing--agenda
-//     .listing--column-left
-//
+//    .listing--short-spaced
+//    .listing--line-left
+//    .listing--title
+//    .listing--title-large
+//    .listing--title-medium
+//    .listing--person
+//    .listing--nostripe
+//    .listing--cta
+//    .listing--no-border
+//    .listing--no-padding
+//    .listing--agenda
+//    .listing--column-left
 
 /*
 Listing
@@ -63,81 +63,16 @@ Markup: html/listing.html
 Styleguide listing.1
 */
 
-/*
-Listing column left
+.listing {
+  padding: 0;
+}
 
-This is actually a modifier that applies changes to the listing__item element.
-
-Markup: html/listing--column-left.html
-
-Styleguide listing.1.1
-*/
-
-/*
-Listing layouts
-
-Listing layouts are implemented as modifiers of the listing__wrapper element which is actually the container of the component.
-
-Styleguide listing.2
-*/
-
-/*
-Listing two columns
-
-This is a way to put two listings in two different columns.
-
-Markup: html/listing__wrapper--two-columns.html
-
-Styleguide listing.2.1
-*/
-
-/*
-Listing three columns
-
-This is a way to put three listings in three different columns.
-
-Markup: html/listing__wrapper--three-columns.html
-
-Styleguide listing.2.2
-*/
-
-/*
-Listing item two rows
-
-This is a way to put two listing_item in the same row.
-
-Markup: html/listing__wrapper--row-two.html
-
-Styleguide listing.2.3
-*/
-
-/*
-Listing item three rows
-
-This is a way to put three listing_item in the same row.
-
-Markup: html/listing__wrapper--row-three.html
-
-Styleguide listing.2.4
-*/
-
-
-/*
-Simple listing (title + text) modifiers
-
-In this section we collect many modifiers, in the example the listing--teaser version of the component has been used.
-
-Markup: html/listing--teaser.html
-
-.listing--cta - Listing CTA
-.listing--no-padding - Listing no padding
-.listing--short-spaced - Listing short spaced
-.listing--line-left - Listing line left
-.listing--no-border - Listing with no border
-.listing--nostripe - Listing with no stripe
-
-Styleguide listing.3
-*/
+// .listing--priorities modifier.
+.listing--priorities {
+  .meta {
+    display: none;
+  }
+}
 
 /*
 Listing title
@@ -152,44 +87,7 @@ Markup: html/listing--title.html
 Styleguide listing.4
 */
 
-/*
-Listing Agenda
-
-Listing for event like entities.
-
-Markup: html/listing--agenda.html
-
-Styleguide listing.5
-*/
-
-.listing {
-  padding: 0;
-}
-
-// Modifier to add line on the left.
-.listing--line-left {
-
-  .listing--teaser {
-    padding-left: 0;
-  }
-
-  .listing__item {
-    border-top: none !important;
-    border-bottom: none !important;
-    border-left: 5px solid $blue-dark;
-    padding: $font-size-mid/2 0 $font-size-mid/2 $font-size-mid;
-    margin: $font-size-mid/2 0;
-  }
-}
-
-// .listing--priorities modifier.
-.listing--priorities {
-  .meta {
-    display: none;
-  }
-}
-
-// .listing--title modifier.
+// listing--title modifier.
 .listing--title,
 ul.listing--title {
   padding: 0;
@@ -231,7 +129,6 @@ ul.listing--title {
   }
 }
 
-// listing--title modifier.
 .listing--title {
   .listing__title {
     &:hover {
@@ -249,8 +146,8 @@ ul.listing--title {
   }
 }
 
+// .listing--title-large modifier.
 .listing--title-large {
-
   .listing__title {
     font-size: $font-size-h2;
   }
@@ -262,6 +159,16 @@ ul.listing--title {
     font-size: $font-size-h3;
   }
 }
+
+/*
+Listing Agenda
+
+Listing for event like entities.
+
+Markup: html/listing--agenda.html
+
+Styleguide listing.5
+*/
 
 // .listing--agenda modifier.
 .listing--agenda {
@@ -310,6 +217,39 @@ ul.listing--title {
 
   .listing__item:first-child {
     border-top: none;
+  }
+}
+
+/*
+Simple listing (title + text) modifiers
+
+In this section we collect many modifiers, in the example the listing--teaser version of the component has been used.
+
+Markup: html/listing--teaser.html
+
+.listing--cta - Listing CTA
+.listing--no-padding - Listing no padding
+.listing--short-spaced - Listing short spaced
+.listing--line-left - Listing line left
+.listing--no-border - Listing with no border
+.listing--nostripe - Listing with no stripe
+
+Styleguide listing.3
+*/
+
+// Modifier to add line on the left.
+.listing--line-left {
+
+  .listing--teaser {
+    padding-left: 0;
+  }
+
+  .listing__item {
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: 5px solid $blue-dark;
+    padding: $font-size-mid/2 0 $font-size-mid/2 $font-size-mid;
+    margin: $font-size-mid/2 0;
   }
 }
 
@@ -403,7 +343,6 @@ a.listing__title {
   color: $brand-primary;
 }
 
-
 // .listing__date element.
 .listing__date {
   float: left;
@@ -420,15 +359,6 @@ a.listing__title {
 // .listing__wrapper element.
 .listing__wrapper {
   margin-bottom: 1.667em;
-}
-
-// .listing__wrapper--maxwidth.
-.listing__wrapper--maxwidth {
-  @extend .row;
-
-  .listing {
-    @extend .col-md-8;
-  }
 }
 
 // .listing__item element.
@@ -477,7 +407,6 @@ a.listing__title {
     }
   }
 }
-
 
 // .listing__item-link element
 .listing__item-link {
@@ -562,10 +491,8 @@ a.listing__title {
   }
 }
 
-
 // .listing__title element.
 //  Modifiers: .listing__title--arrow.
-
 .listing__title {
   font-family: $font-family-sans-serif;
   font-size: 1em;
@@ -596,7 +523,6 @@ a.listing__title {
   }
 }
 
-
 // .listing__read_more element.
 .listing__read-more {
   margin-top: 0.5em;
@@ -617,7 +543,16 @@ a.listing__title {
   }
 }
 
-// .listing--column-left modifier.
+/*
+Listing column left
+
+This is actually a modifier that applies changes to the listing__item element.
+
+Markup: html/listing--column-left.html
+
+Styleguide listing.1.1
+*/
+
 .listing--column-left {
   .listing__column-main {
     width: auto;
@@ -630,6 +565,63 @@ a.listing__title {
     float: left;
     padding-right: 15px;
     padding-left: 0;
+  }
+}
+
+/*
+Listing layouts
+
+Listing layouts are implemented as modifiers of the listing__wrapper element which is actually the container of the component.
+
+Styleguide listing.2
+*/
+
+/*
+Listing two columns
+
+This is a way to put two listings in two different columns.
+
+Markup: html/listing__wrapper--two-columns.html
+
+Styleguide listing.2.1
+*/
+
+/*
+Listing three columns
+
+This is a way to put three listings in three different columns.
+
+Markup: html/listing__wrapper--three-columns.html
+
+Styleguide listing.2.2
+*/
+
+/*
+Listing item two rows
+
+This is a way to put two listing_item in the same row.
+
+Markup: html/listing__wrapper--row-two.html
+
+Styleguide listing.2.3
+*/
+
+/*
+Listing item three rows
+
+This is a way to put three listing_item in the same row.
+
+Markup: html/listing__wrapper--row-three.html
+
+Styleguide listing.2.4
+*/
+
+// .listing__wrapper--maxwidth.
+.listing__wrapper--maxwidth {
+  @extend .row;
+
+  .listing {
+    @extend .col-md-8;
   }
 }
 
