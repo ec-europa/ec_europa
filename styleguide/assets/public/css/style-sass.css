@@ -7193,7 +7193,8 @@ Styleguide form.feedback-message
   padding-left: 2.500em; }
 
 .feedback-form__btn {
-  width: 12em; }
+  width: 12em;
+  margin-left: 2.500em; }
   .feedback-form__btn .icon, .feedback-form__btn .search-form__btn {
     font-size: 0.778em; }
 
