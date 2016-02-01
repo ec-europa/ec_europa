@@ -19,7 +19,7 @@
   text-decoration: none;
   color: $brand-primary;
   display: block;
-  padding: 0.667em 0 0.556em;
+  padding: 0.667em 0 0.556em 2.500em;
   font-size: $font-size-little;
 
   &:hover,
@@ -36,7 +36,7 @@
 .feedback-form__text {
   font-weight: bold;
   margin-bottom: 0.5em;
-  margin-left: 1.944em;
+  padding-left: 2.500em;
 }
 
 .feedback-form__btn {
@@ -80,14 +80,25 @@
           text-decoration: underline;
         }
       }
+
+      // Removing ugly dotted line.
+      &::-moz-focus-inner,
+      &:focus {
+        border: 0;
+        outline: none;
+      }
     }
 
     .accordion-body {
-      padding-left: 25px;
+      padding: 0 1.563em;
       .accordion-inner {
-        margin-top: 15px;
+        margin-top: 0.938em;
       }
     }
+  }
+
+  .accordion-heading {
+    padding-left: 1.563em;
   }
 }
 
@@ -105,9 +116,17 @@
 
   #feedback-form__accordion {
     overflow: hidden;
+    .accordion-heading {
+      padding-left: 0;
+    }
   }
 }
 
+@include breakpoint(screen-md-min) {
+  .feedback-form__trigger {
+    padding: 0.667em 0 0.556em 0;
+  }
+}
 
 .no-svg {
   // Bootstrap accordion

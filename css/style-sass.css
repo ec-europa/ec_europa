@@ -7179,7 +7179,7 @@ Styleguide form.feedback-message
   text-decoration: none;
   color: #004494;
   display: block;
-  padding: 0.667em 0 0.556em;
+  padding: 0.667em 0 0.556em 2.500em;
   font-size: 0.889em; }
   .feedback-form__trigger:hover, .feedback-form__trigger:active, .feedback-form__trigger:focus {
     text-decoration: underline; }
@@ -7190,7 +7190,7 @@ Styleguide form.feedback-message
 .feedback-form__text {
   font-weight: bold;
   margin-bottom: 0.5em;
-  margin-left: 1.944em; }
+  padding-left: 2.500em; }
 
 .feedback-form__btn {
   width: 12em; }
@@ -7221,10 +7221,15 @@ Styleguide form.feedback-message
         font-weight: 400; }
         #feedback-form__accordion .accordion-group .accordion-toggle.collapsed:focus {
           text-decoration: underline; }
+      #feedback-form__accordion .accordion-group .accordion-toggle::-moz-focus-inner, #feedback-form__accordion .accordion-group .accordion-toggle:focus {
+        border: 0;
+        outline: none; }
     #feedback-form__accordion .accordion-group .accordion-body {
-      padding-left: 25px; }
+      padding: 0 1.563em; }
       #feedback-form__accordion .accordion-group .accordion-body .accordion-inner {
-        margin-top: 15px; }
+        margin-top: 0.938em; }
+  #feedback-form__accordion .accordion-heading {
+    padding-left: 1.563em; }
 
 @media (min-width: 768px) {
   .feedback-form__text {
@@ -7235,7 +7240,13 @@ Styleguide form.feedback-message
     margin-left: 12.055em;
     font-size: 1em; }
   #feedback-form__accordion {
-    overflow: hidden; } }
+    overflow: hidden; }
+    #feedback-form__accordion .accordion-heading {
+      padding-left: 0; } }
+
+@media (min-width: 992px) {
+  .feedback-form__trigger {
+    padding: 0.667em 0 0.556em 0; } }
 
 .no-svg #feedback-form__accordion .accordion-group .accordion-toggle {
   background: url("../images/png/checkbox.png") no-repeat; }
