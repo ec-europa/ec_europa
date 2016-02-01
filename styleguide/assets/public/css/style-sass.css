@@ -5812,9 +5812,9 @@ Form
 Styleguide form
 */
 .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
-  color: #575757;
+  color: #404040;
   background-color: #ffffff;
-  border: 2px solid #575757;
+  border: 2px solid #404040;
   border-radius: 0;
   margin-bottom: 1.1em;
   min-height: 2.75em;
@@ -5933,7 +5933,7 @@ Markup: html/label.html
 Styleguide form.label
 */
 .form_label, form .label, label {
-  color: #575757;
+  color: #404040;
   font-size: 0.889em;
   display: block;
   text-align: left;
@@ -6230,14 +6230,14 @@ Styleguide form.select
   .select::-ms-expand, select::-ms-expand {
     display: none; }
   .select.form-control, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
-    background: url("../images/svg/arrow-down--white.svg"), linear-gradient(to bottom, #575757, #575757);
+    background: url("../images/svg/arrow-down--white.svg"), linear-gradient(to bottom, #404040, #404040);
     background-repeat: no-repeat;
     background-position: right 0.764em center, right;
     background-size: 1.1em 0.6134969325em, 2.75em 100% !important;
     transition: none;
     padding-right: 50px; }
     .no-svg .select.form-control, .no-svg select.form-control, .no-svg .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .ui-datepicker .ui-datepicker-header .ui-datepicker-title .no-svg select {
-      background: url("../images/png/arrow-down--white.png"), linear-gradient(to bottom, #575757, #575757); }
+      background: url("../images/png/arrow-down--white.png"), linear-gradient(to bottom, #404040, #404040); }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       .select.form-control, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
         background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }

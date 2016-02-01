@@ -82,9 +82,9 @@ $form-control-height:                             2.750em; //44px basing on form
 // Form colors.
 $form-control-color-disabled:                     $grey;
 
-$form-control-text-color:                         $grey-dark;
+$form-control-text-color:                         $grey-base;
 $form-control-text-color-focus:                   #000;
-$form-control-border-color:                       $grey-dark;
+$form-control-border-color:                       $grey-base;
 $form-control-border-color-focus:                 $yellow-light;
 $form-control-background-color:                   #ffffff;
 $form-control-background-color-disabled:          $grey-light;
@@ -93,7 +93,7 @@ $state-danger-text:                               $brand-danger;
 
 // Select.
 $form-control-border-select-color-hover:          $brand-primary;
-$form-control-border-select-color-down:           $grey-dark;
+$form-control-border-select-color-down:           $grey-base;
 
 
 // Checkbox and radio

@@ -444,28 +444,9 @@
         <div class="kss-modifier__example">
           <form>
   <div class="form-group">
-    <label for="example-input-id-1">Default Field Label</label>
-    <p class="help-block">This is some help text.</p>
-    <input type="text" class="form-control" id="example-input-id-1" placeholder="Some text."/>
-  </div>
-
-  <div class="form-group focus">
-    <label for="example-input-id-2">Focused Field</label>
+    <label for="field-ID-1">Default Field</label>
     <p class="help-block">This is some placeholder help text.</p>
-    <input type="text" name="field-name-3" id="example-input-id-2" class="form-control focus" placeholder="Some placeholder text."/>
-  </div>
-
-  <div class="form-group is-disabled">
-    <label for="example-input-id-3">Disabled Field</label>
-    <p class="help-block">This is some placeholder help text.</p>
-    <input type="text" name="field-name-2" id="example-input-id-3" class="form-control" disabled placeholder="Some placeholder text."/>
-  </div>
-
-  <div class="form-group has-error">
-    <label for="example-input-id-4">Error on a field</label>
-    <p class="help-block">This is some placeholder help text.</p>
-    <input type="text" name="field-name-4" id="example-input-id-4" class="form-control has-error" placeholder="Some placeholder text."/>
-    <p class="form-field-feedback">Some feedback message</p>
+    <input type="text" name="field-name-1" id="field-ID-1" class="form-control" placeholder="Some placeholder text."/>
   </div>
 </form>
 
@@ -475,28 +456,9 @@
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
   &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;example-input-id-1&quot;&gt;Default Field Label&lt;/label&gt;
-    &lt;p class=&quot;help-block&quot;&gt;This is some help text.&lt;/p&gt;
-    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;example-input-id-1&quot; placeholder=&quot;Some text.&quot;/&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;form-group focus&quot;&gt;
-    &lt;label for=&quot;example-input-id-2&quot;&gt;Focused Field&lt;/label&gt;
+    &lt;label for=&quot;field-ID-1&quot;&gt;Default Field&lt;/label&gt;
     &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
-    &lt;input type=&quot;text&quot; name=&quot;field-name-3&quot; id=&quot;example-input-id-2&quot; class=&quot;form-control focus&quot; placeholder=&quot;Some placeholder text.&quot;/&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;form-group is-disabled&quot;&gt;
-    &lt;label for=&quot;example-input-id-3&quot;&gt;Disabled Field&lt;/label&gt;
-    &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
-    &lt;input type=&quot;text&quot; name=&quot;field-name-2&quot; id=&quot;example-input-id-3&quot; class=&quot;form-control&quot; disabled placeholder=&quot;Some placeholder text.&quot;/&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;form-group has-error&quot;&gt;
-    &lt;label for=&quot;example-input-id-4&quot;&gt;Error on a field&lt;/label&gt;
-    &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
-    &lt;input type=&quot;text&quot; name=&quot;field-name-4&quot; id=&quot;example-input-id-4&quot; class=&quot;form-control has-error&quot; placeholder=&quot;Some placeholder text.&quot;/&gt;
-    &lt;p class=&quot;form-field-feedback&quot;&gt;Some feedback message&lt;/p&gt;
+    &lt;input type=&quot;text&quot; name=&quot;field-name-1&quot; id=&quot;field-ID-1&quot; class=&quot;form-control&quot; placeholder=&quot;Some placeholder text.&quot;/&gt;
   &lt;/div&gt;
 &lt;/form&gt;
 </code></pre>
@@ -791,21 +753,69 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="form-group">
-  <label for="field-ID-1">Default Field</label>
-  <p class="help-block">This is some placeholder help text.</p>
-  <input type="text" name="field-name-1" id="field-ID-1" class="form-control" placeholder="Some placeholder text."/>
-</div>
+          <form>
+  <div class="form-group">
+    <label for="example-input-id-1">Text Input - default with placeholder</label>
+    <p class="help-block">This is some help text.</p>
+    <input type="text" class="form-control" id="example-input-id-1" placeholder="Some placeholder text."/>
+  </div>
+
+  <div class="form-group focus">
+    <label for="example-input-id-2">Text Input - active + focus</label>
+    <p class="help-block">This is some placeholder help text.</p>
+    <input type="text" name="field-name-3" id="example-input-id-2" class="form-control is-focused"
+           value="Some entered text"/>
+  </div>
+
+  <div class="form-group is-disabled">
+    <label for="example-input-id-3">Text Input - disabled</label>
+    <p class="help-block">This is some placeholder help text.</p>
+    <input type="text" name="field-name-2" id="example-input-id-3" class="form-control" disabled
+           placeholder="Some placeholder text."/>
+  </div>
+
+  <div class="form-group has-error">
+    <label for="example-input-id-4">Text Input - error on a field</label>
+    <p class="help-block">This is some placeholder help text.</p>
+    <input type="text" name="field-name-4" id="example-input-id-4" class="form-control has-error"
+           placeholder="Some placeholder text."/>
+    <p class="form-field-feedback">Some feedback message</p>
+  </div>
+</form>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label for=&quot;field-ID-1&quot;&gt;Default Field&lt;/label&gt;
-  &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
-  &lt;input type=&quot;text&quot; name=&quot;field-name-1&quot; id=&quot;field-ID-1&quot; class=&quot;form-control&quot; placeholder=&quot;Some placeholder text.&quot;/&gt;
-&lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;example-input-id-1&quot;&gt;Text Input - default with placeholder&lt;/label&gt;
+    &lt;p class=&quot;help-block&quot;&gt;This is some help text.&lt;/p&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;example-input-id-1&quot; placeholder=&quot;Some placeholder text.&quot;/&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group focus&quot;&gt;
+    &lt;label for=&quot;example-input-id-2&quot;&gt;Text Input - active + focus&lt;/label&gt;
+    &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
+    &lt;input type=&quot;text&quot; name=&quot;field-name-3&quot; id=&quot;example-input-id-2&quot; class=&quot;form-control is-focused&quot;
+           value=&quot;Some entered text&quot;/&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group is-disabled&quot;&gt;
+    &lt;label for=&quot;example-input-id-3&quot;&gt;Text Input - disabled&lt;/label&gt;
+    &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
+    &lt;input type=&quot;text&quot; name=&quot;field-name-2&quot; id=&quot;example-input-id-3&quot; class=&quot;form-control&quot; disabled
+           placeholder=&quot;Some placeholder text.&quot;/&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group has-error&quot;&gt;
+    &lt;label for=&quot;example-input-id-4&quot;&gt;Text Input - error on a field&lt;/label&gt;
+    &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
+    &lt;input type=&quot;text&quot; name=&quot;field-name-4&quot; id=&quot;example-input-id-4&quot; class=&quot;form-control has-error&quot;
+           placeholder=&quot;Some placeholder text.&quot;/&gt;
+    &lt;p class=&quot;form-field-feedback&quot;&gt;Some feedback message&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
 </code></pre>
       </div>
 
