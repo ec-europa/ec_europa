@@ -21,3 +21,8 @@ ol {
     padding-left: 18px;
   }
 }
+
+li > ul,
+li > ol {
+  font-size: $font-size-little;
+}

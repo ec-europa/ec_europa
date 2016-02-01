@@ -6009,6 +6009,10 @@ ol {
   margin-bottom: 30px;
   padding-left: 18px; }
 
+li > ul,
+li > ol {
+  font-size: 0.889em; }
+
 .navbar-toggle {
   border-radius: 0px;
   border: none; }
