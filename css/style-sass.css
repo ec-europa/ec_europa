@@ -5749,13 +5749,11 @@ Styleguide form.checkbox
   margin-bottom: 2px;
   margin-top: 0; }
   .checkbox label {
-    color: #575757;
+    color: #404040;
     height: 2.75em;
     line-height: 2.75em;
     display: block;
-    text-align: left;
-    border: transparent solid 2px;
-    border-radius: 0; }
+    text-align: left; }
   .checkbox input {
     margin: 1px 0 0 13px; }
   .checkbox input[type="checkbox"] {
@@ -5763,32 +5761,26 @@ Styleguide form.checkbox
     margin-left: -9999px;
     position: relative;
     float: left; }
+    .checkbox input[type="checkbox"] + label:before {
+      border: 2px solid transparent;
+      border-radius: 8px;
+      width: 1.25em;
+      height: 1.25em;
+      padding: 1.25em 0 0 1.25em; }
+    .checkbox input[type="checkbox"]:focus + label:before {
+      border: 2px solid #ffc412; }
     .checkbox input[type="checkbox"]:not(checked) + label {
-      background-color: #ececec;
       padding-left: 2.778em; }
       .checkbox input[type="checkbox"]:not(checked) + label:before {
         content: '';
         position: absolute;
         display: block;
-        width: 1.25em;
-        height: 1.25em;
         top: 0.8em;
         left: 1em;
-        background: url("../images/svg/checkbox-unchecked.svg") no-repeat;
+        background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
         background-size: auto 1.25em; }
-    .checkbox input[type="checkbox"]:checked + label {
-      color: #ffffff;
-      background-color: #004494; }
-      .checkbox input[type="checkbox"]:checked + label:before {
-        background-image: url("../images/svg/checkbox-checked.svg"); }
-    .checkbox input[type="checkbox"]:hover:not(checked) + label {
-      color: #575757;
-      border: #004494 solid 2px;
-      background-color: #ffffff; }
-    .checkbox input[type="checkbox"]:hover:checked + label {
-      color: #ffffff;
-      border: #ffd617 solid 2px;
-      background-color: #004494; }
+    .checkbox input[type="checkbox"]:checked + label:before {
+      background-image: url("../images/svg/checkbox-checked--blue.svg"); }
 
 .no-svg .checkbox label {
   height: auto;
