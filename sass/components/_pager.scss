@@ -25,7 +25,6 @@ Styleguide pager
       font-size: $font-size-little;
       display: inline-block;
       text-align: center;
-      line-height: normal;
       vertical-align: middle;
 
       // Old browsers.
@@ -40,15 +39,18 @@ Styleguide pager
   }
 }
 
-// Ajax throbber should not make any button larger in height.
+// Common traits between back and forward buttons.
 .pager__back,
 .pager__forward {
   .pager__btn {
+    width: 4em;
+
+    // Ajax throbber should not make any button larger in height.
     overflow: hidden;
   }
 }
 
-// forward as a child of pager
+// Forward specific.
 .pager__forward {
   text-align: right;
   margin-right: 0.625em;
@@ -58,24 +60,29 @@ Styleguide pager
 .pager__back-arrow,
 .pager__forward-arrow {
   height: 1.250em;
-  font-size: 1.3em;
-
   display: inline-block;
   position: relative;
 }
 
+// Mobile-first does not contain button labels.
 .pager__forward-text {
   display: none;
 }
 
 .pager__middle {
   background: $grey-lighter;
-  font-size: $font-size-little;
 }
 
 .pager__dropdown {
+  // Cleaning background.
+  background: none;
+  &:hover {
+    background: none;
+  }
+
   border: none;
   cursor: pointer;
+  font-size: $font-size-little;
 
   -webkit-appearance: none;
   -moz-appearance: none;

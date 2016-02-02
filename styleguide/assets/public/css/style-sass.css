@@ -9562,7 +9562,6 @@ Styleguide pager
       font-size: 0.889em;
       display: inline-block;
       text-align: center;
-      line-height: normal;
       vertical-align: middle;
       *zoom: 1;
       *display: inline; }
@@ -9571,6 +9570,7 @@ Styleguide pager
 
 .pager__back .pager__btn,
 .pager__forward .pager__btn {
+  width: 4em;
   overflow: hidden; }
 
 .pager__forward {
@@ -9580,7 +9580,6 @@ Styleguide pager
 .pager__back-arrow,
 .pager__forward-arrow {
   height: 1.250em;
-  font-size: 1.3em;
   display: inline-block;
   position: relative; }
 
@@ -9588,15 +9587,18 @@ Styleguide pager
   display: none; }
 
 .pager__middle {
-  background: #ececec;
-  font-size: 0.889em; }
+  background: #ececec; }
 
 .pager__dropdown {
+  background: none;
   border: none;
   cursor: pointer;
+  font-size: 0.889em;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
+  .pager__dropdown:hover {
+    background: none; }
 
 .no-svg .pager__combo-dropdown {
   background-image: url("../images/png/arrow-down-blue.png"); }
