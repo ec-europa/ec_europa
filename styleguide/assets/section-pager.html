@@ -281,19 +281,13 @@
             <span class="pager__back-text sr-only">Previous</span>
         </a>
     </li>
-    <li class="pager__item pager__combo">
-        <span class="pager__combo-upper">
-            <select class="pager__combo-dropdown">
-                <option value="/filter?value=test">Page 1</option>
-                <option value="/filter?value=test&amp;page=1">Page 2</option>
-                <option value="" selected="selected">Page 3</option>
-                <option value="/filter?value=test&amp;page=3">Page 4</option>
-            </select>
-        </span>
-        <span class="pager__combo-container">
-            <span class="pager__combo-current">page 3</span>
-            <span class="pager__combo-total">of 4</span>
-        </span>
+    <li class="pager__item pager__middle">
+        <select class="pager__dropdown">
+            <option value="/filter?value=test">Page 1 of 20</option>
+            <option value="/filter?value=test&amp;page=1">Page 2 of 20</option>
+            <option value="" selected="selected">Page 3 of 20</option>
+            <option value="/filter?value=test&amp;page=3">Page 4 of 20</option>
+        </select>
     </li>
     <li class="pager__item pager__forward">
         <a class="pager__btn" href="/filter?value=test&amp;page=3" title="Forward">
@@ -314,19 +308,13 @@
             &lt;span class=&quot;pager__back-text sr-only&quot;&gt;Previous&lt;/span&gt;
         &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;pager__item pager__combo&quot;&gt;
-        &lt;span class=&quot;pager__combo-upper&quot;&gt;
-            &lt;select class=&quot;pager__combo-dropdown&quot;&gt;
-                &lt;option value=&quot;/filter?value=test&quot;&gt;Page 1&lt;/option&gt;
-                &lt;option value=&quot;/filter?value=test&amp;amp;page=1&quot;&gt;Page 2&lt;/option&gt;
-                &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Page 3&lt;/option&gt;
-                &lt;option value=&quot;/filter?value=test&amp;amp;page=3&quot;&gt;Page 4&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/span&gt;
-        &lt;span class=&quot;pager__combo-container&quot;&gt;
-            &lt;span class=&quot;pager__combo-current&quot;&gt;page 3&lt;/span&gt;
-            &lt;span class=&quot;pager__combo-total&quot;&gt;of 4&lt;/span&gt;
-        &lt;/span&gt;
+    &lt;li class=&quot;pager__item pager__middle&quot;&gt;
+        &lt;select class=&quot;pager__dropdown&quot;&gt;
+            &lt;option value=&quot;/filter?value=test&quot;&gt;Page 1 of 20&lt;/option&gt;
+            &lt;option value=&quot;/filter?value=test&amp;amp;page=1&quot;&gt;Page 2 of 20&lt;/option&gt;
+            &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Page 3 of 20&lt;/option&gt;
+            &lt;option value=&quot;/filter?value=test&amp;amp;page=3&quot;&gt;Page 4 of 20&lt;/option&gt;
+        &lt;/select&gt;
     &lt;/li&gt;
     &lt;li class=&quot;pager__item pager__forward&quot;&gt;
         &lt;a class=&quot;pager__btn&quot; href=&quot;/filter?value=test&amp;amp;page=3&quot; title=&quot;Forward&quot;&gt;

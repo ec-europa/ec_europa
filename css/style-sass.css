@@ -9551,111 +9551,55 @@ Styleguide pager
   font-weight: bold;
   margin: 0.938em auto;
   overflow: hidden; }
-
-.pager__item {
-  list-style: none;
-  float: left; }
-
-.pager__btn {
-  color: #fff;
-  background: #004494;
-  display: block;
-  font-size: 0.889em;
-  margin: 0;
-  padding: 1.250em 1.563em;
-  line-height: 1em;
-  text-align: center; }
-  .pager__btn:hover, .pager__btn:focus, .pager__btn:active, .pager__btn:visited {
-    color: #fff; }
+  .pager > li.pager__item {
+    float: left;
+    line-height: 3.750em;
+    list-style: none; }
+    .pager > li.pager__item > a.pager__btn {
+      color: #fff;
+      margin: 0;
+      background: #004494;
+      font-size: 0.889em;
+      display: inline-block;
+      text-align: center;
+      line-height: normal;
+      vertical-align: middle;
+      *zoom: 1;
+      *display: inline; }
+      .pager > li.pager__item > a.pager__btn:hover, .pager > li.pager__item > a.pager__btn:focus, .pager > li.pager__item > a.pager__btn:active, .pager > li.pager__item > a.pager__btn:visited {
+        color: #fff; }
 
 .pager__back .pager__btn,
 .pager__forward .pager__btn {
   overflow: hidden; }
 
 .pager__forward {
-  float: right;
   text-align: right;
   margin-right: 0.625em; }
 
-.arrow-sizes-proto {
-  height: 1.250em;
-  width: 0.625em;
-  font-size: 1.3em; }
-
 .pager__back-arrow,
 .pager__forward-arrow {
+  height: 1.250em;
+  font-size: 1.3em;
   display: inline-block;
   position: relative; }
 
 .pager__forward-text {
   display: none; }
 
-.pager__combo {
-  display: none;
+.pager__middle {
   background: #ececec;
-  font-size: 0.889em;
-  text-align: center;
-  margin: 0 3px;
-  height: 80px;
-  width: 180px; }
-  .pager__combo.first {
-    margin-left: 83px; }
+  font-size: 0.889em; }
 
-.pager__combo-upper {
-  position: relative; }
-
-.pager__combo-dropdown {
-  background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 125px center;
-  background-size: 15px 10px;
+.pager__dropdown {
   border: none;
-  color: #004494;
   cursor: pointer;
-  display: block;
-  margin-top: 15px;
-  padding: 0 29%;
-  width: 100%;
-  clear: both;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
 
-.pager__combo-container {
-  display: inline-block; }
-
-.pager__combo-current {
-  display: none;
-  padding-top: 20px; }
-
-.pager__combo-total {
-  display: inline-block;
-  font-weight: normal; }
-
-.no-js .pager__combo-current {
-  display: inline-block; }
-
-.no-js .pager__combo-dropdown {
-  display: none; }
-
 .no-svg .pager__combo-dropdown {
   background-image: url("../images/png/arrow-down-blue.png"); }
-
-@media (min-width: 530px) {
-  .pager {
-    width: 460px; }
-  .pager__combo {
-    display: block; }
-  .pager__back {
-    width: auto; }
-    .pager__back .pager__btn {
-      width: 80px; }
-  .pager__forward {
-    float: none;
-    width: 160px; }
-  .pager__forward-text {
-    display: inline;
-    padding-left: 15px;
-    padding-top: 4px;
-    float: left; } }
 
 .region-content ul.pager {
   margin: 15px auto; }
