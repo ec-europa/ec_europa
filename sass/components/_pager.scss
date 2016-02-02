@@ -10,7 +10,7 @@ Styleguide pager
 
 .pager {
   font-weight: bold;
-  margin: 15px auto;
+  margin: 0.938em auto;
   overflow: hidden;
 }
 
@@ -25,7 +25,7 @@ Styleguide pager
   display: block;
   font-size: $font-size-little;
   margin: 0;
-  padding: 30px 35px;
+  padding: 1.250em 1.563em;
   line-height: 1em;
   text-align: center;
 
@@ -35,46 +35,33 @@ Styleguide pager
   }
 }
 
-// back as a child of pager
-.pager__back {
-  width: 45%;
-
-  // Ajax throbber should not make button larger in height
+// Ajax throbber should not make any button larger in height.
+.pager__back,
+.pager__forward {
   .pager__btn {
-    height: 80px;
     overflow: hidden;
   }
-}
-
-.pager__back-arrow {
-  display: inline-block;
-  height: 20px;
-  width: 10px;
-  position: relative;
-  left: -5px;
-  font-size: 1.3em;
 }
 
 // forward as a child of pager
 .pager__forward {
-  display: inline-block;
   float: right;
-  width: 45%;
   text-align: right;
-  margin-right: 10px;
-
-  // Ajax throbber should not make button larger in height
-  .pager__btn {
-    height: 80px;
-    overflow: hidden;
-  }
+  margin-right: 0.625em;
 }
 
-.pager__forward-arrow {
-  padding-left: 10px;
-  height: 20px;
-  display: inline-block;
+// Arrows inside the pager items.
+// Separate size instructions.
+.arrow-sizes-proto {
+  height: 1.250em;
+  width: 0.625em;
   font-size: 1.3em;
+}
+
+.pager__back-arrow,
+.pager__forward-arrow {
+  @extend .arrow-sizes;
+  display: inline-block;
   position: relative;
 }
 

@@ -1286,7 +1286,6 @@ function europa_pager($variables) {
     );
     // When there is more than one page, create the pager list.
     if ($i != $pager_max) {
-      $select = array();
       if ($li_first && $i > 1) {
         $items[] = array(
           'class' => array('pager__item select'),

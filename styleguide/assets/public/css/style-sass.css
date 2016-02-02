@@ -9549,7 +9549,7 @@ Styleguide pager
 */
 .pager {
   font-weight: bold;
-  margin: 15px auto;
+  margin: 0.938em auto;
   overflow: hidden; }
 
 .pager__item {
@@ -9562,41 +9562,29 @@ Styleguide pager
   display: block;
   font-size: 0.889em;
   margin: 0;
-  padding: 30px 35px;
+  padding: 1.250em 1.563em;
   line-height: 1em;
   text-align: center; }
   .pager__btn:hover, .pager__btn:focus, .pager__btn:active, .pager__btn:visited {
     color: #fff; }
 
-.pager__back {
-  width: 45%; }
-  .pager__back .pager__btn {
-    height: 80px;
-    overflow: hidden; }
-
-.pager__back-arrow {
-  display: inline-block;
-  height: 20px;
-  width: 10px;
-  position: relative;
-  left: -5px;
-  font-size: 1.3em; }
+.pager__back .pager__btn,
+.pager__forward .pager__btn {
+  overflow: hidden; }
 
 .pager__forward {
-  display: inline-block;
   float: right;
-  width: 45%;
   text-align: right;
-  margin-right: 10px; }
-  .pager__forward .pager__btn {
-    height: 80px;
-    overflow: hidden; }
+  margin-right: 0.625em; }
 
+.arrow-sizes-proto {
+  height: 1.250em;
+  width: 0.625em;
+  font-size: 1.3em; }
+
+.pager__back-arrow,
 .pager__forward-arrow {
-  padding-left: 10px;
-  height: 20px;
   display: inline-block;
-  font-size: 1.3em;
   position: relative; }
 
 .pager__forward-text {
