@@ -839,22 +839,42 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="form-group **validation-state**">
-  <label for="field-ID" >Field label</label>
+          <div class="form-group">
+  <label for="field-ID-1">Field label</label>
   <p class="help-block">This is some placeholder help text.</p>
-  <textarea name="field-name" id="field-ID" rows="4" class="form-control"></textarea>
-  <p class="feedback-message is-error">Some feedback message</p>
+  <textarea name="field-name" id="field-ID-1" rows="4" class="form-control"></textarea>
 </div>
+
+<div class="form-group">
+  <label for="field-ID-2">Field label - error</label>
+  <p class="help-block">This is some placeholder help text.</p>
+  <textarea name="field-name" id="field-ID-2" rows="4" class="form-control error"></textarea>
+  <div class="messages error">
+    <h3>Some feedback title</h3>
+    <p>Some feedback message</p>
+  </div>
+</div>
+
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;form-group **validation-state**&quot;&gt;
-  &lt;label for=&quot;field-ID&quot; &gt;Field label&lt;/label&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
+  &lt;label for=&quot;field-ID-1&quot;&gt;Field label&lt;/label&gt;
   &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
-  &lt;textarea name=&quot;field-name&quot; id=&quot;field-ID&quot; rows=&quot;4&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
-  &lt;p class=&quot;feedback-message is-error&quot;&gt;Some feedback message&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+  &lt;textarea name=&quot;field-name&quot; id=&quot;field-ID-1&quot; rows=&quot;4&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-group&quot;&gt;
+  &lt;label for=&quot;field-ID-2&quot;&gt;Field label - error&lt;/label&gt;
+  &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
+  &lt;textarea name=&quot;field-name&quot; id=&quot;field-ID-2&quot; rows=&quot;4&quot; class=&quot;form-control error&quot;&gt;&lt;/textarea&gt;
+  &lt;div class=&quot;messages error&quot;&gt;
+    &lt;h3&gt;Some feedback title&lt;/h3&gt;
+    &lt;p&gt;Some feedback message&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
       </div>
 
       </section>

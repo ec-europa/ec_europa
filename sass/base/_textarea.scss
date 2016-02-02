@@ -5,3 +5,9 @@ Markup: html/textarea.html
 
 Styleguide form.textarea
 */
+
+textarea {
+  &.error {
+    border-color: #da2131;
+  }
+}

@@ -6271,6 +6271,9 @@ Markup: html/textarea.html
 
 Styleguide form.textarea
 */
+textarea.error {
+  border-color: #da2131; }
+
 .container-fluid, .section__group--full-width > *, .block--full-width > *, .front .top-bar > *, .field--full-width > * {
   max-width: 1170px; }
 
