@@ -5641,6 +5641,8 @@ Styleguide buttons.btn-search
   border-color: #fff;
   background: #e2e2e2;
   color: #575757; }
+  .btn.btn-search:hover, .inpage-nav__navbar .btn-search.inpage-nav__toggle:hover {
+    background: #e2e2e2; }
 
 /*
 Button Collapse
@@ -5838,6 +5840,8 @@ Styleguide form
   .form-control.is-disabled, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-disabled {
     color: #b3b4b5;
     background-color: #e2e2e2; }
+  .form-control.select, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+    border-width: 1px; }
 
 /*
 Form Group
@@ -6535,9 +6539,18 @@ Styleguide banner.video
   margin-bottom: 0;
   max-width: 100%; }
 
-.banner__video iframe {
+.banner__video .content {
+  padding-bottom: 56.25%;
   width: 100%;
-  display: block; }
+  position: relative; }
+  .banner__video .content iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
 
 .banner__caption {
   background: #ececec;

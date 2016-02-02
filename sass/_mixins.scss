@@ -74,3 +74,10 @@
     }
   }
 }
+
+// Aspect ratio.
+@mixin aspect-ratio($ratio-or-width, $height: null) {
+  padding-bottom: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width));
+  width: 100%;
+  position: relative;
+}
