@@ -6203,8 +6203,8 @@ Select
 
 Markup: html/select.html
 
-:hover      - Select hover
-:focus      - Select focus
+.hover      - Select hover
+:focus      - Select focus (select to see style applied)
 .is-down    - Select is-down
 
 Styleguide form.select
@@ -6233,17 +6233,17 @@ Styleguide form.select
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       .select.form-control, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
         background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
-  .select:hover, select:hover {
+  .select:hover, select:hover, .select.hover, select.hover {
     border-color: #004494;
     background: url("../images/svg/arrow-down--white.svg"), linear-gradient(to bottom, #004494, #004494);
     background-repeat: no-repeat;
     background-position: right 0.764em center, right;
     background-size: 1.1em 0.6134969325em, 2.75em 100% !important;
     transition: none; }
-    .no-svg .select:hover, .no-svg select:hover {
+    .no-svg .select:hover, .no-svg select:hover, .no-svg .select.hover, .no-svg select.hover {
       background: url("../images/png/arrow-down--white.png"), linear-gradient(to bottom, #004494, #004494); }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      .select:hover, select:hover {
+      .select:hover, select:hover, .select.hover, select.hover {
         background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
   .select.is-down, select.is-down {
     background: url("../images/svg/arrow-down.svg"), linear-gradient(to bottom, #ffffff, #ffffff);
