@@ -10,7 +10,7 @@ Markup: html/btn.html
 .btn-secondary   - Button secondary
 .btn-ctn         - Button call to action
 .btn-ctn--border - Button call to action with border
-.btn-menu        - BUtton menu
+.btn-menu        - Button menu
 
 Styleguide buttons
 */
@@ -41,7 +41,7 @@ Styleguide buttons
   }
 
   &:focus {
-    outline: 2px solid $yellow-light;
+    outline: 5px solid $yellow-light;
     border-color: $yellow-light;
   }
 
@@ -96,7 +96,7 @@ Styleguide buttons
     &:hover,
     &:active {
       border-color: $text-color;
-      background: #fff;
+      background: $yellow-light;
     }
 
     &:focus {
@@ -215,7 +215,7 @@ Styleguide buttons.btn-search
 .btn.btn-search {
   border-color: #fff;
   background: $grey-light;
-  color: $grey-dark;
+  color: $blue-dark;
 
   &:hover {
     background: $grey-light;
@@ -279,7 +279,7 @@ Styleguide buttons.btn-
   padding-right: 2.1em;
   &:after {
     position: absolute;
-    line-height: 1.4 !important;
+    line-height: 1.3 !important;
   }
 
   // Reseting for .btn-block
@@ -290,6 +290,18 @@ Styleguide buttons.btn-
       position: static;
       line-height: inherit;
     }
+  }
+
+  // Call to action button.
+  &.btn-ctn:after {
+    position: absolute;
+    line-height: 2.0 !important;
+  }
+
+  // Call to action button.
+  &.btn-menu:after {
+    position: absolute;
+    line-height: 3.5 !important;
   }
 }
 a.btn {
