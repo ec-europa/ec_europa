@@ -5768,7 +5768,7 @@ Styleguide form.checkbox
       height: 1.25em;
       padding: 1.25em 0 0 1.25em; }
     .checkbox input[type="checkbox"]:focus + label:before {
-      border: 2px solid #ffc412; }
+      border: 2px solid #ffd617; }
     .checkbox input[type="checkbox"]:not(checked) + label {
       padding-left: 2.778em; }
       .checkbox input[type="checkbox"]:not(checked) + label:before {
@@ -6141,13 +6141,11 @@ Styleguide form.radio
   margin-bottom: 2px;
   margin-top: 0; }
   .radio label {
-    color: #575757;
+    color: #404040;
     height: 2.75em;
     line-height: 2.75em;
     display: block;
-    text-align: left;
-    border: transparent solid 2px;
-    border-radius: 0; }
+    text-align: left; }
   .radio input {
     margin: 1px 0 0 13px; }
   .radio input[type="radio"] {
@@ -6155,8 +6153,13 @@ Styleguide form.radio
     margin-left: -9999px;
     position: relative;
     float: left; }
+    .radio input[type="radio"] + label:before {
+      border: transparent solid 2px;
+      border-radius: 50%;
+      padding: 1.25em 0 0 1.25em; }
+    .radio input[type="radio"]:focus + label:before {
+      border: #ffd617 solid 2px; }
     .radio input[type="radio"]:not(checked) + label {
-      background-color: #ececec;
       padding-left: 2.778em; }
       .radio input[type="radio"]:not(checked) + label:before {
         content: '';
@@ -6164,23 +6167,12 @@ Styleguide form.radio
         display: block;
         width: 1.25em;
         height: 1.25em;
-        top: 0.8em;
+        top: 0.6em;
         left: 1em;
         background: url("../images/svg/radio-unchecked.svg") no-repeat;
         background-size: auto 1.25em; }
-    .radio input[type="radio"]:checked + label {
-      color: #ffffff;
-      background-color: #004494; }
-      .radio input[type="radio"]:checked + label:before {
-        background-image: url("../images/svg/radio-checked.svg"); }
-    .radio input[type="radio"]:hover:not(checked) + label {
-      color: #575757;
-      border: #004494 solid 2px;
-      background-color: #ffffff; }
-    .radio input[type="radio"]:hover:checked + label {
-      color: #ffffff;
-      border: #ffd617 solid 2px;
-      background-color: #004494; }
+    .radio input[type="radio"]:checked + label:before {
+      background-image: url("../images/svg/radio-checked-blue.svg"); }
 
 .no-svg .radio label {
   height: auto;
