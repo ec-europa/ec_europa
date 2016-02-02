@@ -9550,6 +9550,7 @@ Styleguide pager
 .pager {
   font-weight: bold;
   margin: 0.938em auto;
+  height: 3.750em;
   overflow: hidden; }
   .pager > li.pager__item {
     float: left;
@@ -9562,7 +9563,6 @@ Styleguide pager
       font-size: 0.889em;
       display: inline-block;
       text-align: center;
-      vertical-align: middle;
       *zoom: 1;
       *display: inline; }
       .pager > li.pager__item > a.pager__btn:hover, .pager > li.pager__item > a.pager__btn:focus, .pager > li.pager__item > a.pager__btn:active, .pager > li.pager__item > a.pager__btn:visited {

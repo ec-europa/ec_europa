@@ -11,6 +11,7 @@ Styleguide pager
 .pager {
   font-weight: bold;
   margin: 0.938em auto;
+  height: 3.750em;
   overflow: hidden;
 
   & > li.pager__item {
@@ -25,7 +26,6 @@ Styleguide pager
       font-size: $font-size-little;
       display: inline-block;
       text-align: center;
-      vertical-align: middle;
 
       // Old browsers.
       *zoom: 1;
