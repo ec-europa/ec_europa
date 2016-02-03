@@ -9582,6 +9582,14 @@ Styleguide pager
   height: 1.250em;
   display: inline-block;
   position: relative; }
+  .pager__back-arrow.icon:before, .pager__back-arrow.search-form__btn:before, .pager__back-arrow.icon::before, .pager__back-arrow.search-form__btn::before,
+  .pager__forward-arrow.icon:before,
+  .pager__forward-arrow.search-form__btn:before,
+  .pager__forward-arrow.icon::before,
+  .pager__forward-arrow.search-form__btn::before {
+    font-size: 1.7em;
+    top: 5px;
+    position: relative; }
 
 .pager__forward-text {
   display: none; }
@@ -9591,12 +9599,16 @@ Styleguide pager
 
 .pager__dropdown {
   background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   cursor: pointer;
   font-size: 0.889em;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
+  padding: 1.3em 4.688em 1.3em 1.250em; }
+  .pager__dropdown::-moz-focus-inner, .pager__dropdown:focus {
+    border: 0;
+    outline: none; }
   .pager__dropdown:hover {
     background: none; }
 
