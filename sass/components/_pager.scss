@@ -18,7 +18,7 @@ Styleguide pager
 
   & > .pager__item {
     // Prettifying.
-    transition: all .2s ease-in-out;
+    transition: all .7s ease-in-out;
     list-style: none;
 
     // Next to each other, match the .pager height for vertical align.
@@ -57,7 +57,7 @@ Styleguide pager
     }
 
     // Background.
-    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 9.313em center;
+    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 9em center;
     background-size: 0.938em 0.625em;
     &:hover {
       background-image:url("../images/svg/arrow-down--blue.svg");
@@ -72,7 +72,7 @@ Styleguide pager
     border: none;
     cursor: pointer;
     font-size: $font-size-little;
-    padding: 1.3em 4.688em 1.3em 1.250em;
+    padding: 0 4.688em 0 1.250em;
   }
 }
 
@@ -167,7 +167,7 @@ Styleguide pager
     // Select list spacing specifics.
     .pager__middle {
       .pager__dropdown {
-        padding: 1em 4.688em 1em 1.250em;
+        padding: 0 4.688em 0 1.250em;
       }
     }
   }

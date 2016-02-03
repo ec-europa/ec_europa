@@ -9553,7 +9553,7 @@ Styleguide pager
   height: 3.750em;
   overflow: hidden; }
   .pager > .pager__item {
-    transition: all .2s ease-in-out;
+    transition: all .7s ease-in-out;
     list-style: none;
     float: left;
     line-height: 3.750em; }
@@ -9572,7 +9572,7 @@ Styleguide pager
 .pager__middle {
   background: #ececec; }
   .pager__middle .pager__dropdown {
-    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 9.313em center;
+    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 9em center;
     background-size: 0.938em 0.625em;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -9580,7 +9580,7 @@ Styleguide pager
     border: none;
     cursor: pointer;
     font-size: 0.889em;
-    padding: 1.3em 4.688em 1.3em 1.250em; }
+    padding: 0 4.688em 0 1.250em; }
     .pager__middle .pager__dropdown::-moz-focus-inner, .pager__middle .pager__dropdown:focus {
       border: 0;
       outline: none; }
@@ -9639,7 +9639,7 @@ Styleguide pager
     .pager .pager__item {
       line-height: 2.813em; }
     .pager .pager__middle .pager__dropdown {
-      padding: 1em 4.688em 1em 1.250em; } }
+      padding: 0 4.688em 0 1.250em; } }
 
 .region-content ul.pager {
   margin: 0.938em auto; }
