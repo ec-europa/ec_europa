@@ -9552,11 +9552,11 @@ Styleguide pager
   margin: 0.938em auto;
   height: 3.750em;
   overflow: hidden; }
-  .pager > li.pager__item {
+  .pager > .pager__item {
     list-style: none;
     float: left;
     line-height: 3.750em; }
-    .pager > li.pager__item > a.pager__btn {
+    .pager > .pager__item > .pager__btn {
       color: #fff;
       margin: 0;
       background: #004494;
@@ -9565,13 +9565,14 @@ Styleguide pager
       text-align: center;
       *zoom: 1;
       *display: inline; }
-      .pager > li.pager__item > a.pager__btn:hover, .pager > li.pager__item > a.pager__btn:focus, .pager > li.pager__item > a.pager__btn:active, .pager > li.pager__item > a.pager__btn:visited {
+      .pager > .pager__item > .pager__btn:hover, .pager > .pager__item > .pager__btn:focus, .pager > .pager__item > .pager__btn:active, .pager > .pager__item > .pager__btn:visited {
         color: #fff; }
 
 .pager__middle {
   background: #ececec; }
   .pager__middle .pager__dropdown {
-    background: none;
+    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 10.313em center;
+    background-size: 0.938em 0.625em;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -9583,7 +9584,8 @@ Styleguide pager
       border: 0;
       outline: none; }
     .pager__middle .pager__dropdown:hover {
-      background: none; }
+      background-image: url("../images/svg/arrow-down--blue.svg");
+      background-size: 0.938em 0.625em !important; }
 
 .no-svg .pager__dropdown {
   background-image: url("../images/png/arrow-down-blue.png"); }
@@ -9630,10 +9632,16 @@ Styleguide pager
   .pager__forward .pager__btn {
     padding: 0 0.625em 0 5.000em; }
     .pager__forward .pager__btn .pager__forward-text {
-      padding-right: 0.438em; } }
+      padding-right: 0.438em; }
+  .pager {
+    height: 2.813em; }
+    .pager .pager__item {
+      line-height: 2.813em; }
+    .pager .pager__middle .pager__dropdown {
+      padding: 1em 4.688em 1em 1.250em; } }
 
 .region-content ul.pager {
-  margin: 15px auto; }
+  margin: 0.938em auto; }
 
 /*
 RSS Link

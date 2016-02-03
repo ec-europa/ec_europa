@@ -16,14 +16,14 @@ Styleguide pager
   // If .pager is too small .pager__item will be hidden.
   overflow: hidden;
 
-  & > li.pager__item {
+  & > .pager__item {
     list-style: none;
 
     // Next to each other, match the .pager height for vertical align.
     float: left;
     line-height: 3.750em;
 
-    & > a.pager__btn {
+    & > .pager__btn {
       color: #fff;
       margin: 0;
       background: $blue-dark;
@@ -54,10 +54,12 @@ Styleguide pager
       outline: none;
     }
 
-    // Cleaning background.
-    background: none;
+    // Background.
+    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 10.313em center;
+    background-size: 0.938em 0.625em;
     &:hover {
-      background: none;
+      background-image:url("../images/svg/arrow-down--blue.svg");
+      background-size: 0.938em 0.625em !important; // native select:hover should not override this specificity.
     }
 
     // Removing native arrow in all browsers.
@@ -72,6 +74,7 @@ Styleguide pager
   }
 }
 
+// Cover up case of misunderstood svg.
 .no-svg {
   .pager__dropdown {
     background-image: url("../images/png/arrow-down-blue.png");
@@ -103,7 +106,7 @@ Styleguide pager
   position: relative;
 
   // Override font icon rather than parent elements,
-  // because parents could have paddings and margins.
+  // because parents could have padding and margin.
   // Avoiding: increasing font size with paddings resize the whole element.
   &.icon:before, &.icon::before {
     font-size: 1.7em;
@@ -152,9 +155,23 @@ Styleguide pager
       }
     }
   }
+
+  .pager {
+    height: 2.813em;
+    .pager__item {
+      line-height: 2.813em;
+    }
+
+    // Select list spacing specifics.
+    .pager__middle {
+      .pager__dropdown {
+        padding: 1em 4.688em 1em 1.250em;
+      }
+    }
+  }
 }
 
 // Drupal-specific hack.
 .region-content ul.pager {
-  margin: 15px auto;
+  margin: 0.938em auto;
 }
