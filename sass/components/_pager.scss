@@ -12,12 +12,16 @@ Styleguide pager
   font-weight: bold;
   margin: 0.938em auto;
   height: 3.750em;
+
+  // If .pager is too small .pager__item will be hidden.
   overflow: hidden;
 
   & > li.pager__item {
+    list-style: none;
+
+    // Next to each other, match the .pager height for vertical align.
     float: left;
     line-height: 3.750em;
-    list-style: none;
 
     & > a.pager__btn {
       color: #fff;
@@ -36,6 +40,41 @@ Styleguide pager
         color: #fff;
       }
     }
+  }
+}
+
+.pager__middle {
+  background: $grey-lighter;
+
+  .pager__dropdown {
+    // Removing ugly dotted line.
+    &::-moz-focus-inner,
+    &:focus {
+      border: 0;
+      outline: none;
+    }
+
+    // Cleaning background.
+    background: none;
+    &:hover {
+      background: none;
+    }
+
+    // Removing native arrow in all browsers.
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: none;
+    cursor: pointer;
+    font-size: $font-size-little;
+    padding: 1.3em 4.688em 1.3em 1.250em;
+  }
+}
+
+.no-svg {
+  .pager__dropdown {
+    background-image: url("../images/png/arrow-down-blue.png");
   }
 }
 
@@ -65,6 +104,7 @@ Styleguide pager
 
   // Override font icon rather than parent elements,
   // because parents could have paddings and margins.
+  // Avoiding: increasing font size with paddings resize the whole element.
   &.icon:before, &.icon::before {
     font-size: 1.7em;
     top: 5px;
@@ -73,70 +113,46 @@ Styleguide pager
 }
 
 // Mobile-first does not contain button labels.
+.pager__back-text,
 .pager__forward-text {
   display: none;
 }
 
-.pager__middle {
-  background: $grey-lighter;
-}
-
-.pager__dropdown {
-  // Removing ugly dotted line.
-  &::-moz-focus-inner,
-  &:focus {
-    border: 0;
-    outline: none;
+@include breakpoint(screen-msm-min) {
+  // Resets.
+  .pager__back,
+  .pager__forward {
+    .pager__btn {
+      width: auto;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
-  // Cleaning background.
-  background: none;
-  &:hover {
-    background: none;
+  // Show buttons' labels.
+  .pager__back-text,
+  .pager__forward-text {
+    display: inline-block;
   }
 
-  // Removing native arrow in all browsers.
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  border: none;
-  cursor: pointer;
-  font-size: $font-size-little;
-  padding: 1.3em 4.688em 1.3em 1.250em;
-}
-
-.no-svg {
-  .pager__combo-dropdown {
-    background-image: url("../images/png/arrow-down-blue.png");
+  // TWEAKS:
+  // Back button specifics.
+  .pager__back {
+    .pager__btn {
+      padding: 0 2.500em 0 0.938em;
+    }
+  }
+  // Forward button specifics.
+  .pager__forward {
+    .pager__btn {
+      padding: 0 0.625em 0 5.000em;
+      .pager__forward-text {
+        padding-right: 0.438em;
+      }
+    }
   }
 }
-
-//@media (min-width: 530px) {
-//  .pager {
-//    width: 460px;
-//  }
-//
-//  .pager__combo {
-//    display: block;
-//  }
-//  .pager__back {
-//    width: auto;
-//    .pager__btn {
-//      width: 80px;
-//    }
-//  }
-//  .pager__forward {
-//    float: none;
-//    width: 160px;
-//  }
-//  .pager__forward-text {
-//    display: inline;
-//    padding-left: 15px;
-//    padding-top: 4px;
-//    float: left;
-//  }
-//}
 
 // Drupal-specific hack.
 .region-content ul.pager {
