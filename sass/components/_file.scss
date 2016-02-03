@@ -6,14 +6,15 @@ by clicking on the component
 
 Markup: html/file.html
 
-.file--widebar  - Full width download box
+.file--widebar  - Full width download box (deprecated)
 .file--bare - Strip down version
 
 Styleguide file
 */
 
 .file {
-  @extend .paragraph;
+  @extend .row;
+  margin-left: 0;
   background: $grey-lighter;
   padding: 1.333em 1.333em 1.333em 1.333em;
   overflow: hidden;
@@ -27,15 +28,41 @@ Styleguide file
 
 .file__icon {
   float: left;
-  margin-right: 1.333em;
   &:before {
     color: $grey;
     font-size: 2.778em;
+  }
+  @extend .col-xs-1;
+  @extend .col-md-1;
+  @extend .col-sm-1;
+  padding-left: 0;
+  // We remove 5px on the left (as the image has some whitespace) as it causes a wrong looking margin. Then we add
+  // back the margin on the right, to have more spacing between those fields.
+  margin-right: 5px;
+  margin-left: -5px;
+  height: 2.556em;
+  overflow: hidden;
+  text-align: center;
+
+  &:before {
+    font-size: 2.556em;
+  }
+
+  // Make it self scaling.
+  @media (max-width: 650px) {
+    &:before {
+      font-size: 1.556em; // Fallback for <IE10.
+      font-size: #{$col-1-no-percentage}vw!important;
+    }
   }
 }
 
 .file__metadata {
   line-height: 1;
+  @extend .col-md-7;
+  @extend .col-sm-8;
+  @extend .col-xs-10;
+  padding-left: 0;
 }
 
 .file__title {
@@ -64,66 +91,23 @@ Styleguide file
 .file__btn {
   margin-bottom: 0;
   margin-top: 0.778em;
-  width: 10.5em;
+  @extend .col-md-4;
+  @extend .col-sm-3;
+  @extend .col-xs-12;
 
   &:after {
     @extend .icon--after;
     @extend .icon--download;
+  }
+  @media (max-width: $screen-sm-min) {
+    margin-top: 15px;
   }
 }
 
 .file--widebar {
   @extend .row;
   max-width: 100%;
-
-  margin-left: 0;
-
-  .file__icon {
-    @extend .col-xs-1;
-    @extend .col-md-1;
-    @extend .col-sm-1;
-    padding-left: 0;
-    // We remove 5px on the left (as the image has some whitespace) as it causes a wrong looking margin. Then we add
-    // back the margin on the right, to have more spacing between those fields.
-    margin-right: 5px;
-    margin-left: -5px;
-    height: 2.556em;
-    overflow: hidden;
-    text-align: center;
-
-    &:before {
-      font-size: 2.556em;
-    }
-
-    // Make it self scaling.
-    @media (max-width: 650px) {
-      &:before {
-        font-size: 1.556em; // Fallback for <IE10.
-        font-size: #{$col-1-no-percentage}vw!important;
-      }
-    }
-
-  }
-
-  .file__metadata {
-    @extend .col-md-7;
-    @extend .col-sm-8;
-    @extend .col-xs-10;
-    padding-left: 0;
-    //@media (max-width: $screen-sm-min) {
-    //  float: none;
-    //}
-  }
-
-  .file__btn {
-    @extend .col-md-4;
-    @extend .col-sm-3;
-    @extend .col-xs-12;
-
-    @media (max-width: $screen-sm-min) {
-      margin-top: 15px;
-    }
-  }
+  width: 100%;
 }
 
 // Modifications in the translations under a normal file.
@@ -149,7 +133,6 @@ Styleguide file
       text-align: left;
       float: left;
       padding-left: 0;
-      margin: 0;
     }
   }
 
@@ -209,7 +192,7 @@ Styleguide file
   }
 }
 
-@include breakpoint(screen-msm-min) {
+@include breakpoint(screen-sm-min) {
   .file__metadata,
   .file__btn {
     overflow: hidden;
