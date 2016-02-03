@@ -9572,7 +9572,7 @@ Styleguide pager
 .pager__middle {
   background: #ececec; }
   .pager__middle .pager__dropdown {
-    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 10.313em center;
+    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 9.313em center;
     background-size: 0.938em 0.625em;
     -webkit-appearance: none;
     -moz-appearance: none;

@@ -51,7 +51,8 @@
               }
             }
           });
-          $('.pager__middle', this).appendTo(select);
+          $('.pager__combo-container', this).before(select);
+          $('.pager__combo-container').hide();
         }
       });
     }
