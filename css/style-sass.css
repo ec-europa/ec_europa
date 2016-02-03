@@ -9553,6 +9553,7 @@ Styleguide pager
   height: 3.750em;
   overflow: hidden; }
   .pager > .pager__item {
+    transition: all .2s ease-in-out;
     list-style: none;
     float: left;
     line-height: 3.750em; }

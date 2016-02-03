@@ -17,6 +17,8 @@ Styleguide pager
   overflow: hidden;
 
   & > .pager__item {
+    // Prettifying.
+    transition: all .2s ease-in-out;
     list-style: none;
 
     // Next to each other, match the .pager height for vertical align.

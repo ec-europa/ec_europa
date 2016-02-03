@@ -1251,7 +1251,7 @@ function europa_pager($variables) {
     'parameters' => $parameters,
   ));
   $li_previous = theme('pager_previous', array(
-    'text' => '<span class="pager__back-arrow icon icon--left"></span><span class="pager__back-text sr-only">' . t('Previous') . '</span>',
+    'text' => '<span class="pager__back-arrow icon icon--left"></span><span class="pager__back-text">' . t('Previous') . '</span>',
     'element' => $element,
     'interval' => 1,
     'parameters' => $parameters,
@@ -1279,10 +1279,8 @@ function europa_pager($variables) {
       );
     }
     $items[] = array(
-      'class' => array('pager__item pager__combo'),
-      'data' => "<span class='pager__combo-container'><span class='pager__combo-current'>" . t('Page !page', array('!page' => $pager_current)) . '&nbsp;</span>' .
-      '<span class="pager__combo-total">' . t('of !total', array('!total' => $pager_max)) . '</span>' .
-      '</span>',
+      'class' => array('pager__item pager__middle'),
+      'data' => "",
     );
     // When there is more than one page, create the pager list.
     if ($i != $pager_max) {
