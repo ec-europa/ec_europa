@@ -1054,7 +1054,8 @@ function europa_preprocess_image(&$variables) {
  * Implements hook_preprocess_html().
  */
 function europa_preprocess_html(&$variables) {
-  $variables['theme_path'] = base_path() . path_to_theme();
+  $this_theme_path = drupal_get_path('theme', 'europa');
+  $variables['theme_path'] = base_path() . $this_theme_path;
   $language = $variables['language'];
   if (isset($language->prefix)) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
@@ -1070,7 +1071,7 @@ function europa_preprocess_html(&$variables) {
 
   // Add the ie9 only css.
   drupal_add_css(
-    path_to_theme() . '/css/ie9.css',
+    $this_theme_path . '/css/ie9.css',
     array(
       'browsers' => array(
         'IE' => 'IE 9',
@@ -1082,7 +1083,7 @@ function europa_preprocess_html(&$variables) {
   $ie9_js = array(
     '#tag' => 'script',
     '#attributes' => array(
-      'src' => path_to_theme() . '/js/ie9.js',
+      'src' => $this_theme_path . '/js/ie9.js',
     ),
     '#prefix' => '<!--[if IE 9]>',
     '#suffix' => '</script><![endif]-->',
