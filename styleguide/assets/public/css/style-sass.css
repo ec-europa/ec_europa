@@ -7385,6 +7385,7 @@ Styleguide file
 
 .file__metadata {
   line-height: 1;
+  margin-bottom: 0;
   padding-left: 0; }
 
 .file__title {
