@@ -8,7 +8,8 @@
     attach: function(context) {
       $('ul.pager').once('pager', function() {
         var options = '',
-            pagerContainer = '.pager__combo-container';
+            pagerContainer = '.pager__combo-container',
+            pagerItemClass = '.pager__item';
         $('li.select', this).once('pager__item', function() {
           var listItem = this,
               $link = $('a', listItem),
@@ -30,31 +31,11 @@
         // If the .once on .pager__items has aggregated markup for the options, make the select.
         if (options != '') {
           var $select = $('<select class="pager__dropdown">' + options + '</select>');
-          $select.children().data('activation', 'activated').on({
-            keydown: function(event) {
-              if (event.which === 13) {
-                if ($(this).data('activation') === 'paused') {
-                  $(this).data('activation', 'activated');
-                  $(this).trigger('change');
-                }
-              }
-              else {
-                $(this).data('activation', 'paused');
-              }
-            },
-            click: function(event) {
-              if ($(this).data('activation') === 'paused') {
-                $(this).data('activation', 'activated');
-                $(this).trigger('change');
-              }
-            },
-            change: function(event) {
-              if ($(this).data('activation') === 'activated') {
-                var optionHref = $(this).val(),
-                    $pagerItem = $('.pager__item:hidden');
-                $pagerItem.children('a[href="' + optionHref + '"]').click();
-              }
-            }
+          // Listen for a change in the select, take the option value and emulate a click on the original element.
+          $select.on('change', function(e) {
+            var valueSelected = this.value;
+            // Emulate the selection.
+            $(pagerItemClass).find('a[href="' + valueSelected + '"]').click();
           });
           $(pagerContainer, this).before($select);
           $(pagerContainer).hide();
