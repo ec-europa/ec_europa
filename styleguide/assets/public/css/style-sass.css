@@ -9570,7 +9570,14 @@ Styleguide pager
         color: #fff; }
 
 .pager__middle {
-  background: #ececec; }
+  background: #ececec;
+  position: relative; }
+  .pager__middle .pager__separator {
+    width: 1px;
+    height: 100%;
+    border-right: 1px solid #d3d4d4;
+    left: 7em;
+    position: absolute; }
   .pager__middle .pager__dropdown {
     background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 9em center;
     background-size: 0.938em 0.625em;

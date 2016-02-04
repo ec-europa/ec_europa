@@ -47,6 +47,15 @@ Styleguide pager
 
 .pager__middle {
   background: $grey-lighter;
+  position: relative;
+
+  .pager__separator {
+    width: 1px;
+    height: 100%;
+    border-right: 1px solid #d3d4d4;
+    left: 7em;
+    position: absolute;
+  }
 
   .pager__dropdown {
     // Removing ugly dotted line.
