@@ -239,20 +239,26 @@
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-text.html#kssref-text-link">
+              <a href="section-text.html#kssref-text-headings">
                 <span class="kss-nav__ref">33.2</span
+                ><span class="kss-nav__name">Headings</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-text.html#kssref-text-link">
+                <span class="kss-nav__ref">33.3</span
                 ><span class="kss-nav__name">Link</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-text.html#kssref-text-lists">
-                <span class="kss-nav__ref">33.3</span
+                <span class="kss-nav__ref">33.4</span
                 ><span class="kss-nav__name">Lists</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-text.html#kssref-text-paragraphs">
-                <span class="kss-nav__ref">33.4</span
+                <span class="kss-nav__ref">33.5</span
                 ><span class="kss-nav__name">Paragraphs</span>
               </a>
             </li>
@@ -321,12 +327,110 @@
       </div>
 
       </section>
+      <section id="kssref-text-headings" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-text-headings">
+          <span class="kss-title__ref">33.2</span
+          >Headings
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Site headings. They also can be applied by adding a class with the name of
+the heading tag</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <span class="[modifier class]">Heading [modifier class]</span>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .h1
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Heading 1
+        </div>
+        <div class="kss-modifier__example h1">
+          <span class="h1">Heading h1</span>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .h2
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Heading 2
+        </div>
+        <div class="kss-modifier__example h2">
+          <span class="h2">Heading h2</span>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .h3
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Heading 3
+        </div>
+        <div class="kss-modifier__example h3">
+          <span class="h3">Heading h3</span>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .h4
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Heading 4
+        </div>
+        <div class="kss-modifier__example h4">
+          <span class="h4">Heading h4</span>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .h5
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Heading 5
+        </div>
+        <div class="kss-modifier__example h5">
+          <span class="h5">Heading h5</span>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .h6
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Heading 6
+        </div>
+        <div class="kss-modifier__example h6">
+          <span class="h6">Heading h6</span>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;span class=&quot;[modifier class]&quot;&gt;Heading [modifier class]&lt;/span&gt;
+</code></pre>
+      </div>
+
+      </section>
       <section id="kssref-text-link" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-text-link">
-          <span class="kss-title__ref">33.2</span
+          <span class="kss-title__ref">33.3</span
           >Link
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -364,7 +468,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-text-lists">
-          <span class="kss-title__ref">33.3</span
+          <span class="kss-title__ref">33.4</span
           >Lists
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -380,14 +484,33 @@
         <div class="kss-modifier__example">
           <ul>
   <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
+  <li>Item 2
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </li>
+  <li>Item 3
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+  </li>
+  <li>Item 4</li>
 </ul>
 
 <ol>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3</li>
+  <li>Item 3
+    <ul>
+      <li>Item</li>
+      <li>Item</li>
+      <li>Item</li>
+    </ul>
+  </li>
 </ol>
 
         </div>
@@ -396,14 +519,33 @@
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
-  &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+      &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 3
+    &lt;ol&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+      &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item 4&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
+  &lt;li&gt;Item 3
+    &lt;ul&gt;
+      &lt;li&gt;Item&lt;/li&gt;
+      &lt;li&gt;Item&lt;/li&gt;
+      &lt;li&gt;Item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 </code></pre>
       </div>
@@ -414,7 +556,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-text-paragraphs">
-          <span class="kss-title__ref">33.4</span
+          <span class="kss-title__ref">33.5</span
           >Paragraphs
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
