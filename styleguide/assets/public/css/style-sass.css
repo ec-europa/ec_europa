@@ -5421,6 +5421,17 @@ button.close {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important; }
 
+#kss-node .kss-modifier__wrapper {
+  overflow: hidden; }
+
+.kss-modifier__example {
+  height: auto; }
+
+.kss-modifier__name,
+.kss-markup.kss-style,
+.kss-modifier__description {
+  clear: both; }
+
 .padding-reset {
   padding: 0 !important; }
 
@@ -8486,28 +8497,35 @@ Styleguide: siteheader.langselect
 /*
 Language select (Page)
 
-Page specific language selection.
+Language selector for a page content.
 
 Markup: html/lang-select-page.html
 
-.lang-select-page               - Default, background is light
-.lang-select-page--dark         - Background is dark blue or a picture
 .lang-select-page--transparent  - Transparent background
-.lang-select-page--dropdown     - When JS converts the ul to select
 
 Styleguide: langselect
+*/
+/*
+Language select (Dropdown)
+
+Demonstrates the language switcher for mobile and small viewports.
+
+Markup: html/lang-select-page-dropdown.html
+
+.lang-select-page--transparent  - Transparent background
+
+Styleguide: langselect.dropdown
 */
 .lang-select-page {
   background: #f2f2f2;
   border-bottom: 1px solid #b3b4b5;
   font-size: 0.778em;
+  overflow: hidden;
   width: 100%; }
-  .front .lang-select-page {
-    display: none; }
 
 .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn {
   float: left;
-  margin: 0 0.7em 0 0;
+  margin: 0;
   font-size: 2em;
   padding: 0; }
   .icon.lang-select-page__icon:before, .lang-select-page__icon.search-form__btn:before {
@@ -8532,8 +8550,18 @@ ul.lang-select-page__list {
       font-weight: bold;
       color: #000; }
 
-.lang-select-page--dark {
-  border: none; }
+select.lang-select-page__list {
+  background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: bold;
+  padding-left: 0.5em;
+  line-height: 3.4em;
+  height: 3.4em;
+  width: 10em; }
+  select.lang-select-page__list:hover {
+    background-size: unset !important; }
 
 .lang-select-page--transparent {
   background: transparent;
@@ -8544,10 +8572,7 @@ ul.lang-select-page__list {
     text-indent: 0.01px;
     text-overflow: '';
     background-color: #012b58;
-    border: 0;
-    color: #fff;
-    font-weight: bold;
-    line-height: 3.4em; }
+    color: #fff; }
     .lang-select-page--transparent select.lang-select-page__list:hover, .lang-select-page--transparent select.lang-select-page__list:active {
       border: 0; }
     .lang-select-page--transparent select.lang-select-page__list > option {
@@ -8556,6 +8581,8 @@ ul.lang-select-page__list {
 @-moz-document url-prefix() {
   .lang-select-page--transparent select.lang-select-page__list {
     height: 3.4em; } }
+  .lang-select-page--transparent .lang-select-page__option.is-selected, .lang-select-page--transparent .lang-select-page__option.is-selected a {
+    color: #000; }
   .lang-select-page--transparent .lang-select-page__option a {
     color: #fff; }
 
@@ -8565,15 +8592,15 @@ ul.lang-select-page__list {
   .lang-select-page__unavailable {
     margin-right: 3em; } }
 
-select.lang-select-page__list {
-  background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
-  border-radius: 0;
-  padding-left: 0.5em;
-  width: 10em;
-  cursor: pointer; }
-
 .region-content .page-header ul.lang-select-page__list {
   max-width: inherit; }
+
+.front .lang-select-page {
+  display: none; }
+
+#kssref-langselect .lang-select-page--transparent,
+#kssref-langselect-dropdown .lang-select-page--transparent {
+  background: #004494; }
 
 /*
 Listing
@@ -9816,12 +9843,13 @@ Styleguide: siteswitcher
   font-size: 0.889em; }
 
 .site-switcher__list {
-  padding: 0;
   list-style: none;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 .site-switcher__option {
   display: inline-block;
+  float: left;
   text-align: center;
   vertical-align: middle;
   width: 50%; }
@@ -9842,9 +9870,9 @@ Styleguide: siteswitcher
 .site-switcher--header .site-switcher__list:first-child {
   border-left: 1px solid #b3b4b5; }
 
-.site-switcher--header .site-switcher__option.is-selected > a {
+.site-switcher--header .site-switcher__option {
   position: relative; }
-  .site-switcher--header .site-switcher__option.is-selected > a:after {
+  .site-switcher--header .site-switcher__option.is-selected:after {
     top: 100%;
     left: 50%;
     border: solid transparent;
@@ -9859,16 +9887,12 @@ Styleguide: siteswitcher
     margin-left: -10px; }
 
 .site-switcher--footer {
-  border-bottom: 1px solid #f2f2f2;
-  overflow: visible; }
-  @media (min-width: 510px) {
-    .site-switcher--footer .site-switcher__list {
-      float: right; } }
+  border-bottom: 1px solid #f2f2f2; }
   .site-switcher--footer .site-switcher__list:first-child {
     border-left: none; }
-  .site-switcher--footer .site-switcher__option.is-selected > a {
+  .site-switcher--footer .site-switcher__option {
     position: relative; }
-    .site-switcher--footer .site-switcher__option.is-selected > a:after {
+    .site-switcher--footer .site-switcher__option.is-selected:after {
       bottom: 100%;
       left: 50%;
       border: solid transparent;
@@ -9882,9 +9906,11 @@ Styleguide: siteswitcher
       border-width: 10px;
       margin-left: -10px; }
 
-@media (min-width: 510px) {
+@media (min-width: 992px) {
   .site-switcher__option {
-    width: auto; } }
+    width: auto; }
+  .site-switcher--footer .site-switcher__list {
+    float: right; } }
 
 /*
 Search form
