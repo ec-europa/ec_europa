@@ -16,11 +16,9 @@ $rss-link-icon-height: 40px;
     float: left;
     line-height: 40px;
 
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover {
       .rss-link__text {
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
   }
@@ -31,6 +29,9 @@ $rss-link-icon-height: 40px;
 }
 
 .rss-link__label {
+  color: $grey-base;
+  font-size: $font-size-little;
+  font-weight: $font-weight-bold;
   float: left;
   margin-bottom: 0;
   margin-right: 10px;
@@ -47,9 +48,9 @@ $rss-link-icon-height: 40px;
 }
 
 .rss-link__text {
-  font-size: $font-size-little;
+  font-size: $font-size-xsmall;
   font-weight: normal;
-  text-decoration: underline;
+  text-decoration: none;
   position: absolute;
   right: 0;
   z-index: 9;

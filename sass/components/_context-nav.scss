@@ -21,6 +21,15 @@ Styleguide contextnav
     }
   }
 
+  &__more-button {
+    text-decoration: underline;
+    & .icon {
+      padding-left: 2px;
+      top: 3px;
+      position: relative;
+    }
+  }
+
   &__hidden {
     display: none;
   }
@@ -29,6 +38,7 @@ Styleguide contextnav
 .context-nav__label {
   @extend .col-xs-12;
   @extend .col-md-3;
+  font-size: $font-size-xsmall;
   display: block;
   clear: both;
 }
@@ -48,6 +58,7 @@ Styleguide contextnav
   display: inline-block;
   &:after {
     content: " |";
+    color: $grey;
     margin-right: 4px;
   }
 

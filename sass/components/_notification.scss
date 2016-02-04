@@ -55,9 +55,24 @@ Styleguide notification
   }
 }
 
+.notification__content__more {
+  font-weight: $font-weight-bold;
+
+  & .icon {
+    top: 2px;
+    position: relative;
+  }
+}
+
+@include breakpoint(screen-lg-min) {
+  .notification__content__more {
+    float: right;
+  }
+}
 @include breakpoint(screen-sm-min) {
   .notification__content {
-    display: block;
+    display: inline-flex;
+
 
     .notification__text {
       width: 75%;
@@ -71,6 +86,7 @@ Styleguide notification
 
 // External link specific adjustments
 @mixin _notification_external_link_mixin() {
+  padding-right: 1.1em;
   &:after {
     position: absolute;
     line-height: 2.2;
@@ -79,7 +95,6 @@ Styleguide notification
 
 .notification {
   a {
-    padding-right: 1.1em;
 
     &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
       .site-political & {

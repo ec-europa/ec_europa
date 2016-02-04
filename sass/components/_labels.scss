@@ -3,14 +3,16 @@ Labels
 
 Markup: html/labels.html
 
-.label--default  - Default
+.label--default - Default
+.label--status - Status
+.label--highlight - Highlight
+.label--meta - Meta
+.label--upper - Uppercase label
 .label--primary - Primary
 .label--success - Success
 .label--info - Info
 .label--warning - Warning
 .label--danger - Danger
-.label--upper - Uppercase label
-.label--highlight - Highlight
 
 Styleguide labels
 */
@@ -19,7 +21,9 @@ $label_text_color_light: #fff;
 
 .label {
   border-radius: 0;
+  font-size: $font-size-xxsmall;
   font-weight: normal;
+  letter-spacing: 0.12em;
   color: $grey-base;
 }
 
@@ -56,7 +60,6 @@ $label_text_color_light: #fff;
 .label--upper {
   text-transform: uppercase;
   text-align: left;
-  font-size: 0.8em;
 }
 
 .label--highlight {
@@ -70,10 +73,14 @@ $label_text_color_light: #fff;
   }
 }
 
+.label--status {
+  color: $grey-base;
+  background-color: $grey-lighter;
+}
+
 .label--meta {
   @extend .meta__item;
   padding: 0.25em 0.5em 0.3em 0.5em;
-  font-size: 90%;
   top: -0.075em;
   margin-right: 0.8em;
   position: relative;

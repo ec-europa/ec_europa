@@ -6052,6 +6052,9 @@ ul.nav-tabs,
         border-right: 2px solid #b3b4b5;
         border-left: 2px solid #b3b4b5;
         color: #404040; }
+      ul.nav-tabs > li.active > a:hover,
+      .nav-tabs > li.active > a:hover {
+        text-decoration: none; }
       ul.nav-tabs > li.active > a:focus,
       .nav-tabs > li.active > a:focus {
         background: #ffd617;
@@ -6862,10 +6865,17 @@ Styleguide contextnav
     color: #004494; }
     .context-nav__expander:hover {
       text-decoration: underline; }
+  .context-nav__more-button {
+    text-decoration: underline; }
+    .context-nav__more-button .icon, .context-nav__more-button .search-form__btn {
+      padding-left: 2px;
+      top: 3px;
+      position: relative; }
   .context-nav__hidden {
     display: none; }
 
 .context-nav__label {
+  font-size: 0.778em;
   display: block;
   clear: both; }
 
@@ -6879,6 +6889,7 @@ Styleguide contextnav
   display: inline-block; }
   .context-nav__item:after {
     content: " |";
+    color: #b3b4b5;
     margin-right: 4px; }
   .context-nav__item:last-child:after {
     display: none;
@@ -6938,7 +6949,7 @@ Styleguide date-block
   line-height: 1.2; }
 
 .date-block__month {
-  font-size: 1.111em;
+  font-size: 0.889em;
   line-height: 1; }
 
 .date-block__element, .date-block__day-text, .date-block__day, .date-block__month {
@@ -8342,20 +8353,24 @@ Labels
 
 Markup: html/labels.html
 
-.label--default  - Default
+.label--default - Default
+.label--status - Status
+.label--highlight - Highlight
+.label--meta - Meta
+.label--upper - Uppercase label
 .label--primary - Primary
 .label--success - Success
 .label--info - Info
 .label--warning - Warning
 .label--danger - Danger
-.label--upper - Uppercase label
-.label--highlight - Highlight
 
 Styleguide labels
 */
 .label {
   border-radius: 0;
+  font-size: 0.67em;
   font-weight: normal;
+  letter-spacing: 0.12em;
   color: #404040; }
 
 .label--default {
@@ -8378,8 +8393,7 @@ Styleguide labels
 
 .label--upper {
   text-transform: uppercase;
-  text-align: left;
-  font-size: 0.8em; }
+  text-align: left; }
 
 .label--highlight {
   color: #404040;
@@ -8388,9 +8402,12 @@ Styleguide labels
     content: "";
     margin: 0; }
 
+.label--status {
+  color: #404040;
+  background-color: #ececec; }
+
 .label--meta {
   padding: 0.25em 0.5em 0.3em 0.5em;
-  font-size: 90%;
   top: -0.075em;
   margin-right: 0.8em;
   position: relative; }
@@ -9343,14 +9360,11 @@ Styleguide messages
   overflow: hidden; }
   .messages:before {
     background: url("../images/svg/messages-info.svg") no-repeat;
-    float: left;
     height: 2em;
-    margin-right: 0.667em;
-    margin-top: -0.85em;
     width: 2em;
     content: '';
     position: absolute;
-    top: 1.667em;
+    top: 1em;
     left: 1em; }
   .messages:last-child {
     margin-bottom: 0; }
@@ -9367,15 +9381,19 @@ Styleguide messages
     .messages.error:before {
       background-image: url("../images/svg/messages-error.svg"); }
   .messages h3 {
-    font-size: 0.889em;
-    font-weight: bold; }
+    font-size: inherit;
+    font-weight: bold;
+    padding-top: 0; }
   .messages p,
   .messages ul {
     max-width: 100%;
     margin-bottom: 0 !important; }
+  .messages li {
+    font-size: 0.889em;
+    list-style-type: none; }
 
 .messages__list, .messages ul {
-  padding-left: 14px;
+  padding-left: 0;
   margin-bottom: 0;
   max-width: auto;
   font-family: Arial, sans-serif; }
@@ -9440,19 +9458,32 @@ Styleguide notification
     max-width: none;
     margin: 0; }
 
+.notification__content__more {
+  font-weight: 600; }
+  .notification__content__more .icon, .notification__content__more .search-form__btn {
+    top: 2px;
+    position: relative; }
+
+@media (min-width: 1200px) {
+  .notification__content__more {
+    float: right; } }
+
 @media (min-width: 768px) {
   .notification__content {
-    display: block; }
+    display: inline-flex; }
     .notification__content .notification__text {
       width: 75%; }
     .notification__content .notification__btn {
       float: right; } }
 
-.notification a {
+.site-political .notification a[href^="http"]:not(.is-internal):not([href*="europa.eu"]) {
   padding-right: 1.1em; }
   .site-political .notification a[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
     position: absolute;
     line-height: 2.2; }
+
+.site-information .notification a[href^="http"]:not(.is-internal) {
+  padding-right: 1.1em; }
   .site-information .notification a[href^="http"]:not(.is-internal):after {
     position: absolute;
     line-height: 2.2; }
@@ -9686,13 +9717,16 @@ Styleguide rsslink
   .rss-link a {
     float: left;
     line-height: 40px; }
-    .rss-link a:hover .rss-link__text, .rss-link a:active .rss-link__text, .rss-link a:focus .rss-link__text {
-      text-decoration: none; }
+    .rss-link a:hover .rss-link__text {
+      text-decoration: underline; }
 
 .rss-link__wrapper {
   overflow: hidden; }
 
 .rss-link__label {
+  color: #404040;
+  font-size: 0.889em;
+  font-weight: 600;
   float: left;
   margin-bottom: 0;
   margin-right: 10px;
@@ -9706,9 +9740,9 @@ Styleguide rsslink
     width: 100%; }
 
 .rss-link__text {
-  font-size: 0.889em;
+  font-size: 0.778em;
   font-weight: normal;
-  text-decoration: underline;
+  text-decoration: none;
   position: absolute;
   right: 0;
   z-index: 9; }
