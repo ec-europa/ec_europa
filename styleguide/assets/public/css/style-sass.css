@@ -5508,7 +5508,7 @@ Markup: html/btn.html
 .btn-secondary   - Button secondary
 .btn-ctn         - Button call to action
 .btn-ctn--border - Button call to action with border
-.btn-menu        - BUtton menu
+.btn-menu        - Button menu
 
 Styleguide buttons
 */
@@ -5527,7 +5527,7 @@ Styleguide buttons
     -webkit-box-shadow: none;
     box-shadow: none; }
   .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
-    outline: 2px solid #ffd617;
+    outline: 5px solid #ffd617;
     border-color: #ffd617; }
   .btn:after, .inpage-nav__navbar .inpage-nav__toggle:after {
     line-height: inherit;
@@ -5563,7 +5563,7 @@ Styleguide buttons
     line-height: 1.667; }
     .btn.btn-ctn:hover, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:hover, .btn.btn-time-line:hover, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:hover, .btn.btn-ctn:active, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:active, .btn.btn-time-line:active, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:active {
       border-color: #404040;
-      background: #fff; }
+      background: #ffd617; }
     .btn.btn-ctn:focus, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:focus, .btn.btn-time-line:focus, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:focus {
       border-color: #404040;
       outline-color: #404040; }
@@ -5577,7 +5577,7 @@ Styleguide buttons
     .btn.btn-menu:hover, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:hover, .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       color: #fff; }
     .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
-      outline: 2px solid #ffd617; }
+      outline: 5px solid #ffd617; }
     .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       border-color: #ffd617;
       outline-color: #ffd617; }
@@ -5643,7 +5643,7 @@ Styleguide buttons.btn-search
 .btn.btn-search, .inpage-nav__navbar .btn-search.inpage-nav__toggle {
   border-color: #fff;
   background: #e2e2e2;
-  color: #575757; }
+  color: #004494; }
   .btn.btn-search:hover, .inpage-nav__navbar .btn-search.inpage-nav__toggle:hover {
     background: #e2e2e2; }
 
@@ -5686,23 +5686,37 @@ Styleguide buttons.btn-
   padding-right: 2.1em; }
   .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after {
     position: absolute;
-    line-height: 1.4 !important; }
+    line-height: 1.4 !important;
+    margin-left: 5px; }
   .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-block, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block {
     padding-right: 1em; }
     .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-block:after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block:after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block:after {
       position: static;
       line-height: inherit; }
+  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-ctn:after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-ctn:after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-ctn:after, .site-political a.btn[href^="http"].btn-time-line:not(.is-internal):not([href*="europa.eu"]):after, .site-political .inpage-nav__navbar a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after, .inpage-nav__navbar .site-political a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after {
+    position: absolute;
+    line-height: 2.0 !important; }
+  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-menu:after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-menu:after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-menu:after {
+    position: absolute;
+    line-height: 3.5 !important; }
 
 .site-information a.btn[href^="http"]:not(.is-internal), .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal) {
   padding-right: 2.1em; }
   .site-information a.btn[href^="http"]:not(.is-internal):after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal):after {
     position: absolute;
-    line-height: 1.4 !important; }
+    line-height: 1.4 !important;
+    margin-left: 5px; }
   .site-information a.btn[href^="http"]:not(.is-internal).btn-block, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block {
     padding-right: 1em; }
     .site-information a.btn[href^="http"]:not(.is-internal).btn-block:after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block:after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block:after {
       position: static;
       line-height: inherit; }
+  .site-information a.btn[href^="http"]:not(.is-internal).btn-ctn:after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-ctn:after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-ctn:after, .site-information a.btn[href^="http"].btn-time-line:not(.is-internal):after, .site-information .inpage-nav__navbar a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):after, .inpage-nav__navbar .site-information a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):after {
+    position: absolute;
+    line-height: 2.0 !important; }
+  .site-information a.btn[href^="http"]:not(.is-internal).btn-menu:after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-menu:after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-menu:after {
+    position: absolute;
+    line-height: 3.5 !important; }
 
 /*
 Button group
@@ -5711,7 +5725,7 @@ Custom bootstrap button group
 
 Markup: html/btn-group.html
 
-.btn-group-row-two    - Two column button block.
+.btn-group-row-two    - Two column button block (deprecated, used only at Commissioners site).
 
 Styleguide buttons.group
 */
