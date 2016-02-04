@@ -27,7 +27,7 @@
           options += '<option value="' + value + '"' + selected + '>' + title + '</option>';
           $(listItem).hide();
         });
-        // if the .once on .pager__items has aggregated markup for the options, make the select.
+        // If the .once on .pager__items has aggregated markup for the options, make the select.
         if (options != '') {
           var $select = $('<select class="pager__dropdown">' + options + '</select>');
           $select.children().data('activation', 'activated').on({
