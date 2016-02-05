@@ -6861,6 +6861,11 @@ Styleguide comment
     margin-top: -0.556em; } }
 
 /*
+Comments
+
+Styleguide comments
+*/
+/*
 Comments counter
 
 Markup: html/comments-counter.html
@@ -7668,7 +7673,6 @@ Styleguide footer
 
 .footer__label {
   display: block;
-  font-size: 14px;
   margin-right: 20px; }
 
 .footer__disclaimer {
@@ -7694,7 +7698,8 @@ Styleguide footer
 .footer__menu--separator {
   border-top: 1px solid #4d7cb4;
   margin-top: 0.6em;
-  padding-top: 1.2em; }
+  padding-top: 1.2em;
+  width: 100%; }
 
 .footer__icon--social:before {
   position: relative;
