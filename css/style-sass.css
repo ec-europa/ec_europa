@@ -9550,8 +9550,7 @@ Styleguide pager
 .pager {
   font-weight: bold;
   margin: 0.938em auto;
-  height: 3.750em;
-  overflow: hidden; }
+  height: 3.750em; }
   .pager > .pager__item {
     transition: all .7s ease-in-out;
     list-style: none;
@@ -9568,6 +9567,10 @@ Styleguide pager
       *display: inline; }
       .pager > .pager__item > .pager__btn:hover, .pager > .pager__item > .pager__btn:focus, .pager > .pager__item > .pager__btn:active, .pager > .pager__item > .pager__btn:visited {
         color: #fff; }
+      .pager > .pager__item > .pager__btn:focus {
+        border: 6px solid #ffd617;
+        text-decoration: none;
+        margin-top: -6px; }
 
 .pager__middle {
   background: #ececec;
@@ -9590,7 +9593,9 @@ Styleguide pager
     font-size: 0.889em;
     padding: 0 4.688em 0 1.250em; }
     .pager__middle .pager__dropdown::-moz-focus-inner, .pager__middle .pager__dropdown:focus {
-      border: 0;
+      border: 6px solid #ffd617;
+      height: 3.750em;
+      margin-top: -6px;
       outline: none; }
     .pager__middle .pager__dropdown:hover {
       background-image: url("../images/svg/arrow-down--blue.svg");

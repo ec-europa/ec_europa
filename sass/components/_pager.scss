@@ -13,9 +13,6 @@ Styleguide pager
   margin: 0.938em auto;
   height: 3.750em;
 
-  // If .pager is too small .pager__item will be hidden.
-  overflow: hidden;
-
   & > .pager__item {
     // Prettifying.
     transition: all .7s ease-in-out;
@@ -41,6 +38,11 @@ Styleguide pager
       &:hover, &:focus, &:active, &:visited {
         color: #fff;
       }
+      &:focus {
+        border: 6px solid $yellow-light;
+        text-decoration: none;
+        margin-top: -6px;
+      }
     }
   }
 }
@@ -61,7 +63,9 @@ Styleguide pager
     // Removing ugly dotted line.
     &::-moz-focus-inner,
     &:focus {
-      border: 0;
+      border: 6px solid $yellow-light;
+      height: 3.750em;
+      margin-top: -6px;
       outline: none;
     }
 
