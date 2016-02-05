@@ -6282,6 +6282,14 @@ Styleguide form.textarea
 textarea.error {
   border-color: #da2131; }
 
+.form-group .messages.error {
+  border: none;
+  background-color: #ececec; }
+  .form-group .messages.error h3 {
+    font-size: inherit; }
+  .form-group .messages.error p {
+    font-size: 0.889em; }
+
 .container-fluid, .section__group--full-width > *, .block--full-width > *, .front .top-bar > *, .field--full-width > * {
   max-width: 1170px; }
 

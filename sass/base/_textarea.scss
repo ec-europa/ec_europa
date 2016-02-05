@@ -11,3 +11,15 @@ textarea {
     border-color: #da2131;
   }
 }
+
+.form-group .messages.error {
+  border: none;
+  background-color: $grey-lighter;
+
+  h3 {
+    font-size: inherit;
+  }
+  p {
+    font-size: $font-size-little;
+  }
+}
