@@ -26,7 +26,7 @@
             pageNum = $(listItem).text();
             selected = 'selected';
           }
-          option = ('<option value="' + value + '" ' + selected + '>' + title + ' ' + pageNum  + '</option>').trim();
+          option = ('<option value="' + value + '" ' + selected + '>' + title + ' ' + pageNum + '</option>').trim();
           options += option;
           $(listItem).hide();
         });
