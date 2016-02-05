@@ -7,19 +7,25 @@ Styleguide form
 .form-control {
   color: $form-control-text-color;
   background-color: $form-control-background-color;
-  border: 2px solid $form-control-border-color;
+  border: 1px solid $form-control-border-color;
   border-radius: 0;
   margin-bottom: 1.1em;
   min-height: $form-control-height;
   font-size: $font-size-little;
   @include box-shadow(none);
 
+  &.has-error {
+    border-width: 2px;
+    padding-left: 11px;
+  }
+
   // Focus state.
   &:focus,
   &.is-focused,
   .has-error &:focus {
     color: $form-control-text-color-focus;
-    border-color: $form-control-border-color-focus;
+    border: 2px solid $form-control-border-color-focus;
+    padding-left: 11px;
     @include box-shadow(none);
   }
 
