@@ -7124,7 +7124,7 @@ Facet tag
 
 Markup: html/facet-tag.html
 
-Styleguide forms.facettag
+Styleguide filters.facettag
 */
 .facet-tag {
   display: inline-block;
@@ -7296,6 +7296,11 @@ Markup: html/field.html
 
 Styleguide field
 */
+.field__label {
+  font-size: 0.778em;
+  line-height: 2em;
+  font-weight: 600; }
+
 .field--labeled {
   margin-bottom: 0.556em;
   overflow: hidden; }
@@ -7303,10 +7308,7 @@ Styleguide field
     margin-bottom: 0; }
   .field--labeled .field__label {
     display: block;
-    clear: both;
-    font-size: 0.889em;
-    line-height: 2em;
-    font-weight: 600; }
+    clear: both; }
   .field--labeled .field__items {
     display: block; }
 
@@ -7526,11 +7528,17 @@ Styleguide file
 /*
 Filters
 
+Filter components on content filtering pages.
+
+Styleguide filters
+*/
+/*
+Filters
+
 Filters implementation
 Drupal implementation guidelines can be found [PLACEHOLDER FOR GUIDELINES ON IMPLEMENTATION]
 
-Styleguide forms.filters
-
+Styleguide filters.filters
 */
 .filters {
   background: #ececec;
