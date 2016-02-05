@@ -51,10 +51,10 @@ Styleguide pager
 
   .pager__separator {
     width: 1px;
+    left: 6em;
     height: 100%;
-    border-right: 1px solid #d3d4d4;
-    left: 7em;
     position: absolute;
+    border-right: 1px solid #d3d4d4;
   }
 
   .pager__dropdown {
@@ -66,7 +66,7 @@ Styleguide pager
     }
 
     // Background.
-    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 9em center;
+    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 7.7em center;
     background-size: 0.938em 0.625em;
     &:hover {
       background-image:url("../images/svg/arrow-down--blue.svg");
@@ -79,6 +79,7 @@ Styleguide pager
     appearance: none;
 
     border: none;
+    color: $blue-dark;
     cursor: pointer;
     font-size: $font-size-little;
     padding: 0 4.688em 0 1.250em;
@@ -105,7 +106,6 @@ Styleguide pager
 
 // Forward specific.
 .pager__forward {
-  text-align: right;
   margin-right: 0.625em;
 }
 
@@ -118,7 +118,7 @@ Styleguide pager
 
   // Override font icon rather than parent elements,
   // because parents could have padding and margin.
-  // Avoiding: increasing font size with paddings resize the whole element.
+  // Avoiding: increasing font size with padding resize the whole element.
   &.icon:before, &.icon::before {
     font-size: 1.7em;
     top: 5px;
@@ -130,6 +130,11 @@ Styleguide pager
 .pager__back-text,
 .pager__forward-text {
   display: none;
+}
+
+.pager__back-text {
+  margin-left: 0.6em;
+  margin-right: 0.4em;
 }
 
 @include breakpoint(screen-msm-min) {
@@ -175,8 +180,12 @@ Styleguide pager
 
     // Select list spacing specifics.
     .pager__middle {
+      .pager__separator {
+        left: 8.5em;
+      }
       .pager__dropdown {
-        padding: 0 4.688em 0 1.250em;
+        background-position: 10.5em;
+        padding: 0 7.500em 0 1.250em;
       }
     }
   }

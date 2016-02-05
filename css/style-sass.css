@@ -9574,17 +9574,18 @@ Styleguide pager
   position: relative; }
   .pager__middle .pager__separator {
     width: 1px;
+    left: 6em;
     height: 100%;
-    border-right: 1px solid #d3d4d4;
-    left: 7em;
-    position: absolute; }
+    position: absolute;
+    border-right: 1px solid #d3d4d4; }
   .pager__middle .pager__dropdown {
-    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 9em center;
+    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 7.7em center;
     background-size: 0.938em 0.625em;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: none;
+    color: #004494;
     cursor: pointer;
     font-size: 0.889em;
     padding: 0 4.688em 0 1.250em; }
@@ -9604,7 +9605,6 @@ Styleguide pager
   overflow: hidden; }
 
 .pager__forward {
-  text-align: right;
   margin-right: 0.625em; }
 
 .pager__back-arrow,
@@ -9624,6 +9624,10 @@ Styleguide pager
 .pager__back-text,
 .pager__forward-text {
   display: none; }
+
+.pager__back-text {
+  margin-left: 0.6em;
+  margin-right: 0.4em; }
 
 @media (min-width: 622px) {
   .pager__back .pager__btn,
@@ -9645,8 +9649,11 @@ Styleguide pager
     height: 2.813em; }
     .pager .pager__item {
       line-height: 2.813em; }
+    .pager .pager__middle .pager__separator {
+      left: 8.5em; }
     .pager .pager__middle .pager__dropdown {
-      padding: 0 4.688em 0 1.250em; } }
+      background-position: 10.5em;
+      padding: 0 7.500em 0 1.250em; } }
 
 .region-content ul.pager {
   margin: 0.938em auto; }
