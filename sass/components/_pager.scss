@@ -153,6 +153,9 @@ Styleguide pager
   .pager__back-text,
   .pager__forward-text {
     display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   // TWEAKS:
@@ -165,9 +168,9 @@ Styleguide pager
   // Forward button specifics.
   .pager__forward {
     .pager__btn {
-      padding: 0 0.625em 0 5.000em;
+      padding: 0 0.625em 0 3.438em;
       .pager__forward-text {
-        padding-right: 0.438em;
+        padding-right: 2.500em;
       }
     }
   }

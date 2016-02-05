@@ -9639,12 +9639,15 @@ Styleguide pager
   .pager__back-text,
   .pager__forward-text {
     display: inline-block; }
+    .pager__back-text:hover,
+    .pager__forward-text:hover {
+      text-decoration: underline; }
   .pager__back .pager__btn {
     padding: 0 2.500em 0 0.938em; }
   .pager__forward .pager__btn {
-    padding: 0 0.625em 0 5.000em; }
+    padding: 0 0.625em 0 3.438em; }
     .pager__forward .pager__btn .pager__forward-text {
-      padding-right: 0.438em; }
+      padding-right: 2.500em; }
   .pager {
     height: 2.813em; }
     .pager .pager__item {
