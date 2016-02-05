@@ -9547,7 +9547,11 @@ Markup: html/pager.html
 
 Styleguide pager
 */
+.pager__wrapper {
+  text-align: center; }
+
 .pager {
+  display: inline-block;
   font-weight: bold;
   margin: 0.938em auto;
   height: 3.750em; }
@@ -9609,9 +9613,6 @@ Styleguide pager
   width: 4em;
   overflow: hidden; }
 
-.pager__forward {
-  margin-right: 0.625em; }
-
 .pager__back-arrow,
 .pager__forward-arrow {
   height: 1.250em;
@@ -9665,6 +9666,8 @@ Styleguide pager
 
 .region-content ul.pager {
   margin: 0.938em auto; }
+  .region-content ul.pager .ajax-progress {
+    display: none; }
 
 /*
 RSS Link

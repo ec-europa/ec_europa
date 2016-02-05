@@ -1339,10 +1339,12 @@ function europa_pager($variables) {
       );
     }
 
-    return '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme('item_list', array(
+    $pager_markup = '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme('item_list', array(
       'items' => $items,
       'attributes' => array('class' => array('pager')),
     ));
+
+    return '<div class="pager__wrapper">' . $pager_markup . '</div>';
   }
 }
 

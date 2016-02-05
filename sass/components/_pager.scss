@@ -8,7 +8,12 @@ Markup: html/pager.html
 Styleguide pager
 */
 
+.pager__wrapper {
+  text-align: center;
+}
+
 .pager {
+  display: inline-block;
   font-weight: bold;
   margin: 0.938em auto;
   height: 3.750em;
@@ -108,11 +113,6 @@ Styleguide pager
   }
 }
 
-// Forward specific.
-.pager__forward {
-  margin-right: 0.625em;
-}
-
 // Arrows inside the pager items.
 .pager__back-arrow,
 .pager__forward-arrow {
@@ -201,4 +201,8 @@ Styleguide pager
 // Drupal-specific hack.
 .region-content ul.pager {
   margin: 0.938em auto;
+  // The throbber should not mess up sizing.
+  .ajax-progress {
+    display: none;
+  }
 }
