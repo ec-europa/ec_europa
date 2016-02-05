@@ -9542,6 +9542,20 @@ Markup: html/page-header.html
 
 Styleguide page-header
 */
+/*
+Political page header
+
+Markup: html/page-header--political.html
+
+Styleguide page-header.political
+*/
+/*
+Informational site page header
+
+Markup: html/page-header--informational.html
+
+Styleguide page-header.informational
+*/
 .page-header {
   background: #004494;
   margin: 0;
