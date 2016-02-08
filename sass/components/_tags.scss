@@ -30,20 +30,20 @@ Styleguide tags
   display: inline-block;
   margin-right: 0.4em;
   margin-bottom: 0.4em;
-  a {
-    background: $grey-light;
-    border-radius: 5px;
-    color: $text-color;
-    display: inline-block;
-    font-size: $font-size-little;
-    line-height: 1;
-    padding: 0.5em;
-    text-transform: lowercase;
+  background: $grey-light;
+  border-radius: 5px;
+  font-size: $font-size-little;
+  line-height: 1;
+  padding: 0.5em;
+  text-transform: lowercase;
+}
 
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-    }
+.tags__item a,
+a.tags__item {
+  color: $text-color;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
   }
 }

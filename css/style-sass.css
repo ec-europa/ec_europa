@@ -7110,6 +7110,10 @@ Styleguide expandable
   float: left;
   width: 100%;
   background-color: #f2f2f2; }
+  @media (min-width: 480px) {
+    .expandable__content > p {
+      margin: 0.8em 0.8em 0.8em 3.2em;
+      font-size: 0.889em; } }
 
 .expandable__toggle {
   float: left;
@@ -10254,18 +10258,22 @@ Styleguide tags
 .tags__item {
   display: inline-block;
   margin-right: 0.4em;
-  margin-bottom: 0.4em; }
-  .tags__item a {
-    background: #e2e2e2;
-    border-radius: 5px;
-    color: #404040;
-    display: inline-block;
-    font-size: 0.889em;
-    line-height: 1;
-    padding: 0.5em;
-    text-transform: lowercase; }
-    .tags__item a:hover, .tags__item a:active, .tags__item a:focus {
-      text-decoration: underline; }
+  margin-bottom: 0.4em;
+  background: #e2e2e2;
+  border-radius: 5px;
+  font-size: 0.889em;
+  line-height: 1;
+  padding: 0.5em;
+  text-transform: lowercase; }
+
+.tags__item a,
+a.tags__item {
+  color: #404040; }
+  .tags__item a:hover, .tags__item a:active, .tags__item a:focus,
+  a.tags__item:hover,
+  a.tags__item:active,
+  a.tags__item:focus {
+    text-decoration: underline; }
 
 /*
 Timeline
