@@ -9554,7 +9554,9 @@ Styleguide pager
   display: inline-block;
   font-weight: bold;
   margin: 0.938em auto;
-  height: 3.750em; }
+  height: 3.750em;
+  overflow: hidden;
+  max-width: none !important; }
   .pager > .pager__item {
     transition: all .7s ease-in-out;
     list-style: none;
@@ -9566,9 +9568,7 @@ Styleguide pager
       background: #004494;
       font-size: 0.889em;
       display: inline-block;
-      text-align: center;
-      *zoom: 1;
-      *display: inline; }
+      text-align: center; }
       .pager > .pager__item > .pager__btn:hover, .pager > .pager__item > .pager__btn:focus, .pager > .pager__item > .pager__btn:active, .pager > .pager__item > .pager__btn:visited {
         color: #fff; }
       .pager > .pager__item > .pager__btn:focus {
@@ -9586,7 +9586,7 @@ Styleguide pager
     position: absolute;
     border-right: 1px solid #d3d4d4; }
   .pager__middle .pager__dropdown {
-    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 7.7em center;
+    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 8.3em center;
     background-size: 0.938em 0.625em;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -9599,8 +9599,7 @@ Styleguide pager
     .pager__middle .pager__dropdown::-moz-focus-inner, .pager__middle .pager__dropdown:focus {
       border: 6px solid #ffd617;
       height: 3.750em;
-      margin-top: -6px;
-      outline: none; }
+      margin-top: -6px; }
     .pager__middle .pager__dropdown:hover {
       background-image: url("../images/svg/arrow-down--blue.svg");
       background-size: 0.938em 0.625em !important; }
@@ -9661,7 +9660,7 @@ Styleguide pager
     .pager .pager__middle .pager__separator {
       left: 8.5em; }
     .pager .pager__middle .pager__dropdown {
-      background-position: 10.5em;
+      background-position: 11em;
       padding: 0 7.500em 0 1.250em; } }
 
 .region-content ul.pager {
