@@ -155,27 +155,33 @@
         </a>
         <ul class="kss-nav__menu-child">
             <li class="kss-nav__menu-item">
-              <a href="section-listing.html#kssref-listing-agenda">
+              <a href="section-listing.html#kssref-listing-1">
                 <span class="kss-nav__ref">20.1</span
-                ><span class="kss-nav__name">Listing Agenda</span>
+                ><span class="kss-nav__name">Listing default</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-listing.html#kssref-listing-column-left">
+              <a href="section-listing.html#kssref-listing-2">
                 <span class="kss-nav__ref">20.2</span
                 ><span class="kss-nav__name">Listing layouts</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-listing.html#kssref-listing-teaser">
+              <a href="section-listing.html#kssref-listing-3">
                 <span class="kss-nav__ref">20.3</span
-                ><span class="kss-nav__name">Listing teaser</span>
+                ><span class="kss-nav__name">Simple listing (title + text) modifiers</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-listing.html#kssref-listing-title">
+              <a href="section-listing.html#kssref-listing-4">
                 <span class="kss-nav__ref">20.4</span
                 ><span class="kss-nav__name">Listing title</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-listing.html#kssref-listing-5">
+                <span class="kss-nav__ref">20.5</span
+                ><span class="kss-nav__name">Listing Agenda</span>
               </a>
             </li>
         </ul>
@@ -288,153 +294,29 @@
 
 
       <div class="kss-description">
-        <p>Listing components</p>
+        <p>Component used to render list of entities, usually the landing page of a class.
+It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.
+The width of the element listing__item is limited to 32em, a modifier is available to reset this limit, the first two examples are using that.</p>
 
       </div>
     </div>
 
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
-        </div>
-        <div class="kss-modifier__example">
-          <div class="listing ">
-  <div class="listing__item">
-    <a href="#" class="listing__item-link">
-      <div class="listing__column-second">
-        <img src="http://placehold.it/263x200">
-      </div>
-      <div class="listing__column-main">
-          <div class="meta">
-            <span class="meta__item meta__item--type">press release</span>
-            <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
-          </div>
-          <h3 class="listing__title">EU continues its strong support for the victims of Syria's crisis</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="listing__item">
-    <a href="#" class="listing__item-link">
-      <div class="listing__column-second">
-        <img src="http://placehold.it/263x200">
-      </div>
-      <div class="listing__column-main">
-          <div class="meta">
-            <span class="meta__item meta__item--type">press release</span>
-            <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
-          </div>
-          <h3 class="listing__title">EU continues its strong support for the victims of Syria's crisis</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="listing__item">
-    <a href="#" class="listing__item-link">
-      <div class="listing__column-second">
-        <img src="http://placehold.it/263x200">
-      </div>
-      <div class="listing__column-main">
-          <div class="meta">
-            <span class="meta__item meta__item--type">press release</span>
-            <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
-          </div>
-          <h3 class="listing__title"><span>Two Word</span><span>Sentence</span></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <a href="#" class="listing__read-more">More on Topic</a>
-</div>
-
-        </div>
-      </div>
-
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing &quot;&gt;
-  &lt;div class=&quot;listing__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-      &lt;div class=&quot;listing__column-second&quot;&gt;
-        &lt;img src=&quot;http://placehold.it/263x200&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;listing__column-main&quot;&gt;
-          &lt;div class=&quot;meta&quot;&gt;
-            &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
-            &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
-          &lt;/div&gt;
-          &lt;h3 class=&quot;listing__title&quot;&gt;EU continues its strong support for the victims of Syria&#x27;s crisis&lt;/h3&gt;
-          &lt;p&gt;
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;listing__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-      &lt;div class=&quot;listing__column-second&quot;&gt;
-        &lt;img src=&quot;http://placehold.it/263x200&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;listing__column-main&quot;&gt;
-          &lt;div class=&quot;meta&quot;&gt;
-            &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
-            &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
-          &lt;/div&gt;
-          &lt;h3 class=&quot;listing__title&quot;&gt;EU continues its strong support for the victims of Syria&#x27;s crisis&lt;/h3&gt;
-          &lt;p&gt;
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;listing__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-      &lt;div class=&quot;listing__column-second&quot;&gt;
-        &lt;img src=&quot;http://placehold.it/263x200&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;listing__column-main&quot;&gt;
-          &lt;div class=&quot;meta&quot;&gt;
-            &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
-            &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
-          &lt;/div&gt;
-          &lt;h3 class=&quot;listing__title&quot;&gt;&lt;span&gt;Two Word&lt;/span&gt;&lt;span&gt;Sentence&lt;/span&gt;&lt;/h3&gt;
-          &lt;p&gt;
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;a href=&quot;#&quot; class=&quot;listing__read-more&quot;&gt;More on Topic&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-      </div>
 
       </div>
-      <section id="kssref-listing-agenda" class="kss-section kss-section--depth-2">
+      <section id="kssref-listing-1" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-listing-agenda">
+        <a class="kss-title__permalink" href="#kssref-listing-1">
           <span class="kss-title__ref">20.1</span
-          >Listing Agenda
+          >Listing default
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h2>
 
 
       <div class="kss-description">
-        <p>Listing components</p>
+        <p>Default implementation of the listing component.</p>
 
       </div>
     </div>
@@ -444,41 +326,157 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="listing--agenda listing--column-left [modifier class]">
-  <div class="listing__item">
-    <div class="listing__column-second">
-      <div class="date-block">
-        <span class="date-block__day-text">Mon</span>
-        <span class="date-block__day">12</span>
-        <span class="date-block__month">Oct</span>
-      </div>
+          <div class="listing__wrapper">
+  <div class="listing ">
+    <div class="listing__item listing__item--fullwidth">
+      <a href="#" class="listing__item-link">
+        <div class="listing__column-second">
+          <img src="http://placehold.it/300x200">
+        </div>
+        <div class="listing__column-main">
+          <div class="meta">
+            <span class="meta__item meta__item--type">press release</span>
+            <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
+          </div>
+          <h3 class="listing__title">
+            EU continues its strong support for the victims of Syria's crisis
+          </h3>
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </a>
     </div>
-    <div class="listing__column-main">
-      <div class="meta">
-        <span class="meta__item meta__item--type">college meeting</span>
-      </div>
-      <h3 class="listing__title">Meeting of the College of Commissioners</h3>
-      <div class="listing__author">
-        With: Jean-Claude Juncker
-      </div>
+
+    <div class="listing__item listing__item--fullwidth">
+      <a href="#" class="listing__item-link">
+        <div class="listing__column-second">
+          <img src="http://placehold.it/300x200">
+        </div>
+        <div class="listing__column-main">
+          <div class="meta">
+            <span class="meta__item meta__item--type">press release</span>
+            <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
+          </div>
+          <h3 class="listing__title">EU continues its strong support for the victims of Syria's crisis</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </a>
     </div>
+    <a href="#" class="listing__read-more">More on Topic</a>
   </div>
-  <div class="listing__item">
-    <div class="listing__column-second">
-      <div class="date-block">
-        <span class="date-block__day-text">Mon</span>
-        <span class="date-block__day">12</span>
-        <span class="date-block__month">Oct</span>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper&quot;&gt;
+  &lt;div class=&quot;listing &quot;&gt;
+    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;div class=&quot;listing__column-second&quot;&gt;
+          &lt;img src=&quot;http://placehold.it/300x200&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__column-main&quot;&gt;
+          &lt;div class=&quot;meta&quot;&gt;
+            &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
+            &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class=&quot;listing__title&quot;&gt;
+            EU continues its strong support for the victims of Syria&#x27;s crisis
+          &lt;/h3&gt;
+          &lt;p&gt;
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;div class=&quot;listing__column-second&quot;&gt;
+          &lt;img src=&quot;http://placehold.it/300x200&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__column-main&quot;&gt;
+          &lt;div class=&quot;meta&quot;&gt;
+            &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
+            &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class=&quot;listing__title&quot;&gt;EU continues its strong support for the victims of Syria&#x27;s crisis&lt;/h3&gt;
+          &lt;p&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;a href=&quot;#&quot; class=&quot;listing__read-more&quot;&gt;More on Topic&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-listing-1-1" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-listing-1-1">
+          <span class="kss-title__ref">20.1.1</span
+          >Listing column left
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>This is actually a modifier that applies changes to the listing__item element.</p>
+
       </div>
     </div>
-    <div class="listing__column-main">
-      <div class="meta">
-        <span class="meta__item meta__item--type">college meeting</span>
-      </div>
-      <h3 class="listing__title">Meeting of the College of Commissioners</h3>
-      <div class="listing__author">
-        With: Jean-Claude Juncker
-      </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="listing__wrapper">
+  <div class="listing listing--column-left">
+    <div class="listing__item listing__item--fullwidth">
+      <a href="#" class="listing__item-link">
+        <div class="listing__column-second">
+          <img src="http://placehold.it/80x80">
+        </div>
+        <div class="listing__column-main">
+          <div class="meta">
+            <span class="meta__item meta__item--type">press release</span>
+            <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
+          </div>
+          <h3 class="listing__title">EU continues its strong support for the victims of Syria's crisis</h3>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="listing__item listing__item--fullwidth">
+      <a href="#" class="listing__item-link">
+        <div class="listing__column-second ">
+          <img src="http://placehold.it/80x80">
+        </div>
+        <div class="listing__column-main">
+          <div class="meta">
+            <span class="meta__item meta__item--type">press release</span>
+            <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
+          </div>
+          <h3 class="listing__title"><span>Two Word</span><span>Sentence</span></h3>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </div>
@@ -487,41 +485,41 @@
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing--agenda listing--column-left [modifier class]&quot;&gt;
-  &lt;div class=&quot;listing__item&quot;&gt;
-    &lt;div class=&quot;listing__column-second&quot;&gt;
-      &lt;div class=&quot;date-block&quot;&gt;
-        &lt;span class=&quot;date-block__day-text&quot;&gt;Mon&lt;/span&gt;
-        &lt;span class=&quot;date-block__day&quot;&gt;12&lt;/span&gt;
-        &lt;span class=&quot;date-block__month&quot;&gt;Oct&lt;/span&gt;
-      &lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper&quot;&gt;
+  &lt;div class=&quot;listing listing--column-left&quot;&gt;
+    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;div class=&quot;listing__column-second&quot;&gt;
+          &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__column-main&quot;&gt;
+          &lt;div class=&quot;meta&quot;&gt;
+            &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
+            &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class=&quot;listing__title&quot;&gt;EU continues its strong support for the victims of Syria&#x27;s crisis&lt;/h3&gt;
+          &lt;div&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;listing__column-main&quot;&gt;
-      &lt;div class=&quot;meta&quot;&gt;
-        &lt;span class=&quot;meta__item meta__item--type&quot;&gt;college meeting&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;h3 class=&quot;listing__title&quot;&gt;Meeting of the College of Commissioners&lt;/h3&gt;
-      &lt;div class=&quot;listing__author&quot;&gt;
-        With: Jean-Claude Juncker
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;listing__item&quot;&gt;
-    &lt;div class=&quot;listing__column-second&quot;&gt;
-      &lt;div class=&quot;date-block&quot;&gt;
-        &lt;span class=&quot;date-block__day-text&quot;&gt;Mon&lt;/span&gt;
-        &lt;span class=&quot;date-block__day&quot;&gt;12&lt;/span&gt;
-        &lt;span class=&quot;date-block__month&quot;&gt;Oct&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;listing__column-main&quot;&gt;
-      &lt;div class=&quot;meta&quot;&gt;
-        &lt;span class=&quot;meta__item meta__item--type&quot;&gt;college meeting&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;h3 class=&quot;listing__title&quot;&gt;Meeting of the College of Commissioners&lt;/h3&gt;
-      &lt;div class=&quot;listing__author&quot;&gt;
-        With: Jean-Claude Juncker
-      &lt;/div&gt;
+    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;div class=&quot;listing__column-second &quot;&gt;
+          &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__column-main&quot;&gt;
+          &lt;div class=&quot;meta&quot;&gt;
+            &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
+            &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;h3 class=&quot;listing__title&quot;&gt;&lt;span&gt;Two Word&lt;/span&gt;&lt;span&gt;Sentence&lt;/span&gt;&lt;/h3&gt;
+          &lt;div&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -529,11 +527,11 @@
       </div>
 
       </section>
-      <section id="kssref-listing-column-left" class="kss-section kss-section--depth-2">
+      <section id="kssref-listing-2" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-listing-column-left">
+        <a class="kss-title__permalink" href="#kssref-listing-2">
           <span class="kss-title__ref">20.2</span
           >Listing layouts
           <span class="kss-title__permalink-hash">#permalink</span>
@@ -542,7 +540,27 @@
 
 
       <div class="kss-description">
-        <p>Listing components</p>
+        <p>Listing layouts are implemented as modifiers of the listing__wrapper element which is actually the container of the component.</p>
+
+      </div>
+    </div>
+
+
+      </section>
+      <section id="kssref-listing-2-1" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-listing-2-1">
+          <span class="kss-title__ref">20.2.1</span
+          >Listing two columns
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>This is a way to put two listings in two different columns.</p>
 
       </div>
     </div>
@@ -552,135 +570,349 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="listing--column-left ">
-  <div class="listing__item">
-    <a href="#" class="listing__item-link">
-      <div class="listing__column-second">
-        <img src="http://placehold.it/80x80">
-      </div>
-      <div class="listing__column-main">
-        <div class="meta">
-          <span class="meta__item meta__item--type">press release</span>
-          <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
-        </div>
-        <h3 class="listing__title">EU continues its strong support for the victims of Syria's crisis</h3>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="listing__item">
-    <a href="#" class="listing__item-link">
-      <div class="listing__column-second">
-        <img src="http://placehold.it/80x80">
-      </div>
-      <div class="listing__column-main">
-        <div class="meta">
-          <span class="meta__item meta__item--type">press release</span>
-          <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
-        </div>
-        <h3 class="listing__title">EU continues its strong support for the victims of Syria's crisis</h3>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="listing__item">
-    <a href="#" class="listing__item-link">
-      <div class="listing__column-second">
-        <img src="http://placehold.it/80x80">
-      </div>
-      <div class="listing__column-main">
-        <div class="meta">
-          <span class="meta__item meta__item--type">press release</span>
-          <span class="meta__item">Tuesday, 21 April, 2015 - 12:01</span>
-        </div>
-        <h3 class="listing__title"><span>Two Word</span><span>Sentence</span></h3>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-        </div>
-      </div>
-    </a>
-  </div>
+          <div class="listing__wrapper listing__wrapper--two-columns">
+  <ul class="listing listing--teaser">
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+      </a>
+    </li>
+  </ul>
+   <ul class="listing listing--teaser">
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+      </a>
+    </li>
+  </ul>
 </div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing--column-left &quot;&gt;
-  &lt;div class=&quot;listing__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-      &lt;div class=&quot;listing__column-second&quot;&gt;
-        &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;listing__column-main&quot;&gt;
-        &lt;div class=&quot;meta&quot;&gt;
-          &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
-          &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;h3 class=&quot;listing__title&quot;&gt;EU continues its strong support for the victims of Syria&#x27;s crisis&lt;/h3&gt;
-        &lt;div&gt;
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;listing__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-      &lt;div class=&quot;listing__column-second&quot;&gt;
-        &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;listing__column-main&quot;&gt;
-        &lt;div class=&quot;meta&quot;&gt;
-          &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
-          &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;h3 class=&quot;listing__title&quot;&gt;EU continues its strong support for the victims of Syria&#x27;s crisis&lt;/h3&gt;
-        &lt;div&gt;
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;listing__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-      &lt;div class=&quot;listing__column-second&quot;&gt;
-        &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;listing__column-main&quot;&gt;
-        &lt;div class=&quot;meta&quot;&gt;
-          &lt;span class=&quot;meta__item meta__item--type&quot;&gt;press release&lt;/span&gt;
-          &lt;span class=&quot;meta__item&quot;&gt;Tuesday, 21 April, 2015 - 12:01&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;h3 class=&quot;listing__title&quot;&gt;&lt;span&gt;Two Word&lt;/span&gt;&lt;span&gt;Sentence&lt;/span&gt;&lt;/h3&gt;
-        &lt;div&gt;
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper listing__wrapper--two-columns&quot;&gt;
+  &lt;ul class=&quot;listing listing--teaser&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+        &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+        &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+   &lt;ul class=&quot;listing listing--teaser&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+        &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+        &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
       </div>
 
       </section>
-      <section id="kssref-listing-teaser" class="kss-section kss-section--depth-2">
+      <section id="kssref-listing-2-2" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-listing-2-2">
+          <span class="kss-title__ref">20.2.2</span
+          >Listing three columns
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>This is a way to put three listings in three different columns.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="listing__wrapper listing__wrapper--three-columns">
+  <ul class="listing listing--teaser">
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+      </a>
+    </li>
+  </ul>
+   <ul class="listing listing--teaser">
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+      </a>
+    </li>
+  </ul>
+  <ul class="listing listing--teaser">
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper listing__wrapper--three-columns&quot;&gt;
+  &lt;ul class=&quot;listing listing--teaser&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+        &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+        &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+   &lt;ul class=&quot;listing listing--teaser&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+        &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+        &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class=&quot;listing listing--teaser&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+        &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+        &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-listing-2-3" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-listing-2-3">
+          <span class="kss-title__ref">20.2.3</span
+          >Listing item two rows
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>This is a way to put two listing_item in the same row.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="listing__wrapper listing__wrapper--row-two">
+  <ul class="listing listing--no-border listing--teaser">
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper listing__wrapper--row-two&quot;&gt;
+  &lt;ul class=&quot;listing listing--no-border listing--teaser&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+        &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+        &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-listing-2-4" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-listing-2-4">
+          <span class="kss-title__ref">20.2.4</span
+          >Listing item three rows
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>This is a way to put three listing_item in the same row.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="listing__wrapper listing__wrapper--row-three">
+  <ul class="listing listing--no-border listing--teaser listing--cta">
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio</h3>
+        <p>Vestibulum turpis sem, aliquet eget</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper listing__wrapper--row-three&quot;&gt;
+  &lt;ul class=&quot;listing listing--no-border listing--teaser listing--cta&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error&lt;/h3&gt;
+        &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt&lt;/h3&gt;
+        &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio&lt;/h3&gt;
+        &lt;p&gt;Vestibulum turpis sem, aliquet eget&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-listing-3" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-listing-teaser">
+        <a class="kss-title__permalink" href="#kssref-listing-3">
           <span class="kss-title__ref">20.3</span
-          >Listing teaser
+          >Simple listing (title + text) modifiers
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h2>
 
 
       <div class="kss-description">
-        <p>Listing components</p>
+        <p>In this section we collect many modifiers, in the example the listing--teaser version of the component has been used.</p>
 
       </div>
     </div>
@@ -705,12 +937,6 @@
       <a href="#" class="listing__item-link">
         <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
         <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
-      </a>
-    </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
-        <p>Augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
       </a>
     </li>
   </ul>
@@ -738,12 +964,6 @@
         <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
       </a>
     </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
-        <p>Augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
-      </a>
-    </li>
   </ul>
 </div>
 
@@ -767,74 +987,6 @@
       <a href="#" class="listing__item-link">
         <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
         <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
-      </a>
-    </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
-        <p>Augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
-      </a>
-    </li>
-  </ul>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .listing--title-large
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Listing title large
-        </div>
-        <div class="kss-modifier__example">
-          <div class="listing__wrapper listing--title-large">
-  <ul class="listing listing--teaser">
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
-        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
-      </a>
-    </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
-        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
-      </a>
-    </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
-        <p>Augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
-      </a>
-    </li>
-  </ul>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .listing--title-medium
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Listing title medium
-        </div>
-        <div class="kss-modifier__example">
-          <div class="listing__wrapper listing--title-medium">
-  <ul class="listing listing--teaser">
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
-        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
-      </a>
-    </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
-        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
-      </a>
-    </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
-        <p>Augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
       </a>
     </li>
   </ul>
@@ -862,12 +1014,6 @@
         <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
       </a>
     </li>
-    <li class="listing__item">
-      <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
-        <p>Augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
-      </a>
-    </li>
   </ul>
 </div>
 
@@ -893,10 +1039,54 @@
         <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
       </a>
     </li>
+  </ul>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .listing--no-border
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Listing with no border
+        </div>
+        <div class="kss-modifier__example">
+          <div class="listing__wrapper listing--no-border">
+  <ul class="listing listing--teaser">
     <li class="listing__item">
       <a href="#" class="listing__item-link">
-        <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
-        <p>Augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .listing--nostripe
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Listing with no stripe
+        </div>
+        <div class="kss-modifier__example">
+          <div class="listing__wrapper listing--nostripe">
+  <ul class="listing listing--teaser">
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+      </a>
+    </li>
+    <li class="listing__item">
+      <a href="#" class="listing__item-link">
+        <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
       </a>
     </li>
   </ul>
@@ -920,23 +1110,17 @@
         &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;listing__item&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-        &lt;h3 class=&quot;listing__title&quot;&gt;Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.&lt;/h3&gt;
-        &lt;p&gt;Augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.&lt;/p&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
       </div>
 
       </section>
-      <section id="kssref-listing-title" class="kss-section kss-section--depth-2">
+      <section id="kssref-listing-4" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-listing-title">
+        <a class="kss-title__permalink" href="#kssref-listing-4">
           <span class="kss-title__ref">20.4</span
           >Listing title
           <span class="kss-title__permalink-hash">#permalink</span>
@@ -945,7 +1129,7 @@
 
 
       <div class="kss-description">
-        <p>Listing components</p>
+        <p>Listing title is the component modifier used to style a list of titles.</p>
 
       </div>
     </div>
@@ -969,22 +1153,17 @@
       <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
     </a>
   </li>
-  <li class="listing__item">
-    <a href="#" class="listing__item-link">
-      <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
-    </a>
-  </li>
 </ul>
 
         </div>
         <div class="kss-modifier__name kss-style">
-          .listing--line-left
+          .listing--title-large
         </div>
         <div class="kss-modifier__description kss-style">
-          Listing line left
+          Listing title large
         </div>
         <div class="kss-modifier__example">
-          <ul class="listing--title listing--line-left">
+          <ul class="listing--title listing--title-large">
   <li class="listing__item">
     <a href="#" class="listing__item-link">
       <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
@@ -995,9 +1174,25 @@
       <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
     </a>
   </li>
+</ul>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .listing--title-medium
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Listing title medium
+        </div>
+        <div class="kss-modifier__example">
+          <ul class="listing--title listing--title-medium">
   <li class="listing__item">
     <a href="#" class="listing__item-link">
-      <h3 class="listing__title">Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.</h3>
+      <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+    </a>
+  </li>
+  <li class="listing__item">
+    <a href="#" class="listing__item-link">
+      <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
     </a>
   </li>
 </ul>
@@ -1017,12 +1212,119 @@
       &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
     &lt;/a&gt;
   &lt;/li&gt;
-  &lt;li class=&quot;listing__item&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-      &lt;h3 class=&quot;listing__title&quot;&gt;Culpa cum ducimus eius enim, facere fugit libero magni mollitia nam.&lt;/h3&gt;
-    &lt;/a&gt;
-  &lt;/li&gt;
 &lt;/ul&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-listing-5" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-listing-5">
+          <span class="kss-title__ref">20.5</span
+          >Listing Agenda
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Listing for event like entities.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="listing__wrapper">
+  <div class="listing listing--agenda listing--column-left [modifier class]">
+    <div class="listing__item">
+      <div class="listing__column-second">
+        <div class="date-block">
+          <span class="date-block__day-text">Mon</span>
+          <span class="date-block__day">12</span>
+          <span class="date-block__month">Oct</span>
+        </div>
+      </div>
+      <div class="listing__column-main">
+        <div class="meta">
+          <span class="meta__item meta__item--type">college meeting</span>
+        </div>
+        <h3 class="listing__title">Meeting of the College of Commissioners</h3>
+        <div class="listing__author">
+          With: Jean-Claude Juncker
+        </div>
+      </div>
+    </div>
+    <div class="listing__item">
+      <div class="listing__column-second">
+        <div class="date-block">
+          <span class="date-block__day-text">Mon</span>
+          <span class="date-block__day">12</span>
+          <span class="date-block__month">Oct</span>
+        </div>
+      </div>
+      <div class="listing__column-main">
+        <div class="meta">
+          <span class="meta__item meta__item--type">college meeting</span>
+        </div>
+        <h3 class="listing__title">Meeting of the College of Commissioners</h3>
+        <div class="listing__author">
+          With: Jean-Claude Juncker
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper&quot;&gt;
+  &lt;div class=&quot;listing listing--agenda listing--column-left [modifier class]&quot;&gt;
+    &lt;div class=&quot;listing__item&quot;&gt;
+      &lt;div class=&quot;listing__column-second&quot;&gt;
+        &lt;div class=&quot;date-block&quot;&gt;
+          &lt;span class=&quot;date-block__day-text&quot;&gt;Mon&lt;/span&gt;
+          &lt;span class=&quot;date-block__day&quot;&gt;12&lt;/span&gt;
+          &lt;span class=&quot;date-block__month&quot;&gt;Oct&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;listing__column-main&quot;&gt;
+        &lt;div class=&quot;meta&quot;&gt;
+          &lt;span class=&quot;meta__item meta__item--type&quot;&gt;college meeting&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Meeting of the College of Commissioners&lt;/h3&gt;
+        &lt;div class=&quot;listing__author&quot;&gt;
+          With: Jean-Claude Juncker
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;listing__item&quot;&gt;
+      &lt;div class=&quot;listing__column-second&quot;&gt;
+        &lt;div class=&quot;date-block&quot;&gt;
+          &lt;span class=&quot;date-block__day-text&quot;&gt;Mon&lt;/span&gt;
+          &lt;span class=&quot;date-block__day&quot;&gt;12&lt;/span&gt;
+          &lt;span class=&quot;date-block__month&quot;&gt;Oct&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;listing__column-main&quot;&gt;
+        &lt;div class=&quot;meta&quot;&gt;
+          &lt;span class=&quot;meta__item meta__item--type&quot;&gt;college meeting&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;h3 class=&quot;listing__title&quot;&gt;Meeting of the College of Commissioners&lt;/h3&gt;
+        &lt;div class=&quot;listing__author&quot;&gt;
+          With: Jean-Claude Juncker
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
 

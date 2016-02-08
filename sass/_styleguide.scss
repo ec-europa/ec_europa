@@ -1,0 +1,46 @@
+// Fixes for the styleguide.
+#kss-node {
+
+  .kss-description > p {
+    max-width: none;
+  }
+
+  .kss-modifier__wrapper {
+    float: left;
+    width: 100%;
+  }
+
+  .kss-modifier__name,
+  .kss-modifier__description {
+    margin: 2.4em 0;
+    padding: 0.6em;
+    display: inline-block;
+    float: none;
+  }
+
+  .kss-modifier__name {
+    background: $brand-primary;
+    color: #fff;
+    width: 40%;
+    margin-left: -0.6em;
+
+    &::before {
+      content: "[Modifier] ";
+      font-size: $font-size-h5;
+      clear: both;
+    }
+  }
+
+  .kss-modifier__description {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    font-weight: bold;
+    width: 63%;
+    margin: 2.4em -0.9em 3em -0.5em;
+  }
+
+  .kss-markup {
+    @include show_hide();
+  }
+}
