@@ -49,6 +49,7 @@ scripts[] = js/misc/ajax.js
 scripts[] = js/libraries/jquery.equalheight.min.js
 
 scripts[] = js/europa.js
+scripts[] = js/europa_tabs.js
 
 ; ========================================
 ; Settings
