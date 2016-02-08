@@ -5656,7 +5656,8 @@ Styleguide buttons.btn-search
   background: #e2e2e2;
   color: #004494; }
   .btn.btn-search:hover, .inpage-nav__navbar .btn-search.inpage-nav__toggle:hover {
-    background: #e2e2e2; }
+    background: #e2e2e2;
+    color: #404040; }
 
 /*
 Button Collapse

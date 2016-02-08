@@ -59,4 +59,4 @@
   </div>
   <?php endif;?>
 
-</section> <!-- /.block -->
+</section>
