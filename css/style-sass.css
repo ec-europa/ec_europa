@@ -9470,6 +9470,8 @@ Styleguide notification
 
 @media (min-width: 768px) {
   .notification__content {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
     display: inline-flex; }
     .notification__content .notification__text {
       width: 75%; }
