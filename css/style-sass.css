@@ -9696,7 +9696,8 @@ Styleguide pager
     height: 100%;
     width: 1px;
     border: 1px solid #d3d4d4;
-    right: 3.5em; }
+    right: 3.5em;
+    top: 0; }
   .pager__middle .pager__dropdown {
     background: transparent url("../images/svg/arrow-down--blue.svg");
     background-repeat: no-repeat;
