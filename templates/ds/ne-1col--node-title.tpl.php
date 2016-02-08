@@ -5,6 +5,7 @@
  */
 
   // Add sidebar classes so that we can apply the correct width in css.
+  // Second block is needed to activate display suite support on forms.
 ?>
 
 <div <?php print $layout_attributes; ?> class="<?php print $classes; ?>">
@@ -15,7 +16,6 @@
     <h3 class="listing__title"><?php print $main; ?></h3>
   </a>
 
-  <!-- Needed to activate display suite support on forms -->
   <?php if (!empty($drupal_render_children)): ?>
     <?php print $drupal_render_children ?>
   <?php endif; ?>
