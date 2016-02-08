@@ -18,7 +18,6 @@ Styleguide pager
   margin: 0.938em auto;
   height: 3.750em;
   max-width: none !important;
-  overflow: hidden;
 
   & > .pager__item {
     // Prettifying.
@@ -42,9 +41,9 @@ Styleguide pager
         color: #fff;
       }
       &:focus {
-        border: 6px solid $yellow-light;
+        outline: 6px solid $yellow-light;
         text-decoration: none;
-        margin-top: -6px;
+        position: relative;
       }
     }
   }
@@ -206,6 +205,7 @@ Styleguide pager
 // Drupal-specific hack.
 .region-content ul.pager {
   margin: 0.938em auto;
+  padding: 0;
   // The throbber should not mess up sizing.
   .ajax-progress {
     display: none;

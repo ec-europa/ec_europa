@@ -9667,8 +9667,7 @@ Styleguide pager
   font-weight: bold;
   margin: 0.938em auto;
   height: 3.750em;
-  max-width: none !important;
-  overflow: hidden; }
+  max-width: none !important; }
   .pager > .pager__item {
     transition: all .7s ease-in-out;
     list-style: none;
@@ -9684,9 +9683,9 @@ Styleguide pager
       .pager > .pager__item > .pager__btn:hover, .pager > .pager__item > .pager__btn:focus, .pager > .pager__item > .pager__btn:active, .pager > .pager__item > .pager__btn:visited {
         color: #fff; }
       .pager > .pager__item > .pager__btn:focus {
-        border: 6px solid #ffd617;
+        outline: 6px solid #ffd617;
         text-decoration: none;
-        margin-top: -6px; }
+        position: relative; }
 
 .pager__middle {
   background: #ececec;
@@ -9783,7 +9782,8 @@ Styleguide pager
       right: 3em; } }
 
 .region-content ul.pager {
-  margin: 0.938em auto; }
+  margin: 0.938em auto;
+  padding: 0; }
   .region-content ul.pager .ajax-progress {
     display: none; }
 
