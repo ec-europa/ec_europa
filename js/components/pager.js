@@ -32,7 +32,7 @@
         });
         // If the .once on .pager__items has aggregated markup for the options, make the select.
         if (options != '') {
-          var $select = $('<select class="pager__dropdown">' + options + '</select>');
+          var $select = $('<select class="pager__dropdown">' + options + '</select><span class="pager__separator"></span>');
           // Listen for a change in the select, take the option value and emulate a click on the original element.
           $select.on('change', function(e) {
             var valueSelected = this.value;

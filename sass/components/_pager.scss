@@ -17,8 +17,8 @@ Styleguide pager
   font-weight: bold;
   margin: 0.938em auto;
   height: 3.750em;
-  overflow: hidden;
   max-width: none !important;
+  overflow: hidden;
 
   & > .pager__item {
     // Prettifying.
@@ -53,13 +53,14 @@ Styleguide pager
 .pager__middle {
   background: $grey-lighter;
   position: relative;
+  margin: 0 3px;
 
   .pager__separator {
-    width: 1px;
-    left: 6em;
-    height: 100%;
     position: absolute;
-    border-right: 1px solid #d3d4d4;
+    height: 100%;
+    width: 1px;
+    border: 1px solid #d3d4d4;
+    right: 2.5em;
   }
 
   .pager__dropdown {
@@ -72,10 +73,12 @@ Styleguide pager
     }
 
     // Background.
-    background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 8.3em center;
+    background: transparent url("../images/svg/arrow-down--blue.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.9em center, right;
     background-size: 0.938em 0.625em;
     &:hover {
-      background-image:url("../images/svg/arrow-down--blue.svg");
+      background-image: url("../images/svg/arrow-down--blue.svg");
       background-size: 0.938em 0.625em !important; // native select:hover should not override this specificity.
     }
 
@@ -88,7 +91,8 @@ Styleguide pager
     color: $blue-dark;
     cursor: pointer;
     font-size: $font-size-little;
-    padding: 0 4.688em 0 1.250em;
+    padding-right: 7em;
+    padding-left: 0.625em;
   }
 }
 
@@ -184,12 +188,8 @@ Styleguide pager
 
     // Select list spacing specifics.
     .pager__middle {
-      .pager__separator {
-        left: 8.5em;
-      }
       .pager__dropdown {
-        background-position: 11em;
-        padding: 0 7.500em 0 1.250em;
+
       }
     }
   }
