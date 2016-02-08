@@ -7,20 +7,22 @@ Styleguide filters.facettag
 */
 
 .facet-tag {
-  display: inline-block;
-  margin-top: 0.5em;
-  margin-right: 0.5em;
-
-  & > * {
-    display: inline-block;
-  }
+  @extend .tags;
   @extend .hidden-print;
 }
 
+.facet-tag__label {
+  @extend .tags__label;
+}
+
 .facet-tag__value {
+  @extend .tags__items;
   background: $grey-light;
-  padding: 0.1em 0.5em;
-  margin-left: 0.5em;
-  font-weight: bold;
-  border-radius: 0.9em;
+  border-radius: 5px;
+  color: $text-color;
+  display: inline-block;
+  font-size: $font-size-little;
+  line-height: 1;
+  padding: 0.5em;
+  text-transform: lowercase;
 }

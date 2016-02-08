@@ -7131,19 +7131,15 @@ Markup: html/facet-tag.html
 
 Styleguide filters.facettag
 */
-.facet-tag {
-  display: inline-block;
-  margin-top: 0.5em;
-  margin-right: 0.5em; }
-  .facet-tag > * {
-    display: inline-block; }
-
 .facet-tag__value {
   background: #e2e2e2;
-  padding: 0.1em 0.5em;
-  margin-left: 0.5em;
-  font-weight: bold;
-  border-radius: 0.9em; }
+  border-radius: 5px;
+  color: #404040;
+  display: inline-block;
+  font-size: 0.889em;
+  line-height: 1;
+  padding: 0.5em;
+  text-transform: lowercase; }
 
 /*
 Featured item
@@ -10240,18 +10236,18 @@ Markup: html/tags.html
 
 Styleguide tags
 */
-.tags {
+.tags, .facet-tag {
   padding-bottom: 0.8em;
   width: 100%;
   overflow: hidden; }
 
-.tags__label {
+.tags__label, .facet-tag__label {
   float: left;
   text-transform: uppercase;
   margin-right: 1em;
   margin-top: 0.1em; }
 
-.tags__items {
+.tags__items, .facet-tag__value {
   float: left;
   overflow: hidden; }
 
@@ -10286,7 +10282,8 @@ Styleguide timeline
   position: relative; }
   .timeline .timeline__item-title {
     font-weight: bold;
-    line-height: 1em; }
+    line-height: 1em;
+    margin-bottom: 0.5em; }
     .timeline .timeline__item-title:before {
       content: '';
       position: absolute;
