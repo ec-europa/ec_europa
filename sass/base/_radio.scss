@@ -18,13 +18,11 @@ Styleguide form.radio
   margin-top: 0;
 
   label {
-    color: $form-checkbox-color-unchecked;
+    color: $grey-base;
     height: $form-control-height;
     line-height: $form-control-height;
     display: block;
     text-align: left;
-    border: transparent solid 2px;
-    border-radius: 0;
   }
 
   input {
@@ -38,9 +36,24 @@ Styleguide form.radio
     position: relative;
     float: left;
 
+    // No focus.
+    + label {
+      &:before {
+        border: transparent solid 2px;
+        border-radius: 50%;
+        padding: $form-checkbox-icon-size 0 0 $form-checkbox-icon-size;
+      }
+    }
+
+    // Focus state.
+    &:focus + label {
+      &:before {
+        border: $form-control-border-color-focus solid 2px;
+      }
+    }
+
     // Default state.
-    &:not(checked)+label {
-      background-color: $form-checkbox-background-color-unchecked;
+    &:not(checked) + label {
       padding-left: 2.778em;
 
       &:before {
@@ -49,7 +62,7 @@ Styleguide form.radio
         display: block;
         width: $form-checkbox-icon-size;
         height: $form-checkbox-icon-size;
-        top: 0.8em;
+        top: 0.6em;
         left: 1em;
         background: url('../images/svg/radio-unchecked.svg') no-repeat;
         background-size: auto $form-checkbox-icon-size;
@@ -57,28 +70,12 @@ Styleguide form.radio
     }
 
     // Checked state.
-    &:checked+label {
-      color: $form-checkbox-color-checked;
-      background-color: $form-checkbox-background-color-checked;
-
+    &:checked + label {
       &:before {
-        background-image: url('../images/svg/radio-checked.svg');
+        background-image: url('../images/svg/radio-checked-blue.svg');
       }
     }
 
-    // Hover state, not checked.
-    &:hover:not(checked)+label {
-      color: $form-checkbox-color-unchecked-hover;
-      border: $form-checkbox-border-color-unchecked-hover solid 2px;
-      background-color: $form-checkbox-background-color-unchecked-hover;
-    }
-
-    // Hover state, checked.
-    &:hover:checked+label {
-      color: $form-checkbox-color-checked-hover;
-      border: $form-checkbox-border-color-checked-hover solid 2px;
-      background-color: $form-checkbox-background-color-checked-hover;
-    }
   }
 }
 
@@ -99,7 +96,7 @@ Styleguide form.radio
         display: none;
       }
 
-      &:not(checked)+label {
+      &:not(checked) + label {
         background: none;
         padding: 0;
         &:before {
@@ -107,7 +104,7 @@ Styleguide form.radio
         }
       }
 
-      &:checked+label {
+      &:checked + label {
         color: inherit;
         background: none;
 

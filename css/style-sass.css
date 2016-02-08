@@ -5777,13 +5777,11 @@ Styleguide form.checkbox
   margin-bottom: 2px;
   margin-top: 0; }
   .checkbox label {
-    color: #575757;
+    color: #404040;
     height: 2.75em;
     line-height: 2.75em;
     display: block;
-    text-align: left;
-    border: transparent solid 2px;
-    border-radius: 0; }
+    text-align: left; }
   .checkbox input {
     margin: 1px 0 0 13px; }
   .checkbox input[type="checkbox"] {
@@ -5791,32 +5789,26 @@ Styleguide form.checkbox
     margin-left: -9999px;
     position: relative;
     float: left; }
+    .checkbox input[type="checkbox"] + label:before {
+      border: 2px solid transparent;
+      border-radius: 8px;
+      width: 1.25em;
+      height: 1.25em;
+      padding: 1.25em 0 0 1.25em; }
+    .checkbox input[type="checkbox"]:focus + label:before {
+      border: 2px solid #ffd617; }
     .checkbox input[type="checkbox"]:not(checked) + label {
-      background-color: #ececec;
       padding-left: 2.778em; }
       .checkbox input[type="checkbox"]:not(checked) + label:before {
         content: '';
         position: absolute;
         display: block;
-        width: 1.25em;
-        height: 1.25em;
         top: 0.8em;
         left: 1em;
-        background: url("../images/svg/checkbox-unchecked.svg") no-repeat;
+        background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
         background-size: auto 1.25em; }
-    .checkbox input[type="checkbox"]:checked + label {
-      color: #ffffff;
-      background-color: #004494; }
-      .checkbox input[type="checkbox"]:checked + label:before {
-        background-image: url("../images/svg/checkbox-checked.svg"); }
-    .checkbox input[type="checkbox"]:hover:not(checked) + label {
-      color: #575757;
-      border: #004494 solid 2px;
-      background-color: #ffffff; }
-    .checkbox input[type="checkbox"]:hover:checked + label {
-      color: #ffffff;
-      border: #ffd617 solid 2px;
-      background-color: #004494; }
+    .checkbox input[type="checkbox"]:checked + label:before {
+      background-image: url("../images/svg/checkbox-checked--blue.svg"); }
 
 .no-svg .checkbox label {
   height: auto;
@@ -5848,21 +5840,25 @@ Form
 Styleguide form
 */
 .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
-  color: #575757;
+  color: #404040;
   background-color: #ffffff;
-  border: 2px solid #575757;
+  border: 1px solid #404040;
   border-radius: 0;
   margin-bottom: 1.1em;
   min-height: 2.75em;
   font-size: 0.889em;
   -webkit-box-shadow: none;
   box-shadow: none; }
+  .form-control.has-error, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.has-error {
+    border-width: 2px;
+    padding: 5px 11px; }
   .form-control:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus, .form-control.is-focused, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-focused,
   .has-error .form-control:focus,
   .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
   .has-error select:focus {
     color: #000;
-    border-color: #ffd617;
+    border: 2px solid #ffd617;
+    padding: 5px 11px;
     -webkit-box-shadow: none;
     box-shadow: none; }
   .form-control.is-disabled, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-disabled {
@@ -5973,7 +5969,7 @@ Markup: html/label.html
 Styleguide form.label
 */
 .form_label, form .label, label {
-  color: #575757;
+  color: #404040;
   font-size: 0.889em;
   display: block;
   text-align: left;
@@ -6185,13 +6181,11 @@ Styleguide form.radio
   margin-bottom: 2px;
   margin-top: 0; }
   .radio label {
-    color: #575757;
+    color: #404040;
     height: 2.75em;
     line-height: 2.75em;
     display: block;
-    text-align: left;
-    border: transparent solid 2px;
-    border-radius: 0; }
+    text-align: left; }
   .radio input {
     margin: 1px 0 0 13px; }
   .radio input[type="radio"] {
@@ -6199,8 +6193,13 @@ Styleguide form.radio
     margin-left: -9999px;
     position: relative;
     float: left; }
+    .radio input[type="radio"] + label:before {
+      border: transparent solid 2px;
+      border-radius: 50%;
+      padding: 1.25em 0 0 1.25em; }
+    .radio input[type="radio"]:focus + label:before {
+      border: #ffd617 solid 2px; }
     .radio input[type="radio"]:not(checked) + label {
-      background-color: #ececec;
       padding-left: 2.778em; }
       .radio input[type="radio"]:not(checked) + label:before {
         content: '';
@@ -6208,23 +6207,12 @@ Styleguide form.radio
         display: block;
         width: 1.25em;
         height: 1.25em;
-        top: 0.8em;
+        top: 0.6em;
         left: 1em;
         background: url("../images/svg/radio-unchecked.svg") no-repeat;
         background-size: auto 1.25em; }
-    .radio input[type="radio"]:checked + label {
-      color: #ffffff;
-      background-color: #004494; }
-      .radio input[type="radio"]:checked + label:before {
-        background-image: url("../images/svg/radio-checked.svg"); }
-    .radio input[type="radio"]:hover:not(checked) + label {
-      color: #575757;
-      border: #004494 solid 2px;
-      background-color: #ffffff; }
-    .radio input[type="radio"]:hover:checked + label {
-      color: #ffffff;
-      border: #ffd617 solid 2px;
-      background-color: #004494; }
+    .radio input[type="radio"]:checked + label:before {
+      background-image: url("../images/svg/radio-checked-blue.svg"); }
 
 .no-svg .radio label {
   height: auto;
@@ -6255,8 +6243,8 @@ Select
 
 Markup: html/select.html
 
-:hover      - Select hover
-:focus      - Select focus
+.hover      - Select hover
+:focus      - Select focus (select to see style applied)
 .is-down    - Select is-down
 
 Styleguide form.select
@@ -6274,28 +6262,28 @@ Styleguide form.select
   .select::-ms-expand, select::-ms-expand {
     display: none; }
   .select.form-control, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
-    background: url("../images/svg/arrow-down--white.svg"), linear-gradient(to bottom, #575757, #575757);
+    background: url("../images/svg/arrow-down--white.svg"), linear-gradient(to bottom, #404040, #404040);
     background-repeat: no-repeat;
     background-position: right 0.764em center, right;
     background-size: 1.1em 0.6134969325em, 2.75em 100% !important;
     transition: none;
     padding-right: 50px; }
     .no-svg .select.form-control, .no-svg select.form-control, .no-svg .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .ui-datepicker .ui-datepicker-header .ui-datepicker-title .no-svg select {
-      background: url("../images/png/arrow-down--white.png"), linear-gradient(to bottom, #575757, #575757); }
+      background: url("../images/png/arrow-down--white.png"), linear-gradient(to bottom, #404040, #404040); }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       .select.form-control, select.form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
         background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
-  .select:hover, select:hover {
+  .select:hover, select:hover, .select.hover, select.hover {
     border-color: #004494;
     background: url("../images/svg/arrow-down--white.svg"), linear-gradient(to bottom, #004494, #004494);
     background-repeat: no-repeat;
     background-position: right 0.764em center, right;
     background-size: 1.1em 0.6134969325em, 2.75em 100% !important;
     transition: none; }
-    .no-svg .select:hover, .no-svg select:hover {
+    .no-svg .select:hover, .no-svg select:hover, .no-svg .select.hover, .no-svg select.hover {
       background: url("../images/png/arrow-down--white.png"), linear-gradient(to bottom, #004494, #004494); }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      .select:hover, select:hover {
+      .select:hover, select:hover, .select.hover, select.hover {
         background-size: 1.1em 0.6134969325em, 2.75em 100% !important; } }
   .select.is-down, select.is-down {
     background: url("../images/svg/arrow-down.svg"), linear-gradient(to bottom, #ffffff, #ffffff);
@@ -6323,6 +6311,17 @@ Markup: html/textarea.html
 
 Styleguide form.textarea
 */
+textarea.error {
+  border-color: #da2131; }
+
+.form-group .messages.error {
+  border: none;
+  background-color: #ececec; }
+  .form-group .messages.error h3 {
+    font-size: inherit; }
+  .form-group .messages.error p {
+    font-size: 0.889em; }
+
 .container-fluid, .section__group--full-width > *, .block--full-width > *, .front .top-bar > *, .field--full-width > * {
   max-width: 1170px; }
 
@@ -7783,7 +7782,7 @@ Styleguide form.help-block
   margin-bottom: 0.556em;
   font-family: Arial, sans-serif;
   color: #575757;
-  font-size: 0.889em; }
+  font-size: 0.778em; }
   .disabled .help-block {
     color: #b3b4b5; }
   .has-error .help-block {
