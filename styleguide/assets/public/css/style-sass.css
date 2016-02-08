@@ -5826,14 +5826,14 @@ Styleguide form
   box-shadow: none; }
   .form-control.has-error, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.has-error {
     border-width: 2px;
-    padding-left: 11px; }
+    padding: 5px 11px; }
   .form-control:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus, .form-control.is-focused, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-focused,
   .has-error .form-control:focus,
   .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
   .has-error select:focus {
     color: #000;
     border: 2px solid #ffd617;
-    padding-left: 11px;
+    padding: 5px 11px;
     -webkit-box-shadow: none;
     box-shadow: none; }
   .form-control.is-disabled, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-disabled {

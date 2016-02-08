@@ -16,7 +16,7 @@ Styleguide form
 
   &.has-error {
     border-width: 2px;
-    padding-left: 11px;
+    padding: 5px 11px;
   }
 
   // Focus state.
@@ -25,7 +25,7 @@ Styleguide form
   .has-error &:focus {
     color: $form-control-text-color-focus;
     border: 2px solid $form-control-border-color-focus;
-    padding-left: 11px;
+    padding: 5px 11px;
     @include box-shadow(none);
   }
 
@@ -39,4 +39,5 @@ Styleguide form
   &.select {
     border-width: 1px;
   }
+
 }
