@@ -22,11 +22,11 @@ Styleguide tags
 }
 
 .tags__items {
-  float: left;
   overflow: hidden;
 }
 
 .tags__item {
+  float: left;
   display: inline-block;
   margin-right: 0.4em;
   margin-bottom: 0.4em;
@@ -36,6 +36,12 @@ Styleguide tags
   line-height: 1;
   padding: 0.5em;
   text-transform: lowercase;
+  color: $text-color;
+
+  &:hover {
+    background-color: $grey-base;
+    color: #fff;
+  }
 }
 
 .tags__item a,
@@ -44,6 +50,52 @@ a.tags__item {
   &:hover,
   &:active,
   &:focus {
+    color: #fff;
     text-decoration: underline;
+  }
+}
+
+/*
+Facet tag
+
+Markup: html/facet-tag.html
+
+Styleguide tags.facettag
+*/
+
+.facet-tag {
+  @extend .tags;
+  @extend .hidden-print;
+}
+
+.facet-tag__label {
+  float: left;
+
+  @extend .tags__label;
+}
+
+.facet-tag__value {
+  @extend .tags__item;
+}
+
+/*
+Facet tag with close
+
+Markup: html/facet-tag--close.html
+
+Styleguide tags.facet-close
+*/
+
+.facet-tag--close {
+  .facet-tag__value {
+    // Close icon.
+    &:after {
+      @extend .icon--after;
+      @extend .icon--tag-close;
+    }
+    &:hover:after {
+      @extend .icon--after;
+      @extend .icon--tag-close-hover;
+    }
   }
 }
