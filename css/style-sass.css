@@ -9685,7 +9685,8 @@ Styleguide pager
       .pager > .pager__item > .pager__btn:focus {
         outline: 6px solid #ffd617;
         text-decoration: none;
-        position: relative; }
+        position: relative;
+        z-index: 999; }
 
 .pager__middle {
   background: #ececec;

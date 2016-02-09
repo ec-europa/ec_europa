@@ -44,6 +44,7 @@ Styleguide pager
         outline: 6px solid $yellow-light;
         text-decoration: none;
         position: relative;
+        z-index: 999;
       }
     }
   }
