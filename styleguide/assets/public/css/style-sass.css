@@ -10232,6 +10232,7 @@ Markup: html/tags.html
 Styleguide tags
 */
 .tags, .facet-tag {
+  padding-top: 0.2em;
   padding-bottom: 0.8em;
   width: 100%;
   overflow: hidden; }
@@ -10239,27 +10240,28 @@ Styleguide tags
 .tags__label, .facet-tag__label {
   float: left;
   text-transform: uppercase;
-  margin-right: 1em;
-  margin-top: 0.1em; }
+  margin-right: 0.7em;
+  margin-bottom: 0.5em;
+  font-size: 0.778em;
+  padding-top: 0.15em; }
 
 .tags__items {
-  overflow: hidden; }
+  overflow: hidden;
+  vertical-align: middle; }
 
 .tags__item, .facet-tag__value {
   float: left;
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: 1.4em;
   margin-bottom: 0.4em;
   background: #e2e2e2;
   border-radius: 5px;
-  font-size: 0.889em;
+  font-size: 0.778em;
   line-height: 1;
   padding: 0.5em;
   text-transform: lowercase;
-  color: #404040; }
-  .tags__item:hover, .facet-tag__value:hover {
-    background-color: #404040;
-    color: #fff; }
+  color: #404040;
+  outline: 2px transparent solid; }
 
 .tags__item a, .facet-tag__value a,
 a.tags__item,
@@ -10272,8 +10274,12 @@ a.facet-tag__value {
   a.facet-tag__value:active,
   a.tags__item:focus,
   a.facet-tag__value:focus {
-    color: #fff;
-    text-decoration: underline; }
+    text-decoration: none; }
+  .tags__item a:focus, .facet-tag__value a:focus,
+  a.tags__item:focus,
+  a.facet-tag__value:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ffd617; }
 
 /*
 Facet tag
@@ -10292,6 +10298,15 @@ Markup: html/facet-tag--close.html
 
 Styleguide tags.facet-close
 */
+.facet-tag--close .facet-tag__value:after {
+  vertical-align: bottom; }
+
+.facet-tag--close .tags__item a:hover, .facet-tag--close .facet-tag__value a:hover,
+.facet-tag--close a.tags__item:hover,
+.facet-tag--close a.facet-tag__value:hover {
+  color: #fff;
+  background-color: #404040; }
+
 /*
 Timeline
 

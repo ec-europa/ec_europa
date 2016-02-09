@@ -9,6 +9,7 @@ Styleguide tags
 */
 
 .tags {
+  padding-top: 0.2em;
   padding-bottom: 0.8em;
   width: 100%;
   overflow: hidden;
@@ -17,31 +18,30 @@ Styleguide tags
 .tags__label {
   float: left;
   text-transform: uppercase;
-  margin-right: 1em;
-  margin-top: 0.1em;
+  margin-right: 0.7em;
+  margin-bottom: 0.5em;
+  font-size: $font-size-xsmall;
+  padding-top: 0.15em;
 }
 
 .tags__items {
   overflow: hidden;
+  vertical-align: middle;
 }
 
 .tags__item {
   float: left;
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: 1.4em;
   margin-bottom: 0.4em;
   background: $grey-light;
   border-radius: 5px;
-  font-size: $font-size-little;
+  font-size: $font-size-xsmall;
   line-height: 1;
   padding: 0.5em;
   text-transform: lowercase;
   color: $text-color;
-
-  &:hover {
-    background-color: $grey-base;
-    color: #fff;
-  }
+  outline: 2px transparent solid;
 }
 
 .tags__item a,
@@ -50,8 +50,11 @@ a.tags__item {
   &:hover,
   &:active,
   &:focus {
-    color: #fff;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $yellow-light;
   }
 }
 
@@ -70,7 +73,6 @@ Styleguide tags.facettag
 
 .facet-tag__label {
   float: left;
-
   @extend .tags__label;
 }
 
@@ -92,10 +94,19 @@ Styleguide tags.facet-close
     &:after {
       @extend .icon--after;
       @extend .icon--tag-close;
+      vertical-align: bottom;
     }
     &:hover:after {
       @extend .icon--after;
       @extend .icon--tag-close-hover;
+
+    }
+  }
+  .tags__item a,
+  a.tags__item {
+    &:hover {
+      color: #fff;
+      background-color: $grey-base;
     }
   }
 }
