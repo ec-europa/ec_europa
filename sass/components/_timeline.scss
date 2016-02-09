@@ -12,6 +12,10 @@ Styleguide timeline
   padding-top: 2em;
   position: relative;
 
+  .listing__item {
+    padding: 0;
+  }
+
   .timeline__item-title {
     font-weight: bold;
     line-height: 1em;
