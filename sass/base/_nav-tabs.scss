@@ -35,6 +35,10 @@ ul.nav-tabs,
           color: $grey-base;
         }
 
+        &:hover {
+          text-decoration: none;
+        }
+
         &:focus {
           background: $yellow-light;
           border-bottom-color: $yellow-light;

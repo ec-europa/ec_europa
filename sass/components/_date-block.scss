@@ -52,7 +52,7 @@ $agenda-yellow: #FED437;
 
 .date-block__month {
   @extend .date-block__element;
-  font-size: 1.111em;
+  font-size: $font-size-little;
   line-height: 1;
 }
 

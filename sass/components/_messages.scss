@@ -25,14 +25,11 @@ $messages-icon-size: 2em;
 
   &:before {
     background: url("../images/svg/messages-info.svg") no-repeat;
-    float: left;
     height: $messages-icon-size;
-    margin-right: 0.667em;
-    margin-top: -0.85em;
     width: $messages-icon-size;
     content: '';
     position: absolute;
-    top: 1.667em;
+    top: 1em;
     left: 1em;
   }
 
@@ -62,8 +59,9 @@ $messages-icon-size: 2em;
   }
 
   h3 {
-    font-size: $messages-heading-size;
+    font-size: inherit;
     font-weight: bold;
+    padding-top: 0;
   }
 
   p,
@@ -71,10 +69,15 @@ $messages-icon-size: 2em;
     max-width: 100%;
     margin-bottom: 0 !important;
   }
+
+  li {
+    font-size: $messages-text-size;
+    list-style-type: none;
+  }
 }
 
 .messages__list {
-  padding-left: 14px;
+  padding-left: 0;
   margin-bottom: 0;
   max-width: auto;
   font-family: $font-family-sans-serif;
