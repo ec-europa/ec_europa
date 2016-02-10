@@ -8,171 +8,207 @@ Markup: html/pager.html
 Styleguide pager
 */
 
+.pager__wrapper {
+  text-align: center;
+}
+
 .pager {
+  display: inline-block;
   font-weight: bold;
-  margin: 15px auto;
-  overflow: hidden;
-}
+  margin: 0.938em auto;
+  height: 3.750em;
+  max-width: none !important;
 
-.pager__item {
-  list-style: none;
-  float: left;
-}
+  & > .pager__item {
+    // Prettifying.
+    transition: all .7s ease-in-out;
+    list-style: none;
 
-.pager__btn {
-  color: #fff;
-  background: $blue-dark;
-  display: block;
-  font-size: $font-size-little;
-  margin: 0;
-  padding: 30px 35px;
-  line-height: 1em;
-  text-align: center;
+    // Next to each other, match the .pager height for vertical align.
+    float: left;
+    line-height: 3.750em;
 
-  &:hover, &:focus,
-  &:active, &:visited {
-    color: #fff;
+    & > .pager__btn {
+      color: #fff;
+      margin: 0;
+      background: $blue-dark;
+      font-size: $font-size-little;
+      display: inline-block;
+      text-align: center;
+
+      // States.
+      &:hover, &:focus, &:active, &:visited {
+        color: #fff;
+      }
+      &:focus {
+        outline: 6px solid $yellow-light;
+        text-decoration: none;
+        position: relative;
+        z-index: 999;
+      }
+    }
   }
 }
 
-// back as a child of pager
-.pager__back {
-  width: 45%;
-
-  // Ajax throbber should not make button larger in height
-  .pager__btn {
-    height: 80px;
-    overflow: hidden;
-  }
-}
-
-.pager__back-arrow {
-  display: inline-block;
-  height: 20px;
-  width: 10px;
-  position: relative;
-  left: -5px;
-  font-size: 1.3em;
-}
-
-// forward as a child of pager
-.pager__forward {
-  display: inline-block;
-  float: right;
-  width: 45%;
-  text-align: right;
-  margin-right: 10px;
-
-  // Ajax throbber should not make button larger in height
-  .pager__btn {
-    height: 80px;
-    overflow: hidden;
-  }
-}
-
-.pager__forward-arrow {
-  padding-left: 10px;
-  height: 20px;
-  display: inline-block;
-  font-size: 1.3em;
-  position: relative;
-}
-
-.pager__forward-text {
-  display: none;
-}
-
-.pager__combo {
-  display: none;
+.pager__middle {
   background: $grey-lighter;
-  font-size: $font-size-little;
-  text-align: center;
-  margin: 0 3px;
-  height: 80px;
-  width: 180px;
-
-  &.first {
-    margin-left: 83px;
-  }
-}
-
-.pager__combo-upper {
   position: relative;
-}
+  margin: 0 3px;
 
-.pager__combo-dropdown {
-  background: transparent url("../images/svg/arrow-down--blue.svg") no-repeat scroll 125px center;
-  background-size: 15px 10px;
-  border: none;
-  color: $blue-dark;
-  cursor: pointer;
-  display: block;
-  margin-top: 15px;
-  padding: 0 29%;
-  width: 100%;
-  clear: both;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.pager__combo-container {
-  display: inline-block;
-}
-
-.pager__combo-current {
-  display: none;
-  padding-top: 20px;
-}
-
-.pager__combo-total {
-  display: inline-block;
-  font-weight: normal;
-}
-
-.no-js {
-  .pager__combo-current {
-    display: inline-block;
+  .pager__separator {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    border: 1px solid #d3d4d4;
+    right: 3.5em;
+    top: 0;
   }
-  .pager__combo-dropdown {
-    display: none;
+
+  .pager__dropdown {
+    // Removing ugly dotted line.
+    &::-moz-focus-inner,
+    &:focus {
+      border: 6px solid $yellow-light;
+      height: 3.750em;
+      margin-top: -6px;
+    }
+
+    // Background.
+    background: transparent url("../images/svg/arrow-down--blue.svg");
+    background-repeat: no-repeat;
+    background-position: right 1.3em center, right;
+    background-size: 1.3em;
+    &:hover {
+      background-image: url("../images/svg/arrow-down--blue.svg");
+      background-size: 1.3em !important; // native select:hover should not override this specificity.
+    }
+
+    // Removing native arrow in all browsers.
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: none;
+    color: $blue-dark;
+    cursor: pointer;
+    font-size: $font-size-little;
+    padding-right: 7em;
+    padding-left: 0.625em;
   }
 }
 
+// Cover up case of misunderstood svg.
 .no-svg {
-  .pager__combo-dropdown {
+  .pager__dropdown {
     background-image: url("../images/png/arrow-down-blue.png");
   }
 }
 
-@media (min-width: 530px) {
-  .pager {
-    width: 460px;
-  }
+// Common traits between back and forward buttons.
+.pager__back,
+.pager__forward {
+  .pager__btn {
+    width: 4em;
 
-  .pager__combo {
-    display: block;
+    // Ajax throbber should not make any button larger in height.
+    overflow: hidden;
   }
-  .pager__back {
-    width: auto;
+}
+
+// Arrows inside the pager items.
+.pager__back-arrow,
+.pager__forward-arrow {
+  height: 1.250em;
+  display: inline-block;
+  position: relative;
+
+  // Override font icon rather than parent elements,
+  // because parents could have padding and margin.
+  // Avoiding: increasing font size with padding resize the whole element.
+  &.icon:before, &.icon::before {
+    font-size: 1.7em;
+    top: 5px;
+    position: relative;
+  }
+}
+
+// Mobile-first does not contain button labels.
+.pager__back-text,
+.pager__forward-text {
+  display: none;
+}
+
+.pager__back-text {
+  margin-left: 0.6em;
+  margin-right: 0.4em;
+}
+
+@include breakpoint(screen-msm-min) {
+  // Resets.
+  .pager__back,
+  .pager__forward {
     .pager__btn {
-      width: 80px;
+      width: auto;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
-  .pager__forward {
-    float: none;
-    width: 160px;
-  }
+
+  // Show buttons' labels.
+  .pager__back-text,
   .pager__forward-text {
-    display: inline;
-    padding-left: 15px;
-    padding-top: 4px;
-    float: left;
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // TWEAKS:
+  // Back button specifics.
+  .pager__back {
+    .pager__btn {
+      padding: 0 2.500em 0 0.938em;
+    }
+  }
+  // Forward button specifics.
+  .pager__forward {
+    .pager__btn {
+      padding: 0 0.625em 0 3.438em;
+      .pager__forward-text {
+        padding-right: 2.500em;
+      }
+    }
+  }
+
+  .pager {
+    height: 2.813em;
+    .pager__item {
+      line-height: 2.813em;
+    }
+
+    // Select list spacing specifics.
+    .pager__middle {
+      .pager__dropdown {
+        background-position: right 1.2em center, right;
+        background-size: 1em;
+        &:hover {
+          background-size: 1em !important; // native select:hover should not override this specificity.
+        }
+      }
+      .pager__separator {
+        right: 3em;
+      }
+    }
   }
 }
 
 // Drupal-specific hack.
 .region-content ul.pager {
-  margin: 15px auto;
+  margin: 0.938em auto;
+  padding: 0;
+  // The throbber should not mess up sizing.
+  .ajax-progress {
+    display: none;
+  }
 }

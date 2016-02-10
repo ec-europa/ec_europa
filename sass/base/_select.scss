@@ -3,8 +3,8 @@ Select
 
 Markup: html/select.html
 
-:hover      - Select hover
-:focus      - Select focus
+.hover      - Select hover
+:focus      - Select focus (select to see style applied)
 .is-down    - Select is-down
 
 Styleguide form.select
@@ -30,7 +30,7 @@ Styleguide form.select
   }
 
   // Hover state.
-  &:hover {
+  &:hover,&.hover {
     border-color: $form-control-border-select-color-hover;
     @include select-list-arrow($form-control-border-select-color-hover);
   }

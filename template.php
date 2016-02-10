@@ -1055,7 +1055,8 @@ function europa_preprocess_image(&$variables) {
  * Implements hook_preprocess_html().
  */
 function europa_preprocess_html(&$variables) {
-  $variables['theme_path'] = base_path() . path_to_theme();
+  $this_theme_path = drupal_get_path('theme', 'europa');
+  $variables['theme_path'] = base_path() . $this_theme_path;
   $language = $variables['language'];
   if (isset($language->prefix)) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
@@ -1071,7 +1072,7 @@ function europa_preprocess_html(&$variables) {
 
   // Add the ie9 only css.
   drupal_add_css(
-    path_to_theme() . '/css/ie9.css',
+    $this_theme_path . '/css/ie9.css',
     array(
       'browsers' => array(
         'IE' => 'IE 9',
@@ -1083,7 +1084,7 @@ function europa_preprocess_html(&$variables) {
   $ie9_js = array(
     '#tag' => 'script',
     '#attributes' => array(
-      'src' => path_to_theme() . '/js/ie9.js',
+      'src' => $this_theme_path . '/js/ie9.js',
     ),
     '#prefix' => '<!--[if IE 9]>',
     '#suffix' => '</script><![endif]-->',
@@ -1252,7 +1253,7 @@ function europa_pager($variables) {
     'parameters' => $parameters,
   ));
   $li_previous = theme('pager_previous', array(
-    'text' => '<span class="pager__back-arrow icon icon--left"></span><span class="pager__back-text sr-only">' . t('Previous') . '</span>',
+    'text' => '<span class="pager__back-arrow icon icon--left"></span><span class="pager__back-text">' . t('Previous') . '</span>',
     'element' => $element,
     'interval' => 1,
     'parameters' => $parameters,
@@ -1280,14 +1281,13 @@ function europa_pager($variables) {
       );
     }
     $items[] = array(
-      'class' => array('pager__item pager__combo'),
+      'class' => array('pager__item pager__middle'),
       'data' => "<span class='pager__combo-container'><span class='pager__combo-current'>" . t('Page !page', array('!page' => $pager_current)) . '&nbsp;</span>' .
       '<span class="pager__combo-total">' . t('of !total', array('!total' => $pager_max)) . '</span>' .
       '</span>',
     );
     // When there is more than one page, create the pager list.
     if ($i != $pager_max) {
-      $select = array();
       if ($li_first && $i > 1) {
         $items[] = array(
           'class' => array('pager__item select'),
@@ -1340,10 +1340,12 @@ function europa_pager($variables) {
       );
     }
 
-    return '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme('item_list', array(
+    $pager_markup = '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme('item_list', array(
       'items' => $items,
       'attributes' => array('class' => array('pager')),
     ));
+
+    return '<div class="pager__wrapper">' . $pager_markup . '</div>';
   }
 }
 
