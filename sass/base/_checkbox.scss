@@ -23,6 +23,7 @@ Styleguide form.checkbox
     line-height: $form-control-height;
     display: block;
     text-align: left;
+    padding-top: 0.2em;
   }
 
   input {
@@ -68,7 +69,6 @@ Styleguide form.checkbox
       }
     }
 
-    
     // Checked state.
     &:checked+label {
       &:before {

@@ -1012,7 +1012,7 @@ h2, .h2 {
   font-size: 1.667em; }
 
 h3, .h3, .field .label-above, .listing__title {
-  font-size: 1.333em; }
+  font-size: 1.222em; }
 
 h4, .h4 {
   font-size: 1em; }
@@ -5782,7 +5782,8 @@ Styleguide form.checkbox
     height: 2.75em;
     line-height: 2.75em;
     display: block;
-    text-align: left; }
+    text-align: left;
+    padding-top: 0.2em; }
   .checkbox input {
     margin: 1px 0 0 13px; }
   .checkbox input[type="checkbox"] {
@@ -5941,7 +5942,7 @@ h3,
 .h3,
 .field .label-above,
 .listing__title {
-  font-size: 1.333em;
+  font-size: 1.222em;
   font-weight: 600;
   color: #404040; }
 
@@ -7200,11 +7201,11 @@ Styleguide form.feedback-message
   .feedback-message.is-disabled {
     color: #b3b4b5; }
   .feedback-message.is-error {
-    background-color: #e2e2e2;
+    background-color: #ececec;
     padding: 12px; }
     .feedback-message.is-error:before {
       content: '';
-      background: url("../images/svg/error.svg") no-repeat;
+      background: url("../images/svg/messages-error.svg") no-repeat;
       background-size: 1.5em;
       width: 1.5em;
       height: 1.5em;
@@ -7217,7 +7218,7 @@ Styleguide form.feedback-message
     margin-bottom: -6px; } }
 
 .no-svg .feedback-message.is-error:before {
-  background: url("../images/png/error.png") no-repeat; }
+  background: url("../images/png/messages-error.png") no-repeat; }
 
 .feedback-form {
   margin: 0; }
@@ -8702,7 +8703,7 @@ ul.listing--title {
   font-size: 1.667em; }
 
 .listing--title-medium .listing__title {
-  font-size: 1.333em; }
+  font-size: 1.222em; }
 
 /*
 Listing Agenda
@@ -8762,7 +8763,7 @@ Markup: html/listing--teaser.html
 Styleguide listing.3
 */
 .listing--line-left .listing__title {
-  font-size: 1.333em; }
+  font-size: 1.222em; }
 
 .listing--line-left .listing--teaser {
   padding-left: 0; }

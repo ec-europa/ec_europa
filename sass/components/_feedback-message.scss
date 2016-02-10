@@ -14,13 +14,13 @@ Styleguide form.feedback-message
   }
 
   &.is-error {
-    background-color: $grey-light;
+    background-color: $grey-lighter;
     padding: 12px;
 
     // Error icon.
     &:before {
       content: '';
-      background: url('../images/svg/error.svg') no-repeat;
+      background: url('../images/svg/messages-error.svg') no-repeat;
       background-size: 1.5em;
       width: 1.5em;
       height: 1.5em;
@@ -46,7 +46,7 @@ Styleguide form.feedback-message
   .feedback-message {
     &.is-error {
       &:before {
-        background: url('../images/png/error.png') no-repeat;
+        background: url('../images/png/messages-error.png') no-repeat;
       }
     }
   }
