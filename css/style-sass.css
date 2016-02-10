@@ -1015,10 +1015,10 @@ h3, .h3, .field .label-above, .listing__title {
   font-size: 1.333em; }
 
 h4, .h4 {
-  font-size: 1.222em; }
+  font-size: 1em; }
 
 h5, .h5 {
-  font-size: 1em; }
+  font-size: 0.778em; }
 
 h6, .h6 {
   font-size: 0.778em; }
@@ -5929,13 +5929,13 @@ h1,
 .h1 {
   font-size: 2.222em;
   font-weight: 600;
-  color: #404040; }
+  color: #000; }
 
 h2,
 .h2 {
   font-size: 1.667em;
   font-weight: 600;
-  color: #404040; }
+  color: #000; }
 
 h3,
 .h3,
@@ -5943,24 +5943,25 @@ h3,
 .listing__title {
   font-size: 1.333em;
   font-weight: 600;
-  color: #222222; }
+  color: #404040; }
 
 h4,
 .h4 {
-  font-size: 1.222em;
-  color: #333333; }
+  font-size: 1em;
+  font-weight: 600;
+  color: #404040; }
 
 h5,
 .h5 {
-  font-size: 1em;
-  font-weight: 600;
-  color: #222222; }
+  font-size: 0.778em;
+  color: #404040;
+  text-transform: uppercase; }
 
 h6,
 .h6 {
   font-size: 0.778em;
   text-transform: uppercase;
-  color: #222222; }
+  color: #404040; }
 
 /*
 Label
@@ -6039,6 +6040,7 @@ ol {
 
 li > ul,
 li > ol {
+  margin-left: 5px;
   font-size: 0.889em; }
 
 .navbar-toggle {
@@ -9593,7 +9595,7 @@ Styleguide page-header
     color: #fff; }
   .page-header p {
     margin: 0;
-    font-size: 1.222em;
+    font-size: 1em;
     line-height: 1.5;
     color: #fff;
     max-width: 40em; }
@@ -10391,7 +10393,7 @@ Styleguide top-image
   margin-left: -0.6em; }
   #kss-node .kss-modifier__name::before {
     content: "[Modifier] ";
-    font-size: 1em;
+    font-size: 0.778em;
     clear: both; }
 
 #kss-node .kss-modifier__description {

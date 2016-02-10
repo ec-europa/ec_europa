@@ -1,6 +1,7 @@
 // Bootstrap overrides and new variables
 
 // Colors
+$black:                  #000;
 $grey-base:              #404040;
 $grey-dark:              #575757;
 $grey:                   #b3b4b5;
@@ -47,8 +48,8 @@ $font-size-xsmall:        0.778em; // 14px
 $font-size-h1:            2.222em;
 $font-size-h2:            1.667em;
 $font-size-h3:            1.333em;
-$font-size-h4:            1.222em;
-$font-size-h5:            1em;
+$font-size-h4:            $font-size-medium;
+$font-size-h5:            $font-size-xsmall;
 $font-size-h6:            $font-size-xsmall;
 
 $font-weight-normal:      400;
