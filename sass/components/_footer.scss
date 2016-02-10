@@ -68,6 +68,10 @@ Styleguide footer
       }
     }
   }
+  .footer__menu-item-right {
+    @extend .footer__menu-item;
+    float: right;
+  }
 }
 
 .footer__menu--separator {

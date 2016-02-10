@@ -7667,16 +7667,18 @@ Styleguide footer
 .footer__menu {
   padding-left: 0;
   margin: 0; }
-  .footer__menu .footer__menu-item {
+  .footer__menu .footer__menu-item, .footer__menu .footer__menu-item-right {
     margin-right: 15px;
     margin-bottom: 0.5em;
     padding: 0; }
-    .footer__menu .footer__menu-item:first-child > a {
+    .footer__menu .footer__menu-item:first-child > a, .footer__menu .footer__menu-item-right:first-child > a {
       padding-left: 0; }
-    .footer__menu .footer__menu-item a {
+    .footer__menu .footer__menu-item a, .footer__menu .footer__menu-item-right a {
       padding: 0; }
-      .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item a:focus {
+      .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item-right a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item-right a:active, .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
         background: none; }
+  .footer__menu .footer__menu-item-right {
+    float: right; }
 
 .footer__menu--separator {
   border-top: 1px solid #4d7cb4;
