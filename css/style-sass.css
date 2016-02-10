@@ -5736,7 +5736,7 @@ Custom bootstrap button group
 
 Markup: html/btn-group.html
 
-.btn-group-row-two    - Two column button block (deprecated, used only at Commissioners site).
+.btn-group-row-two    - Two column button block
 
 Styleguide buttons.group
 */
@@ -5754,7 +5754,8 @@ Styleguide buttons.group
     margin-left: 0 !important;
     margin-bottom: -2px;
     float: left;
-    width: 48.5%; }
+    width: 48.5%;
+    text-align: left; }
     .btn-group-row-two .btn:nth-child(odd), .btn-group-row-two .inpage-nav__navbar .inpage-nav__toggle:nth-child(odd), .inpage-nav__navbar .btn-group-row-two .inpage-nav__toggle:nth-child(odd) {
       margin-right: 3%;
       clear: left; }
@@ -10122,10 +10123,6 @@ Styleguide splashpage
     .splash-page__site-header .logo {
       width: 290px;
       height: 153px; } }
-  @media (min-width: 768px) {
-    .splash-page__site-header .logo {
-      width: 378px;
-      height: 193px; } }
 
 .splash-page__container {
   position: relative; }

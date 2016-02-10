@@ -32,14 +32,6 @@ $padding-splash-xl: 2em; // 52px
         height: 153px;
       }
     }
-
-    @include breakpoint(screen-sm-min) {
-      .logo {
-        width: 378px;
-        height: 193px;
-      }
-    }
-
   }
 
   &__container {
