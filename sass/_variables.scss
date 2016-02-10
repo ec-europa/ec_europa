@@ -46,7 +46,7 @@ $font-size-tiny:          0.833em; // 15px
 $font-size-xsmall:        0.778em; // 14px
 
 $font-size-h1:            2.222em;
-$font-size-h2:            1.667em;
+$font-size-h2:            $font-size-huge;
 $font-size-h3:            $font-size-mid;
 $font-size-h4:            $font-size-medium;
 $font-size-h5:            $font-size-xsmall;
