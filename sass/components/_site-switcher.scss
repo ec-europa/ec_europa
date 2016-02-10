@@ -64,7 +64,7 @@ Styleguide: siteswitcher
     position: relative;
 
     &.is-selected:after {
-      top: 100%;
+      top: 95%;
       left: 50%;
       border: solid transparent;
       content: " " !important;
@@ -92,7 +92,7 @@ Styleguide: siteswitcher
   .site-switcher__option {
     position: relative;
     &.is-selected:after {
-      bottom: 100%;
+      bottom: 95%;
       left: 50%;
       border: solid transparent;
       content: " " !important;

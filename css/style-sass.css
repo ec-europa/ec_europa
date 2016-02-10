@@ -5465,7 +5465,7 @@ blockquote,
   max-width: 24em;
   border-left: 0.417em solid #ffd617;
   font-style: italic;
-  font-size: 1.333em;
+  font-size: 1.222em;
   line-height: 1.5;
   margin-left: 0;
   margin-right: 0;
@@ -5695,11 +5695,11 @@ Styleguide buttons.btn-
   visibility: hidden; }
 
 .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]), .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]), .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]) {
-  padding-right: 2.1em; }
+  padding-right: 2.2em; }
   .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after {
     position: absolute;
     line-height: 1.4 !important;
-    margin-left: 5px; }
+    margin-left: 0.5em; }
   .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-block, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block {
     padding-right: 1em; }
     .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-block:after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block:after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block:after {
@@ -5713,11 +5713,11 @@ Styleguide buttons.btn-
     line-height: 3.5 !important; }
 
 .site-information a.btn[href^="http"]:not(.is-internal), .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal) {
-  padding-right: 2.1em; }
+  padding-right: 2.2em; }
   .site-information a.btn[href^="http"]:not(.is-internal):after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal):after {
     position: absolute;
     line-height: 1.4 !important;
-    margin-left: 5px; }
+    margin-left: 0.5em; }
   .site-information a.btn[href^="http"]:not(.is-internal).btn-block, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block {
     padding-right: 1em; }
     .site-information a.btn[href^="http"]:not(.is-internal).btn-block:after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block:after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block:after {
@@ -5891,9 +5891,6 @@ body {
   @media (min-width: 480px) {
     body {
       font-size: 18px; } }
-  @media print {
-    body {
-      font-size: 8pt; } }
 
 .no-js .collapse {
   display: block;
@@ -6569,7 +6566,6 @@ Styleguide banner.video
       float: left;
       width: 66.6666666667%; } }
   .banner--quote blockquote {
-    font-size: 0.889em;
     padding-left: 0;
     border-left: none;
     margin-bottom: 0;
@@ -8578,7 +8574,7 @@ select.lang-select-page__list {
   border-radius: 0;
   cursor: pointer;
   font-weight: bold;
-  padding-left: 0.5em;
+  padding-left: 1.2em;
   line-height: 3.4em;
   height: 3.4em;
   width: 10em; }
@@ -9946,7 +9942,7 @@ Styleguide: siteswitcher
 .site-switcher--header .site-switcher__option {
   position: relative; }
   .site-switcher--header .site-switcher__option.is-selected:after {
-    top: 100%;
+    top: 95%;
     left: 50%;
     border: solid transparent;
     content: " " !important;
@@ -9966,7 +9962,7 @@ Styleguide: siteswitcher
   .site-switcher--footer .site-switcher__option {
     position: relative; }
     .site-switcher--footer .site-switcher__option.is-selected:after {
-      bottom: 100%;
+      bottom: 95%;
       left: 50%;
       border: solid transparent;
       content: " " !important;

@@ -15,10 +15,6 @@ body {
   @include breakpoint(screen-xs-min) {
     font-size: 18px;
   }
-
-  @media print {
-    font-size: 8pt;
-  }
 }
 
 .no-js {

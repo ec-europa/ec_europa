@@ -277,11 +277,11 @@ Styleguide buttons.btn-
 
 // External link specific adjustments
 @mixin _btn_external_link_mixin() {
-  padding-right: 2.1em;
+  padding-right: 2.2em;
   &:after {
     position: absolute;
     line-height: 1.4 !important;
-    margin-left: 5px;
+    margin-left: 0.5em;
   }
 
   // Reseting for .btn-block
