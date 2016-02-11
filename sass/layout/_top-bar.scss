@@ -1,5 +1,4 @@
 .top-bar {
-  clear: both;
   padding: 15px 0 10px 0;
   overflow: hidden;
   width: 100%;
@@ -47,6 +46,7 @@
 
 .front {
   .top-bar {
+    clear: both;
     @extend .block--full-width;
     width: auto;
     background: $brand-primary;

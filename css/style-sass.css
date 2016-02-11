@@ -6339,7 +6339,6 @@ textarea.error {
   max-width: 1170px; }
 
 .top-bar {
-  clear: both;
   padding: 15px 0 10px 0;
   overflow: hidden;
   width: 100%; }
@@ -6371,6 +6370,7 @@ textarea.error {
       width: auto; } }
 
 .front .top-bar {
+  clear: both;
   width: auto;
   background: #004494;
   padding-bottom: 0; }
