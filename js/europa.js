@@ -67,7 +67,7 @@
         var $blocks = [];
 
         // Columns and rows.
-        if ($wrapper.hasClass('listing__wrapper--two-columns') || $wrapper.hasClass('listing__wrapper--row-two')) {
+        if ($wrapper.hasClass('listing__wrapper--two-columns') || $wrapper.hasClass('listing__wrapper--row-two') || $wrapper.hasClass('listing__wrapper--row-three')) {
           var selector = '.listing__item-link > :first-child';
           // Two column listing blocks.
           if ($wrapper.hasClass('listing__wrapper--two-columns')) {
@@ -79,7 +79,13 @@
             $first_column = $wrapper.find('.listing .listing__item:nth-child(odd)');
             $last_column = $wrapper.find('.listing .listing__item:nth-child(even)');
           }
-          else if ($wrapper.hasClass('listing__'))
+          else if ($wrapper.hasClass('listing__wrapper--row-three')) {
+            $last_column = $wrapper.find('.listing .listing__item:nth-of-type(1)');
+            $first_column = $wrapper.find('.listing .listing__item:nth-of-type(3n+3)');
+          }
+
+          $wrapper.find('.listing .listing__item:nth-child(1n+3)').css('background', 'green');
+          $wrapper.find('.listing .listing__item:nth-child(3n+3)').css('background', 'orange');
 
           // First column always contains more items if not equal.
           $first_column.each(function(index, item) {
