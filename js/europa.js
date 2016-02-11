@@ -93,7 +93,7 @@
             if (!$last_column.eq(index)) {
               return;
             }
-            var $row = $(item).find(selector).add($last_column.eq(index).find(selector));
+            var $row = $(item).find(selector).add($last_column.eq(index).find(selector)).add($middle_column.eq(index).find(selector));
             $blocks.push($row);
           });
         }
