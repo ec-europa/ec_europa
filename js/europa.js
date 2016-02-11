@@ -44,7 +44,7 @@
   Drupal.behaviors.equal_blocks = {
     attach: function (context) {
       $('.equal-height').once('equal-height-blocks', function() {
-        $equal_height_block = $(this);
+        var $equal_height_block = $(this);
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register(Drupal.europa.breakpoints.small, {
@@ -79,6 +79,7 @@
             $first_column = $wrapper.find('.listing .listing__item:nth-child(odd)');
             $last_column = $wrapper.find('.listing .listing__item:nth-child(even)');
           }
+          else if ($wrapper.hasClass('listing__'))
 
           // First column always contains more items if not equal.
           $first_column.each(function(index, item) {

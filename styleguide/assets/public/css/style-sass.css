@@ -8664,6 +8664,14 @@ Styleguide listing.1
 .listing--frontpage p {
   line-height: 1.375em; }
 
+.listing--frontpage .listing__title {
+  margin-top: 0 !important; }
+
+.listing--frontpage .listing__item {
+  padding-top: 1.389em;
+  padding-bottom: 1.389em;
+  margin-top: 0 !important; }
+
 /*
 Listing title
 
