@@ -6339,6 +6339,7 @@ textarea.error {
   max-width: 1170px; }
 
 .top-bar {
+  clear: both;
   padding: 15px 0 10px 0;
   overflow: hidden;
   width: 100%; }
@@ -9044,10 +9045,10 @@ Styleguide listing.2.4
   float: left;
   width: 140px;
   height: 70px;
-  background: url("../images/svg/logo.svg") no-repeat; }
+  background: url("../images/svg/logo/logo.svg") no-repeat; }
 
 .no-svg .logo {
-  background-image: url("../images/png/logo.png"); }
+  background-image: url("../images/png/logo/logo.png"); }
 
 .site-header__logo::before, .site-header__logo::after {
   display: none !important; }
