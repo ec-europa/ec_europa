@@ -8661,6 +8661,9 @@ Styleguide listing.1
 .listing--priorities .meta {
   display: none; }
 
+.listing--frontpage p {
+  line-height: 1.222em; }
+
 /*
 Listing title
 
