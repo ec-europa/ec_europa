@@ -81,6 +81,7 @@
           }
           else if ($wrapper.hasClass('listing__wrapper--row-three')) {
             $last_column = $wrapper.find('.listing .listing__item:nth-child(3n-2)');
+            $middle_column = $wrapper.find('.listing .listing__item:nth-child(3n+2)');
             $first_column = $wrapper.find('.listing .listing__item:nth-child(3n+3)');
             //$wrapper.find('.listing .listing__item:nth-child(3n-2)').css('background', 'green');
             //$wrapper.find('.listing .listing__item:nth-child(3n+3)').css('background', 'orange');
