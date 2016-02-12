@@ -6594,7 +6594,12 @@ Styleguide banner.video
   max-width: 100%; }
 
 .banner__paragraph {
+  margin-top: 1em;
   font-size: 0.889em; }
+
+@media (min-width: 992px) {
+  .banner__paragraph {
+    margin-top: 0; } }
 
 .block--full-width {
   margin-left: -15px;
