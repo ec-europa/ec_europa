@@ -44,7 +44,7 @@
   Drupal.behaviors.equal_blocks = {
     attach: function (context) {
       $('.equal-height').once('equal-height-blocks', function() {
-        $equal_height_block = $(this);
+        var $equal_height_block = $(this);
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register(Drupal.europa.breakpoints.small, {
@@ -67,8 +67,11 @@
         var $blocks = [];
 
         // Columns and rows.
-        if ($wrapper.hasClass('listing__wrapper--two-columns') || $wrapper.hasClass('listing__wrapper--row-two')) {
-          var selector = '.listing__item-link > :first-child';
+        if ($wrapper.hasClass('listing__wrapper--two-columns') || $wrapper.hasClass('listing__wrapper--row-two') || $wrapper.hasClass('listing__wrapper--row-three')) {
+          var selector = '.listing__item-link > :first-child',
+              $first_column = '',
+              $middle_column = '',
+              $last_column = '';
           // Two column listing blocks.
           if ($wrapper.hasClass('listing__wrapper--two-columns')) {
             $first_column = $wrapper.find('.listing:first-child .listing__item');
@@ -79,6 +82,11 @@
             $first_column = $wrapper.find('.listing .listing__item:nth-child(odd)');
             $last_column = $wrapper.find('.listing .listing__item:nth-child(even)');
           }
+          else if ($wrapper.hasClass('listing__wrapper--row-three')) {
+            $last_column = $wrapper.find('.listing .listing__item:nth-child(3n-2)');
+            $middle_column = $wrapper.find('.listing .listing__item:nth-child(3n+2)');
+            $first_column = $wrapper.find('.listing .listing__item:nth-child(3n+3)');
+          }
 
           // First column always contains more items if not equal.
           $first_column.each(function(index, item) {
@@ -87,6 +95,11 @@
               return;
             }
             var $row = $(item).find(selector).add($last_column.eq(index).find(selector));
+            // If we have a middle row, we add it as well.
+            if ($middle_column !== '') {
+              $row = $row.add($middle_column.eq(index).find(selector));
+            }
+
             $blocks.push($row);
           });
         }
