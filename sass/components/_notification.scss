@@ -64,24 +64,21 @@ Styleguide notification
   }
 }
 
-@include breakpoint(screen-lg-min) {
-  .notification__content__more {
-    float: right;
-  }
-}
 @include breakpoint(screen-sm-min) {
   .notification__content {
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-
-    .notification__text {
+    .notification__text { 
       width: 75%;
     }
 
     .notification__btn {
       float: right;
     }
+  }
+}
+
+@include breakpoint(screen-lg-min) {
+  .notification__content__more {
+    float: right;
   }
 }
 
