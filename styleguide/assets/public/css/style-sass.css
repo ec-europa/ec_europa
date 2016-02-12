@@ -9376,7 +9376,7 @@ Styleguide listing.2.4
   .no-svg .front.language-sv .logo:before {
     content: url("../images/png/logo/logo--sv.png"); } }
 
-.no-svg .logo {
+.no-svg .front .logo {
   width: 275px;
   height: 75px; }
 

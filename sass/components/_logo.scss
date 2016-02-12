@@ -1,6 +1,6 @@
 // Ec logo small (svg)
 //
-// Default EC logo.
+// Default EC logo in SVG.
 //
 // Markup: html/logo.html
 //
@@ -18,7 +18,7 @@
 
 // EC logo small (png)
 //
-// Ec logo without SVG.
+// Default EC logo in PNG.
 //
 // Markup: html/logo-no-svg.html
 //
@@ -30,6 +30,12 @@
   }
 }
 
+// EC logo front (svg)
+//
+// EC logo on front page, SVG file.
+//
+// Markup: html/logo-front.html
+//
 // .language-bg - Bulgarian
 // .language-cs - Czech
 // .language-da - Danish
@@ -54,6 +60,8 @@
 // .language-sl - Slovene
 // .language-fi - Finnish
 // .language-sv - Swedish
+//
+// Styleguide siteheader.logo-front
 
 .front {
   @include languages_logo('../images/svg/logo/logo--', '.svg');
@@ -63,13 +71,46 @@
   }
 }
 
+// EC logo front (png)
+//
+// Ec logo on front page, SVG file.
+//
+// Markup: html/logo-front-no-svg.html
+//
+// .language-bg - Bulgarian
+// .language-cs - Czech
+// .language-da - Danish
+// .language-de - German
+// .language-et - Estonian
+// .language-el - Greek
+// .language-en - English
+// .language-es - Spanish
+// .language-fr - French
+// .language-ga - Irish/Gaeilge
+// .language-hr - Croatian
+// .language-it - Italian
+// .language-lv - Latvian
+// .language-lt - Lithuanian
+// .language-hu - Hungarian
+// .language-mt - Maltese
+// .language-nl - Dutch
+// .language-pl - Polish
+// .language-pt - Portuguese
+// .language-ro - Romanian
+// .language-sk - Slovak
+// .language-sl - Slovene
+// .language-fi - Finnish
+// .language-sv - Swedish
+//
+// Styleguide siteheader.logo-front
+
 .no-svg {
   .front {
     @include languages_logo('../images/png/logo/logo--', '.png');
-  }
-  .logo {
-    width: 275px;
-    height: 75px;
+    .logo {
+      width: 275px;
+      height: 75px;
+    }
   }
 }
 
