@@ -7733,26 +7733,6 @@ Styleguide footer
 .footer__icon--twitter:before {
   font-size: 18px; }
 
-.footer__site-switcher {
-  background: url("../images/svg/footer__logo.svg") no-repeat center 25px #012b58;
-  background-size: 80px 40px;
-  padding: 90px 30px 30px 30px;
-  display: block;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold; }
-
-a.footer__site-switcher {
-  text-decoration: none;
-  border: 2px solid transparent; }
-  a.footer__site-switcher:hover, a.footer__site-switcher:active, a.footer__site-switcher:focus {
-    text-decoration: underline; }
-  a.footer__site-switcher:focus {
-    border: 2px solid #ffd617; }
-
-.no-svg .footer__site-switcher {
-  background-image: url("../images/png/footer__logo.png"); }
-
 @media (min-width: 768px) {
   .footer {
     text-align: left; }
@@ -7770,11 +7750,6 @@ a.footer__site-switcher {
     width: auto;
     display: inline-block;
     margin-right: 4px; } }
-
-@media (min-width: 992px) {
-  .footer__site-switcher > * {
-    white-space: nowrap;
-    display: inline-block; } }
 
 .footer a {
   padding-right: 1.1em !important; }
