@@ -1,6 +1,3 @@
-$logo_small_svg: url('../images/svg/logo/logo.svg');
-$logo_small_png: url('../images/png/logo/logo.png');
-
 // Ec logo small (svg)
 //
 // Default EC logo.
@@ -14,11 +11,9 @@ $logo_small_png: url('../images/png/logo/logo.png');
 .logo {
   display: block;
   float: left;
-
-  width: 253px;
-  height: 70px;
-
-  background: $logo_small_svg no-repeat;
+  width: 140px;
+  height: 72px;
+  background: url('../images/svg/logo/logo.svg') no-repeat;
 }
 
 // EC logo small (png)
@@ -31,7 +26,7 @@ $logo_small_png: url('../images/png/logo/logo.png');
 
 .no-svg {
   .logo {
-    background-image: $logo_small_png;
+    background-image: url('../images/png/logo/logo.png');
   }
 }
 
@@ -60,10 +55,22 @@ $logo_small_png: url('../images/png/logo/logo.png');
 // .language-fi - Finnish
 // .language-sv - Swedish
 
-@include languages_logo('../images/svg/logo/logo--', '.svg');
+.front {
+  @include languages_logo('../images/svg/logo/logo--', '.svg');
+  .logo {
+    width: 275px;
+    height: 75px;
+  }
+}
 
 .no-svg {
-  @include languages_logo('../images/png/logo/logo--', '.png');
+  .front {
+    @include languages_logo('../images/png/logo/logo--', '.png');
+  }
+  .logo {
+    width: 275px;
+    height: 75px;
+  }
 }
 
 // If the logo is linking to an external page do not show the external icon.
