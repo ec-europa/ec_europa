@@ -68,7 +68,10 @@
 
         // Columns and rows.
         if ($wrapper.hasClass('listing__wrapper--two-columns') || $wrapper.hasClass('listing__wrapper--row-two') || $wrapper.hasClass('listing__wrapper--row-three')) {
-          var selector = '.listing__item-link > :first-child';
+          var selector = '.listing__item-link > :first-child',
+              $first_column = '',
+              $middle_column = '',
+              $last_column = '';
           // Two column listing blocks.
           if ($wrapper.hasClass('listing__wrapper--two-columns')) {
             $first_column = $wrapper.find('.listing:first-child .listing__item');
@@ -83,8 +86,6 @@
             $last_column = $wrapper.find('.listing .listing__item:nth-child(3n-2)');
             $middle_column = $wrapper.find('.listing .listing__item:nth-child(3n+2)');
             $first_column = $wrapper.find('.listing .listing__item:nth-child(3n+3)');
-            //$wrapper.find('.listing .listing__item:nth-child(3n-2)').css('background', 'green');
-            //$wrapper.find('.listing .listing__item:nth-child(3n+3)').css('background', 'orange');
           }
 
           // First column always contains more items if not equal.
@@ -93,7 +94,12 @@
             if (!$last_column.eq(index)) {
               return;
             }
-            var $row = $(item).find(selector).add($last_column.eq(index).find(selector)).add($middle_column.eq(index).find(selector));
+            var $row = $(item).find(selector).add($last_column.eq(index).find(selector));
+            // If we have a middle row, we add it as well.
+            if ($middle_column !== '') {
+              $row = $row.add($middle_column.eq(index).find(selector));
+            }
+
             $blocks.push($row);
           });
         }
