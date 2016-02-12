@@ -9018,8 +9018,8 @@ Styleguide listing.2.4
   background-image: url("../images/png/logo.png"); }
 
 .front .logo {
-  width: 275px;
-  height: 75px; }
+  width: 255px;
+  height: 70px; }
 
 .front.language-bg .logo {
   background-image: url("../images/svg/logo/logo--bg.svg"); }
@@ -9190,8 +9190,8 @@ Styleguide listing.2.4
     content: url("../images/svg/logo/logo--sv.svg"); } }
 
 .no-svg .front .logo {
-  width: 275px;
-  height: 75px; }
+  width: 255px;
+  height: 70px; }
 
 .no-svg .front.language-bg .logo {
   background-image: url("../images/png/logo/logo--bg.png"); }
@@ -9853,13 +9853,6 @@ Styleguide: siteheader
   .site-header > .container-fluid, .section__group--full-width.site-header > *, .block--full-width.site-header > *, .field--full-width.site-header > * {
     position: relative; }
 
-.front .site-header {
-  padding-bottom: 0; }
-
-.front .site-header__logo {
-  top: 0;
-  margin-bottom: 15px; }
-
 .site-slogan {
   color: #404040;
   max-width: inherit;
@@ -10008,9 +10001,6 @@ Styleguide: siteheader.searchform
     width: 100%;
     line-height: 1.9em; }
 
-.front .search-form__btn {
-  border: 1px solid #fff !important; }
-
 @media (min-width: 480px) {
   .search-form__textfield {
     width: 67%; }
@@ -10051,9 +10041,6 @@ Styleguide: siteheader.searchform
 .site-menu__toggle .btn, .site-menu__toggle .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .site-menu__toggle .inpage-nav__toggle {
   width: 100%;
   border: 3px solid #004494; }
-
-.front .site-menu__toggle .btn, .front .site-menu__toggle .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .front .site-menu__toggle .inpage-nav__toggle {
-  border: 2px solid #fff; }
 
 .js .site-menu {
   height: 0; }

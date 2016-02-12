@@ -49,12 +49,6 @@ Styleguide: siteheader.searchform
   }
 }
 
-.front {
-  .search-form__btn {
-    border: 1px solid #fff !important;
-  }
-}
-
 @include breakpoint(screen-xs-min) {
   .search-form__textfield {
     width: 67%;

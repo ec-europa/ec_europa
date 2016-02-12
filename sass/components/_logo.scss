@@ -65,8 +65,8 @@
 
 .front {
   .logo {
-    width: 275px;
-    height: 75px;
+    width: 255px;
+    height: 70px;
   }
   @include languages_logo('../images/svg/logo/logo--', '.svg');
 }
@@ -107,8 +107,8 @@
 .no-svg {
   .front {
     .logo {
-      width: 275px;
-      height: 75px;
+      width: 255px;
+      height: 70px;
     }
     @include languages_logo('../images/png/logo/logo--', '.png');
   }
