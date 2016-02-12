@@ -61,14 +61,14 @@
 // .language-fi - Finnish
 // .language-sv - Swedish
 //
-// Styleguide siteheader.logo-front
+// Styleguide siteheader.logo-front-svg
 
 .front {
-  @include languages_logo('../images/svg/logo/logo--', '.svg');
   .logo {
     width: 275px;
     height: 75px;
   }
+  @include languages_logo('../images/svg/logo/logo--', '.svg');
 }
 
 // EC logo front (png)
@@ -102,15 +102,15 @@
 // .language-fi - Finnish
 // .language-sv - Swedish
 //
-// Styleguide siteheader.logo-front
+// Styleguide siteheader.logo-front-png
 
 .no-svg {
   .front {
-    @include languages_logo('../images/png/logo/logo--', '.png');
     .logo {
       width: 275px;
       height: 75px;
     }
+    @include languages_logo('../images/png/logo/logo--', '.png');
   }
 }
 

@@ -9036,6 +9036,10 @@ Styleguide listing.2.4
 .no-svg .logo {
   background-image: url("../images/png/logo/logo.png"); }
 
+.front .logo {
+  width: 275px;
+  height: 75px; }
+
 .front.language-bg .logo {
   background-image: url("../images/svg/logo/logo--bg.svg"); }
 
@@ -9204,7 +9208,7 @@ Styleguide listing.2.4
   .front.language-sv .logo:before {
     content: url("../images/svg/logo/logo--sv.svg"); } }
 
-.front .logo {
+.no-svg .front .logo {
   width: 275px;
   height: 75px; }
 
@@ -9375,10 +9379,6 @@ Styleguide listing.2.4
 @media print {
   .no-svg .front.language-sv .logo:before {
     content: url("../images/png/logo/logo--sv.png"); } }
-
-.no-svg .front .logo {
-  width: 275px;
-  height: 75px; }
 
 .site-header__logo::before, .site-header__logo::after {
   display: none !important; }
