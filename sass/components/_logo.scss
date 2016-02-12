@@ -13,7 +13,7 @@
   float: left;
   width: 140px;
   height: 72px;
-  background: url('../images/svg/logo/logo.svg') no-repeat;
+  background: url('../images/svg/logo.svg') no-repeat;
 }
 
 // EC logo small (png)
@@ -26,7 +26,7 @@
 
 .no-svg {
   .logo {
-    background-image: url('../images/png/logo/logo.png');
+    background-image: url('../images/png/logo.png');
   }
 }
 
