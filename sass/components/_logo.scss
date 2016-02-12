@@ -9,17 +9,30 @@ $logo_small_png: url('../images/png/logo/logo.png');
 //
 // Styleguide siteheader.logo
 
-
 // Component
 // --------------------------------------------------
 .logo {
   display: block;
   float: left;
 
-  width: 140px;
+  width: 253px;
   height: 70px;
 
   background: $logo_small_svg no-repeat;
+}
+
+// EC logo small (png)
+//
+// Ec logo without SVG.
+//
+// Markup: html/logo-no-svg.html
+//
+// Styleguide siteheader.logo-no-svg
+
+.no-svg {
+  .logo {
+    background-image: $logo_small_png;
+  }
 }
 
 // .language-bg - Bulgarian
@@ -46,21 +59,11 @@ $logo_small_png: url('../images/png/logo/logo.png');
 // .language-sl - Slovene
 // .language-fi - Finnish
 // .language-sv - Swedish
-//@include languages_logo('../images/svg/logo/logo--', '.svg');
-//@include languages_logo('../images/png/logo/logo--', '.png');
 
-// EC logo small (png)
-//
-// Ec logo without SVG.
-//
-// Markup: html/logo-no-svg.html
-//
-// Styleguide siteheader.logo-no-svg
+@include languages_logo('../images/svg/logo/logo--', '.svg');
 
 .no-svg {
-  .logo {
-    background-image: $logo_small_png;
-  }
+  @include languages_logo('../images/png/logo/logo--', '.png');
 }
 
 // If the logo is linking to an external page do not show the external icon.

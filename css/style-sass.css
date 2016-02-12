@@ -9018,12 +9018,348 @@ Styleguide listing.2.4
 .logo {
   display: block;
   float: left;
-  width: 140px;
+  width: 253px;
   height: 70px;
   background: url("../images/svg/logo/logo.svg") no-repeat; }
 
 .no-svg .logo {
   background-image: url("../images/png/logo/logo.png"); }
+
+.language-bg .logo {
+  background-image: url("../images/svg/logo/logo--bg.svg"); }
+
+@media print {
+  .language-bg .logo:before {
+    content: url("../images/svg/logo/logo--bg.svg"); } }
+
+.language-cs .logo {
+  background-image: url("../images/svg/logo/logo--cs.svg"); }
+
+@media print {
+  .language-cs .logo:before {
+    content: url("../images/svg/logo/logo--cs.svg"); } }
+
+.language-da .logo {
+  background-image: url("../images/svg/logo/logo--da.svg"); }
+
+@media print {
+  .language-da .logo:before {
+    content: url("../images/svg/logo/logo--da.svg"); } }
+
+.language-de .logo {
+  background-image: url("../images/svg/logo/logo--de.svg"); }
+
+@media print {
+  .language-de .logo:before {
+    content: url("../images/svg/logo/logo--de.svg"); } }
+
+.language-el .logo {
+  background-image: url("../images/svg/logo/logo--el.svg"); }
+
+@media print {
+  .language-el .logo:before {
+    content: url("../images/svg/logo/logo--el.svg"); } }
+
+.language-en .logo {
+  background-image: url("../images/svg/logo/logo--en.svg"); }
+
+@media print {
+  .language-en .logo:before {
+    content: url("../images/svg/logo/logo--en.svg"); } }
+
+.language-es .logo {
+  background-image: url("../images/svg/logo/logo--es.svg"); }
+
+@media print {
+  .language-es .logo:before {
+    content: url("../images/svg/logo/logo--es.svg"); } }
+
+.language-et .logo {
+  background-image: url("../images/svg/logo/logo--et.svg"); }
+
+@media print {
+  .language-et .logo:before {
+    content: url("../images/svg/logo/logo--et.svg"); } }
+
+.language-fi .logo {
+  background-image: url("../images/svg/logo/logo--fi.svg"); }
+
+@media print {
+  .language-fi .logo:before {
+    content: url("../images/svg/logo/logo--fi.svg"); } }
+
+.language-fr .logo {
+  background-image: url("../images/svg/logo/logo--fr.svg"); }
+
+@media print {
+  .language-fr .logo:before {
+    content: url("../images/svg/logo/logo--fr.svg"); } }
+
+.language-ga .logo {
+  background-image: url("../images/svg/logo/logo--ga.svg"); }
+
+@media print {
+  .language-ga .logo:before {
+    content: url("../images/svg/logo/logo--ga.svg"); } }
+
+.language-hr .logo {
+  background-image: url("../images/svg/logo/logo--hr.svg"); }
+
+@media print {
+  .language-hr .logo:before {
+    content: url("../images/svg/logo/logo--hr.svg"); } }
+
+.language-hu .logo {
+  background-image: url("../images/svg/logo/logo--hu.svg"); }
+
+@media print {
+  .language-hu .logo:before {
+    content: url("../images/svg/logo/logo--hu.svg"); } }
+
+.language-it .logo {
+  background-image: url("../images/svg/logo/logo--it.svg"); }
+
+@media print {
+  .language-it .logo:before {
+    content: url("../images/svg/logo/logo--it.svg"); } }
+
+.language-lt .logo {
+  background-image: url("../images/svg/logo/logo--lt.svg"); }
+
+@media print {
+  .language-lt .logo:before {
+    content: url("../images/svg/logo/logo--lt.svg"); } }
+
+.language-lv .logo {
+  background-image: url("../images/svg/logo/logo--lv.svg"); }
+
+@media print {
+  .language-lv .logo:before {
+    content: url("../images/svg/logo/logo--lv.svg"); } }
+
+.language-mt .logo {
+  background-image: url("../images/svg/logo/logo--mt.svg"); }
+
+@media print {
+  .language-mt .logo:before {
+    content: url("../images/svg/logo/logo--mt.svg"); } }
+
+.language-nl .logo {
+  background-image: url("../images/svg/logo/logo--nl.svg"); }
+
+@media print {
+  .language-nl .logo:before {
+    content: url("../images/svg/logo/logo--nl.svg"); } }
+
+.language-pl .logo {
+  background-image: url("../images/svg/logo/logo--pl.svg"); }
+
+@media print {
+  .language-pl .logo:before {
+    content: url("../images/svg/logo/logo--pl.svg"); } }
+
+.language-pt .logo {
+  background-image: url("../images/svg/logo/logo--pt.svg"); }
+
+@media print {
+  .language-pt .logo:before {
+    content: url("../images/svg/logo/logo--pt.svg"); } }
+
+.language-ro .logo {
+  background-image: url("../images/svg/logo/logo--ro.svg"); }
+
+@media print {
+  .language-ro .logo:before {
+    content: url("../images/svg/logo/logo--ro.svg"); } }
+
+.language-sk .logo {
+  background-image: url("../images/svg/logo/logo--sk.svg"); }
+
+@media print {
+  .language-sk .logo:before {
+    content: url("../images/svg/logo/logo--sk.svg"); } }
+
+.language-sl .logo {
+  background-image: url("../images/svg/logo/logo--sl.svg"); }
+
+@media print {
+  .language-sl .logo:before {
+    content: url("../images/svg/logo/logo--sl.svg"); } }
+
+.language-sv .logo {
+  background-image: url("../images/svg/logo/logo--sv.svg"); }
+
+@media print {
+  .language-sv .logo:before {
+    content: url("../images/svg/logo/logo--sv.svg"); } }
+
+.no-svg.language-bg .logo {
+  background-image: url("../images/png/logo/logo--bg.png"); }
+
+@media print {
+  .no-svg.language-bg .logo:before {
+    content: url("../images/png/logo/logo--bg.png"); } }
+
+.no-svg.language-cs .logo {
+  background-image: url("../images/png/logo/logo--cs.png"); }
+
+@media print {
+  .no-svg.language-cs .logo:before {
+    content: url("../images/png/logo/logo--cs.png"); } }
+
+.no-svg.language-da .logo {
+  background-image: url("../images/png/logo/logo--da.png"); }
+
+@media print {
+  .no-svg.language-da .logo:before {
+    content: url("../images/png/logo/logo--da.png"); } }
+
+.no-svg.language-de .logo {
+  background-image: url("../images/png/logo/logo--de.png"); }
+
+@media print {
+  .no-svg.language-de .logo:before {
+    content: url("../images/png/logo/logo--de.png"); } }
+
+.no-svg.language-el .logo {
+  background-image: url("../images/png/logo/logo--el.png"); }
+
+@media print {
+  .no-svg.language-el .logo:before {
+    content: url("../images/png/logo/logo--el.png"); } }
+
+.no-svg.language-en .logo {
+  background-image: url("../images/png/logo/logo--en.png"); }
+
+@media print {
+  .no-svg.language-en .logo:before {
+    content: url("../images/png/logo/logo--en.png"); } }
+
+.no-svg.language-es .logo {
+  background-image: url("../images/png/logo/logo--es.png"); }
+
+@media print {
+  .no-svg.language-es .logo:before {
+    content: url("../images/png/logo/logo--es.png"); } }
+
+.no-svg.language-et .logo {
+  background-image: url("../images/png/logo/logo--et.png"); }
+
+@media print {
+  .no-svg.language-et .logo:before {
+    content: url("../images/png/logo/logo--et.png"); } }
+
+.no-svg.language-fi .logo {
+  background-image: url("../images/png/logo/logo--fi.png"); }
+
+@media print {
+  .no-svg.language-fi .logo:before {
+    content: url("../images/png/logo/logo--fi.png"); } }
+
+.no-svg.language-fr .logo {
+  background-image: url("../images/png/logo/logo--fr.png"); }
+
+@media print {
+  .no-svg.language-fr .logo:before {
+    content: url("../images/png/logo/logo--fr.png"); } }
+
+.no-svg.language-ga .logo {
+  background-image: url("../images/png/logo/logo--ga.png"); }
+
+@media print {
+  .no-svg.language-ga .logo:before {
+    content: url("../images/png/logo/logo--ga.png"); } }
+
+.no-svg.language-hr .logo {
+  background-image: url("../images/png/logo/logo--hr.png"); }
+
+@media print {
+  .no-svg.language-hr .logo:before {
+    content: url("../images/png/logo/logo--hr.png"); } }
+
+.no-svg.language-hu .logo {
+  background-image: url("../images/png/logo/logo--hu.png"); }
+
+@media print {
+  .no-svg.language-hu .logo:before {
+    content: url("../images/png/logo/logo--hu.png"); } }
+
+.no-svg.language-it .logo {
+  background-image: url("../images/png/logo/logo--it.png"); }
+
+@media print {
+  .no-svg.language-it .logo:before {
+    content: url("../images/png/logo/logo--it.png"); } }
+
+.no-svg.language-lt .logo {
+  background-image: url("../images/png/logo/logo--lt.png"); }
+
+@media print {
+  .no-svg.language-lt .logo:before {
+    content: url("../images/png/logo/logo--lt.png"); } }
+
+.no-svg.language-lv .logo {
+  background-image: url("../images/png/logo/logo--lv.png"); }
+
+@media print {
+  .no-svg.language-lv .logo:before {
+    content: url("../images/png/logo/logo--lv.png"); } }
+
+.no-svg.language-mt .logo {
+  background-image: url("../images/png/logo/logo--mt.png"); }
+
+@media print {
+  .no-svg.language-mt .logo:before {
+    content: url("../images/png/logo/logo--mt.png"); } }
+
+.no-svg.language-nl .logo {
+  background-image: url("../images/png/logo/logo--nl.png"); }
+
+@media print {
+  .no-svg.language-nl .logo:before {
+    content: url("../images/png/logo/logo--nl.png"); } }
+
+.no-svg.language-pl .logo {
+  background-image: url("../images/png/logo/logo--pl.png"); }
+
+@media print {
+  .no-svg.language-pl .logo:before {
+    content: url("../images/png/logo/logo--pl.png"); } }
+
+.no-svg.language-pt .logo {
+  background-image: url("../images/png/logo/logo--pt.png"); }
+
+@media print {
+  .no-svg.language-pt .logo:before {
+    content: url("../images/png/logo/logo--pt.png"); } }
+
+.no-svg.language-ro .logo {
+  background-image: url("../images/png/logo/logo--ro.png"); }
+
+@media print {
+  .no-svg.language-ro .logo:before {
+    content: url("../images/png/logo/logo--ro.png"); } }
+
+.no-svg.language-sk .logo {
+  background-image: url("../images/png/logo/logo--sk.png"); }
+
+@media print {
+  .no-svg.language-sk .logo:before {
+    content: url("../images/png/logo/logo--sk.png"); } }
+
+.no-svg.language-sl .logo {
+  background-image: url("../images/png/logo/logo--sl.png"); }
+
+@media print {
+  .no-svg.language-sl .logo:before {
+    content: url("../images/png/logo/logo--sl.png"); } }
+
+.no-svg.language-sv .logo {
+  background-image: url("../images/png/logo/logo--sv.png"); }
+
+@media print {
+  .no-svg.language-sv .logo:before {
+    content: url("../images/png/logo/logo--sv.png"); } }
 
 .site-header__logo::before, .site-header__logo::after {
   display: none !important; }
