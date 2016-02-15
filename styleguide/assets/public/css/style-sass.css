@@ -6918,7 +6918,7 @@ Markup: html/context-nav.html
 Styleguide contextnav
 */
 .context-nav {
-  font-size: 0.889em; }
+  font-size: 0.778em; }
   .context-nav__expander {
     border: none;
     display: inline-block;
@@ -6936,7 +6936,6 @@ Styleguide contextnav
     display: none; }
 
 .context-nav__label {
-  font-size: 0.778em;
   display: block;
   clear: both; }
 
