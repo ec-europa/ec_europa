@@ -9502,29 +9502,20 @@ Styleguide messages
   margin: 0 0 1em;
   padding: 1em 4em;
   position: relative;
-  overflow: hidden; }
-  .messages:before {
-    background: url("../images/svg/messages-info.svg") no-repeat;
-    height: 2em;
-    width: 2em;
-    content: '';
-    position: absolute;
-    top: 1em;
-    left: 1em; }
+  overflow: hidden;
+  background: url("../images/svg/messages-info.svg") no-repeat 2% center;
+  background-size: 2em; }
   .messages:last-child {
     margin-bottom: 0; }
   .messages.status {
-    border-color: #467a39; }
-    .messages.status:before {
-      background-image: url("../images/svg/messages-success.svg"); }
+    border-color: #467a39;
+    background-image: url("../images/svg/messages-success.svg"); }
   .messages.warning {
-    border-color: #ffc412; }
-    .messages.warning:before {
-      background-image: url("../images/svg/messages-warning.svg"); }
+    border-color: #ffc412;
+    background-image: url("../images/svg/messages-warning.svg"); }
   .messages.error {
-    border-color: #da2131; }
-    .messages.error:before {
-      background-image: url("../images/svg/messages-error.svg"); }
+    border-color: #da2131;
+    background-image: url("../images/svg/messages-error.svg"); }
   .messages h3 {
     font-size: inherit;
     font-weight: bold;
@@ -9548,19 +9539,14 @@ Styleguide messages
   .messages__list-item:first-child, .messages ul li:first-child {
     margin-top: 0; }
 
-.no-svg .messages:before {
-  height: 2.5em;
-  width: 2.5em;
-  background: url("../images/png/messages-info.png"); }
-
-.no-svg .messages.status:before {
+.no-svg .messages {
   background-image: url("../images/png/messages-info.png"); }
-
-.no-svg .messages.warning:before {
-  background-image: url("../images/png/messages-warning.png"); }
-
-.no-svg .messages.error:before {
-  background-image: url("../images/png/messages-error.png"); }
+  .no-svg .messages.status {
+    background-image: url("../images/png/messages-info.png"); }
+  .no-svg .messages.warning {
+    background-image: url("../images/png/messages-warning.png"); }
+  .no-svg .messages.error {
+    background-image: url("../images/png/messages-error.png"); }
 
 /*
 
