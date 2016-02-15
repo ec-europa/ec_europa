@@ -5,39 +5,25 @@ Markup: html/feedback-message.html
 
 Styleguide form.feedback-message
 */
-.feedback-message {
-  color: $grey-dark;
-  max-width: none;
+.feedback-messages {
+  @extend .messages;
+  border: none !important;
 
   &.is-disabled {
     color: $form-control-color-disabled;
   }
 
   &.is-error {
-    background-color: $grey-lighter;
-    padding: 12px;
-
-    // Error icon.
-    &:before {
-      content: '';
-      background: url('../images/svg/messages-error.svg') no-repeat;
-      background-size: 1.5em;
-      width: 1.5em;
-      height: 1.5em;
-      margin-right: 12px;
-      display: inline-block;
-      margin-bottom: -4px;
-    }
+    background: $grey-lighter url('../images/svg/messages-error.svg') 1em 1.1em no-repeat;
+    background-size: 2em;
   }
+
   @extend .hidden-print;
 }
 
 @include breakpoint(screen-xs-min) {
   .feedback-message {
     &.is-error {
-      &:before {
-        margin-bottom: -6px;
-      }
     }
   }
 }
@@ -45,9 +31,7 @@ Styleguide form.feedback-message
 .no-svg {
   .feedback-message {
     &.is-error {
-      &:before {
-        background: url('../images/png/messages-error.png') no-repeat;
-      }
+      background-image: url('../images/png/messages-error.png');
     }
   }
 }
