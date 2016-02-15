@@ -63,7 +63,8 @@
 //
 // Styleguide siteheader.logo-front-svg
 
-.front {
+// This language-specific logo is used only on info home page for now.
+.node-type-info-homepage.front {
   .logo {
     width: 255px;
     height: 70px;
@@ -105,7 +106,7 @@
 // Styleguide siteheader.logo-front-png
 
 .no-svg {
-  .front {
+  .node-type-info-homepage.front {
     .logo {
       width: 255px;
       height: 70px;
