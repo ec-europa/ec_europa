@@ -9541,19 +9541,15 @@ Styleguide notification
     top: 2px;
     position: relative; }
 
+@media (min-width: 768px) {
+  .notification__content .notification__text {
+    width: 75%; }
+  .notification__content .notification__btn {
+    float: right; } }
+
 @media (min-width: 1200px) {
   .notification__content__more {
     float: right; } }
-
-@media (min-width: 768px) {
-  .notification__content {
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex; }
-    .notification__content .notification__text {
-      width: 75%; }
-    .notification__content .notification__btn {
-      float: right; } }
 
 .site-political .notification a[href^="http"]:not(.is-internal):not([href*="europa.eu"]) {
   padding-right: 1.1em; }
