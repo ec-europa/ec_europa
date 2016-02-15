@@ -9,6 +9,7 @@ Styleguide tags
 */
 
 .tags {
+  padding-top: 0.2em;
   padding-bottom: 0.8em;
   width: 100%;
   overflow: hidden;
@@ -17,33 +18,95 @@ Styleguide tags
 .tags__label {
   float: left;
   text-transform: uppercase;
-  margin-right: 1em;
-  margin-top: 0.1em;
+  margin-right: 0.7em;
+  margin-bottom: 0.5em;
+  font-size: $font-size-xsmall;
+  padding-top: 0.15em;
 }
 
 .tags__items {
-  float: left;
   overflow: hidden;
+  vertical-align: middle;
 }
 
 .tags__item {
+  float: left;
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: 1.4em;
   margin-bottom: 0.4em;
-  a {
-    background: $grey-light;
-    border-radius: 5px;
-    color: $text-color;
-    display: inline-block;
-    font-size: $font-size-little;
-    line-height: 1;
-    padding: 0.5em;
-    text-transform: lowercase;
+  background: $grey-light;
+  border-radius: 5px;
+  font-size: $font-size-xsmall;
+  line-height: 1;
+  padding: 0.5em;
+  text-transform: lowercase;
+  color: $text-color;
+  outline: 2px transparent solid;
+}
 
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
+.tags__item a,
+a.tags__item {
+  color: $text-color;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $yellow-light;
+  }
+}
+
+/*
+Facet tag
+
+Markup: html/facet-tag.html
+
+Styleguide tags.facettag
+*/
+
+.facet-tag {
+  @extend .tags;
+  @extend .hidden-print;
+}
+
+.facet-tag__label {
+  float: left;
+  @extend .tags__label;
+}
+
+.facet-tag__value {
+  @extend .tags__item;
+}
+
+/*
+Facet tag with close
+
+Markup: html/facet-tag--close.html
+
+Styleguide tags.facet-close
+*/
+
+.facet-tag--close {
+  .facet-tag__value {
+    // Close icon.
+    &:after {
+      @extend .icon--after;
+      @extend .icon--tag-close;
+      vertical-align: bottom;
+    }
+    &:hover:after {
+      @extend .icon--after;
+      @extend .icon--tag-close-hover;
+
+    }
+  }
+  .tags__item a,
+  a.tags__item {
+    &:hover {
+      color: #fff;
+      background-color: $grey-base;
     }
   }
 }

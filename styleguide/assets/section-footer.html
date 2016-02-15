@@ -61,7 +61,7 @@
       <li class="kss-nav__menu-item">
         <a href="section-comments.html">
           <span class="kss-nav__ref">5</span
-          ><span class="kss-nav__name">comments</span>
+          ><span class="kss-nav__name">Comments</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -107,8 +107,14 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a href="section-footer.html">
+        <a href="section-filters.html">
           <span class="kss-nav__ref">13</span
+          ><span class="kss-nav__name">Filters</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-footer.html">
+          <span class="kss-nav__ref">14</span
           ><span class="kss-nav__name">Footer</span>
         </a>
         <ul class="kss-nav__menu-child">
@@ -116,14 +122,8 @@
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-form.html">
-          <span class="kss-nav__ref">14</span
-          ><span class="kss-nav__name">Form</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-forms.html">
           <span class="kss-nav__ref">15</span
-          ><span class="kss-nav__name">forms</span>
+          ><span class="kss-nav__name">Form</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -256,7 +256,7 @@
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
         <a class="kss-title__permalink" href="#kssref-footer">
-          <span class="kss-title__ref">13</span
+          <span class="kss-title__ref">14</span
           >Footer
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -275,39 +275,42 @@
         </div>
         <div class="kss-modifier__example">
           <footer class="footer">
-    <div class="container-fluid">
-      <div class="row">
-        <aside class="col-sm-4 footer__column-right">
-          <a href="http://ec.europa.eu/index_en.htm" class="site-switcher footer__site-switcher"><span>The European Commission </span><span>and its priorities</span></a>  
-        </aside>
-        <section class="col-sm-8 footer__column-main">
-            <span class="footer__label">View the European Commission on :</span>
-            <ul class="footer__menu menu nav list-inline">
-                <li class="footer__menu-item">
-                  <a href="https://www.facebook.com/EuropeanCommission" class="icon icon--facebook footer__icon--facebook" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="https://twitter.com/eu_commission" class="icon icon--twitter footer__icon--twitter">Twitter</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="/other-social-media">Other social media</a>
-                </li>
-            </ul>
-            <ul class="footer__menu footer__menu--separator menu nav list-inline">
-                <li class="footer__menu-item">
-                  <a href="http://ec.europa.eu/geninfo/legal_notices_en.htm">Help</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="http://ec.europa.eu/cookies/index_en.htm">Cookies and privacy notice</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="http://ec.europa.eu/contact/index_en.htm">Legal statement</a>
-                </li>
-            </ul>
-            <div class="footer__disclaimer"><span>© European Commission copyright. All content available under XX <a href="#">license</a>.</span></div>
-        </section>
-      </div>
+  <div class="container-fluid">
+    <div class="row">
+      <section class="footer__column-main col-12">
+        <span class="footer__label">The European Commission on:</span>
+        <ul class="footer__menu menu nav list-inline">
+          <li class="footer__menu-item"><a
+            href="https://www.facebook.com/EuropeanCommission"
+            class="icon icon--facebook footer__icon--facebook footer__icon--social"
+            target="_blank">Facebook</a></li>
+          <li class="footer__menu-item">
+            <a href="https://twitter.com/eu_commission"
+               class="icon icon--twitter footer__icon--twitter footer__icon--social">Twitter</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="#">Other social media</a>
+          </li>
+        </ul>
+        <ul class="footer__menu footer__menu--separator menu nav list-inline">
+          <li class="footer__menu-item">
+            <a href="http://ec.europa.eu/geninfo/legal_notices_en.htm">Help</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="http://ec.europa.eu/cookies/index_en.htm">Cookies and privacy notice</a>
+          </li>
+          <li class="footer__menu-item">
+            <a href="http://ec.europa.eu/contact/index_en.htm">Legal statement</a>
+          </li>
+          <li class="footer__menu-item-right">
+            <a href="http://gov.uk" class="is-external">europa.eu</a>
+          </li>
+        </ul>
+        <div class="footer__disclaimer"><span>© European Commission 2015.</span>
+        </div>
+      </section>
     </div>
+  </div>
 </footer>
 
         </div>
@@ -315,39 +318,42 @@
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;footer class=&quot;footer&quot;&gt;
-    &lt;div class=&quot;container-fluid&quot;&gt;
-      &lt;div class=&quot;row&quot;&gt;
-        &lt;aside class=&quot;col-sm-4 footer__column-right&quot;&gt;
-          &lt;a href=&quot;http://ec.europa.eu/index_en.htm&quot; class=&quot;site-switcher footer__site-switcher&quot;&gt;&lt;span&gt;The European Commission &lt;/span&gt;&lt;span&gt;and its priorities&lt;/span&gt;&lt;/a&gt;  
-        &lt;/aside&gt;
-        &lt;section class=&quot;col-sm-8 footer__column-main&quot;&gt;
-            &lt;span class=&quot;footer__label&quot;&gt;View the European Commission on :&lt;/span&gt;
-            &lt;ul class=&quot;footer__menu menu nav list-inline&quot;&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;https://www.facebook.com/EuropeanCommission&quot; class=&quot;icon icon--facebook footer__icon--facebook&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;https://twitter.com/eu_commission&quot; class=&quot;icon icon--twitter footer__icon--twitter&quot;&gt;Twitter&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;/other-social-media&quot;&gt;Other social media&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;ul class=&quot;footer__menu footer__menu--separator menu nav list-inline&quot;&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;http://ec.europa.eu/geninfo/legal_notices_en.htm&quot;&gt;Help&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;http://ec.europa.eu/cookies/index_en.htm&quot;&gt;Cookies and privacy notice&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;http://ec.europa.eu/contact/index_en.htm&quot;&gt;Legal statement&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;div class=&quot;footer__disclaimer&quot;&gt;&lt;span&gt;© European Commission copyright. All content available under XX &lt;a href=&quot;#&quot;&gt;license&lt;/a&gt;.&lt;/span&gt;&lt;/div&gt;
-        &lt;/section&gt;
-      &lt;/div&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;section class=&quot;footer__column-main col-12&quot;&gt;
+        &lt;span class=&quot;footer__label&quot;&gt;The European Commission on:&lt;/span&gt;
+        &lt;ul class=&quot;footer__menu menu nav list-inline&quot;&gt;
+          &lt;li class=&quot;footer__menu-item&quot;&gt;&lt;a
+            href=&quot;https://www.facebook.com/EuropeanCommission&quot;
+            class=&quot;icon icon--facebook footer__icon--facebook footer__icon--social&quot;
+            target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;footer__menu-item&quot;&gt;
+            &lt;a href=&quot;https://twitter.com/eu_commission&quot;
+               class=&quot;icon icon--twitter footer__icon--twitter footer__icon--social&quot;&gt;Twitter&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;footer__menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Other social media&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;footer__menu footer__menu--separator menu nav list-inline&quot;&gt;
+          &lt;li class=&quot;footer__menu-item&quot;&gt;
+            &lt;a href=&quot;http://ec.europa.eu/geninfo/legal_notices_en.htm&quot;&gt;Help&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;footer__menu-item&quot;&gt;
+            &lt;a href=&quot;http://ec.europa.eu/cookies/index_en.htm&quot;&gt;Cookies and privacy notice&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;footer__menu-item&quot;&gt;
+            &lt;a href=&quot;http://ec.europa.eu/contact/index_en.htm&quot;&gt;Legal statement&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;footer__menu-item-right&quot;&gt;
+            &lt;a href=&quot;http://gov.uk&quot; class=&quot;is-external&quot;&gt;europa.eu&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;footer__disclaimer&quot;&gt;&lt;span&gt;© European Commission 2015.&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
     &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/footer&gt;
 </code></pre>
       </div>
