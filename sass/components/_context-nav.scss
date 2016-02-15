@@ -8,7 +8,7 @@ Styleguide contextnav
 
 .context-nav {
   @extend .row;
-  font-size: $font-size-little;
+  font-size: $font-size-xsmall;
 
   &__expander {
     border: none;
@@ -38,7 +38,6 @@ Styleguide contextnav
 .context-nav__label {
   @extend .col-xs-12;
   @extend .col-md-3;
-  font-size: $font-size-xsmall;
   display: block;
   clear: both;
 }

@@ -61,7 +61,7 @@
       <li class="kss-nav__menu-item">
         <a href="section-comments.html">
           <span class="kss-nav__ref">5</span
-          ><span class="kss-nav__name">comments</span>
+          ><span class="kss-nav__name">Comments</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -107,21 +107,21 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a href="section-footer.html">
+        <a href="section-filters.html">
           <span class="kss-nav__ref">13</span
+          ><span class="kss-nav__name">Filters</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-footer.html">
+          <span class="kss-nav__ref">14</span
           ><span class="kss-nav__name">Footer</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-form.html">
-          <span class="kss-nav__ref">14</span
-          ><span class="kss-nav__name">Form</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-forms.html">
           <span class="kss-nav__ref">15</span
-          ><span class="kss-nav__name">forms</span>
+          ><span class="kss-nav__name">Form</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -270,96 +270,112 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="splash-page">
-  <div class="splash-page__content">
-    <div class="container-fluid"><!-- only fluid for styleguide -->
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <nav class="splash-page__container">
-            <h2 lang="en"><span class="icon icon--generic-lang"></span> Select your language</h2>
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="#" lang="en" hreflang="en" class="splash-page__btn-language is-active btn icon icon--check" data-languagespecific="true">English</a>
+          <div class="page-splash">
+  <section class="main-content splash-page">
+    <a id="main-content" tabindex="-1"></a>
+    <header class="site-header splash-page__site-header" role="banner">
+      <div class="container">
+        <a href="/index_en" class="logo site-header__logo" title="Home - European Commission Beta"></a>
+      </div>
+    </header>
+    <div class="page-content splash-page__content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <nav class="splash-page__container">
+              <h2 lang="en"><span class="icon icon--generic-lang"></span>Select your language</h2>
+              <div class="row">
+                <div class="col-sm-6">
+                  <a href="#" lang="bg" hreflang="bg" class="btn splash-page__btn-language" data-languagespecific="true">български</a>
+                  <a href="#" lang="cs" hreflang="cs" class="btn splash-page__btn-language" data-languagespecific="true">čeština</a>
+                  <a href="#" lang="da" hreflang="da" class="btn splash-page__btn-language" data-languagespecific="true">dansk</a>
+                  <a href="#" lang="de" hreflang="de" class="btn splash-page__btn-language" data-languagespecific="true">Deutsch</a>
+                  <a href="#" lang="et" hreflang="et" class="btn splash-page__btn-language" data-languagespecific="true">eesti</a>
+                  <a href="#" lang="el" hreflang="el" class="btn splash-page__btn-language" data-languagespecific="true">ελληνικά</a>
+                  <a href="#" lang="en" hreflang="en" class="btn splash-page__btn-language is-active icon icon--check" data-languagespecific="true">English<span class="sr-only"> (Current language)</span></a>
+                  <a href="#" lang="es" hreflang="es" class="btn splash-page__btn-language" data-languagespecific="true">español</a>
+                  <a href="#" lang="fr" hreflang="fr" class="btn splash-page__btn-language" data-languagespecific="true">français</a>
+                  <a href="#" lang="ga" hreflang="ga" class="btn splash-page__btn-language" data-languagespecific="true">Gaeilge</a>
+                  <a href="#" lang="hr" hreflang="hr" class="btn splash-page__btn-language" data-languagespecific="true">hrvatski</a>
+                  <a href="#" lang="it" hreflang="it" class="btn splash-page__btn-language" data-languagespecific="true">Italiano</a>
+                </div>
+                <div class="col-sm-6">
+                  <a href="#" lang="lv" hreflang="lv" class="btn splash-page__btn-language" data-languagespecific="true">latviešu</a>
+                  <a href="#" lang="lt" hreflang="lt" class="btn splash-page__btn-language" data-languagespecific="true">lietuvių</a>
+                  <a href="#" lang="hu" hreflang="hu" class="btn splash-page__btn-language" data-languagespecific="true">magyar</a>
+                  <a href="#" lang="mt" hreflang="mt" class="btn splash-page__btn-language" data-languagespecific="true">Malti</a>
+                  <a href="#" lang="nl" hreflang="nl" class="btn splash-page__btn-language" data-languagespecific="true">Nederlands</a>
+                  <a href="#" lang="pl" hreflang="pl" class="btn splash-page__btn-language" data-languagespecific="true">polski</a>
+                  <a href="#" lang="pt-pt" hreflang="pt" class="btn splash-page__btn-language" data-languagespecific="true">português</a>
+                  <a href="#" lang="ro" hreflang="ro" class="btn splash-page__btn-language" data-languagespecific="true">română</a>
+                  <a href="#" lang="sk" hreflang="sk" class="btn splash-page__btn-language" data-languagespecific="true">slovenčina</a>
+                  <a href="#" lang="sl" hreflang="sl" class="btn splash-page__btn-language" data-languagespecific="true">slovenščina</a>
+                  <a href="#" lang="fi" hreflang="fi" class="btn splash-page__btn-language" data-languagespecific="true">suomi</a>
+                  <a href="#" lang="sv" hreflang="sv" class="btn splash-page__btn-language" data-languagespecific="true">svenska</a>
+                </div>
               </div>
-              <div class="col-sm-6">
-                <a href="#" lang="nl" hreflang="nl" class="splash-page__btn-language btn icon icon--check" data-languagespecific="true">Nederlands</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="#" lang="nl" hreflang="nl" class="splash-page__btn-language btn icon icon--check" data-languagespecific="true">Nederlands</a>
-              </div>
-              <div class="col-sm-6">
-                <a href="#" lang="en" hreflang="en" class="splash-page__btn-language is-active btn icon icon--check" data-languagespecific="true">English</a>
-              </div>
-            </div>
-            <div class="splash-page__helper-text">
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Language</th><td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor suscipit nulla, quis finibus lacus fermentum ut. </td>
-                  </tr>
-                  <tr>
-                    <th>Language</th><td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor suscipit nulla, quis finibus lacus fermentum ut. </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <a href="/index_en" class="splash-page__btn-close">Close</a>
-          </nav>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
-
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;splash-page&quot;&gt;
-  &lt;div class=&quot;splash-page__content&quot;&gt;
-    &lt;div class=&quot;container-fluid&quot;&gt;&lt;!-- only fluid for styleguide --&gt;
-      &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-md-8 col-md-offset-2&quot;&gt;
-          &lt;nav class=&quot;splash-page__container&quot;&gt;
-            &lt;h2 lang=&quot;en&quot;&gt;&lt;span class=&quot;icon icon--generic-lang&quot;&gt;&lt;/span&gt; Select your language&lt;/h2&gt;
-            &lt;div class=&quot;row&quot;&gt;
-              &lt;div class=&quot;col-sm-6&quot;&gt;
-                &lt;a href=&quot;#&quot; lang=&quot;en&quot; hreflang=&quot;en&quot; class=&quot;splash-page__btn-language is-active btn icon icon--check&quot; data-languagespecific=&quot;true&quot;&gt;English&lt;/a&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;page-splash&quot;&gt;
+  &lt;section class=&quot;main-content splash-page&quot;&gt;
+    &lt;a id=&quot;main-content&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;
+    &lt;header class=&quot;site-header splash-page__site-header&quot; role=&quot;banner&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;a href=&quot;/index_en&quot; class=&quot;logo site-header__logo&quot; title=&quot;Home - European Commission Beta&quot;&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;page-content splash-page__content&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-md-8 col-md-offset-2&quot;&gt;
+            &lt;nav class=&quot;splash-page__container&quot;&gt;
+              &lt;h2 lang=&quot;en&quot;&gt;&lt;span class=&quot;icon icon--generic-lang&quot;&gt;&lt;/span&gt;Select your language&lt;/h2&gt;
+              &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-sm-6&quot;&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;bg&quot; hreflang=&quot;bg&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;български&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;cs&quot; hreflang=&quot;cs&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;čeština&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;da&quot; hreflang=&quot;da&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;dansk&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;de&quot; hreflang=&quot;de&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;Deutsch&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;et&quot; hreflang=&quot;et&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;eesti&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;el&quot; hreflang=&quot;el&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;ελληνικά&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;en&quot; hreflang=&quot;en&quot; class=&quot;btn splash-page__btn-language is-active icon icon--check&quot; data-languagespecific=&quot;true&quot;&gt;English&lt;span class=&quot;sr-only&quot;&gt; (Current language)&lt;/span&gt;&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;es&quot; hreflang=&quot;es&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;español&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;fr&quot; hreflang=&quot;fr&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;français&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;ga&quot; hreflang=&quot;ga&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;Gaeilge&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;hr&quot; hreflang=&quot;hr&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;hrvatski&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;it&quot; hreflang=&quot;it&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;Italiano&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-sm-6&quot;&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;lv&quot; hreflang=&quot;lv&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;latviešu&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;lt&quot; hreflang=&quot;lt&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;lietuvių&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;hu&quot; hreflang=&quot;hu&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;magyar&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;mt&quot; hreflang=&quot;mt&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;Malti&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;nl&quot; hreflang=&quot;nl&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;Nederlands&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;pl&quot; hreflang=&quot;pl&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;polski&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;pt-pt&quot; hreflang=&quot;pt&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;português&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;ro&quot; hreflang=&quot;ro&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;română&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;sk&quot; hreflang=&quot;sk&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;slovenčina&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;sl&quot; hreflang=&quot;sl&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;slovenščina&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;fi&quot; hreflang=&quot;fi&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;suomi&lt;/a&gt;
+                  &lt;a href=&quot;#&quot; lang=&quot;sv&quot; hreflang=&quot;sv&quot; class=&quot;btn splash-page__btn-language&quot; data-languagespecific=&quot;true&quot;&gt;svenska&lt;/a&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
-              &lt;div class=&quot;col-sm-6&quot;&gt;
-                &lt;a href=&quot;#&quot; lang=&quot;nl&quot; hreflang=&quot;nl&quot; class=&quot;splash-page__btn-language btn icon icon--check&quot; data-languagespecific=&quot;true&quot;&gt;Nederlands&lt;/a&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;row&quot;&gt;
-              &lt;div class=&quot;col-sm-6&quot;&gt;
-                &lt;a href=&quot;#&quot; lang=&quot;nl&quot; hreflang=&quot;nl&quot; class=&quot;splash-page__btn-language btn icon icon--check&quot; data-languagespecific=&quot;true&quot;&gt;Nederlands&lt;/a&gt;
-              &lt;/div&gt;
-              &lt;div class=&quot;col-sm-6&quot;&gt;
-                &lt;a href=&quot;#&quot; lang=&quot;en&quot; hreflang=&quot;en&quot; class=&quot;splash-page__btn-language is-active btn icon icon--check&quot; data-languagespecific=&quot;true&quot;&gt;English&lt;/a&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;splash-page__helper-text&quot;&gt;
-              &lt;table&gt;
-                &lt;tbody&gt;
-                  &lt;tr&gt;
-                    &lt;th&gt;Language&lt;/th&gt;&lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor suscipit nulla, quis finibus lacus fermentum ut. &lt;/td&gt;
-                  &lt;/tr&gt;
-                  &lt;tr&gt;
-                    &lt;th&gt;Language&lt;/th&gt;&lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor suscipit nulla, quis finibus lacus fermentum ut. &lt;/td&gt;
-                  &lt;/tr&gt;
-                &lt;/tbody&gt;
-              &lt;/table&gt;
-            &lt;/div&gt;
-            &lt;a href=&quot;/index_en&quot; class=&quot;splash-page__btn-close&quot;&gt;Close&lt;/a&gt;
-          &lt;/nav&gt;
+            &lt;/nav&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre>
       </div>
 
       </div>

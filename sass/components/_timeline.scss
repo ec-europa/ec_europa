@@ -19,6 +19,7 @@ Styleguide timeline
   .timeline__item-title {
     font-weight: bold;
     line-height: 1em;
+    margin-bottom: 0.5em;
     &:before {
       content: '';
       position: absolute;
