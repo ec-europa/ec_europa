@@ -467,6 +467,17 @@ function _europa_field_component_listing($variables, $config) {
     $columns_num = 3;
   }
 
+  $items_per_row = 1;
+  if ($config['layout'] == 'row-two') {
+    $items_per_row = 2;
+  }
+  elseif ($config['layout'] == 'row-three') {
+    $items_per_row = 3;
+  }
+
+  // Add a new variable that indicates the row structure.
+  $is_row = $items_per_row > 1;
+
   // Distribute them into columns.
   $total = count($variables['items']);
   $columns = array();
@@ -499,9 +510,31 @@ function _europa_field_component_listing($variables, $config) {
   $output = '<div class="listing__wrapper' . $wrapper_class . '">';
   foreach ($columns as $column) {
     $output .= '<' . $config['listing_wrapper_element'] . ' class="listing' . $modifier_class . '">';
-    foreach ($column as $item) {
+
+    // Start Itemcounter.
+    $item_in_row = 0;
+
+    // Loop over all our items.
+    foreach ($column as $key => $item) {
+
+      // In row logic we need to add extra markup.
+      if ($is_row) {
+        if ($item_in_row == $items_per_row || $item_in_row == 0) {
+          $output .= '<div class="row">';
+          $item_in_row = 0;
+        }
+        $item_in_row++;
+      }
+
+      // Add the actual item.
       $output .= $item;
+
+      // In row logic we need to add extra markup.
+      if ($is_row && ($item_in_row == $items_per_row || count($column) == $key + 1)) {
+        $output .= '</div>';
+      }
     }
+
     $output .= '</' . $config['listing_wrapper_element'] . '>';
   }
   $output .= '</div>';
