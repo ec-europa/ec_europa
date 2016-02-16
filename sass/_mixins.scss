@@ -60,14 +60,14 @@
 }
 
 // Language generator.
-@mixin languages_logo($file_path, $file_extension) {
+@mixin logo-background-languages($file_path, $file_extension) {
   @each $item in $languages {
-    &.language-#{$item} {
-      .logo {
+    .language-#{$item} {
+      .logo--language {
         background-image: url("#{$file_path}#{$item}#{$file_extension}");
       }
       @media print {
-        .logo:before {
+        .logo--language:before {
           content: url("#{$file_path}#{$item}#{$file_extension}");
         }
       }

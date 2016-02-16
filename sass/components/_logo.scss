@@ -24,7 +24,7 @@
 //
 // EC logo with language information.
 //
-// Markup: html/logo-language.html
+// Markup: html/logo--language.html
 //
 // .language-bg - Bulgarian
 // .language-cs - Czech
@@ -53,21 +53,20 @@
 //
 // Styleguide siteheader.logo-language
 
-.node-type-info-homepage.front {
-  .logo {
-    width: 255px;
-    height: 70px;
-  }
-  @include languages_logo('../images/svg/logo/logo--', '.svg');
+// Sets language-specific background image on .logo--language element nested in {{modifier_class}} modifier.
+@include logo-background-languages('../images/svg/logo/logo--', '.svg');
+
+.logo--language {
+  @extend .logo;
+  width: 255px;
 }
 
 .no-svg {
-  .node-type-info-homepage.front {
-    .logo {
-      width: 255px;
-      height: 70px;
-    }
-    @include languages_logo('../images/png/logo/logo--', '.png');
+  @include logo-background-languages('../images/png/logo/logo--', '.png');
+
+  .logo--language {
+    @extend .logo;
+    width: 255px;
   }
 }
 
