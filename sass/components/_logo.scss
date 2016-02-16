@@ -1,13 +1,11 @@
-// Ec logo small (svg)
+// EC logo
 //
-// Default EC logo in SVG.
+// Default EC logo.
 //
 // Markup: html/logo.html
 //
 // Styleguide siteheader.logo
 
-// Component
-// --------------------------------------------------
 .logo {
   display: block;
   float: left;
@@ -16,25 +14,17 @@
   background: url('../images/svg/logo.svg') no-repeat;
 }
 
-// EC logo small (png)
-//
-// Default EC logo in PNG.
-//
-// Markup: html/logo-no-svg.html
-//
-// Styleguide siteheader.logo-no-svg
-
 .no-svg {
   .logo {
     background-image: url('../images/png/logo.png');
   }
 }
 
-// EC logo front (svg)
+// EC language logo
 //
-// EC logo on front page, SVG file.
+// EC logo with language information.
 //
-// Markup: html/logo-front.html
+// Markup: html/logo-language.html
 //
 // .language-bg - Bulgarian
 // .language-cs - Czech
@@ -61,9 +51,8 @@
 // .language-fi - Finnish
 // .language-sv - Swedish
 //
-// Styleguide siteheader.logo-front-svg
+// Styleguide siteheader.logo-language
 
-// This language-specific logo is used only on info home page for now.
 .node-type-info-homepage.front {
   .logo {
     width: 255px;
@@ -71,39 +60,6 @@
   }
   @include languages_logo('../images/svg/logo/logo--', '.svg');
 }
-
-// EC logo front (png)
-//
-// Ec logo on front page, SVG file.
-//
-// Markup: html/logo-front-no-svg.html
-//
-// .language-bg - Bulgarian
-// .language-cs - Czech
-// .language-da - Danish
-// .language-de - German
-// .language-et - Estonian
-// .language-el - Greek
-// .language-en - English
-// .language-es - Spanish
-// .language-fr - French
-// .language-ga - Irish/Gaeilge
-// .language-hr - Croatian
-// .language-it - Italian
-// .language-lv - Latvian
-// .language-lt - Lithuanian
-// .language-hu - Hungarian
-// .language-mt - Maltese
-// .language-nl - Dutch
-// .language-pl - Polish
-// .language-pt - Portuguese
-// .language-ro - Romanian
-// .language-sk - Slovak
-// .language-sl - Slovene
-// .language-fi - Finnish
-// .language-sv - Swedish
-//
-// Styleguide siteheader.logo-front-png
 
 .no-svg {
   .node-type-info-homepage.front {

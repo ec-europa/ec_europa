@@ -1195,6 +1195,7 @@ function europa_preprocess_page(&$variables) {
       }
     }
   }
+  $variables['logo_classes'] = 'logo site-header__logo';
 }
 
 /**
