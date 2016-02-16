@@ -16,22 +16,20 @@ Styleguide pager
   display: inline-block;
   font-weight: bold;
   margin: 0.938em auto;
-  height: 3.750em;
   max-width: none !important;
+  background: $blue-dark;
+  height: 3em;
+  line-height: 3em;
 
   & > .pager__item {
     // Prettifying.
-    transition: all .7s ease-in-out;
+    transition: all .2s linear;
     list-style: none;
-
-    // Next to each other, match the .pager height for vertical align.
     float: left;
-    line-height: 3.750em;
 
     & > .pager__btn {
       color: #fff;
       margin: 0;
-      background: $blue-dark;
       font-size: $font-size-little;
       display: inline-block;
       text-align: center;
@@ -40,20 +38,20 @@ Styleguide pager
       &:hover, &:focus, &:active, &:visited {
         color: #fff;
       }
+
       &:focus {
-        outline: 6px solid $yellow-light;
-        text-decoration: none;
         position: relative;
-        z-index: 999;
+        outline: 6px solid $yellow-light;
+
       }
     }
   }
 }
 
 .pager__middle {
-  background: $grey-lighter;
   position: relative;
-  margin: 0 3px;
+  background: $grey-lighter; 
+  cursor: pointer;
 
   .pager__separator {
     position: absolute;
@@ -65,37 +63,39 @@ Styleguide pager
   }
 
   .pager__dropdown {
-    // Removing ugly dotted line.
-    &::-moz-focus-inner,
-    &:focus {
-      border: 6px solid $yellow-light;
-      height: 3.750em;
-      margin-top: -6px;
-    }
-
-    // Background.
-    background: transparent url("../images/svg/arrow-down--blue.svg");
-    background-repeat: no-repeat;
-    background-position: right 1.3em center, right;
+    background: url("../images/svg/arrow-down--blue.svg") 85% center no-repeat;
     background-size: 1.3em;
-    &:hover {
-      background-image: url("../images/svg/arrow-down--blue.svg");
-      background-size: 1.3em !important; // native select:hover should not override this specificity.
-    }
-
     // Removing native arrow in all browsers.
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
     border: none;
     color: $blue-dark;
-    cursor: pointer;
     font-size: $font-size-little;
-    padding-right: 7em;
-    padding-left: 0.625em;
+    padding: 0 6em 0 1.5em;
+    height: 3em;
+    line-height: 3em;
+
+    // This is just to make the dropdown nicer in ff, webkit doesn-t support this.
+    option {
+      outline: none;
+      padding-bottom: 0.3em;
+      font-size: $font-size-little;
+      padding: 0.3em 0 0.3em 0.9em;
+      font-weight: normal;
+    }
+
+    &:focus {
+      outline: 6px solid $yellow-light;
+    }
+
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 $blue-dark;
+    }
   }
 }
+
 
 // Cover up case of misunderstood svg.
 .no-svg {
@@ -104,31 +104,23 @@ Styleguide pager
   }
 }
 
-// Common traits between back and forward buttons.
-.pager__back,
-.pager__forward {
-  .pager__btn {
-    width: 4em;
-
-    // Ajax throbber should not make any button larger in height.
-    overflow: hidden;
-  }
-}
-
 // Arrows inside the pager items.
 .pager__back-arrow,
 .pager__forward-arrow {
-  height: 1.250em;
+  height: 3em;
   display: inline-block;
   position: relative;
+  padding: 0 1em;
+  text-align: center;
 
   // Override font icon rather than parent elements,
   // because parents could have padding and margin.
   // Avoiding: increasing font size with padding resize the whole element.
   &.icon:before, &.icon::before {
     font-size: 1.7em;
-    top: 5px;
-    position: relative;
+    vertical-align: middle;
+    margin-right: 0;
+    margin-top: -2px;
   }
 }
 
@@ -136,11 +128,6 @@ Styleguide pager
 .pager__back-text,
 .pager__forward-text {
   display: none;
-}
-
-.pager__back-text {
-  margin-left: 0.6em;
-  margin-right: 0.4em;
 }
 
 @include breakpoint(screen-msm-min) {
@@ -159,47 +146,15 @@ Styleguide pager
   .pager__back-text,
   .pager__forward-text {
     display: inline-block;
+    padding: 0 2em 0 0;
+
     &:hover {
       text-decoration: underline;
     }
   }
 
-  // TWEAKS:
-  // Back button specifics.
-  .pager__back {
-    .pager__btn {
-      padding: 0 2.500em 0 0.938em;
-    }
-  }
-  // Forward button specifics.
-  .pager__forward {
-    .pager__btn {
-      padding: 0 0.625em 0 3.438em;
-      .pager__forward-text {
-        padding-right: 2.500em;
-      }
-    }
-  }
-
-  .pager {
-    height: 2.813em;
-    .pager__item {
-      line-height: 2.813em;
-    }
-
-    // Select list spacing specifics.
-    .pager__middle {
-      .pager__dropdown {
-        background-position: right 1.2em center, right;
-        background-size: 1em;
-        &:hover {
-          background-size: 1em !important; // native select:hover should not override this specificity.
-        }
-      }
-      .pager__separator {
-        right: 3em;
-      }
-    }
+  .pager__forward-text {
+    padding: 0 0 0 2em;
   }
 }
 
