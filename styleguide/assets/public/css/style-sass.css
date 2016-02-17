@@ -9562,12 +9562,8 @@ Styleguide mostvisited-item
   margin-bottom: 1.667em; }
   @media (min-width: 992px) {
     .mostvisited-item__wrapper > div {
-      padding: 0 10px;
-      clear: none !important; }
-    .mostvisited-item__wrapper > div:first-child {
-      padding: 0 20px 0 0; }
-    .mostvisited-item__wrapper > div:last-child {
-      padding: 0 0 0 20px; } }
+      padding: 0 15px;
+      clear: none !important; } }
 
 .mostvisited-item {
   overflow: hidden;
