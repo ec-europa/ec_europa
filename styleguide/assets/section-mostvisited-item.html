@@ -111,8 +111,6 @@
           <span class="kss-nav__ref">13</span
           ><span class="kss-nav__name">Footer</span>
         </a>
-        <ul class="kss-nav__menu-child">
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-form.html">
@@ -173,6 +171,8 @@
           <span class="kss-nav__ref">23</span
           ><span class="kss-nav__name">Most Visited item</span>
         </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-navtabs.html">
@@ -257,22 +257,18 @@
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-footer" class="kss-section kss-section--depth-1">
+      <div     id="kssref-mostvisited-item" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
-        <a class="kss-title__permalink" href="#kssref-footer">
-          <span class="kss-title__ref">13</span
-          >Footer
+        <a class="kss-title__permalink" href="#kssref-mostvisited-item">
+          <span class="kss-title__ref">23</span
+          >Most Visited item
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h1>
 
 
-      <div class="kss-description">
-        <p>Site-wide footer component</p>
-
-      </div>
     </div>
 
       <div class="kss-modifier__wrapper">
@@ -280,81 +276,75 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <footer class="footer">
-    <div class="container-fluid">
-      <div class="row">
-        <aside class="col-sm-4 footer__column-right">
-          <a href="http://ec.europa.eu/index_en.htm" class="site-switcher footer__site-switcher"><span>The European Commission </span><span>and its priorities</span></a>  
-        </aside>
-        <section class="col-sm-8 footer__column-main">
-            <span class="footer__label">View the European Commission on :</span>
-            <ul class="footer__menu menu nav list-inline">
-                <li class="footer__menu-item">
-                  <a href="https://www.facebook.com/EuropeanCommission" class="icon icon--facebook footer__icon--facebook" target="_blank">Facebook</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="https://twitter.com/eu_commission" class="icon icon--twitter footer__icon--twitter">Twitter</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="/other-social-media">Other social media</a>
-                </li>
-            </ul>
-            <ul class="footer__menu footer__menu--separator menu nav list-inline">
-                <li class="footer__menu-item">
-                  <a href="http://ec.europa.eu/geninfo/legal_notices_en.htm">Help</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="http://ec.europa.eu/cookies/index_en.htm">Cookies and privacy notice</a>
-                </li>
-                <li class="footer__menu-item">
-                  <a href="http://ec.europa.eu/contact/index_en.htm">Legal statement</a>
-                </li>
-            </ul>
-            <div class="footer__disclaimer"><span>© European Commission copyright. All content available under XX <a href="#">license</a>.</span></div>
-        </section>
+          <div class="mostvisited-item__wrapper">
+  <div class="mostvisited-item">
+    <div class="mostvisited-item__image">
+      <img src="http://placehold.it/360x202"/>
+    </div>
+    <div class="mostvisited-item__content">
+      <div>
+        <a href="#">Link Button</a>
       </div>
     </div>
-</footer>
+  </div>
+  <div class="mostvisited-item">
+    <div class="mostvisited-item__image">
+      <img src="http://placehold.it/360x202"/>
+    </div>
+    <div class="mostvisited-item__content">
+      <div>
+        <a href="#">Link Button</a>
+      </div>
+    </div>
+  </div>
+  <div class="mostvisited-item">
+    <div class="mostvisited-item__image">
+      <img src="http://placehold.it/360x202"/>
+    </div>
+    <div class="mostvisited-item__content">
+      <div>
+        <a href="#">Link Button</a>
+      </div>
+    </div>
+  </div>
+</div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;footer class=&quot;footer&quot;&gt;
-    &lt;div class=&quot;container-fluid&quot;&gt;
-      &lt;div class=&quot;row&quot;&gt;
-        &lt;aside class=&quot;col-sm-4 footer__column-right&quot;&gt;
-          &lt;a href=&quot;http://ec.europa.eu/index_en.htm&quot; class=&quot;site-switcher footer__site-switcher&quot;&gt;&lt;span&gt;The European Commission &lt;/span&gt;&lt;span&gt;and its priorities&lt;/span&gt;&lt;/a&gt;  
-        &lt;/aside&gt;
-        &lt;section class=&quot;col-sm-8 footer__column-main&quot;&gt;
-            &lt;span class=&quot;footer__label&quot;&gt;View the European Commission on :&lt;/span&gt;
-            &lt;ul class=&quot;footer__menu menu nav list-inline&quot;&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;https://www.facebook.com/EuropeanCommission&quot; class=&quot;icon icon--facebook footer__icon--facebook&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;https://twitter.com/eu_commission&quot; class=&quot;icon icon--twitter footer__icon--twitter&quot;&gt;Twitter&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;/other-social-media&quot;&gt;Other social media&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;ul class=&quot;footer__menu footer__menu--separator menu nav list-inline&quot;&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;http://ec.europa.eu/geninfo/legal_notices_en.htm&quot;&gt;Help&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;http://ec.europa.eu/cookies/index_en.htm&quot;&gt;Cookies and privacy notice&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;footer__menu-item&quot;&gt;
-                  &lt;a href=&quot;http://ec.europa.eu/contact/index_en.htm&quot;&gt;Legal statement&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;div class=&quot;footer__disclaimer&quot;&gt;&lt;span&gt;© European Commission copyright. All content available under XX &lt;a href=&quot;#&quot;&gt;license&lt;/a&gt;.&lt;/span&gt;&lt;/div&gt;
-        &lt;/section&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;mostvisited-item__wrapper&quot;&gt;
+  &lt;div class=&quot;mostvisited-item&quot;&gt;
+    &lt;div class=&quot;mostvisited-item__image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/360x202&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mostvisited-item__content&quot;&gt;
+      &lt;div&gt;
+        &lt;a href=&quot;#&quot;&gt;Link Button&lt;/a&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-&lt;/footer&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;mostvisited-item&quot;&gt;
+    &lt;div class=&quot;mostvisited-item__image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/360x202&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mostvisited-item__content&quot;&gt;
+      &lt;div&gt;
+        &lt;a href=&quot;#&quot;&gt;Link Button&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;mostvisited-item&quot;&gt;
+    &lt;div class=&quot;mostvisited-item__image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/360x202&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mostvisited-item__content&quot;&gt;
+      &lt;div&gt;
+        &lt;a href=&quot;#&quot;&gt;Link Button&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
 

@@ -1,0 +1,58 @@
+/*
+Most Visited item
+
+Markup: html/mostvisited-item.html
+
+Styleguide mostvisited-item
+*/
+
+.mostvisited-item__wrapper {
+  @extend .row;
+
+  margin-bottom: $font-size-huge;
+
+  @media (min-width: $screen-md-min) {
+    > div {
+      padding: 0 10px;
+      clear: none !important;
+    }
+
+    > div:first-child {
+      padding: 0 20px 0 0;
+    }
+
+    > div:last-child {
+      padding: 0 0 0 20px;
+    }
+  }
+}
+
+.mostvisited-item {
+  @extend .col-md-4;
+
+  overflow: hidden;
+  max-width: 32em;
+
+  .mostvisited-item__image,
+  .mostvisited-item__content {
+    background-color: $grey-lighter;
+    padding: 10px;
+  }
+}
+
+.mostvisited-item__image {
+  img {
+    width: 100%;
+  }
+}
+
+.mostvisited-item__content {
+  > div {
+    padding-bottom: 1em;
+
+    a {
+      color: $brand-primary;
+      text-decoration: none !important;
+    }
+  }
+}
