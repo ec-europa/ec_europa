@@ -20,11 +20,11 @@
   }
 }
 
-// EC language logo
+// EC logotype
 //
-// EC logo with language information.
+// EC logo with text.
 //
-// Markup: html/logo--language.html
+// Markup: html/logo--logotype.html
 //
 // .language-bg - Bulgarian
 // .language-cs - Czech
@@ -51,12 +51,12 @@
 // .language-fi - Finnish
 // .language-sv - Swedish
 //
-// Styleguide siteheader.logo-language
+// Styleguide siteheader.logo--logotype
 
-// Sets language-specific background image on .logo--language element nested in {{modifier_class}} modifier.
+// Sets language-specific background image on .logo--logotype element nested in {{modifier_class}} modifier.
 @include logo-background-languages('../images/svg/logo/logo--', '.svg');
 
-.logo--language {
+.logo--logotype {
   @extend .logo;
   width: 255px;
 }
@@ -64,7 +64,7 @@
 .no-svg {
   @include logo-background-languages('../images/png/logo/logo--', '.png');
 
-  .logo--language {
+  .logo--logotype {
     @extend .logo;
     width: 255px;
   }

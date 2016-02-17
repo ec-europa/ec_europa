@@ -63,11 +63,11 @@
 @mixin logo-background-languages($file_path, $file_extension) {
   @each $item in $languages {
     .language-#{$item} {
-      .logo--language {
+      .logo--logotype {
         background-image: url("#{$file_path}#{$item}#{$file_extension}");
       }
       @media print {
-        .logo--language:before {
+        .logo--logotype:before {
           content: url("#{$file_path}#{$item}#{$file_extension}");
         }
       }
