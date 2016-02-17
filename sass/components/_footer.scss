@@ -21,7 +21,7 @@ Styleguide footer
     &:hover,
     &:active,
     &:focus {
-      text-decoration: none;
+      text-decoration: none; 
     }
   }
   @extend .hidden-print;

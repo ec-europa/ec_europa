@@ -22,16 +22,9 @@ $messages-icon-size: 2em;
   padding: 1em 4em;
   position: relative;
   overflow: hidden;
+  background: url("../images/svg/messages-info.svg") no-repeat 1em 1.1em;
+  background-size:  $messages-icon-size;
 
-  &:before {
-    background: url("../images/svg/messages-info.svg") no-repeat;
-    height: $messages-icon-size;
-    width: $messages-icon-size;
-    content: '';
-    position: absolute;
-    top: 1em;
-    left: 1em;
-  }
 
   &:last-child {
     margin-bottom: 0;
@@ -39,23 +32,17 @@ $messages-icon-size: 2em;
 
   &.status {
     border-color: $green;
-    &:before {
-      background-image: url("../images/svg/messages-success.svg");
-    }
+    background-image: url("../images/svg/messages-success.svg");
   }
 
   &.warning {
     border-color: $yellow;
-    &:before {
-      background-image: url("../images/svg/messages-warning.svg");
-    }
+    background-image: url("../images/svg/messages-warning.svg");
   }
 
   &.error {
     border-color: #da2131;
-    &:before {
-      background-image: url("../images/svg/messages-error.svg");
-    }
+    background-image: url("../images/svg/messages-error.svg");
   }
 
   h3 {
@@ -92,28 +79,18 @@ $messages-icon-size: 2em;
 
 .no-svg {
   .messages {
-    &:before {
-      height: 2.5em;
-      width: 2.5em;
-      background: url("../images/png/messages-info.png");
-    }
+    background-image: url("../images/png/messages-info.png");
 
     &.status {
-      &:before {
-        background-image: url("../images/png/messages-info.png");
-      }
+      background-image: url("../images/png/messages-info.png");
     }
 
     &.warning {
-      &:before {
-        background-image: url("../images/png/messages-warning.png");
-      }
+      background-image: url("../images/png/messages-warning.png");
     }
 
     &.error {
-      &:before {
-        background-image: url("../images/png/messages-error.png");
-      }
+      background-image: url("../images/png/messages-error.png");
     }
   }
 }
