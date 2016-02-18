@@ -5417,7 +5417,7 @@ button.close {
 * Logic: equal to inline styling.
 * @see: http://davidtheclark.com/on-utility-classes/
 */
-.clear-bottom-spacing, .clear-page-content-bottom-spacing .page-content {
+.clear-bottom-spacing, .clear-page-content-bottom-spacing .page-content > .container-fluid, .clear-page-content-bottom-spacing .section__group--full-width.page-content > *, .clear-page-content-bottom-spacing .block--full-width.page-content > *, .clear-page-content-bottom-spacing .field--full-width.page-content > * {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important; }
 
@@ -9610,8 +9610,6 @@ Page header component
 
 Markup: html/page-header.html
 
-.page-header--featured - Featured Page Header
-
 .page-header--image - Header with a background image
 
 
@@ -9635,7 +9633,8 @@ Styleguide page-header.informational
   background: #004494;
   margin: 0;
   padding: 0 0 1.5em;
-  color: #fff; }
+  color: #fff;
+  border-bottom: none; }
   .page-header h1 {
     margin: 0;
     color: #fff; }
@@ -9656,14 +9655,6 @@ Styleguide page-header.informational
     line-height: 1.428571429; }
   .page-header .page-header__bottom {
     font-size: 26px; }
-  .page-header .page-header--featured, .page-header .front .page-header, .front .page-header .page-header {
-    background: #004494;
-    color: #fff;
-    line-height: 1.5; }
-    .page-header .page-header--featured h2, .page-header .front .page-header h2, .front .page-header .page-header h2 {
-      color: #fff; }
-    .page-header .page-header--featured p, .page-header .front .page-header p, .front .page-header .page-header p {
-      font-size: 1.667em; }
 
 .page-header__hero-title {
   padding-top: 2.39em; }
@@ -9673,6 +9664,10 @@ Styleguide page-header.informational
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+
+.page-header--bordered:after, .node-type-info-homepage .page-header:after {
+  content: "<hr />";
+  border-bottom: #ffd617 solid 10px; }
 
 .page-header a {
   color: #fff; }
@@ -9694,9 +9689,6 @@ Styleguide page-header.informational
       line-height: 2.2; }
     .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title) {
       padding-right: 2.1em; }
-
-.front .page-header {
-  padding: 0; }
 
 /*
 Pager

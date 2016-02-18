@@ -10,7 +10,7 @@
 }
 
 .clear-page-content-bottom-spacing {
-  .page-content {
+  .page-content > .container-fluid {
     @extend .clear-bottom-spacing;
   }
 }

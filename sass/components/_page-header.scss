@@ -5,8 +5,6 @@ Page header component
 
 Markup: html/page-header.html
 
-.page-header--featured - Featured Page Header
-
 .page-header--image - Header with a background image
 
 
@@ -34,6 +32,7 @@ Styleguide page-header.informational
   margin: 0;
   padding: 0 0 1.5em;
   color: #fff;
+  border-bottom: none;
 
   h1 {
     margin: 0;
@@ -64,18 +63,6 @@ Styleguide page-header.informational
   .page-header__bottom {
     font-size: 26px;
   }
-
-  .page-header--featured {
-    background: $brand-primary;
-    color: #fff;
-    line-height: 1.5;
-    h2 {
-      color: #fff;
-    }
-    p {
-      font-size: $font-size-h2;
-    }
-  }
 }
 
 .page-header__hero-title {
@@ -87,6 +74,13 @@ Styleguide page-header.informational
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.page-header--bordered {
+  &:after {
+    content: "<hr />";
+    border-bottom: $yellow-light solid 10px;
+  }
 }
 
 // External link specific adjustments
@@ -122,8 +116,7 @@ Styleguide page-header.informational
   }
 }
 
-// Drupal.
-.front .page-header {
-  @extend .page-header--featured;
-  padding: 0;
+// Drupal connect.
+.node-type-info-homepage .page-header {
+  @extend .page-header--bordered;
 }
