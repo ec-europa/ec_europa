@@ -76,6 +76,13 @@ Styleguide page-header.informational
   background-position: center;
 }
 
+.page-header--bordered {
+  &:after {
+    content: "<hr />";
+    border-bottom: $yellow-light solid 10px;
+  }
+}
+
 // External link specific adjustments
 @mixin _page_header_external_link_mixin() {
   padding-right: 1.1em;
