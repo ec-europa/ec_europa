@@ -20,6 +20,7 @@ Styleguide pager
   background: $blue-dark;
   height: 3em;
   line-height: 3em;
+  padding-left: 0;
 
   & > .pager__item {
     // Prettifying.

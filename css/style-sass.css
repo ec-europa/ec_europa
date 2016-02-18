@@ -9745,7 +9745,8 @@ Styleguide pager
   max-width: none !important;
   background: #004494;
   height: 3em;
-  line-height: 3em; }
+  line-height: 3em;
+  padding-left: 0; }
   .pager > .pager__item {
     transition: all .2s linear;
     list-style: none;
