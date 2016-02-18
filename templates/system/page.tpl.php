@@ -160,8 +160,10 @@
       <div class="row padding-reset">
         <div class="col-lg-9">
           <?php print render($title_prefix); ?>
-          <?php if (isset($page['custom_title'])): ?>
+          <?php if (!empty($page['custom_title'])): ?>
             <?php print render($page['custom_title']); ?>
+          <?php else: ?>
+            <h1><?php print $title ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
 
