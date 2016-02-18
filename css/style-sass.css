@@ -9760,12 +9760,12 @@ Styleguide pager
         color: #fff; }
       .pager > .pager__item > .pager__btn:focus {
         position: relative;
+        z-index: 1;
         outline: 6px solid #ffd617; }
 
 .pager__middle {
   position: relative;
-  background: #ececec;
-  cursor: pointer; }
+  background: #ececec; }
   .pager__middle .pager__separator {
     position: absolute;
     height: 100%;
@@ -9774,7 +9774,7 @@ Styleguide pager
     right: 3.5em;
     top: 0; }
   .pager__middle .pager__dropdown {
-    background: url("../images/svg/arrow-down--blue.svg") 85% center no-repeat;
+    background: url("../images/svg/arrow-down--blue.svg") 86% 50% no-repeat;
     background-size: 1.3em;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -9783,8 +9783,10 @@ Styleguide pager
     color: #004494;
     font-size: 0.889em;
     padding: 0 6em 0 1.5em;
-    height: 3em;
-    line-height: 3em; }
+    height: 3.35em; }
+    .pager__middle .pager__dropdown:hover {
+      background-image: url("../images/svg/arrow-down--blue.svg");
+      background-size: 1.3em !important; }
     .pager__middle .pager__dropdown option {
       outline: none;
       padding-bottom: 0.3em;
@@ -9804,7 +9806,6 @@ Styleguide pager
 .pager__forward-arrow {
   height: 3em;
   display: inline-block;
-  position: relative;
   padding: 0 1em;
   text-align: center; }
   .pager__back-arrow.icon:before, .pager__back-arrow.search-form__btn:before, .pager__back-arrow.icon::before, .pager__back-arrow.search-form__btn::before,

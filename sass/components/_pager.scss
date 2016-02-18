@@ -41,6 +41,7 @@ Styleguide pager
 
       &:focus {
         position: relative;
+        z-index: 1;
         outline: 6px solid $yellow-light;
 
       }
@@ -51,7 +52,7 @@ Styleguide pager
 .pager__middle {
   position: relative;
   background: $grey-lighter; 
-  cursor: pointer;
+  //cursor: pointer;
 
   .pager__separator {
     position: absolute;
@@ -63,7 +64,7 @@ Styleguide pager
   }
 
   .pager__dropdown {
-    background: url("../images/svg/arrow-down--blue.svg") 85% center no-repeat;
+    background: url("../images/svg/arrow-down--blue.svg") 86% 50% no-repeat;
     background-size: 1.3em;
     // Removing native arrow in all browsers.
     -webkit-appearance: none;
@@ -73,10 +74,14 @@ Styleguide pager
     color: $blue-dark;
     font-size: $font-size-little;
     padding: 0 6em 0 1.5em;
-    height: 3em;
-    line-height: 3em;
+    height: 3.35em;
 
-    // This is just to make the dropdown nicer in ff, webkit doesn-t support this.
+    &:hover {
+      background-image: url("../images/svg/arrow-down--blue.svg");
+      background-size: 1.3em !important; 
+    }
+
+    // This is just to make the dropdown nicer in ff, webkit doesn't support this.
     option {
       outline: none;
       padding-bottom: 0.3em;
@@ -96,7 +101,6 @@ Styleguide pager
   }
 }
 
-
 // Cover up case of misunderstood svg.
 .no-svg {
   .pager__dropdown {
@@ -109,7 +113,6 @@ Styleguide pager
 .pager__forward-arrow {
   height: 3em;
   display: inline-block;
-  position: relative;
   padding: 0 1em;
   text-align: center;
 
