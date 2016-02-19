@@ -66,12 +66,3 @@ Styleguide: siteheader.langselect
     float: left;
   }
 }
-
-.front {
-  @include breakpoint(screen-md-min) {
-    .lang-select-site {
-      position: absolute;
-      float: none;
-    }
-  }
-}
