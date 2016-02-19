@@ -9770,10 +9770,6 @@ Styleguide page-header.informational
   background-size: cover;
   background-position: center; }
 
-.page-header--bordered:after {
-  content: "<hr />";
-  border-bottom: #ffd617 solid 10px; }
-
 .page-header a {
   color: #fff; }
   .page-header a:hover:not(.breadcrumb__link, .btn) {
