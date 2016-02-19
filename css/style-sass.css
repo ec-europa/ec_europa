@@ -9714,32 +9714,31 @@ Styleguide pager
   display: inline-block;
   font-weight: bold;
   margin: 0.938em auto;
-  height: 3.750em;
-  max-width: none !important; }
+  max-width: none !important;
+  background: #004494;
+  height: 3em;
+  line-height: 3em;
+  padding-left: 0; }
   .pager > .pager__item {
-    transition: all .7s ease-in-out;
+    transition: all .2s linear;
     list-style: none;
-    float: left;
-    line-height: 3.750em; }
+    float: left; }
     .pager > .pager__item > .pager__btn {
       color: #fff;
       margin: 0;
-      background: #004494;
       font-size: 0.889em;
       display: inline-block;
       text-align: center; }
       .pager > .pager__item > .pager__btn:hover, .pager > .pager__item > .pager__btn:focus, .pager > .pager__item > .pager__btn:active, .pager > .pager__item > .pager__btn:visited {
         color: #fff; }
       .pager > .pager__item > .pager__btn:focus {
-        outline: 6px solid #ffd617;
-        text-decoration: none;
         position: relative;
-        z-index: 999; }
+        z-index: 1;
+        outline: 6px solid #ffd617; }
 
 .pager__middle {
-  background: #ececec;
   position: relative;
-  margin: 0 3px; }
+  background: #ececec; }
   .pager__middle .pager__separator {
     position: absolute;
     height: 100%;
@@ -9748,56 +9747,53 @@ Styleguide pager
     right: 3.5em;
     top: 0; }
   .pager__middle .pager__dropdown {
-    background: transparent url("../images/svg/arrow-down--blue.svg");
-    background-repeat: no-repeat;
-    background-position: right 1.3em center, right;
+    background: url("../images/svg/arrow-down--blue.svg") 86% 50% no-repeat;
     background-size: 1.3em;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: none;
     color: #004494;
-    cursor: pointer;
     font-size: 0.889em;
-    padding-right: 7em;
-    padding-left: 0.625em; }
-    .pager__middle .pager__dropdown::-moz-focus-inner, .pager__middle .pager__dropdown:focus {
-      border: 6px solid #ffd617;
-      height: 3.750em;
-      margin-top: -6px; }
+    padding: 0 6em 0 1.5em;
+    height: 3.35em; }
     .pager__middle .pager__dropdown:hover {
       background-image: url("../images/svg/arrow-down--blue.svg");
       background-size: 1.3em !important; }
+    .pager__middle .pager__dropdown option {
+      outline: none;
+      padding-bottom: 0.3em;
+      font-size: 0.889em;
+      padding: 0.3em 0 0.3em 0.9em;
+      font-weight: normal; }
+    .pager__middle .pager__dropdown:focus {
+      outline: 6px solid #ffd617; }
+    .pager__middle .pager__dropdown:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #004494; }
 
 .no-svg .pager__dropdown {
   background-image: url("../images/png/arrow-down-blue.png"); }
 
-.pager__back .pager__btn,
-.pager__forward .pager__btn {
-  width: 4em;
-  overflow: hidden; }
-
 .pager__back-arrow,
 .pager__forward-arrow {
-  height: 1.250em;
+  height: 3em;
   display: inline-block;
-  position: relative; }
+  padding: 0 1em;
+  text-align: center; }
   .pager__back-arrow.icon:before, .pager__back-arrow.search-form__btn:before, .pager__back-arrow.icon::before, .pager__back-arrow.search-form__btn::before,
   .pager__forward-arrow.icon:before,
   .pager__forward-arrow.search-form__btn:before,
   .pager__forward-arrow.icon::before,
   .pager__forward-arrow.search-form__btn::before {
     font-size: 1.7em;
-    top: 5px;
-    position: relative; }
+    vertical-align: middle;
+    margin-right: 0;
+    margin-top: -2px; }
 
 .pager__back-text,
 .pager__forward-text {
   display: none; }
-
-.pager__back-text {
-  margin-left: 0.6em;
-  margin-right: 0.4em; }
 
 @media (min-width: 622px) {
   .pager__back .pager__btn,
@@ -9808,27 +9804,13 @@ Styleguide pager
       text-decoration: none; }
   .pager__back-text,
   .pager__forward-text {
-    display: inline-block; }
+    display: inline-block;
+    padding: 0 2em 0 0; }
     .pager__back-text:hover,
     .pager__forward-text:hover {
       text-decoration: underline; }
-  .pager__back .pager__btn {
-    padding: 0 2.500em 0 0.938em; }
-  .pager__forward .pager__btn {
-    padding: 0 0.625em 0 3.438em; }
-    .pager__forward .pager__btn .pager__forward-text {
-      padding-right: 2.500em; }
-  .pager {
-    height: 2.813em; }
-    .pager .pager__item {
-      line-height: 2.813em; }
-    .pager .pager__middle .pager__dropdown {
-      background-position: right 1.2em center, right;
-      background-size: 1em; }
-      .pager .pager__middle .pager__dropdown:hover {
-        background-size: 1em !important; }
-    .pager .pager__middle .pager__separator {
-      right: 3em; } }
+  .pager__forward-text {
+    padding: 0 0 0 2em; } }
 
 .region-content ul.pager {
   margin: 0.938em auto;
