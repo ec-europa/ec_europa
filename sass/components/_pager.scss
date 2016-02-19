@@ -52,8 +52,7 @@ Styleguide pager
 
 .pager__middle {
   position: relative;
-  background: $grey-lighter; 
-  //cursor: pointer;
+  background: $grey-lighter;
 
   .pager__separator {
     position: absolute;
@@ -79,7 +78,7 @@ Styleguide pager
 
     &:hover {
       background-image: url("../images/svg/arrow-down--blue.svg");
-      background-size: 1.3em !important; 
+      background-size: 1.3em !important;
     }
 
     // This is just to make the dropdown nicer in ff, webkit doesn't support this.
