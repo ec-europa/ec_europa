@@ -96,7 +96,7 @@
 
 <header class="site-header" role="banner">
   <div class="container-fluid">
-    <a href="<?php print $front_page; ?>" class="logo site-header__logo" title="<?php print $page_logo_title; ?>"></a>
+    <a href="<?php print $front_page; ?>" class="<?php print $logo_classes; ?>" title="<?php print $page_logo_title; ?>"></a>
     <?php if($is_front && !empty($site_slogan)): ?>
       <p class="site-slogan"><?php print $site_slogan; ?></p>
     <?php endif; ?>
@@ -160,8 +160,10 @@
       <div class="row padding-reset">
         <div class="col-lg-9">
           <?php print render($title_prefix); ?>
-          <?php if (isset($page['custom_title'])): ?>
+          <?php if (!empty($page['custom_title'])): ?>
             <?php print render($page['custom_title']); ?>
+          <?php else: ?>
+            <h1><?php print $title ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
 
