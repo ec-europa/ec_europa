@@ -597,6 +597,8 @@ function europa_field($variables) {
   }
 
   if (isset($element['#formatter'])) {
+
+    // Handling nexteuropa_formatters custom cases.
     switch ($element['#formatter']) {
       case 'context_nav_item':
         $output = '';
@@ -606,9 +608,26 @@ function europa_field($variables) {
           $output .= drupal_render($item);
         }
         return $output;
+
+      case 'nexteuropa_tags':
+        $output = '<div class="tags">';
+        // Label formatting.
+        if (!$variables['label_hidden']) {
+          $output .= '<div class="tags__label"' . $variables['title_attributes'] . '>' . $variables['label'] . '</div>';
+        }
+        // Items list formatting.
+        $output .= '<div class="tags__items"' . $variables['content_attributes'] . '>';
+        foreach ($variables['items'] as $delta => $item) {
+          $output .= drupal_render($item);
+        }
+        // Closing both tags and tags__items.
+        $output .= '</div></div>';
+        return $output;
+
     }
   }
 
+  // Handling default output following BEM syntax.
   $output = '';
   $classes = array();
 
