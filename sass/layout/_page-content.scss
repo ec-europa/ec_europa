@@ -1,8 +1,27 @@
 .page-content {
-  margin-top: 60px;
-  margin-bottom: 30px;
+  > .container-fluid,
+  > .container {
+    > .row:first-child {
+      padding-top: 60px;
+    }
+  }
+  padding-bottom: 30px;
+}
+
+.page-content--border {
+  > .container-fluid,
+  > .container {
+    > .row:first-child {
+      border-top: $yellow-light solid 10px;
+    }
+  }
 }
 
 .main-content {
   overflow: hidden;
+}
+
+// Drupal connect.
+.node-type-info-homepage .page-content {
+  @extend .page-content--border;
 }
