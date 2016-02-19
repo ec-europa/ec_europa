@@ -107,38 +107,6 @@ Styleguide footer
   }
 }
 
-// Site Switcher
-.footer__site-switcher {
-  background: url('../images/svg/footer__logo.svg') no-repeat center 25px $brand-political;
-  background-size: 80px 40px;
-  padding: 90px 30px 30px 30px;
-  display: block;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-a.footer__site-switcher {
-  text-decoration: none;
-  border: 2px solid transparent;
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  &:focus {
-    border: 2px solid $yellow-light;
-  }
-}
-
-.no-svg {
-  .footer__site-switcher {
-    background-image: url('../images/png/footer__logo.png');
-  }
-}
-
 @include breakpoint(screen-sm-min) {
   .footer {
     text-align: left;
@@ -168,15 +136,6 @@ a.footer__site-switcher {
       width: auto;
       display: inline-block;
       margin-right: 4px;
-    }
-  }
-}
-
-@include breakpoint(screen-md-min) {
-  .footer__site-switcher {
-    & > * {
-      white-space: nowrap;
-      display: inline-block;
     }
   }
 }

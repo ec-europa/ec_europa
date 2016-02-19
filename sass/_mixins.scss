@@ -60,15 +60,15 @@
 }
 
 // Language generator.
-@mixin languages_logo($path-and-filename, $modifier-and-file-extension) {
+@mixin logo-background-languages($file_path, $file_extension) {
   @each $item in $languages {
-    &.language-#{$item} {
-      .logo {
-        background-image: url("#{$path-and-filename}#{$item}#{$modifier-and-file-extension}");
+    .language-#{$item} {
+      .logo--logotype {
+        background-image: url("#{$file_path}#{$item}#{$file_extension}");
       }
       @media print {
-        .logo:before {
-          content: url("#{$path-and-filename}#{$item}#{$modifier-and-file-extension}");
+        .logo--logotype:before {
+          content: url("#{$file_path}#{$item}#{$file_extension}");
         }
       }
     }

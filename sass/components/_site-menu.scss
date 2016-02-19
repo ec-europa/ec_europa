@@ -51,14 +51,6 @@
   @extend .hidden-print;
 }
 
-.front {
-  .site-menu__toggle {
-    .btn {
-      border: 2px solid #fff;
-    }
-  }
-}
-
 .js .site-menu {
   height: 0;
   &.collapse {
