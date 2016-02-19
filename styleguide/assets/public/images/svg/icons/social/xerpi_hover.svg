@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>xerpi_hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="500" height="500"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="xerpi_hover" sketch:type="MSLayerGroup">
+            <g id="bg">
+                <use fill="#660066" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <use fill-opacity="0.4" fill="#4A4A4A" xlink:href="#path-1"></use>
+            </g>
+            <path d="M303.441667,116 C282.140625,116 262.604167,128.23815 250,148.376879 C237.395833,128.23815 217.859375,116 196.558333,116 C159.313021,116 129,153.411561 129,199.420809 C129,221.031214 135.680208,241.557225 147.843229,257.203468 L243.130729,375.479769 L250,384 L256.869271,375.479769 L350.329167,259.449711 C363.563542,243.726012 371,222.347977 371,199.420809 C371,153.411561 340.686979,116 303.441667,116 L303.441667,116 L303.441667,116 Z" id="icon" fill="#BDC60A" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
