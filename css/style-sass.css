@@ -9567,10 +9567,12 @@ Styleguide mostvisited-item
 
 .mostvisited-item {
   overflow: hidden;
-  max-width: 32em; }
+  max-width: 32em;
+  margin-bottom: 15px; }
   .mostvisited-item .mostvisited-item__image,
   .mostvisited-item .mostvisited-item__content {
-    background-color: #ececec;
+    background-color: #ececec; }
+  .mostvisited-item .mostvisited-item__content {
     padding: 10px; }
 
 .mostvisited-item__image img {

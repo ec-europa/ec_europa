@@ -24,10 +24,14 @@ Styleguide mostvisited-item
 
   overflow: hidden;
   max-width: 32em;
+  margin-bottom: 15px;
 
   .mostvisited-item__image,
   .mostvisited-item__content {
     background-color: $grey-lighter;
+  }
+
+  .mostvisited-item__content {
     padding: 10px;
   }
 }
