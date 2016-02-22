@@ -9632,6 +9632,7 @@ Page header component
 Markup: html/page-header.html
 
 .page-header--image - Header with a background image
+.page-header--large-intro - Header with a background image
 
 
 Styleguide page-header
@@ -9649,6 +9650,13 @@ Informational site page header
 Markup: html/page-header--informational.html
 
 Styleguide page-header.informational
+*/
+/*
+Informational site homepage header
+
+Markup: html/page-header--informational-home.html
+
+Styleguide page-header.informational-home
 */
 .page-header {
   background: #004494;
@@ -9696,9 +9704,14 @@ Styleguide page-header.informational
     line-height: 1.428571429; }
   .page-header .page-header__bottom {
     font-size: 26px; }
+  .page-header .page-header__hero-title {
+    padding-top: 2.39em; }
 
-.page-header__hero-title {
-  padding-top: 2.39em; }
+.page-header--large-intro, .node-type-info-homepage .page-header {
+  padding-bottom: 2.39em; }
+  .page-header--large-intro p, .node-type-info-homepage .page-header p {
+    font-size: 1.667em;
+    line-height: 1.33; }
 
 .page-header--image {
   background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);

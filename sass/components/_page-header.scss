@@ -6,6 +6,7 @@ Page header component
 Markup: html/page-header.html
 
 .page-header--image - Header with a background image
+.page-header--large-intro - Header with a background image
 
 
 Styleguide page-header
@@ -25,6 +26,14 @@ Informational site page header
 Markup: html/page-header--informational.html
 
 Styleguide page-header.informational
+*/
+
+/*
+Informational site homepage header
+
+Markup: html/page-header--informational-home.html
+
+Styleguide page-header.informational-home
 */
 
 .page-header {
@@ -81,10 +90,17 @@ Styleguide page-header.informational
   .page-header__bottom {
     font-size: 26px;
   }
+  .page-header__hero-title {
+    padding-top: 2.39em;
+  }
 }
 
-.page-header__hero-title {
-  padding-top: 2.39em;
+.page-header--large-intro {
+  padding-bottom: 2.39em;
+  p {
+    font-size: $font-size-h2;
+    line-height: $line-height-large;
+  }
 }
 
 .page-header--image {
@@ -94,6 +110,8 @@ Styleguide page-header.informational
   background-position: center;
 }
 
-.page-header {
 
+// Drupal connect.
+.node-type-info-homepage .page-header {
+  @extend .page-header--large-intro;
 }
