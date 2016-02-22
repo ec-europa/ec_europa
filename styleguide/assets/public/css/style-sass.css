@@ -6386,7 +6386,7 @@ textarea.error {
   .listing__wrapper--row-two .page-content > .container-fluid > .listing:first-child,
   .listing__wrapper--row-two .section__group--full-width.page-content > * > .listing:first-child,
   .listing__wrapper--row-two .block--full-width.page-content > * > .listing:first-child,
-  .listing__wrapper--row-two .field--full-width.page-content > * > .listing:first-child,
+  .listing__wrapper--row-two .field--full-width.page-content > * > .listing:first-child, .page-content > .container-fluid > .mostvisited-item__wrapper:first-child, .section__group--full-width.page-content > * > .mostvisited-item__wrapper:first-child, .block--full-width.page-content > * > .mostvisited-item__wrapper:first-child, .field--full-width.page-content > * > .mostvisited-item__wrapper:first-child,
   .page-content > .container > .row:first-child,
   .page-content > .container > .sidebar-field-group:first-child, .section
   .page-content > .container > .section--row-two:first-child,
@@ -6402,7 +6402,8 @@ textarea.error {
   .listing__wrapper--two-columns:first-child, .listing__wrapper--row-three
   .page-content > .container > .listing:first-child,
   .listing__wrapper--row-two
-  .page-content > .container > .listing:first-child {
+  .page-content > .container > .listing:first-child,
+  .page-content > .container > .mostvisited-item__wrapper:first-child {
     padding-top: 60px; }
 
 .page-content--border > .container-fluid > .row:first-child, .node-type-info-homepage .page-content > .container-fluid > .row:first-child, .section__group--full-width.page-content--border > * > .row:first-child, .node-type-info-homepage .section__group--full-width.page-content > * > .row:first-child, .block--full-width.page-content--border > * > .row:first-child, .node-type-info-homepage .block--full-width.page-content > * > .row:first-child, .field--full-width.page-content--border > * > .row:first-child, .node-type-info-homepage .field--full-width.page-content > * > .row:first-child, .page-content--border > .container-fluid > .sidebar-field-group:first-child, .node-type-info-homepage .page-content > .container-fluid > .sidebar-field-group:first-child, .section__group--full-width.page-content--border > * > .sidebar-field-group:first-child, .node-type-info-homepage .section__group--full-width.page-content > * > .sidebar-field-group:first-child, .block--full-width.page-content--border > * > .sidebar-field-group:first-child, .node-type-info-homepage .block--full-width.page-content > * > .sidebar-field-group:first-child, .field--full-width.page-content--border > * > .sidebar-field-group:first-child, .node-type-info-homepage .field--full-width.page-content > * > .sidebar-field-group:first-child, .section .page-content--border > .container-fluid > .section--row-two:first-child, .node-type-info-homepage .section .page-content > .container-fluid > .section--row-two:first-child, .section .node-type-info-homepage .page-content > .container-fluid > .section--row-two:first-child, .section .section__group--full-width.page-content--border > * > .section--row-two:first-child, .node-type-info-homepage .section .section__group--full-width.page-content > * > .section--row-two:first-child, .section .node-type-info-homepage .section__group--full-width.page-content > * > .section--row-two:first-child, .section .block--full-width.page-content--border > * > .section--row-two:first-child, .node-type-info-homepage .section .block--full-width.page-content > * > .section--row-two:first-child, .section .node-type-info-homepage .block--full-width.page-content > * > .section--row-two:first-child, .section .field--full-width.page-content--border > * > .section--row-two:first-child, .node-type-info-homepage .section .field--full-width.page-content > * > .section--row-two:first-child, .section .node-type-info-homepage .field--full-width.page-content > * > .section--row-two:first-child,
@@ -6437,7 +6438,7 @@ textarea.error {
 .listing__wrapper--row-two .node-type-info-homepage .block--full-width.page-content > * > .listing:first-child,
 .listing__wrapper--row-two .field--full-width.page-content--border > * > .listing:first-child, .node-type-info-homepage
 .listing__wrapper--row-two .field--full-width.page-content > * > .listing:first-child,
-.listing__wrapper--row-two .node-type-info-homepage .field--full-width.page-content > * > .listing:first-child,
+.listing__wrapper--row-two .node-type-info-homepage .field--full-width.page-content > * > .listing:first-child, .page-content--border > .container-fluid > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .page-content > .container-fluid > .mostvisited-item__wrapper:first-child, .section__group--full-width.page-content--border > * > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .section__group--full-width.page-content > * > .mostvisited-item__wrapper:first-child, .block--full-width.page-content--border > * > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .block--full-width.page-content > * > .mostvisited-item__wrapper:first-child, .field--full-width.page-content--border > * > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .field--full-width.page-content > * > .mostvisited-item__wrapper:first-child,
 .page-content--border > .container > .row:first-child, .node-type-info-homepage .page-content > .container > .row:first-child,
 .page-content--border > .container > .sidebar-field-group:first-child, .node-type-info-homepage .page-content > .container > .sidebar-field-group:first-child, .section
 .page-content--border > .container > .section--row-two:first-child, .node-type-info-homepage .section .page-content > .container > .section--row-two:first-child, .section .node-type-info-homepage .page-content > .container > .section--row-two:first-child,
@@ -6458,7 +6459,8 @@ textarea.error {
 .listing__wrapper--row-two
 .page-content--border > .container > .listing:first-child, .node-type-info-homepage
 .listing__wrapper--row-two .page-content > .container > .listing:first-child,
-.listing__wrapper--row-two .node-type-info-homepage .page-content > .container > .listing:first-child {
+.listing__wrapper--row-two .node-type-info-homepage .page-content > .container > .listing:first-child,
+.page-content--border > .container > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .page-content > .container > .mostvisited-item__wrapper:first-child {
   border-top: #ffd617 solid 10px; }
 
 .main-content {
