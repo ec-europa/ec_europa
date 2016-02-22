@@ -47,6 +47,24 @@ Styleguide page-header.informational
     max-width: 40em;
   }
 
+  a {
+    color: #fff;
+    &:hover:not(.breadcrumb__link, .btn) {
+      color: $yellow-light;
+    }
+
+    &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title) {
+      .site-political & {
+        &:not(#{$ec_url_patterns}) {
+          @include _page_header_external_link_mixin();
+        }
+      }
+      .site-information & {
+        @include _page_header_external_link_mixin();
+      }
+    }
+  }
+
   .page-header__top,
   .page-header__main,
   .page-header__bottom {
@@ -76,35 +94,6 @@ Styleguide page-header.informational
   background-position: center;
 }
 
-// External link specific adjustments
-@mixin _page_header_external_link_mixin() {
-  padding-right: 1.1em;
-  display: inline-block;
-  &:after {
-    position: absolute;
-    line-height: 2.2;
-  }
-
-  &.btn {
-    padding-right: 2.1em;
-  }
-}
 .page-header {
-  a {
-    color: #fff;
-    &:hover:not(.breadcrumb__link, .btn) {
-      color: $yellow-light;
-    }
 
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title) {
-      .site-political & {
-        &:not(#{$ec_url_patterns}) {
-          @include _page_header_external_link_mixin();
-        }
-      }
-      .site-information & {
-        @include _page_header_external_link_mixin();
-      }
-    }
-  }
 }
