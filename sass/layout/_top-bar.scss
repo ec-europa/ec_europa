@@ -43,23 +43,3 @@
     }
   }
 }
-
-.front {
-  .top-bar {
-    @extend .block--full-width;
-    width: auto;
-    background: $brand-primary;
-    padding-bottom: 0;
-  }
-
-  @include breakpoint(screen-md-min) {
-    .top-bar {
-      float: none;
-      position: static;
-    }
-
-    .top-bar__wrapper {
-      float: right;
-    }
-  }
-}

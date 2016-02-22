@@ -44,6 +44,8 @@ Markup: html/icon.html
 .icon--global - global
 .icon--growth - growth
 .icon--regulation - regulation
+.icon--tag-close - tag close
+.icon--tag-close-hover - tag close with hover state
 
 Styleguide: icon
 */
@@ -354,6 +356,20 @@ Styleguide: icon
   content: '\e621';
   &:before {
     @extend .icon--generic-lang;
+  }
+}
+
+.icon--tag-close {
+  content: '\e907';
+  &:before {
+    @extend .icon--tag-close;
+  }
+}
+
+.icon--tag-close-hover {
+  content: '\e908';
+  &:before {
+    @extend .icon--tag-close-hover;
   }
 }
 

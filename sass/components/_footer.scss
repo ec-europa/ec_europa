@@ -21,7 +21,7 @@ Styleguide footer
     &:hover,
     &:active,
     &:focus {
-      text-decoration: none;
+      text-decoration: none; 
     }
   }
   @extend .hidden-print;
@@ -34,7 +34,6 @@ Styleguide footer
 
 .footer__label {
   display: block;
-  font-size: 14px;
   margin-right: 20px;
 }
 
@@ -69,12 +68,17 @@ Styleguide footer
       }
     }
   }
+  .footer__menu-item-right {
+    @extend .footer__menu-item;
+    float: right;
+  }
 }
 
 .footer__menu--separator {
   border-top: 1px solid #4d7cb4;
   margin-top: 0.6em;
   padding-top: 1.2em;
+  width: 100%;
 }
 
 // Icons
@@ -100,38 +104,6 @@ Styleguide footer
 .footer__icon--twitter {
   &:before {
     font-size: 18px;
-  }
-}
-
-// Site Switcher
-.footer__site-switcher {
-  background: url('../images/svg/footer__logo.svg') no-repeat center 25px $brand-political;
-  background-size: 80px 40px;
-  padding: 90px 30px 30px 30px;
-  display: block;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-a.footer__site-switcher {
-  text-decoration: none;
-  border: 2px solid transparent;
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  &:focus {
-    border: 2px solid $yellow-light;
-  }
-}
-
-.no-svg {
-  .footer__site-switcher {
-    background-image: url('../images/png/footer__logo.png');
   }
 }
 
@@ -164,15 +136,6 @@ a.footer__site-switcher {
       width: auto;
       display: inline-block;
       margin-right: 4px;
-    }
-  }
-}
-
-@include breakpoint(screen-md-min) {
-  .footer__site-switcher {
-    & > * {
-      white-space: nowrap;
-      display: inline-block;
     }
   }
 }

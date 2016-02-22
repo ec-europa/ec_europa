@@ -6,7 +6,7 @@ Field styling appearing in this styleguide is only valid for Default drupal fiel
 
 Markup: html/field.html
 
-.field--labeled - External link icon
+.field--labeled - Field component with a label
 
 Styleguide field
 */
@@ -15,6 +15,12 @@ Styleguide field
   .label-above {
     @extend .h3;
   }
+}
+
+.field__label {
+  font-size: $font-size-xsmall;
+  line-height: 2em;
+  font-weight: $font-weight-bold;
 }
 
 .field--labeled {
@@ -28,9 +34,6 @@ Styleguide field
   .field__label {
     display: block;
     clear: both;
-    font-size: $font-size-little;
-    line-height: 2em;
-    font-weight: $font-weight-bold;
   }
 
   .field__items {

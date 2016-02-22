@@ -5,18 +5,34 @@ Page header component
 
 Markup: html/page-header.html
 
-.page-header--featured - Featured Page Header
-
 .page-header--image - Header with a background image
 
 
 Styleguide page-header
 */
+
+/*
+Political page header
+
+Markup: html/page-header--political.html
+
+Styleguide page-header.political
+*/
+
+/*
+Informational site page header
+
+Markup: html/page-header--informational.html
+
+Styleguide page-header.informational
+*/
+
 .page-header {
   background: $brand-primary;
   margin: 0;
   padding: 0 0 1.5em;
   color: #fff;
+  border-bottom: none;
 
   h1 {
     margin: 0;
@@ -46,18 +62,6 @@ Styleguide page-header
   }
   .page-header__bottom {
     font-size: 26px;
-  }
-
-  .page-header--featured {
-    background: $brand-primary;
-    color: #fff;
-    line-height: 1.5;
-    h2 {
-      color: #fff;
-    }
-    p {
-      font-size: $font-size-h2;
-    }
   }
 }
 
@@ -103,10 +107,4 @@ Styleguide page-header
       }
     }
   }
-}
-
-// Drupal.
-.front .page-header {
-  @extend .page-header--featured;
-  padding: 0;
 }

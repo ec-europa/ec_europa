@@ -5,7 +5,7 @@ Custom bootstrap button group
 
 Markup: html/btn-group.html
 
-.btn-group-row-two    - Two column button block (deprecated, used only at Commissioners site).
+.btn-group-row-two    - Two column button block
 
 Styleguide buttons.group
 */
@@ -31,6 +31,7 @@ Styleguide buttons.group
     margin-bottom: -2px;
     float: left;
     width: 48.5%;
+    text-align: left;
     &:nth-child(odd) {
       margin-right: 3%;
       clear: left;
