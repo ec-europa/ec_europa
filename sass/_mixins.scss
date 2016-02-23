@@ -112,3 +112,17 @@
   width: 100%;
   position: relative;
 }
+
+// External link specific adjustments
+@mixin _page_header_external_link_mixin() {
+  padding-right: 1.1em;
+  display: inline-block;
+  &:after {
+    position: absolute;
+    line-height: 2.2;
+  }
+
+  &.btn {
+    padding-right: 2.1em;
+  }
+}
