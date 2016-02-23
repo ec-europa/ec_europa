@@ -568,7 +568,7 @@ function europa_field($variables) {
         $settings['wrapper_modifier'] = isset($variables['nexteuropa_listing_wrapper_modifier']) ? $variables['nexteuropa_listing_wrapper_modifier'] : '';
 
         // Custom listing settings based on view mode.
-        $listing_view_modes = array('title', 'meta', 'teaser');
+        $listing_view_modes = array('title', 'meta', 'teaser', 'image_label');
         if (isset($first_node['#view_mode']) && in_array($first_node['#view_mode'], $listing_view_modes)) {
           switch ($first_node['#view_mode']) {
             case 'title':

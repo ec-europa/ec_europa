@@ -6,34 +6,10 @@ Markup: html/mostvisited-item.html
 Styleguide mostvisited-item
 */
 
-.mostvisited-item__wrapper {
-  @extend .row;
 
-  margin-bottom: $font-size-huge;
-
-  @media (min-width: $screen-md-min) {
-    > div {
-      padding: 0 15px;
-      clear: none !important;
-    }
-  }
-}
-
-.mostvisited-item {
-  @extend .col-md-4;
-
-  overflow: hidden;
-  max-width: 32em;
-  margin-bottom: 15px;
-
-  .mostvisited-item__image,
-  .mostvisited-item__content {
-    background-color: $grey-lighter;
-  }
-
-  .mostvisited-item__content {
-    padding: 10px;
-  }
+.mostvisited-item__content {
+  background-color: $grey-lighter;
+  padding: 10px;
 }
 
 .mostvisited-item__image {
@@ -43,12 +19,8 @@ Styleguide mostvisited-item
 }
 
 .mostvisited-item__content {
-  > div {
-    padding-bottom: 1em;
-
-    a {
-      color: $brand-primary;
-      text-decoration: none !important;
-    }
+  a {
+    color: $brand-primary;
+    text-decoration: none !important;
   }
 }

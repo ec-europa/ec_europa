@@ -1336,25 +1336,25 @@ pre {
 .row, .sidebar-field-group, .section .section--row-two,
 .section .section--row-three, .banner--video, .context-nav, .file, .file--widebar, .listing__wrapper--maxwidth, .listing__wrapper--three-columns,
 .listing__wrapper--two-columns, .listing__wrapper--row-three .listing,
-.listing__wrapper--row-two .listing, .mostvisited-item__wrapper {
+.listing__wrapper--row-two .listing {
   margin-left: -15px;
   margin-right: -15px; }
   .row:before, .sidebar-field-group:before, .section .section--row-two:before,
   .section .section--row-three:before, .banner--video:before, .context-nav:before, .file:before, .file--widebar:before, .listing__wrapper--maxwidth:before, .listing__wrapper--three-columns:before,
   .listing__wrapper--two-columns:before, .listing__wrapper--row-three .listing:before,
-  .listing__wrapper--row-two .listing:before, .mostvisited-item__wrapper:before, .row:after, .sidebar-field-group:after, .section .section--row-two:after,
+  .listing__wrapper--row-two .listing:before, .row:after, .sidebar-field-group:after, .section .section--row-two:after,
   .section .section--row-three:after, .banner--video:after, .context-nav:after, .file:after, .file--widebar:after, .listing__wrapper--maxwidth:after, .listing__wrapper--three-columns:after,
   .listing__wrapper--two-columns:after, .listing__wrapper--row-three .listing:after,
-  .listing__wrapper--row-two .listing:after, .mostvisited-item__wrapper:after {
+  .listing__wrapper--row-two .listing:after {
     content: " ";
     display: table; }
   .row:after, .sidebar-field-group:after, .section .section--row-two:after,
   .section .section--row-three:after, .banner--video:after, .context-nav:after, .file:after, .file--widebar:after, .listing__wrapper--maxwidth:after, .listing__wrapper--three-columns:after,
   .listing__wrapper--two-columns:after, .listing__wrapper--row-three .listing:after,
-  .listing__wrapper--row-two .listing:after, .mostvisited-item__wrapper:after {
+  .listing__wrapper--row-two .listing:after {
     clear: both; }
 
-.col-xs-1, .file__icon, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .comment__image, .col-lg-2, .col-xs-3, .col-sm-3, .file__btn, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .sidebar-field-group__sidebar, .col-md-4, .section--row-three .section__item, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .mostvisited-item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .listing__wrapper--two-columns .listing, .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .file__metadata, .col-lg-7, .col-xs-8, .col-sm-8, .sidebar-field-group__main, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .sidebar-field-group h2, .col-lg-12 {
+.col-xs-1, .file__icon, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .comment__image, .col-lg-2, .col-xs-3, .col-sm-3, .file__btn, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .sidebar-field-group__sidebar, .col-md-4, .section--row-three .section__item, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .listing__wrapper--two-columns .listing, .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .file__metadata, .col-lg-7, .col-xs-8, .col-sm-8, .sidebar-field-group__main, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .sidebar-field-group h2, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1623,7 +1623,7 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .file__icon, .col-md-2, .comment__image, .col-md-3, .context-nav__label, .col-md-4, .section--row-three .section__item, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .mostvisited-item, .col-md-5, .featured-item__image, .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12, .sidebar-field-group h2 {
+  .col-md-1, .file__icon, .col-md-2, .comment__image, .col-md-3, .context-nav__label, .col-md-4, .section--row-three .section__item, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .section--row-two .section__item, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12, .sidebar-field-group h2 {
     float: left; }
   .col-md-1, .file__icon {
     width: 8.3333333333%; }
@@ -1631,7 +1631,7 @@ pre {
     width: 16.6666666667%; }
   .col-md-3, .context-nav__label {
     width: 25%; }
-  .col-md-4, .section--row-three .section__item, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .mostvisited-item {
+  .col-md-4, .section--row-three .section__item, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item {
     width: 33.3333333333%; }
   .col-md-5, .featured-item__image {
     width: 41.6666666667%; }
@@ -5502,7 +5502,7 @@ ul.list-inline > li {
 .row, .sidebar-field-group, .section .section--row-two,
 .section .section--row-three, .banner--video, .context-nav, .file, .file--widebar, .listing__wrapper--maxwidth, .listing__wrapper--three-columns,
 .listing__wrapper--two-columns, .listing__wrapper--row-three .listing,
-.listing__wrapper--row-two .listing, .mostvisited-item__wrapper {
+.listing__wrapper--row-two .listing {
   padding-top: 0;
   padding-bottom: 0; }
 
@@ -6386,7 +6386,7 @@ textarea.error {
   .listing__wrapper--row-two .page-content > .container-fluid > .listing:first-child,
   .listing__wrapper--row-two .section__group--full-width.page-content > * > .listing:first-child,
   .listing__wrapper--row-two .block--full-width.page-content > * > .listing:first-child,
-  .listing__wrapper--row-two .field--full-width.page-content > * > .listing:first-child, .page-content > .container-fluid > .mostvisited-item__wrapper:first-child, .section__group--full-width.page-content > * > .mostvisited-item__wrapper:first-child, .block--full-width.page-content > * > .mostvisited-item__wrapper:first-child, .field--full-width.page-content > * > .mostvisited-item__wrapper:first-child,
+  .listing__wrapper--row-two .field--full-width.page-content > * > .listing:first-child,
   .page-content > .container > .row:first-child,
   .page-content > .container > .sidebar-field-group:first-child, .section
   .page-content > .container > .section--row-two:first-child,
@@ -6402,8 +6402,7 @@ textarea.error {
   .listing__wrapper--two-columns:first-child, .listing__wrapper--row-three
   .page-content > .container > .listing:first-child,
   .listing__wrapper--row-two
-  .page-content > .container > .listing:first-child,
-  .page-content > .container > .mostvisited-item__wrapper:first-child {
+  .page-content > .container > .listing:first-child {
     padding-top: 60px; }
 
 .page-content--border > .container-fluid > .row:first-child, .node-type-info-homepage .page-content > .container-fluid > .row:first-child, .section__group--full-width.page-content--border > * > .row:first-child, .node-type-info-homepage .section__group--full-width.page-content > * > .row:first-child, .block--full-width.page-content--border > * > .row:first-child, .node-type-info-homepage .block--full-width.page-content > * > .row:first-child, .field--full-width.page-content--border > * > .row:first-child, .node-type-info-homepage .field--full-width.page-content > * > .row:first-child, .page-content--border > .container-fluid > .sidebar-field-group:first-child, .node-type-info-homepage .page-content > .container-fluid > .sidebar-field-group:first-child, .section__group--full-width.page-content--border > * > .sidebar-field-group:first-child, .node-type-info-homepage .section__group--full-width.page-content > * > .sidebar-field-group:first-child, .block--full-width.page-content--border > * > .sidebar-field-group:first-child, .node-type-info-homepage .block--full-width.page-content > * > .sidebar-field-group:first-child, .field--full-width.page-content--border > * > .sidebar-field-group:first-child, .node-type-info-homepage .field--full-width.page-content > * > .sidebar-field-group:first-child, .section .page-content--border > .container-fluid > .section--row-two:first-child, .node-type-info-homepage .section .page-content > .container-fluid > .section--row-two:first-child, .section .node-type-info-homepage .page-content > .container-fluid > .section--row-two:first-child, .section .section__group--full-width.page-content--border > * > .section--row-two:first-child, .node-type-info-homepage .section .section__group--full-width.page-content > * > .section--row-two:first-child, .section .node-type-info-homepage .section__group--full-width.page-content > * > .section--row-two:first-child, .section .block--full-width.page-content--border > * > .section--row-two:first-child, .node-type-info-homepage .section .block--full-width.page-content > * > .section--row-two:first-child, .section .node-type-info-homepage .block--full-width.page-content > * > .section--row-two:first-child, .section .field--full-width.page-content--border > * > .section--row-two:first-child, .node-type-info-homepage .section .field--full-width.page-content > * > .section--row-two:first-child, .section .node-type-info-homepage .field--full-width.page-content > * > .section--row-two:first-child,
@@ -6438,7 +6437,7 @@ textarea.error {
 .listing__wrapper--row-two .node-type-info-homepage .block--full-width.page-content > * > .listing:first-child,
 .listing__wrapper--row-two .field--full-width.page-content--border > * > .listing:first-child, .node-type-info-homepage
 .listing__wrapper--row-two .field--full-width.page-content > * > .listing:first-child,
-.listing__wrapper--row-two .node-type-info-homepage .field--full-width.page-content > * > .listing:first-child, .page-content--border > .container-fluid > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .page-content > .container-fluid > .mostvisited-item__wrapper:first-child, .section__group--full-width.page-content--border > * > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .section__group--full-width.page-content > * > .mostvisited-item__wrapper:first-child, .block--full-width.page-content--border > * > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .block--full-width.page-content > * > .mostvisited-item__wrapper:first-child, .field--full-width.page-content--border > * > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .field--full-width.page-content > * > .mostvisited-item__wrapper:first-child,
+.listing__wrapper--row-two .node-type-info-homepage .field--full-width.page-content > * > .listing:first-child,
 .page-content--border > .container > .row:first-child, .node-type-info-homepage .page-content > .container > .row:first-child,
 .page-content--border > .container > .sidebar-field-group:first-child, .node-type-info-homepage .page-content > .container > .sidebar-field-group:first-child, .section
 .page-content--border > .container > .section--row-two:first-child, .node-type-info-homepage .section .page-content > .container > .section--row-two:first-child, .section .node-type-info-homepage .page-content > .container > .section--row-two:first-child,
@@ -6459,8 +6458,7 @@ textarea.error {
 .listing__wrapper--row-two
 .page-content--border > .container > .listing:first-child, .node-type-info-homepage
 .listing__wrapper--row-two .page-content > .container > .listing:first-child,
-.listing__wrapper--row-two .node-type-info-homepage .page-content > .container > .listing:first-child,
-.page-content--border > .container > .mostvisited-item__wrapper:first-child, .node-type-info-homepage .page-content > .container > .mostvisited-item__wrapper:first-child {
+.listing__wrapper--row-two .node-type-info-homepage .page-content > .container > .listing:first-child {
   border-top: #ffd617 solid 10px; }
 
 .main-content {
@@ -9564,31 +9562,16 @@ Markup: html/mostvisited-item.html
 
 Styleguide mostvisited-item
 */
-.mostvisited-item__wrapper {
-  margin-bottom: 1.667em; }
-  @media (min-width: 992px) {
-    .mostvisited-item__wrapper > div {
-      padding: 0 15px;
-      clear: none !important; } }
-
-.mostvisited-item {
-  overflow: hidden;
-  max-width: 32em;
-  margin-bottom: 15px; }
-  .mostvisited-item .mostvisited-item__image,
-  .mostvisited-item .mostvisited-item__content {
-    background-color: #ececec; }
-  .mostvisited-item .mostvisited-item__content {
-    padding: 10px; }
+.mostvisited-item__content {
+  background-color: #ececec;
+  padding: 10px; }
 
 .mostvisited-item__image img {
   width: 100%; }
 
-.mostvisited-item__content > div {
-  padding-bottom: 1em; }
-  .mostvisited-item__content > div a {
-    color: #004494;
-    text-decoration: none !important; }
+.mostvisited-item__content a {
+  color: #004494;
+  text-decoration: none !important; }
 
 /*
 
