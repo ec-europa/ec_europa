@@ -9562,16 +9562,18 @@ Markup: html/mostvisited-item.html
 
 Styleguide mostvisited-item
 */
-.mostvisited-item__content {
+.mostvisited-item {
   background-color: #ececec;
-  padding: 10px; }
+  padding-bottom: 1em; }
 
 .mostvisited-item__image img {
   width: 100%; }
 
-.mostvisited-item__content a {
-  color: #004494;
-  text-decoration: none !important; }
+.mostvisited-item__content {
+  padding: 10px; }
+  .mostvisited-item__content a {
+    color: #004494;
+    text-decoration: none !important; }
 
 /*
 

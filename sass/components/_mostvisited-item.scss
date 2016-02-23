@@ -7,9 +7,10 @@ Styleguide mostvisited-item
 */
 
 
-.mostvisited-item__content {
+
+.mostvisited-item {
   background-color: $grey-lighter;
-  padding: 10px;
+  padding-bottom: 1em;
 }
 
 .mostvisited-item__image {
@@ -19,6 +20,7 @@ Styleguide mostvisited-item
 }
 
 .mostvisited-item__content {
+  padding: 10px;
   a {
     color: $brand-primary;
     text-decoration: none !important;
