@@ -6,6 +6,7 @@ Page header component
 Markup: html/page-header.html
 
 .page-header--image - Header with a background image
+.page-header--large-intro - Header with larger intro text
 
 
 Styleguide page-header
@@ -25,6 +26,14 @@ Informational site page header
 Markup: html/page-header--informational.html
 
 Styleguide page-header.informational
+*/
+
+/*
+Informational site homepage header
+
+Markup: html/page-header--informational-home.html
+
+Styleguide page-header.informational-home
 */
 
 .page-header {
@@ -47,49 +56,6 @@ Styleguide page-header.informational
     max-width: 40em;
   }
 
-  .page-header__top,
-  .page-header__main,
-  .page-header__bottom {
-    display: block;
-    width: 100%;
-  }
-
-  .page-header__top {
-    text-transform: uppercase;
-  }
-  .page-header__main {
-    line-height: $line-height-base;
-  }
-  .page-header__bottom {
-    font-size: 26px;
-  }
-}
-
-.page-header__hero-title {
-  padding-top: 2.39em;
-}
-
-.page-header--image {
-  background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-// External link specific adjustments
-@mixin _page_header_external_link_mixin() {
-  padding-right: 1.1em;
-  display: inline-block;
-  &:after {
-    position: absolute;
-    line-height: 2.2;
-  }
-
-  &.btn {
-    padding-right: 2.1em;
-  }
-}
-.page-header {
   a {
     color: #fff;
     &:hover:not(.breadcrumb__link, .btn) {
@@ -107,4 +73,45 @@ Styleguide page-header.informational
       }
     }
   }
+
+  .page-header__top,
+  .page-header__main,
+  .page-header__bottom {
+    display: block;
+    width: 100%;
+  }
+
+  .page-header__top {
+    text-transform: uppercase;
+  }
+  .page-header__main {
+    line-height: $line-height-base;
+  }
+  .page-header__bottom {
+    font-size: 26px;
+  }
+  .page-header__hero-title {
+    padding-top: 2.39em;
+  }
+}
+
+.page-header--large-intro {
+  padding-bottom: 2.39em;
+  p {
+    font-size: $font-size-h2;
+    line-height: $line-height-large;
+  }
+}
+
+.page-header--image {
+  background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+// Drupal connect.
+.node-type-info-homepage .page-header {
+  @extend .page-header--large-intro;
 }
