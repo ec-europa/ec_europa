@@ -9,13 +9,10 @@ Styleguide highlighted-item
 .highlighted-item {
   background-color: $grey-lighter;
   padding-bottom: 1em;
-  h3 {
-    color: $brand-primary;
-  }
   &:hover,
   &:active,
   &:focus {
-    h3 {
+    .highlighted-item__content {
       text-decoration: underline;
     }
   }
@@ -28,5 +25,6 @@ Styleguide highlighted-item
 }
 
 .highlighted-item__content {
-  padding: 10px;
+  color: $brand-primary;
+  padding: 1em;
 }
