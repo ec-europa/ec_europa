@@ -9082,9 +9082,6 @@ Styleguide listing.2.4
 .listing__wrapper--row-two .listing__item:nth-child(odd) {
   clear: left; }
 
-.listing__wrapper--row-three .listing__item {
-  margin-top: 30px; }
-
 @media (min-width: 992px) {
   .listing__wrapper--two-columns .listing {
     margin-bottom: 0; } }
@@ -9565,15 +9562,16 @@ Styleguide mostvisited-item
 .mostvisited-item {
   background-color: #ececec;
   padding-bottom: 1em; }
+  .mostvisited-item h3 {
+    color: #004494; }
+  .mostvisited-item:hover h3, .mostvisited-item:active h3, .mostvisited-item:focus h3 {
+    text-decoration: underline; }
 
 .mostvisited-item__image img {
   width: 100%; }
 
 .mostvisited-item__content {
   padding: 10px; }
-  .mostvisited-item__content a {
-    color: #004494;
-    text-decoration: none !important; }
 
 /*
 

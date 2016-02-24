@@ -6,11 +6,19 @@ Markup: html/mostvisited-item.html
 Styleguide mostvisited-item
 */
 
-
-
 .mostvisited-item {
   background-color: $grey-lighter;
   padding-bottom: 1em;
+  h3 {
+    color: $brand-primary;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    h3 {
+      text-decoration: underline;
+    }
+  }
 }
 
 .mostvisited-item__image {
@@ -21,8 +29,4 @@ Styleguide mostvisited-item
 
 .mostvisited-item__content {
   padding: 10px;
-  a {
-    color: $brand-primary;
-    text-decoration: none !important;
-  }
 }
