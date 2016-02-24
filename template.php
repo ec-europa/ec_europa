@@ -520,7 +520,7 @@ function _europa_field_component_listing($variables, $config) {
       // In row logic we need to add extra markup.
       if ($is_row) {
         if ($item_in_row == $items_per_row || $item_in_row == 0) {
-          $output .= '<div class="row">';
+          $output .= '<div class="clearfix">';
           $item_in_row = 0;
         }
         $item_in_row++;
