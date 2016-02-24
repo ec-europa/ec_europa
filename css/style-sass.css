@@ -7845,6 +7845,27 @@ Styleguide form.help-block
     color: #575757; }
 
 /*
+Highlighted item
+
+Markup: html/highlighted-item.html
+
+Styleguide highlighted-item
+*/
+.highlighted-item {
+  background-color: #ececec;
+  padding-bottom: 1em; }
+  .highlighted-item h3 {
+    color: #004494; }
+  .highlighted-item:hover h3, .highlighted-item:active h3, .highlighted-item:focus h3 {
+    text-decoration: underline; }
+
+.highlighted-item__image img {
+  width: 100%; }
+
+.highlighted-item__content {
+  padding: 10px; }
+
+/*
 Icon
 
 Icons using europa icons font
@@ -9551,27 +9572,6 @@ Styleguide messages
     background-image: url("../images/png/messages-warning.png"); }
   .no-svg .messages.error, .no-svg .error.feedback-messages {
     background-image: url("../images/png/messages-error.png"); }
-
-/*
-Most Visited item
-
-Markup: html/mostvisited-item.html
-
-Styleguide mostvisited-item
-*/
-.mostvisited-item {
-  background-color: #ececec;
-  padding-bottom: 1em; }
-  .mostvisited-item h3 {
-    color: #004494; }
-  .mostvisited-item:hover h3, .mostvisited-item:active h3, .mostvisited-item:focus h3 {
-    text-decoration: underline; }
-
-.mostvisited-item__image img {
-  width: 100%; }
-
-.mostvisited-item__content {
-  padding: 10px; }
 
 /*
 

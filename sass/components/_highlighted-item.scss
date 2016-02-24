@@ -1,12 +1,12 @@
 /*
-Most Visited item
+Highlighted item
 
-Markup: html/mostvisited-item.html
+Markup: html/highlighted-item.html
 
-Styleguide mostvisited-item
+Styleguide highlighted-item
 */
 
-.mostvisited-item {
+.highlighted-item {
   background-color: $grey-lighter;
   padding-bottom: 1em;
   h3 {
@@ -21,12 +21,12 @@ Styleguide mostvisited-item
   }
 }
 
-.mostvisited-item__image {
+.highlighted-item__image {
   img {
     width: 100%;
   }
 }
 
-.mostvisited-item__content {
+.highlighted-item__content {
   padding: 10px;
 }
