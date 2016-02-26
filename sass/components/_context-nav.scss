@@ -55,6 +55,15 @@ Styleguide contextnav
 
 .context-nav__item {
   display: inline-block;
+  a{
+    &:link{
+      text-decoration: none;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
   &:after {
     content: " |";
     color: $grey;

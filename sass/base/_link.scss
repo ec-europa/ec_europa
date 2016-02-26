@@ -11,6 +11,7 @@ Styleguide text.link
 }
 
 a {
+  text-decoration: underline;
   &:hover,
   &:active,
   &:focus {
@@ -39,10 +40,6 @@ a {
       content: none !important;
     }
   }
-}
-
-p a {
-  text-decoration: underline;
 }
 
 .is-external {

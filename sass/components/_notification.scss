@@ -17,6 +17,9 @@ Styleguide notification
 
   a {
     color: #000;
+    &:link{
+      //text-decoration: none;
+    }
   }
 }
 
@@ -35,13 +38,23 @@ Styleguide notification
     margin-bottom: 6px;
     margin-right: 8px;
     width: 100%;
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
   }
 
   .notification__btn {
     font-weight: bold;
     float: left;
     margin-bottom: 6px;
-
+    &:link{
+      text-decoration: none;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
      &:after {
        font-size: 12px;
        @extend .icon--after;
@@ -66,7 +79,7 @@ Styleguide notification
 
 @include breakpoint(screen-sm-min) {
   .notification__content {
-    .notification__text { 
+    .notification__text {
       width: 75%;
     }
 
