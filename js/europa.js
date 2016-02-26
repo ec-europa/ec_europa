@@ -83,9 +83,9 @@
             $last_column = $wrapper.find('.listing .listing__item:nth-child(even)');
           }
           else if ($wrapper.hasClass('listing__wrapper--row-three')) {
-            $last_column = $wrapper.find('.listing .listing__item:nth-child(3n-2)');
+            $first_column = $wrapper.find('.listing .listing__item:nth-child(3n-2)');
             $middle_column = $wrapper.find('.listing .listing__item:nth-child(3n+2)');
-            $first_column = $wrapper.find('.listing .listing__item:nth-child(3n+3)');
+            $last_column = $wrapper.find('.listing .listing__item:nth-child(3n+3)');
           }
 
           // First column always contains more items if not equal.
