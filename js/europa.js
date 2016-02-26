@@ -72,6 +72,11 @@
               $first_column = '',
               $middle_column = '',
               $last_column = '';
+
+          if ($wrapper.find('.highlighted-item__content').length > 0) {
+            selector = '.listing__item-link .highlighted-item__content';
+          }
+
           // Two column listing blocks.
           if ($wrapper.hasClass('listing__wrapper--two-columns')) {
             $first_column = $wrapper.find('.listing:first-child .listing__item');
