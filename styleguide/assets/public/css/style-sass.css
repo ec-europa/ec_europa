@@ -7268,7 +7268,8 @@ Markup: html/feedback-message.html
 Styleguide form.feedback-message
 */
 .feedback-message {
-  border: none !important; }
+  border: none !important;
+  max-width: none; }
   .feedback-message.is-disabled {
     color: #b3b4b5; }
   .feedback-message.is-error {

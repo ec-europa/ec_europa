@@ -8,6 +8,7 @@ Styleguide form.feedback-message
 .feedback-message {
   @extend .messages;
   border: none !important;
+  max-width: none;
 
   &.is-disabled {
     color: $form-control-color-disabled;
