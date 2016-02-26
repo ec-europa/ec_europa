@@ -42,6 +42,7 @@
 //    .listing--no-padding
 //    .listing--agenda
 //    .listing--column-left
+//    .listing--meta
 
 /*
 Listing
@@ -248,6 +249,7 @@ Markup: html/listing--teaser.html
 .listing--line-left - Listing line left
 .listing--no-border - Listing with no border
 .listing--nostripe - Listing with no stripe
+.listing--meta     - Listing meta
 
 Styleguide listing.3
 */
@@ -371,6 +373,13 @@ a.listing__title {
 .listing__column-main {
   .listing__with {
     margin-top: 0px;
+  }
+}
+
+// .listing--meta
+.listing--meta {
+  .listing__title {
+    margin-bottom: 0;
   }
 }
 
