@@ -5407,7 +5407,7 @@ button.close {
 
 @media print {
   .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .btn-group, .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .form-group, ul.nav-tabs,
-  .nav-tabs, .breadcrumb, .feedback-messages, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
+  .nav-tabs, .breadcrumb, .feedback-message, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
   #skip-link, .social-media-links, .facet-tag {
     display: none !important; } }
 
@@ -6331,12 +6331,12 @@ Styleguide form.textarea
 textarea.error {
   border-color: #da2131; }
 
-.form-group .messages.error, .form-group .error.feedback-messages {
+.form-group .messages.error, .form-group .error.feedback-message {
   border: none;
   background-color: #ececec; }
-  .form-group .messages.error h3, .form-group .error.feedback-messages h3 {
+  .form-group .messages.error h3, .form-group .error.feedback-message h3 {
     font-size: inherit; }
-  .form-group .messages.error p, .form-group .error.feedback-messages p {
+  .form-group .messages.error p, .form-group .error.feedback-message p {
     font-size: 0.889em; }
 
 .container-fluid, .section__group--full-width > *, .block--full-width > *, .field--full-width > * {
@@ -7271,11 +7271,12 @@ Markup: html/feedback-message.html
 
 Styleguide form.feedback-message
 */
-.feedback-messages {
-  border: none !important; }
-  .feedback-messages.is-disabled {
+.feedback-message {
+  border: none !important;
+  max-width: none; }
+  .feedback-message.is-disabled {
     color: #b3b4b5; }
-  .feedback-messages.is-error {
+  .feedback-message.is-error {
     background: #ececec url("../images/svg/messages-error.svg") 1em 1.1em no-repeat;
     background-size: 2em; }
 
@@ -9991,7 +9992,7 @@ Markup: html/messages.html
 Styleguide messages
 
 */
-.messages, .feedback-messages {
+.messages, .feedback-message {
   border: 2px solid;
   border-color: #006fb4;
   color: #404040;
@@ -10003,47 +10004,47 @@ Styleguide messages
   overflow: hidden;
   background: url("../images/svg/messages-info.svg") no-repeat 1em 1.1em;
   background-size: 2em; }
-  .messages:last-child, .feedback-messages:last-child {
+  .messages:last-child, .feedback-message:last-child {
     margin-bottom: 0; }
-  .messages.status, .status.feedback-messages {
+  .messages.status, .status.feedback-message {
     border-color: #467a39;
     background-image: url("../images/svg/messages-success.svg"); }
-  .messages.warning, .warning.feedback-messages {
+  .messages.warning, .warning.feedback-message {
     border-color: #ffc412;
     background-image: url("../images/svg/messages-warning.svg"); }
-  .messages.error, .error.feedback-messages {
+  .messages.error, .error.feedback-message {
     border-color: #da2131;
     background-image: url("../images/svg/messages-error.svg"); }
-  .messages h3, .feedback-messages h3 {
+  .messages h3, .feedback-message h3 {
     font-size: inherit;
     font-weight: bold;
     padding-top: 0; }
-  .messages p, .feedback-messages p,
-  .messages ul, .feedback-messages ul {
+  .messages p, .feedback-message p,
+  .messages ul, .feedback-message ul {
     max-width: 100%;
     margin-bottom: 0 !important; }
-  .messages li, .feedback-messages li {
+  .messages li, .feedback-message li {
     font-size: 0.889em;
     list-style-type: none; }
 
-.messages__list, .messages ul, .feedback-messages ul {
+.messages__list, .messages ul, .feedback-message ul {
   padding-left: 0;
   margin-bottom: 0;
   max-width: auto;
   font-family: Arial, sans-serif; }
 
-.messages__list-item, .messages ul li, .feedback-messages ul li {
+.messages__list-item, .messages ul li, .feedback-message ul li {
   margin-top: 0.5em; }
-  .messages__list-item:first-child, .messages ul li:first-child, .feedback-messages ul li:first-child {
+  .messages__list-item:first-child, .messages ul li:first-child, .feedback-message ul li:first-child {
     margin-top: 0; }
 
-.no-svg .messages, .no-svg .feedback-messages {
+.no-svg .messages, .no-svg .feedback-message {
   background-image: url("../images/png/messages-info.png"); }
-  .no-svg .messages.status, .no-svg .status.feedback-messages {
+  .no-svg .messages.status, .no-svg .status.feedback-message {
     background-image: url("../images/png/messages-info.png"); }
-  .no-svg .messages.warning, .no-svg .warning.feedback-messages {
+  .no-svg .messages.warning, .no-svg .warning.feedback-message {
     background-image: url("../images/png/messages-warning.png"); }
-  .no-svg .messages.error, .no-svg .error.feedback-messages {
+  .no-svg .messages.error, .no-svg .error.feedback-message {
     background-image: url("../images/png/messages-error.png"); }
 
 /*
