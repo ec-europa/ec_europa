@@ -42,6 +42,7 @@
 //    .listing--no-padding
 //    .listing--agenda
 //    .listing--column-left
+//    .listing--meta
 
 /*
 Listing
@@ -248,6 +249,7 @@ Markup: html/listing--teaser.html
 .listing--line-left - Listing line left
 .listing--no-border - Listing with no border
 .listing--nostripe - Listing with no stripe
+.listing--meta     - Listing meta
 
 Styleguide listing.3
 */
@@ -374,6 +376,13 @@ a.listing__title {
   }
 }
 
+// .listing--meta
+.listing--meta {
+  .listing__title {
+    margin-bottom: 0;
+  }
+}
+
 // .listing__wrapper element.
 .listing__wrapper {
   margin-bottom: 1.667em;
@@ -409,21 +418,6 @@ a.listing__title {
 
 .listing__item--fullwidth {
   max-width: none;
-}
-
-@mixin _listing_external_link_mixin() {
-  &:after {
-    display: none !important;
-  }
-  .listing__title {
-    @extend .is-external;
-    padding-right: 1.2em;
-
-    &:after {
-      position: absolute;
-      line-height: 1.6;
-    }
-  }
 }
 
 // .listing__item-link element
@@ -697,7 +691,6 @@ Styleguide listing.2.4
 .listing__wrapper--row-three {
   .listing__item {
     @extend .col-md-4;
-    margin-top: 30px;
   }
 }
 

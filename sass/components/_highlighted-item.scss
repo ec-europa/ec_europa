@@ -1,0 +1,30 @@
+/*
+Highlighted item
+
+Markup: html/highlighted-item.html
+
+Styleguide highlighted-item
+*/
+
+.highlighted-item {
+  background-color: $grey-lighter;
+  padding-bottom: 1em;
+  &:hover,
+  &:active,
+  &:focus {
+    .highlighted-item__content {
+      text-decoration: underline;
+    }
+  }
+}
+
+.highlighted-item__image {
+  img {
+    width: 100%;
+  }
+}
+
+.highlighted-item__content {
+  color: $brand-primary;
+  padding: 1em;
+}

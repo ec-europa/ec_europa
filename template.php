@@ -520,7 +520,7 @@ function _europa_field_component_listing($variables, $config) {
       // In row logic we need to add extra markup.
       if ($is_row) {
         if ($item_in_row == $items_per_row || $item_in_row == 0) {
-          $output .= '<div class="row">';
+          $output .= '<div class="clearfix">';
           $item_in_row = 0;
         }
         $item_in_row++;
@@ -568,7 +568,7 @@ function europa_field($variables) {
         $settings['wrapper_modifier'] = isset($variables['nexteuropa_listing_wrapper_modifier']) ? $variables['nexteuropa_listing_wrapper_modifier'] : '';
 
         // Custom listing settings based on view mode.
-        $listing_view_modes = array('title', 'meta', 'teaser');
+        $listing_view_modes = array('title', 'meta', 'teaser', 'image_label');
         if (isset($first_node['#view_mode']) && in_array($first_node['#view_mode'], $listing_view_modes)) {
           switch ($first_node['#view_mode']) {
             case 'title':
