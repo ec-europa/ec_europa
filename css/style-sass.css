@@ -7857,16 +7857,18 @@ Styleguide highlighted-item
 */
 .highlighted-item {
   background-color: #ececec;
-  padding-bottom: 1em; }
+  padding: 0 0 2em 0; }
   .highlighted-item:hover .highlighted-item__content, .highlighted-item:active .highlighted-item__content, .highlighted-item:focus .highlighted-item__content {
     text-decoration: underline; }
 
 .highlighted-item__image img {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1em; }
 
 .highlighted-item__content {
   color: #004494;
-  padding: 1em; }
+  margin: 0;
+  padding: 0 1em; }
 
 /*
 Icon

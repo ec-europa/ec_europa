@@ -8,7 +8,6 @@ Styleguide highlighted-item
 
 .highlighted-item {
   background-color: $grey-lighter;
-  padding-bottom: 1em;
   &:hover,
   &:active,
   &:focus {
@@ -16,15 +15,19 @@ Styleguide highlighted-item
       text-decoration: underline;
     }
   }
+  padding: 0 0 2em 0;
 }
 
 .highlighted-item__image {
   img {
     width: 100%;
+    margin-bottom: 1em;
   }
 }
 
 .highlighted-item__content {
   color: $brand-primary;
-  padding: 1em;
+  margin: 0;
+  padding: 0 1em;
+
 }
