@@ -33,6 +33,9 @@ Styleguide buttons
   text-decoration: none;
   @extend .hidden-print;
 
+  &:link {
+    text-decoration: none;
+  }
   &:hover,
   &:active,
   &:focus {

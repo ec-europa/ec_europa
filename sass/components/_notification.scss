@@ -49,6 +49,12 @@ Styleguide notification
     float: left;
     margin-bottom: 6px;
 
+    &:link {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
      &:after {
        font-size: 12px;
        @extend .icon--after;

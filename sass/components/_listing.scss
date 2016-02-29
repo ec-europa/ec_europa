@@ -129,6 +129,12 @@ ul.listing--title {
     padding: 0;
     margin: 0;
     display: block;
+    &:link {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   a.listing__title,
