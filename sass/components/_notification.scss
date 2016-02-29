@@ -17,6 +17,12 @@ Styleguide notification
 
   a {
     color: #000;
+    &:link{
+      text-decoration: underline;
+    }
+    &:hover{
+      text-decoration: none;
+    }
   }
 }
 
@@ -66,7 +72,7 @@ Styleguide notification
 
 @include breakpoint(screen-sm-min) {
   .notification__content {
-    .notification__text { 
+    .notification__text {
       width: 75%;
     }
 

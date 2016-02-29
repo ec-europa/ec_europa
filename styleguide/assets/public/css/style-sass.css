@@ -5587,7 +5587,8 @@ Styleguide buttons
     .btn.btn-menu:hover, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:hover, .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       color: #fff; }
     .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
-      outline: 5px solid #ffd617; }
+      outline: 5px solid #ffd617;
+      outline-offset: -5px; }
     .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       border-color: #ffd617;
       outline-color: #ffd617; }
@@ -7297,7 +7298,7 @@ Styleguide form.feedback-message
   display: block;
   padding: 0.667em 0 0.556em 2.500em;
   font-size: 0.889em; }
-  .feedback-form__trigger:hover, .feedback-form__trigger:active, .feedback-form__trigger:focus {
+  .feedback-form__trigger:hover, .feedback-form__trigger:active {
     text-decoration: underline; }
 
 .feedback-form__content {
@@ -10057,6 +10058,10 @@ Styleguide notification
   font-size: 14px; }
   .notification a {
     color: #000; }
+    .notification a:link {
+      text-decoration: underline; }
+    .notification a:hover {
+      text-decoration: none; }
 
 .notification__label {
   display: inline-block;

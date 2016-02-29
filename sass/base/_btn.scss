@@ -125,6 +125,7 @@ Styleguide buttons
     &:active,
     &:focus {
       outline: 5px solid $yellow-light;
+      outline-offset: -5px;
     }
 
     &:focus {

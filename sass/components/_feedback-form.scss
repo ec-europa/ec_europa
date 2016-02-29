@@ -23,8 +23,7 @@
   font-size: $font-size-little;
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active{
     text-decoration: underline;
   }
 }
