@@ -17,10 +17,11 @@ Styleguide notification
 
   a {
     color: #000;
-    &:link{
+
+    &:link {
       text-decoration: underline;
     }
-    &:hover{
+    &:hover {
       text-decoration: none;
     }
   }
