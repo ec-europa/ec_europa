@@ -42,6 +42,11 @@ Styleguide notification
     margin-bottom: 6px;
     margin-right: 8px;
     width: 100%;
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
   }
 
   .notification__btn {

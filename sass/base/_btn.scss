@@ -130,6 +130,7 @@ Styleguide buttons
     &:focus {
       outline: 5px solid $yellow-light;
       outline-offset: -5px;
+      text-decoration: none;
     }
 
     &:focus {

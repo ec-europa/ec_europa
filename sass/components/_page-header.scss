@@ -58,6 +58,7 @@ Styleguide page-header.informational-home
 
   a {
     color: #fff;
+    text-decoration: none;
     &:hover:not(.breadcrumb__link, .btn) {
       color: $yellow-light;
     }
