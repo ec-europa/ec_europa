@@ -41,6 +41,11 @@ a {
   }
 }
 
+// Helper for DS in case the link is wrapped.
+.smaller a {
+  font-size: 0.8em;
+}
+
 p a {
   text-decoration: underline;
 }

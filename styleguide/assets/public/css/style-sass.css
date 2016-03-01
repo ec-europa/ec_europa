@@ -5996,6 +5996,9 @@ a.smaller {
   a:after {
     content: none !important; } }
 
+.smaller a {
+  font-size: 0.8em; }
+
 p a {
   text-decoration: underline; }
 
@@ -9305,6 +9308,7 @@ Markup: html/listing--teaser.html
 .listing--cta - Listing CTA
 .listing--no-padding - Listing no padding
 .listing--short-spaced - Listing short spaced
+.listing--dense - Listing no padding on listing item
 .listing--line-left - Listing line left
 .listing--no-border - Listing with no border
 .listing--nostripe - Listing with no stripe
@@ -9364,6 +9368,9 @@ Styleguide listing.3
 
 .listing--short-spaced .listing__item {
   padding: 0.5em 0 !important; }
+
+.listing--dense .listing__item {
+  padding: 0 !important; }
 
 a.listing__title {
   color: #004494; }
@@ -10586,6 +10593,16 @@ Styleguide: siteheader.searchform
   padding-bottom: 1.5em; }
   .site-menu__section:last-child {
     border: none; }
+
+.site-menu__section .listing--dense .listing__item {
+  border-color: #000000;
+  font-size: 0.889em; }
+  .site-menu__section .listing--dense .listing__item:first-child {
+    border-top: none; }
+
+.site-menu__section .smaller a {
+  text-decoration: underline;
+  color: #000000; }
 
 .site-menu__toggle .btn, .site-menu__toggle .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .site-menu__toggle .inpage-nav__toggle {
   width: 100%;

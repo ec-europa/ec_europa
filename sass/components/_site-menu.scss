@@ -43,6 +43,23 @@
   }
 }
 
+// Special appearance of other components inside the menu.
+.site-menu__section {
+  .listing--dense {
+    .listing__item {
+      border-color: #000000;
+      font-size: $font-size-little;
+      &:first-child {
+        border-top: none;
+      }
+    }
+  }
+  .smaller a {
+    text-decoration: underline;
+    color: #000000;
+  }
+}
+
 .site-menu__toggle {
   .btn {
     width: 100%;
