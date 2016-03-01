@@ -10495,10 +10495,6 @@ Styleguide: siteswitcher
       text-decoration: none; }
     .site-switcher__option > a:hover {
       text-decoration: underline; }
-    .site-switcher__option > a:link {
-      text-decoration: none; }
-    .site-switcher__option > a:hover {
-      text-decoration: underline; }
     .site-switcher__option > a:after, .site-switcher__option > a.is-external:after, .site-political .site-switcher__option > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information .site-switcher__option > a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .site-switcher__option > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .site-switcher__option > a.listing__title:after {
       content: none !important; }
   .site-switcher__option.is-selected {
