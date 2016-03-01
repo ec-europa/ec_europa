@@ -77,19 +77,31 @@ Styleguide listing.1
 
 // .listing--frontpage modifier.
 .listing--frontpage {
+  // The use of !important here would be happily avoided, if possibile... 
+  padding-top: 1.667em !important;
+
   p {
     // 1.375em = 22 px on a 16px base (p)
     line-height: 1.375em;
   }
+
   .listing__title {
     margin-top: 0!important;
   }
+
   .listing__item {
     padding-top: 1.15em;
     padding-bottom: 1.389em;
-    margin-top: 0!important;
+    margin-top: 0 !important;
   }
 }
+
+@include breakpoint(screen-md-min) {
+  .listing--frontpage {
+    padding-top: 3em !important;
+  }
+}
+
 /*
 Listing title
 

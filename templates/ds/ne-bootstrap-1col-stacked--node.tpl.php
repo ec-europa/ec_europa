@@ -50,7 +50,7 @@
         </section>
       </div>
     <?php endif; ?>
-      <div class="row">
+      <div class="row <?php if($is_front) { echo 'ceiling'; } ?>">
         <a id="main-content" tabindex="-1"></a>
         <section class="section col-md-12 <?php print $central_classes; ?>">
           <?php print $central; ?>
