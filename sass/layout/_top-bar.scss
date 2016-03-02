@@ -1,5 +1,5 @@
 .top-bar {
-  padding: 15px 0 10px 0;
+  padding: 15px 0 0 0;
   overflow: hidden;
   width: 100%;
 }
@@ -15,8 +15,12 @@
   }
 
   .site-menu__toggle {
-    width: 25%;
-    padding-left: 15px;
+    padding: 0;
+    width: 100%;
+    .btn {
+      text-align: right;
+      margin-bottom: 0;
+    }
   }
 }
 
