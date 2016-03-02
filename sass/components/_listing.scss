@@ -130,6 +130,12 @@ ul.listing--title {
     padding: 0;
     margin: 0;
     display: block;
+    &:link {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   a.listing__title,
@@ -361,6 +367,7 @@ Styleguide listing.3
 
 a.listing__title {
   color: $brand-primary;
+  text-decoration: none;
 }
 
 // .listing__date element.
@@ -425,6 +432,7 @@ a.listing__title {
   display: block;
   overflow: hidden;
   color: $grey-base;
+  text-decoration: none;
 
   &:hover,
   &:active,

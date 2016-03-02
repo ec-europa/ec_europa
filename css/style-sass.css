@@ -5407,7 +5407,7 @@ button.close {
 
 @media print {
   .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .btn-group, .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .form-group, ul.nav-tabs,
-  .nav-tabs, .breadcrumb, .feedback-messages, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
+  .nav-tabs, .breadcrumb, .feedback-message, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
   #skip-link, .social-media-links, .facet-tag {
     display: none !important; } }
 
@@ -5532,6 +5532,8 @@ Styleguide buttons
   min-height: 2.75em;
   font-size: 0.889em;
   text-decoration: none; }
+  .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
+    text-decoration: none; }
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     text-decoration: underline;
     -webkit-box-shadow: none;
@@ -5587,7 +5589,9 @@ Styleguide buttons
     .btn.btn-menu:hover, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:hover, .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       color: #fff; }
     .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
-      outline: 5px solid #ffd617; }
+      outline: 5px solid #ffd617;
+      outline-offset: -5px;
+      text-decoration: none; }
     .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       border-color: #ffd617;
       outline-color: #ffd617; }
@@ -5985,22 +5989,19 @@ Markup: html/link.html
 
 Styleguide text.link
 */
-a:hover, a:active, a:focus {
-  color: #404040;
+a:link {
   text-decoration: underline; }
 
-a.smaller {
+a:hover, a:active, a:focus {
+  color: #404040; }
+
+a.smaller,
+.smaller a {
   font-size: 0.8em; }
 
 @media print {
   a:after {
     content: none !important; } }
-
-.smaller a {
-  font-size: 0.8em; }
-
-p a {
-  text-decoration: underline; }
 
 .is-external, .site-political a[href^="http"]:not(.is-internal):not([href*="europa.eu"]), .site-information a[href^="http"]:not(.is-internal), .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title,
 .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title,
@@ -6334,12 +6335,12 @@ Styleguide form.textarea
 textarea.error {
   border-color: #da2131; }
 
-.form-group .messages.error, .form-group .error.feedback-messages {
+.form-group .messages.error, .form-group .error.feedback-message {
   border: none;
   background-color: #ececec; }
-  .form-group .messages.error h3, .form-group .error.feedback-messages h3 {
+  .form-group .messages.error h3, .form-group .error.feedback-message h3 {
     font-size: inherit; }
-  .form-group .messages.error p, .form-group .error.feedback-messages p {
+  .form-group .messages.error p, .form-group .error.feedback-message p {
     font-size: 0.889em; }
 
 .container-fluid, .section__group--full-width > *, .block--full-width > *, .field--full-width > * {
@@ -7039,6 +7040,10 @@ Styleguide contextnav
 
 .context-nav__item {
   display: inline-block; }
+  .context-nav__item a:link {
+    text-decoration: none; }
+  .context-nav__item a:hover {
+    text-decoration: underline; }
   .context-nav__item:after {
     content: " |";
     color: #b3b4b5;
@@ -7046,6 +7051,10 @@ Styleguide contextnav
   .context-nav__item:last-child:after {
     display: none;
     margin-right: 0; }
+  .context-nav__item a:link {
+    text-decoration: none; }
+  .context-nav__item a:hover {
+    text-decoration: underline; }
 
 @media (min-width: 992px) {
   .context-nav__items {
@@ -7287,12 +7296,13 @@ Markup: html/feedback-message.html
 
 Styleguide form.feedback-message
 */
-.feedback-messages {
-  border: none !important; }
-  .feedback-messages.is-disabled {
+.feedback-message {
+  border: none !important;
+  max-width: none; }
+  .feedback-message.is-disabled {
     color: #b3b4b5; }
-  .feedback-messages.is-error {
-    background: #ececec url("../images/svg/messages-error.svg") 1em 1.1em no-repeat;
+  .feedback-message.is-error {
+    background: #f2f2f2 url("../images/svg/messages-error.svg") 1em 1.1em no-repeat;
     background-size: 2em; }
 
 .no-svg .feedback-message.is-error {
@@ -7313,7 +7323,9 @@ Styleguide form.feedback-message
   display: block;
   padding: 0.667em 0 0.556em 2.500em;
   font-size: 0.889em; }
-  .feedback-form__trigger:hover, .feedback-form__trigger:active, .feedback-form__trigger:focus {
+  .feedback-form__trigger:link, .feedback-form__trigger:active {
+    text-decoration: none; }
+  .feedback-form__trigger:hover {
     text-decoration: underline; }
 
 .feedback-form__content {
@@ -7352,8 +7364,6 @@ Styleguide form.feedback-message
         background: url("../images/svg/checkbox-unchecked--grey.svg") no-repeat;
         color: #404040;
         font-weight: 400; }
-        #feedback-form__accordion .accordion-group .accordion-toggle.collapsed:focus {
-          text-decoration: underline; }
       #feedback-form__accordion .accordion-group .accordion-toggle::-moz-focus-inner, #feedback-form__accordion .accordion-group .accordion-toggle:focus {
         border: 0;
         outline: none; }
@@ -8820,7 +8830,12 @@ Styleguide inpagenav
   color: #000;
   font-size: 0.889em;
   font-weight: bold;
-  border-left: 3px solid transparent; }
+  border-left: 3px solid transparent;
+  text-decoration: none; }
+  .inpage-nav .inpage_nav__list-item:link {
+    text-decoration: none; }
+  .inpage-nav .inpage_nav__list-item:hover {
+    text-decoration: underline; }
   .inpage-nav .inpage_nav__list-item:hover {
     background: none;
     text-decoration: underline; }
@@ -9040,6 +9055,10 @@ Styleguide: siteheader.langselect
     font-weight: bold;
     padding: 7.5px 15px;
     border: 2px solid transparent; }
+    .lang-select-site .lang-select-site__link:link {
+      text-decoration: none; }
+    .lang-select-site .lang-select-site__link:hover {
+      text-decoration: underline; }
     .lang-select-site .lang-select-site__link:focus {
       border-color: #ffd617; }
   .lang-select-site .lang-select-site__label {
@@ -9246,6 +9265,16 @@ ul.listing--title {
     padding: 0;
     margin: 0;
     display: block; }
+    .listing--title .listing__item-link:link,
+    .listing--title .listing__title:link,
+    ul.listing--title .listing__item-link:link,
+    ul.listing--title .listing__title:link {
+      text-decoration: none; }
+    .listing--title .listing__item-link:hover,
+    .listing--title .listing__title:hover,
+    ul.listing--title .listing__item-link:hover,
+    ul.listing--title .listing__title:hover {
+      text-decoration: underline; }
   .listing--title a.listing__title,
   .listing--title a .listing__title,
   ul.listing--title a.listing__title,
@@ -9382,7 +9411,8 @@ Styleguide listing.3
   padding: 0.5em 0 !important; }
 
 a.listing__title {
-  color: #004494; }
+  color: #004494;
+  text-decoration: none; }
 
 .listing__date {
   float: left; }
@@ -9420,7 +9450,8 @@ a.listing__title {
 .listing__item-link {
   display: block;
   overflow: hidden;
-  color: #404040; }
+  color: #404040;
+  text-decoration: none; }
   .listing__item-link:hover, .listing__item-link:active, .listing__item-link:focus {
     text-decoration: none; }
   .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
@@ -10007,7 +10038,7 @@ Markup: html/messages.html
 Styleguide messages
 
 */
-.messages, .feedback-messages {
+.messages, .feedback-message {
   border: 2px solid;
   border-color: #006fb4;
   color: #404040;
@@ -10019,47 +10050,47 @@ Styleguide messages
   overflow: hidden;
   background: url("../images/svg/messages-info.svg") no-repeat 1em 1.1em;
   background-size: 2em; }
-  .messages:last-child, .feedback-messages:last-child {
+  .messages:last-child, .feedback-message:last-child {
     margin-bottom: 0; }
-  .messages.status, .status.feedback-messages {
+  .messages.status, .status.feedback-message {
     border-color: #467a39;
     background-image: url("../images/svg/messages-success.svg"); }
-  .messages.warning, .warning.feedback-messages {
+  .messages.warning, .warning.feedback-message {
     border-color: #ffc412;
     background-image: url("../images/svg/messages-warning.svg"); }
-  .messages.error, .error.feedback-messages {
+  .messages.error, .error.feedback-message {
     border-color: #da2131;
     background-image: url("../images/svg/messages-error.svg"); }
-  .messages h3, .feedback-messages h3 {
+  .messages h3, .feedback-message h3 {
     font-size: inherit;
     font-weight: bold;
     padding-top: 0; }
-  .messages p, .feedback-messages p,
-  .messages ul, .feedback-messages ul {
+  .messages p, .feedback-message p,
+  .messages ul, .feedback-message ul {
     max-width: 100%;
     margin-bottom: 0 !important; }
-  .messages li, .feedback-messages li {
+  .messages li, .feedback-message li {
     font-size: 0.889em;
     list-style-type: none; }
 
-.messages__list, .messages ul, .feedback-messages ul {
+.messages__list, .messages ul, .feedback-message ul {
   padding-left: 0;
   margin-bottom: 0;
   max-width: auto;
   font-family: Arial, sans-serif; }
 
-.messages__list-item, .messages ul li, .feedback-messages ul li {
+.messages__list-item, .messages ul li, .feedback-message ul li {
   margin-top: 0.5em; }
-  .messages__list-item:first-child, .messages ul li:first-child, .feedback-messages ul li:first-child {
+  .messages__list-item:first-child, .messages ul li:first-child, .feedback-message ul li:first-child {
     margin-top: 0; }
 
-.no-svg .messages, .no-svg .feedback-messages {
+.no-svg .messages, .no-svg .feedback-message {
   background-image: url("../images/png/messages-info.png"); }
-  .no-svg .messages.status, .no-svg .status.feedback-messages {
+  .no-svg .messages.status, .no-svg .status.feedback-message {
     background-image: url("../images/png/messages-info.png"); }
-  .no-svg .messages.warning, .no-svg .warning.feedback-messages {
+  .no-svg .messages.warning, .no-svg .warning.feedback-message {
     background-image: url("../images/png/messages-warning.png"); }
-  .no-svg .messages.error, .no-svg .error.feedback-messages {
+  .no-svg .messages.error, .no-svg .error.feedback-message {
     background-image: url("../images/png/messages-error.png"); }
 
 /*
@@ -10079,6 +10110,10 @@ Styleguide notification
   font-size: 14px; }
   .notification a {
     color: #000; }
+    .notification a:link {
+      text-decoration: underline; }
+    .notification a:hover {
+      text-decoration: none; }
 
 .notification__label {
   display: inline-block;
@@ -10093,10 +10128,16 @@ Styleguide notification
     margin-bottom: 6px;
     margin-right: 8px;
     width: 100%; }
+    .notification__content .notification__text a:hover {
+      text-decoration: none; }
   .notification__content .notification__btn {
     font-weight: bold;
     float: left;
     margin-bottom: 6px; }
+    .notification__content .notification__btn:link {
+      text-decoration: none; }
+    .notification__content .notification__btn:hover {
+      text-decoration: underline; }
     .notification__content .notification__btn:after {
       font-size: 12px; }
   .notification__content p {
@@ -10181,7 +10222,8 @@ Styleguide page-header.informational-home
     color: #fff;
     max-width: 40em; }
   .page-header a {
-    color: #fff; }
+    color: #fff;
+    text-decoration: none; }
     .page-header a:hover:not(.breadcrumb__link, .btn) {
       color: #ffd617; }
     .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
@@ -10472,6 +10514,10 @@ Styleguide: siteswitcher
     width: 100%;
     padding: 0.5em 1.667em;
     line-height: 1.3; }
+    .site-switcher__option > a:link {
+      text-decoration: none; }
+    .site-switcher__option > a:hover {
+      text-decoration: underline; }
     .site-switcher__option > a:after, .site-switcher__option > a.is-external:after, .site-political .site-switcher__option > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information .site-switcher__option > a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .site-switcher__option > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .site-switcher__option > a.listing__title:after {
       content: none !important; }
   .site-switcher__option.is-selected {
