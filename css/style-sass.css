@@ -10448,7 +10448,7 @@ Styleguide: siteheader
 .site-header {
   overflow: hidden;
   color: #004494;
-  padding: 14px 0 0 0;
+  padding: 14px 0 0;
   position: relative; }
   @media (min-width: 992px) {
     .site-header .site-header__logo {
@@ -10683,7 +10683,18 @@ Styleguide: siteheader.searchform
     margin-bottom: auto; }
   .site-menu__section {
     padding-top: 2em;
-    padding-bottom: 3em; } }
+    padding-bottom: 3em; }
+    .site-menu__section .smaller {
+      bottom: 10%;
+      left: 68%;
+      margin-left: 0.3em;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s, opacity 0.5s linear; }
+      .collapse.in .site-menu__section .smaller {
+        visibility: visible;
+        opacity: 1; } }
 
 .skip-link,
 #skip-link {

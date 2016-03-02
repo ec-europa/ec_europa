@@ -18,12 +18,16 @@
   .listing__item-link:hover,
   .listing__item-link:active,
   .listing__item-link:focus {
-    border-color: #82b0a5;;
+    border-color: #82b0a5;
   }
-  .smaller a {
-    text-decoration: underline;
-    color: #000000;
+
+  .smaller {
+    a {
+      text-decoration: underline;
+      color: #000000;
+    }
   }
+
   p {
     color: black;
     font-size: $font-size-little;
@@ -85,5 +89,20 @@
   .site-menu__section {
     padding-top: 2em;
     padding-bottom: 3em;
+
+    .smaller {
+      bottom: 10%;
+      left: 68%;
+      margin-left: 0.3em;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: visibility 0s, opacity 0.5s linear;
+
+      .collapse.in & {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 }
