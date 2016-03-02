@@ -28,6 +28,19 @@
     color: black;
     font-size: $font-size-little;
   }
+
+  .field--field-site-menu-links {
+    .listing__item {
+      .listing__title {
+        @extend .listing__title--arrow;
+        &:after {
+          margin-left: 0.5em;
+          margin-top: 5px;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
 }
 
 .front {
@@ -59,5 +72,18 @@
   height: 0;
   &.collapse {
     height: inherit;
+  }
+}
+
+@include breakpoint(screen-md-min) {
+  .site-menu {
+    .listing__wrapper--two-columns .listing,
+    .listing__wrapper {
+      margin-bottom: auto;
+    }
+  }
+  .site-menu__section {
+    padding-top: 2em;
+    padding-bottom: 3em;
   }
 }

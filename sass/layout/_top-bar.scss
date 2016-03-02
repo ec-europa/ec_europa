@@ -24,11 +24,23 @@
   }
 }
 
+@include breakpoint(screen-sm-min) {
+  .site-menu__toggle {
+    float: right;
+    padding-left: 15px;
+    width: 25%;
+    .btn {
+      text-align: center;
+    }
+  }
+}
+
 @include breakpoint(screen-md-min) {
   .top-bar {
     width: auto;
     float: right;
     position: relative;
+    padding-bottom: 10px;
     top: 6px;
 
     & > .region {
@@ -42,8 +54,10 @@
     }
 
     .site-menu__toggle {
-      position: static;
       width: auto;
+      .btn {
+        margin-bottom: auto;
+      }
     }
   }
 }

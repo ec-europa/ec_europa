@@ -16,6 +16,9 @@ Styleguide: siteheader
       position: relative;
       top: 15px;
     }
+    & {
+      padding: 14px 0;
+    }
   }
   @media print {
     -webkit-print-color-adjust: exact;
