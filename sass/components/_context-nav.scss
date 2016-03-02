@@ -56,10 +56,10 @@ Styleguide contextnav
 .context-nav__item {
   display: inline-block;
   a {
-    &:link{
+    &:link {
       text-decoration: none;
     }
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
