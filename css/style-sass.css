@@ -7288,7 +7288,7 @@ Styleguide form.feedback-message
   .feedback-message.is-disabled {
     color: #b3b4b5; }
   .feedback-message.is-error {
-    background: #ececec url("../images/svg/messages-error.svg") 1em 1.1em no-repeat;
+    background: #f2f2f2 url("../images/svg/messages-error.svg") 1em 1.1em no-repeat;
     background-size: 2em; }
 
 .no-svg .feedback-message.is-error {
