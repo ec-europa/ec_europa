@@ -9,14 +9,20 @@ Styleguide: siteheader
 .site-header {
   overflow: hidden;
   color: $brand-primary;
-  padding: 14px 0;
+  padding: 14px 0 0;
   position: relative;
+
   @include breakpoint(screen-md-min) {
     .site-header__logo {
       position: relative;
       top: 15px;
     }
+    
+    & {
+      padding: 14px 0;
+    }
   }
+
   @media print {
     -webkit-print-color-adjust: exact;
   }
