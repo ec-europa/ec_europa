@@ -22,6 +22,10 @@
   padding: 0.667em 0 0.556em 2.500em;
   font-size: $font-size-little;
 
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
   &:hover {
     text-decoration: underline;
   }

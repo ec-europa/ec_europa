@@ -48,6 +48,12 @@ Styleguide inpagenav
     border-left: 3px solid transparent;
     text-decoration: none;
 
+    &:link {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
     &:hover {
       background: none;
       text-decoration: underline;

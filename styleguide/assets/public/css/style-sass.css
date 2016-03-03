@@ -5532,6 +5532,8 @@ Styleguide buttons
   min-height: 2.75em;
   font-size: 0.889em;
   text-decoration: none; }
+  .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
+    text-decoration: none; }
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     text-decoration: underline;
     -webkit-box-shadow: none;
@@ -5588,6 +5590,7 @@ Styleguide buttons
       color: #fff; }
     .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       outline: 5px solid #ffd617;
+      outline-offset: -5px;
       text-decoration: none; }
     .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       border-color: #ffd617;
@@ -5986,16 +5989,18 @@ Markup: html/link.html
 
 Styleguide text.link
 */
-a {
+a:link {
   text-decoration: underline; }
-  a:hover, a:active, a:focus {
-    color: #404040;
-    text-decoration: underline; }
-  a.smaller {
-    font-size: 0.8em; }
-  @media print {
-    a:after {
-      content: none !important; } }
+
+a:hover, a:active, a:focus {
+  color: #404040; }
+
+a.smaller {
+  font-size: 0.8em; }
+
+@media print {
+  a:after {
+    content: none !important; } }
 
 .is-external, .site-political a[href^="http"]:not(.is-internal):not([href*="europa.eu"]), .site-information a[href^="http"]:not(.is-internal), .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title,
 .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title,
@@ -7032,6 +7037,10 @@ Styleguide contextnav
   .context-nav__item:last-child:after {
     display: none;
     margin-right: 0; }
+  .context-nav__item a:link {
+    text-decoration: none; }
+  .context-nav__item a:hover {
+    text-decoration: underline; }
 
 @media (min-width: 992px) {
   .context-nav__items {
@@ -7279,7 +7288,7 @@ Styleguide form.feedback-message
   .feedback-message.is-disabled {
     color: #b3b4b5; }
   .feedback-message.is-error {
-    background: #ececec url("../images/svg/messages-error.svg") 1em 1.1em no-repeat;
+    background: #f2f2f2 url("../images/svg/messages-error.svg") 1em 1.1em no-repeat;
     background-size: 2em; }
 
 .no-svg .feedback-message.is-error {
@@ -7300,6 +7309,8 @@ Styleguide form.feedback-message
   display: block;
   padding: 0.667em 0 0.556em 2.500em;
   font-size: 0.889em; }
+  .feedback-form__trigger:link, .feedback-form__trigger:active {
+    text-decoration: none; }
   .feedback-form__trigger:hover {
     text-decoration: underline; }
 
@@ -8807,6 +8818,10 @@ Styleguide inpagenav
   font-weight: bold;
   border-left: 3px solid transparent;
   text-decoration: none; }
+  .inpage-nav .inpage_nav__list-item:link {
+    text-decoration: none; }
+  .inpage-nav .inpage_nav__list-item:hover {
+    text-decoration: underline; }
   .inpage-nav .inpage_nav__list-item:hover {
     background: none;
     text-decoration: underline; }
@@ -9030,7 +9045,7 @@ Styleguide: siteheader.langselect
       text-decoration: none; }
     .lang-select-site .lang-select-site__link:hover {
       text-decoration: underline; }
-    .lang-select-site .lang-select-site__link .lang-select-site .lang-select-site__link:focus {
+    .lang-select-site .lang-select-site__link:focus {
       border-color: #ffd617; }
   .lang-select-site .lang-select-site__label {
     margin-right: 0.556em; }
@@ -9236,6 +9251,16 @@ ul.listing--title {
     padding: 0;
     margin: 0;
     display: block; }
+    .listing--title .listing__item-link:link,
+    .listing--title .listing__title:link,
+    ul.listing--title .listing__item-link:link,
+    ul.listing--title .listing__title:link {
+      text-decoration: none; }
+    .listing--title .listing__item-link:hover,
+    .listing--title .listing__title:hover,
+    ul.listing--title .listing__item-link:hover,
+    ul.listing--title .listing__title:hover {
+      text-decoration: underline; }
   .listing--title a.listing__title,
   .listing--title a .listing__title,
   ul.listing--title a.listing__title,
@@ -10071,6 +10096,10 @@ Styleguide notification
   font-size: 14px; }
   .notification a {
     color: #000; }
+    .notification a:link {
+      text-decoration: underline; }
+    .notification a:hover {
+      text-decoration: none; }
 
 .notification__label {
   display: inline-block;

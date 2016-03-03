@@ -17,8 +17,12 @@ Styleguide notification
 
   a {
     color: #000;
-    &:link{
-      //text-decoration: none;
+
+    &:link {
+      text-decoration: underline;
+    }
+    &:hover {
+      text-decoration: none;
     }
   }
 }
@@ -38,8 +42,8 @@ Styleguide notification
     margin-bottom: 6px;
     margin-right: 8px;
     width: 100%;
-    a{
-      &:hover{
+    a {
+      &:hover {
         text-decoration: none;
       }
     }
@@ -49,10 +53,11 @@ Styleguide notification
     font-weight: bold;
     float: left;
     margin-bottom: 6px;
-    &:link{
+
+    &:link {
       text-decoration: none;
     }
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
      &:after {

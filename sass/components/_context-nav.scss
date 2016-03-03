@@ -55,11 +55,11 @@ Styleguide contextnav
 
 .context-nav__item {
   display: inline-block;
-  a{
-    &:link{
+  a {
+    &:link {
       text-decoration: none;
     }
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -74,6 +74,15 @@ Styleguide contextnav
     &:after {
       display: none;
       margin-right: 0;
+    }
+  }
+
+  a {
+    &:link {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

@@ -11,12 +11,13 @@ Styleguide text.link
 }
 
 a {
-  text-decoration: underline;
+  &:link {
+    text-decoration: underline;
+  }
   &:hover,
   &:active,
   &:focus {
     color: $grey-base;
-    text-decoration: underline;
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
