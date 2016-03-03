@@ -10693,7 +10693,8 @@ Styleguide: siteheader.searchform
     margin-bottom: auto; }
   .site-menu__section {
     padding-top: 2em;
-    padding-bottom: 3em; }
+    padding-bottom: 3em;
+    position: relative; }
     .site-menu__section .smaller {
       bottom: 10%;
       left: 68%;
