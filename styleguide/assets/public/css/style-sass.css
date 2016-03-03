@@ -9315,6 +9315,16 @@ Styleguide listing.5
   font-size: 0.833em;
   margin-top: 1em; }
 
+.listing--agenda div.addressfield-container-inline {
+  float: left; }
+  .listing--agenda div.addressfield-container-inline:after {
+    content: ", ";
+    display: inline;
+    height: auto;
+    clear: none;
+    visibility: visible;
+    white-space: pre; }
+
 .listing--person .listing__item-link {
   padding-bottom: 1em;
   padding-top: 1em; }
