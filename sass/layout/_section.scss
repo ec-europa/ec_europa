@@ -4,17 +4,28 @@ $section-spacing: 1.667em;
   .section--row-two,
   .section--row-three {
     @extend .row;
-    padding-bottom: $section-spacing;
   }
-  padding-bottom: $section-spacing;
+
+  margin-bottom: $section-spacing;
+  margin-top: $section-spacing;
 
   & ~ .section {
     padding-top: $section-spacing;
   }
+
+  .section__group:first-child,
+  .section:first-child {
+    margin-top: 0;
+  }
+
+  .section__group:last-child,
+  .section:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .section__group {
-  padding: 0 0 $section-spacing;
+  margin: $section-spacing 0 $section-spacing;
 
   &:first-child {
     padding-top: 0;
@@ -84,7 +95,7 @@ $section-spacing: 1.667em;
 }
 
 .section--content-top {
-  padding-bottom: $section-spacing * 2;
+  padding-bottom: 0;
 }
 
 .section--row-two {

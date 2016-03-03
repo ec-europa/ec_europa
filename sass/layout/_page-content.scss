@@ -1,13 +1,16 @@
 .ceiling {
   border-top: $yellow-light solid 10px;
-  //padding-top: 60px;
 }
 
 .main-content {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 // Drupal connect.
 .node-type-info-homepage .page-content {
   @extend .page-content--border;
+}
+
+.row > .row {
+  margin: 0;
 }
