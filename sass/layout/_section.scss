@@ -12,7 +12,7 @@ $section-spacing: 1.667em;
 
 .section {
   margin-bottom: $section-spacing;
-  margin-top: $section-spacing; 
+  margin-top: $section-spacing;
 
   .section__group:first-child,
   .section:first-child {
@@ -30,26 +30,10 @@ $section-spacing: 1.667em;
   }
 }
 
-.section__group { 
-  margin: $section-spacing 0 $section-spacing;
-
-  &:first-child {
-    padding-top: 0;
-  }
-
-  &:last-child {
-    padding-bottom: 0;
-  }
-
-  & > * {
-    &:first-child {
-      padding-top: 0;
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+.section__group,
+.field-group-section_group { 
+  margin-top: $section-spacing;
+  margin-bottom: $section-spacing;
 
   & + .section__group--highlight-grey {
     margin-top: 2em;
@@ -98,10 +82,6 @@ $section-spacing: 1.667em;
 .section__group--bottom-header {
   margin-top: -60px !important;
   padding: $section-spacing 0 0 !important;
-}
-
-.section--content-top {
-  padding-bottom: 0;
 }
 
 .section--row-two {

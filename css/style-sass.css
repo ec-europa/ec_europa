@@ -6509,18 +6509,13 @@ Styleguide sections
   .section .section:last-child {
     margin-bottom: 0; }
 
-.section__group, .nav-tabs--with-content + .tab-content > * {
-  margin: 1.667em 0 1.667em; }
-  .section__group:first-child, .nav-tabs--with-content + .tab-content > :first-child {
-    padding-top: 0; }
-  .section__group:last-child, .nav-tabs--with-content + .tab-content > :last-child {
-    padding-bottom: 0; }
-  .section__group > *:first-child, .nav-tabs--with-content + .tab-content > * > *:first-child {
-    padding-top: 0;
-    margin-top: 0; }
-  .section__group > *:last-child, .nav-tabs--with-content + .tab-content > * > *:last-child {
-    margin-bottom: 0; }
-  .section__group + .section__group--highlight-grey, .nav-tabs--with-content + .tab-content > * + .section__group--highlight-grey, .section__group + .section__group--highlight-grey-lightest, .nav-tabs--with-content + .tab-content > * + .section__group--highlight-grey-lightest {
+.section__group, .nav-tabs--with-content + .tab-content > *,
+.field-group-section_group {
+  margin-top: 1.667em;
+  margin-bottom: 1.667em; }
+  .section__group + .section__group--highlight-grey, .nav-tabs--with-content + .tab-content > * + .section__group--highlight-grey, .section__group + .section__group--highlight-grey-lightest, .nav-tabs--with-content + .tab-content > * + .section__group--highlight-grey-lightest,
+  .field-group-section_group + .section__group--highlight-grey,
+  .field-group-section_group + .section__group--highlight-grey-lightest {
     margin-top: 2em; }
 
 .section__group--collapsible {
@@ -6553,9 +6548,6 @@ Styleguide sections
 .section__group--bottom-header {
   margin-top: -60px !important;
   padding: 1.667em 0 0 !important; }
-
-.section--content-top {
-  padding-bottom: 0; }
 
 .section--row-two .section__item {
   margin-top: 15px; }
