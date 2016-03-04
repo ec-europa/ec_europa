@@ -15,16 +15,17 @@
       padding: 0;
     }
   }
-  .listing__item-link:hover,
-  .listing__item-link:active,
   .listing__item-link:focus {
-    border-color: #82b0a5;
+    border: 3px solid $grey-base;
   }
 
   .smaller {
     a {
       text-decoration: underline;
       color: #000000;
+      &:focus {
+        border: 3px solid $grey-base;
+      }
     }
   }
 
@@ -41,6 +42,12 @@
           margin-left: 0.5em;
           margin-top: 3px;
           font-size: 0.8em;
+        }
+        &:hover {
+          color: $grey-base;
+        }
+        &:focus {
+          border: 3px solid $grey-base;
         }
       }
     }
