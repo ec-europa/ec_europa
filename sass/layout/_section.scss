@@ -1,11 +1,44 @@
+// SUMMARY (Components, elements, modifiers)
+//
+// .section (component)
+//   Elements:
+//     .section__group
+//     Element modifiers:
+//       .section__group--biography-top
+//       .section__group--highlight-grey
+//       .section__group--highlight-grey-lightest
+//       .section__group--highlight-yellow 
+//       .section__group--collapsible
+//       .section__group--bottom-header
+//       .section__group--no-margin
+//       .section__group--full-width
+//     .section__item 
+//
+//   Component modifiers:
+//     .section--content-top
+//     .section--row-three
+//     .section--row-two
+//     .section--two-columns
+
 /*
 Section
 
 Section component.
 
+The section component is used to wrap block of contents.
+Its implementaiton ensures the correct vertical spacing between different groups of contents,
+it uses the margin collapse mechanism so that you don't have to worry when you place two
+sections one after the other, only one of the two margins will be applied.
+It can contain any different set of html elements and components, but it's a good practice to
+implement also its unique element {section group}, oftenly a {.row} elements which wraps blocks.
+The way it works is that the first {section group} in the section doesn't get any margin (the parent 
+is already defining that) while the last doesn't get the margin-bottom (still for the same reason).
+When there's only one {section group} element it doesn-t get any vertical margin.
+Please do not reset any of these margins.
+
 Markup: html/sections.html
 
-Styleguide sections
+Styleguide sections 
 */
 
 $section-spacing: 1.667em;
@@ -28,6 +61,11 @@ $section-spacing: 1.667em;
   .section--row-three {
     @extend .row;
   }
+}
+
+.section__group--highlight-grey,
+.section__group--highlight-yellow {
+  padding-left: 1.222em;
 }
 
 .section__group,
@@ -61,7 +99,6 @@ $section-spacing: 1.667em;
 
 .section__group--highlight-grey {
   background-color: $grey-lighter;
-  padding: 1.667em 0;
   overflow: hidden;
 }
 

@@ -277,6 +277,16 @@
 
       <div class="kss-description">
         <p>Section component.</p>
+<p>The section component is used to wrap block of contents.
+Its implementaiton ensures the correct vertical spacing between different groups of contents,
+it uses the margin collapse mechanism so that you don&#39;t have to worry when you place two
+sections one after the other, only one of the two margins will be applied.
+It can contain any different set of html elements and components, but it&#39;s a good practice to
+implement also its unique element {section group}, oftenly a {.row} elements which wraps blocks.
+The way it works is that the first {section group} in the section doesn&#39;t get any margin (the parent
+is already defining that) while the last doesn&#39;t get the margin-bottom (still for the same reason).
+When there&#39;s only one {section group} element it doesn-t get any vertical margin.
+Please do not reset any of these margins.</p>
 
       </div>
     </div>
@@ -301,7 +311,7 @@
       </li>
     </ul>
   </div>
-  <div class="section__group">
+  <div class="section__group section__group--highlight-yellow">
     <div class="listing__wrapper">
       <ul class="listing listing--teaser">
         <li class="listing__item">
@@ -322,7 +332,7 @@
 </div>
 
 <div class="section">
-  <div class="section__group">
+  <div class="section__group section__group--highlight-grey">
     <ul class="listing--title">
       <li class="listing__item">
         <a href="#" class="listing__item-link">
@@ -339,7 +349,7 @@
 </div>
 
 <div class="section">
-  <div class="section__group">
+  <div class="section__group section__group--highlight-grey-lightest">
     <div class="listing__wrapper listing__wrapper--two-columns">
       <ul class="listing listing--teaser">
         <li class="listing__item">
@@ -389,25 +399,47 @@
       </ul>
     </div>
   </div> 
-  <div class="section__group">
-    <div class="listing__wrapper listing__wrapper---three">
-      <ul class="listing listing--no-border listing--teaser listing--cta">
+  <div class="section__group section__group--no-margin">
+    <div class="listing__wrapper listing__wrapper--three-columns">
+      <ul class="listing listing--teaser">
         <li class="listing__item">
           <a href="#" class="listing__item-link">
-            <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error</h3>
+            <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
             <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
           </a>
         </li>
         <li class="listing__item">
           <a href="#" class="listing__item-link">
-            <h3 class="listing__title">Architecto at deserunt</h3>
-            <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu</p>
+            <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+            <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+          </a>
+        </li>
+      </ul>
+       <ul class="listing listing--teaser">
+        <li class="listing__item">
+          <a href="#" class="listing__item-link">
+            <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+            <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
           </a>
         </li>
         <li class="listing__item">
           <a href="#" class="listing__item-link">
-            <h3 class="listing__title">Architecto at deserunt, distinctio</h3>
-            <p>Vestibulum turpis sem, aliquet eget</p>
+            <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+            <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="listing listing--teaser">
+        <li class="listing__item">
+          <a href="#" class="listing__item-link">
+            <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+            <p>Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+          </a>
+        </li>
+        <li class="listing__item">
+          <a href="#" class="listing__item-link">
+            <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+            <p>Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.</p>
           </a>
         </li>
       </ul>
@@ -433,7 +465,7 @@
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;section__group&quot;&gt;
+  &lt;div class=&quot;section__group section__group--highlight-yellow&quot;&gt;
     &lt;div class=&quot;listing__wrapper&quot;&gt;
       &lt;ul class=&quot;listing listing--teaser&quot;&gt;
         &lt;li class=&quot;listing__item&quot;&gt;
@@ -454,7 +486,7 @@
 &lt;/div&gt;
 
 &lt;div class=&quot;section&quot;&gt;
-  &lt;div class=&quot;section__group&quot;&gt;
+  &lt;div class=&quot;section__group section__group--highlight-grey&quot;&gt;
     &lt;ul class=&quot;listing--title&quot;&gt;
       &lt;li class=&quot;listing__item&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
@@ -471,7 +503,7 @@
 &lt;/div&gt;
 
 &lt;div class=&quot;section&quot;&gt;
-  &lt;div class=&quot;section__group&quot;&gt;
+  &lt;div class=&quot;section__group section__group--highlight-grey-lightest&quot;&gt;
     &lt;div class=&quot;listing__wrapper listing__wrapper--two-columns&quot;&gt;
       &lt;ul class=&quot;listing listing--teaser&quot;&gt;
         &lt;li class=&quot;listing__item&quot;&gt;
@@ -521,25 +553,47 @@
       &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/div&gt; 
-  &lt;div class=&quot;section__group&quot;&gt;
-    &lt;div class=&quot;listing__wrapper listing__wrapper---three&quot;&gt;
-      &lt;ul class=&quot;listing listing--no-border listing--teaser listing--cta&quot;&gt;
+  &lt;div class=&quot;section__group section__group--no-margin&quot;&gt;
+    &lt;div class=&quot;listing__wrapper listing__wrapper--three-columns&quot;&gt;
+      &lt;ul class=&quot;listing listing--teaser&quot;&gt;
         &lt;li class=&quot;listing__item&quot;&gt;
           &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-            &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error&lt;/h3&gt;
+            &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
             &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
           &lt;/a&gt;
         &lt;/li&gt;
         &lt;li class=&quot;listing__item&quot;&gt;
           &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-            &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt&lt;/h3&gt;
-            &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu&lt;/p&gt;
+            &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+            &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+       &lt;ul class=&quot;listing listing--teaser&quot;&gt;
+        &lt;li class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+            &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+            &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
           &lt;/a&gt;
         &lt;/li&gt;
         &lt;li class=&quot;listing__item&quot;&gt;
           &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
-            &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio&lt;/h3&gt;
-            &lt;p&gt;Vestibulum turpis sem, aliquet eget&lt;/p&gt;
+            &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+            &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class=&quot;listing listing--teaser&quot;&gt;
+        &lt;li class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+            &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+            &lt;p&gt;Cras sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada.&lt;/p&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+            &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+            &lt;p&gt;Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Suspendisse pulvinar.&lt;/p&gt;
           &lt;/a&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
