@@ -1,17 +1,18 @@
+/*
+Section
+
+Section component.
+
+Markup: html/sections.html
+
+Styleguide sections
+*/
+
 $section-spacing: 1.667em;
 
 .section {
-  .section--row-two,
-  .section--row-three {
-    @extend .row;
-  }
-
   margin-bottom: $section-spacing;
-  margin-top: $section-spacing;
-
-  & ~ .section {
-    padding-top: $section-spacing;
-  }
+  margin-top: $section-spacing; 
 
   .section__group:first-child,
   .section:first-child {
@@ -22,9 +23,14 @@ $section-spacing: 1.667em;
   .section:last-child {
     margin-bottom: 0;
   }
+
+  .section--row-two,
+  .section--row-three {
+    @extend .row;
+  }
 }
 
-.section__group {
+.section__group { 
   margin: $section-spacing 0 $section-spacing;
 
   &:first-child {

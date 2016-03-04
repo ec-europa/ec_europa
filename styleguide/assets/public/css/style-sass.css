@@ -6490,11 +6490,18 @@ textarea.error {
 .sidebar-field-group--important, .front .sidebar-field-group {
   padding-top: 30px; }
 
+/*
+Section
+
+Section component.
+
+Markup: html/sections.html
+
+Styleguide sections
+*/
 .section {
   margin-bottom: 1.667em;
   margin-top: 1.667em; }
-  .section ~ .section {
-    padding-top: 1.667em; }
   .section .section__group:first-child, .section .nav-tabs--with-content + .tab-content > :first-child,
   .section .section:first-child {
     margin-top: 0; }
@@ -9327,10 +9334,6 @@ Styleguide listing.5
     clear: none;
     visibility: visible;
     white-space: pre; }
-
-.listing--person .listing__item-link {
-  padding-bottom: 1em;
-  padding-top: 1em; }
 
 .listing--person .listing__title + * {
   line-height: 1.3;
