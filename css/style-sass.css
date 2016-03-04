@@ -6490,8 +6490,15 @@ textarea.error {
 .page-header .page-navigation {
   background: transparent; }
 
+.sidebar-field-group h2 {
+  float: left;
+  width: 100%; }
+
 .sidebar-field-group--important, .front .sidebar-field-group {
   padding-top: 30px; }
+
+.sidebar-field-group__main {
+  margin-left: -15px; }
 
 /*
 Section
@@ -6517,10 +6524,13 @@ Styleguide sections
   margin-bottom: 1.667em;
   margin-top: 1.667em; }
   .section .section__group:first-child, .section .nav-tabs--with-content + .tab-content > :first-child,
-  .section .section:first-child {
+  .section .section:first-child,
+  .section .listing__wrapper:first-child,
+  .section .sidebar-field-group__main + .sidebar-field-group__main {
     margin-top: 0; }
   .section .section__group:last-child, .section .nav-tabs--with-content + .tab-content > :last-child,
-  .section .section:last-child {
+  .section .section:last-child,
+  .section .listing__wrapper:last-child {
     margin-bottom: 0; }
 
 .section__group--highlight-grey, .section__group--highlight-grey-lightest,

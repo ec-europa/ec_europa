@@ -48,12 +48,15 @@ $section-spacing: 1.667em;
   margin-top: $section-spacing;
 
   .section__group:first-child,
-  .section:first-child {
+  .section:first-child,
+  .listing__wrapper:first-child,
+  .sidebar-field-group__main + .sidebar-field-group__main {
     margin-top: 0;
   }
 
   .section__group:last-child,
-  .section:last-child {
+  .section:last-child,
+  .listing__wrapper:last-child {
     margin-bottom: 0;
   }
 
