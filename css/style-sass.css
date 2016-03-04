@@ -10651,13 +10651,13 @@ Styleguide: siteheader.searchform
     padding: 0; }
 
 .site-menu .listing__item-link:focus {
-  border: 3px solid #404040; }
+  outline: 3px solid #404040; }
 
 .site-menu .smaller a {
   text-decoration: underline;
   color: #000000; }
   .site-menu .smaller a:focus {
-    border: 3px solid #404040; }
+    outline: 3px solid #404040; }
 
 .site-menu p {
   color: black;
@@ -10672,7 +10672,7 @@ Styleguide: siteheader.searchform
   color: #404040; }
 
 .site-menu .field--field-site-menu-links .listing__item .listing__title:focus {
-  border: 3px solid #404040; }
+  outline: 3px solid #404040; }
 
 .front .site-menu p {
   font-size: 0.889em; }

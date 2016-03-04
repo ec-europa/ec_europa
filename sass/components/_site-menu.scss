@@ -16,7 +16,7 @@
     }
   }
   .listing__item-link:focus {
-    border: 3px solid $grey-base;
+    outline: 3px solid $grey-base;
   }
 
   .smaller {
@@ -24,7 +24,7 @@
       text-decoration: underline;
       color: #000000;
       &:focus {
-        border: 3px solid $grey-base;
+        outline: 3px solid $grey-base;
       }
     }
   }
@@ -47,7 +47,7 @@
           color: $grey-base;
         }
         &:focus {
-          border: 3px solid $grey-base;
+          outline: 3px solid $grey-base;
         }
       }
     }
