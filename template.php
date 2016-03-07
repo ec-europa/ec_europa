@@ -808,7 +808,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
 
   // Get our full language string.
   if (isset($file->entity->language) || isset($file->language)) {
-    $language_to_use = isset($file->entity->language) ? entity_translation_get_existing_language($file->entity->type, $file->entity) : $file->language;
+    $language_to_use = isset($file->entity->language) ? entity_translation_get_existing_language('node', $file->entity) : $file->language;
     $file_language_string = _dt_shared_functions_get_language_obj($language_to_use);
   }
 
