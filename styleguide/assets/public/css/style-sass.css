@@ -11170,6 +11170,11 @@ Styleguide top-image
       background: transparent;
       font-size: 0px; }
 
+.section-styleguide-random {
+  background: #666;
+  text-align: center;
+  color: #fff; }
+
 .section-styleguide {
   background: #ececec;
   text-align: center;
