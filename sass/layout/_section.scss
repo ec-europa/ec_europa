@@ -26,19 +26,54 @@ Section
 Section component.
 
 The section component is used to wrap block of contents.
-Its implementaiton ensures the correct vertical spacing between different groups of contents,
-it uses the margin collapse mechanism so that you don't have to worry when you place two
-sections one after the other, only one of the two margins will be applied.
-It can contain any different set of html elements and components, but it's a good practice to
-implement also its unique element {section group}, oftenly a {.row} elements which wraps blocks.
+Its implementation ensures the correct vertical spacing between different groups of contents,
+it uses the margin collapse mechanism (css2) so that you don't have to worry when you place two
+sections one after the other, only one of the two margins will be applied, indeed.
+It can contain different set of html elements and components, but it's a good practice to
+implement also its unique element {section group}, oftenly a {row} elements which wraps blocks.
 The way it works is that the first {section group} in the section doesn't get any margin (the parent 
 is already defining that) while the last doesn't get the margin-bottom (still for the same reason).
-When there's only one {section group} element it doesn-t get any vertical margin.
+When there's only one {section group} element it doesn't get any vertical margin.
 Please do not reset any of these margins.
+Mind that there is also a .section__group--full-width modifier which is not demoed here, it works when the
+section is not wrapped into a width limiting container.
 
-Markup: html/sections.html
+Markup: html/section.html
 
 Styleguide sections 
+*/
+
+/*
+section--row-two modifier
+
+.section--row-two
+
+Markup: html/section--row-two.html
+
+Styleguide sections.1
+*/
+
+/*
+section--row-three modifier
+
+.section--row-three
+
+Markup: html/section--row-three.html
+
+Styleguide sections.2
+*/
+
+/*
+Section group modifiers
+
+.section__group--highlight-grey - Highlighted section group element  in grey
+.section__group--highlight-grey-lightest - Highlighted section group element in light grey
+.section__group--highlight-yellow - Highlighted section group element  in yellow
+.section__group--no-margin - Section group with no margins
+
+Markup: html/section__group.html
+
+Styleguide sections.3
 */
 
 $section-spacing: 1.667em;
@@ -119,6 +154,7 @@ $section-spacing: 1.667em;
   margin-top: 0 !important;
 }
 
+// It seems that this modifier is outdated, it might probably be removed.
 .section__group--bottom-header {
   margin-top: -60px !important;
   padding: $section-spacing 0 0 !important;
@@ -148,6 +184,7 @@ $section-spacing: 1.667em;
   }
 }
 
+// That's the only reference to this modifier, could it be simply dropped?
 @include breakpoint(screen-md-min) {
   .section {
     .section--two-columns {

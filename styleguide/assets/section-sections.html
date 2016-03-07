@@ -208,6 +208,24 @@
           ><span class="kss-nav__name">Section</span>
         </a>
         <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-sections.html#kssref-sections-1">
+                <span class="kss-nav__ref">29.1</span
+                ><span class="kss-nav__name">section--row-two modifier</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-sections.html#kssref-sections-2">
+                <span class="kss-nav__ref">29.2</span
+                ><span class="kss-nav__name">section--row-three modifier</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-sections.html#kssref-sections-3">
+                <span class="kss-nav__ref">29.3</span
+                ><span class="kss-nav__name">Section group modifiers</span>
+              </a>
+            </li>
         </ul>
       </li>
       <li class="kss-nav__menu-item">
@@ -278,15 +296,17 @@
       <div class="kss-description">
         <p>Section component.</p>
 <p>The section component is used to wrap block of contents.
-Its implementaiton ensures the correct vertical spacing between different groups of contents,
-it uses the margin collapse mechanism so that you don&#39;t have to worry when you place two
-sections one after the other, only one of the two margins will be applied.
-It can contain any different set of html elements and components, but it&#39;s a good practice to
-implement also its unique element {section group}, oftenly a {.row} elements which wraps blocks.
+Its implementation ensures the correct vertical spacing between different groups of contents,
+it uses the margin collapse mechanism (css2) so that you don&#39;t have to worry when you place two
+sections one after the other, only one of the two margins will be applied, indeed.
+It can contain different set of html elements and components, but it&#39;s a good practice to
+implement also its unique element {section group}, oftenly a {row} elements which wraps blocks.
 The way it works is that the first {section group} in the section doesn&#39;t get any margin (the parent
 is already defining that) while the last doesn&#39;t get the margin-bottom (still for the same reason).
-When there&#39;s only one {section group} element it doesn-t get any vertical margin.
-Please do not reset any of these margins.</p>
+When there&#39;s only one {section group} element it doesn&#39;t get any vertical margin.
+Please do not reset any of these margins.
+Mind that there is also a .section__group--full-width modifier which is not demoed here, it works when the
+section is not wrapped into a width limiting container.</p>
 
       </div>
     </div>
@@ -603,6 +623,525 @@ Please do not reset any of these margins.</p>
       </div>
 
       </div>
+      <section id="kssref-sections-1" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-sections-1">
+          <span class="kss-title__ref">29.1</span
+          >section--row-two modifier
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>.section--row-two</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="section">
+  <div class="section__group section--row-two">
+    <div class="section__item">
+      <div class="listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper">
+        <div class="listing listing--teaser">
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/explained/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">EU budget explained</h3>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/euprojects/">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">EU budget for results web app</h3>
+                <p>A selection of EU-funded projects.</p>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/mff/introduction/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">Multiannual Financial Framework 2014-2020</h3>
+                <p>Explanation of the EU long-term spending plan.</p>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/annual/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">Data and figures about the EU budget</h3>
+                <p>Information on the annual budget life-cycle.</p>    
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section__item">
+      <div class="listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper">
+        <div class="listing listing--teaser">
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/figures/interactive/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">EU expenditure and revenue 2014-2020</h3>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/funding/index_en">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">Guide to receiving EU funding</h3>    
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;section__group section--row-two&quot;&gt;
+    &lt;div class=&quot;section__item&quot;&gt;
+      &lt;div class=&quot;listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper&quot;&gt;
+        &lt;div class=&quot;listing listing--teaser&quot;&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/explained/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;EU budget explained&lt;/h3&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/euprojects/&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;EU budget for results web app&lt;/h3&gt;
+                &lt;p&gt;A selection of EU-funded projects.&lt;/p&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/mff/introduction/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;Multiannual Financial Framework 2014-2020&lt;/h3&gt;
+                &lt;p&gt;Explanation of the EU long-term spending plan.&lt;/p&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/annual/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;Data and figures about the EU budget&lt;/h3&gt;
+                &lt;p&gt;Information on the annual budget life-cycle.&lt;/p&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section__item&quot;&gt;
+      &lt;div class=&quot;listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper&quot;&gt;
+        &lt;div class=&quot;listing listing--teaser&quot;&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/figures/interactive/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;EU expenditure and revenue 2014-2020&lt;/h3&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/funding/index_en&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;Guide to receiving EU funding&lt;/h3&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-sections-2" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-sections-2">
+          <span class="kss-title__ref">29.2</span
+          >section--row-three modifier
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>.section--row-three</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="section">
+  <div class="section__group section--row-three">
+    <div class="section__item">
+      <div class="listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper">
+        <div class="listing listing--teaser">
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/explained/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">EU budget explained</h3>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/euprojects/">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">EU budget for results web app</h3>
+                <p>A selection of EU-funded projects.</p>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/mff/introduction/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">Multiannual Financial Framework 2014-2020</h3>
+                <p>Explanation of the EU long-term spending plan.</p>    
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>  
+    </div> 
+    <div class="section__item">
+      <div class="listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper">
+        <div class="listing listing--teaser">
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/annual/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">Data and figures about the EU budget</h3>
+                <p>Information on the annual budget life-cycle.</p>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/figures/interactive/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">EU expenditure and revenue 2014-2020</h3>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/funding/index_en">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">Guide to receiving EU funding</h3>    
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section__item">
+      <div class="listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper">
+        <div class="listing listing--teaser">
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/explained/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">EU budget explained</h3>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/euprojects/">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">EU budget for results web app</h3>
+                <p>A selection of EU-funded projects.</p>    
+              </div>
+            </a>
+          </div>
+          <div class="listing__item">
+            <a class="listing__item-link" href="http://ec.europa.eu/budget/mff/introduction/index_en.cfm">
+              <div class="listing__column-main column-main ">
+                <h3 class="listing__title">Multiannual Financial Framework 2014-2020</h3>
+                <p>Explanation of the EU long-term spending plan.</p>    
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>  
+    </div> 
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;section__group section--row-three&quot;&gt;
+    &lt;div class=&quot;section__item&quot;&gt;
+      &lt;div class=&quot;listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper&quot;&gt;
+        &lt;div class=&quot;listing listing--teaser&quot;&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/explained/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;EU budget explained&lt;/h3&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/euprojects/&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;EU budget for results web app&lt;/h3&gt;
+                &lt;p&gt;A selection of EU-funded projects.&lt;/p&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/mff/introduction/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;Multiannual Financial Framework 2014-2020&lt;/h3&gt;
+                &lt;p&gt;Explanation of the EU long-term spending plan.&lt;/p&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;  
+    &lt;/div&gt; 
+    &lt;div class=&quot;section__item&quot;&gt;
+      &lt;div class=&quot;listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper&quot;&gt;
+        &lt;div class=&quot;listing listing--teaser&quot;&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/annual/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;Data and figures about the EU budget&lt;/h3&gt;
+                &lt;p&gt;Information on the annual budget life-cycle.&lt;/p&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/figures/interactive/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;EU expenditure and revenue 2014-2020&lt;/h3&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/funding/index_en&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;Guide to receiving EU funding&lt;/h3&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;section__item&quot;&gt;
+      &lt;div class=&quot;listing__wrapper listing__wrapper--default listing--line-left listing--teaser__wrapper&quot;&gt;
+        &lt;div class=&quot;listing listing--teaser&quot;&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/explained/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;EU budget explained&lt;/h3&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/euprojects/&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;EU budget for results web app&lt;/h3&gt;
+                &lt;p&gt;A selection of EU-funded projects.&lt;/p&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;listing__item&quot;&gt;
+            &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/mff/introduction/index_en.cfm&quot;&gt;
+              &lt;div class=&quot;listing__column-main column-main &quot;&gt;
+                &lt;h3 class=&quot;listing__title&quot;&gt;Multiannual Financial Framework 2014-2020&lt;/h3&gt;
+                &lt;p&gt;Explanation of the EU long-term spending plan.&lt;/p&gt;    
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;  
+    &lt;/div&gt; 
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-sections-3" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-sections-3">
+          <span class="kss-title__ref">29.3</span
+          >Section group modifiers
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <div class="section">
+  <div class="section__group [modifier class]">
+    <ul class="listing--title">
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        </a>
+      </li>
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+ </div> 
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .section__group--highlight-grey
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Highlighted section group element  in grey
+        </div>
+        <div class="kss-modifier__example">
+          <div class="section">
+  <div class="section__group section__group--highlight-grey">
+    <ul class="listing--title">
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        </a>
+      </li>
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+ </div> 
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .section__group--highlight-grey-lightest
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Highlighted section group element in light grey
+        </div>
+        <div class="kss-modifier__example">
+          <div class="section">
+  <div class="section__group section__group--highlight-grey-lightest">
+    <ul class="listing--title">
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        </a>
+      </li>
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+ </div> 
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .section__group--highlight-yellow
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Highlighted section group element  in yellow
+        </div>
+        <div class="kss-modifier__example">
+          <div class="section">
+  <div class="section__group section__group--highlight-yellow">
+    <ul class="listing--title">
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        </a>
+      </li>
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+ </div> 
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .section__group--no-margin
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Section group with no margins
+        </div>
+        <div class="kss-modifier__example">
+          <div class="section">
+  <div class="section__group section__group--no-margin">
+    <ul class="listing--title">
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.</h3>
+        </a>
+      </li>
+      <li class="listing__item">
+        <a href="#" class="listing__item-link">
+          <h3 class="listing__title">Architecto at deserunt, distinctio, eaque eos est et facere facilis.</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+ </div> 
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;section__group [modifier class]&quot;&gt;
+    &lt;ul class=&quot;listing--title&quot;&gt;
+      &lt;li class=&quot;listing__item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+          &lt;h3 class=&quot;listing__title&quot;&gt;Ab aspernatur at dolor dolorem doloremque error exercitationem id non quidem quisquam.&lt;/h3&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;listing__item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
+          &lt;h3 class=&quot;listing__title&quot;&gt;Architecto at deserunt, distinctio, eaque eos est et facere facilis.&lt;/h3&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+ &lt;/div&gt; </code></pre>
+      </div>
+
+      </section>
 </article>
 
 <!-- SCRIPTS -->
