@@ -9663,6 +9663,9 @@ Markup: html/listing__wrapper--row-three.html
 
 Styleguide listing.2.4
 */
+.listing__wrapper--maxwidth .listing__item {
+  max-width: none; }
+
 .listing__wrapper--three-columns .listing__title,
 .listing__wrapper--two-columns .listing__title,
 .listing__wrapper--row-three .listing__title,

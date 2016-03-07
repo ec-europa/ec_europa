@@ -639,6 +639,10 @@ Styleguide listing.2.4
   .listing {
     @extend .col-md-8;
   }
+
+  .listing__item {
+    max-width: none;
+  }
 }
 
 .listing__wrapper--three-columns,
