@@ -44,3 +44,21 @@
     @include show_hide();
   }
 }
+
+.section-styleguide {
+  background: #ececec;
+  text-align: center;
+  color: #004494;
+
+  p {
+    max-width: none;
+  }
+
+  .section__group-styleguide {
+    background: #ccc;
+
+    p {
+      padding: 50px 0;
+    }
+  }
+}
