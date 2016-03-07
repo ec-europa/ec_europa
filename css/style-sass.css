@@ -6521,6 +6521,9 @@ Please do not reset any of these margins.
 Mind that there is also a .section__group--full-width modifier which is not demoed here, it works when the
 section is not wrapped into a width limiting container.
 
+WHAT TO AVOID:
+Do not wrap a section component into a row element, this would break the collpasing margin.
+
 Markup: html/section.html
 
 Styleguide sections 
