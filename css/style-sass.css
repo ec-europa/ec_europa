@@ -5204,11 +5204,11 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   clear: both; }
 
 .center-block {
