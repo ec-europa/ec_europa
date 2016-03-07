@@ -11083,7 +11083,8 @@ Styleguide timeline
   padding-top: 0.5em; }
 
 .view-biography-timeline .view-footer {
-  margin-top: 1em !important; }
+  margin-top: 1.667em !important;
+  margin-bottom: 1.667em; }
 
 @media (min-width: 480px) {
   .timeline .timeline__item-title:before {
