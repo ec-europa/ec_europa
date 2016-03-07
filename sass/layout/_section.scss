@@ -112,6 +112,11 @@ $section-spacing: 1.667em;
   }
 }
 
+// Sidebar-field-group__main floats, it would break the collapsing margins.
+.section__group.sidebar-field-group + .section__group.sidebar-field-group__main {
+  margin-top: 0;
+}
+
 .section__group--highlight-grey,
 .section__group--highlight-yellow {
   padding-left: 1.222em;
@@ -175,6 +180,7 @@ $section-spacing: 1.667em;
   .section__item {
     margin-top: 15px;
     @extend .col-md-6;
+
     &:nth-child(odd) {
       clear: left;
     }

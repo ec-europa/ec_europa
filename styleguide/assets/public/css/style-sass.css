@@ -6570,6 +6570,9 @@ Styleguide sections.3
   .section .section__group + .section__group .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > * + .section__group .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > .section__group + * .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > * + * .listing__item:first-child {
     border-top: none; }
 
+.section__group.sidebar-field-group + .section__group.sidebar-field-group__main, .nav-tabs--with-content + .tab-content > .sidebar-field-group + .sidebar-field-group__main {
+  margin-top: 0; }
+
 .section__group--highlight-grey, .section__group--highlight-grey-lightest,
 .section__group--highlight-yellow {
   padding-left: 1.222em; }
@@ -7471,6 +7474,9 @@ Markup: html/field.html
 
 Styleguide field
 */
+.field .sections .container {
+  padding: 0; }
+
 .field__label {
   font-size: 0.778em;
   line-height: 2em;
