@@ -10160,6 +10160,9 @@ Styleguide messages
   .no-svg .messages.error, .no-svg .error.feedback-message {
     background-image: url("../images/png/messages-error.png"); }
 
+.alert {
+  margin: 1.667em 0; }
+
 /*
 
 Notification
