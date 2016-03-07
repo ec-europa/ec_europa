@@ -6509,12 +6509,15 @@ The section component is used to wrap block of contents.
 Its implementation ensures the correct vertical spacing between different groups of contents,
 it uses the margin collapse mechanism (css2) so that you don't have to worry when you place two
 sections one after the other, only one of the two margins will be applied, indeed.
-It can contain different set of html elements and components, but it's a good practice to
-implement also its unique element {section group}, oftenly a {row} elements which wraps blocks.
+
+It can contain different set of html elements and components, but the predefined ones are its 
+unique element {section group}, the {listing wrapper}, the {sidebar-field-group}.
+
 The way it works is that the first {section group} in the section doesn't get any margin (the parent 
 is already defining that) while the last doesn't get the margin-bottom (still for the same reason).
 When there's only one {section group} element it doesn't get any vertical margin.
 Please do not reset any of these margins.
+
 Mind that there is also a .section__group--full-width modifier which is not demoed here, it works when the
 section is not wrapped into a width limiting container.
 
@@ -6564,6 +6567,8 @@ Styleguide sections.3
   .section .section:last-child,
   .section .listing__wrapper:last-child {
     margin-bottom: 0; }
+  .section .section__group + .section__group .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > * + .section__group .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > .section__group + * .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > * + * .listing__item:first-child {
+    border-top: none; }
 
 .section__group--highlight-grey, .section__group--highlight-grey-lightest,
 .section__group--highlight-yellow {
