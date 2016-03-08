@@ -6146,10 +6146,6 @@ ul.nav-tabs-right {
       ul.nav-tabs-right li a:hover {
         border-bottom: inherit; }
 
-@media (min-width: 992px) {
-  .nav-tabs-right {
-    margin-top: -2.8em; } }
-
 @media (min-width: 480px) {
   .nav-tabs--with-content {
     display: block; }

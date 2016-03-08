@@ -108,13 +108,7 @@ ul.nav-tabs-right {
       }
     }
   }
-}
-
-@include breakpoint(screen-md-min) {
-  .nav-tabs-right {
-    margin-top: -2.8em;
-  }
-}
+} 
 
 @include breakpoint(screen-xs-min) {
   .nav-tabs--with-content {
