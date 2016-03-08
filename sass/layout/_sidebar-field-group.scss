@@ -1,8 +1,7 @@
 .sidebar-field-group {
-  @extend .row;
-
   h2 {
-    @extend .col-md-12;
+    float: left;
+    width: 100%;
   }
 }
 
@@ -12,6 +11,7 @@
 
 .sidebar-field-group__main {
   @extend .col-sm-8;
+  margin-left: -15px;
 }
 
 .sidebar-field-group__sidebar {

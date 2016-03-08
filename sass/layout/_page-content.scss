@@ -1,20 +1,5 @@
-.page-content {
-  > .container-fluid,
-  > .container {
-    > .row:first-child {
-      padding-top: 60px;
-    }
-  }
-  padding-bottom: 30px;
-}
-
-.page-content--border {
-  > .container-fluid,
-  > .container {
-    > .row:first-child {
-      border-top: $yellow-light solid 10px;
-    }
-  }
+.ceiling {
+  border-top: $yellow-light solid 10px;
 }
 
 .main-content {
@@ -24,4 +9,8 @@
 // Drupal connect.
 .node-type-info-homepage .page-content {
   @extend .page-content--border;
+}
+
+.row > .row {
+  margin: 0;
 }
