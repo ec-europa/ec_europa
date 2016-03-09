@@ -32,10 +32,11 @@ Styleguide buttons
   font-size: $font-size-little;
   text-decoration: none;
   @extend .hidden-print;
-
+  
   &:link {
     text-decoration: none;
   }
+
   &:hover,
   &:active,
   &:focus {

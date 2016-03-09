@@ -37,12 +37,6 @@ Styleguide: siteswitcher
     padding: 0.5em 1.667em;
     line-height: 1.3;
 
-    &:link {
-      text-decoration: none;
-    }
-    &:hover {
-      text-decoration: underline;
-    }
     &:after, &.is-external:after {
       content: none !important;
     }

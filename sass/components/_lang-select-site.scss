@@ -19,17 +19,12 @@ Styleguide: siteheader.langselect
     color: inherit;
     display: inline-block;
     text-align: center;
+    text-decoration: none;
     font-size: $font-size-little;
     font-weight: bold;
     padding: 7.5px 15px;
     border: 2px solid transparent;
 
-    &:link {
-      text-decoration: none;
-    }
-    &:hover {
-      text-decoration: underline;
-    }
     &:focus {
       border-color: $yellow-light;
     }

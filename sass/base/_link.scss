@@ -14,10 +14,19 @@ a {
   &:link {
     text-decoration: underline;
   }
+
   &:hover,
   &:active,
   &:focus {
     color: $grey-base;
+  }
+
+  .listing &,
+  .site-switcher &,
+  .feedback-form & {
+    &:link {
+      text-decoration: none;
+    }
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
