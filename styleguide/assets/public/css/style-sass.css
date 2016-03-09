@@ -5532,8 +5532,6 @@ Styleguide buttons
   min-height: 2.75em;
   font-size: 0.889em;
   text-decoration: none; }
-  .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
-    text-decoration: none; }
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     text-decoration: underline;
     -webkit-box-shadow: none;
@@ -5997,6 +5995,11 @@ a:link {
 
 a:hover, a:active, a:focus {
   color: #404040; }
+
+.listing a:link,
+.site-switcher a:link,
+.feedback-form a:link {
+  text-decoration: none; }
 
 a.smaller,
 .smaller a {
@@ -7105,10 +7108,6 @@ Styleguide contextnav
 
 .context-nav__item {
   display: inline-block; }
-  .context-nav__item a:link {
-    text-decoration: none; }
-  .context-nav__item a:hover {
-    text-decoration: underline; }
   .context-nav__item:after {
     content: " |";
     color: #b3b4b5;
@@ -7388,10 +7387,6 @@ Styleguide form.feedback-message
   display: block;
   padding: 0.667em 0 0.556em 2.500em;
   font-size: 0.889em; }
-  .feedback-form__trigger:link, .feedback-form__trigger:active {
-    text-decoration: none; }
-  .feedback-form__trigger:hover {
-    text-decoration: underline; }
 
 .feedback-form__content {
   margin: 0.8em 0 2em; }
@@ -8900,10 +8895,6 @@ Styleguide inpagenav
   font-weight: bold;
   border-left: 3px solid transparent;
   text-decoration: none; }
-  .inpage-nav .inpage_nav__list-item:link {
-    text-decoration: none; }
-  .inpage-nav .inpage_nav__list-item:hover {
-    text-decoration: underline; }
   .inpage-nav .inpage_nav__list-item:hover {
     background: none;
     text-decoration: underline; }
@@ -9119,14 +9110,11 @@ Styleguide: siteheader.langselect
     color: inherit;
     display: inline-block;
     text-align: center;
+    text-decoration: none;
     font-size: 0.889em;
     font-weight: bold;
     padding: 7.5px 15px;
     border: 2px solid transparent; }
-    .lang-select-site .lang-select-site__link:link {
-      text-decoration: none; }
-    .lang-select-site .lang-select-site__link:hover {
-      text-decoration: underline; }
     .lang-select-site .lang-select-site__link:focus {
       border-color: #ffd617; }
   .lang-select-site .lang-select-site__label {
@@ -9322,16 +9310,6 @@ ul.listing--title {
     padding: 0;
     margin: 0;
     display: block; }
-    .listing--title .listing__item-link:link,
-    .listing--title .listing__title:link,
-    ul.listing--title .listing__item-link:link,
-    ul.listing--title .listing__title:link {
-      text-decoration: none; }
-    .listing--title .listing__item-link:hover,
-    .listing--title .listing__title:hover,
-    ul.listing--title .listing__item-link:hover,
-    ul.listing--title .listing__title:hover {
-      text-decoration: underline; }
   .listing--title a.listing__title,
   .listing--title a .listing__title,
   ul.listing--title a.listing__title,
@@ -9474,8 +9452,7 @@ Styleguide listing.3
   padding: 0.5em 0 !important; }
 
 a.listing__title {
-  color: #004494;
-  text-decoration: none; }
+  color: #004494; }
 
 .listing__date {
   float: left; }
@@ -9513,8 +9490,7 @@ a.listing__title {
 .listing__item-link {
   display: block;
   overflow: hidden;
-  color: #404040;
-  text-decoration: none; }
+  color: #404040; }
   .listing__item-link:hover, .listing__item-link:active, .listing__item-link:focus {
     text-decoration: none; }
   .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
@@ -10179,10 +10155,6 @@ Styleguide notification
   font-size: 14px; }
   .notification a {
     color: #000; }
-    .notification a:link {
-      text-decoration: underline; }
-    .notification a:hover {
-      text-decoration: none; }
 
 .notification__label {
   display: inline-block;
@@ -10197,16 +10169,10 @@ Styleguide notification
     margin-bottom: 6px;
     margin-right: 8px;
     width: 100%; }
-    .notification__content .notification__text a:hover {
-      text-decoration: none; }
   .notification__content .notification__btn {
     font-weight: bold;
     float: left;
     margin-bottom: 6px; }
-    .notification__content .notification__btn:link {
-      text-decoration: none; }
-    .notification__content .notification__btn:hover {
-      text-decoration: underline; }
     .notification__content .notification__btn:after {
       font-size: 12px; }
   .notification__content p {
@@ -10291,8 +10257,7 @@ Styleguide page-header.informational-home
     color: #fff;
     max-width: 40em; }
   .page-header a {
-    color: #fff;
-    text-decoration: none; }
+    color: #fff; }
     .page-header a:hover:not(.breadcrumb__link, .btn) {
       color: #ffd617; }
     .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
@@ -10583,10 +10548,6 @@ Styleguide: siteswitcher
     width: 100%;
     padding: 0.5em 1.667em;
     line-height: 1.3; }
-    .site-switcher__option > a:link {
-      text-decoration: none; }
-    .site-switcher__option > a:hover {
-      text-decoration: underline; }
     .site-switcher__option > a:after, .site-switcher__option > a.is-external:after, .site-political .site-switcher__option > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information .site-switcher__option > a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .site-switcher__option > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .site-switcher__option > a.listing__title:after {
       content: none !important; }
   .site-switcher__option.is-selected {
