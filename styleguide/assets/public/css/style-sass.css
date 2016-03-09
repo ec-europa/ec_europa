@@ -5532,6 +5532,8 @@ Styleguide buttons
   min-height: 2.75em;
   font-size: 0.889em;
   text-decoration: none; }
+  .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
+    text-decoration: none; }
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     text-decoration: underline;
     -webkit-box-shadow: none;
