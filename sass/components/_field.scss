@@ -15,6 +15,11 @@ Styleguide field
   .label-above {
     @extend .h3;
   }
+
+  // Why do we have this html? (body field in priorities)
+  .sections .container {
+    padding: 0;
+  } 
 }
 
 .field__label {

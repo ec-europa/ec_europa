@@ -33,6 +33,9 @@ Styleguide buttons
   text-decoration: none;
   @extend .hidden-print;
 
+  &:link {
+    text-decoration: none;
+  }
   &:hover,
   &:active,
   &:focus {
@@ -116,6 +119,7 @@ Styleguide buttons
     border-color: $brand-primary;
     background: $brand-primary;
     color: #fff;
+
     &:hover,
     &:active,
     &:focus {
@@ -125,6 +129,8 @@ Styleguide buttons
     &:active,
     &:focus {
       outline: 5px solid $yellow-light;
+      outline-offset: -5px;
+      text-decoration: none;
     }
 
     &:focus {

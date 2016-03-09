@@ -65,7 +65,8 @@ Styleguide timeline
 }
 
 .view-biography-timeline .view-footer {
-  margin-top: 1em !important;
+  margin-top: 1.667em !important;
+  margin-bottom: 1.667em; 
 }
 
 @include breakpoint(screen-xs-min) {

@@ -5,16 +5,17 @@ Markup: html/feedback-message.html
 
 Styleguide form.feedback-message
 */
-.feedback-messages {
+.feedback-message {
   @extend .messages;
   border: none !important;
+  max-width: none;
 
   &.is-disabled {
     color: $form-control-color-disabled;
   }
 
   &.is-error {
-    background: $grey-lighter url('../images/svg/messages-error.svg') 1em 1.1em no-repeat;
+    background: $grey-lightest url('../images/svg/messages-error.svg') 1em 1.1em no-repeat;
     background-size: 2em;
   }
 

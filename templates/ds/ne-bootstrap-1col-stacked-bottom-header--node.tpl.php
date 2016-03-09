@@ -44,20 +44,19 @@
   <?php endif; ?>
   <div class="page-content">
     <div class="container-fluid">
+    <?php if(!empty($top) || !empty($local_tabs) || !empty($messages)): ?>
       <div class="row">
-        <?php if(!empty($top) || !empty($local_tabs) || !empty($messages)): ?>
-          <section class="section section--content-top col-md-12 <?php print $top_classes; ?>">
-            <?php if (!empty($local_tabs)): ?>
-              <?php print $local_tabs; ?>
-            <?php endif; ?>
-            <?php if (!empty($messages)): ?>
-              <?php print $messages; ?>
-            <?php endif; ?>
-
-            <?php print $top; ?>
-          </section>
-        <?php endif; ?>
+        <section class="section section--content-top col-md-12 <?php print $top_classes; ?>">
+          <?php if (!empty($local_tabs)): ?>
+            <?php print $local_tabs; ?>
+          <?php endif; ?>
+          <?php if (!empty($messages)): ?>
+            <?php print $messages; ?>
+          <?php endif; ?>
+          <?php print $top; ?>
+        </section>
       </div>
+    <?php endif; ?>
       <div class="row">
         <a id="main-content" tabindex="-1"></a>
         <section class="section col-md-12 <?php print $central_classes; ?>">
@@ -67,7 +66,6 @@
     </div>
   </div>
 </<?php print $layout_wrapper ?>>
-
 
 <?php if (!empty($drupal_render_children)): ?>
   <?php print $drupal_render_children ?>
