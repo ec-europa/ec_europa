@@ -618,7 +618,7 @@ function europa_field($variables) {
         // Items list formatting.
         $output .= '<div class="tags__items"' . $variables['content_attributes'] . '>';
         foreach ($variables['items'] as $delta => $item) {
-          $output .= '<a ' . drupal_attributes($item['#options']['attributes']) . ' href="' . $item['#href'] . '">' . $item['#title'] . '</a>';
+          $output .= drupal_render($item);
         }
         // Closing both tags and tags__items.
         $output .= '</div></div>';
