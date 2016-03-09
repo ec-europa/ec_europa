@@ -5204,11 +5204,11 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
+.clearfix:before, .checkbox:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   content: " ";
   display: table; }
 
-.clearfix:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
+.clearfix:after, .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   clear: both; }
 
 .center-block {
@@ -5787,33 +5787,32 @@ Styleguide form.checkbox
     line-height: 2.75em;
     display: block;
     text-align: left;
-    padding-top: 0.2em; }
-  .checkbox input {
-    margin: 1px 0 0 13px; }
-  .checkbox input[type="checkbox"] {
+    float: left;
+    padding-left: 0.7em; }
+  .checkbox input[type='checkbox'] {
+    margin: 1px 0 0 13px;
+    position: static;
+    margin-left: 0;
+    float: left;
     height: 2.75em;
-    margin-left: -9999px;
-    position: relative;
-    float: left; }
-    .checkbox input[type="checkbox"] + label:before {
+    visibility: hidden; }
+    .checkbox input[type='checkbox']:before {
       border: 2px solid transparent;
       border-radius: 8px;
       width: 1.25em;
       height: 1.25em;
-      padding: 1.25em 0 0 1.25em; }
-    .checkbox input[type="checkbox"]:focus + label:before {
+      padding: 1.25em 0 0 1.25em;
+      visibility: visible;
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0.45em;
+      left: -0.4em;
+      background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
+      background-size: auto 1.25em; }
+    .checkbox input[type='checkbox']:focus:before {
       border: 2px solid #ffd617; }
-    .checkbox input[type="checkbox"]:not(checked) + label {
-      padding-left: 2.778em; }
-      .checkbox input[type="checkbox"]:not(checked) + label:before {
-        content: '';
-        position: absolute;
-        display: block;
-        top: 0.8em;
-        left: 1em;
-        background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
-        background-size: auto 1.25em; }
-    .checkbox input[type="checkbox"]:checked + label:before {
+    .checkbox input[type='checkbox']:checked:before {
       background-image: url("../images/svg/checkbox-checked--blue.svg"); }
 
 .no-svg .checkbox label {
