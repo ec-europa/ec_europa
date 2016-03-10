@@ -4,25 +4,31 @@
   .listing__wrapper {
     margin-bottom: 0;
   }
+
   .listing__item {
     border-color: #dcb812;
     font-size: $font-size-little;
     &:first-child {
       border-top: none;
     }
+
     .listing__title {
       color: #000000;
       padding: 0;
     }
   }
+
   .listing__item-link:focus {
     outline: 3px solid $grey-base;
   }
 
   .smaller {
+    padding: 0.61em 0;
+    
     a {
       text-decoration: underline;
       color: #000000;
+
       &:focus {
         outline: 3px solid $grey-base;
       }
@@ -36,6 +42,9 @@
 
   .field--field-site-menu-links {
     .listing__item {
+      // Align the element in this column with the others.
+      margin-bottom: 1px;
+
       .listing__title {
         @extend .listing__title--arrow;
         &:after {
@@ -96,21 +105,5 @@
   .site-menu__section {
     padding-top: 2em;
     padding-bottom: 3em;
-    position: relative;
-
-    .smaller {
-      bottom: 10%;
-      left: 68%;
-      margin-left: 0.3em;
-      position: absolute;
-      opacity: 0;
-      visibility: hidden;
-      transition: visibility 0s, opacity 0.5s linear;
-
-      .collapse.in & {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
   }
 }
