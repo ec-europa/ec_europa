@@ -92,16 +92,20 @@ function europa_bootstrap_colorize_text_alter(&$texts) {
  * Overrides theme_form_element().
  */
 function europa_form_element(&$variables) {
+
   $element = &$variables['element'];
   $is_checkbox = FALSE;
   $is_radio = FALSE;
   $feedback_message = FALSE;
+
 
   // This function is invoked as theme wrapper, but the rendered form element
   // may not necessarily have been processed by form_builder().
   $element += array(
     '#title_display' => 'before',
   );
+
+
 
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
@@ -228,9 +232,17 @@ function europa_form_element(&$variables) {
       break;
   }
 
+  // Adding the calendar icon on text fields with JS UI PopUp calendar
+  if ($variables['element']['#type'] == 'date_popup') {
+    $prefix = '<div class="date-popup-wrapper">';
+    $suffix = '<span class="icon icon--calendar"></span>';
+    $output = ' ' . $prefix . $element['#children'] . $suffix . "\n";
+  }
+
   $output .= "</div>\n";
 
   return $output;
+
 }
 
 /**
@@ -1581,3 +1593,48 @@ function europa_pager_last($variables) {
 
   return $output;
 }
+
+/*
+function europa_textfield($variables) {
+  dpm($variables);
+  echo $variables['element']['#name'];
+  $element = $variables['element'];
+
+  $output = '';
+  // Adding glyphicon to name element.
+  if ($element['#name'] == 'date-before-value-date') {
+    $output = '<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>';
+  }
+
+  // Force type.
+  $element['#attributes']['type'] = 'text';
+
+
+  element_set_attributes($element, array(
+    'id',
+    'name',
+    'value',
+    'size',
+    'maxlength',
+  ));
+
+
+  $extra = '';
+  if ($element['#autocomplete_path'] && drupal_valid_path($element['#autocomplete_path'])) {
+    drupal_add_library('system', 'drupal.autocomplete');
+    $element['#attributes']['class'][] = 'form-autocomplete';
+
+    $attributes = array();
+    $attributes['type'] = 'hidden';
+    $attributes['id'] = $element['#attributes']['id'] . '-autocomplete';
+    $attributes['value'] = url($element['#autocomplete_path'], array('absolute' => TRUE));
+    $attributes['disabled'] = 'disabled';
+    $attributes['class'][] = 'autocomplete';
+    $extra = '<input' . drupal_attributes($attributes) . ' />';
+  }
+
+  $output .= '<input' . drupal_attributes($element['#attributes']) . ' />';
+
+  return $output . $extra;
+}
+*/

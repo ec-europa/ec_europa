@@ -7291,6 +7291,15 @@ Styleguide datepicker
 .no-svg .ui-datepicker-next .ui-icon {
   background-image: url("../images/png/arrow.png"); }
 
+.date-popup-wrapper {
+  position: relative; }
+  .date-popup-wrapper .icon, .date-popup-wrapper .search-form__btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    pointer-events: none;
+    color: #b3b4b5; }
+
 @media (min-width: 480px) {
   #ui-datepicker-div {
     width: auto; }
@@ -8008,6 +8017,7 @@ Markup: html/icon.html
 .icon--regulation - regulation
 .icon--tag-close - tag close
 .icon--tag-close-hover - tag close with hover state
+.icon--calendar - Calendar icon
 
 Styleguide: icon
 */
@@ -8178,6 +8188,9 @@ Styleguide: icon
 
 .icon--tag-close-hover, .icon--tag-close-hover:before, .facet-tag--close .facet-tag__value:hover:after {
   content: '\e908'; }
+
+.icon--calendar:before {
+  content: '\e910'; }
 
 .icon--yellowbg {
   background-color: #ffd617;
