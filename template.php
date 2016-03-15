@@ -92,6 +92,7 @@ function europa_bootstrap_colorize_text_alter(&$texts) {
  * Overrides theme_form_element().
  */
 function europa_form_element(&$variables) {
+
   $element = &$variables['element'];
   $is_checkbox = FALSE;
   $is_radio = FALSE;
@@ -228,8 +229,14 @@ function europa_form_element(&$variables) {
       break;
   }
 
-  $output .= "</div>\n";
+  // Adding the calendar icon on text fields with JS UI PopUp calendar.
+  if ($variables['element']['#type'] == 'date_popup') {
+    $prefix = '<div class="date-picker">';
+    $suffix = '<span class="icon icon--calendar"></span>';
+    $output = ' ' . $prefix . $element['#children'] . $suffix . "\n";
+  }
 
+  $output .= "</div>\n";
   return $output;
 }
 

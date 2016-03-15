@@ -46,6 +46,7 @@ Markup: html/icon.html
 .icon--regulation - regulation
 .icon--tag-close - tag close
 .icon--tag-close-hover - tag close with hover state
+.icon--calendar - Calendar icon
 
 Styleguide: icon
 */
@@ -119,6 +120,7 @@ Styleguide: icon
     @extend .icon--arrow-up;
   }
 }
+
 
 .icon--arrow-down {
   content: '\e61d';
@@ -370,6 +372,13 @@ Styleguide: icon
   content: '\e908';
   &:before {
     @extend .icon--tag-close-hover;
+  }
+}
+
+.icon--calendar {
+  content: '\e985';
+  &:before {
+    @extend .icon--calendar;
   }
 }
 
