@@ -376,10 +376,8 @@ Styleguide: icon
 }
 
 .icon--calendar {
-  content: '\e985';
   &:before {
-    @extend .icon--calendar;
-  }
+    content: '\e910';
 }
 
 .icon--yellowbg {

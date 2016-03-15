@@ -7291,12 +7291,21 @@ Styleguide datepicker
 .no-svg .ui-datepicker-next .ui-icon {
   background-image: url("../images/png/arrow.png"); }
 
+<<<<<<< HEAD
 .date-picker {
   position: relative; }
   .date-picker .icon, .date-picker .search-form__btn {
     position: absolute;
     top: .5em;
     right: .5em;
+=======
+.date-popup-wrapper {
+  position: relative; }
+  .date-popup-wrapper .icon, .date-popup-wrapper .search-form__btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+>>>>>>> 880d9a3f2261778d70a44cb2b30a250a47962b57
     pointer-events: none;
     color: #b3b4b5; }
 
@@ -8189,8 +8198,13 @@ Styleguide: icon
 .icon--tag-close-hover, .icon--tag-close-hover:before, .facet-tag--close .facet-tag__value:hover:after {
   content: '\e908'; }
 
+<<<<<<< HEAD
 .icon--calendar, .icon--calendar:before {
   content: '\e985'; }
+=======
+.icon--calendar:before {
+  content: '\e910'; }
+>>>>>>> 880d9a3f2261778d70a44cb2b30a250a47962b57
 
 .icon--yellowbg {
   background-color: #ffd617;
