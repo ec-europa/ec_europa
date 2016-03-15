@@ -31,6 +31,13 @@ Styleguide: siteswitcher
   vertical-align: middle;
   width: 50%;
 
+  a{
+    &:hover,
+    &:focus{
+      text-decoration: underline;
+    }
+  }
+
   & > a {
     display: block;
     width: 100%;

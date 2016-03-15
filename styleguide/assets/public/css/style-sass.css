@@ -5539,8 +5539,9 @@ Styleguide buttons
     -webkit-box-shadow: none;
     box-shadow: none; }
   .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
-    outline: 5px solid #ffd617;
-    border-color: #ffd617; }
+    outline: 3px solid #ffd617;
+    outline-offset: -3px;
+    text-decoration: underline; }
   .btn:after, .inpage-nav__navbar .inpage-nav__toggle:after {
     line-height: inherit;
     position: static; }
@@ -5589,9 +5590,8 @@ Styleguide buttons
     .btn.btn-menu:hover, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:hover, .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       color: #fff; }
     .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
-      outline: 5px solid #ffd617;
-      outline-offset: -5px;
-      text-decoration: none; }
+      outline: 3px solid #ffd617;
+      outline-offset: -3px; }
     .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       border-color: #ffd617;
       outline-color: #ffd617; }
@@ -5862,7 +5862,7 @@ Styleguide form
   .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
   .has-error select:focus {
     color: #000;
-    border: 2px solid #ffd617;
+    border: 3px solid #ffd617;
     padding: 5px 11px;
     -webkit-box-shadow: none;
     box-shadow: none; }
@@ -5995,12 +5995,34 @@ a:link {
   text-decoration: underline; }
 
 a:hover, a:active, a:focus {
+  text-decoration: underline;
   color: #404040; }
 
 .listing a:link,
 .site-switcher a:link,
 .feedback-form a:link {
   text-decoration: none; }
+
+.listing a:hover,
+.site-switcher a:hover,
+.feedback-form a:hover {
+  text-decoration: underline; }
+
+.listing a:focus,
+.site-switcher a:focus,
+.feedback-form a:focus {
+  outline: 3px solid #ffd617;
+  outline-offset: 0;
+  text-decoration: underline; }
+
+.listing--frontpage a:focus {
+  outline-offset: 10px; }
+  .listing--frontpage a:focus .listing__title {
+    text-decoration: underline;
+    color: #404040; }
+
+a.listing__item-link:focus .highlighted-item .highlighted-item__content {
+  text-decoration: underline; }
 
 a.smaller,
 .smaller a {
@@ -7394,7 +7416,7 @@ Styleguide form.feedback-message
 .feedback-form__trigger {
   text-decoration: none;
   color: #004494;
-  display: block;
+  display: inline-block;
   padding: 0.667em 0 0.556em 2.500em;
   font-size: 0.889em; }
 
@@ -7872,6 +7894,10 @@ Styleguide footer
       padding: 0; }
       .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item-right a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item-right a:active, .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
         background: none; }
+      .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
+        outline: 3px solid #ffd617;
+        outline-offset: 5px;
+        text-decoration: underline; }
   .footer__menu .footer__menu-item-right {
     float: right; }
 
@@ -9128,9 +9154,10 @@ Styleguide: siteheader.langselect
     font-size: 0.889em;
     font-weight: bold;
     padding: 7.5px 15px;
-    border: 2px solid transparent; }
+    border: 3px solid transparent; }
     .lang-select-site .lang-select-site__link:focus {
-      border-color: #ffd617; }
+      border-color: #ffd617;
+      outline: none; }
   .lang-select-site .lang-select-site__label {
     margin-right: 0.556em; }
   .lang-select-site .lang-select-site__code {
@@ -9505,7 +9532,7 @@ a.listing__title {
   display: block;
   overflow: hidden;
   color: #404040; }
-  .listing__item-link:hover, .listing__item-link:active, .listing__item-link:focus {
+  .listing__item-link:active, .listing__item-link:focus {
     text-decoration: none; }
   .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
     display: none !important; }
@@ -10169,6 +10196,12 @@ Styleguide notification
   font-size: 14px; }
   .notification a {
     color: #000; }
+    .notification a:focus {
+      outline: 3px solid #000;
+      outline-offset: 2px;
+      text-decoration: underline; }
+    .notification a:hover, .notification a:focus {
+      text-decoration: none; }
 
 .notification__label {
   display: inline-block;
@@ -10509,6 +10542,10 @@ Styleguide: siteheader
       -webkit-print-color-adjust: exact; } }
   .site-header > .container-fluid, .section__group--full-width.site-header > *, .block--full-width.site-header > *, .field--full-width.site-header > * {
     position: relative; }
+  .site-header a:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: 5px;
+    text-decoration: underline; }
 
 .site-slogan {
   color: #404040;
@@ -10557,6 +10594,8 @@ Styleguide: siteswitcher
   text-align: center;
   vertical-align: middle;
   width: 50%; }
+  .site-switcher__option a:hover, .site-switcher__option a:focus {
+    text-decoration: underline; }
   .site-switcher__option > a {
     display: block;
     width: 100%;
@@ -10684,8 +10723,11 @@ Styleguide: siteheader.searchform
     color: #000000;
     padding: 0; }
 
-.site-menu .listing__item-link:focus {
-  outline: 3px solid #404040; }
+.site-menu .listing__item-link {
+  border: 3px solid transparent; }
+  .site-menu .listing__item-link:focus {
+    border-color: #404040;
+    text-decoration: none; }
 
 .site-menu .smaller a {
   text-decoration: underline;
@@ -10758,7 +10800,7 @@ Styleguide: siteheader.searchform
     color: #fff;
     background: #006fb4;
     padding: 8px;
-    border: 4px solid #ffd617; }
+    outline: 4px solid #ffd617; }
 
 /*
 Social Media

@@ -11,13 +11,14 @@ Styleguide text.link
 }
 
 a {
-  &:link {
+  &:link{
     text-decoration: underline;
   }
 
   &:hover,
   &:active,
   &:focus {
+    text-decoration: underline;
     color: $grey-base;
   }
 
@@ -27,7 +28,28 @@ a {
     &:link {
       text-decoration: none;
     }
+    &:hover{
+      text-decoration: underline;
+    }
+    @include _focus_outline_border(3px, $yellow-light);
   }
+  .listing--frontpage &{
+    &:focus{
+      outline-offset: 10px;
+      .listing__title{
+        text-decoration: underline;
+        color: $grey-base;
+      }
+    }
+  }
+  &.listing__item-link{
+    &:focus {
+      .highlighted-item .highlighted-item__content {
+        text-decoration: underline;
+      }
+    }
+  }
+
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
     .site-political & {

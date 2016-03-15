@@ -32,7 +32,7 @@ Styleguide buttons
   font-size: $font-size-little;
   text-decoration: none;
   @extend .hidden-print;
-  
+
   &:link {
     text-decoration: none;
   }
@@ -43,11 +43,7 @@ Styleguide buttons
     text-decoration: underline;
     @include box-shadow(none);
   }
-
-  &:focus {
-    outline: 5px solid $yellow-light;
-    border-color: $yellow-light;
-  }
+  @include _focus_outline_border(3px, $yellow-light, -3px);
 
   &:after {
     line-height: inherit;
@@ -129,9 +125,8 @@ Styleguide buttons
 
     &:active,
     &:focus {
-      outline: 5px solid $yellow-light;
-      outline-offset: -5px;
-      text-decoration: none;
+      outline: 3px solid $yellow-light;
+      outline-offset: -3px;
     }
 
     &:focus {

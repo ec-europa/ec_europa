@@ -15,8 +15,12 @@
       padding: 0;
     }
   }
-  .listing__item-link:focus {
-    outline: 3px solid $grey-base;
+  .listing__item-link{
+    border: 3px solid transparent;
+    &:focus {
+      border-color: $grey-base;
+      text-decoration: none;
+    }
   }
 
   .smaller {

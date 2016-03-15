@@ -21,7 +21,7 @@ Styleguide footer
     &:hover,
     &:active,
     &:focus {
-      text-decoration: none; 
+      text-decoration: none;
     }
   }
   @extend .hidden-print;
@@ -66,6 +66,7 @@ Styleguide footer
       &:focus {
         background: none;
       }
+      @include _focus_outline_border(3px, $yellow-light, 5px);
     }
   }
   .footer__menu-item-right {
