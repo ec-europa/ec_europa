@@ -5534,14 +5534,14 @@ Styleguide buttons
   text-decoration: none; }
   .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
     text-decoration: none; }
-  .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
-    text-decoration: underline;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
   .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     outline: 3px solid #ffd617;
     outline-offset: -3px;
     text-decoration: underline; }
+  .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
+    text-decoration: underline;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
   .btn:after, .inpage-nav__navbar .inpage-nav__toggle:after {
     line-height: inherit;
     position: static; }
@@ -5549,12 +5549,9 @@ Styleguide buttons
     border-color: #004494;
     color: #004494;
     background: none; }
-    .btn.btn-default:hover, .btn.btn-collapse:hover, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:hover, .inpage-nav__navbar .btn-default.inpage-nav__toggle:hover {
+    .btn.btn-default:hover, .btn.btn-collapse:hover, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:hover, .inpage-nav__navbar .btn-default.inpage-nav__toggle:hover, .btn.btn-default:focus, .btn.btn-collapse:focus, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:focus, .inpage-nav__navbar .btn-default.inpage-nav__toggle:focus {
       background: #004494;
       color: #fff; }
-    .btn.btn-default:active, .btn.btn-collapse:active, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:active, .inpage-nav__navbar .btn-default.inpage-nav__toggle:active, .btn.btn-default:focus, .btn.btn-collapse:focus, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:focus, .inpage-nav__navbar .btn-default.inpage-nav__toggle:focus {
-      background: #fff;
-      color: #004494; }
   .btn.btn-primary, .inpage-nav__navbar .btn-primary.inpage-nav__toggle {
     border-color: #004494; }
     .btn.btn-primary:hover, .inpage-nav__navbar .btn-primary.inpage-nav__toggle:hover, .btn.btn-primary:active, .inpage-nav__navbar .btn-primary.inpage-nav__toggle:active {
@@ -5716,7 +5713,8 @@ Styleguide buttons.btn-
     line-height: 3.5 !important; }
 
 .site-information a.btn[href^="http"]:not(.is-internal), .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal) {
-  padding-right: 2.2em; }
+  padding-right: 2.2em;
+  outline-offset: 0; }
   .site-information a.btn[href^="http"]:not(.is-internal):after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal):after {
     position: absolute;
     line-height: 1.4 !important;
@@ -5862,10 +5860,16 @@ Styleguide form
   .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
   .has-error select:focus {
     color: #000;
-    border: 3px solid #ffd617;
     padding: 5px 11px;
     -webkit-box-shadow: none;
     box-shadow: none; }
+    .form-control:focus:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus:focus, .form-control.is-focused:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-focused:focus,
+    .has-error .form-control:focus:focus,
+    .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
+    .has-error select:focus:focus {
+      outline: 3px solid #ffd617;
+      outline-offset: -3px;
+      text-decoration: underline; }
   .form-control.is-disabled, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-disabled {
     color: #b3b4b5;
     background-color: #e2e2e2; }
@@ -5994,6 +5998,11 @@ Styleguide text.link
 a:link {
   text-decoration: underline; }
 
+a:focus {
+  outline: 3px solid #ffd617;
+  outline-offset: 2px;
+  text-decoration: underline; }
+
 a:hover, a:active, a:focus {
   text-decoration: underline;
   color: #404040; }
@@ -6012,8 +6021,13 @@ a:hover, a:active, a:focus {
 .site-switcher a:focus,
 .feedback-form a:focus {
   outline: 3px solid #ffd617;
-  outline-offset: 0;
+  outline-offset: 10px;
   text-decoration: underline; }
+
+.listing--cta a:focus,
+.site-switcher a:focus,
+.node-featured-item a:focus {
+  outline-offset: 0; }
 
 .listing--frontpage a:focus {
   outline-offset: 10px; }
@@ -6141,7 +6155,8 @@ ul.nav-tabs,
       ul.nav-tabs > li > a:focus,
       .nav-tabs > li > a:focus {
         background: #ffd617;
-        border-bottom-color: #ffd617; }
+        border-bottom-color: #ffd617;
+        outline: none; }
 
 .nav-tabs--with-content {
   display: none; }
@@ -6532,10 +6547,10 @@ Its implementation ensures the correct vertical spacing between different groups
 it uses the margin collapse mechanism (css2) so that you don't have to worry when you place two
 sections one after the other, only one of the two margins will be applied, indeed.
 
-It can contain different set of html elements and components, but the predefined ones are its 
+It can contain different set of html elements and components, but the predefined ones are its
 unique element {section group}, the {listing wrapper}, the {sidebar-field-group}.
 
-The way it works is that the first {section group} in the section doesn't get any margin (the parent 
+The way it works is that the first {section group} in the section doesn't get any margin (the parent
 is already defining that) while the last doesn't get the margin-bottom (still for the same reason).
 When there's only one {section group} element it doesn't get any vertical margin.
 Please do not reset any of these margins.
@@ -6548,7 +6563,7 @@ Do not wrap a section component into a row element, this would break the collpas
 
 Markup: html/section.html
 
-Styleguide sections 
+Styleguide sections
 */
 /*
 section--row-two modifier
@@ -6582,7 +6597,8 @@ Styleguide sections.3
 */
 .section {
   margin-bottom: 1.667em;
-  margin-top: 1.667em; }
+  margin-top: 1.667em;
+  overflow: hidden; }
   .section .section__group:first-child, .section .nav-tabs--with-content + .tab-content > :first-child,
   .section .section:first-child,
   .section .listing__wrapper:first-child,
@@ -6663,7 +6679,6 @@ Styleguide sections.3
   Placeholder for adding a background on the .footer-top
 */
 .footer-top {
-  overflow: hidden;
   background: #f2f2f2;
   margin-bottom: 1px; }
   .footer-top .container-fluid, .footer-top .section__group--full-width > *, .footer-top .block--full-width > *, .footer-top .field--full-width > * {
@@ -6827,8 +6842,9 @@ Styleguide breadcrumb
   font-weight: 600;
   position: relative;
   border-radius: 0;
-  overflow: hidden;
-  line-height: normal; }
+  line-height: normal;
+  float: left;
+  width: 100%; }
   .breadcrumb ol,
   .breadcrumb ul {
     list-style: none;
@@ -7140,6 +7156,10 @@ Styleguide contextnav
     margin-right: 0; }
   .context-nav__item a:link {
     text-decoration: none; }
+  .context-nav__item a:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: 2px;
+    text-decoration: underline; }
   .context-nav__item a:hover {
     text-decoration: underline; }
 
@@ -7413,12 +7433,15 @@ Styleguide form.feedback-message
   .feedback-form__wrapper:hover, .feedback-form__wrapper:active, .feedback-form__wrapper:focus, .feedback-form__wrapper.is-open {
     background: #f2f2f2; }
 
-.feedback-form__trigger {
+a.feedback-form__trigger {
   text-decoration: none;
   color: #004494;
   display: inline-block;
-  padding: 0.667em 0 0.556em 2.500em;
   font-size: 0.889em; }
+  a.feedback-form__trigger:focus {
+    outline-offset: 0; }
+  a.feedback-form__trigger:active {
+    outline: none; }
 
 .feedback-form__content {
   margin: 0.8em 0 2em; }
@@ -7509,8 +7532,7 @@ Styleguide field
   font-weight: 600; }
 
 .field--labeled {
-  margin-bottom: 0.556em;
-  overflow: hidden; }
+  margin-bottom: 0.556em; }
   .field--labeled:last-child {
     margin-bottom: 0; }
   .field--labeled .field__label {
@@ -7892,12 +7914,13 @@ Styleguide footer
       padding-left: 0; }
     .footer__menu .footer__menu-item a, .footer__menu .footer__menu-item-right a {
       padding: 0; }
-      .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item-right a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item-right a:active, .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
-        background: none; }
       .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
         outline: 3px solid #ffd617;
         outline-offset: 5px;
         text-decoration: underline; }
+      .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item-right a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item-right a:active, .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
+        background: none;
+        text-decoration: none; }
   .footer__menu .footer__menu-item-right {
     float: right; }
 
@@ -8939,7 +8962,9 @@ Styleguide inpagenav
     background: none;
     text-decoration: underline; }
   .inpage-nav .inpage_nav__list-item:focus {
-    background: #ffd617 !important; }
+    background: #ffd617 !important;
+    outline: none;
+    text-decoration: underline; }
 
 .inpage-nav__navbar {
   background-color: #ffffff;
@@ -9155,6 +9180,8 @@ Styleguide: siteheader.langselect
     font-weight: bold;
     padding: 7.5px 15px;
     border: 3px solid transparent; }
+    .lang-select-site .lang-select-site__link:hover {
+      text-decoration: underline; }
     .lang-select-site .lang-select-site__link:focus {
       border-color: #ffd617;
       outline: none; }
@@ -9512,8 +9539,9 @@ a.listing__title {
   list-style: none;
   list-style-image: none;
   padding: 1.22em 0 1.11em;
-  overflow: hidden;
-  max-width: 32em; }
+  max-width: 32em;
+  width: 100%;
+  float: left; }
   .listing__item:first-child {
     border-top: 1px solid #ececec; }
   .listing__item:hover a .listing__title,
@@ -9530,10 +9558,14 @@ a.listing__title {
 
 .listing__item-link {
   display: block;
-  overflow: hidden;
+  float: left;
+  width: 100%;
   color: #404040; }
   .listing__item-link:active, .listing__item-link:focus {
     text-decoration: none; }
+    .listing__item-link:active .listing__title, .listing__item-link:focus .listing__title {
+      text-decoration: underline;
+      color: #404040; }
   .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
     display: none !important; }
   .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title,
@@ -9615,6 +9647,7 @@ a.listing__title {
   text-align: right;
   font-weight: 600;
   display: block;
+  float: right;
   text-transform: uppercase;
   font-size: 0.833em; }
   .listing__read-more:after {
@@ -9709,6 +9742,9 @@ Styleguide listing.2.4
 @media (min-width: 992px) {
   .listing__wrapper--two-columns .listing {
     margin-bottom: 0; } }
+
+.listing--teaser__wrapper {
+  overflow: hidden; }
 
 .logo, .logo--logotype, .no-svg .logo--logotype {
   display: block;
@@ -10307,6 +10343,10 @@ Styleguide page-header.informational-home
     color: #fff; }
     .page-header a:hover:not(.breadcrumb__link, .btn) {
       color: #ffd617; }
+    .page-header a:focus {
+      outline: 3px solid #ffd617;
+      outline-offset: 2px;
+      text-decoration: underline; }
     .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
@@ -10663,7 +10703,7 @@ Markup: html/search-form.html
 Styleguide: siteheader.searchform
 */
 .search-form {
-  overflow: hidden;
+  float: left;
   border: 1px solid #b3b4b5;
   margin-bottom: 1em; }
 
@@ -10723,11 +10763,10 @@ Styleguide: siteheader.searchform
     color: #000000;
     padding: 0; }
 
-.site-menu .listing__item-link {
-  border: 3px solid transparent; }
-  .site-menu .listing__item-link:focus {
-    border-color: #404040;
-    text-decoration: none; }
+.site-menu .listing__item-link:focus {
+  outline: 3px solid #404040;
+  outline-offset: 8px;
+  text-decoration: underline; }
 
 .site-menu .smaller a {
   text-decoration: underline;
@@ -10800,7 +10839,8 @@ Styleguide: siteheader.searchform
     color: #fff;
     background: #006fb4;
     padding: 8px;
-    outline: 4px solid #ffd617; }
+    outline: 4px solid #ffd617;
+    outline-offset: 0; }
 
 /*
 Social Media
@@ -10813,7 +10853,9 @@ Styleguide social
 */
 .social-media-links {
   background-color: #ececec;
-  padding: 30px; }
+  padding: 30px;
+  float: left;
+  width: 100%; }
   .social-media-links .social-media-links__list, .social-media-links .social-media-links--webtool-vertical .wtShareList ul, .social-media-links--webtool-vertical .wtShareList .social-media-links ul, .social-media-links .social-media-links--webtool-horizontal .wtShareList ul, .social-media-links--webtool-horizontal .wtShareList .social-media-links ul {
     list-style-type: none;
     padding: 0px !important;
@@ -10829,6 +10871,10 @@ Styleguide social
   .social-media-links__item > a, .social-media-links--webtool-vertical .wtShareList > a, .social-media-links--webtool-horizontal .wtShareList > a, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a {
     width: 100%;
     display: block; }
+    .social-media-links__item > a:focus, .social-media-links--webtool-vertical .wtShareList > a:focus, .social-media-links--webtool-horizontal .wtShareList > a:focus, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:focus, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:focus {
+      outline: 3px solid #ffd617;
+      outline-offset: -1px;
+      text-decoration: underline; }
     .social-media-links__item > a:before, .social-media-links--webtool-vertical .wtShareList > a:before, .social-media-links--webtool-horizontal .wtShareList > a:before, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:before, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:before {
       margin-bottom: 0px; }
     .social-media-links__item > a:after, .social-media-links--webtool-vertical .wtShareList > a:after, .social-media-links--webtool-horizontal .wtShareList > a:after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:after, .social-media-links__item > a.is-external:after, .social-media-links--webtool-vertical .wtShareList > a.is-external:after, .social-media-links--webtool-horizontal .wtShareList > a.is-external:after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.is-external:after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.is-external:after, .site-political .social-media-links__item > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-vertical .site-political .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-vertical .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-horizontal .site-political .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-horizontal .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-vertical .wtShareList .site-political .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-vertical .wtShareList .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList .site-political .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information .social-media-links__item > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-vertical .site-information .wtShareList > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-vertical .wtShareList > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .site-information .wtShareList > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-horizontal .wtShareList > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-vertical .wtShareList .site-information .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-vertical .wtShareList .wtShareLink > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList .site-information .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links__item > a.listing__title:after, .social-media-links--webtool-vertical .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareList > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-vertical .wtShareList > a.listing__title:after, .social-media-links--webtool-horizontal .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareList > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-horizontal .wtShareList > a.listing__title:after, .social-media-links--webtool-vertical .wtShareList .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareLink > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.listing__title:after, .social-media-links--webtool-horizontal .wtShareList .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareLink > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links__item > a.listing__title:after, .social-media-links--webtool-vertical .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareList > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-vertical .wtShareList > a.listing__title:after, .social-media-links--webtool-horizontal .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareList > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-horizontal .wtShareList > a.listing__title:after, .social-media-links--webtool-vertical .wtShareList .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.listing__title:after, .social-media-links--webtool-horizontal .wtShareList .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.listing__title:after {
@@ -10838,10 +10884,15 @@ Styleguide social
     margin-top: 1.2em; }
 
 .social-media-links--webtool-vertical .wtShareList, .social-media-links--webtool-horizontal .wtShareList {
+  overflow: visible;
+  float: left;
   background: transparent !important;
   padding: 0; }
   .social-media-links--webtool-vertical .wtShareList a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList a[href^="http"]:not(.is-internal):after {
     display: none !important; }
+  .social-media-links--webtool-vertical .wtShareList a:focus, .social-media-links--webtool-horizontal .wtShareList a:focus {
+    outline-offset: -1px;
+    text-decoration: underline; }
   .social-media-links--webtool-vertical .wtShareList li, .social-media-links--webtool-horizontal .wtShareList li {
     float: none; }
   .social-media-links--webtool-vertical .wtShareList a, .social-media-links--webtool-horizontal .wtShareList a {
@@ -10850,17 +10901,21 @@ Styleguide social
   .social-media-links--webtool-vertical .wtShareList a.wtShareMore, .social-media-links--webtool-horizontal .wtShareList a.wtShareMore {
     font-size: 0.8em;
     margin-top: 1.2em; }
+    .social-media-links--webtool-vertical .wtShareList a.wtShareMore:focus, .social-media-links--webtool-horizontal .wtShareList a.wtShareMore:focus {
+      outline-offset: 2px; }
   .social-media-links--webtool-vertical .wtShareList .wtShareLink, .social-media-links--webtool-horizontal .wtShareList .wtShareLink {
     font-size: 1em; }
 
 .social-media-links--webtool-horizontal {
   clear: both; }
-  .social-media-links--webtool-horizontal .wtShareList li {
-    float: left; }
-  .social-media-links--webtool-horizontal .wtShareList ul.wtShareNetworks {
-    max-width: none !important; }
-  .social-media-links--webtool-horizontal .wtShareList a {
-    width: inherit; }
+  .social-media-links--webtool-horizontal .wtShareList {
+    overflow: visible; }
+    .social-media-links--webtool-horizontal .wtShareList li {
+      float: left; }
+    .social-media-links--webtool-horizontal .wtShareList ul.wtShareNetworks {
+      max-width: none !important; }
+    .social-media-links--webtool-horizontal .wtShareList a {
+      width: inherit; }
 
 /*
 Splash Page

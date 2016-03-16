@@ -19,7 +19,7 @@ Styleguide field
   // Why do we have this html? (body field in priorities)
   .sections .container {
     padding: 0;
-  } 
+  }
 }
 
 .field__label {
@@ -30,7 +30,6 @@ Styleguide field
 
 .field--labeled {
   margin-bottom: 0.556em;
-  overflow: hidden;
 
   &:last-child {
     margin-bottom: 0;

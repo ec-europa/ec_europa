@@ -16,11 +16,7 @@
     }
   }
   .listing__item-link{
-    border: 3px solid transparent;
-    &:focus {
-      border-color: $grey-base;
-      text-decoration: none;
-    }
+    @include _focus_outline_border(3px, $grey-base, 8px);
   }
 
   .smaller {

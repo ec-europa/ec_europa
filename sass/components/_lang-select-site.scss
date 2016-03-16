@@ -24,6 +24,9 @@ Styleguide: siteheader.langselect
     font-weight: bold;
     padding: 7.5px 15px;
     border: 3px solid transparent;
+    &:hover{
+      text-decoration: underline;
+    }
     &:focus {
       border-color: $yellow-light;
       outline: none;

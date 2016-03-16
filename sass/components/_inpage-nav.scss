@@ -55,6 +55,8 @@ Styleguide inpagenav
 
     &:focus {
       background: $yellow-light !important;
+      outline: none;
+      text-decoration: underline;
     }
   }
 }

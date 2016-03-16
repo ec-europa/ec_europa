@@ -388,8 +388,9 @@ a.listing__title {
   list-style: none;
   list-style-image: none;
   padding: 1.22em 0 1.11em;
-  overflow: hidden;
   max-width: 32em;
+  width: 100%;
+  float: left;
 
   &:first-child {
     border-top: 1px solid $grey-lighter;
@@ -417,12 +418,16 @@ a.listing__title {
 // .listing__item-link element
 .listing__item-link {
   display: block;
-  overflow: hidden;
+  float: left;
+  width: 100%;
   color: $grey-base;
-
   &:active,
   &:focus {
     text-decoration: none;
+    .listing__title{
+      text-decoration: underline;
+      color: $grey-base;
+    }
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
@@ -535,6 +540,7 @@ a.listing__title {
   text-align: right;
   font-weight: $font-weight-bold;
   display: block;
+  float: right;
   text-transform: uppercase;
   font-size: $font-size-tiny;
 
@@ -699,3 +705,6 @@ Styleguide listing.2.4
   }
 }
 
+.listing--teaser__wrapper{
+  overflow: hidden;
+}

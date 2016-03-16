@@ -14,7 +14,7 @@ a {
   &:link{
     text-decoration: underline;
   }
-
+  @include _focus_outline_border(3px, $yellow-light, 2px);
   &:hover,
   &:active,
   &:focus {
@@ -31,9 +31,16 @@ a {
     &:hover{
       text-decoration: underline;
     }
-    @include _focus_outline_border(3px, $yellow-light);
+    @include _focus_outline_border(3px, $yellow-light,10px);
   }
-  .listing--frontpage &{
+  .listing--cta &,
+  .site-switcher &,
+  .node-featured-item &{
+    &:focus{
+      outline-offset: 0;
+    }
+  }
+  .listing--frontpage & {
     &:focus{
       outline-offset: 10px;
       .listing__title{
@@ -42,7 +49,7 @@ a {
       }
     }
   }
-  &.listing__item-link{
+  &.listing__item-link {
     &:focus {
       .highlighted-item .highlighted-item__content {
         text-decoration: underline;

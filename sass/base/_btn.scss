@@ -37,13 +37,14 @@ Styleguide buttons
     text-decoration: none;
   }
 
+  @include _focus_outline_border(3px, $yellow-light, -3px);
+
   &:hover,
   &:active,
   &:focus {
     text-decoration: underline;
     @include box-shadow(none);
   }
-  @include _focus_outline_border(3px, $yellow-light, -3px);
 
   &:after {
     line-height: inherit;
@@ -55,15 +56,10 @@ Styleguide buttons
     color: $brand-primary;
     background: none;
 
-    &:hover {
+    &:hover,
+    &:focus  {
       background: $brand-primary;
       color: #fff;
-    }
-
-    &:active,
-    &:focus {
-      background: #fff;
-      color: $brand-primary;
     }
   }
 
@@ -317,6 +313,7 @@ a.btn {
     }
     .site-information & {
       @include _btn_external_link_mixin();
+      outline-offset: 0;
     }
   }
 }

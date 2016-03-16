@@ -58,10 +58,11 @@ Styleguide page-header.informational-home
 
   a {
     color: #fff;
-    
+
     &:hover:not(.breadcrumb__link, .btn) {
       color: $yellow-light;
     }
+    @include _focus_outline_border(3px, $yellow-light, 2px);
 
     &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title) {
       .site-political & {
