@@ -10628,20 +10628,27 @@ Styleguide: siteheader.searchform
   border: 1px solid #b3b4b5;
   margin-bottom: 1em; }
 
-.search-form__textfield-wrapper {
-  margin: 0;
-  width: 83%;
-  float: left; }
+.search-form > div {
+  position: relative;
+  display: table;
+  border-collapse: separate; }
 
-.search-form__textfield {
+/*.search-form__textfield-wrapper {
   margin: 0;
-  border: none;
   width: 83%;
-  float: left; }
+  float: left;
+}*/
+.search-form__textfield {
+  /*width: 83%;*/
+  width: 100%;
+  float: left;
+  display: table-cell;
+  margin: 0;
+  border: none; }
 
 .search-form__btn {
   width: 17%;
-  float: left;
+  /*float: left;*/
   text-indent: 10em;
   position: relative;
   padding-top: 0;
@@ -10660,10 +10667,11 @@ Styleguide: siteheader.searchform
 
 @media (min-width: 480px) {
   .search-form__textfield {
-    width: 67%; }
+    /*width: 67%;*/ }
   .search-form__btn {
     text-indent: 0;
-    width: 33%; }
+    /*width: 33%;*/
+    margin-right: -1px; }
     .search-form__btn:before {
       display: none !important; } }
 
