@@ -10,7 +10,7 @@ Styleguide date-block
 $agenda-yellow: #FED437;
 
 .date-block {
-  float: left;
+  /*float: left;*/
   background: $grey-lightest;
   border-bottom: 0.222em solid $agenda-yellow;
   width: 5.5em;
@@ -22,15 +22,15 @@ $agenda-yellow: #FED437;
   overflow: hidden;
 
   &:after {
-    content: "";
+    content: " ";
     position: absolute;
     top: -0.667em;
     right: -0.200em;
     width: 0;
-  	height: 0;
-  	border-top: 1em solid transparent;
-  	border-bottom: 1em solid transparent;
-  	border-right:1em solid #fff;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    border-right:1em solid #fff;
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform: rotate(135deg);
@@ -56,8 +56,11 @@ $agenda-yellow: #FED437;
   line-height: 1;
 }
 
-
 .date-block__element {
-  width: 100%;
-  float: left;
+  /*width: 100%;
+  width: auto;*/
+  /*float: left;*/
+  /*display: inline-block;*/
+  display: block;
+  /*border: 1px solid red;*/
 }

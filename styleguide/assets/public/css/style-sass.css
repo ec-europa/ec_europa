@@ -7141,7 +7141,7 @@ Markup: html/date-block.html
 Styleguide date-block
 */
 .date-block {
-  float: left;
+  /*float: left;*/
   background: #f2f2f2;
   border-bottom: 0.222em solid #FED437;
   width: 5.5em;
@@ -7152,7 +7152,7 @@ Styleguide date-block
   position: relative;
   overflow: hidden; }
   .date-block:after {
-    content: "";
+    content: " ";
     position: absolute;
     top: -0.667em;
     right: -0.200em;
@@ -7179,8 +7179,12 @@ Styleguide date-block
   line-height: 1; }
 
 .date-block__element, .date-block__day-text, .date-block__day, .date-block__month {
-  width: 100%;
-  float: left; }
+  /*width: 100%;
+  width: auto;*/
+  /*float: left;*/
+  /*display: inline-block;*/
+  display: block;
+  /*border: 1px solid red;*/ }
 
 /*
 Datepicker
