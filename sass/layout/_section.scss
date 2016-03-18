@@ -86,7 +86,7 @@ $section-spacing: 1.667em;
 .section {
   margin-bottom: $section-spacing;
   margin-top: $section-spacing;
-  overflow: hidden;
+  //overflow: hidden;
 
   .section__group {
     @extend .clearfix;

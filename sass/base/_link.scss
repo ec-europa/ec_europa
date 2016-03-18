@@ -33,6 +33,9 @@ a {
     }
     @include _focus_outline_border(3px, $yellow-light,10px);
   }
+  .feedback-form{
+    outline-offset: 0;
+  }
   .listing--cta &,
   .site-switcher &,
   .node-featured-item &{
@@ -54,6 +57,11 @@ a {
       .highlighted-item .highlighted-item__content {
         text-decoration: underline;
       }
+    }
+  }
+  .listing--cta & {
+    &:focus {
+      color: #ffffff;
     }
   }
 

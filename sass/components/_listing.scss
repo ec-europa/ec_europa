@@ -132,8 +132,10 @@ ul.listing--title {
 
 .listing--title {
   .listing__title {
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: underline !important;
+      color: $grey-base;
     }
   }
 }
@@ -296,6 +298,13 @@ Styleguide listing.3
   .listing__item-link {
     padding: $font-size-mid;
     background-color: $brand-primary;
+    &:hover,
+    &:active,
+    &:focus {
+      .listing__title {
+        color: #ffffff;
+      }
+    }
   }
 
   .listing__item {
@@ -305,15 +314,6 @@ Styleguide listing.3
     a {
       color: #ffffff;
     }
-
-    &:hover,
-    &:active,
-    &:focus {
-      .listing__title {
-        color: #ffffff;
-      }
-    }
-
     &:first-child {
       border-top: none;
     }
@@ -402,7 +402,6 @@ a.listing__title {
     a .listing__title,
     a.listing__title {
       text-decoration: underline;
-      color: $grey-base;
     }
   }
 
@@ -513,7 +512,7 @@ a.listing__title {
   position: relative;
   @extend .h3;
 
-  a & {
+  a:link & {
     color: $brand-primary;
   }
 
@@ -705,6 +704,3 @@ Styleguide listing.2.4
   }
 }
 
-.listing--teaser__wrapper{
-  overflow: hidden;
-}

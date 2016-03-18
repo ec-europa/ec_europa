@@ -161,7 +161,6 @@ Styleguide inpagenav
       &.active {
         .inpage_nav__list-item {
           color: inherit;
-          background: none;
         }
       }
       .inpage_nav__list-item {
@@ -170,7 +169,8 @@ Styleguide inpagenav
         padding: 0.8em 0 0.8em 1em;
         font-size: $font-size-little;
 
-        &:hover {
+        &:hover,
+        &:focus {
           background: none;
           text-decoration: underline;
         }
