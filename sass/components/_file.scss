@@ -146,13 +146,13 @@ Styleguide file
 }
 
 .file__translations {
-  overflow: hidden;
   margin-bottom: 1em;
+  float: left;
+  width: 100%;
 
   .file__translations-control {
     margin-bottom: 0.3em;
     padding: 0 1.333em;
-    outline: none;
 
     &:active, &:hover, &:focus {
       text-decoration: none;
