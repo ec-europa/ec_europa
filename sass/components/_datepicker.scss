@@ -159,13 +159,13 @@ $datepicker-color-background: #eaeaea;
   }
 }
 
-// Positioning
-.date-popup-wrapper {
+// Positioning the calendar icon
+.date-picker {
   position: relative;
   .icon{
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: .5em;
+    right: .5em;
     //pointer-events:none to get the Icon not interfering with the clickable area.
     pointer-events: none;
     color: $grey;

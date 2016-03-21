@@ -231,13 +231,13 @@ function europa_form_element(&$variables) {
 
   // Adding the calendar icon on text fields with JS UI PopUp calendar.
   if ($variables['element']['#type'] == 'date_popup') {
-    $prefix = '<div class="date-popup-wrapper">';
+
+    $prefix = '<div class="date-picker">';
     $suffix = '<span class="icon icon--calendar"></span>';
     $output = ' ' . $prefix . $element['#children'] . $suffix . "\n";
   }
 
   $output .= "</div>\n";
-
   return $output;
 
 }
