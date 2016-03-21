@@ -7055,6 +7055,8 @@ Styleguide comment
   font-weight: bold;
   font-size: 1em;
   padding: 0.833em 0; }
+  .comment__title:focus {
+    outline-offset: 0; }
 
 .comment__author {
   display: inline-block;
@@ -11071,7 +11073,6 @@ Styleguide tags
   padding-top: 0.15em; }
 
 .tags__items {
-  overflow: hidden;
   vertical-align: middle; }
 
 .tags__item, .facet-tag__value {
@@ -11086,7 +11087,7 @@ Styleguide tags
   padding: 0.5em;
   text-transform: lowercase;
   color: #404040;
-  outline: 2px transparent solid; }
+  outline: 3px transparent solid; }
 
 .tags__item a, .facet-tag__value a,
 a.tags__item,
@@ -11104,7 +11105,7 @@ a.facet-tag__value {
   a.tags__item:focus,
   a.facet-tag__value:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #ffd617; }
+    box-shadow: 0 0 0 3px #ffd617; }
 
 /*
 Facet tag
