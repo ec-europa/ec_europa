@@ -6,29 +6,32 @@ Markup: html/search-form.html
 Styleguide: siteheader.searchform
 */
 .search-form {
+  margin-bottom: 1em;
   overflow: hidden;
   border: 1px solid $grey;
-  margin-bottom: 1em;
   @extend .hidden-print;
-}
 
-.search-form > div {
-  position: relative;
-  display: table;
-  border-collapse: separate;
-}
+  & > div {
+    display: table;
+    border-collapse: separate;
+  }
 
-/*.search-form__textfield-wrapper {
-  margin: 0;
-  width: 83%;
-  float: left;
-}*/
+  .search-form__textfield-wrapper,
+  .search-form__btn-wrapper {
+    position: relative;
+    display: table-cell;
+  }
+
+  .search-form__btn-wrapper {
+    width: 1%;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+}
 
 .search-form__textfield {
-  /*width: 83%;*/
   width: 100%;
-  float: left;
-  display: table-cell;
+  //float: left;
   margin: 0;
   border: none;
 }
@@ -36,45 +39,53 @@ Styleguide: siteheader.searchform
 .search-form__btn {
   @extend .icon;
   @extend .icon--search;
-  width: 17%;
-  /*float: left;*/
-  text-indent: 10em;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
   min-height: 2.75em;
+  margin-right: -1px;
+  margin-bottom: 0;
+  padding: 0 22px;
+  text-indent: -999em;
+  overflow: visible;
   border: none !important;
 
   &:before {
-    text-indent: 0;
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.5em;
     width: 100%;
+    font-size: 1.5em;
     line-height: 1.9em;
-  }
-}
-
-@include breakpoint(screen-xs-min) {
-  .search-form__textfield {
-    /*width: 67%;*/
-  }
-
-  .search-form__btn {
     text-indent: 0;
-    /*width: 33%;*/
-    margin-right: -1px;
-
-    &:before {
-      display: none !important;
-    }
   }
 }
 
 @include breakpoint(screen-md-min) {
   .search-form {
-    width: 340px;
+    width: auto;
+
+    & > div {
+      display: block;
+    }
+
+    .search-form__textfield-wrapper {
+      width: 260px;
+      display: inline-block;
+    }
+
+    .search-form__btn-wrapper {
+      float: right;
+      width: auto;
+      display: block;
+      vertical-align: inherit;
+      white-space: inherit;
+    }
+  }
+
+  .search-form__btn {
+    padding: 0 1em;
+    text-indent: 0;
+
+    &:before {
+      display: none !important;
+    }
   }
 }
