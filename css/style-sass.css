@@ -7817,7 +7817,7 @@ Styleguide filters.filters
   .filters__btn-reset--small,
   .filters__btn-collapse {
     display: none; }
-  html.js ctools-use-ajax.filters__btn-submit {
+  html.js .filters__btn-submit.ctools-use-ajax {
     display: none; }
   html.js.ie8 .filters__btn-submit {
     display: block; } }
