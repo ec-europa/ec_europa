@@ -68,7 +68,6 @@ Styleguide tags.facettag
 
 .facet-tag {
   @extend .tags;
-  @extend .hidden-print;
 }
 
 .facet-tag__label {

@@ -10,7 +10,6 @@ Styleguide date-block
 $agenda-yellow: #FED437;
 
 .date-block {
-  /*float: left;*/
   background: $grey-lightest;
   border-bottom: 0.222em solid $agenda-yellow;
   width: 5.5em;
@@ -57,10 +56,5 @@ $agenda-yellow: #FED437;
 }
 
 .date-block__element {
-  /*width: 100%;
-  width: auto;*/
-  /*float: left;*/
-  /*display: inline-block;*/
   display: block;
-  /*border: 1px solid red;*/
 }

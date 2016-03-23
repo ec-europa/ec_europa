@@ -5408,7 +5408,7 @@ button.close {
 @media print {
   .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .btn-group, .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .form-group, ul.nav-tabs,
   .nav-tabs, .breadcrumb, .feedback-message, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
-  #skip-link, .social-media-links, .facet-tag {
+  #skip-link, .social-media-links {
     display: none !important; } }
 
 /**
@@ -7141,7 +7141,6 @@ Markup: html/date-block.html
 Styleguide date-block
 */
 .date-block {
-  /*float: left;*/
   background: #f2f2f2;
   border-bottom: 0.222em solid #FED437;
   width: 5.5em;
@@ -7179,12 +7178,7 @@ Styleguide date-block
   line-height: 1; }
 
 .date-block__element, .date-block__day-text, .date-block__day, .date-block__month {
-  /*width: 100%;
-  width: auto;*/
-  /*float: left;*/
-  /*display: inline-block;*/
-  display: block;
-  /*border: 1px solid red;*/ }
+  display: block; }
 
 /*
 Datepicker
@@ -8571,6 +8565,12 @@ Styleguide icon.social
 .icon-social--youtube:hover:before {
   background-image: url("../images/svg/icons/social/youtube_hover.svg"); }
 
+.icon-social--print:before {
+  background: url("../images/svg/icons/social/print.svg") no-repeat; }
+
+.icon-social--print:hover:before {
+  background-image: url("../images/svg/icons/social/print_hover.svg"); }
+
 .no-svg .icon-social--arto:before {
   background: url("../images/png/icons/social/arto.png") no-repeat; }
 
@@ -8876,6 +8876,12 @@ Styleguide icon.social
 
 .no-svg .icon-social--youtube:hover:before {
   background-image: url("../images/png/icons/social/youtube_hover.png"); }
+
+.no-svg .icon-social--print:before {
+  background: url("../images/png/icons/social/print.png") no-repeat; }
+
+.no-svg .icon-social--print:hover:before {
+  background-image: url("../images/png/icons/social/print_hover.png"); }
 
 /*
 Inpage navigation
@@ -10470,19 +10476,15 @@ Styleguide rsslink
   line-height: 40px; }
 
 .rss-link__icon {
-  float: left;
-  padding-left: 80px;
-  z-index: 10; }
+  float: left; }
   .rss-link__icon:before {
     width: 100%; }
 
 .rss-link__text {
+  display: inline-block;
   font-size: 0.778em;
   font-weight: normal;
-  text-decoration: none;
-  position: absolute;
-  right: 0;
-  z-index: 9; }
+  text-decoration: none; }
 
 @media (min-width: 992px) {
   .rss-link__wrapper {

@@ -40,20 +40,17 @@ $rss-link-icon-height: 40px;
 
 .rss-link__icon {
   float: left;
-  padding-left: 80px;
-  z-index: 10;
+
   &:before {
     width: 100%;
   }
 }
 
 .rss-link__text {
+  display: inline-block;
   font-size: $font-size-xsmall;
   font-weight: normal;
   text-decoration: none;
-  position: absolute;
-  right: 0;
-  z-index: 9;
 }
 
 @include breakpoint(screen-md-min) {
