@@ -46,7 +46,7 @@ a {
   .listing--frontpage & {
     &:focus{
       outline-offset: 10px;
-      .listing__title{
+      .listing__title {
         text-decoration: underline;
         color: $grey-base;
       }

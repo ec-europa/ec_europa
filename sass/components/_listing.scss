@@ -512,7 +512,8 @@ a.listing__title {
   position: relative;
   @extend .h3;
 
-  a:link & {
+  a:link &,
+  a:visited &{
     color: $brand-primary;
   }
 
