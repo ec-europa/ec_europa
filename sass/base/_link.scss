@@ -25,12 +25,6 @@ a {
   .listing &,
   .site-switcher &,
   .feedback-form & {
-    &:link {
-      text-decoration: none;
-    }
-    &:hover{
-      text-decoration: underline;
-    }
     @include _focus_outline_border(3px, $yellow-light,10px);
   }
   .feedback-form{
