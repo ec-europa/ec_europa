@@ -159,11 +159,24 @@ $datepicker-color-background: #eaeaea;
   }
 }
 
+// Positioning the calendar icon
+.date-picker {
+  position: relative;
+  .icon{
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    //pointer-events:none to get the Icon not interfering with the clickable area.
+    pointer-events: none;
+    color: $grey;
+  }
+}
+
 @include breakpoint(screen-xs-min) {
   #ui-datepicker-div {
     width: auto;
   }
-  
+
   .ui-datepicker {
     table.ui-datepicker-calendar {
       width: auto !important;
