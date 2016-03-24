@@ -5541,7 +5541,8 @@ Styleguide buttons
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     text-decoration: underline;
     -webkit-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    z-index: 999; }
   .btn:after, .inpage-nav__navbar .inpage-nav__toggle:after {
     line-height: inherit;
     position: static; }
@@ -6007,12 +6008,16 @@ a:hover, a:active, a:focus {
   text-decoration: underline;
   color: #404040; }
 
-.listing a:focus,
-.site-switcher a:focus,
-.feedback-form a:focus {
-  outline: 3px solid #ffd617;
-  outline-offset: 10px;
-  text-decoration: underline; }
+.listing a,
+.site-switcher a,
+.feedback-form a {
+  z-index: 999; }
+  .listing a:focus,
+  .site-switcher a:focus,
+  .feedback-form a:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: 10px;
+    text-decoration: underline; }
 
 a .feedback-form {
   outline-offset: 0; }
@@ -9392,7 +9397,8 @@ ul.listing--title {
   ul.listing--title a.listing__title,
   ul.listing--title a .listing__title {
     display: block;
-    padding-right: 2em; }
+    padding-right: 2em;
+    text-decoration: none; }
   .listing--title a.listing__title:after,
   ul.listing--title a.listing__title:after {
     line-height: 1.6; }
@@ -10643,8 +10649,10 @@ Styleguide: siteswitcher
   text-align: center;
   vertical-align: middle;
   width: 50%; }
-  .site-switcher__option a:hover, .site-switcher__option a:focus {
-    text-decoration: underline; }
+  .site-switcher__option a {
+    text-decoration: none; }
+    .site-switcher__option a:hover, .site-switcher__option a:focus {
+      text-decoration: underline; }
   .site-switcher__option > a {
     display: block;
     width: 100%;
