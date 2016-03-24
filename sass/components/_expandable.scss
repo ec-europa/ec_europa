@@ -35,9 +35,14 @@ Styleguide expandable
   h3 {
     font-size: $font-size-mid;
   }
-
-  &:hover {
+  &:link{
+    text-decoration: none;
+  }
+  &:hover,
+  &:focus {
     background: $yellow-light;
+    outline-offset: 0;
+    text-decoration: underline;
     outline-offset: 0;
   }
 }

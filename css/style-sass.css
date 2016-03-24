@@ -5536,13 +5536,14 @@ Styleguide buttons
     text-decoration: none; }
   .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     outline: 3px solid #ffd617;
-    outline-offset: -3px !important;
+    outline-offset: -3px;
     text-decoration: underline; }
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     text-decoration: underline;
     -webkit-box-shadow: none;
     box-shadow: none;
-    z-index: 999; }
+    z-index: 999;
+    position: relative; }
   .btn:after, .inpage-nav__navbar .inpage-nav__toggle:after {
     line-height: inherit;
     position: static; }
@@ -6011,7 +6012,8 @@ a:hover, a:active, a:focus {
 .listing a,
 .site-switcher a,
 .feedback-form a {
-  z-index: 999; }
+  z-index: 999;
+  text-decoration: none; }
   .listing a:focus,
   .site-switcher a:focus,
   .feedback-form a:focus {
@@ -7380,8 +7382,12 @@ Styleguide expandable
     margin-right: 0.833em; }
   .expandable__toggle h3 {
     font-size: 1.222em; }
-  .expandable__toggle:hover {
+  .expandable__toggle:link {
+    text-decoration: none; }
+  .expandable__toggle:hover, .expandable__toggle:focus {
     background: #ffd617;
+    outline-offset: 0;
+    text-decoration: underline;
     outline-offset: 0; }
 
 /*
@@ -11145,7 +11151,8 @@ Styleguide timeline
   padding-left: 1.667em;
   padding-bottom: 0;
   padding-top: 2em;
-  position: relative; }
+  position: relative;
+  float: left; }
   .timeline .listing__item {
     padding: 0; }
   .timeline .timeline__item-title {
@@ -11184,7 +11191,9 @@ Styleguide timeline
 
 .view-biography-timeline .view-footer {
   margin-top: 1.667em !important;
-  margin-bottom: 1.667em; }
+  margin-bottom: 1.667em;
+  float: left;
+  width: 100%; }
 
 @media (min-width: 480px) {
   .timeline .timeline__item-title:before {
