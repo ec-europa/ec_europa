@@ -8,19 +8,12 @@
   .block-nexteuropa-europa-search,
   .site-menu__toggle {
     float: left;
+    padding-left: 15px;
+    width: 25%;
   }
 
   .block-nexteuropa-europa-search {
     width: 75%;
-  }
-
-  .site-menu__toggle {
-    padding: 0;
-    width: 100%;
-    .btn {
-      text-align: right;
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -55,6 +48,7 @@
 
     .site-menu__toggle {
       width: auto;
+      padding-left: 15px;
       .btn {
         margin-bottom: auto;
       }
