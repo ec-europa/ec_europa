@@ -10694,26 +10694,28 @@ Styleguide: siteheader.searchform
 .site-menu .listing__item-link:focus {
   outline: 3px solid #404040; }
 
-.site-menu .smaller a {
-  text-decoration: underline;
-  color: #000000; }
-  .site-menu .smaller a:focus {
-    outline: 3px solid #404040; }
+.site-menu .smaller {
+  padding: 0.61em 0; }
+  .site-menu .smaller a {
+    text-decoration: underline;
+    color: #000000; }
+    .site-menu .smaller a:focus {
+      outline: 3px solid #404040; }
 
 .site-menu p {
   color: black;
   font-size: 0.889em; }
 
-.site-menu .field--field-site-menu-links .listing__item .listing__title:after {
-  margin-left: 0.5em;
-  margin-top: 3px;
-  font-size: 0.8em; }
-
-.site-menu .field--field-site-menu-links .listing__item .listing__title:hover {
-  color: #404040; }
-
-.site-menu .field--field-site-menu-links .listing__item .listing__title:focus {
-  outline: 3px solid #404040; }
+.site-menu .field--field-site-menu-links .listing__item {
+  margin-bottom: 1px; }
+  .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
+    margin-left: 0.5em;
+    margin-top: 3px;
+    font-size: 0.8em; }
+  .site-menu .field--field-site-menu-links .listing__item .listing__title:hover {
+    color: #404040; }
+  .site-menu .field--field-site-menu-links .listing__item .listing__title:focus {
+    outline: 3px solid #404040; }
 
 .front .site-menu p {
   font-size: 0.889em; }
@@ -10740,19 +10742,7 @@ Styleguide: siteheader.searchform
     margin-bottom: auto; }
   .site-menu__section {
     padding-top: 2em;
-    padding-bottom: 3em;
-    position: relative; }
-    .site-menu__section .smaller {
-      bottom: 10%;
-      left: 68%;
-      margin-left: 0.3em;
-      position: absolute;
-      opacity: 0;
-      visibility: hidden;
-      transition: visibility 0s, opacity 0.5s linear; }
-      .collapse.in .site-menu__section .smaller {
-        visibility: visible;
-        opacity: 1; } }
+    padding-bottom: 3em; } }
 
 .skip-link,
 #skip-link {
