@@ -7816,26 +7816,10 @@ Styleguide filters.filters
     padding: 0; }
   .filters__btn-reset--small,
   .filters__btn-collapse {
-    display: none; }
-  html.js .filters__btn-submit.ctools-use-ajax {
-    display: none; }
-  html.js.ie8 .filters__btn-submit {
-    display: block; } }
+    display: none; } }
 
 .views-exposed-form .views-exposed-widget {
   padding: 0; }
-
-@media (min-width: 992px) {
-  .view-workbench-moderation .views-exposed-widget {
-    width: 50%;
-    clear: none;
-    padding-right: 2%; }
-  .view-workbench-moderation .views-widget-per-page {
-    clear: left; }
-  .view-workbench-moderation .filters__btn-submit {
-    width: auto;
-    float: left;
-    clear: left; } }
 
 /*
 Footer
