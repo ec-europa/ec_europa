@@ -7818,9 +7818,6 @@ Styleguide filters.filters
   .filters__btn-collapse {
     display: none; } }
 
-.views-exposed-form .views-exposed-widget {
-  padding: 0; }
-
 /*
 Footer
 
@@ -10992,6 +10989,11 @@ Markup: html/facet-tag.html
 
 Styleguide tags.facettag
 */
+@media (min-width: 480px) {
+  .facet-tag {
+    width: auto;
+    display: inline-block; } }
+
 .facet-tag__label {
   float: left; }
 
