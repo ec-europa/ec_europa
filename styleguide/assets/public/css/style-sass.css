@@ -7818,9 +7818,6 @@ Styleguide filters.filters
   .filters__btn-collapse {
     display: none; } }
 
-.views-exposed-form .views-exposed-widget {
-  padding: 0; }
-
 /*
 Footer
 
@@ -9420,6 +9417,10 @@ Styleguide listing.3
   border-left: 5px solid #004494;
   padding: 0.611em 0 0.611em 1.222em;
   margin: 0.611em 0; }
+
+@media (min-width: 480px) {
+  .listing--line-left p {
+    font-size: 18px; } }
 
 .listing--nostripe {
   padding: 30px; }
