@@ -7881,11 +7881,7 @@ Styleguide filters.filters
     padding: 0; }
   .filters__btn-reset--small,
   .filters__btn-collapse {
-    display: none; }
-  html.js .filters__btn-submit {
-    display: none; }
-  html.js.ie8 .filters__btn-submit {
-    display: block; } }
+    display: none; } }
 
 .views-exposed-form .views-exposed-widget {
   padding: 0; }
