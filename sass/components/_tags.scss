@@ -82,6 +82,7 @@ Styleguide tags.facettag
 
 .facet-tag__value {
   @extend .tags__item;
+  text-transform: none;
 }
 
 /*

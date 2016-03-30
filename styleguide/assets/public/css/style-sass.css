@@ -10997,6 +10997,9 @@ Styleguide tags.facettag
 .facet-tag__label {
   float: left; }
 
+.facet-tag__value {
+  text-transform: none; }
+
 /*
 Facet tag with close
 
