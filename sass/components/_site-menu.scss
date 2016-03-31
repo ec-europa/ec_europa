@@ -1,4 +1,5 @@
 .site-menu {
+  margin-bottom: 0;
   @extend .hidden-print;
   .listing__wrapper--two-columns .listing,
   .listing__wrapper {
@@ -24,8 +25,10 @@
 
   .smaller {
     padding: 0.61em 0;
-    
+
     a {
+      display: block;
+      margin-top: 2em;
       text-decoration: underline;
       color: #000000;
 

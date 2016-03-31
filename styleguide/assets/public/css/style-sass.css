@@ -10671,44 +10671,43 @@ Styleguide: siteheader.searchform
   .search-form {
     width: 340px; } }
 
-.site-menu .listing__wrapper--two-columns .listing,
-.site-menu .listing__wrapper {
+.site-menu {
   margin-bottom: 0; }
-
-.site-menu .listing__item {
-  border-color: #dcb812;
-  font-size: 0.889em; }
-  .site-menu .listing__item:first-child {
-    border-top: none; }
-  .site-menu .listing__item .listing__title {
-    color: #000000;
-    padding: 0; }
-
-.site-menu .listing__item-link:focus {
-  outline: 3px solid #404040; }
-
-.site-menu .smaller {
-  padding: 0.61em 0; }
-  .site-menu .smaller a {
-    text-decoration: underline;
-    color: #000000; }
-    .site-menu .smaller a:focus {
-      outline: 3px solid #404040; }
-
-.site-menu p {
-  color: black;
-  font-size: 0.889em; }
-
-.site-menu .field--field-site-menu-links .listing__item {
-  margin-bottom: 1px; }
-  .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
-    margin-left: 0.5em;
-    margin-top: 3px;
-    font-size: 0.8em; }
-  .site-menu .field--field-site-menu-links .listing__item .listing__title:hover {
-    color: #404040; }
-  .site-menu .field--field-site-menu-links .listing__item .listing__title:focus {
+  .site-menu .listing__wrapper--two-columns .listing,
+  .site-menu .listing__wrapper {
+    margin-bottom: 0; }
+  .site-menu .listing__item {
+    border-color: #dcb812;
+    font-size: 0.889em; }
+    .site-menu .listing__item:first-child {
+      border-top: none; }
+    .site-menu .listing__item .listing__title {
+      color: #000000;
+      padding: 0; }
+  .site-menu .listing__item-link:focus {
     outline: 3px solid #404040; }
+  .site-menu .smaller {
+    padding: 0.61em 0; }
+    .site-menu .smaller a {
+      display: block;
+      margin-top: 2em;
+      text-decoration: underline;
+      color: #000000; }
+      .site-menu .smaller a:focus {
+        outline: 3px solid #404040; }
+  .site-menu p {
+    color: black;
+    font-size: 0.889em; }
+  .site-menu .field--field-site-menu-links .listing__item {
+    margin-bottom: 1px; }
+    .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
+      margin-left: 0.5em;
+      margin-top: 3px;
+      font-size: 0.8em; }
+    .site-menu .field--field-site-menu-links .listing__item .listing__title:hover {
+      color: #404040; }
+    .site-menu .field--field-site-menu-links .listing__item .listing__title:focus {
+      outline: 3px solid #404040; }
 
 .front .site-menu p {
   font-size: 0.889em; }
