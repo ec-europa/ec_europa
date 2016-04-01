@@ -6681,8 +6681,7 @@ Styleguide sections.3
   Placeholder for adding a background on the .footer-top
 */
 .footer-top {
-  background: #f2f2f2;
-  margin-bottom: 1px; }
+  background: #f2f2f2; }
   .footer-top .container-fluid, .footer-top .section__group--full-width > *, .footer-top .block--full-width > *, .footer-top .field--full-width > * {
     margin-right: 0;
     margin-left: 0;
@@ -7476,7 +7475,7 @@ a.feedback-form__trigger {
     #feedback-form__accordion .accordion-group .accordion-toggle {
       background: url("../images/svg/checkbox-checked--blue.svg") no-repeat;
       line-height: 23px;
-      padding-left: 28 px;
+      padding-left: 28px;
       color: #004494;
       text-decoration: none;
       font-weight: bold;
@@ -7881,9 +7880,6 @@ Styleguide filters.filters
   .filters__btn-reset--small,
   .filters__btn-collapse {
     display: none; } }
-
-.views-exposed-form .views-exposed-widget {
-  padding: 0; }
 
 /*
 Footer
@@ -11107,8 +11103,16 @@ Markup: html/facet-tag.html
 
 Styleguide tags.facettag
 */
+@media (min-width: 480px) {
+  .facet-tag {
+    width: auto;
+    display: inline-block; } }
+
 .facet-tag__label {
   float: left; }
+
+.facet-tag__value {
+  text-transform: none; }
 
 /*
 Facet tag with close
