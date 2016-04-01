@@ -6642,8 +6642,7 @@ Styleguide sections.3
 */
 .footer-top {
   overflow: hidden;
-  background: #f2f2f2;
-  margin-bottom: 1px; }
+  background: #f2f2f2; }
   .footer-top .container-fluid, .footer-top .section__group--full-width > *, .footer-top .block--full-width > *, .footer-top .field--full-width > * {
     margin-right: 0;
     margin-left: 0;
@@ -10993,8 +10992,16 @@ Markup: html/facet-tag.html
 
 Styleguide tags.facettag
 */
+@media (min-width: 480px) {
+  .facet-tag {
+    width: auto;
+    display: inline-block; } }
+
 .facet-tag__label {
   float: left; }
+
+.facet-tag__value {
+  text-transform: none; }
 
 /*
 Facet tag with close
