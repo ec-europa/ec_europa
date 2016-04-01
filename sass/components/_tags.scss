@@ -68,6 +68,10 @@ Styleguide tags.facettag
 
 .facet-tag {
   @extend .tags;
+  @include breakpoint(screen-xs-min) {
+    width: auto;
+    display: inline-block;
+  }
 }
 
 .facet-tag__label {
@@ -77,6 +81,7 @@ Styleguide tags.facettag
 
 .facet-tag__value {
   @extend .tags__item;
+  text-transform: none;
 }
 
 /*

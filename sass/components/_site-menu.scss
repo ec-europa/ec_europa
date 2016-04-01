@@ -1,10 +1,10 @@
 .site-menu {
+  margin-bottom: 0;
   @extend .hidden-print;
   .listing__wrapper--two-columns .listing,
   .listing__wrapper {
     margin-bottom: 0;
   }
-
   .listing__item {
     border-color: #dcb812;
     font-size: $font-size-little;
@@ -24,15 +24,18 @@
 
   .smaller {
     padding: 0.61em 0;
-    
     a {
+      display: block;
       text-decoration: underline;
       color: #000000;
-
+      margin-top: 2em;
       &:focus {
         outline: 3px solid $grey-base;
       }
     }
+  }
+  .col-sm-4 .listing{
+    margin-top: 2em;
   }
 
   p {
@@ -95,11 +98,25 @@
   }
 }
 
+@include breakpoint(screen-sm-min) {
+  .site-menu {
+    .listing__wrapper--two-columns .listing{
+      width: 100%;
+    }
+    .col-sm-4 .listing{
+      margin-top: 0;
+    }
+  }
+}
+
 @include breakpoint(screen-md-min) {
   .site-menu {
     .listing__wrapper--two-columns .listing,
     .listing__wrapper {
       margin-bottom: auto;
+    }
+    .listing__wrapper--two-columns .listing{
+      width: 50%;
     }
   }
   .site-menu__section {

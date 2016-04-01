@@ -6642,8 +6642,7 @@ Styleguide sections.3
 */
 .footer-top {
   overflow: hidden;
-  background: #f2f2f2;
-  margin-bottom: 1px; }
+  background: #f2f2f2; }
   .footer-top .container-fluid, .footer-top .section__group--full-width > *, .footer-top .block--full-width > *, .footer-top .field--full-width > * {
     margin-right: 0;
     margin-left: 0;
@@ -7814,14 +7813,7 @@ Styleguide filters.filters
     padding: 0; }
   .filters__btn-reset--small,
   .filters__btn-collapse {
-    display: none; }
-  html.js .filters__btn-submit {
-    display: none; }
-  html.js.ie8 .filters__btn-submit {
-    display: block; } }
-
-.views-exposed-form .views-exposed-widget {
-  padding: 0; }
+    display: none; } }
 
 /*
 Footer
@@ -10677,44 +10669,45 @@ Styleguide: siteheader.searchform
   .search-form {
     width: 340px; } }
 
-.site-menu .listing__wrapper--two-columns .listing,
-.site-menu .listing__wrapper {
+.site-menu {
   margin-bottom: 0; }
-
-.site-menu .listing__item {
-  border-color: #dcb812;
-  font-size: 0.889em; }
-  .site-menu .listing__item:first-child {
-    border-top: none; }
-  .site-menu .listing__item .listing__title {
-    color: #000000;
-    padding: 0; }
-
-.site-menu .listing__item-link:focus {
-  outline: 3px solid #404040; }
-
-.site-menu .smaller {
-  padding: 0.61em 0; }
-  .site-menu .smaller a {
-    text-decoration: underline;
-    color: #000000; }
-    .site-menu .smaller a:focus {
-      outline: 3px solid #404040; }
-
-.site-menu p {
-  color: black;
-  font-size: 0.889em; }
-
-.site-menu .field--field-site-menu-links .listing__item {
-  margin-bottom: 1px; }
-  .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
-    margin-left: 0.5em;
-    margin-top: 3px;
-    font-size: 0.8em; }
-  .site-menu .field--field-site-menu-links .listing__item .listing__title:hover {
-    color: #404040; }
-  .site-menu .field--field-site-menu-links .listing__item .listing__title:focus {
+  .site-menu .listing__wrapper--two-columns .listing,
+  .site-menu .listing__wrapper {
+    margin-bottom: 0; }
+  .site-menu .listing__item {
+    border-color: #dcb812;
+    font-size: 0.889em; }
+    .site-menu .listing__item:first-child {
+      border-top: none; }
+    .site-menu .listing__item .listing__title {
+      color: #000000;
+      padding: 0; }
+  .site-menu .listing__item-link:focus {
     outline: 3px solid #404040; }
+  .site-menu .smaller {
+    padding: 0.61em 0; }
+    .site-menu .smaller a {
+      display: block;
+      text-decoration: underline;
+      color: #000000;
+      margin-top: 2em; }
+      .site-menu .smaller a:focus {
+        outline: 3px solid #404040; }
+  .site-menu .col-sm-4 .listing, .site-menu .sidebar-field-group__sidebar .listing {
+    margin-top: 2em; }
+  .site-menu p {
+    color: black;
+    font-size: 0.889em; }
+  .site-menu .field--field-site-menu-links .listing__item {
+    margin-bottom: 1px; }
+    .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
+      margin-left: 0.5em;
+      margin-top: 3px;
+      font-size: 0.8em; }
+    .site-menu .field--field-site-menu-links .listing__item .listing__title:hover {
+      color: #404040; }
+    .site-menu .field--field-site-menu-links .listing__item .listing__title:focus {
+      outline: 3px solid #404040; }
 
 .front .site-menu p {
   font-size: 0.889em; }
@@ -10735,10 +10728,18 @@ Styleguide: siteheader.searchform
   .js .site-menu.collapse {
     height: inherit; }
 
+@media (min-width: 768px) {
+  .site-menu .listing__wrapper--two-columns .listing {
+    width: 100%; }
+  .site-menu .col-sm-4 .listing, .site-menu .sidebar-field-group__sidebar .listing {
+    margin-top: 0; } }
+
 @media (min-width: 992px) {
   .site-menu .listing__wrapper--two-columns .listing,
   .site-menu .listing__wrapper {
     margin-bottom: auto; }
+  .site-menu .listing__wrapper--two-columns .listing {
+    width: 50%; }
   .site-menu__section {
     padding-top: 2em;
     padding-bottom: 3em; } }
@@ -11002,8 +11003,16 @@ Markup: html/facet-tag.html
 
 Styleguide tags.facettag
 */
+@media (min-width: 480px) {
+  .facet-tag {
+    width: auto;
+    display: inline-block; } }
+
 .facet-tag__label {
   float: left; }
+
+.facet-tag__value {
+  text-transform: none; }
 
 /*
 Facet tag with close
