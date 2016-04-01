@@ -41,8 +41,7 @@ Styleguide expandable
   &:hover,
   &:focus {
     background: $yellow-light;
-    outline-offset: 0;
+    outline: none;
     text-decoration: underline;
-    outline-offset: 0;
   }
 }

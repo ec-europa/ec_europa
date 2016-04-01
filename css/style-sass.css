@@ -7386,9 +7386,8 @@ Styleguide expandable
     text-decoration: none; }
   .expandable__toggle:hover, .expandable__toggle:focus {
     background: #ffd617;
-    outline-offset: 0;
-    text-decoration: underline;
-    outline-offset: 0; }
+    outline: none;
+    text-decoration: underline; }
 
 /*
 Featured item
