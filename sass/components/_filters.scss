@@ -153,23 +153,4 @@ Styleguide filters.filters
   .filters__btn-collapse {
     display: none;
   }
-
-  html {
-    &.js {
-      .filters__btn-submit {
-        display: none;
-      }
-
-      &.ie8 {
-        .filters__btn-submit {
-          display: block;
-        }
-      }
-    }
-  }
-}
-
-//Drupal widgets styling hack
-.views-exposed-form .views-exposed-widget {
-  padding:0;
 }

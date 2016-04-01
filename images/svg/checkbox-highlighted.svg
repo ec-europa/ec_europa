@@ -1,17 +1,80 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 3 Copy</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Filter-and-Forms-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop_Form" transform="translate(-82.000000, -191.000000)">
-            <g id="Checkbox-focus-state" transform="translate(84.000000, 193.000000)">
-                <g id="Group-3-Copy">
-                    <path d="M17.1818182,21 L3.81818182,21 C1.71818182,21 0,19.2818182 0,17.1818182 L0,3.81818182 C0,1.71818182 1.71818182,0 3.81818182,0 L17.1818182,0 C19.2818182,0 21,1.71818182 21,3.81818182 L21,17.1818182 C21,19.2818182 19.2818182,21 17.1818182,21" id="Page-1" stroke="#FFD617" stroke-width="3" fill="#004494"></path>
-                    <path d="M14.0114984,7.41176471 L9.66878807,11.7544984 L7.664892,9.75057899 L6.17647059,11.2390004 L9.66878807,14.7313179 L15.4999198,8.90018611 L14.0114984,7.41176471 Z" id="Page-1" fill="#FFFFFF"></path>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#004494;}
+	.st1{fill:#FFFFFF;}
+	.st2{clip-path:url(#SVGID_2_);}
+	.st3{clip-path:url(#SVGID_4_);fill:#004494;}
+	.st4{clip-path:url(#SVGID_6_);fill:none;stroke:#FFD617;stroke-width:3;stroke-miterlimit:10;}
+	.st5{clip-path:url(#SVGID_8_);}
+	.st6{clip-path:url(#SVGID_10_);fill:none;stroke:#004494;stroke-miterlimit:10;}
+	.st7{clip-path:url(#SVGID_12_);fill:none;stroke:#FFD617;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<g id="Filter-and-Forms-">
+	<g id="Desktop_Form" transform="translate(-76.000000, -200.000000)">
+		<g id="Group-2-Copy" transform="translate(76.000000, 200.000000)">
+			<path id="Page-1" class="st0" d="M15.4,18.5H4.6c-1.7,0-3.1-1.4-3.1-3.1V4.6c0-1.7,1.4-3.1,3.1-3.1h10.8c1.7,0,3.1,1.4,3.1,3.1
+				v10.8C18.5,17.1,17.1,18.5,15.4,18.5"/>
+			<path id="Page-1_1_" class="st1" d="M12.8,7.5L9.3,11L7.7,9.4l-1.2,1.2l2.8,2.8L14,8.7L12.8,7.5z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M-540.6-984.5h-10.8c-1.7,0-3.1-1.4-3.1-3.1v-10.8c0-1.7,1.4-3.1,3.1-3.1h10.8c1.7,0,3.1,1.4,3.1,3.1v10.8
+			C-537.5-985.9-538.9-984.5-540.6-984.5"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st2">
+		<defs>
+			<rect id="SVGID_3_" x="-685.5" y="-1197.5" width="1400" height="2426"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="-559.5" y="-1006.5" class="st3" width="27" height="27"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_5_" x="-685.5" y="-1197.5" width="1400" height="2426"/>
+	</defs>
+	<clipPath id="SVGID_6_">
+		<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+	</clipPath>
+	<path class="st4" d="M-540.6-984.5h-10.8c-1.7,0-3.1-1.4-3.1-3.1v-10.8c0-1.7,1.4-3.1,3.1-3.1h10.8c1.7,0,3.1,1.4,3.1,3.1v10.8
+		C-537.5-985.9-538.9-984.5-540.6-984.5"/>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_7_" d="M15.4,18.5H4.6c-1.7,0-3.1-1.4-3.1-3.1V4.6c0-1.7,1.4-3.1,3.1-3.1h10.8c1.7,0,3.1,1.4,3.1,3.1v10.8
+			C18.5,17.1,17.1,18.5,15.4,18.5"/>
+	</defs>
+	<clipPath id="SVGID_8_">
+		<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st5">
+		<defs>
+			<rect id="SVGID_9_" x="-129.5" y="-194.5" width="1400" height="2426"/>
+		</defs>
+		<clipPath id="SVGID_10_">
+			<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="-3.5" y="-3.5" class="st6" width="27" height="27"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_11_" x="-129.5" y="-194.5" width="1400" height="2426"/>
+	</defs>
+	<clipPath id="SVGID_12_">
+		<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+	</clipPath>
+	<path class="st7" d="M15.4,18.5H4.6c-1.7,0-3.1-1.4-3.1-3.1V4.6c0-1.7,1.4-3.1,3.1-3.1h10.8c1.7,0,3.1,1.4,3.1,3.1v10.8
+		C18.5,17.1,17.1,18.5,15.4,18.5"/>
+</g>
 </svg>

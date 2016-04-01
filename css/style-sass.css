@@ -7474,9 +7474,9 @@ a.feedback-form__trigger {
     #feedback-form__accordion .accordion-group:first-child {
       border-top: none; }
     #feedback-form__accordion .accordion-group .accordion-toggle {
-      background: url("../images/svg/checkbox-checked--blue.svg") no-repeat 3px 3px;
+      background: url("../images/svg/checkbox-checked--blue.svg") no-repeat;
       line-height: 23px;
-      padding-left: 25px;
+      padding-left: 28 px;
       color: #004494;
       text-decoration: none;
       font-weight: bold;
@@ -7484,14 +7484,14 @@ a.feedback-form__trigger {
       text-decoration: none;
       font-size: 0.889em; }
       #feedback-form__accordion .accordion-group .accordion-toggle:focus {
-        background: url("../images/svg/checkbox-highlighted.svg") no-repeat 0;
+        background: url("../images/svg/checkbox-highlighted.svg") no-repeat;
         outline: none; }
       #feedback-form__accordion .accordion-group .accordion-toggle.collapsed {
-        background: url("../images/svg/checkbox-unchecked--grey.svg") no-repeat 0 1px;
+        background: url("../images/svg/checkbox-unchecked--grey.svg") no-repeat;
         color: #404040;
         font-weight: 400; }
         #feedback-form__accordion .accordion-group .accordion-toggle.collapsed:focus {
-          background: url("../images/svg/checkbox-highlighted.svg") no-repeat 0;
+          background: url("../images/svg/checkbox-highlighted.svg") no-repeat;
           outline: none; }
       #feedback-form__accordion .accordion-group .accordion-toggle::-moz-focus-inner, #feedback-form__accordion .accordion-group .accordion-toggle:focus {
         border: 0;
@@ -7880,11 +7880,7 @@ Styleguide filters.filters
     padding: 0; }
   .filters__btn-reset--small,
   .filters__btn-collapse {
-    display: none; }
-  html.js .filters__btn-submit {
-    display: none; }
-  html.js.ie8 .filters__btn-submit {
-    display: block; } }
+    display: none; } }
 
 .views-exposed-form .views-exposed-widget {
   padding: 0; }
