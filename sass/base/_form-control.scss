@@ -24,7 +24,7 @@ Styleguide form
   &.is-focused,
   .has-error &:focus {
     color: $form-control-text-color-focus;
-    border: 2px solid $form-control-border-color-focus;
+    @include _focus_outline_border(3px, $yellow-light, -3px);
     padding: 5px 11px;
     @include box-shadow(none);
   }

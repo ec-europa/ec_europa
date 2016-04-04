@@ -91,7 +91,7 @@ Styleguide pager
     }
 
     &:focus {
-      outline: 6px solid $yellow-light;
+      @include _focus_outline_border(3px, $yellow-light);
     }
 
     &:-moz-focusring {

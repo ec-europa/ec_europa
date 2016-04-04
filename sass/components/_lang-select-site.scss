@@ -23,10 +23,13 @@ Styleguide: siteheader.langselect
     font-size: $font-size-little;
     font-weight: bold;
     padding: 7.5px 15px;
-    border: 2px solid transparent;
-
+    border: 3px solid transparent;
+    &:hover{
+      text-decoration: underline;
+    }
     &:focus {
       border-color: $yellow-light;
+      outline: none;
     }
   }
 

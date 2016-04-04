@@ -32,21 +32,19 @@ Styleguide buttons
   font-size: $font-size-little;
   text-decoration: none;
   @extend .hidden-print;
-  
+
   &:link {
     text-decoration: none;
   }
+  @include _focus_outline_border(3px, $yellow-light, -3px);
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: underline;
     @include box-shadow(none);
-  }
-
-  &:focus {
-    outline: 5px solid $yellow-light;
-    border-color: $yellow-light;
+    z-index: 999;
+    position: relative;
   }
 
   &:after {
@@ -59,15 +57,10 @@ Styleguide buttons
     color: $brand-primary;
     background: none;
 
-    &:hover {
+    &:hover,
+    &:focus  {
       background: $brand-primary;
       color: #fff;
-    }
-
-    &:active,
-    &:focus {
-      background: #fff;
-      color: $brand-primary;
     }
   }
 
@@ -129,9 +122,8 @@ Styleguide buttons
 
     &:active,
     &:focus {
-      outline: 5px solid $yellow-light;
-      outline-offset: -5px;
-      text-decoration: none;
+      outline: 3px solid $yellow-light;
+      outline-offset: -3px;
     }
 
     &:focus {
@@ -322,6 +314,7 @@ a.btn {
     }
     .site-information & {
       @include _btn_external_link_mixin();
+      outline-offset: 0;
     }
   }
 }

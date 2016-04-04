@@ -5534,13 +5534,16 @@ Styleguide buttons
   text-decoration: none; }
   .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
     text-decoration: none; }
+  .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: -3px;
+    text-decoration: underline; }
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     text-decoration: underline;
     -webkit-box-shadow: none;
-    box-shadow: none; }
-  .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
-    outline: 5px solid #ffd617;
-    border-color: #ffd617; }
+    box-shadow: none;
+    z-index: 999;
+    position: relative; }
   .btn:after, .inpage-nav__navbar .inpage-nav__toggle:after {
     line-height: inherit;
     position: static; }
@@ -5548,12 +5551,9 @@ Styleguide buttons
     border-color: #004494;
     color: #004494;
     background: none; }
-    .btn.btn-default:hover, .btn.btn-collapse:hover, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:hover, .inpage-nav__navbar .btn-default.inpage-nav__toggle:hover {
+    .btn.btn-default:hover, .btn.btn-collapse:hover, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:hover, .inpage-nav__navbar .btn-default.inpage-nav__toggle:hover, .btn.btn-default:focus, .btn.btn-collapse:focus, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:focus, .inpage-nav__navbar .btn-default.inpage-nav__toggle:focus {
       background: #004494;
       color: #fff; }
-    .btn.btn-default:active, .btn.btn-collapse:active, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:active, .inpage-nav__navbar .btn-default.inpage-nav__toggle:active, .btn.btn-default:focus, .btn.btn-collapse:focus, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:focus, .inpage-nav__navbar .btn-default.inpage-nav__toggle:focus {
-      background: #fff;
-      color: #004494; }
   .btn.btn-primary, .inpage-nav__navbar .btn-primary.inpage-nav__toggle {
     border-color: #004494; }
     .btn.btn-primary:hover, .inpage-nav__navbar .btn-primary.inpage-nav__toggle:hover, .btn.btn-primary:active, .inpage-nav__navbar .btn-primary.inpage-nav__toggle:active {
@@ -5589,9 +5589,8 @@ Styleguide buttons
     .btn.btn-menu:hover, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:hover, .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       color: #fff; }
     .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
-      outline: 5px solid #ffd617;
-      outline-offset: -5px;
-      text-decoration: none; }
+      outline: 3px solid #ffd617;
+      outline-offset: -3px; }
     .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       border-color: #ffd617;
       outline-color: #ffd617; }
@@ -5716,7 +5715,8 @@ Styleguide buttons.btn-
     line-height: 3.5 !important; }
 
 .site-information a.btn[href^="http"]:not(.is-internal), .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal) {
-  padding-right: 2.2em; }
+  padding-right: 2.2em;
+  outline-offset: 0; }
   .site-information a.btn[href^="http"]:not(.is-internal):after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal):after {
     position: absolute;
     line-height: 1.4 !important;
@@ -5797,7 +5797,7 @@ Styleguide form.checkbox
     height: 2.75em;
     visibility: hidden; }
     .checkbox input[type='checkbox']:before {
-      border: 2px solid transparent;
+      border: 3px solid transparent;
       border-radius: 8px;
       width: 1.25em;
       height: 1.25em;
@@ -5811,7 +5811,7 @@ Styleguide form.checkbox
       background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
       background-size: auto 1.25em; }
     .checkbox input[type='checkbox']:focus:before {
-      border: 2px solid #ffd617; }
+      border: 3px solid #ffd617; }
     .checkbox input[type='checkbox']:checked:before {
       background-image: url("../images/svg/checkbox-checked--blue.svg"); }
 
@@ -5862,10 +5862,16 @@ Styleguide form
   .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
   .has-error select:focus {
     color: #000;
-    border: 2px solid #ffd617;
     padding: 5px 11px;
     -webkit-box-shadow: none;
     box-shadow: none; }
+    .form-control:focus:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus:focus, .form-control.is-focused:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-focused:focus,
+    .has-error .form-control:focus:focus,
+    .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
+    .has-error select:focus:focus {
+      outline: 3px solid #ffd617;
+      outline-offset: -3px;
+      text-decoration: underline; }
   .form-control.is-disabled, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-disabled {
     color: #b3b4b5;
     background-color: #e2e2e2; }
@@ -5994,13 +6000,46 @@ Styleguide text.link
 a:link {
   text-decoration: underline; }
 
+a:focus {
+  outline: 3px solid #ffd617;
+  outline-offset: 2px;
+  text-decoration: underline; }
+
 a:hover, a:active, a:focus {
+  text-decoration: underline;
   color: #404040; }
 
-.listing a:link,
-.site-switcher a:link,
-.feedback-form a:link {
+.listing a,
+.site-switcher a,
+.feedback-form a {
+  z-index: 999;
   text-decoration: none; }
+  .listing a:focus,
+  .site-switcher a:focus,
+  .feedback-form a:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: 10px;
+    text-decoration: underline; }
+
+a .feedback-form {
+  outline-offset: 0; }
+
+.listing--cta a:focus,
+.site-switcher a:focus,
+.node-featured-item a:focus {
+  outline-offset: 0; }
+
+.listing--frontpage a:focus {
+  outline-offset: 10px; }
+  .listing--frontpage a:focus .listing__title {
+    text-decoration: underline;
+    color: #404040; }
+
+a.listing__item-link:focus .highlighted-item .highlighted-item__content {
+  text-decoration: underline; }
+
+.listing--cta a:focus {
+  color: #ffffff; }
 
 a.smaller,
 .smaller a {
@@ -6119,7 +6158,8 @@ ul.nav-tabs,
       ul.nav-tabs > li > a:focus,
       .nav-tabs > li > a:focus {
         background: #ffd617;
-        border-bottom-color: #ffd617; }
+        border-bottom-color: #ffd617;
+        outline: none; }
 
 .nav-tabs--with-content {
   display: none; }
@@ -6218,11 +6258,11 @@ Styleguide form.radio
     position: relative;
     float: left; }
     .radio input[type="radio"] + label:before {
-      border: transparent solid 2px;
+      border: transparent solid 3px;
       border-radius: 50%;
       padding: 1.25em 0 0 1.25em; }
     .radio input[type="radio"]:focus + label:before {
-      border: #ffd617 solid 2px; }
+      border: #ffd617 solid 3px; }
     .radio input[type="radio"]:not(checked) + label {
       padding-left: 2.778em; }
       .radio input[type="radio"]:not(checked) + label:before {
@@ -6510,10 +6550,10 @@ Its implementation ensures the correct vertical spacing between different groups
 it uses the margin collapse mechanism (css2) so that you don't have to worry when you place two
 sections one after the other, only one of the two margins will be applied, indeed.
 
-It can contain different set of html elements and components, but the predefined ones are its 
+It can contain different set of html elements and components, but the predefined ones are its
 unique element {section group}, the {listing wrapper}, the {sidebar-field-group}.
 
-The way it works is that the first {section group} in the section doesn't get any margin (the parent 
+The way it works is that the first {section group} in the section doesn't get any margin (the parent
 is already defining that) while the last doesn't get the margin-bottom (still for the same reason).
 When there's only one {section group} element it doesn't get any vertical margin.
 Please do not reset any of these margins.
@@ -6526,7 +6566,7 @@ Do not wrap a section component into a row element, this would break the collpas
 
 Markup: html/section.html
 
-Styleguide sections 
+Styleguide sections
 */
 /*
 section--row-two modifier
@@ -6641,7 +6681,6 @@ Styleguide sections.3
   Placeholder for adding a background on the .footer-top
 */
 .footer-top {
-  overflow: hidden;
   background: #f2f2f2; }
   .footer-top .container-fluid, .footer-top .section__group--full-width > *, .footer-top .block--full-width > *, .footer-top .field--full-width > * {
     margin-right: 0;
@@ -6804,8 +6843,9 @@ Styleguide breadcrumb
   font-weight: 600;
   position: relative;
   border-radius: 0;
-  overflow: hidden;
-  line-height: normal; }
+  line-height: normal;
+  float: left;
+  width: 100%; }
   .breadcrumb ol,
   .breadcrumb ul {
     list-style: none;
@@ -7011,6 +7051,8 @@ Styleguide comment
   font-weight: bold;
   font-size: 1em;
   padding: 0.833em 0; }
+  .comment__title:focus {
+    outline-offset: 0; }
 
 .comment__author {
   display: inline-block;
@@ -7117,6 +7159,10 @@ Styleguide contextnav
     margin-right: 0; }
   .context-nav__item a:link {
     text-decoration: none; }
+  .context-nav__item a:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: 2px;
+    text-decoration: underline; }
   .context-nav__item a:hover {
     text-decoration: underline; }
 
@@ -7333,8 +7379,12 @@ Styleguide expandable
     margin-right: 0.833em; }
   .expandable__toggle h3 {
     font-size: 1.222em; }
-  .expandable__toggle:hover {
-    background: #ffd617; }
+  .expandable__toggle:link {
+    text-decoration: none; }
+  .expandable__toggle:hover, .expandable__toggle:focus {
+    background: #ffd617;
+    outline: none;
+    text-decoration: underline; }
 
 /*
 Featured item
@@ -7388,12 +7438,15 @@ Styleguide form.feedback-message
   .feedback-form__wrapper:hover, .feedback-form__wrapper:active, .feedback-form__wrapper:focus, .feedback-form__wrapper.is-open {
     background: #f2f2f2; }
 
-.feedback-form__trigger {
+a.feedback-form__trigger {
   text-decoration: none;
   color: #004494;
-  display: block;
-  padding: 0.667em 0 0.556em 2.500em;
+  display: inline-block;
   font-size: 0.889em; }
+  a.feedback-form__trigger:focus {
+    outline-offset: 0; }
+  a.feedback-form__trigger:active {
+    outline: none; }
 
 .feedback-form__content {
   margin: 0.8em 0 2em; }
@@ -7419,18 +7472,24 @@ Styleguide form.feedback-message
       border-top: none; }
     #feedback-form__accordion .accordion-group .accordion-toggle {
       background: url("../images/svg/checkbox-checked--blue.svg") no-repeat;
-      line-height: 20px;
-      padding-left: 25px;
+      line-height: 23px;
+      padding-left: 28px;
       color: #004494;
       text-decoration: none;
       font-weight: bold;
       display: block;
       text-decoration: none;
       font-size: 0.889em; }
+      #feedback-form__accordion .accordion-group .accordion-toggle:focus {
+        background: url("../images/svg/checkbox-highlighted.svg") no-repeat;
+        outline: none; }
       #feedback-form__accordion .accordion-group .accordion-toggle.collapsed {
         background: url("../images/svg/checkbox-unchecked--grey.svg") no-repeat;
         color: #404040;
         font-weight: 400; }
+        #feedback-form__accordion .accordion-group .accordion-toggle.collapsed:focus {
+          background: url("../images/svg/checkbox-highlighted.svg") no-repeat;
+          outline: none; }
       #feedback-form__accordion .accordion-group .accordion-toggle::-moz-focus-inner, #feedback-form__accordion .accordion-group .accordion-toggle:focus {
         border: 0;
         outline: none; }
@@ -7456,7 +7515,7 @@ Styleguide form.feedback-message
 
 @media (min-width: 992px) {
   .feedback-form__trigger {
-    padding: 0.667em 0 0.556em 0; } }
+    margin: 0.667em 0 0.556em 0; } }
 
 .no-svg #feedback-form__accordion .accordion-group .accordion-toggle {
   background: url("../images/png/checkbox.png") no-repeat; }
@@ -7482,10 +7541,11 @@ Styleguide field
   font-size: 0.778em;
   line-height: 2em;
   font-weight: 600; }
+  .field__label a:focus {
+    outline-offset: 2px; }
 
 .field--labeled {
-  margin-bottom: 0.556em;
-  overflow: hidden; }
+  margin-bottom: 0.556em; }
   .field--labeled:last-child {
     margin-bottom: 0; }
   .field--labeled .field__label {
@@ -7493,6 +7553,11 @@ Styleguide field
     clear: both; }
   .field--labeled .field__items {
     display: block; }
+  .field--labeled a:focus {
+    outline-offset: 2px; }
+
+.field--labeled-align a:focus {
+  outline-offset: 2px; }
 
 .field--full-width {
   margin-left: -15px;
@@ -7551,8 +7616,7 @@ Styleguide field.labeledalign
 @media (min-width: 480px) {
   .field--labeled-align {
     margin-left: -15px;
-    margin-right: -15px;
-    overflow: hidden; }
+    margin-right: -15px; }
     .field--labeled-align .field__items {
       width: 66.6%;
       margin-left: 33.3%;
@@ -7665,12 +7729,12 @@ Styleguide file
     display: none; }
 
 .file__translations {
-  overflow: hidden;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  float: left;
+  width: 100%; }
   .file__translations .file__translations-control {
     margin-bottom: 0.3em;
-    padding: 0 1.333em;
-    outline: none; }
+    padding: 0 1.333em; }
     .file__translations .file__translations-control:active, .file__translations .file__translations-control:hover, .file__translations .file__translations-control:focus {
       text-decoration: none;
       color: #004494; }
@@ -7860,8 +7924,13 @@ Styleguide footer
       padding-left: 0; }
     .footer__menu .footer__menu-item a, .footer__menu .footer__menu-item-right a {
       padding: 0; }
+      .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
+        outline: 3px solid #ffd617;
+        outline-offset: 5px;
+        text-decoration: underline; }
       .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item-right a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item-right a:active, .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
-        background: none; }
+        background: none;
+        text-decoration: none; }
   .footer__menu .footer__menu-item-right {
     float: right; }
 
@@ -8915,7 +8984,9 @@ Styleguide inpagenav
     background: none;
     text-decoration: underline; }
   .inpage-nav .inpage_nav__list-item:focus {
-    background: #ffd617 !important; }
+    background: #ffd617 !important;
+    outline: none;
+    text-decoration: underline; }
 
 .inpage-nav__navbar {
   background-color: #ffffff;
@@ -8984,14 +9055,13 @@ Styleguide inpagenav
   .inpage-nav__navbar .inpage-nav__list--navbar {
     padding: 0 15px; }
     .inpage-nav__navbar .inpage-nav__list--navbar li.active .inpage_nav__list-item {
-      color: inherit;
-      background: none; }
+      color: inherit; }
     .inpage-nav__navbar .inpage-nav__list--navbar li .inpage_nav__list-item {
       color: #fff;
       border-top: 1px solid #023066;
       padding: 0.8em 0 0.8em 1em;
       font-size: 0.889em; }
-      .inpage-nav__navbar .inpage-nav__list--navbar li .inpage_nav__list-item:hover {
+      .inpage-nav__navbar .inpage-nav__list--navbar li .inpage_nav__list-item:hover, .inpage-nav__navbar .inpage-nav__list--navbar li .inpage_nav__list-item:focus {
         background: none;
         text-decoration: underline; }
 
@@ -9130,9 +9200,12 @@ Styleguide: siteheader.langselect
     font-size: 0.889em;
     font-weight: bold;
     padding: 7.5px 15px;
-    border: 2px solid transparent; }
+    border: 3px solid transparent; }
+    .lang-select-site .lang-select-site__link:hover {
+      text-decoration: underline; }
     .lang-select-site .lang-select-site__link:focus {
-      border-color: #ffd617; }
+      border-color: #ffd617;
+      outline: none; }
   .lang-select-site .lang-select-site__label {
     margin-right: 0.556em; }
   .lang-select-site .lang-select-site__code {
@@ -9331,13 +9404,15 @@ ul.listing--title {
   ul.listing--title a.listing__title,
   ul.listing--title a .listing__title {
     display: block;
-    padding-right: 2em; }
+    padding-right: 2em;
+    text-decoration: none; }
   .listing--title a.listing__title:after,
   ul.listing--title a.listing__title:after {
     line-height: 1.6; }
 
-.listing--title .listing__title:hover {
-  text-decoration: underline !important; }
+.listing--title .listing__title:hover, .listing--title .listing__title:focus {
+  text-decoration: underline !important;
+  color: #404040; }
 
 .listing--title-large .listing__title,
 .listing--title-medium .listing__title {
@@ -9441,13 +9516,13 @@ Styleguide listing.3
 .listing--cta .listing__item-link {
   padding: 1.222em;
   background-color: #004494; }
+  .listing--cta .listing__item-link:hover .listing__title, .listing--cta .listing__item-link:active .listing__title, .listing--cta .listing__item-link:focus .listing__title {
+    color: #ffffff; }
 
 .listing--cta .listing__item {
   border: none; }
   .listing--cta .listing__item .listing__title,
   .listing--cta .listing__item a {
-    color: #ffffff; }
-  .listing--cta .listing__item:hover .listing__title, .listing--cta .listing__item:active .listing__title, .listing--cta .listing__item:focus .listing__title {
     color: #ffffff; }
   .listing--cta .listing__item:first-child {
     border-top: none; }
@@ -9487,16 +9562,16 @@ a.listing__title {
   list-style: none;
   list-style-image: none;
   padding: 1.22em 0 1.11em;
-  overflow: hidden;
-  max-width: 32em; }
+  max-width: 32em;
+  width: 100%;
+  float: left; }
   .listing__item:first-child {
     border-top: 1px solid #ececec; }
   .listing__item:hover a .listing__title,
   .listing__item:hover a.listing__title, .listing__item:active a .listing__title,
   .listing__item:active a.listing__title, .listing__item:focus a .listing__title,
   .listing__item:focus a.listing__title {
-    text-decoration: underline;
-    color: #404040; }
+    text-decoration: underline; }
   .listing__item p {
     margin-bottom: 0; }
 
@@ -9505,10 +9580,14 @@ a.listing__title {
 
 .listing__item-link {
   display: block;
-  overflow: hidden;
+  float: left;
+  width: 100%;
   color: #404040; }
-  .listing__item-link:hover, .listing__item-link:active, .listing__item-link:focus {
+  .listing__item-link:active, .listing__item-link:focus {
     text-decoration: none; }
+    .listing__item-link:active .listing__title, .listing__item-link:focus .listing__title {
+      text-decoration: underline;
+      color: #404040; }
   .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
     display: none !important; }
   .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title,
@@ -9574,7 +9653,8 @@ a.listing__title {
   line-height: 1.3;
   margin-bottom: 0.5em;
   position: relative; }
-  a .listing__title {
+  a:link .listing__title,
+  a:visited .listing__title {
     color: #004494; }
   .listing__title + * {
     font-size: 0.889em; }
@@ -9590,6 +9670,7 @@ a.listing__title {
   text-align: right;
   font-weight: 600;
   display: block;
+  float: right;
   text-transform: uppercase;
   font-size: 0.833em; }
   .listing__read-more:after {
@@ -10171,6 +10252,12 @@ Styleguide notification
   font-size: 14px; }
   .notification a {
     color: #000; }
+    .notification a:focus {
+      outline: 3px solid #000;
+      outline-offset: 2px;
+      text-decoration: underline; }
+    .notification a:hover, .notification a:focus {
+      text-decoration: none; }
 
 .notification__label {
   display: inline-block;
@@ -10276,6 +10363,10 @@ Styleguide page-header.informational-home
     color: #fff; }
     .page-header a:hover:not(.breadcrumb__link, .btn) {
       color: #ffd617; }
+    .page-header a:focus {
+      outline: 3px solid #ffd617;
+      outline-offset: 2px;
+      text-decoration: underline; }
     .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
@@ -10386,8 +10477,10 @@ Styleguide pager
       font-size: 0.889em;
       padding: 0.3em 0 0.3em 0.9em;
       font-weight: normal; }
-    .pager__middle .pager__dropdown:focus {
-      outline: 6px solid #ffd617; }
+    .pager__middle .pager__dropdown:focus:focus {
+      outline: 3px solid #ffd617;
+      outline-offset: 0;
+      text-decoration: underline; }
     .pager__middle .pager__dropdown:-moz-focusring {
       color: transparent;
       text-shadow: 0 0 0 #004494; }
@@ -10507,6 +10600,10 @@ Styleguide: siteheader
       -webkit-print-color-adjust: exact; } }
   .site-header > .container-fluid, .section__group--full-width.site-header > *, .block--full-width.site-header > *, .field--full-width.site-header > * {
     position: relative; }
+  .site-header a:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: 5px;
+    text-decoration: underline; }
 
 .site-slogan {
   color: #404040;
@@ -10555,19 +10652,23 @@ Styleguide: siteswitcher
   text-align: center;
   vertical-align: middle;
   width: 50%; }
+  .site-switcher__option a {
+    text-decoration: none; }
+    .site-switcher__option a:hover, .site-switcher__option a:focus {
+      text-decoration: underline; }
   .site-switcher__option > a {
     display: block;
     width: 100%;
     padding: 0.5em 1.667em;
-    line-height: 1.3; }
+    line-height: 1.3;
+    font-weight: bold; }
     .site-switcher__option > a:after, .site-switcher__option > a.is-external:after, .site-political .site-switcher__option > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information .site-switcher__option > a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .site-switcher__option > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .site-switcher__option > a.listing__title:after {
       content: none !important; }
   .site-switcher__option.is-selected {
     background: #004494;
     border-left: none; }
     .site-switcher__option.is-selected > a {
-      color: #fff;
-      font-weight: bold; }
+      color: #fff; }
 
 .site-switcher--header .site-switcher__list:first-child {
   border-left: 1px solid #b3b4b5; }
@@ -10622,7 +10723,7 @@ Markup: html/search-form.html
 Styleguide: siteheader.searchform
 */
 .search-form {
-  overflow: hidden;
+  float: left;
   border: 1px solid #b3b4b5;
   margin-bottom: 1em; }
 
@@ -10683,7 +10784,9 @@ Styleguide: siteheader.searchform
       color: #000000;
       padding: 0; }
   .site-menu .listing__item-link:focus {
-    outline: 3px solid #404040; }
+    outline: 3px solid #404040;
+    outline-offset: 8px;
+    text-decoration: underline; }
   .site-menu .smaller {
     padding: 0.61em 0; }
     .site-menu .smaller a {
@@ -10755,7 +10858,8 @@ Styleguide: siteheader.searchform
     color: #fff;
     background: #006fb4;
     padding: 8px;
-    border: 4px solid #ffd617; }
+    outline: 4px solid #ffd617;
+    outline-offset: 0; }
 
 /*
 Social Media
@@ -10768,7 +10872,9 @@ Styleguide social
 */
 .social-media-links {
   background-color: #ececec;
-  padding: 30px; }
+  padding: 30px;
+  float: left;
+  width: 100%; }
   .social-media-links .social-media-links__list, .social-media-links .social-media-links--webtool-vertical .wtShareList ul, .social-media-links--webtool-vertical .wtShareList .social-media-links ul, .social-media-links .social-media-links--webtool-horizontal .wtShareList ul, .social-media-links--webtool-horizontal .wtShareList .social-media-links ul {
     list-style-type: none;
     padding: 0px !important;
@@ -10784,6 +10890,10 @@ Styleguide social
   .social-media-links__item > a, .social-media-links--webtool-vertical .wtShareList > a, .social-media-links--webtool-horizontal .wtShareList > a, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a {
     width: 100%;
     display: block; }
+    .social-media-links__item > a:focus, .social-media-links--webtool-vertical .wtShareList > a:focus, .social-media-links--webtool-horizontal .wtShareList > a:focus, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:focus, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:focus {
+      outline: 3px solid #ffd617;
+      outline-offset: -1px;
+      text-decoration: underline; }
     .social-media-links__item > a:before, .social-media-links--webtool-vertical .wtShareList > a:before, .social-media-links--webtool-horizontal .wtShareList > a:before, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:before, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:before {
       margin-bottom: 0px; }
     .social-media-links__item > a:after, .social-media-links--webtool-vertical .wtShareList > a:after, .social-media-links--webtool-horizontal .wtShareList > a:after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:after, .social-media-links__item > a.is-external:after, .social-media-links--webtool-vertical .wtShareList > a.is-external:after, .social-media-links--webtool-horizontal .wtShareList > a.is-external:after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.is-external:after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.is-external:after, .site-political .social-media-links__item > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-vertical .site-political .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-vertical .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-horizontal .site-political .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-horizontal .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-vertical .wtShareList .site-political .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-vertical .wtShareList .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList .site-political .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information .social-media-links__item > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-vertical .site-information .wtShareList > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-vertical .wtShareList > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .site-information .wtShareList > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-horizontal .wtShareList > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-vertical .wtShareList .site-information .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-vertical .wtShareList .wtShareLink > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList .site-information .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links__item > a.listing__title:after, .social-media-links--webtool-vertical .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareList > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-vertical .wtShareList > a.listing__title:after, .social-media-links--webtool-horizontal .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareList > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-horizontal .wtShareList > a.listing__title:after, .social-media-links--webtool-vertical .wtShareList .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareLink > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.listing__title:after, .social-media-links--webtool-horizontal .wtShareList .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareLink > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links__item > a.listing__title:after, .social-media-links--webtool-vertical .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareList > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-vertical .wtShareList > a.listing__title:after, .social-media-links--webtool-horizontal .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareList > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-horizontal .wtShareList > a.listing__title:after, .social-media-links--webtool-vertical .wtShareList .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.listing__title:after, .social-media-links--webtool-horizontal .wtShareList .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.listing__title:after {
@@ -10793,10 +10903,15 @@ Styleguide social
     margin-top: 1.2em; }
 
 .social-media-links--webtool-vertical .wtShareList, .social-media-links--webtool-horizontal .wtShareList {
+  overflow: visible;
+  float: left;
   background: transparent !important;
   padding: 0; }
   .social-media-links--webtool-vertical .wtShareList a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList a[href^="http"]:not(.is-internal):after {
     display: none !important; }
+  .social-media-links--webtool-vertical .wtShareList a:focus, .social-media-links--webtool-horizontal .wtShareList a:focus {
+    outline-offset: -1px;
+    text-decoration: underline; }
   .social-media-links--webtool-vertical .wtShareList li, .social-media-links--webtool-horizontal .wtShareList li {
     float: none; }
   .social-media-links--webtool-vertical .wtShareList a, .social-media-links--webtool-horizontal .wtShareList a {
@@ -10805,17 +10920,21 @@ Styleguide social
   .social-media-links--webtool-vertical .wtShareList a.wtShareMore, .social-media-links--webtool-horizontal .wtShareList a.wtShareMore {
     font-size: 0.8em;
     margin-top: 1.2em; }
+    .social-media-links--webtool-vertical .wtShareList a.wtShareMore:focus, .social-media-links--webtool-horizontal .wtShareList a.wtShareMore:focus {
+      outline-offset: 2px; }
   .social-media-links--webtool-vertical .wtShareList .wtShareLink, .social-media-links--webtool-horizontal .wtShareList .wtShareLink {
     font-size: 1em; }
 
 .social-media-links--webtool-horizontal {
   clear: both; }
-  .social-media-links--webtool-horizontal .wtShareList li {
-    float: left; }
-  .social-media-links--webtool-horizontal .wtShareList ul.wtShareNetworks {
-    max-width: none !important; }
-  .social-media-links--webtool-horizontal .wtShareList a {
-    width: inherit; }
+  .social-media-links--webtool-horizontal .wtShareList {
+    overflow: visible; }
+    .social-media-links--webtool-horizontal .wtShareList li {
+      float: left; }
+    .social-media-links--webtool-horizontal .wtShareList ul.wtShareNetworks {
+      max-width: none !important; }
+    .social-media-links--webtool-horizontal .wtShareList a {
+      width: inherit; }
 
 /*
 Splash Page
@@ -10961,7 +11080,6 @@ Styleguide tags
   padding-top: 0.15em; }
 
 .tags__items {
-  overflow: hidden;
   vertical-align: middle; }
 
 .tags__item, .facet-tag__value {
@@ -10976,7 +11094,7 @@ Styleguide tags
   padding: 0.5em;
   text-transform: lowercase;
   color: #404040;
-  outline: 2px transparent solid; }
+  outline: 3px transparent solid; }
 
 .tags__item a, .facet-tag__value a,
 a.tags__item,
@@ -10994,7 +11112,7 @@ a.facet-tag__value {
   a.tags__item:focus,
   a.facet-tag__value:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #ffd617; }
+    box-shadow: 0 0 0 3px #ffd617; }
 
 /*
 Facet tag
@@ -11042,7 +11160,8 @@ Styleguide timeline
   padding-left: 1.667em;
   padding-bottom: 0;
   padding-top: 2em;
-  position: relative; }
+  position: relative;
+  float: left; }
   .timeline .listing__item {
     padding: 0; }
   .timeline .timeline__item-title {
@@ -11081,7 +11200,9 @@ Styleguide timeline
 
 .view-biography-timeline .view-footer {
   margin-top: 1.667em !important;
-  margin-bottom: 1.667em; }
+  margin-bottom: 1.667em;
+  float: left;
+  width: 100%; }
 
 @media (min-width: 480px) {
   .timeline .timeline__item-title:before {
