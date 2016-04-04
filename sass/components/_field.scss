@@ -19,18 +19,20 @@ Styleguide field
   // Why do we have this html? (body field in priorities)
   .sections .container {
     padding: 0;
-  } 
+  }
 }
 
 .field__label {
   font-size: $font-size-xsmall;
   line-height: 2em;
   font-weight: $font-weight-bold;
+  a:focus{
+    outline-offset: 2px;
+  }
 }
 
 .field--labeled {
   margin-bottom: 0.556em;
-  overflow: hidden;
 
   &:last-child {
     margin-bottom: 0;
@@ -43,6 +45,15 @@ Styleguide field
 
   .field__items {
     display: block;
+  }
+  a:focus{
+    outline-offset: 2px;
+  }
+}
+
+.field--labeled-align{
+  a:focus{
+    outline-offset: 2px;
   }
 }
 
@@ -123,14 +134,11 @@ Markup: html/field--labeled-align.html
 
 Styleguide field.labeledalign
 */
-.field--labeled-align {
-}
 
 @include breakpoint(screen-xs-min) {
   .field--labeled-align {
     margin-left: -15px;
     margin-right: -15px;
-    overflow: hidden;
 
     .field__items {
       width: 66.6%;

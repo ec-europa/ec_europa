@@ -11,6 +11,7 @@ Styleguide timeline
   padding-bottom: 0;
   padding-top: 2em;
   position: relative;
+  float: left;
 
   .listing__item {
     padding: 0;
@@ -66,7 +67,9 @@ Styleguide timeline
 
 .view-biography-timeline .view-footer {
   margin-top: 1.667em !important;
-  margin-bottom: 1.667em; 
+  margin-bottom: 1.667em;
+  float: left;
+  width: 100%;
 }
 
 @include breakpoint(screen-xs-min) {

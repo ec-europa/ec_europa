@@ -73,6 +73,7 @@ Styleguide contextnav
     &:link {
       text-decoration: none;
     }
+    @include _focus_outline_border(3px, $yellow-light, 2px);
     &:hover {
       text-decoration: underline;
     }

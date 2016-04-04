@@ -21,7 +21,7 @@ Styleguide footer
     &:hover,
     &:active,
     &:focus {
-      text-decoration: none; 
+      text-decoration: none;
     }
   }
   @extend .hidden-print;
@@ -61,10 +61,12 @@ Styleguide footer
 
     a {
       padding: 0;
+      @include _focus_outline_border(3px, $yellow-light, 5px);
       &:hover,
       &:active,
       &:focus {
         background: none;
+        text-decoration: none;
       }
     }
   }
