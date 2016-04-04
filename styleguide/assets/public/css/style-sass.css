@@ -10784,10 +10784,14 @@ Styleguide: siteheader.searchform
   .site-menu .smaller {
     padding: 0.61em 0; }
     .site-menu .smaller a {
+      display: block;
       text-decoration: underline;
-      color: #000000; }
+      color: #000000;
+      margin-top: 2em; }
       .site-menu .smaller a:focus {
         outline: 3px solid #404040; }
+  .site-menu .col-sm-4 .listing, .site-menu .sidebar-field-group__sidebar .listing {
+    margin-top: 2em; }
   .site-menu p {
     color: black;
     font-size: 0.889em; }
@@ -10821,10 +10825,18 @@ Styleguide: siteheader.searchform
   .js .site-menu.collapse {
     height: inherit; }
 
+@media (min-width: 768px) {
+  .site-menu .listing__wrapper--two-columns .listing {
+    width: 100%; }
+  .site-menu .col-sm-4 .listing, .site-menu .sidebar-field-group__sidebar .listing {
+    margin-top: 0; } }
+
 @media (min-width: 992px) {
   .site-menu .listing__wrapper--two-columns .listing,
   .site-menu .listing__wrapper {
     margin-bottom: auto; }
+  .site-menu .listing__wrapper--two-columns .listing {
+    width: 50%; }
   .site-menu__section {
     padding-top: 2em;
     padding-bottom: 3em; } }
