@@ -17,13 +17,13 @@
       padding: 0;
     }
   }
-
-  .listing__item-link:focus {
-    outline: 3px solid $grey-base;
+  .listing__item-link{
+    @include _focus_outline_border(3px, $grey-base, 8px);
   }
 
   .smaller {
     padding: 0.61em 0;
+
     a {
       display: block;
       text-decoration: underline;

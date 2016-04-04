@@ -37,7 +37,7 @@ Styleguide form.checkbox
     visibility: hidden;
 
     &:before {
-      border: 2px solid transparent;
+      border: 3px solid transparent;
       border-radius: 8px;
       width: $form-checkbox-icon-size;
       height: $form-checkbox-icon-size;
@@ -55,7 +55,7 @@ Styleguide form.checkbox
     // Focus state, not checked.
     &:focus {
       &:before {
-        border: 2px solid $form-control-border-color-focus;
+        border: 3px solid $form-control-border-color-focus;
       }
     }
 

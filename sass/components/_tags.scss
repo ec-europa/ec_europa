@@ -25,7 +25,6 @@ Styleguide tags
 }
 
 .tags__items {
-  overflow: hidden;
   vertical-align: middle;
 }
 
@@ -41,7 +40,7 @@ Styleguide tags
   padding: 0.5em;
   text-transform: lowercase;
   color: $text-color;
-  outline: 2px transparent solid;
+  outline: 3px transparent solid;
 }
 
 .tags__item a,
@@ -54,7 +53,7 @@ a.tags__item {
   }
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px $yellow-light;
+    box-shadow: 0 0 0 3px $yellow-light;
   }
 }
 
@@ -68,7 +67,6 @@ Styleguide tags.facettag
 
 .facet-tag {
   @extend .tags;
-  @extend .hidden-print;
   @include breakpoint(screen-xs-min) {
     width: auto;
     display: inline-block;

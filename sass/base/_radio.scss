@@ -39,7 +39,7 @@ Styleguide form.radio
     // No focus.
     + label {
       &:before {
-        border: transparent solid 2px;
+        border: transparent solid 3px;
         border-radius: 50%;
         padding: $form-checkbox-icon-size 0 0 $form-checkbox-icon-size;
       }
@@ -48,7 +48,7 @@ Styleguide form.radio
     // Focus state.
     &:focus + label {
       &:before {
-        border: $form-control-border-color-focus solid 2px;
+        border: $form-control-border-color-focus solid 3px;
       }
     }
 

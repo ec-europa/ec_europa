@@ -30,10 +30,6 @@ Styleguide file
 
 .file__icon {
   float: left;
-  &:before {
-    color: $grey;
-    font-size: 2.778em;
-  }
   @extend .col-xs-1;
   @extend .col-md-1;
   @extend .col-sm-1;
@@ -45,16 +41,15 @@ Styleguide file
   height: 2.556em;
   overflow: hidden;
   text-align: center;
-
   &:before {
+    color: $grey;
     font-size: 2.556em;
   }
-
   // Make it self scaling.
   @media (max-width: 650px) {
     &:before {
       font-size: 1.556em; // Fallback for <IE10.
-      font-size: #{$col-1-no-percentage}vw!important;
+      font-size: #{$col-1-no-percentage}vw;
     }
   }
 }
@@ -146,13 +141,13 @@ Styleguide file
 }
 
 .file__translations {
-  overflow: hidden;
   margin-bottom: 1em;
+  float: left;
+  width: 100%;
 
   .file__translations-control {
     margin-bottom: 0.3em;
     padding: 0 1.333em;
-    outline: none;
 
     &:active, &:hover, &:focus {
       text-decoration: none;

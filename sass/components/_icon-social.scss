@@ -541,6 +541,16 @@ $icon-size: 40px;
   }
 }
 
+.icon-social--print {
+  &:before {
+    background: url('../images/svg/icons/social/print.svg') no-repeat;
+  }
+
+  &:hover:before {
+    background-image: url('../images/svg/icons/social/print_hover.svg');
+  }
+}
+
 .no-svg {
   .icon-social--arto {
     &:before {
@@ -551,6 +561,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/arto_hover.png');
     }
   }
+
   .icon-social--bebo {
     &:before {
       background: url('../images/png/icons/social/bebo.png') no-repeat;
@@ -560,6 +571,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/bebo_hover.png');
     }
   }
+
   .icon-social--bitly {
     &:before {
       background: url('../images/png/icons/social/bitly.png') no-repeat;
@@ -569,6 +581,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/bitly_hover.png');
     }
   }
+
   .icon-social--blinklist {
     &:before {
       background: url('../images/png/icons/social/blinklist.png') no-repeat;
@@ -578,6 +591,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/blinklist_hover.png');
     }
   }
+
   .icon-social--blog {
     &:before {
       background: url('../images/png/icons/social/blog.png') no-repeat;
@@ -587,6 +601,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/blog_hover.png');
     }
   }
+
   .icon-social--blogger {
     &:before {
       background: url('../images/png/icons/social/blogger.png') no-repeat;
@@ -596,6 +611,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/blogger_hover.png');
     }
   }
+
   .icon-social--delicious {
     &:before {
       background: url('../images/png/icons/social/delicious.png') no-repeat;
@@ -605,6 +621,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/delicious_hover.png');
     }
   }
+
   .icon-social--digg {
     &:before {
       background: url('../images/png/icons/social/digg.png') no-repeat;
@@ -614,6 +631,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/digg_hover.png');
     }
   }
+
   .icon-social--diigo {
     &:before {
       background: url('../images/png/icons/social/diigo.png') no-repeat;
@@ -623,6 +641,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/diigo_hover.png');
     }
   }
+
   .icon-social--dzone {
     &:before {
       background: url('../images/png/icons/social/dzone.png') no-repeat;
@@ -632,6 +651,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/dzone_hover.png');
     }
   }
+
   .icon-social--email {
     &:before {
       background: url('../images/png/icons/social/email.png') no-repeat;
@@ -641,6 +661,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/email_hover.png');
     }
   }
+
   .icon-social--facebook {
     &:before {
       background: url('../images/png/icons/social/facebook.png') no-repeat;
@@ -650,6 +671,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/facebook_hover.png');
     }
   }
+
   .icon-social--flickr {
     &:before {
       background: url('../images/png/icons/social/flickr.png') no-repeat;
@@ -659,6 +681,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/flickr_hover.png');
     }
   }
+
   .icon-social--foursquare {
     &:before {
       background: url('../images/png/icons/social/foursquare.png') no-repeat;
@@ -668,6 +691,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/foursquare_hover.png');
     }
   }
+
   .icon-social--generic {
     &:before {
       background: url('../images/png/icons/social/generic.png') no-repeat;
@@ -677,6 +701,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/generic_hover.png');
     }
   }
+
   .icon-social--google {
     &:before {
       background: url('../images/png/icons/social/google.png') no-repeat;
@@ -686,6 +711,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/google_hover.png');
     }
   }
+
   .icon-social--gplus {
     &:before {
       background: url('../images/png/icons/social/gplus.png') no-repeat;
@@ -695,6 +721,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/gplus_hover.png');
     }
   }
+
   .icon-social--instagram {
     &:before {
       background: url('../images/png/icons/social/instagram.png') no-repeat;
@@ -704,6 +731,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/instagram_hover.png');
     }
   }
+
   .icon-social--linkarena {
     &:before {
       background: url('../images/png/icons/social/linkarena.png') no-repeat;
@@ -713,6 +741,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/linkarena_hover.png');
     }
   }
+
   .icon-social--linkedin {
     &:before {
       background: url('../images/png/icons/social/linkedin.png') no-repeat;
@@ -722,6 +751,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/linkedin_hover.png');
     }
   }
+
   .icon-social--live {
     &:before {
       background: url('../images/png/icons/social/live.png') no-repeat;
@@ -731,6 +761,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/live_hover.png');
     }
   }
+
   .icon-social--meneame {
     &:before {
       background: url('../images/png/icons/social/meneame.png') no-repeat;
@@ -740,6 +771,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/meneame_hover.png');
     }
   }
+
   .icon-social--misterwong {
     &:before {
       background: url('../images/png/icons/social/misterwong.png') no-repeat;
@@ -749,6 +781,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/misterwong_hover.png');
     }
   }
+
   .icon-social--myspace {
     &:before {
       background: url('../images/png/icons/social/myspace.png') no-repeat;
@@ -758,6 +791,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/myspace_hover.png');
     }
   }
+
   .icon-social--netlog {
     &:before {
       background: url('../images/png/icons/social/netlog.png') no-repeat;
@@ -767,6 +801,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/netlog_hover.png');
     }
   }
+
   .icon-social--netvibes {
     &:before {
       background: url('../images/png/icons/social/netvibes.png') no-repeat;
@@ -776,6 +811,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/netvibes_hover.png');
     }
   }
+
   .icon-social--newsvine {
     &:before {
       background: url('../images/png/icons/social/newsvine.png') no-repeat;
@@ -785,6 +821,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/newsvine_hover.png');
     }
   }
+
   .icon-social--nujij {
     &:before {
       background: url('../images/png/icons/social/nujij.png') no-repeat;
@@ -794,6 +831,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/nujij_hover.png');
     }
   }
+
   .icon-social--pinterest {
     &:before {
       background: url('../images/png/icons/social/pinterest.png') no-repeat;
@@ -803,6 +841,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/pinterest_hover.png');
     }
   }
+
   .icon-social--pocket {
     &:before {
       background: url('../images/png/icons/social/pocket.png') no-repeat;
@@ -812,6 +851,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/pocket_hover.png');
     }
   }
+
   .icon-social--reddit {
     &:before {
       background: url('../images/png/icons/social/reddit.png') no-repeat;
@@ -821,6 +861,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/reddit_hover.png');
     }
   }
+
   .icon-social--rss {
     &:before {
       background: url('../images/png/icons/social/rss.png') no-repeat;
@@ -830,6 +871,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/rss_hover.png');
     }
   }
+
   .icon-social--share {
     &:before {
       background: url('../images/png/icons/social/share.png') no-repeat;
@@ -839,6 +881,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/share_hover.png');
     }
   }
+
   .icon-social--skype {
     &:before {
       background: url('../images/png/icons/social/skype.png') no-repeat;
@@ -848,6 +891,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/skype_hover.png');
     }
   }
+
   .icon-social--slashdot {
     &:before {
       background: url('../images/png/icons/social/slashdot.png') no-repeat;
@@ -857,6 +901,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/slashdot_hover.png');
     }
   }
+
   .icon-social--sonico {
     &:before {
       background: url('../images/png/icons/social/sonico.png') no-repeat;
@@ -866,6 +911,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/sonico_hover.png');
     }
   }
+
   .icon-social--spotify {
     &:before {
       background: url('../images/png/icons/social/spotify.png') no-repeat;
@@ -875,6 +921,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/spotify_hover.png');
     }
   }
+
   .icon-social--storify {
     &:before {
       background: url('../images/png/icons/social/storify.png') no-repeat;
@@ -884,6 +931,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/storify_hover.png');
     }
   }
+
   .icon-social--studivz {
     &:before {
       background: url('../images/png/icons/social/studivz.png') no-repeat;
@@ -893,6 +941,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/studivz_hover.png');
     }
   }
+
   .icon-social--stumbleupon {
     &:before {
       background: url('../images/png/icons/social/stumbleupon.png') no-repeat;
@@ -902,6 +951,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/stumbleupon_hover.png');
     }
   }
+
   .icon-social--technorati {
     &:before {
       background: url('../images/png/icons/social/technorati.png') no-repeat;
@@ -911,6 +961,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/technorati_hover.png');
     }
   }
+
   .icon-social--tuenti {
     &:before {
       background: url('../images/png/icons/social/tuenti.png') no-repeat;
@@ -920,6 +971,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/tuenti_hover.png');
     }
   }
+
   .icon-social--tumblr {
     &:before {
       background: url('../images/png/icons/social/tumblr.png') no-repeat;
@@ -929,6 +981,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/tumblr_hover.png');
     }
   }
+
   .icon-social--twitter {
     &:before {
       background: url('../images/png/icons/social/twitter.png') no-repeat;
@@ -938,6 +991,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/twitter_hover.png');
     }
   }
+
   .icon-social--viadeo {
     &:before {
       background: url('../images/png/icons/social/viadeo.png') no-repeat;
@@ -947,6 +1001,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/viadeo_hover.png');
     }
   }
+
   .icon-social--vine {
     &:before {
       background: url('../images/png/icons/social/vine.png') no-repeat;
@@ -956,6 +1011,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/vine_hover.png');
     }
   }
+
   .icon-social--wordpress {
     &:before {
       background: url('../images/png/icons/social/wordpress.png') no-repeat;
@@ -965,6 +1021,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/wordpress_hover.png');
     }
   }
+
   .icon-social--wykop {
     &:before {
       background: url('../images/png/icons/social/wykop.png') no-repeat;
@@ -974,6 +1031,7 @@ $icon-size: 40px;
       background-image: url('../images/png/icons/social/wykop_hover.png');
     }
   }
+
   .icon-social--xerpi {
     &:before {
       background: url('../images/png/icons/social/xerpi.png') no-repeat;
@@ -1001,6 +1059,16 @@ $icon-size: 40px;
 
     &:hover:before {
       background-image: url('../images/png/icons/social/youtube_hover.png');
+    }
+  }
+
+  .icon-social--print {
+    &:before {
+      background: url('../images/png/icons/social/print.png') no-repeat;
+    }
+
+    &:hover:before {
+      background-image: url('../images/png/icons/social/print_hover.png');
     }
   }
 }

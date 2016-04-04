@@ -6,10 +6,10 @@ Markup: html/search-form.html
 Styleguide: siteheader.searchform
 */
 .search-form {
+  @extend .hidden-print;
   margin-bottom: 1em;
   overflow: hidden;
   border: 1px solid $grey;
-  @extend .hidden-print;
 
   & > div {
     display: table;
