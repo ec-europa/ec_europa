@@ -7665,13 +7665,11 @@ Styleguide file
   text-align: center; }
   .file__icon:before {
     color: #b3b4b5;
-    font-size: 2.778em; }
-  .file__icon:before {
     font-size: 2.556em; }
   @media (max-width: 650px) {
     .file__icon:before {
       font-size: 1.556em;
-      font-size: 7.0833333333vw !important; } }
+      font-size: 7.0833333333vw; } }
 
 .file__metadata {
   line-height: 1;
