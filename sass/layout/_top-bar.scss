@@ -4,28 +4,15 @@
   width: 100%;
 }
 
-@include breakpoint(screen-xs-min) {
-  .block-nexteuropa-europa-search,
-  .site-menu__toggle {
-    float: left;
-    padding-left: 15px;
-    width: 25%;
-  }
-
-  .block-nexteuropa-europa-search {
-    width: 75%;
-  }
+.site-menu__toggle {
+  float: right;
+  width: 25%;
+  padding-left: 15px;
 }
 
-@include breakpoint(screen-sm-min) {
-  .site-menu__toggle {
-    float: right;
-    padding-left: 15px;
-    width: 25%;
-    .btn {
-      text-align: center;
-    }
-  }
+.block-nexteuropa-europa-search {
+  float: left;
+  width: 75%;
 }
 
 @include breakpoint(screen-md-min) {
@@ -43,12 +30,16 @@
 
     .block-nexteuropa-europa-search {
       width: auto;
-      padding-left: 15px;
+      margin-left: 15px;
+
+      .search-form .search-form__textfield-wrapper {
+        width: 240px;
+      }
     }
 
     .site-menu__toggle {
       width: auto;
-      padding-left: 15px;
+
       .btn {
         margin-bottom: auto;
       }

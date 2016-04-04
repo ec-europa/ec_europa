@@ -31,7 +31,6 @@ Styleguide: siteheader.searchform
 
 .search-form__textfield {
   width: 100%;
-  //float: left;
   margin: 0;
   border: none;
 }
@@ -60,14 +59,11 @@ Styleguide: siteheader.searchform
 
 @include breakpoint(screen-md-min) {
   .search-form {
-    width: auto;
-
     & > div {
       display: block;
     }
 
     .search-form__textfield-wrapper {
-      width: 260px;
       display: inline-block;
     }
 

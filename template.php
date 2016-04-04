@@ -157,7 +157,6 @@ function europa_form_element(&$variables) {
             $attributes['class'][] = 'form-select';
           }
         }
-        break;
     }
   }
 
@@ -216,8 +215,6 @@ function europa_form_element(&$variables) {
       $output .= $feedback_message;
       break;
 
-    case 'none':
-    case 'attribute':
     default:
       // Output no label and no required marker, only the children.
       if (!empty($description)) {
@@ -226,7 +223,6 @@ function europa_form_element(&$variables) {
 
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       $output .= $feedback_message;
-      break;
   }
 
   // Adding the calendar icon on text fields with JS UI PopUp calendar.

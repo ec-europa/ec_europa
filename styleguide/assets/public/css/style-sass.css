@@ -6354,22 +6354,14 @@ textarea.error {
   overflow: hidden;
   width: 100%; }
 
-@media (min-width: 480px) {
-  .block-nexteuropa-europa-search,
-  .site-menu__toggle {
-    float: left;
-    padding-left: 15px;
-    width: 25%; }
-  .block-nexteuropa-europa-search {
-    width: 75%; } }
+.site-menu__toggle {
+  float: right;
+  width: 25%;
+  padding-left: 15px; }
 
-@media (min-width: 768px) {
-  .site-menu__toggle {
-    float: right;
-    padding-left: 15px;
-    width: 25%; }
-    .site-menu__toggle .btn, .site-menu__toggle .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .site-menu__toggle .inpage-nav__toggle {
-      text-align: center; } }
+.block-nexteuropa-europa-search {
+  float: left;
+  width: 75%; }
 
 @media (min-width: 992px) {
   .top-bar {
@@ -6383,10 +6375,11 @@ textarea.error {
       margin: 0; }
     .top-bar .block-nexteuropa-europa-search {
       width: auto;
-      padding-left: 15px; }
+      margin-left: 15px; }
+      .top-bar .block-nexteuropa-europa-search .search-form .search-form__textfield-wrapper {
+        width: 240px; }
     .top-bar .site-menu__toggle {
-      width: auto;
-      padding-left: 15px; }
+      width: auto; }
       .top-bar .site-menu__toggle .btn, .top-bar .site-menu__toggle .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .top-bar .site-menu__toggle .inpage-nav__toggle {
         margin-bottom: auto; } }
 
@@ -10651,19 +10644,16 @@ Styleguide: siteheader.searchform
     text-indent: 0; }
 
 @media (min-width: 992px) {
-  .search-form {
-    width: auto; }
-    .search-form > div {
-      display: block; }
-    .search-form .search-form__textfield-wrapper {
-      width: 260px;
-      display: inline-block; }
-    .search-form .search-form__btn-wrapper {
-      float: right;
-      width: auto;
-      display: block;
-      vertical-align: inherit;
-      white-space: inherit; }
+  .search-form > div {
+    display: block; }
+  .search-form .search-form__textfield-wrapper {
+    display: inline-block; }
+  .search-form .search-form__btn-wrapper {
+    float: right;
+    width: auto;
+    display: block;
+    vertical-align: inherit;
+    white-space: inherit; }
   .search-form__btn {
     padding: 0 1em;
     text-indent: 0; }
