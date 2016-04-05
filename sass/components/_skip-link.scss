@@ -10,6 +10,7 @@
     color: #fff;
     background: $blue;
     padding: 8px;
-    border: 4px solid $yellow-light;
+    outline: 4px solid $yellow-light;
+    outline-offset: 0;
   }
 }

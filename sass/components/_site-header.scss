@@ -17,7 +17,7 @@ Styleguide: siteheader
       position: relative;
       top: 15px;
     }
-    
+
     & {
       padding: 14px 0;
     }
@@ -29,5 +29,8 @@ Styleguide: siteheader
 
   & > .container-fluid {
     position: relative;
+  }
+  a{
+    @include _focus_outline_border(3px, $yellow-light, 5px);
   }
 }

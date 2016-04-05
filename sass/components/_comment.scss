@@ -59,6 +59,9 @@ $twenty-five: 1.389em;
   font-weight: bold;
   font-size: $font-size-medium;
   padding: $fifteen 0;
+  &:focus{
+    outline-offset: 0;
+  }
 }
 
 .comment__author {

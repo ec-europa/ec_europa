@@ -15,12 +15,17 @@
 }
 
 // Feedback form
-.feedback-form__trigger {
+a.feedback-form__trigger {
   text-decoration: none;
   color: $brand-primary;
-  display: block;
-  padding: 0.667em 0 0.556em 2.500em;
+  display: inline-block;
   font-size: $font-size-little;
+  &:focus{
+    outline-offset: 0;
+  }
+  &:active{
+    outline: none;
+  }
 }
 
 .feedback-form__content {
@@ -49,7 +54,7 @@
 
   .accordion-group {
     border-top: 1px solid #575757;
-    padding:10px;
+    padding: 10px;
 
     &:first-child {
       border-top: none;
@@ -57,19 +62,26 @@
 
     .accordion-toggle {
       background: url('../images/svg/checkbox-checked--blue.svg') no-repeat;
-      line-height: 20px;
-      padding-left: 25px;
+      line-height: 23px;
+      padding-left: 28px;
       color: $brand-primary;
       text-decoration: none;
       font-weight: bold;
       display: block;
       text-decoration: none;
       font-size: $font-size-little;
-
+      &:focus {
+        background: url('../images/svg/checkbox-highlighted.svg') no-repeat;
+        outline: none;
+      }
       &.collapsed {
         background: url('../images/svg/checkbox-unchecked--grey.svg') no-repeat;
         color: #404040;
         font-weight: 400;
+        &:focus {
+          background: url('../images/svg/checkbox-highlighted.svg') no-repeat;
+          outline: none;
+        }
 
       }
 
@@ -116,7 +128,7 @@
 
 @include breakpoint(screen-md-min) {
   .feedback-form__trigger {
-    padding: 0.667em 0 0.556em 0;
+    margin: 0.667em 0 0.556em 0;
   }
 }
 

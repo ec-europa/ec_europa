@@ -121,6 +121,7 @@ ul.listing--title {
   a .listing__title {
     display: block;
     padding-right: 2em;
+    text-decoration: none;
   }
 
   a.listing__title {
@@ -132,8 +133,10 @@ ul.listing--title {
 
 .listing--title {
   .listing__title {
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: underline !important;
+      color: $grey-base;
     }
   }
 }
@@ -302,6 +305,13 @@ Styleguide listing.3
   .listing__item-link {
     padding: $font-size-mid;
     background-color: $brand-primary;
+    &:hover,
+    &:active,
+    &:focus {
+      .listing__title {
+        color: #ffffff;
+      }
+    }
   }
 
   .listing__item {
@@ -311,15 +321,6 @@ Styleguide listing.3
     a {
       color: #ffffff;
     }
-
-    &:hover,
-    &:active,
-    &:focus {
-      .listing__title {
-        color: #ffffff;
-      }
-    }
-
     &:first-child {
       border-top: none;
     }
@@ -394,8 +395,9 @@ a.listing__title {
   list-style: none;
   list-style-image: none;
   padding: 1.22em 0 1.11em;
-  overflow: hidden;
   max-width: 32em;
+  width: 100%;
+  float: left;
 
   &:first-child {
     border-top: 1px solid $grey-lighter;
@@ -407,7 +409,6 @@ a.listing__title {
     a .listing__title,
     a.listing__title {
       text-decoration: underline;
-      color: $grey-base;
     }
   }
 
@@ -423,13 +424,16 @@ a.listing__title {
 // .listing__item-link element
 .listing__item-link {
   display: block;
-  overflow: hidden;
+  float: left;
+  width: 100%;
   color: $grey-base;
-
-  &:hover,
   &:active,
   &:focus {
     text-decoration: none;
+    .listing__title{
+      text-decoration: underline;
+      color: $grey-base;
+    }
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
@@ -515,7 +519,8 @@ a.listing__title {
   position: relative;
   @extend .h3;
 
-  a & {
+  a:link &,
+  a:visited &{
     color: $brand-primary;
   }
 
@@ -542,6 +547,7 @@ a.listing__title {
   text-align: right;
   font-weight: $font-weight-bold;
   display: block;
+  float: right;
   text-transform: uppercase;
   font-size: $font-size-tiny;
 

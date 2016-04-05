@@ -17,8 +17,9 @@ $breadcrumb-heigth: 2.778em;
   font-weight: 600;
   position: relative;
   border-radius: 0;
-  overflow: hidden;
   line-height: normal;
+  float: left;
+  width: 100%;
   @extend .hidden-print;
 
   ol,
