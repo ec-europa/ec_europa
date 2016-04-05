@@ -11290,4 +11290,24 @@ Styleguide top-image
     .section-styleguide .section__group-styleguide p {
       padding: 50px 0; }
 
+.views-exposed-form .views-exposed-widget {
+  padding: 0; }
+
+@media (min-width: 992px) {
+  html.js .filters__btn-submit.ctools-use-ajax {
+    display: none; }
+  html.js.ie8 .filters__btn-submit.ctools-use-ajax {
+    display: block; }
+  .view-workbench-moderation .views-exposed-widget {
+    width: 50%;
+    clear: none; }
+    .view-workbench-moderation .views-exposed-widget:nth-child(odd) {
+      padding-right: 2%; }
+  .view-workbench-moderation .views-widget-per-page {
+    clear: left; }
+  .view-workbench-moderation .filters__btn-submit {
+    width: auto;
+    float: left;
+    clear: left; } }
+
 /*# sourceMappingURL=style-sass.css.map */
