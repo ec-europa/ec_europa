@@ -64,11 +64,11 @@ Styleguide: siteheader.searchform
     }
 
     .search-form__textfield-wrapper {
-      display: inline-block;
+      float: left;
     }
 
     .search-form__btn-wrapper {
-      float: right;
+      float: left;
       width: auto;
       display: block;
       vertical-align: inherit;
