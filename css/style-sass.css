@@ -11015,7 +11015,7 @@ Styleguide splashpage
   overflow-x: auto;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1000;
   text-align: left; }
   .splash-page--overlay h2 {
     display: block; }
