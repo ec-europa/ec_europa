@@ -10788,7 +10788,9 @@ Styleguide: siteheader.searchform
       display: block;
       text-decoration: underline;
       color: #000000;
-      margin-top: 2em; }
+      margin-top: 2em;
+      float: left;
+      width: 100%; }
       .site-menu .smaller a:focus {
         outline: 3px solid #404040; }
   .site-menu .col-sm-4 .listing, .site-menu .sidebar-field-group__sidebar .listing {

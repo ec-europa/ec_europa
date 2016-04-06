@@ -29,6 +29,8 @@
       text-decoration: underline;
       color: #000000;
       margin-top: 2em;
+      float: left;
+      width: 100%;
       &:focus {
         outline: 3px solid $grey-base;
       }
