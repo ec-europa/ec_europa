@@ -56,11 +56,13 @@ body:not(.page-admin){ //temp fix for workbench checkboxes
       // Focus state, not checked.
       &:focus + label:before {
         pointer-events: none;
-        border: 3px solid $form-control-border-color-focus;
+        @include _focus_outline_border(3px, $yellow-light, 2px);
       }
       // Checked state.
       &:checked + label:before {
         background-image: url('../images/svg/checkbox-checked--blue.svg');
+        background-size: 1.5em auto;
+        left: -0.5em;
       }
     }
   }

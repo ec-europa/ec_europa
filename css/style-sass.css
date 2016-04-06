@@ -5812,10 +5812,15 @@ body:not(.page-admin) .checkbox {
         background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
         background-size: auto 1.25em; }
     body:not(.page-admin) .checkbox input[type='checkbox']:focus + label:before {
-      pointer-events: none;
-      border: 3px solid #ffd617; }
+      pointer-events: none; }
+      body:not(.page-admin) .checkbox input[type='checkbox']:focus + label:before:focus {
+        outline: 3px solid #ffd617;
+        outline-offset: 2px;
+        text-decoration: underline; }
     body:not(.page-admin) .checkbox input[type='checkbox']:checked + label:before {
-      background-image: url("../images/svg/checkbox-checked--blue.svg"); }
+      background-image: url("../images/svg/checkbox-checked--blue.svg");
+      background-size: 1.5em auto;
+      left: -0.5em; }
 
 .no-svg .checkbox label {
   height: auto;
