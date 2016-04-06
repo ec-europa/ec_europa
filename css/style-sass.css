@@ -6394,26 +6394,14 @@ textarea.error {
   overflow: hidden;
   width: 100%; }
 
-@media (min-width: 480px) {
-  .block-nexteuropa-europa-search,
-  .site-menu__toggle {
-    float: left; }
-  .block-nexteuropa-europa-search {
-    width: 75%; }
-  .site-menu__toggle {
-    padding: 0;
-    width: 100%; }
-    .site-menu__toggle .btn, .site-menu__toggle .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .site-menu__toggle .inpage-nav__toggle {
-      text-align: right;
-      margin-bottom: 0; } }
+.site-menu__toggle {
+  float: right;
+  width: 25%;
+  padding-left: 15px; }
 
-@media (min-width: 768px) {
-  .site-menu__toggle {
-    float: right;
-    padding-left: 15px;
-    width: 25%; }
-    .site-menu__toggle .btn, .site-menu__toggle .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .site-menu__toggle .inpage-nav__toggle {
-      text-align: center; } }
+.block-nexteuropa-europa-search {
+  float: left;
+  width: 75%; }
 
 @media (min-width: 992px) {
   .top-bar {
@@ -6427,7 +6415,9 @@ textarea.error {
       margin: 0; }
     .top-bar .block-nexteuropa-europa-search {
       width: auto;
-      padding-left: 15px; }
+      margin-left: 15px; }
+      .top-bar .block-nexteuropa-europa-search .search-form .search-form__textfield-wrapper {
+        width: 240px; }
     .top-bar .site-menu__toggle {
       width: auto; }
       .top-bar .site-menu__toggle .btn, .top-bar .site-menu__toggle .inpage-nav__navbar .inpage-nav__toggle, .inpage-nav__navbar .top-bar .site-menu__toggle .inpage-nav__toggle {
@@ -10725,52 +10715,59 @@ Markup: html/search-form.html
 Styleguide: siteheader.searchform
 */
 .search-form {
-  float: left;
-  border: 1px solid #b3b4b5;
-  margin-bottom: 1em; }
-
-.search-form__textfield-wrapper {
-  margin: 0;
-  width: 83%;
-  float: left; }
+  margin-bottom: 1em;
+  overflow: hidden;
+  border: 1px solid #b3b4b5; }
+  .search-form > div {
+    display: table;
+    border-collapse: separate; }
+  .search-form .search-form__textfield-wrapper,
+  .search-form .search-form__btn-wrapper {
+    position: relative;
+    display: table-cell; }
+  .search-form .search-form__btn-wrapper {
+    width: 1%;
+    vertical-align: middle;
+    white-space: nowrap; }
 
 .search-form__textfield {
+  width: 100%;
   margin: 0;
-  border: none;
-  width: 83%;
-  float: left; }
+  border: none; }
 
 .search-form__btn {
-  width: 17%;
-  float: left;
-  text-indent: 10em;
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
   min-height: 2.75em;
+  margin-right: -1px;
+  margin-bottom: 0;
+  padding: 0 22px;
+  text-indent: -999em;
+  overflow: visible;
   border: none !important; }
   .search-form__btn:before {
-    text-indent: 0;
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1.5em;
     width: 100%;
-    line-height: 1.9em; }
-
-@media (min-width: 480px) {
-  .search-form__textfield {
-    width: 67%; }
-  .search-form__btn {
-    text-indent: 0;
-    width: 33%; }
-    .search-form__btn:before {
-      display: none !important; } }
+    font-size: 1.5em;
+    line-height: 1.9em;
+    text-indent: 0; }
 
 @media (min-width: 992px) {
-  .search-form {
-    width: 340px; } }
+  .search-form > div {
+    display: block; }
+  .search-form .search-form__textfield-wrapper {
+    float: left; }
+  .search-form .search-form__btn-wrapper {
+    float: left;
+    width: auto;
+    display: block;
+    vertical-align: inherit;
+    white-space: inherit; }
+  .search-form__btn {
+    padding: 0 1em;
+    text-indent: 0; }
+    .search-form__btn:before {
+      display: none !important; } }
 
 .site-menu {
   margin-bottom: 0; }
@@ -11293,5 +11290,25 @@ Styleguide top-image
     background: #ccc; }
     .section-styleguide .section__group-styleguide p {
       padding: 50px 0; }
+
+.views-exposed-form .views-exposed-widget {
+  padding: 0; }
+
+@media (min-width: 992px) {
+  html.js .filters__btn-submit.ctools-use-ajax {
+    display: none; }
+  html.js.ie8 .filters__btn-submit.ctools-use-ajax {
+    display: block; }
+  .view-workbench-moderation .views-exposed-widget {
+    width: 50%;
+    clear: none; }
+    .view-workbench-moderation .views-exposed-widget:nth-child(odd) {
+      padding-right: 2%; }
+  .view-workbench-moderation .views-widget-per-page {
+    clear: left; }
+  .view-workbench-moderation .filters__btn-submit {
+    width: auto;
+    float: left;
+    clear: left; } }
 
 /*# sourceMappingURL=style-sass.css.map */
