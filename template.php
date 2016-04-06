@@ -1374,7 +1374,7 @@ function europa_pager_last($variables) {
 }
 
 /**
- * Implements theme_pager_last().
+ * Implements form_alter().
  */
 function europa_form_alter(&$form, &$form_state, $form_id) {
 
