@@ -13,55 +13,52 @@ Styleguide form.checkbox
  */
 
 // Component
-.checkbox {
-  margin-bottom: 2px;
-  margin-top: 0;
-  @extend .clearfix;
+body:not(.page-admin){ //temp fix for workbench checkboxes
+  .checkbox{
+    margin-bottom: 2px;
+    margin-top: 0;
+    @extend .clearfix;
 
-  label {
-    color: $grey-base;
-    height: $form-control-height;
-    line-height: $form-control-height;
-    display: block;
-    text-align: left;
-    float: left;
-    padding-left: 0.7em;
-  }
 
-  input[type='checkbox'] {
-    margin: 1px 0 0 13px;
-    position: static;
-    margin-left: 0;
-    float: left;
-    height: $form-control-height;
-    visibility: hidden;
+    input[type='checkbox'] {
+      margin: 1px 0 0 13px;
+      position: static;
+      margin-left: 0;
+      float: left;
+      height: $form-control-height;
+      visibility: hidden;
+      & + label {
+        color: $grey-base;
+        height: $form-control-height;
+        line-height: $form-control-height;
+        display: block;
+        text-align: left;
+        float: left;
+        padding-left: 0.7em;
+        &:before {
+          pointer-events: none;
+          border: 3px solid transparent;
+          border-radius: 8px;
+          width: $form-checkbox-icon-size;
+          height: $form-checkbox-icon-size;
+          padding: $form-checkbox-icon-size 0 0 $form-checkbox-icon-size;
+          content: '';
+          position: absolute;
+          display: block;
+          top: 0.45em;
+          left: -0.4em;
+          background: url('../images/svg/checkbox-unchecked-trans-inside.svg') no-repeat;
+          background-size: auto $form-checkbox-icon-size;
+        }
+      }
 
-    &:before {
-      border: 3px solid transparent;
-      border-radius: 8px;
-      width: $form-checkbox-icon-size;
-      height: $form-checkbox-icon-size;
-      padding: $form-checkbox-icon-size 0 0 $form-checkbox-icon-size;
-      visibility: visible;
-      content: '';
-      position: absolute;
-      display: block;
-      top: 0.45em;
-      left: -0.4em;
-      background: url('../images/svg/checkbox-unchecked-trans-inside.svg') no-repeat;
-      background-size: auto $form-checkbox-icon-size;
-    }
-
-    // Focus state, not checked.
-    &:focus {
-      &:before {
+      // Focus state, not checked.
+      &:focus + label:before {
+        pointer-events: none;
         border: 3px solid $form-control-border-color-focus;
       }
-    }
-
-    // Checked state.
-    &:checked {
-      &:before {
+      // Checked state.
+      &:checked + label:before {
         background-image: url('../images/svg/checkbox-checked--blue.svg');
       }
     }
