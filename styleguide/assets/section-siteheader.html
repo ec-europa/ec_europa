@@ -875,23 +875,37 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <form class="search-form" action="http://ec.europa.eu/geninfo/query/resultaction.jsp" method="get" id="nexteuropa-europa-search-search-form" accept-charset="UTF-8">
-  <div>
-    <input placeholder="Search" class="search-form__textfield form-control form-text" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="This function is not yet working in Beta." type="text" id="edit-querytext" name="QueryText" value="" size="60" maxlength="128">
-    <button class="search-form__btn btn btn-primary btn-search" name="op" value="Search" type="submit">Search</button>
-  </div>
-</form>
+          <div class="top-bar"> <!-- only required for the styleguide -->
+  <form class="search-form">
+    <div>
+      <div class="search-form__textfield-wrapper">
+        <label class="sr-only">Search</label>
+        <input class="search-form__textfield form-control" type="text" value="" size="60" maxlength="128">
+      </div>
+      <div class="search-form__btn-wrapper">
+        <button class="search-form__btn btn btn-primary btn-search" value="Search" type="submit">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;search-form&quot; action=&quot;http://ec.europa.eu/geninfo/query/resultaction.jsp&quot; method=&quot;get&quot; id=&quot;nexteuropa-europa-search-search-form&quot; accept-charset=&quot;UTF-8&quot;&gt;
-  &lt;div&gt;
-    &lt;input placeholder=&quot;Search&quot; class=&quot;search-form__textfield form-control form-text&quot; data-toggle=&quot;popover&quot; data-placement=&quot;bottom&quot; data-trigger=&quot;focus&quot; data-content=&quot;This function is not yet working in Beta.&quot; type=&quot;text&quot; id=&quot;edit-querytext&quot; name=&quot;QueryText&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot;&gt;
-    &lt;button class=&quot;search-form__btn btn btn-primary btn-search&quot; name=&quot;op&quot; value=&quot;Search&quot; type=&quot;submit&quot;&gt;Search&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;top-bar&quot;&gt; &lt;!-- only required for the styleguide --&gt;
+  &lt;form class=&quot;search-form&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;search-form__textfield-wrapper&quot;&gt;
+        &lt;label class=&quot;sr-only&quot;&gt;Search&lt;/label&gt;
+        &lt;input class=&quot;search-form__textfield form-control&quot; type=&quot;text&quot; value=&quot;&quot; size=&quot;60&quot; maxlength=&quot;128&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;search-form__btn-wrapper&quot;&gt;
+        &lt;button class=&quot;search-form__btn btn btn-primary btn-search&quot; value=&quot;Search&quot; type=&quot;submit&quot;&gt;Search&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
 

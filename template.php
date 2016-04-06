@@ -92,7 +92,6 @@ function europa_bootstrap_colorize_text_alter(&$texts) {
  * Overrides theme_form_element().
  */
 function europa_form_element(&$variables) {
-
   $element = &$variables['element'];
   $is_checkbox = FALSE;
   $is_radio = FALSE;
@@ -137,24 +136,27 @@ function europa_form_element(&$variables) {
 
   // See http://getbootstrap.com/css/#forms-controls.
   if (isset($element['#type'])) {
-    if ($element['#type'] == "radio") {
-      $attributes['class'][] = 'radio';
-      $is_radio = TRUE;
-    }
-    elseif ($element['#type'] == "checkbox") {
-      $attributes['class'][] = 'checkbox';
-      $is_checkbox = TRUE;
-    }
-    else {
-      // Check if it is not our search form. Because we don't want the default
-      // bootstrap class here.
-      if (!in_array('form-item-QueryText', $attributes['class'])) {
-        $attributes['class'][] = 'form-group';
-        // Apply an extra wrapper class to our select list.
-        if ($element['#type'] == 'select') {
-          $attributes['class'][] = 'form-select';
+    switch ($element['#type']) {
+      case "radio":
+        $attributes['class'][] = 'radio';
+        $is_radio = TRUE;
+        break;
+
+      case "checkbox":
+        $attributes['class'][] = 'checkbox';
+        $is_checkbox = TRUE;
+        break;
+
+      default:
+        // Check if it is not our search form. Because we don't want the default
+        // bootstrap class here.
+        if (!in_array('form-item-QueryText', $attributes['class'])) {
+          $attributes['class'][] = 'form-group';
+          // Apply an extra wrapper class to our select list.
+          if ($element['#type'] == 'select') {
+            $attributes['class'][] = 'form-select';
+          }
         }
-      }
     }
   }
 
@@ -199,11 +201,9 @@ function europa_form_element(&$variables) {
 
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       $output .= $feedback_message;
-
       break;
 
     case 'after':
-
       if ($is_radio || $is_checkbox) {
         $output .= ' ' . $prefix . $element['#children'] . $suffix;
       }
@@ -213,11 +213,9 @@ function europa_form_element(&$variables) {
 
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
       $output .= $feedback_message;
-
       break;
 
-    case 'none':
-    case 'attribute':
+    default:
       // Output no label and no required marker, only the children.
       if (!empty($description)) {
         $output .= $description;
@@ -225,21 +223,18 @@ function europa_form_element(&$variables) {
 
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       $output .= $feedback_message;
-
-      break;
   }
 
   // Adding the calendar icon on text fields with JS UI PopUp calendar.
   if ($variables['element']['#type'] == 'date_popup') {
-
     $prefix = '<div class="date-picker">';
     $suffix = '<span class="icon icon--calendar"></span>';
     $output = ' ' . $prefix . $element['#children'] . $suffix . "\n";
   }
 
   $output .= "</div>\n";
-  return $output;
 
+  return $output;
 }
 
 /**
@@ -458,8 +453,14 @@ function europa_html_head_alter(&$head_elements) {
 function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_state, $form_id) {
   $form['search_input_group']['#prefix'] = '';
   $form['search_input_group']['#suffix'] = '';
+  $form['search_input_group']['europa_search_submit']['#prefix'] = '<div class="search-form__btn-wrapper">';
+  $form['search_input_group']['europa_search_submit']['#suffix'] = '</div>';
   $form['search_input_group']['europa_search_submit']['#attributes']['class'][] = 'search-form__btn';
+  $form['search_input_group']['QueryText']['#prefix'] = '<div class="search-form__textfield-wrapper">';
+  $form['search_input_group']['QueryText']['#suffix'] = '</div>';
   $form['search_input_group']['QueryText']['#attributes']['class'][] = 'search-form__textfield';
+
+  unset($form['search_input_group']['QueryText']['#attributes']['placeholder']);
 }
 
 /**
