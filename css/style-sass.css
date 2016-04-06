@@ -5795,7 +5795,8 @@ body:not(.page-admin) .checkbox {
       display: block;
       text-align: left;
       float: left;
-      padding-left: 0.7em; }
+      margin-left: -0.7em;
+      padding-left: 1.4em; }
       body:not(.page-admin) .checkbox input[type='checkbox'] + label:before {
         pointer-events: none;
         border: 3px solid transparent;
