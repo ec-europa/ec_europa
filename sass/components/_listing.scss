@@ -273,7 +273,7 @@ Styleguide listing.3
 
 @include breakpoint(screen-xs-min) {
   .listing--line-left p {
-    font-size: 18px;
+    font-size: $font-size-medium;
   }
 }
 

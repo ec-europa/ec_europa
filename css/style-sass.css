@@ -9492,7 +9492,7 @@ Styleguide listing.3
 
 @media (min-width: 480px) {
   .listing--line-left p {
-    font-size: 18px; } }
+    font-size: 1em; } }
 
 .listing--nostripe {
   padding: 30px; }
