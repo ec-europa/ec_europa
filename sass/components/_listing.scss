@@ -271,6 +271,12 @@ Styleguide listing.3
   }
 }
 
+@include breakpoint(screen-xs-min) {
+  .listing--line-left p {
+    font-size: $font-size-medium;
+  }
+}
+
 // .listing--nostripe modifier.
 .listing--nostripe {
   padding: 30px;
@@ -705,4 +711,3 @@ Styleguide listing.2.4
     }
   }
 }
-

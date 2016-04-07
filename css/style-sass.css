@@ -5204,11 +5204,11 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, .checkbox:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
+.clearfix:before, body:not(.page-admin) .checkbox:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, body:not(.page-admin) .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   content: " ";
   display: table; }
 
-.clearfix:after, .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
+.clearfix:after, body:not(.page-admin) .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   clear: both; }
 
 .center-block {
@@ -5778,42 +5778,49 @@ Styleguide form.checkbox
  * @see http://bootsnipp.com/snippets/featured/funky-radio-buttons
  * @see http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
  */
-.checkbox {
+body:not(.page-admin) .checkbox {
   margin-bottom: 2px;
   margin-top: 0; }
-  .checkbox label {
-    color: #404040;
-    height: 2.75em;
-    line-height: 2.75em;
-    display: block;
-    text-align: left;
-    float: left;
-    padding-left: 0.7em; }
-  .checkbox input[type='checkbox'] {
+  body:not(.page-admin) .checkbox input[type='checkbox'] {
     margin: 1px 0 0 13px;
     position: static;
     margin-left: 0;
     float: left;
     height: 2.75em;
     visibility: hidden; }
-    .checkbox input[type='checkbox']:before {
-      border: 3px solid transparent;
-      border-radius: 8px;
-      width: 1.25em;
-      height: 1.25em;
-      padding: 1.25em 0 0 1.25em;
-      visibility: visible;
-      content: '';
-      position: absolute;
+    body:not(.page-admin) .checkbox input[type='checkbox'] + label {
+      color: #404040;
+      height: 2.75em;
+      line-height: 2.75em;
       display: block;
-      top: 0.45em;
-      left: -0.4em;
-      background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
-      background-size: auto 1.25em; }
-    .checkbox input[type='checkbox']:focus:before {
-      border: 3px solid #ffd617; }
-    .checkbox input[type='checkbox']:checked:before {
-      background-image: url("../images/svg/checkbox-checked--blue.svg"); }
+      text-align: left;
+      float: left;
+      margin-left: -0.7em;
+      padding-left: 1.4em; }
+      body:not(.page-admin) .checkbox input[type='checkbox'] + label:before {
+        pointer-events: none;
+        border: 3px solid transparent;
+        border-radius: 8px;
+        width: 1.25em;
+        height: 1.25em;
+        padding: 1.25em 0 0 1.25em;
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0.45em;
+        left: -0.4em;
+        background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
+        background-size: auto 1.25em; }
+    body:not(.page-admin) .checkbox input[type='checkbox']:focus + label:before {
+      pointer-events: none; }
+      body:not(.page-admin) .checkbox input[type='checkbox']:focus + label:before:focus {
+        outline: 3px solid #ffd617;
+        outline-offset: 2px;
+        text-decoration: underline; }
+    body:not(.page-admin) .checkbox input[type='checkbox']:checked + label:before {
+      background-image: url("../images/svg/checkbox-checked--blue.svg");
+      background-size: 1.5em auto;
+      left: -0.5em; }
 
 .no-svg .checkbox label {
   height: auto;
@@ -9490,6 +9497,10 @@ Styleguide listing.3
   padding: 0.611em 0 0.611em 1.222em;
   margin: 0.611em 0; }
 
+@media (min-width: 480px) {
+  .listing--line-left p {
+    font-size: 1em; } }
+
 .listing--nostripe {
   padding: 30px; }
   .listing--nostripe .listing__item {
@@ -11308,5 +11319,11 @@ Styleguide top-image
     width: auto;
     float: left;
     clear: left; } }
+
+.page-admin input[type='checkbox'] {
+  zoom: 1.6;
+  margin-left: 0; }
+  .page-admin input[type='checkbox'].vbo-table-select-all {
+    position: static; }
 
 /*# sourceMappingURL=style-sass.css.map */

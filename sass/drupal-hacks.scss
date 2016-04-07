@@ -35,3 +35,14 @@
     }
   }
 }
+
+//VBO hacks
+.page-admin{
+  input[type='checkbox']{
+    zoom: 1.6;
+    margin-left: 0;
+    &.vbo-table-select-all{
+      position: static;
+    }
+  }
+}
