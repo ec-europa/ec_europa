@@ -24,10 +24,10 @@ Styleguide form
   &.is-focused,
   .has-error &:focus {
     color: $form-control-text-color-focus;
-    @include _focus_outline_border(3px, $yellow-light, -3px);
     padding: 5px 11px;
     @include box-shadow(none);
   }
+  @include _focus_outline_border(3px, $yellow-light, -3px,none);
 
   // Disabled modifier.
   &.is-disabled {

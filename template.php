@@ -461,6 +461,7 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
   $form['search_input_group']['QueryText']['#attributes']['class'][] = 'search-form__textfield';
 
   unset($form['search_input_group']['QueryText']['#attributes']['placeholder']);
+  unset($form['search_input_group']['europa_search_submit']['#attributes']['tabindex']);
 }
 
 /**

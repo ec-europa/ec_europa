@@ -5872,13 +5872,10 @@ Styleguide form
     padding: 5px 11px;
     -webkit-box-shadow: none;
     box-shadow: none; }
-    .form-control:focus:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus:focus, .form-control.is-focused:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-focused:focus,
-    .has-error .form-control:focus:focus,
-    .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
-    .has-error select:focus:focus {
-      outline: 3px solid #ffd617;
-      outline-offset: -3px;
-      text-decoration: underline; }
+  .form-control:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: -3px;
+    text-decoration: none; }
   .form-control.is-disabled, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-disabled {
     color: #b3b4b5;
     background-color: #e2e2e2; }
@@ -9211,7 +9208,7 @@ Styleguide: siteheader.langselect
     width: 1.556em; }
   .lang-select-site .lang-select-site__code-text {
     position: relative;
-    top: -3px;
+    top: -1px;
     left: -2px;
     font-size: 0.778em;
     color: #fff; }
@@ -9221,8 +9218,10 @@ Styleguide: siteheader.langselect
     left: 0;
     color: #004494;
     font-size: 1.556em;
-    line-height: 1;
+    line-height: 1.4;
     display: inline-block; }
+    .lang-select-site .lang-select-site__icon:before {
+      font-weight: inherit; }
 
 @media (min-width: 992px) {
   .lang-select-site {

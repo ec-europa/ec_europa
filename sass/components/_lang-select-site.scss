@@ -47,7 +47,7 @@ Styleguide: siteheader.langselect
 
   .lang-select-site__code-text {
     position: relative;
-    top: -3px;
+    top: -1px;
     left: -2px;
     font-size: $font-size-xsmall;
     color: #fff;
@@ -59,8 +59,11 @@ Styleguide: siteheader.langselect
     left: 0;
     color: $brand-primary;
     font-size: $font-size-xsmall * 2;
-    line-height: 1;
+    line-height: 1.4;
     display: inline-block;
+    &:before{
+      font-weight: inherit;
+    }
   }
 }
 
