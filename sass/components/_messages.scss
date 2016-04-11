@@ -24,6 +24,8 @@ $messages-icon-size: 2em;
   overflow: hidden;
   background: url("../images/svg/messages-info.svg") no-repeat 1em 1.1em;
   background-size:  $messages-icon-size;
+  /* Override bootstrap alert. */
+  border-radius: 0;
 
 
   &:last-child {
