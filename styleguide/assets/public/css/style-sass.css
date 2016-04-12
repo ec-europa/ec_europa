@@ -10806,7 +10806,7 @@ Styleguide: siteheader.searchform
         text-decoration: none; }
       .site-menu .smaller a:focus:focus {
         outline: 3px solid #404040;
-        outline-offset: 8px;
+        outline-offset: 2px;
         text-decoration: none; }
   .site-menu .col-sm-4 .listing, .site-menu .sidebar-field-group__sidebar .listing {
     margin-top: 2em; }

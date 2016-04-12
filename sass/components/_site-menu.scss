@@ -36,7 +36,7 @@
         text-decoration: none;
       }
       &:focus {
-        @include _focus_outline_border(3px, $grey-base, 8px, none);
+        @include _focus_outline_border(3px, $grey-base, 2px, none);
       }
     }
   }
