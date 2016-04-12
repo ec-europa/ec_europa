@@ -31,8 +31,12 @@
       margin-top: 2em;
       float: left;
       width: 100%;
+      &:hover{
+        color: #000000;
+        text-decoration: none;
+      }
       &:focus {
-        outline: 3px solid $grey-base;
+        @include _focus_outline_border(3px, $grey-base, 8px, none);
       }
     }
   }

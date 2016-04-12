@@ -10801,8 +10801,13 @@ Styleguide: siteheader.searchform
       margin-top: 2em;
       float: left;
       width: 100%; }
-      .site-menu .smaller a:focus {
-        outline: 3px solid #404040; }
+      .site-menu .smaller a:hover {
+        color: #000000;
+        text-decoration: none; }
+      .site-menu .smaller a:focus:focus {
+        outline: 3px solid #404040;
+        outline-offset: 8px;
+        text-decoration: none; }
   .site-menu .col-sm-4 .listing, .site-menu .sidebar-field-group__sidebar .listing {
     margin-top: 2em; }
   .site-menu p {
