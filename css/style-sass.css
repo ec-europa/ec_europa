@@ -10183,13 +10183,11 @@ Styleguide messages
   font-family: Arial, sans-serif;
   font-size: 0.889em;
   margin: 0 0 1em;
-  padding: 1em 4em;
+  padding: 1em 1em 1em 4em;
   position: relative;
   overflow: hidden;
   background: url("../images/svg/messages-info.svg") no-repeat 1em 1.1em;
-  background-size: 2em;
-  /* Override bootstrap alert. */
-  border-radius: 0; }
+  background-size: 2em; }
   .messages:last-child, .feedback-message:last-child {
     margin-bottom: 0; }
   .messages.status, .status.feedback-message {
@@ -10233,8 +10231,23 @@ Styleguide messages
   .no-svg .messages.error, .no-svg .error.feedback-message {
     background-image: url("../images/png/messages-error.png"); }
 
+.no-svg .alert .close {
+  background-image: url("../images/png/Close.png"); }
+  .no-svg .alert .close:hover {
+    background-image: url("../images/png/Close_hover.png"); }
+
 .alert {
-  margin: 1.667em 0; }
+  margin: 1.667em 0;
+  border-radius: 0; }
+  .alert .close {
+    text-shadow: none;
+    color: transparent;
+    text-decoration: none;
+    opacity: 1;
+    background: url("../images/svg/Close.svg") no-repeat right top;
+    padding: 0 0 0 5px; }
+    .alert .close:hover {
+      background-image: url("../images/svg/Close_hover.svg"); }
 
 /*
 
