@@ -10232,9 +10232,9 @@ Styleguide messages
     background-image: url("../images/png/messages-error.png"); }
 
 .no-svg .alert .close {
-  background-image: url("../images/png/Close.png"); }
+  background-image: url("../images/png/close.png"); }
   .no-svg .alert .close:hover {
-    background-image: url("../images/png/Close_hover.png"); }
+    background-image: url("../images/png/close_hover.png"); }
 
 .alert {
   margin: 1.667em 0;
@@ -10244,10 +10244,10 @@ Styleguide messages
     color: transparent;
     text-decoration: none;
     opacity: 1;
-    background: url("../images/svg/Close.svg") no-repeat right top;
+    background: url("../images/svg/close.svg") no-repeat right top;
     padding: 0 0 0 5px; }
     .alert .close:hover {
-      background-image: url("../images/svg/Close_hover.svg"); }
+      background-image: url("../images/svg/close_hover.svg"); }
 
 /*
 

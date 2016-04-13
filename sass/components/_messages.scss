@@ -94,9 +94,9 @@ $messages-icon-size: 2em;
   }
   .alert {
     .close {
-      background-image: url("../images/png/Close.png");
+      background-image: url("../images/png/close.png");
       &:hover {
-        background-image: url("../images/png/Close_hover.png");
+        background-image: url("../images/png/close_hover.png");
       }
     }
   }
@@ -123,10 +123,10 @@ $messages-icon-size: 2em;
     text-decoration: none;
     opacity: 1;
 
-    background: url("../images/svg/Close.svg") no-repeat right top;
+    background: url("../images/svg/close.svg") no-repeat right top;
     padding: 0 0 0 5px;
     &:hover {
-      background-image: url("../images/svg/Close_hover.svg");
+      background-image: url("../images/svg/close_hover.svg");
     }
   }
 }
