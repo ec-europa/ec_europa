@@ -9407,6 +9407,9 @@ ul.listing--title {
   text-decoration: underline !important;
   color: #404040; }
 
+.listing--frontpage p {
+  line-height: 1.375em; }
+
 .listing--title-large .listing__title,
 .listing--title-medium .listing__title {
   margin-top: 0.2em;
