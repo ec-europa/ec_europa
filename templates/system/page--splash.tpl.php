@@ -91,7 +91,7 @@
 
   <header class="site-header splash-page__site-header" role="banner">
     <div class="container">
-      <a href="<?php print $front_page; ?>" class="<?php print $logo_classes; ?>" title="<?php print $page_logo_title; ?>"></a>
+      <span class="<?php print $logo_classes; ?>"></span>
     </div>
   </header>
 
