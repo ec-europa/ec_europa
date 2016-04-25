@@ -78,6 +78,13 @@ $label_text_color_light: #fff;
   background-color: $grey-lighter;
 }
 
+.label--high {
+  min-height: 2.75em;
+  line-height: 2.75em;
+  padding: 0.3em 1em;
+  font-size: $font-size-xsmall;
+}
+
 .label--meta {
   @extend .meta__item;
   padding: 0.25em 0.5em 0.3em 0.5em;
