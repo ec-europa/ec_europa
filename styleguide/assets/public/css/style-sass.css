@@ -8068,13 +8068,15 @@ Markup: html/icon.html
 .icon--tag-close - tag close
 .icon--tag-close-hover - tag close with hover state
 .icon--calendar - Calendar icon
+.icon--location - Location icon
+.icon--livestreaming - Live streaming icon
 
 Styleguide: icon
 */
 @font-face {
   font-family: 'EuropaIcons';
   src: url("../fonts/europa-icons/europa-icons.eot");
-  src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/europa-icons.svg#icomoon") format("svg"); }
+  src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/icomoon.svg#icomoon") format("svg"); }
 
 .icon:before, .search-form__btn:before {
   text-decoration: none;
@@ -8109,138 +8111,144 @@ Styleguide: icon
 .icon--external, .is-external:after, .site-political a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
 .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
 .site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after, .icon--external:before {
-  content: '\e61a' !important; }
+  content: '\e825' !important; }
 
 .icon--blue-dark, .file__translations .file__translations-control:after {
   color: #004494; }
 
 .icon--arrow-up, .icon--arrow-up:before {
-  content: '\e61e'; }
+  content: '\e821'; }
 
 .icon--arrow-down, .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after, .icon--arrow-down:before, .lang-select-page--transparent select.lang-select-page__list:after {
-  content: '\e61d'; }
+  content: '\e822'; }
 
 .icon--spinner:before {
-  content: '\e984'; }
+  content: '\e82f'; }
 
 .icon--facebook:before {
-  content: '\e605'; }
+  content: '\e809'; }
+
+.icon--livestreaming:before {
+  content: "\e81c"; }
+
+.icon--location:before {
+  content: "\e81b"; }
 
 .icon--twitter:before {
-  content: '\e613'; }
+  content: '\e817'; }
 
 .icon--googleplus:before {
-  content: '\e608'; }
+  content: '\e80c'; }
 
 .icon--linkedin:before {
-  content: '\e60c'; }
+  content: '\e810'; }
 
 .icon--rss:before {
-  content: '\e60f'; }
+  content: '\e813'; }
 
 .icon--language:before {
-  content: '\e611'; }
+  content: '\e824'; }
 
 .icon--search:before, .search-form__btn:before {
-  content: '\e61c'; }
+  content: '\e823'; }
 
 .icon--up:before {
-  content: '\e618'; }
+  content: '\e827'; }
 
 .icon--right, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .icon--right:before, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after {
-  content: '\e617'; }
+  content: '\e828'; }
 
 .icon--breadcrumb, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
-  content: '\e617' !important; }
+  content: '\e828' !important; }
 
 .icon--down, .file__translations .file__translations-control:after {
-  content: '\e616'; }
+  content: '\e806'; }
   .icon--down:before {
-    content: '\e616'; }
+    content: '\e806'; }
 
 .icon--left:before {
-  content: '\e619'; }
+  content: '\e826'; }
 
 .icon--file:before {
-  content: '\e606'; }
+  content: '\e80a'; }
 
 .icon--audio:before {
-  content: '\e600'; }
+  content: '\e801'; }
 
 .icon--brochure:before {
-  content: '\e601'; }
+  content: '\e802'; }
 
 .icon--edit:before {
-  content: '\e603'; }
+  content: '\e807'; }
 
 .icon--image:before {
-  content: '\e609'; }
+  content: '\e80d'; }
 
 .icon--download, .file__btn:after, .icon--download:before {
-  content: '\e602' !important; }
+  content: '\e806' !important; }
 
 .icon--infographic:before {
-  content: '\e60b'; }
+  content: '\e80f'; }
 
 .icon--multiple-files:before {
   content: '\e615'; }
 
 .icon--organigram:before {
-  content: '\e60d'; }
+  content: '\e811'; }
 
 .icon--package:before {
-  content: '\e60e'; }
+  content: '\e812'; }
 
 .icon--slides:before {
-  content: '\e610'; }
+  content: '\e814'; }
 
 .icon--video:before {
-  content: '\e614'; }
+  content: '\e800'; }
 
 .icon--error:before {
-  content: '\e604'; }
+  content: '\e808'; }
 
 .icon--success:before {
-  content: '\e612'; }
+  content: '\e816'; }
 
 .icon--warning:before {
-  content: '\e615'; }
+  content: '\e804'; }
 
 .icon--budget:before {
-  content: '\e900'; }
+  content: '\e81a'; }
 
 .icon--digital:before {
-  content: '\e901'; }
+  content: '\e80b'; }
 
 .icon--energy:before {
-  content: '\e902'; }
+  content: '\e818'; }
 
 .icon--euro:before {
-  content: '\e903'; }
+  content: '\e803'; }
 
 .icon--global:before {
-  content: '\e904'; }
+  content: '\e829'; }
 
 .icon--growth:before {
-  content: '\e905'; }
+  content: '\e82a'; }
 
 .icon--regulation:before {
-  content: '\e906'; }
+  content: '\e82b'; }
 
 .icon--check, .icon--check:before {
-  content: '\e620'; }
+  content: '\e81f'; }
 
 .icon--generic-lang, .icon--generic-lang:before {
-  content: '\e621'; }
+  content: '\e81e'; }
 
 .icon--tag-close, .icon--tag-close:before, .facet-tag--close .facet-tag__value:after {
-  content: '\e907'; }
+  content: '\e82c'; }
 
 .icon--tag-close-hover, .icon--tag-close-hover:before, .facet-tag--close .facet-tag__value:hover:after {
-  content: '\e908'; }
+  content: '\e82d'; }
 
 .icon--calendar:before {
-  content: '\e985'; }
+  content: '\e81d'; }
 
 .icon--yellowbg {
   background-color: #ffd617;
@@ -10408,6 +10416,14 @@ Styleguide page-header.informational-home
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+
+.page-header__eventinfo {
+  float: left;
+  font-size: 0.778em; }
+  .page-header__eventinfo .icon, .page-header__eventinfo .search-form__btn {
+    margin: 1em 2em 1em 0; }
+    .page-header__eventinfo .icon::before, .page-header__eventinfo .search-form__btn::before {
+      margin-right: 0.5em; }
 
 /*
 Pager

@@ -117,3 +117,16 @@ Styleguide page-header.informational-home
 .node-type-info-homepage .page-header {
   @extend .page-header--large-intro;
 }
+
+.page-header__eventinfo {
+  float: left;
+  font-size: $font-size-xsmall;
+
+  .icon { 
+    margin: 1em 2em 1em 0;
+
+    &::before {
+      margin-right: 0.5em;
+    }  
+  }
+}
