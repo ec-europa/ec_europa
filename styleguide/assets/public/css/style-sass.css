@@ -9171,6 +9171,12 @@ Styleguide labels
   color: #404040;
   background-color: #ececec; }
 
+.label--high {
+  min-height: 2.75em;
+  line-height: 2.75em;
+  padding: 0.3em 1em;
+  font-size: 0.778em; }
+
 .label--meta {
   padding: 0.25em 0.5em 0.3em 0.5em;
   top: -0.075em;
