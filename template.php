@@ -111,7 +111,7 @@ function europa_form_element(&$variables) {
   // Check for errors and set correct error class.
   if (isset($element['#parents']) && form_get_error($element)) {
     $attributes['class'][] = 'has-error';
-    
+
     if (in_array($element['#type'], array('radio', 'checkbox'))) {
       if ($element['#required']) {
         $feedback_message = '<p class="feedback-message is-error">' . form_get_error($element) . '</p>';
@@ -154,7 +154,7 @@ function europa_form_element(&$variables) {
         $attributes['class'][] = 'checkbox';
         $is_checkbox = TRUE;
         break;
-      
+
       default:
         // Check if it is not our search form. Because we don't want the default
         // bootstrap class here.
