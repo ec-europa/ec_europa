@@ -10426,6 +10426,8 @@ Styleguide page-header.informational-home
 .page-header__eventinfo {
   float: left;
   font-size: 0.778em; }
+  .page-header__eventinfo .page-header__date--cancelled {
+    text-decoration: line-through; }
   .page-header__eventinfo .icon, .page-header__eventinfo .search-form__btn {
     margin: 1em 2em 1em 0; }
     .page-header__eventinfo .icon::before, .page-header__eventinfo .search-form__btn::before {

@@ -122,6 +122,10 @@ Styleguide page-header.informational-home
   float: left;
   font-size: $font-size-xsmall;
 
+  .page-header__date--cancelled {
+    text-decoration: line-through; 
+  }
+
   .icon { 
     margin: 1em 2em 1em 0;
 
