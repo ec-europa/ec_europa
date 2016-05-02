@@ -28,6 +28,10 @@ Styleguide file
   padding: 1em 0;
 }
 
+.file-video--withbackground {
+  background: $grey-lighter;
+}
+
 .file__icon {
   float: left;
   @extend .col-xs-1;

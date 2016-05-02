@@ -7648,6 +7648,9 @@ Styleguide file
   background: none;
   padding: 1em 0; }
 
+.file-video--withbackground {
+  background: #ececec; }
+
 .file__icon {
   float: left;
   padding-left: 0;
