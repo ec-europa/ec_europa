@@ -7673,6 +7673,10 @@ Styleguide file
   font-weight: bold;
   line-height: initial; }
 
+.file__caption {
+  font-size: 0.778em;
+  padding: 0.5em; }
+
 .file__language {
   font-weight: bold;
   font-size: 0.889em;
@@ -7698,6 +7702,9 @@ Styleguide file
 .file--widebar {
   max-width: 100%;
   width: 100%; }
+
+.file--condensed {
+  padding: 0em; }
 
 .file--bare {
   background: none;
