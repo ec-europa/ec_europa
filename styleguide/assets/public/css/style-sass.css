@@ -8045,6 +8045,17 @@ Styleguide highlighted-item
   padding: 0 1em; }
 
 /*
+Horizontal line
+
+Markup: html/hr.html
+
+Styleguide horizontal-line
+*/
+.hr--fullwidth {
+  width: 100%;
+  float: left; }
+
+/*
 Icon
 
 Icons using europa icons font
