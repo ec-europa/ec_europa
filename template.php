@@ -111,7 +111,15 @@ function europa_form_element(&$variables) {
   // Check for errors and set correct error class.
   if (isset($element['#parents']) && form_get_error($element)) {
     $attributes['class'][] = 'has-error';
-    $feedback_message = '<p class="feedback-message is-error">' . form_get_error($element) . '</p>';
+
+    if (in_array($element['#type'], array('radio', 'checkbox'))) {
+      if ($element['#required']) {
+        $feedback_message = '<p class="feedback-message is-error">' . form_get_error($element) . '</p>';
+      }
+    }
+    else {
+      $feedback_message = '<p class="feedback-message is-error">' . form_get_error($element) . '</p>';
+    }
   }
 
   if (!empty($element['#type'])) {
