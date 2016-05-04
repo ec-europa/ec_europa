@@ -103,6 +103,12 @@ function europa_form_element(&$variables) {
     '#title_display' => 'before',
   );
 
+  // Hide datepicker-popup label.
+  $datepicker_popup_pattern = '/edit-.*-datepicker-popup-.*/i';
+  if (preg_match($datepicker_popup_pattern, $element['#id'])) {
+    $element['#title_display'] = 'invisible';
+  }
+
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
