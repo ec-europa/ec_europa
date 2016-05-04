@@ -85,6 +85,10 @@ $label_text_color_light: #fff;
   font-size: $font-size-xsmall;
 }
 
+.label--no-padding-left {
+  padding-left: 0;
+}
+
 .label--meta {
   @extend .meta__item;
   padding: 0.25em 0.5em 0.3em 0.5em;

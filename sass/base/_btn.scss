@@ -172,8 +172,9 @@ Styleguide buttons
 // situations where button is wrapped in unnecessary markup coming from a CMS
 .btn--no-margin-bottom {
   & * {
-    margin-bottom: 0 !important;
+    margin-bottom: 0!important;
   }
+  margin-bottom: 0!important;
 }
 
 /*
