@@ -6389,6 +6389,16 @@ textarea.error {
   .form-group .messages.error p, .form-group .error.feedback-message p {
     font-size: 0.889em; }
 
+/*
+Other typography
+
+Markup: html/typography.html
+
+Styleguide text.typography
+*/
+.text-small, .icon--text-small {
+  font-size: 0.778em; }
+
 .container-fluid, .section__group--full-width > *, .block--full-width > *, .field--full-width > * {
   max-width: 1170px; }
 
@@ -6647,6 +6657,9 @@ Styleguide sections.3
 
 .section__group--no-margin {
   margin-top: 0 !important; }
+
+.section--force-bottom {
+  margin-bottom: 1.667em !important; }
 
 .section__group--bottom-header {
   margin-top: -60px !important;
@@ -8272,6 +8285,9 @@ Styleguide: icon
   .icon--yellowbg:before {
     margin-right: 0;
     line-height: inherit; }
+
+.icon--margin-right {
+  margin-right: 1.5em; }
 
 .is-spinning:before {
   -webkit-animation: icon-spin-right 2s infinite linear;

@@ -172,6 +172,10 @@ $section-spacing: 1.667em;
   margin-top: 0 !important;
 }
 
+.section--force-bottom {
+  margin-bottom: $section-spacing!important;
+}
+
 // It seems that this modifier is outdated, it might probably be removed.
 .section__group--bottom-header {
   margin-top: -60px !important;
