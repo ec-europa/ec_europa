@@ -9269,8 +9269,8 @@ Styleguide: siteheader.langselect
     color: #fff; }
   .lang-select-site .lang-select-site__icon {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -1px;
+    left: -1px;
     color: #004494;
     font-size: 1.556em;
     line-height: 1.4;
