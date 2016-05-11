@@ -7379,6 +7379,13 @@ Styleguide expandable
     outline: none;
     text-decoration: underline; }
 
+.facetapi-facetapi-checkbox-links {
+  list-style: none; }
+  .facetapi-facetapi-checkbox-links input.facetapi-checkbox {
+    margin-right: .5em; }
+  .facetapi-facetapi-checkbox-links a.facetapi-checkbox {
+    text-decoration: none; }
+
 /*
 Featured item
 
