@@ -78,6 +78,10 @@ a {
     font-size: 0.8em;
   }
 
+  &#{'[href^="mailto"]'} {
+    text-transform: lowercase;
+  }
+
   @media print {
     &:after {
       content: none !important;
