@@ -9202,7 +9202,7 @@ Styleguide labels
 .label--highlight {
   color: #404040;
   background-color: #ffd617; }
-  .label--highlight.label--meta:after {
+  .label--highlight.label--meta:after, .label--highlight.label--meta-medium:after {
     content: "";
     margin: 0; }
 
@@ -9219,11 +9219,15 @@ Styleguide labels
 .label--no-padding-left {
   padding-left: 0; }
 
-.label--meta {
+.label--meta, .label--meta-medium {
   padding: 0.25em 0.5em 0.3em 0.5em;
   top: -0.075em;
   margin-right: 0.8em;
   position: relative; }
+
+.label--meta-medium {
+  font-size: 75%;
+  padding: 0.35em 0.5em 0.45em 0.5em; }
 
 /*
 Language select (Site)
@@ -10198,17 +10202,17 @@ Styleguide meta
   .meta p {
     margin: 0; }
 
-.meta__item, .label--meta {
+.meta__item, .label--meta, .label--meta-medium {
   float: left;
   overflow: hidden;
   white-space: nowrap; }
-  .meta__item:after, .label--meta:after {
+  .meta__item:after, .label--meta:after, .label--meta-medium:after {
     content: "|";
     color: #b3b4b5;
     margin: 0 0.8em;
     position: relative;
     top: -1px; }
-  .meta__item:last-child:after, .label--meta:last-child:after {
+  .meta__item:last-child:after, .label--meta:last-child:after, .label--meta-medium:last-child:after {
     display: none; }
 
 .meta__item--type {
@@ -10218,7 +10222,7 @@ Styleguide meta
   font-size: 0.889em;
   margin: 0 0 1em; }
 
-.meta .meta__item p, .meta .label--meta p {
+.meta .meta__item p, .meta .label--meta p, .meta .label--meta-medium p {
   font-size: inherit !important;
   display: inline;
   line-height: inherit;

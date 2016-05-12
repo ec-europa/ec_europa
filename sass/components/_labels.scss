@@ -96,3 +96,9 @@ $label_text_color_light: #fff;
   margin-right: 0.8em;
   position: relative;
 }
+
+.label--meta-medium {
+  @extend .label--meta;
+  font-size: 75%;
+  padding: 0.35em 0.5em 0.45em 0.5em;
+}
