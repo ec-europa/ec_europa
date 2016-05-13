@@ -6050,6 +6050,9 @@ a.smaller,
 .smaller a {
   font-size: 0.8em; }
 
+a[href^="mailto"] {
+  text-transform: lowercase; }
+
 @media print {
   a:after {
     content: none !important; } }
