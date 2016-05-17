@@ -5618,8 +5618,10 @@ Styleguide buttons
   .btn-ctn--border:after {
     display: none; }
 
-.btn--no-margin-bottom * {
+.btn--no-margin-bottom {
   margin-bottom: 0 !important; }
+  .btn--no-margin-bottom * {
+    margin-bottom: 0 !important; }
 
 /*
 Button block
@@ -6048,6 +6050,9 @@ a.smaller,
 .smaller a {
   font-size: 0.8em; }
 
+a[href^="mailto"] {
+  text-transform: lowercase; }
+
 @media print {
   a:after {
     content: none !important; } }
@@ -6389,6 +6394,16 @@ textarea.error {
   .form-group .messages.error p, .form-group .error.feedback-message p {
     font-size: 0.889em; }
 
+/*
+Other typography
+
+Markup: html/typography.html
+
+Styleguide text.typography
+*/
+.text-small, .icon--text-small {
+  font-size: 0.778em; }
+
 .container-fluid, .section__group--full-width > *, .block--full-width > *, .field--full-width > * {
   max-width: 1170px; }
 
@@ -6647,6 +6662,9 @@ Styleguide sections.3
 
 .section__group--no-margin {
   margin-top: 0 !important; }
+
+.section--force-bottom {
+  margin-bottom: 1.667em !important; }
 
 .section__group--bottom-header {
   margin-top: -60px !important;
@@ -7655,6 +7673,9 @@ Styleguide file
   background: none;
   padding: 1em 0; }
 
+.file-video--withbackground {
+  background: #ececec; }
+
 .file__icon {
   float: left;
   padding-left: 0;
@@ -7679,6 +7700,10 @@ Styleguide file
 .file__title {
   font-weight: bold;
   line-height: initial; }
+
+.file__caption {
+  font-size: 0.778em;
+  padding: 0.5em; }
 
 .file__language {
   font-weight: bold;
@@ -7705,6 +7730,9 @@ Styleguide file
 .file--widebar {
   max-width: 100%;
   width: 100%; }
+
+.file--condensed {
+  padding: 0em; }
 
 .file--bare {
   background: none;
@@ -8027,6 +8055,17 @@ Styleguide highlighted-item
   padding: 0 1em; }
 
 /*
+Horizontal line
+
+Markup: html/hr.html
+
+Styleguide horizontal-line
+*/
+.hr--fullwidth {
+  width: 100%;
+  float: left; }
+
+/*
 Icon
 
 Icons using europa icons font
@@ -8269,6 +8308,9 @@ Styleguide: icon
   .icon--yellowbg:before {
     margin-right: 0;
     line-height: inherit; }
+
+.icon--margin-right {
+  margin-right: 1.5em; }
 
 .is-spinning:before {
   -webkit-animation: icon-spin-right 2s infinite linear;
@@ -9170,7 +9212,7 @@ Styleguide labels
 .label--highlight {
   color: #404040;
   background-color: #ffd617; }
-  .label--highlight.label--meta:after {
+  .label--highlight.label--meta:after, .label--highlight.label--meta-medium:after {
     content: "";
     margin: 0; }
 
@@ -9184,11 +9226,18 @@ Styleguide labels
   padding: 0.3em 1em;
   font-size: 0.778em; }
 
-.label--meta {
+.label--no-padding-left {
+  padding-left: 0; }
+
+.label--meta, .label--meta-medium {
   padding: 0.25em 0.5em 0.3em 0.5em;
   top: -0.075em;
   margin-right: 0.8em;
   position: relative; }
+
+.label--meta-medium {
+  font-size: 75%;
+  padding: 0.35em 0.5em 0.45em 0.5em; }
 
 /*
 Language select (Site)
@@ -9234,8 +9283,8 @@ Styleguide: siteheader.langselect
     color: #fff; }
   .lang-select-site .lang-select-site__icon {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -1px;
+    left: -1px;
     color: #004494;
     font-size: 1.556em;
     line-height: 1.4;
@@ -10163,17 +10212,17 @@ Styleguide meta
   .meta p {
     margin: 0; }
 
-.meta__item, .label--meta {
+.meta__item, .label--meta, .label--meta-medium {
   float: left;
   overflow: hidden;
   white-space: nowrap; }
-  .meta__item:after, .label--meta:after {
+  .meta__item:after, .label--meta:after, .label--meta-medium:after {
     content: "|";
     color: #b3b4b5;
     margin: 0 0.8em;
     position: relative;
     top: -1px; }
-  .meta__item:last-child:after, .label--meta:last-child:after {
+  .meta__item:last-child:after, .label--meta:last-child:after, .label--meta-medium:last-child:after {
     display: none; }
 
 .meta__item--type {
@@ -10183,7 +10232,7 @@ Styleguide meta
   font-size: 0.889em;
   margin: 0 0 1em; }
 
-.meta .meta__item p, .meta .label--meta p {
+.meta .meta__item p, .meta .label--meta p, .meta .label--meta-medium p {
   font-size: inherit !important;
   display: inline;
   line-height: inherit;

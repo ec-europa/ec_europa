@@ -154,13 +154,13 @@ Styleguide: icon
 
 .icon--location {
   &:before {
-    content: "\e81b"; 
+    content: "\e81b";
   }
 }
 
 .icon--twitter {
   &:before {
-    content: '\e817'; 
+    content: '\e817';
   }
 }
 
@@ -214,7 +214,7 @@ Styleguide: icon
 }
 
 .icon--down {
-  content: '\e806'; 
+  content: '\e806';
   &:before {
     content: '\e806';
   }
@@ -409,6 +409,14 @@ Styleguide: icon
     margin-right: 0;
     line-height: inherit;
   }
+}
+
+.icon--text-small {
+  @extend .text-small;
+}
+
+.icon--margin-right {
+  margin-right: 1.5em;
 }
 
 // States
