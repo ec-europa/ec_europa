@@ -6023,17 +6023,18 @@ a:hover, a:active, a:focus {
   text-decoration: underline;
   color: #404040; }
 
-.listing a,
 .site-switcher a,
 .feedback-form a {
   z-index: 999;
   text-decoration: none; }
-  .listing a:focus,
   .site-switcher a:focus,
   .feedback-form a:focus {
     outline: 3px solid #ffd617;
     outline-offset: 10px;
     text-decoration: underline; }
+
+.listing a {
+  text-decoration: none; }
 
 a .feedback-form {
   outline-offset: 0; }
