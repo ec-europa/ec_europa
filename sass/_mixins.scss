@@ -145,10 +145,10 @@
 
 // Focus outline border
 
-@mixin _focus_outline_border($thicknes:3px, $color:$yellow-light, $offset:0) {
+@mixin _focus_outline_border($thicknes:3px, $color:$yellow-light, $offset:0, $text-decoration:underline) {
   &:focus {
       outline: $thicknes solid $color;
       outline-offset: $offset;
-      text-decoration: underline;
+      text-decoration: $text-decoration;
     }
 }

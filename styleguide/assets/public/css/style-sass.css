@@ -5532,12 +5532,12 @@ Styleguide buttons
   min-height: 2.75em;
   font-size: 0.889em;
   text-decoration: none; }
-  .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
-    text-decoration: none; }
   .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     outline: 3px solid #ffd617;
     outline-offset: -3px;
     text-decoration: underline; }
+  .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
+    text-decoration: none; }
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     text-decoration: underline;
     -webkit-box-shadow: none;
@@ -5618,8 +5618,10 @@ Styleguide buttons
   .btn-ctn--border:after {
     display: none; }
 
-.btn--no-margin-bottom * {
+.btn--no-margin-bottom {
   margin-bottom: 0 !important; }
+  .btn--no-margin-bottom * {
+    margin-bottom: 0 !important; }
 
 /*
 Button block
@@ -5715,8 +5717,7 @@ Styleguide buttons.btn-
     line-height: 3.5 !important; }
 
 .site-information a.btn[href^="http"]:not(.is-internal), .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal) {
-  padding-right: 2.2em;
-  outline-offset: 0; }
+  padding-right: 2.2em; }
   .site-information a.btn[href^="http"]:not(.is-internal):after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal):after {
     position: absolute;
     line-height: 1.4 !important;
@@ -5872,13 +5873,10 @@ Styleguide form
     padding: 5px 11px;
     -webkit-box-shadow: none;
     box-shadow: none; }
-    .form-control:focus:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus:focus, .form-control.is-focused:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-focused:focus,
-    .has-error .form-control:focus:focus,
-    .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
-    .has-error select:focus:focus {
-      outline: 3px solid #ffd617;
-      outline-offset: -3px;
-      text-decoration: underline; }
+  .form-control:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+    outline: 3px solid #ffd617;
+    outline-offset: -3px;
+    text-decoration: none; }
   .form-control.is-disabled, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select.is-disabled {
     color: #b3b4b5;
     background-color: #e2e2e2; }
@@ -6051,6 +6049,9 @@ a.listing__item-link:focus .highlighted-item .highlighted-item__content {
 a.smaller,
 .smaller a {
   font-size: 0.8em; }
+
+a[href^="mailto"] {
+  text-transform: lowercase; }
 
 @media print {
   a:after {
@@ -6393,6 +6394,16 @@ textarea.error {
   .form-group .messages.error p, .form-group .error.feedback-message p {
     font-size: 0.889em; }
 
+/*
+Other typography
+
+Markup: html/typography.html
+
+Styleguide text.typography
+*/
+.text-small, .icon--text-small {
+  font-size: 0.778em; }
+
 .container-fluid, .section__group--full-width > *, .block--full-width > *, .field--full-width > * {
   max-width: 1170px; }
 
@@ -6651,6 +6662,9 @@ Styleguide sections.3
 
 .section__group--no-margin {
   margin-top: 0 !important; }
+
+.section--force-bottom {
+  margin-bottom: 1.667em !important; }
 
 .section__group--bottom-header {
   margin-top: -60px !important;
@@ -7652,6 +7666,9 @@ Styleguide file
   background: none;
   padding: 1em 0; }
 
+.file-video--withbackground {
+  background: #ececec; }
+
 .file__icon {
   float: left;
   padding-left: 0;
@@ -7676,6 +7693,10 @@ Styleguide file
 .file__title {
   font-weight: bold;
   line-height: initial; }
+
+.file__caption {
+  font-size: 0.778em;
+  padding: 0.5em; }
 
 .file__language {
   font-weight: bold;
@@ -7702,6 +7723,9 @@ Styleguide file
 .file--widebar {
   max-width: 100%;
   width: 100%; }
+
+.file--condensed {
+  padding: 0em; }
 
 .file--bare {
   background: none;
@@ -8024,6 +8048,17 @@ Styleguide highlighted-item
   padding: 0 1em; }
 
 /*
+Horizontal line
+
+Markup: html/hr.html
+
+Styleguide horizontal-line
+*/
+.hr--fullwidth {
+  width: 100%;
+  float: left; }
+
+/*
 Icon
 
 Icons using europa icons font
@@ -8072,13 +8107,15 @@ Markup: html/icon.html
 .icon--tag-close - tag close
 .icon--tag-close-hover - tag close with hover state
 .icon--calendar - Calendar icon
+.icon--location - Location icon
+.icon--livestreaming - Live streaming icon
 
 Styleguide: icon
 */
 @font-face {
   font-family: 'EuropaIcons';
   src: url("../fonts/europa-icons/europa-icons.eot");
-  src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/europa-icons.svg#icomoon") format("svg"); }
+  src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/icomoon.svg#icomoon") format("svg"); }
 
 .icon:before, .search-form__btn:before {
   text-decoration: none;
@@ -8113,138 +8150,144 @@ Styleguide: icon
 .icon--external, .is-external:after, .site-political a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
 .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
 .site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after, .icon--external:before {
-  content: '\e61a' !important; }
+  content: '\e825' !important; }
 
 .icon--blue-dark, .file__translations .file__translations-control:after {
   color: #004494; }
 
 .icon--arrow-up, .icon--arrow-up:before {
-  content: '\e61e'; }
+  content: '\e821'; }
 
 .icon--arrow-down, .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after, .icon--arrow-down:before, .lang-select-page--transparent select.lang-select-page__list:after {
-  content: '\e61d'; }
+  content: '\e822'; }
 
 .icon--spinner:before {
-  content: '\e984'; }
+  content: '\e82f'; }
 
 .icon--facebook:before {
-  content: '\e605'; }
+  content: '\e809'; }
+
+.icon--livestreaming:before {
+  content: "\e81c"; }
+
+.icon--location:before {
+  content: "\e81b"; }
 
 .icon--twitter:before {
-  content: '\e613'; }
+  content: '\e817'; }
 
 .icon--googleplus:before {
-  content: '\e608'; }
+  content: '\e80c'; }
 
 .icon--linkedin:before {
-  content: '\e60c'; }
+  content: '\e810'; }
 
 .icon--rss:before {
-  content: '\e60f'; }
+  content: '\e813'; }
 
 .icon--language:before {
-  content: '\e611'; }
+  content: '\e824'; }
 
 .icon--search:before, .search-form__btn:before {
-  content: '\e61c'; }
+  content: '\e823'; }
 
 .icon--up:before {
-  content: '\e618'; }
+  content: '\e827'; }
 
 .icon--right, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .icon--right:before, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after {
-  content: '\e617'; }
+  content: '\e828'; }
 
 .icon--breadcrumb, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
-  content: '\e617' !important; }
+  content: '\e828' !important; }
 
 .icon--down, .file__translations .file__translations-control:after {
-  content: '\e616'; }
+  content: '\e806'; }
   .icon--down:before {
-    content: '\e616'; }
+    content: '\e806'; }
 
 .icon--left:before {
-  content: '\e619'; }
+  content: '\e826'; }
 
 .icon--file:before {
-  content: '\e606'; }
+  content: '\e80a'; }
 
 .icon--audio:before {
-  content: '\e600'; }
+  content: '\e801'; }
 
 .icon--brochure:before {
-  content: '\e601'; }
+  content: '\e802'; }
 
 .icon--edit:before {
-  content: '\e603'; }
+  content: '\e807'; }
 
 .icon--image:before {
-  content: '\e609'; }
+  content: '\e80d'; }
 
 .icon--download, .file__btn:after, .icon--download:before {
-  content: '\e602' !important; }
+  content: '\e806' !important; }
 
 .icon--infographic:before {
-  content: '\e60b'; }
+  content: '\e80f'; }
 
 .icon--multiple-files:before {
   content: '\e615'; }
 
 .icon--organigram:before {
-  content: '\e60d'; }
+  content: '\e811'; }
 
 .icon--package:before {
-  content: '\e60e'; }
+  content: '\e812'; }
 
 .icon--slides:before {
-  content: '\e610'; }
+  content: '\e814'; }
 
 .icon--video:before {
-  content: '\e614'; }
+  content: '\e800'; }
 
 .icon--error:before {
-  content: '\e604'; }
+  content: '\e808'; }
 
 .icon--success:before {
-  content: '\e612'; }
+  content: '\e816'; }
 
 .icon--warning:before {
-  content: '\e615'; }
+  content: '\e804'; }
 
 .icon--budget:before {
-  content: '\e900'; }
+  content: '\e81a'; }
 
 .icon--digital:before {
-  content: '\e901'; }
+  content: '\e80b'; }
 
 .icon--energy:before {
-  content: '\e902'; }
+  content: '\e818'; }
 
 .icon--euro:before {
-  content: '\e903'; }
+  content: '\e803'; }
 
 .icon--global:before {
-  content: '\e904'; }
+  content: '\e829'; }
 
 .icon--growth:before {
-  content: '\e905'; }
+  content: '\e82a'; }
 
 .icon--regulation:before {
-  content: '\e906'; }
+  content: '\e82b'; }
 
 .icon--check, .icon--check:before {
-  content: '\e620'; }
+  content: '\e81f'; }
 
 .icon--generic-lang, .icon--generic-lang:before {
-  content: '\e621'; }
+  content: '\e81e'; }
 
 .icon--tag-close, .icon--tag-close:before, .facet-tag--close .facet-tag__value:after {
-  content: '\e907'; }
+  content: '\e82c'; }
 
 .icon--tag-close-hover, .icon--tag-close-hover:before, .facet-tag--close .facet-tag__value:hover:after {
-  content: '\e908'; }
+  content: '\e82d'; }
 
 .icon--calendar:before {
-  content: '\e985'; }
+  content: '\e81d'; }
 
 .icon--yellowbg {
   background-color: #ffd617;
@@ -8258,6 +8301,9 @@ Styleguide: icon
   .icon--yellowbg:before {
     margin-right: 0;
     line-height: inherit; }
+
+.icon--margin-right {
+  margin-right: 1.5em; }
 
 .is-spinning:before {
   -webkit-animation: icon-spin-right 2s infinite linear;
@@ -9159,7 +9205,7 @@ Styleguide labels
 .label--highlight {
   color: #404040;
   background-color: #ffd617; }
-  .label--highlight.label--meta:after {
+  .label--highlight.label--meta:after, .label--highlight.label--meta-medium:after {
     content: "";
     margin: 0; }
 
@@ -9167,11 +9213,24 @@ Styleguide labels
   color: #404040;
   background-color: #ececec; }
 
-.label--meta {
+.label--high {
+  min-height: 2.75em;
+  line-height: 2.75em;
+  padding: 0.3em 1em;
+  font-size: 0.778em; }
+
+.label--no-padding-left {
+  padding-left: 0; }
+
+.label--meta, .label--meta-medium {
   padding: 0.25em 0.5em 0.3em 0.5em;
   top: -0.075em;
   margin-right: 0.8em;
   position: relative; }
+
+.label--meta-medium {
+  font-size: 75%;
+  padding: 0.35em 0.5em 0.45em 0.5em; }
 
 /*
 Language select (Site)
@@ -9211,18 +9270,20 @@ Styleguide: siteheader.langselect
     width: 1.556em; }
   .lang-select-site .lang-select-site__code-text {
     position: relative;
-    top: -3px;
+    top: -1px;
     left: -2px;
     font-size: 0.778em;
     color: #fff; }
   .lang-select-site .lang-select-site__icon {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -1px;
+    left: -1px;
     color: #004494;
     font-size: 1.556em;
-    line-height: 1;
+    line-height: 1.4;
     display: inline-block; }
+    .lang-select-site .lang-select-site__icon:before {
+      font-weight: inherit; }
 
 @media (min-width: 992px) {
   .lang-select-site {
@@ -9408,6 +9469,9 @@ ul.listing--title {
 .listing--title .listing__title:hover, .listing--title .listing__title:focus {
   text-decoration: underline !important;
   color: #404040; }
+
+.listing--frontpage p {
+  line-height: 1.375em; }
 
 .listing--title-large .listing__title,
 .listing--title-medium .listing__title {
@@ -10141,17 +10205,17 @@ Styleguide meta
   .meta p {
     margin: 0; }
 
-.meta__item, .label--meta {
+.meta__item, .label--meta, .label--meta-medium {
   float: left;
   overflow: hidden;
   white-space: nowrap; }
-  .meta__item:after, .label--meta:after {
+  .meta__item:after, .label--meta:after, .label--meta-medium:after {
     content: "|";
     color: #b3b4b5;
     margin: 0 0.8em;
     position: relative;
     top: -1px; }
-  .meta__item:last-child:after, .label--meta:last-child:after {
+  .meta__item:last-child:after, .label--meta:last-child:after, .label--meta-medium:last-child:after {
     display: none; }
 
 .meta__item--type {
@@ -10161,7 +10225,7 @@ Styleguide meta
   font-size: 0.889em;
   margin: 0 0 1em; }
 
-.meta .meta__item p, .meta .label--meta p {
+.meta .meta__item p, .meta .label--meta p, .meta .label--meta-medium p {
   font-size: inherit !important;
   display: inline;
   line-height: inherit;
@@ -10422,6 +10486,16 @@ Styleguide page-header.informational-home
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+
+.page-header__eventinfo {
+  float: left;
+  font-size: 0.778em; }
+  .page-header__eventinfo .page-header__date--cancelled {
+    text-decoration: line-through; }
+  .page-header__eventinfo .icon, .page-header__eventinfo .search-form__btn {
+    margin: 1em 2em 1em 0; }
+    .page-header__eventinfo .icon::before, .page-header__eventinfo .search-form__btn::before {
+      margin-right: 0.5em; }
 
 /*
 Pager
@@ -10817,8 +10891,13 @@ Styleguide: siteheader.searchform
       margin-top: 2em;
       float: left;
       width: 100%; }
-      .site-menu .smaller a:focus {
-        outline: 3px solid #404040; }
+      .site-menu .smaller a:hover {
+        color: #000000;
+        text-decoration: none; }
+      .site-menu .smaller a:focus:focus {
+        outline: 3px solid #404040;
+        outline-offset: 2px;
+        text-decoration: none; }
   .site-menu .col-sm-4 .listing, .site-menu .sidebar-field-group__sidebar .listing {
     margin-top: 2em; }
   .site-menu p {

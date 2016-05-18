@@ -47,6 +47,8 @@ Markup: html/icon.html
 .icon--tag-close - tag close
 .icon--tag-close-hover - tag close with hover state
 .icon--calendar - Calendar icon
+.icon--location - Location icon
+.icon--livestreaming - Live streaming icon
 
 Styleguide: icon
 */
@@ -57,7 +59,7 @@ Styleguide: icon
   src: url('../fonts/europa-icons/europa-icons.eot?#iefix') format('embedded-opentype'),
   url('../fonts/europa-icons/europa-icons.woff') format('woff'),
   url('../fonts/europa-icons/europa-icons.ttf') format('truetype'),
-  url('../fonts/europa-icons/europa-icons.svg#icomoon') format('svg');
+  url('../fonts/europa-icons/icomoon.svg#icomoon') format('svg');
 }
 
 .icon {
@@ -99,7 +101,7 @@ Styleguide: icon
 
 // Modifiers
 .icon--external {
-  content: '\e61a' !important;
+  content: '\e825' !important;
 }
 .icon--external {
   &:before {
@@ -113,18 +115,19 @@ Styleguide: icon
 }
 
 .icon--arrow-up {
-  content: '\e61e';
+  content: '\e821';
 }
+
 .icon--arrow-up {
   &:before {
     @extend .icon--arrow-up;
   }
 }
 
-
 .icon--arrow-down {
-  content: '\e61d';
+  content: '\e822';
 }
+
 .icon--arrow-down {
   &:before {
     @extend .icon--arrow-down;
@@ -133,60 +136,72 @@ Styleguide: icon
 
 .icon--spinner {
   &:before {
-    content: '\e984';
+    content: '\e82f';
   }
 }
 
 .icon--facebook {
   &:before {
-    content: '\e605';
+    content: '\e809';
+  }
+}
+
+.icon--livestreaming {
+  &:before {
+    content: "\e81c";
+  }
+}
+
+.icon--location {
+  &:before {
+    content: "\e81b";
   }
 }
 
 .icon--twitter {
   &:before {
-    content: '\e613';
+    content: '\e817';
   }
 }
 
 .icon--googleplus {
   &:before {
-    content: '\e608';
+    content: '\e80c';
   }
 }
 
 .icon--linkedin {
   &:before {
-    content: '\e60c';
+    content: '\e810';
   }
 }
 
 .icon--rss {
   &:before {
-    content: '\e60f';
+    content: '\e813';
   }
 }
 
 .icon--language {
   &:before {
-    content: '\e611';
+    content: '\e824';
   }
 }
 
 .icon--search {
   &:before {
-    content: '\e61c';
+    content: '\e823';
   }
 }
 
 .icon--up {
   &:before {
-    content: '\e618';
+    content: '\e827';
   }
 }
 
 .icon--right {
-  content: '\e617';
+  content: '\e828';
 }
 .icon--right {
   &:before {
@@ -195,54 +210,54 @@ Styleguide: icon
 }
 
 .icon--breadcrumb {
-  content: '\e617' !important;
+  content: '\e828' !important;
 }
 
 .icon--down {
-  content: '\e616';
+  content: '\e806';
   &:before {
-    content: '\e616';
+    content: '\e806';
   }
 }
 
 .icon--left {
   &:before {
-    content: '\e619';
+    content: '\e826';
   }
 }
 
 .icon--file {
   &:before {
-    content: '\e606';
+    content: '\e80a';
   }
 }
 
 .icon--audio {
   &:before {
-    content: '\e600';
+    content: '\e801';
   }
 }
 
 .icon--brochure {
   &:before {
-    content: '\e601';
+    content: '\e802';
   }
 }
 
 .icon--edit {
   &:before {
-    content: '\e603';
+    content: '\e807';
   }
 }
 
 .icon--image {
   &:before {
-    content: '\e609';
+    content: '\e80d';
   }
 }
 
 .icon--download {
-  content: '\e602' !important;
+  content: '\e806' !important;
 }
 .icon--download {
   &:before {
@@ -252,7 +267,7 @@ Styleguide: icon
 
 .icon--infographic {
   &:before {
-    content: '\e60b';
+    content: '\e80f';
   }
 }
 
@@ -264,112 +279,112 @@ Styleguide: icon
 
 .icon--organigram {
   &:before {
-    content: '\e60d';
+    content: '\e811';
   }
 }
 
 .icon--package {
   &:before {
-    content: '\e60e';
+    content: '\e812';
   }
 }
 
 .icon--slides {
   &:before {
-    content: '\e610';
+    content: '\e814';
   }
 }
 
 .icon--video {
   &:before {
-    content: '\e614';
+    content: '\e800';
   }
 }
 
 .icon--error {
   &:before {
-    content: '\e604';
+    content: '\e808';
   }
 }
 
 .icon--success {
   &:before {
-    content: '\e612';
+    content: '\e816';
   }
 }
 
 .icon--warning {
   &:before {
-    content: '\e615';
+    content: '\e804';
   }
 }
 
 .icon--budget {
   &:before {
-    content: '\e900';
+    content: '\e81a';
   }
 }
 
 .icon--digital {
   &:before {
-    content: '\e901';
+    content: '\e80b';
   }
 }
 
 .icon--energy {
   &:before {
-    content: '\e902';
+    content: '\e818';
   }
 }
 
 .icon--euro {
   &:before {
-    content: '\e903';
+    content: '\e803';
   }
 }
 
 .icon--global {
   &:before {
-    content: '\e904';
+    content: '\e829';
   }
 }
 
 .icon--growth {
   &:before {
-    content: '\e905';
+    content: '\e82a';
   }
 }
 
 .icon--regulation {
   &:before {
-    content: '\e906';
+    content: '\e82b';
   }
 }
 
 
 .icon--check {
-  content: '\e620';
+  content: '\e81f';
   &:before {
     @extend .icon--check;
   }
 }
 
 .icon--generic-lang {
-  content: '\e621';
+  content: '\e81e';
   &:before {
     @extend .icon--generic-lang;
   }
 }
 
 .icon--tag-close {
-  content: '\e907';
+  content: '\e82c';
   &:before {
     @extend .icon--tag-close;
   }
 }
 
 .icon--tag-close-hover {
-  content: '\e908';
+  content: '\e82d';
   &:before {
     @extend .icon--tag-close-hover;
   }
@@ -377,7 +392,7 @@ Styleguide: icon
 
 .icon--calendar {
   &:before {
-    content: '\e985';
+    content: '\e81d';
   }
 }
 
@@ -394,6 +409,14 @@ Styleguide: icon
     margin-right: 0;
     line-height: inherit;
   }
+}
+
+.icon--text-small {
+  @extend .text-small;
+}
+
+.icon--margin-right {
+  margin-right: 1.5em;
 }
 
 // States

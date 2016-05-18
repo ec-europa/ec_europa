@@ -28,6 +28,10 @@ Styleguide file
   padding: 1em 0;
 }
 
+.file-video--withbackground {
+  background: $grey-lighter;
+}
+
 .file__icon {
   float: left;
   @extend .col-xs-1;
@@ -69,6 +73,11 @@ Styleguide file
   line-height: initial;
 }
 
+.file__caption {
+  font-size: $font-size-xsmall;
+  padding: 0.5em;
+}
+
 .file__language {
   font-weight: bold;
   font-size: $font-size-little;
@@ -107,6 +116,10 @@ Styleguide file
   @extend .row;
   max-width: 100%;
   width: 100%;
+}
+
+.file--condensed {
+  padding: 0em;
 }
 
 // Modifications in the translations under a normal file.
