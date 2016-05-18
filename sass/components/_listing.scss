@@ -33,7 +33,6 @@
 //    .listing--short-spaced
 //    .listing--line-left
 //    .listing--title
-//    .listing--title-large
 //    .listing--title-medium
 //    .listing--person
 //    .listing--nostripe
@@ -82,7 +81,6 @@ Listing title is the component modifier used to style a list of titles.
 
 Markup: html/listing--title.html
 
-.listing--title-large - Listing title large
 .listing--title-medium - Listing title medium
 
 Styleguide listing.4
@@ -147,19 +145,11 @@ ul.listing--title {
   }
 }
 
-// .listing--title-large modifier.
-.listing--title-large,
+// .listing--title-medium modifier.
 .listing--title-medium {
   .listing__title {
     margin-top: 0.2em;
     margin-bottom: 0.4em;
-  }
-}
-
-// .listing--title-large modifier.
-.listing--title-large {
-  .listing__title {
-    font-size: $font-size-h2;
   }
 }
 
@@ -675,10 +665,6 @@ Styleguide listing.2.4
   .listing {
     margin-bottom: 2em;
     @extend .col-sm-6;
-  }
-
-  .listing--title-large {
-    @extend .col-md-6;
   }
 }
 
