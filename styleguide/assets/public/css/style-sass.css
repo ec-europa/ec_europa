@@ -9174,11 +9174,14 @@ Markup: html/labels.html
 Styleguide labels
 */
 .label {
+  display: inline-block;
+  padding: 0 0.5em;
   border-radius: 0;
   font-size: 0.67em;
   font-weight: normal;
   letter-spacing: 0.12em;
-  color: #404040; }
+  color: #404040;
+  line-height: 2; }
 
 .label--default {
   color: #fff; }
@@ -9223,14 +9226,13 @@ Styleguide labels
   padding-left: 0; }
 
 .label--meta, .label--meta-medium {
-  padding: 0.25em 0.5em 0.3em 0.5em;
-  top: -0.075em;
-  margin-right: 0.8em;
-  position: relative; }
+  margin: 0.25em 1.3em 0.3em 0.5em;
+  border: 1px solid red; }
 
 .label--meta-medium {
   font-size: 75%;
-  padding: 0.35em 0.5em 0.45em 0.5em; }
+  margin: 0.35em 0.5em 0.45em 0.5em;
+  border: 1px solid green; }
 
 /*
 Language select (Site)
@@ -10197,24 +10199,18 @@ Markup: html/meta.html
 Styleguide meta
 */
 .meta {
-  width: 100%;
   line-height: 1.3;
   font-size: 0.778em;
-  letter-spacing: 0.02777778em;
-  float: left; }
+  letter-spacing: 0.02777778em; }
   .meta p {
     margin: 0; }
 
 .meta__item, .label--meta, .label--meta-medium {
-  float: left;
-  overflow: hidden;
   white-space: nowrap; }
   .meta__item:after, .label--meta:after, .label--meta-medium:after {
     content: "|";
     color: #b3b4b5;
-    margin: 0 0.8em;
-    position: relative;
-    top: -1px; }
+    margin: 0 0.7em 0 0.85em; }
   .meta__item:last-child:after, .label--meta:last-child:after, .label--meta-medium:last-child:after {
     display: none; }
 

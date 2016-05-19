@@ -12,11 +12,9 @@ Styleguide meta
 */
 
 .meta {
-  width: 100%;
   line-height: 1.3;
   font-size: $font-size-xsmall;
   letter-spacing: 0.02777778em;
-  float: left;
 
   p {
     margin: 0;
@@ -24,15 +22,12 @@ Styleguide meta
 }
 
 .meta__item {
-  float: left;
-  overflow: hidden;
   white-space: nowrap;
+
   &:after {
     content: "|";
     color: $grey;
-    margin: 0 0.8em;
-    position: relative;
-    top: -1px;
+    margin: 0 0.7em 0 0.85em;
   }
 
   &:last-child {
@@ -48,7 +43,7 @@ Styleguide meta
 
 .meta--header {
   font-size: $font-size-little;
-  margin:0 0 1em;
+  margin: 0 0 1em;
 }
 
 // Drupal fix due to basic_html text formatter settings that are generating
