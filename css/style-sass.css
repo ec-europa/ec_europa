@@ -9226,13 +9226,11 @@ Styleguide labels
   padding-left: 0; }
 
 .label--meta, .label--meta-medium {
-  margin: 0.25em 1.3em 0.3em 0.5em;
-  border: 1px solid red; }
+  margin: 0.25em 1.3em 0.3em 0.5em; }
 
 .label--meta-medium {
   font-size: 75%;
-  margin: 0.35em 0.5em 0.45em 0.5em;
-  border: 1px solid green; }
+  margin: 0.35em 0.5em 0.45em 0.5em; }
 
 /*
 Language select (Site)
@@ -10210,7 +10208,9 @@ Styleguide meta
   .meta__item:after, .label--meta:after, .label--meta-medium:after {
     content: "|";
     color: #b3b4b5;
-    margin: 0 0.7em 0 0.85em; }
+    margin: 0 0.6em 0 0.85em;
+    position: relative;
+    top: -1px; }
   .meta__item:last-child:after, .label--meta:last-child:after, .label--meta-medium:last-child:after {
     display: none; }
 

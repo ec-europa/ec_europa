@@ -96,12 +96,10 @@ $label_text_color_light: #fff;
 .label--meta {
   @extend .meta__item;
   margin: 0.25em 1.3em 0.3em 0.5em;
-  border: 1px solid red;
 }
 
 .label--meta-medium {
   @extend .label--meta;
   font-size: 75%;
   margin: 0.35em 0.5em 0.45em 0.5em;
-  border: 1px solid green;
 }
