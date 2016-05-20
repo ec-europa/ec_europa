@@ -30,6 +30,7 @@
 //
 //
 //   Component modifiers:
+//    .listing--navigation
 //    .listing--short-spaced
 //    .listing--line-left
 //    .listing--title
@@ -161,7 +162,7 @@ ul.listing--title {
 }
 
 /*
-Listing Agenda
+Listing agenda
 
 Listing for event like entities.
 
@@ -354,6 +355,59 @@ Styleguide listing.3
 .listing--short-spaced {
   .listing__item {
     padding: 0.5em 0 !important;
+  }
+}
+
+/*
+Listing navigation
+
+Navigational listing.
+The following example is a general one, using "Section" styling.
+
+Markup: html/listing--navigation.html
+
+Styleguide listing.6
+*/
+
+.listing--navigation {
+  border-top: 3px $navigation-top-border-color solid;
+  margin-bottom: (90/18)+em; // 90px
+  @include clearfix();
+
+  .listing__section-title,
+  h2 {
+    color: $navigation-title-color;
+    margin: (20/22)+em 0 (52/22)+em 0; // 20px 0 52px 0
+    font-size: (22/18)+em; // 22px
+  }
+
+  .listing__item {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .listing__description {
+    font-size: (13/18)+em; // 13px
+  }
+
+  .listing__title {
+    font-weight: normal;
+    a:link &,
+    a:visited &{
+      color: $navigation-title-color;
+    }
+  }
+
+  .listing__subitem {
+    font-size: 1em;
+
+    &:first-of-type {
+      // border-top: 10px solid $grey-lighter;
+      border-top: 1px solid $grey-light;
+      padding-top: (20/18)+em; // 20px
+      // Margin bottom 0.5em of the previous item.
+      margin-top: (20/18 - 0.5)+em; // 20px
+    }
   }
 }
 

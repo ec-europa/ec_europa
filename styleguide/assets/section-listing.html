@@ -193,7 +193,13 @@
             <li class="kss-nav__menu-item">
               <a href="section-listing.html#kssref-listing-5">
                 <span class="kss-nav__ref">22.5</span
-                ><span class="kss-nav__name">Listing Agenda</span>
+                ><span class="kss-nav__name">Listing agenda</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-listing.html#kssref-listing-6">
+                <span class="kss-nav__ref">22.6</span
+                ><span class="kss-nav__name">Listing navigation</span>
               </a>
             </li>
         </ul>
@@ -1245,7 +1251,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-listing-5">
           <span class="kss-title__ref">22.5</span
-          >Listing Agenda
+          >Listing agenda
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h2>
@@ -1347,6 +1353,173 @@ The width of the element listing__item is limited to 32em, a modifier is availab
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-listing-6" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-listing-6">
+          <span class="kss-title__ref">22.6</span
+          >Listing navigation
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Navigational listing.
+The following example is a general one, using &quot;Section&quot; styling.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="section">
+  <div class="section__group section--row-three section--navigation">
+
+    <!-- Title with additional text, links, and grandchilds section item. -->
+    <div class="section__item">
+      <div class="listing listing--navigation">
+        <h2 class="listing__section-title">Title with additional text, links<br> and grandchilds</h2>
+        <p class="listing__description">
+          This is the description.
+          EU strategy, its role in setting priorities, and its implementation through EU policy.
+        </p>
+        <div class="listing__item">
+          <a href="http://europa.eu/eu-law/index_en.htm" class="listing__title">Introduction to EU law</a>
+        </div>
+        <div class="listing__item">
+          <a href="http://eur-lex.europa.eu/homepage.html" class="listing__title">Find EU legislation (EUR-Lex)</a>
+        </div>
+        <div class="listing__item">
+          <a href="http://eur-lex.europa.eu/collection/eu-law/eu-case-law.html" class="listing__title">EU case law (EUR-Lex)</a>
+        </div>
+        <div class="listing__item">
+          <a href="http://eur-lex.europa.eu/browse/summaries.html" class="listing__title">Summaries of EU legislation</a>
+          <div class="listing__subitem"><a href="#">Grandchild 1.</a></div>
+          <div class="listing__subitem"><a href="#">Grandchild 2.</a></div>
+          <div class="listing__subitem"><a href="#">Grandchild 3.</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title with additional text section item. -->
+    <div class="section__item">
+      <div class="listing listing--navigation">
+        <div class="listing__item">
+          <a class="listing__item-link" href="http://ec.europa.eu/budget/annual/index_en.cfm">
+            <h2 class="listing__section-title">Title with additional text</h2>
+            <p class="listing__description">Information on the annual budget life-cycle.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Title with additional text, links, without any grandchild section item. -->
+    <div class="section__item">
+      <div class="listing listing--navigation">
+        <h2 class="listing__section-title">Title with additional text, links <br>without any grandchild</h2>
+        <p class="listing__description">
+          This is the description.
+          EU strategy, its role in setting priorities, and its implementation through EU policy.
+        </p>
+        <div class="listing__item">
+          <a href="http://europa.eu/eu-law/index_en.htm" class="listing__title">Introduction to EU law</a>
+        </div>
+        <div class="listing__item">
+          <a href="http://eur-lex.europa.eu/homepage.html" class="listing__title">Find EU legislation (EUR-Lex)</a>
+        </div>
+        <div class="listing__item">
+          <a href="http://eur-lex.europa.eu/collection/eu-law/eu-case-law.html" class="listing__title">EU case law (EUR-Lex)</a>
+        </div>
+        <div class="listing__item">
+          <a href="http://eur-lex.europa.eu/browse/summaries.html" class="listing__title">Summaries of EU legislation</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;section&quot;&gt;
+  &lt;div class=&quot;section__group section--row-three section--navigation&quot;&gt;
+
+    &lt;!-- Title with additional text, links, and grandchilds section item. --&gt;
+    &lt;div class=&quot;section__item&quot;&gt;
+      &lt;div class=&quot;listing listing--navigation&quot;&gt;
+        &lt;h2 class=&quot;listing__section-title&quot;&gt;Title with additional text, links&lt;br&gt; and grandchilds&lt;/h2&gt;
+        &lt;p class=&quot;listing__description&quot;&gt;
+          This is the description.
+          EU strategy, its role in setting priorities, and its implementation through EU policy.
+        &lt;/p&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;http://europa.eu/eu-law/index_en.htm&quot; class=&quot;listing__title&quot;&gt;Introduction to EU law&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;http://eur-lex.europa.eu/homepage.html&quot; class=&quot;listing__title&quot;&gt;Find EU legislation (EUR-Lex)&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;http://eur-lex.europa.eu/collection/eu-law/eu-case-law.html&quot; class=&quot;listing__title&quot;&gt;EU case law (EUR-Lex)&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;http://eur-lex.europa.eu/browse/summaries.html&quot; class=&quot;listing__title&quot;&gt;Summaries of EU legislation&lt;/a&gt;
+          &lt;div class=&quot;listing__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Grandchild 1.&lt;/a&gt;&lt;/div&gt;
+          &lt;div class=&quot;listing__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Grandchild 2.&lt;/a&gt;&lt;/div&gt;
+          &lt;div class=&quot;listing__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Grandchild 3.&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Title with additional text section item. --&gt;
+    &lt;div class=&quot;section__item&quot;&gt;
+      &lt;div class=&quot;listing listing--navigation&quot;&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a class=&quot;listing__item-link&quot; href=&quot;http://ec.europa.eu/budget/annual/index_en.cfm&quot;&gt;
+            &lt;h2 class=&quot;listing__section-title&quot;&gt;Title with additional text&lt;/h2&gt;
+            &lt;p class=&quot;listing__description&quot;&gt;Information on the annual budget life-cycle.&lt;/p&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Title with additional text, links, without any grandchild section item. --&gt;
+    &lt;div class=&quot;section__item&quot;&gt;
+      &lt;div class=&quot;listing listing--navigation&quot;&gt;
+        &lt;h2 class=&quot;listing__section-title&quot;&gt;Title with additional text, links &lt;br&gt;without any grandchild&lt;/h2&gt;
+        &lt;p class=&quot;listing__description&quot;&gt;
+          This is the description.
+          EU strategy, its role in setting priorities, and its implementation through EU policy.
+        &lt;/p&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;http://europa.eu/eu-law/index_en.htm&quot; class=&quot;listing__title&quot;&gt;Introduction to EU law&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;http://eur-lex.europa.eu/homepage.html&quot; class=&quot;listing__title&quot;&gt;Find EU legislation (EUR-Lex)&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;http://eur-lex.europa.eu/collection/eu-law/eu-case-law.html&quot; class=&quot;listing__title&quot;&gt;EU case law (EUR-Lex)&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__item&quot;&gt;
+          &lt;a href=&quot;http://eur-lex.europa.eu/browse/summaries.html&quot; class=&quot;listing__title&quot;&gt;Summaries of EU legislation&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
 </code></pre>
       </div>
 
