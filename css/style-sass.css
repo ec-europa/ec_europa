@@ -7166,7 +7166,8 @@ a.feedback-form__trigger {
   border: 1px solid #575757; }
   #feedback-form__accordion .panel {
     border-top: 1px solid #575757;
-    padding: 10px; }
+    padding: 10px;
+    line-height: 1; }
     #feedback-form__accordion .panel:first-child {
       border-top: none; }
     #feedback-form__accordion .panel .panel-title {
@@ -7194,10 +7195,14 @@ a.feedback-form__trigger {
         outline: none; }
     #feedback-form__accordion .panel .panel-body {
       padding: 0 1.563em; }
-      #feedback-form__accordion .panel .panel-body .accordion-inner {
-        margin-top: 0.938em; }
+      #feedback-form__accordion .panel .panel-body .form-group {
+        margin-top: 2.5em; }
   #feedback-form__accordion .panel-heading {
-    padding-left: 1.563em; }
+    padding-left: 1.563em;
+    float: left;
+    font-size: inherit;
+    border: none;
+    margin-bottom: 0; }
 
 @media (min-width: 768px) {
   .feedback-form__text {
