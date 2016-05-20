@@ -196,7 +196,7 @@ Styleguide: icon
 
 .icon--up {
   &:before {
-    content: '\e827';
+    content: '\e827'; 
   }
 }
 
@@ -361,6 +361,11 @@ Styleguide: icon
   }
 }
 
+.icon--feedback {
+  &:before {
+    content: '\e82f';
+  }
+}
 
 .icon--check {
   content: '\e81f';

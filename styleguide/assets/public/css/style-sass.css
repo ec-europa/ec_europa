@@ -8273,6 +8273,9 @@ Styleguide: icon
 .icon--regulation:before {
   content: '\e82b'; }
 
+.icon--feedback:before {
+  content: '\e82f'; }
+
 .icon--check, .icon--check:before {
   content: '\e81f'; }
 
