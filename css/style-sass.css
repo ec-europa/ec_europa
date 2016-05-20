@@ -6001,12 +6001,12 @@ Markup: html/link.html
 
 Styleguide text.link
 */
-a:link {
-  text-decoration: underline; }
-
 a:focus {
   outline: 3px solid #ffd617;
   outline-offset: 2px;
+  text-decoration: underline; }
+
+a:link {
   text-decoration: underline; }
 
 a:hover, a:active, a:focus {
@@ -6065,7 +6065,8 @@ a[href^="mailto"] {
   .site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after {
     font-size: 75%;
     margin-left: 0.4em;
-    margin-right: 0.2em; }
+    margin-right: 0.2em;
+    text-decoration: underline; }
 
 .site-political .page-content ul a[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn, .site-political .page-content ul .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-content ul a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]), .site-political
 .page-content p a[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn, .site-political
@@ -6853,16 +6854,13 @@ Styleguide breadcrumb
   font-weight: 600;
   position: relative;
   border-radius: 0;
-  line-height: normal;
-  float: left;
-  width: 100%; }
+  line-height: normal; }
   .breadcrumb ol,
   .breadcrumb ul {
     list-style: none;
     list-style-image: none;
     padding: 0;
-    margin: 0 !important;
-    width: 100%;
+    margin: 0;
     max-width: none; }
 
 .breadcrumb__segment {
@@ -6875,7 +6873,8 @@ Styleguide breadcrumb
   font-weight: bold;
   margin-right: 8px;
   max-width: 100%;
-  color: #fff; }
+  color: #fff;
+  text-decoration: none !important; }
   .breadcrumb__link:hover, .breadcrumb__link:active, .breadcrumb__link:focus {
     color: #fff; }
     .breadcrumb__link:hover .breadcrumb__text, .breadcrumb__link:active .breadcrumb__text, .breadcrumb__link:focus .breadcrumb__text {
@@ -6961,11 +6960,7 @@ Styleguide breadcrumb.collapsible
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%; }
-
-.breadcrumb--collapsible .breadcrumb__segment {
-  width: 100%; }
+  text-overflow: ellipsis; }
 
 .breadcrumb--collapsible .breadcrumb__segment--first {
   padding-right: 0; }
@@ -6993,25 +6988,21 @@ Styleguide breadcrumb.collapsible
   padding-left: 0; }
 
 @media (min-width: 480px) {
-  .breadcrumb--collapsible .breadcrumb__segments-wrapper {
-    float: left; }
-  .breadcrumb--collapsible .breadcrumb__segment {
-    width: auto; }
-    .breadcrumb--collapsible .breadcrumb__segment.is-hidden {
-      display: none; }
-    .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden {
-      padding-right: 25px; }
-      .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:after {
-        content: '...';
-        display: inline-block !important;
-        position: relative;
-        top: -4px;
-        color: #ffffff; }
-      .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
-        display: inline-block !important;
-        position: absolute;
-        right: 7px;
-        top: 30%; }
+  .breadcrumb--collapsible .breadcrumb__segment.is-hidden {
+    display: none; }
+  .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden {
+    padding-right: 25px; }
+    .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:after {
+      content: '...';
+      display: inline-block !important;
+      position: relative;
+      top: -4px;
+      color: #ffffff; }
+    .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
+      display: inline-block !important;
+      position: absolute;
+      right: 7px;
+      top: 30%; }
   .breadcrumb--collapsible .breadcrumb__btn-separator {
     display: none; }
   .breadcrumb--collapsible .breadcrumb__segment--first {
