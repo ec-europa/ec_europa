@@ -5879,7 +5879,6 @@ Styleguide form
   .has-error .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title
   .has-error select:focus {
     color: #000;
-    padding: 5px 11px;
     -webkit-box-shadow: none;
     box-shadow: none; }
   .form-control:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
@@ -10254,8 +10253,9 @@ Messages
 
 Markup: html/messages.html
 
-Styleguide messages
+.messages--icon-center - Centralized icon
 
+Styleguide messages
 */
 .messages, .feedback-message {
   border: 2px solid;
@@ -10264,13 +10264,16 @@ Styleguide messages
   font-family: Arial, sans-serif;
   font-size: 0.889em;
   margin: 0 0 1em;
-  padding: 1em 4em;
+  padding: 1em 1em 1em 4em;
   position: relative;
   overflow: hidden;
   background: url("../images/svg/messages-info.svg") no-repeat 1em 1.1em;
   background-size: 2em; }
-  .messages:last-child, .feedback-message:last-child {
-    margin-bottom: 0; }
+  .messages.messages--icon-center, .messages--icon-center.feedback-message {
+    background-position: 1em center; }
+  .messages > :last-child, .feedback-message > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0; }
   .messages.status, .status.feedback-message {
     border-color: #467a39;
     background-image: url("../images/svg/messages-success.svg"); }
@@ -10280,6 +10283,9 @@ Styleguide messages
   .messages.error, .error.feedback-message {
     border-color: #da2131;
     background-image: url("../images/svg/messages-error.svg"); }
+  .messages.live, .live.feedback-message {
+    border-color: #ffc412;
+    background-image: url("../images/svg/live_streaming.svg"); }
   .messages h3, .feedback-message h3 {
     font-size: inherit;
     font-weight: bold;
@@ -10311,9 +10317,26 @@ Styleguide messages
     background-image: url("../images/png/messages-warning.png"); }
   .no-svg .messages.error, .no-svg .error.feedback-message {
     background-image: url("../images/png/messages-error.png"); }
+  .no-svg .messages.live, .no-svg .live.feedback-message {
+    background-image: url("../images/png/live_streaming.png"); }
+
+.no-svg .alert .close {
+  background-image: url("../images/png/close.png"); }
+  .no-svg .alert .close:hover {
+    background-image: url("../images/png/close_hover.png"); }
 
 .alert {
-  margin: 1.667em 0; }
+  margin: 1.667em 0;
+  border-radius: 0; }
+  .alert .close {
+    text-shadow: none;
+    color: transparent;
+    text-decoration: none;
+    opacity: 1;
+    background: url("../images/svg/close.svg") no-repeat right top;
+    padding: 0 0 0 5px; }
+    .alert .close:hover {
+      background-image: url("../images/svg/close_hover.svg"); }
 
 /*
 

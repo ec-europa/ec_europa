@@ -30,7 +30,7 @@ stylesheets[all][] = css/style-sass.css
 ; Scripts
 ; ========================================
 scripts[] = bootstrap-sass/js/bootstrap/affix.js
-;scripts[] = bootstrap-sass/js/bootstrap/alert.js
+scripts[] = bootstrap-sass/js/bootstrap/alert.js
 ;scripts[] = bootstrap-sass/js/bootstrap/button.js
 ;scripts[] = bootstrap-sass/js/bootstrap/carousel.js
 scripts[] = bootstrap-sass/js/bootstrap/collapse.js
