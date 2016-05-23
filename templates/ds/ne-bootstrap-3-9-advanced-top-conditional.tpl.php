@@ -9,13 +9,13 @@
 ?>
 
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="<?php print $classes; ?>">
-
+<?php $header_modifier = isset($header_back) ? ' page-header--image' : ''; ?>
 <?php if (isset($title_suffix['contextual_links'])): ?>
   <?php print render($title_suffix['contextual_links']); ?>
 <?php endif; ?>
 
 <!-- Page Header -->
-<div class="page-header<?php if (isset($header_back)) {echo ' page-header--image';} ?>">
+<div class="page-header<?php echo $header_modifier; ?>">
   <nav class="page-navigation" role="navigation">
     <div class="container-fluid">
       <?php print render($header_bottom); ?>
