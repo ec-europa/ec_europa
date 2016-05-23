@@ -961,7 +961,6 @@ function europa_preprocess_html(&$variables) {
 function europa_preprocess_node(&$variables) {
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
-  
   $variables['submitted'] = '';
   if (theme_get_setting('display_submitted')) {
     $variables['submitted'] = t('Submitted by !username on !datetime', array(
