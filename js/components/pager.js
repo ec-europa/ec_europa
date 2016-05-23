@@ -5,12 +5,12 @@
 
 (function ($) {
   Drupal.behaviors.europa_pager = {
-    attach: function(context) {
-      $('ul.pager').once('pager', function() {
+    attach: function (context) {
+      $('ul.pager').once('pager', function () {
         var options = '',
             pagerContainer = '.pager__combo-container',
             pagerItemClass = '.pager__item';
-        $('li.select', this).once('pager__item', function() {
+        $('li.select', this).once('pager__item', function () {
           var listItem = this,
               $link = $('a', listItem),
               title = Drupal.t('Page'),
@@ -34,7 +34,7 @@
         if (options != '') {
           var $select = $('<select class="pager__dropdown">' + options + '</select><span class="pager__separator"></span>');
           // Listen for a change in the select, take the option value and emulate a click on the original element.
-          $select.on('change', function(e) {
+          $select.on('change', function (e) {
             var valueSelected = this.value;
             // Emulate the selection.
             $(pagerItemClass).find('a[href="' + valueSelected + '"]').click();
