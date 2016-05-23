@@ -7198,11 +7198,12 @@ a.feedback-form__trigger {
       #feedback-form__accordion .panel .panel-body .form-group {
         margin-top: 2.5em; }
   #feedback-form__accordion .panel-heading {
-    padding-left: 1.563em;
     float: left;
+    width: auto;
+    margin-bottom: 0;
+    padding-left: 1.563em;
     font-size: inherit;
-    border: none;
-    margin-bottom: 0; }
+    border: none; }
 
 @media (min-width: 768px) {
   .feedback-form__text {

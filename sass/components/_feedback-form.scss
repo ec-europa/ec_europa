@@ -107,11 +107,12 @@ a.feedback-form__trigger {
   }
 
   .panel-heading {
-    padding-left: 1.563em;
     float: left;
+    width: auto;
+    margin-bottom: 0;
+    padding-left: 1.563em;
     font-size: inherit;
     border: none;
-    margin-bottom: 0;
   }
 }
 
