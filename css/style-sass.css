@@ -10526,6 +10526,8 @@ Styleguide pager
   height: 3em;
   line-height: 3em;
   padding-left: 0; }
+  .pager::after {
+    clear: both; }
   .pager > .pager__item {
     transition: all .2s linear;
     list-style: none;
@@ -10535,7 +10537,8 @@ Styleguide pager
       margin: 0;
       font-size: 0.889em;
       display: inline-block;
-      text-align: center; }
+      text-align: center;
+      text-decoration: none; }
       .pager > .pager__item > .pager__btn:hover, .pager > .pager__item > .pager__btn:focus, .pager > .pager__item > .pager__btn:active, .pager > .pager__item > .pager__btn:visited {
         color: #fff; }
       .pager > .pager__item > .pager__btn:focus {
