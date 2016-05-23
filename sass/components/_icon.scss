@@ -214,9 +214,9 @@ Styleguide: icon
 }
 
 .icon--down {
-  content: '\e806';
+  content: '\e81F';
   &:before {
-    content: '\e806';
+    content: '\e81F';
   }
 }
 
@@ -273,7 +273,7 @@ Styleguide: icon
 
 .icon--multiple-files {
   &:before {
-    content: '\e615';
+    content: '\e820';
   }
 }
 
@@ -303,7 +303,7 @@ Styleguide: icon
 
 .icon--error {
   &:before {
-    content: '\e808';
+    content: '\e82F';
   }
 }
 
@@ -368,7 +368,7 @@ Styleguide: icon
 }
 
 .icon--check {
-  content: '\e81f';
+  content: '\e816';
   &:before {
     @extend .icon--check;
   }

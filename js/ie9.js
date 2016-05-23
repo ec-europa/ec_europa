@@ -3,7 +3,7 @@
  * This will add the arrow to the select list.
  */
 
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function () {
   var elements = document.getElementsByClassName("form-type-select");
 
   for (var ind in elements) {
