@@ -74,7 +74,6 @@ Styleguide: icon
     text-transform: none;
     margin-right: 4px;
     line-height: 1;
-
     // Better Font Rendering
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -93,7 +92,6 @@ Styleguide: icon
   margin-left: 4px;
   line-height: 1;
   display: inline-block;
-
   // Better Font Rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -103,6 +101,7 @@ Styleguide: icon
 .icon--external {
   content: '\e825' !important;
 }
+
 .icon--external {
   &:before {
     @extend .icon--external;
@@ -203,6 +202,7 @@ Styleguide: icon
 .icon--right {
   content: '\e828';
 }
+
 .icon--right {
   &:before {
     @extend .icon--right;
@@ -214,9 +214,10 @@ Styleguide: icon
 }
 
 .icon--down {
-  content: '\e806';
+  content: '\e81F';
+
   &:before {
-    content: '\e806';
+    content: '\e81F';
   }
 }
 
@@ -259,6 +260,7 @@ Styleguide: icon
 .icon--download {
   content: '\e806' !important;
 }
+
 .icon--download {
   &:before {
     @extend .icon--download;
@@ -273,7 +275,7 @@ Styleguide: icon
 
 .icon--multiple-files {
   &:before {
-    content: '\e615';
+    content: '\e820';
   }
 }
 
@@ -303,7 +305,7 @@ Styleguide: icon
 
 .icon--error {
   &:before {
-    content: '\e808';
+    content: '\e82F';
   }
 }
 
@@ -361,9 +363,15 @@ Styleguide: icon
   }
 }
 
+.icon--feedback {
+  &:before {
+    content: '\e82f';
+  }
+}
 
 .icon--check {
-  content: '\e81f';
+  content: '\e816';
+
   &:before {
     @extend .icon--check;
   }
@@ -371,6 +379,7 @@ Styleguide: icon
 
 .icon--generic-lang {
   content: '\e81e';
+
   &:before {
     @extend .icon--generic-lang;
   }
@@ -378,6 +387,7 @@ Styleguide: icon
 
 .icon--tag-close {
   content: '\e82c';
+
   &:before {
     @extend .icon--tag-close;
   }
@@ -385,6 +395,7 @@ Styleguide: icon
 
 .icon--tag-close-hover {
   content: '\e82d';
+
   &:before {
     @extend .icon--tag-close-hover;
   }
@@ -405,6 +416,7 @@ Styleguide: icon
   font-size: 14px;
   text-align: center;
   display: inline-block;
+
   &:before {
     margin-right: 0;
     line-height: inherit;
