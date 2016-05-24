@@ -20,11 +20,14 @@ Styleguide labels
 $label_text_color_light: #fff;
 
 .label {
+  display: inline-block;
+  padding: 0 0.5em;
   border-radius: 0;
   font-size: $font-size-xxsmall;
   font-weight: normal;
   letter-spacing: 0.12em;
   color: $grey-base;
+  line-height: 2;
 }
 
 .label--default {
@@ -65,8 +68,9 @@ $label_text_color_light: #fff;
 .label--highlight {
   color: $grey-base;
   background-color: $yellow-light;
+
   &.label--meta {
-    &:after{
+    &:after {
       content: "";
       margin: 0;
     }
@@ -91,14 +95,11 @@ $label_text_color_light: #fff;
 
 .label--meta {
   @extend .meta__item;
-  padding: 0.25em 0.5em 0.3em 0.5em;
-  top: -0.075em;
-  margin-right: 0.8em;
-  position: relative;
+  margin: 0.25em 1.3em 0.3em 0.5em;
 }
 
 .label--meta-medium {
   @extend .label--meta;
   font-size: 75%;
-  padding: 0.35em 0.5em 0.45em 0.5em;
+  margin: 0.35em 0.5em 0.45em 0.5em;
 }

@@ -6,7 +6,7 @@
 (function ($) {
   Drupal.behaviors.europa_breadcrumb = {
     attach: function (context) {
-      $('#breadcrumb').once('breadcrumb', function(){
+      $('#breadcrumb').once('breadcrumb', function () {
 
         // Add collapsible class for js mobile behavior.
         var $breadcrumbWrapper = $('#breadcrumb');
@@ -30,7 +30,7 @@
             breadcrumbCalculations.width = $breadcrumbSegmentsWrapper.width();
 
             breadcrumbCalculations.itemsWidth = 0;
-            $breadcrumbSegments.not('.is-hidden').each(function(i){
+            $breadcrumbSegments.not('.is-hidden').each(function (i) {
               breadcrumbCalculations.itemsWidth += $(this).outerWidth(true);
             });
 
@@ -82,7 +82,7 @@
           // Runs on device width change.
           enquire.register(Drupal.europa.breakpoints.medium, {
             // Desktop.
-            match : function() {
+            match : function () {
               $breadcrumbWrapper.removeClass('is-open');
 
               if ($breadcrumbButton) {
@@ -91,12 +91,12 @@
 
               toggleBreadcrumbSegments();
 
-              $(window).resize(function() {
+              $(window).resize(function () {
                 toggleBreadcrumbSegments();
               });
             },
             // Mobile.
-            unmatch : function() {
+            unmatch : function () {
               if ($breadcrumbButton) {
                 $breadcrumbButton.show();
               }
@@ -106,9 +106,9 @@
               $(window).off('resize');
             },
 
-            setup: function() {
+            setup: function () {
               if ($breadcrumbButton) {
-                $breadcrumbButton.click(function(){
+                $breadcrumbButton.click(function () {
                   // Adding $(this) as a selector for the showBreadcrumbs function.
                   showBreadcrumbs($(this));
                 });
