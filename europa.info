@@ -24,7 +24,8 @@ regions[footer_right] = Footer right
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = css/style-sass.css
+stylesheets[all][] = css/style-sass-base.css
+stylesheets[all][] = css/style-sass-components.css
 
 ; ========================================
 ; Scripts
