@@ -9323,6 +9323,11 @@ a.listing__title {
 
 .listing__wrapper {
   margin-bottom: 1.667em; }
+  .listing__wrapper:before, .listing__wrapper:after {
+    content: " ";
+    display: table; }
+  .listing__wrapper:after {
+    clear: both; }
 
 .listing__item {
   border-bottom: 1px solid #ececec;
