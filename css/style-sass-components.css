@@ -18,15 +18,15 @@
     .container {
       width: 1170px; } }
 
-.container-fluid, .block--full-width > *, .field--full-width > * {
+.container-fluid, .field--full-width > * {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container-fluid:before, .block--full-width > :before, .field--full-width > :before, .container-fluid:after, .block--full-width > :after, .field--full-width > :after {
+  .container-fluid:before, .field--full-width > :before, .container-fluid:after, .field--full-width > :after {
     content: " ";
     display: table; }
-  .container-fluid:after, .block--full-width > :after, .field--full-width > :after {
+  .container-fluid:after, .field--full-width > :after {
     clear: both; }
 
 .row, .banner--video, .context-nav, .file, .file--widebar, .listing__wrapper--maxwidth, .listing__wrapper--three-columns,
@@ -694,14 +694,11 @@ Styleguide banner.video
 .block--full-width {
   margin-left: -15px;
   margin-right: -15px; }
-  .block--full-width > * {
-    margin-left: auto !important;
-    margin-right: auto !important; }
 
 @media (min-width: 1200px) {
   .block--full-width {
-    margin-left: -100%;
-    margin-right: -100%; } }
+    margin: 0 -999em;
+    padding: 0 999em; } }
 
 /*
 Breadcrumb
@@ -4562,7 +4559,7 @@ Styleguide: siteheader
   @media print {
     .site-header {
       -webkit-print-color-adjust: exact; } }
-  .site-header > .container-fluid, .block--full-width.site-header > *, .field--full-width.site-header > * {
+  .site-header > .container-fluid, .field--full-width.site-header > * {
     position: relative; }
   .site-header a:focus {
     outline: 3px solid #ffd617;
