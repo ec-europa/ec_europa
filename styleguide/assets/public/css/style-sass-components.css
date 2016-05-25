@@ -1340,12 +1340,13 @@ a.feedback-form__trigger {
 #feedback-form__accordion {
   margin-bottom: 1em;
   border: 1px solid #575757; }
-  #feedback-form__accordion .accordion-group {
+  #feedback-form__accordion .panel {
     border-top: 1px solid #575757;
-    padding: 10px; }
-    #feedback-form__accordion .accordion-group:first-child {
+    padding: 10px;
+    line-height: 1; }
+    #feedback-form__accordion .panel:first-child {
       border-top: none; }
-    #feedback-form__accordion .accordion-group .accordion-toggle {
+    #feedback-form__accordion .panel .panel-title {
       background: url("../images/svg/checkbox-checked--blue.svg") no-repeat;
       line-height: 23px;
       padding-left: 28px;
@@ -1355,25 +1356,30 @@ a.feedback-form__trigger {
       display: block;
       text-decoration: none;
       font-size: 0.889em; }
-      #feedback-form__accordion .accordion-group .accordion-toggle:focus {
+      #feedback-form__accordion .panel .panel-title:focus {
         background: url("../images/svg/checkbox-highlighted.svg") no-repeat;
         outline: none; }
-      #feedback-form__accordion .accordion-group .accordion-toggle.collapsed {
+      #feedback-form__accordion .panel .panel-title.collapsed {
         background: url("../images/svg/checkbox-unchecked--grey.svg") no-repeat;
         color: #404040;
         font-weight: 400; }
-        #feedback-form__accordion .accordion-group .accordion-toggle.collapsed:focus {
+        #feedback-form__accordion .panel .panel-title.collapsed:focus {
           background: url("../images/svg/checkbox-highlighted.svg") no-repeat;
           outline: none; }
-      #feedback-form__accordion .accordion-group .accordion-toggle::-moz-focus-inner, #feedback-form__accordion .accordion-group .accordion-toggle:focus {
+      #feedback-form__accordion .panel .panel-title::-moz-focus-inner, #feedback-form__accordion .panel .panel-title:focus {
         border: 0;
         outline: none; }
-    #feedback-form__accordion .accordion-group .accordion-body {
+    #feedback-form__accordion .panel .panel-body {
       padding: 0 1.563em; }
-      #feedback-form__accordion .accordion-group .accordion-body .accordion-inner {
-        margin-top: 0.938em; }
-  #feedback-form__accordion .accordion-heading {
-    padding-left: 1.563em; }
+      #feedback-form__accordion .panel .panel-body .form-group {
+        margin-top: 2.5em; }
+  #feedback-form__accordion .panel-heading {
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+    padding-left: 1.563em;
+    font-size: inherit;
+    border: none; }
 
 @media (min-width: 768px) {
   .feedback-form__text {
@@ -1385,16 +1391,16 @@ a.feedback-form__trigger {
     font-size: 1em; }
   #feedback-form__accordion {
     overflow: hidden; }
-    #feedback-form__accordion .accordion-heading {
+    #feedback-form__accordion .panel-heading {
       padding-left: 0; } }
 
 @media (min-width: 992px) {
   .feedback-form__trigger {
     margin: 0.667em 0 0.556em 0; } }
 
-.no-svg #feedback-form__accordion .accordion-group .accordion-toggle {
+.no-svg #feedback-form__accordion .panel .panel-title {
   background: url("../images/png/checkbox.png") no-repeat; }
-  .no-svg #feedback-form__accordion .accordion-group .accordion-toggle.collapsed {
+  .no-svg #feedback-form__accordion .panel .panel-title.collapsed {
     background-position: 0 -21px; }
 
 /*
@@ -2065,9 +2071,9 @@ Styleguide: icon
   content: '\e828' !important; }
 
 .icon--down, .file__translations .file__translations-control:after {
-  content: '\e806'; }
+  content: '\e81F'; }
   .icon--down:before {
-    content: '\e806'; }
+    content: '\e81F'; }
 
 .icon--left:before {
   content: '\e826'; }
@@ -2094,7 +2100,7 @@ Styleguide: icon
   content: '\e80f'; }
 
 .icon--multiple-files:before {
-  content: '\e615'; }
+  content: '\e820'; }
 
 .icon--organigram:before {
   content: '\e811'; }
@@ -2109,7 +2115,7 @@ Styleguide: icon
   content: '\e800'; }
 
 .icon--error:before {
-  content: '\e808'; }
+  content: '\e82F'; }
 
 .icon--success:before {
   content: '\e816'; }
@@ -2138,8 +2144,11 @@ Styleguide: icon
 .icon--regulation:before {
   content: '\e82b'; }
 
+.icon--feedback:before {
+  content: '\e82f'; }
+
 .icon--check, .icon--check:before {
-  content: '\e81f'; }
+  content: '\e816'; }
 
 .icon--generic-lang, .icon--generic-lang:before {
   content: '\e81e'; }

@@ -13,7 +13,8 @@
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
   <!-- Page Header -->
-  <div class="page-header<?php if (isset($header_back)) : print ' page-header--image'; endif; ?>">
+  <div class="page-header<?php if (isset($header_back)) : print ' page-header--image';
+ endif; ?>">
     <nav class="page-navigation" role="navigation">
       <div class="container-fluid">
         <?php print render($header_bottom); ?>
@@ -37,7 +38,8 @@
   </div>
   <div class="page-content">
     <div class="container-fluid">
-      <div class="row<?php if (isset($ceiling)) : print ' ' . $ceiling; endif; ?>">
+      <div class="row<?php if (isset($ceiling)) : print ' ' . $ceiling;
+     endif; ?>">
       <?php if (!empty($top) || !empty($local_tabs) || !empty($messages)) : ?>
         <div class="row">
           <section class="section section--content-top col-md-12 <?php print $top_classes; ?>">
