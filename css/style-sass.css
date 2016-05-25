@@ -9621,14 +9621,14 @@ Styleguide listing.6
   .listing--navigation .listing__section-title,
   .listing--navigation h2 {
     color: #012b58;
-    margin: 0.9090909091em 0 2.3636363636em 0;
-    font-size: 1.2222222222em;
+    margin: 0.75em 0 1.5em 0;
+    font-size: 1.0666666667em;
     padding: 0; }
   .listing--navigation .listing__item {
     border-bottom: none;
     padding: 0; }
   .listing--navigation .listing__description {
-    font-size: 0.7222222222em; }
+    font-size: 0.8666666667em; }
   .listing--navigation .listing__title {
     font-weight: normal; }
     a:link .listing--navigation .listing__title,
@@ -9640,8 +9640,20 @@ Styleguide listing.6
       border-top: 1px solid #e2e2e2;
       padding-top: 0.6333333333em;
       margin-top: 0.4333333333em; }
+  .listing--navigation:hover,
+  .listing--navigation .is-hover {
+    border-top-color: #000; }
+  .listing--navigation .listing__item-link:hover a {
+    color: black;
+    text-decoration: underline; }
 
 @media (min-width: 480px) {
+  .listing--navigation .listing__section-title,
+  .listing--navigation h2 {
+    color: #012b58;
+    margin: 0.9090909091em 0 2.3636363636em 0;
+    font-size: 1.2222222222em;
+    padding: 0; }
   .listing--navigation .listing__description {
     font-size: 1em; }
   .listing--navigation .listing__subitem:first-of-type {
