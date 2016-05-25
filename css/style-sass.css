@@ -9622,7 +9622,8 @@ Styleguide listing.6
   .listing--navigation h2 {
     color: #012b58;
     margin: 0.9090909091em 0 2.3636363636em 0;
-    font-size: 1.2222222222em; }
+    font-size: 1.2222222222em;
+    padding: 0; }
   .listing--navigation .listing__item {
     border-bottom: none;
     padding: 0; }
@@ -9637,8 +9638,15 @@ Styleguide listing.6
     font-size: 1em; }
     .listing--navigation .listing__subitem:first-of-type {
       border-top: 1px solid #e2e2e2;
-      padding-top: 1.1111111111em;
-      margin-top: 0.6111111111em; }
+      padding-top: 0.6333333333em;
+      margin-top: 0.4333333333em; }
+
+@media (min-width: 480px) {
+  .listing--navigation .listing__description {
+    font-size: 1em; }
+  .listing--navigation .listing__subitem:first-of-type {
+    padding-top: 1.1111111111em;
+    margin-top: 0.6111111111em; } }
 
 a.listing__title {
   color: #004494; }
