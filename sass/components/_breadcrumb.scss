@@ -36,18 +36,13 @@ $breadcrumb-heigth: 2.778em;
   margin: 1em 0 0.8em;
 }
 
-a {
-  &.breadcrumb__link {
-    text-decoration: none;
-  }
-}
-
-.breadcrumb__link {
+a.breadcrumb__link {
   display: inline-block;
   font-weight: bold;
   margin-right: 8px;
   max-width: 100%;
   color: #fff;
+  text-decoration: none;
 
   &:hover,
   &:active,

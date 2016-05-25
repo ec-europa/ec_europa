@@ -6575,17 +6575,15 @@ Styleguide breadcrumb
   margin: 1em 0 0.8em; }
 
 a.breadcrumb__link {
-  text-decoration: none; }
-
-.breadcrumb__link {
   display: inline-block;
   font-weight: bold;
   margin-right: 8px;
   max-width: 100%;
-  color: #fff; }
-  .breadcrumb__link:hover, .breadcrumb__link:active, .breadcrumb__link:focus {
+  color: #fff;
+  text-decoration: none; }
+  a.breadcrumb__link:hover, a.breadcrumb__link:active, a.breadcrumb__link:focus {
     color: #fff; }
-    .breadcrumb__link:hover .breadcrumb__text, .breadcrumb__link:active .breadcrumb__text, .breadcrumb__link:focus .breadcrumb__text {
+    a.breadcrumb__link:hover .breadcrumb__text, a.breadcrumb__link:active .breadcrumb__text, a.breadcrumb__link:focus .breadcrumb__text {
       text-decoration: underline; }
 
 .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
