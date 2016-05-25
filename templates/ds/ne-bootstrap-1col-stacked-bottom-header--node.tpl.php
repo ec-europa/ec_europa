@@ -13,8 +13,7 @@
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
   <!-- Page Header -->
-  <div class="page-header<?php if (isset($header_back)) : print ' page-header--image';
- endif; ?>">
+  <div class="page-header<?php if (isset($header_back)) : print ' page-header--image'; endif; ?>">
     <nav class="page-navigation" role="navigation">
       <div class="container-fluid">
         <?php print render($header_bottom); ?>
@@ -37,8 +36,7 @@
     <?php endif; ?>
   </div>
   <?php if (!empty($bottom_header)) : ?>
-    <div class="page-bottom-header <?php if (isset($header_bottom_modifier)) : print $header_bottom_modifier;
-   endif; ?>">
+    <div class="page-bottom-header <?php if (isset($header_bottom_modifier)) : print $header_bottom_modifier; endif; ?>">
       <<?php print $bottom_header_wrapper; ?> class="<?php print $bottom_header_classes; ?>">
         <?php print $bottom_header; ?>
       </<?php print $bottom_header_wrapper; ?>>
