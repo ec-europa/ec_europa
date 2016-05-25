@@ -12,14 +12,12 @@ $breadcrumb-heigth: 2.778em;
   border-bottom: 1px solid #fff;
   background: none;
   padding: 0;
-  margin:0;
+  margin: 0;
   font-size: 0.833em;
   font-weight: 600;
   position: relative;
   border-radius: 0;
   line-height: normal;
-  float: left;
-  width: 100%;
   @extend .hidden-print;
 
   ol,
@@ -27,8 +25,7 @@ $breadcrumb-heigth: 2.778em;
     list-style: none;
     list-style-image: none;
     padding: 0;
-    margin: 0 !important;
-    width: 100%;
+    margin: 0;
     max-width: none;
   }
 }
@@ -39,12 +36,13 @@ $breadcrumb-heigth: 2.778em;
   margin: 1em 0 0.8em;
 }
 
-.breadcrumb__link {
+a.breadcrumb__link {
   display: inline-block;
   font-weight: bold;
   margin-right: 8px;
   max-width: 100%;
   color: #fff;
+  text-decoration: none;
 
   &:hover,
   &:active,
@@ -96,9 +94,9 @@ $breadcrumb-heigth: 2.778em;
 }
 
 @include breakpoint(screen-xs-min) {
-
   .breadcrumb__link {
     width: auto;
+
     &:after {
       position: static;
       @include translate(0, 0);
@@ -111,6 +109,7 @@ $breadcrumb-heigth: 2.778em;
 
   .breadcrumb__segment--first {
     padding-right: 0;
+
     &:after,
     &:before {
       display: none !important;
@@ -161,8 +160,6 @@ Styleguide breadcrumb.collapsible
   }
 
   .breadcrumb__link {
-    display: inline-block;
-
     span {
       vertical-align: middle;
     }
@@ -180,11 +177,6 @@ Styleguide breadcrumb.collapsible
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%;
-  }
-
-  .breadcrumb__segment {
-    width: 100%;
   }
 
   .breadcrumb__segment--first {
@@ -221,14 +213,9 @@ Styleguide breadcrumb.collapsible
       padding-left: 0;
     }
   }
+
   @include breakpoint(screen-xs-min) {
-    .breadcrumb__segments-wrapper {
-      float: left;
-    }
-
     .breadcrumb__segment {
-      width: auto;
-
       &.is-hidden {
         display: none;
       }

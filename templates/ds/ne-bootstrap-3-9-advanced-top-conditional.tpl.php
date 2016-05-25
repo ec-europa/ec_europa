@@ -97,11 +97,7 @@
           </<?php print $left_wrapper; ?>>
         <?php endif; ?>
 
-        <?php if (isset($left) && !empty($left)) : ?>
-          <section class="section col-md-9 <?php print $central_classes; ?>">
-        <?php else: ?>
-          <section class="section col-md-12 <?php print $central_classes; ?>">
-        <?php endif; ?>
+        <section class="section <?php print (isset($left) && !empty($left) ? 'col-md-9 ' : 'col-md-12 ') . $central_classes; ?>">
           <?php print $central; ?>
         </section>
 
