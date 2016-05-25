@@ -13,7 +13,9 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/css/style-sass.css">
+  <link rel="stylesheet" href="public/css/style-sass-base.css">
+<link rel="stylesheet" href="public/css/style-sass-components.css">
+<link rel="stylesheet" href="public/css/europa_styleguide.css">
 
 
   <script src="public/js/jquery-1.9.1.min.js"></script>
@@ -296,22 +298,26 @@
         <div class="kss-modifier__example">
           <div style="background-color: #004494; padding: 5px 15px 15px;">
   <!--Code above: visualization helper-->
-  <nav class="breadcrumb breadcrumb-processed" role="navigation"
-       aria-label="breadcrumbs">
+  <nav class="breadcrumb breadcrumb-processed" role="navigation" aria-label="breadcrumbs">
     <ol class="breadcrumb__segments-wrapper">
       <li class="breadcrumb__segment breadcrumb__segment--first">
         <a href="#" class="breadcrumb__link is-internal">
-          <span class="breadcrumb__text">European Commission</span></a>
+          <span class="breadcrumb__text">European Commission</span>
+        </a>
       </li>
       <li class="breadcrumb__segment">
         <a href="#" class="breadcrumb__link">
           <span class="breadcrumb__text">Priorities</span>
-        </a></li>
+        </a>
+      </li>
       <li class="easy-breadcrumb_segment easy-breadcrumb_segment-2 breadcrumb__segment breadcrumb__segment--last">
         <a href="#" class="breadcrumb__link">
-          <span class="breadcrumb__text">Jobs, Growth and Investment</span></a></li>
+          <span class="breadcrumb__text">Jobs, Growth and Investment</span>
+        </a>
+      </li>
     </ol>
-    <span class="breadcrumb__btn-separator" style="display: none;">...</span></nav>
+    <span class="breadcrumb__btn-separator" style="display: none;">...</span>
+  </nav>
   <!--Code below: visualization helper-->
 </div>
 
@@ -321,22 +327,26 @@
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div style=&quot;background-color: #004494; padding: 5px 15px 15px;&quot;&gt;
   &lt;!--Code above: visualization helper--&gt;
-  &lt;nav class=&quot;breadcrumb breadcrumb-processed&quot; role=&quot;navigation&quot;
-       aria-label=&quot;breadcrumbs&quot;&gt;
+  &lt;nav class=&quot;breadcrumb breadcrumb-processed&quot; role=&quot;navigation&quot; aria-label=&quot;breadcrumbs&quot;&gt;
     &lt;ol class=&quot;breadcrumb__segments-wrapper&quot;&gt;
       &lt;li class=&quot;breadcrumb__segment breadcrumb__segment--first&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link is-internal&quot;&gt;
-          &lt;span class=&quot;breadcrumb__text&quot;&gt;European Commission&lt;/span&gt;&lt;/a&gt;
+          &lt;span class=&quot;breadcrumb__text&quot;&gt;European Commission&lt;/span&gt;
+        &lt;/a&gt;
       &lt;/li&gt;
       &lt;li class=&quot;breadcrumb__segment&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link&quot;&gt;
           &lt;span class=&quot;breadcrumb__text&quot;&gt;Priorities&lt;/span&gt;
-        &lt;/a&gt;&lt;/li&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
       &lt;li class=&quot;easy-breadcrumb_segment easy-breadcrumb_segment-2 breadcrumb__segment breadcrumb__segment--last&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link&quot;&gt;
-          &lt;span class=&quot;breadcrumb__text&quot;&gt;Jobs, Growth and Investment&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;span class=&quot;breadcrumb__text&quot;&gt;Jobs, Growth and Investment&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
     &lt;/ol&gt;
-    &lt;span class=&quot;breadcrumb__btn-separator&quot; style=&quot;display: none;&quot;&gt;...&lt;/span&gt;&lt;/nav&gt;
+    &lt;span class=&quot;breadcrumb__btn-separator&quot; style=&quot;display: none;&quot;&gt;...&lt;/span&gt;
+  &lt;/nav&gt;
   &lt;!--Code below: visualization helper--&gt;
 &lt;/div&gt;
 </code></pre>
@@ -364,13 +374,10 @@
         <div class="kss-modifier__example">
           <div style="background-color: #004494; padding: 5px 15px 15px;">
   <!--Code above: visualization helper-->
-  <nav class="breadcrumb breadcrumb--collapsible"
-       role="navigation"
-       aria-label="breadcrumbs">
+  <nav class="breadcrumb breadcrumb--collapsible" role="navigation" aria-label="breadcrumbs">
     <ol class="breadcrumb__segments-wrapper">
       <li class="breadcrumb__segment breadcrumb__segment--first">
-        <a href="#"
-           class="breadcrumb__link is-internal">
+        <a href="#" class="breadcrumb__link is-internal">
           <span class="breadcrumb__text">European Commission</span>
         </a>
       </li>
@@ -396,13 +403,10 @@
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div style=&quot;background-color: #004494; padding: 5px 15px 15px;&quot;&gt;
   &lt;!--Code above: visualization helper--&gt;
-  &lt;nav class=&quot;breadcrumb breadcrumb--collapsible&quot;
-       role=&quot;navigation&quot;
-       aria-label=&quot;breadcrumbs&quot;&gt;
+  &lt;nav class=&quot;breadcrumb breadcrumb--collapsible&quot; role=&quot;navigation&quot; aria-label=&quot;breadcrumbs&quot;&gt;
     &lt;ol class=&quot;breadcrumb__segments-wrapper&quot;&gt;
       &lt;li class=&quot;breadcrumb__segment breadcrumb__segment--first&quot;&gt;
-        &lt;a href=&quot;#&quot;
-           class=&quot;breadcrumb__link is-internal&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;breadcrumb__link is-internal&quot;&gt;
           &lt;span class=&quot;breadcrumb__text&quot;&gt;European Commission&lt;/span&gt;
         &lt;/a&gt;
       &lt;/li&gt;
@@ -433,6 +437,7 @@
 <script>
   prettyPrint();
 </script>
+<script src="[object Object]"></script>
 
 
 

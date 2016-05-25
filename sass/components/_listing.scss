@@ -393,6 +393,7 @@ a.listing__title {
 // .listing__wrapper element.
 .listing__wrapper {
   margin-bottom: 1.667em;
+  @include clearfix;
 }
 
 // .listing__item element.

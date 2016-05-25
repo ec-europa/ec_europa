@@ -26,13 +26,14 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'css/style-sass.css': 'sass/app.scss'
+          'css/style-sass-base.css': 'sass/app_base.scss',
+          'css/style-sass-components.css' : 'sass/app_components.scss'
         }
       }
     },
     shell: {
       kss: {
-        command: './node_modules/.bin/kss-node sass styleguide/assets --template styleguide/template/custom --css public/css/style-sass.css'
+        command: './node_modules/.bin/kss-node --config kss-config.json'
       }
     },
     copy: {
@@ -41,6 +42,7 @@ module.exports = function (grunt) {
           // Includes files within path and its sub-directories.
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['fonts/**'], dest: 'styleguide/assets/public/'},
         ]
       },
       all: {
