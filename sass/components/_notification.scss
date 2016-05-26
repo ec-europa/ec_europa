@@ -20,7 +20,7 @@ Styleguide notification
     @include _focus_outline_border(3px, $black, 2px);
     &:hover,
     &:focus{
-      text-decoration: none;
+      text-decoration: none; 
     }
   }
 }

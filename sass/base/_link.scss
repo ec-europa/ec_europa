@@ -86,16 +86,16 @@ a {
 
   &.smaller,
   .smaller & {
-    font-size: 0.8em;
+    font-size: 0.8em; 
   }
 
   &#{'[href^="mailto"]'} {
-    text-transform: lowercase;
+    text-transform: lowercase; 
   }
 
-  @media print {
+  @media print { 
     &:after {
-      content: none !important;
+      content: none !important; 
     }
   }
 }

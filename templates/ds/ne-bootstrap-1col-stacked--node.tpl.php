@@ -37,7 +37,8 @@
   </div>
   <div class="page-content">
     <div class="container-fluid">
-      <div class="row<?php if (isset($ceiling)) : print ' ' . $ceiling; endif; ?>">
+      <div class="row<?php if (isset($ceiling)) : print ' ' . $ceiling;
+     endif; ?>">
       <?php if (!empty($top) || !empty($local_tabs) || !empty($messages)) : ?>
         <div class="row">
           <section class="section section--content-top col-md-12 <?php print $top_classes; ?>">

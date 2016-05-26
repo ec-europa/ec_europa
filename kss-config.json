@@ -1,0 +1,14 @@
+
+{
+  "source": [
+    "sass"
+  ],
+  "css": [
+    "public/css/style-sass-base.css",
+    "public/css/style-sass-components.css",
+    "public/css/europa_styleguide.css"
+  ],
+  "js": {},
+  "destination": "styleguide/assets",
+  "template": "styleguide/template/custom"
+}
