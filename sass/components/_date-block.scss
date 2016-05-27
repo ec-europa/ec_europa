@@ -32,6 +32,10 @@ $agenda-yellow: #FED437;
   }
 }
 
+.date-block__element {
+  display: block;
+}
+
 .date-block__day-text {
   @extend .date-block__element;
   font-size: $font-size-little;
