@@ -1925,6 +1925,7 @@ Markup: html/icon.html
 .icon--external - External link icon
 .icon--arrow-up - Arrow up icon
 .icon--arrow-down - Arrow down icon
+.icon--feedback - Feedback icon
 .icon--spinner - Spinner icon
 .icon--search - Search icon
 .icon--language - Language icon
@@ -2132,7 +2133,7 @@ Styleguide: icon
   content: '\e82b'; }
 
 .icon--feedback:before {
-  content: '\e82f'; }
+  content: '\e82e'; }
 
 .icon--check, .icon--check:before {
   content: '\e816'; }
