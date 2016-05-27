@@ -1380,6 +1380,20 @@ function europa_pager_last($variables) {
  * Implements form_alter().
  */
 function europa_form_alter(&$form, &$form_state, $form_id) {
+  if ($form['#form_id'] == 'system_theme_settings') {
+    // Build the form.
+    $form['europa'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Europa settings'),
+      '#weight' => -100,
+    );
+
+    $form['europa']['europa_latest_visibility'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('would you like to show the latest block when it is available?'),
+      '#default_value' => variable_get('europa_latest_visibility', TRUE),
+    );
+  }
 
   if (isset($form['views_bulk_operations'])) {
     $children = element_children($form['views_bulk_operations']);
