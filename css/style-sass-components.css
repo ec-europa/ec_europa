@@ -1164,9 +1164,16 @@ Styleguide datepicker
         display: inline-block;
         float: none;
         padding-right: 0;
-        padding-left: 1em; }
+        padding-left: 1em;
+        position: relative; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+          outline: 3px solid #ffd617;
+          outline-offset: 0;
+          text-decoration: underline; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:first-child {
           border-right: 2px solid #686868; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+          z-index: 1; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
           color: #fff; }
   .ui-datepicker table.ui-datepicker-calendar {

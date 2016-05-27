@@ -101,9 +101,16 @@ $datepicker-color-background: #eaeaea;
         padding-right: 0;
         padding-left: 1em;
         @extend .form-control;
+        @include _focus_outline_border;
+        position: relative;
 
         &:first-child {
           border-right: 2px solid $datepicker-color-select-separator;
+        }
+
+        &:focus {
+          // This might be included in the outline mixins.
+          z-index: 1;
         }
 
         &:hover,
