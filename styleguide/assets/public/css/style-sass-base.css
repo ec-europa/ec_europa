@@ -5728,6 +5728,15 @@ body:not(.page-admin) .checkbox {
       background-size: 1.5em auto;
       left: -0.5em; }
 
+.checkbox.checkbox--facet {
+  left: 2px;
+  float: left; }
+  .checkbox.checkbox--facet input[type='checkbox'] + label + a {
+    position: relative;
+    color: #404040;
+    text-decoration: none;
+    top: .25em; }
+
 .no-svg .checkbox label {
   height: auto;
   line-height: inherit;

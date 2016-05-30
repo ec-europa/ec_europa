@@ -106,6 +106,12 @@ function europa_form_element(&$variables) {
     '#title_display' => 'before',
   );
 
+  // Hide datepicker-popup label.
+  $datepicker_popup_pattern = '/edit-.*-datepicker-popup-.*/i';
+  if (!empty($element['#id']) && preg_match($datepicker_popup_pattern, $element['#id'])) {
+    $element['#title_display'] = 'invisible';
+  }
+
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
@@ -802,16 +808,22 @@ function europa_preprocess_block(&$variables) {
     // This is checked by looking at the $block->bid which in case
     // of views exposed filters, always contains 'views--exp-' string.
     if (strpos($block->bid, 'views--exp-') !== FALSE) {
-      $variables['classes_array'][] = 'filters';
-      $variables['title_attributes_array']['class'][] = 'filters__title';
-      $block->subject = t('Refine results');
+      if (isset($block->context) && $context = context_load($block->context)) {
+        // If our block is the first, we set the subject. This way, if we expose
+        // a second block for the same view, we will not duplicate the title.
+        if (array_search($block->bid, array_keys($context->reactions['block']['blocks'])) === 0) {
+          $variables['classes_array'][] = 'filters';
+          $variables['title_attributes_array']['class'][] = 'filters__title';
+          $block->subject = t('Refine results');
 
-      // Passing block id to Drupal.settings in order to pass it through data
-      // attribute in the collapsible panel.
-      drupal_add_js(array('europa' => array('exposedBlockId' => $variables['block_html_id'])), 'setting');
+          // Passing block id to Drupal.settings in order to pass it through
+          // data attribute in the collapsible panel.
+          drupal_add_js(array('europa' => array('exposedBlockId' => $variables['block_html_id'])), 'setting');
 
-      // Adding filters.js file.
-      drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/filters.js');
+          // Adding filters.js file.
+          drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/filters.js');
+        }
+      }
     }
   }
 
