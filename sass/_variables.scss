@@ -119,7 +119,7 @@ $form-checkbox-border-color-checked-hover:        $yellow-light;
 $form-checkbox-background-color-checked-hover:    $brand-primary;
 
 // Icon size.
-$form-checkbox-icon-size:                         1.250em;
+$form-checkbox-icon-size:                         1.375em; // 22px
 
 // Form border width.
 $form-border-width:                               0.111em;
@@ -129,7 +129,7 @@ $form-group-help-block-text-color:                $grey-dark;
 $form-group-help-block-text-color-disabled:       $form-control-color-disabled;
 $form-group-help-block-text-color-has-error:      $form-group-help-block-text-color;
 
-$form-item-legend-font-size:					  $font-size-xxsmall;
+$form-item-legend-font-size:                      $font-size-xxsmall;
 
 // Attribute selector for external links.
 $external_link_pattern: 'href^="http"';
