@@ -13,7 +13,9 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/css/style-sass.css">
+  <link rel="stylesheet" href="public/css/style-sass-base.css">
+<link rel="stylesheet" href="public/css/style-sass-components.css">
+<link rel="stylesheet" href="public/css/europa_styleguide.css">
 
 
   <script src="public/js/jquery-1.9.1.min.js"></script>
@@ -285,10 +287,13 @@
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Example
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="alert alert-block messages info">
+          <div class="alert alert-block messages info [modifier class]">
     <a class="close" data-dismiss="alert" href="#">×</a>
     <h3>Info message</h3>
     <ul>
@@ -296,7 +301,7 @@
     </ul>
 </div>
 <br/>
-<div class="alert alert-block messages warning">
+<div class="alert alert-block messages warning [modifier class]">
     <a class="close" data-dismiss="alert" href="#">×</a>
     <h3>Warning message</h3>
     <ul>
@@ -304,7 +309,7 @@
     </ul>
 </div>
 <br/>
-<div class="alert alert-block messages status">
+<div class="alert alert-block messages status [modifier class]">
     <a class="close" data-dismiss="alert" href="#">×</a>
     <h3>Successful message</h3>
     <ul>
@@ -312,7 +317,7 @@
     </ul>
 </div>
 <br/>
-<div class="alert alert-block messages error">
+<div class="alert alert-block messages error [modifier class]">
     <a class="close" data-dismiss="alert" href="#">×</a>
     <h3>Error message</h3>
     <ul>
@@ -320,11 +325,69 @@
     </ul>
 </div>
 <br/>
+<div class="alert alert-block messages live [modifier class]">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h3>Livestream message</h3>
+    <ul>
+        <li>Lorem ipsum lor sit amet, consectetur adipi</li>
+    </ul>
+</div>
+<br/>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .messages--icon-center
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Centralized icon
+        </div>
+        <div class="kss-modifier__example">
+          <div class="alert alert-block messages info messages--icon-center">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h3>Info message</h3>
+    <ul>
+        <li>Lorem ipsum lor sit amet, consectetur adipi</li>
+    </ul>
+</div>
+<br/>
+<div class="alert alert-block messages warning messages--icon-center">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h3>Warning message</h3>
+    <ul>
+        <li>Lorem ipsum lor sit amet, consectetur adipi</li>
+    </ul>
+</div>
+<br/>
+<div class="alert alert-block messages status messages--icon-center">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h3>Successful message</h3>
+    <ul>
+        <li>Lorem ipsum lor sit amet, consectetur adipi</li>
+    </ul>
+</div>
+<br/>
+<div class="alert alert-block messages error messages--icon-center">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h3>Error message</h3>
+    <ul>
+        <li>Lorem ipsum lor sit amet, consectetur adipi</li>
+    </ul>
+</div>
+<br/>
+<div class="alert alert-block messages live messages--icon-center">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h3>Livestream message</h3>
+    <ul>
+        <li>Lorem ipsum lor sit amet, consectetur adipi</li>
+    </ul>
+</div>
+<br/>
+
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;alert alert-block messages info&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;alert alert-block messages info [modifier class]&quot;&gt;
     &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;
     &lt;h3&gt;Info message&lt;/h3&gt;
     &lt;ul&gt;
@@ -332,7 +395,7 @@
     &lt;/ul&gt;
 &lt;/div&gt;
 &lt;br/&gt;
-&lt;div class=&quot;alert alert-block messages warning&quot;&gt;
+&lt;div class=&quot;alert alert-block messages warning [modifier class]&quot;&gt;
     &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;
     &lt;h3&gt;Warning message&lt;/h3&gt;
     &lt;ul&gt;
@@ -340,7 +403,7 @@
     &lt;/ul&gt;
 &lt;/div&gt;
 &lt;br/&gt;
-&lt;div class=&quot;alert alert-block messages status&quot;&gt;
+&lt;div class=&quot;alert alert-block messages status [modifier class]&quot;&gt;
     &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;
     &lt;h3&gt;Successful message&lt;/h3&gt;
     &lt;ul&gt;
@@ -348,14 +411,23 @@
     &lt;/ul&gt;
 &lt;/div&gt;
 &lt;br/&gt;
-&lt;div class=&quot;alert alert-block messages error&quot;&gt;
+&lt;div class=&quot;alert alert-block messages error [modifier class]&quot;&gt;
     &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;
     &lt;h3&gt;Error message&lt;/h3&gt;
     &lt;ul&gt;
         &lt;li&gt;Lorem ipsum lor sit amet, consectetur adipi&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
-&lt;br/&gt;</code></pre>
+&lt;br/&gt;
+&lt;div class=&quot;alert alert-block messages live [modifier class]&quot;&gt;
+    &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot; href=&quot;#&quot;&gt;×&lt;/a&gt;
+    &lt;h3&gt;Livestream message&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Lorem ipsum lor sit amet, consectetur adipi&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+</code></pre>
       </div>
 
       </div>
@@ -367,6 +439,7 @@
 <script>
   prettyPrint();
 </script>
+<script src="[object Object]"></script>
 
 
 

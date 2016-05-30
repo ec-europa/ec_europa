@@ -23,11 +23,11 @@
       }
 
       // Function for hiding Submit and Reset buttons.
-      var hideFilterButtons = function() {
+      var hideFilterButtons = function () {
         $('.filters__btn-collapse, .filters__btn-reset--small').hide();
       }
 
-      var showFilterButtons = function() {
+      var showFilterButtons = function () {
         $('.filters__btn-collapse, .filters__btn-reset--small').show();
       }
 
@@ -49,16 +49,16 @@
 
       // Listeners.
       // Small button emulating the original reset button.
-      $(".filters__btn-reset--small").on("click", function(){
+      $(".filters__btn-reset--small").on("click", function () {
         $(".filters__btn-reset").trigger("click");
       });
 
       // Runs only once.
       // Add throbber next to content type and items count text.
-      $filters.once('filters', function() {
+      $filters.once('filters', function () {
         throbber = '<div class="ajax-progress ajax-progress-throbber"><i class="icon icon--spinner is-spinning"></i></div>';
         $(document)
-          .ajaxStart(function(e) {
+          .ajaxStart(function (e) {
             if (e.currentTarget.activeElement.form == 'undefined' && e.currentTarget.activeElement.form.id === filtersFormId) {
               $itemsNumber
                 .prepend(throbber);
@@ -69,7 +69,7 @@
           // Runs on device width change.
           enquire.register('screen and (min-width: 992px)', {
             // Desktop.
-            match : function() {
+            match : function () {
                 $filtersWrapper = $(".filters__wrapper");
 
               $filtersSubmit.addClass('ctools-auto-submit-click');
@@ -90,7 +90,7 @@
               }
             },
             // Mobile.
-            unmatch : function() {
+            unmatch : function () {
               // Showing buttons on viewport switch.
               showFilterButtons();
 
@@ -103,7 +103,7 @@
               $filtersSubmit.removeClass('ctools-auto-submit-click');
             },
 
-            setup: function() {
+            setup: function () {
               // IE8 fix - showing the element containing the filters.
               if ($(window).width() > 991) {
                 $filters
@@ -126,14 +126,14 @@
                 });
               }
 
-              $filters.on('show.bs.collapse', function(){
+              $filters.on('show.bs.collapse', function () {
                 $(this).prepend('<a class="close filters__close" data-toggle="collapse" ' +
                 ' data-target="#' + Drupal.settings.europa.exposedBlockId + '"' +
                 ' aria-expanded="true" aria-controls="collapseFilters">' + hideText + '</a>');
                 hideFilterButtons();
               });
 
-              $filters.on('hide.bs.collapse', function(){
+              $filters.on('hide.bs.collapse', function () {
                 $(this).children('.close').remove();
                 showFilterButtons();
               });

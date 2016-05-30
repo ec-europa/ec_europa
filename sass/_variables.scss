@@ -33,32 +33,32 @@ $brand-danger:           $red;
 $text-color:             $grey-base;
 
 // Typegraphy
-$font-family-sans-serif:  Arial, sans-serif;
-$font-family-base:        $font-family-sans-serif;
+$font-family-sans-serif: Arial, sans-serif;
+$font-family-base:       $font-family-sans-serif;
 
-$font-size-base:          15px; // this is mobile first default, desktop default is 18px
-$font-size-huge:          1.667em; // 30px
-$font-size-big:           1.333em; // 24px
-$font-size-mid:           1.222em; // 22px
-$font-size-medium:        1em; // 18px
-$font-size-little:        0.889em; // 16px
-$font-size-tiny:          0.833em; // 15px
-$font-size-xsmall:        0.778em; // 14px
-$font-size-xxsmall:       0.67em; // 12px
+$font-size-base:         15px; // this is mobile first default, desktop default is 18px
+$font-size-huge:         1.667em; // 30px
+$font-size-big:          1.333em; // 24px
+$font-size-mid:          1.222em; // 22px
+$font-size-medium:       1em;     // 18px
+$font-size-little:       0.889em; // 16px
+$font-size-tiny:         0.833em; // 15px
+$font-size-xsmall:       0.778em; // 14px
+$font-size-xxsmall:      0.67em;  // 12px
 
-$font-size-h1:            2.222em;
-$font-size-h2:            $font-size-huge;
-$font-size-h3:            $font-size-mid;
-$font-size-h4:            $font-size-medium;
-$font-size-h5:            $font-size-xsmall;
-$font-size-h6:            $font-size-xsmall;
+$font-size-h1:           2.222em;
+$font-size-h2:           $font-size-huge;
+$font-size-h3:           $font-size-mid;
+$font-size-h4:           $font-size-medium;
+$font-size-h5:           $font-size-xsmall;
+$font-size-h6:           $font-size-xsmall;
 
-$font-weight-normal:      400;
-$font-weight-bold:        600;
+$font-weight-normal:     400;
+$font-weight-bold:       600;
 
 // Medium Small screen / tablet
-$screen-msm:                  622px !default;
-$screen-msm-min:              $screen-msm !default;
+$screen-msm:             622px !default;
+$screen-msm-min:         $screen-msm !default;
 
 // Grid defaults
 $grid-columns: 12;
@@ -133,6 +133,8 @@ $form-border-width:                               0.111em;
 $form-group-help-block-text-color:                $grey-dark;
 $form-group-help-block-text-color-disabled:       $form-control-color-disabled;
 $form-group-help-block-text-color-has-error:      $form-group-help-block-text-color;
+
+$form-item-legend-font-size:					  $font-size-xxsmall;
 
 // Attribute selector for external links.
 $external_link_pattern: 'href^="http"';

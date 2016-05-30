@@ -22,9 +22,13 @@ Styleguide pager
   line-height: 3em;
   padding-left: 0;
 
+  &::after {
+    clear: both;
+  }
+
   & > .pager__item {
     // Prettifying.
-    transition: all .2s linear;
+    transition: all .2s linear; 
     list-style: none;
     float: left;
 
@@ -34,7 +38,8 @@ Styleguide pager
       font-size: $font-size-little;
       display: inline-block;
       text-align: center;
-
+      text-decoration: none;
+      
       // States.
       &:hover, &:focus, &:active, &:visited {
         color: #fff;
