@@ -77,25 +77,8 @@ Styleguide: icon
     line-height: 1;
     // Better Font Rendering
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale; 
   }
-}
-
-// Should be used only with @extend
-.icon--after {
-  text-decoration: none;
-  font-family: 'EuropaIcons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  margin-left: 4px;
-  line-height: 1;
-  display: inline-block;
-  // Better Font Rendering
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 // Modifiers
