@@ -68,6 +68,25 @@ body:not(.page-admin){ //temp fix for workbench checkboxes
   }
 }
 
+.checkbox {
+  &.checkbox--facet {
+    left: 2px;
+    float: left;
+
+    input[type='checkbox'] {
+      & + label {
+        & + a {
+          position: relative;
+          color: $grey-base;
+          text-decoration: none;
+          top: .25em;
+        }
+      }
+    }
+  }
+}
+
+
 // Turning off completely custom checkboxes when SVG's are not available
 .no-svg {
   .checkbox {
