@@ -5419,6 +5419,15 @@ Styleguide form.checkbox
   .checkbox.checkbox--inline {
     margin-top: 0; }
 
+.checkbox.checkbox--facet {
+  left: 2px;
+  float: left; }
+  .checkbox.checkbox--facet input[type='checkbox'] + label + a {
+    position: relative;
+    color: #404040;
+    text-decoration: none;
+    top: .25em; }
+
 .no-svg .checkbox input[type="checkbox"]:checked + label:before {
   background: none !important; }
 
