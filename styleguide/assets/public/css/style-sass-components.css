@@ -1164,12 +1164,12 @@ Styleguide datepicker
         display: inline-block;
         float: none;
         padding-right: 0;
-        padding-left: 1em;
+        padding-left: 0.750em;
         position: relative; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
           outline: 3px solid #ffd617;
-          outline-offset: 0;
-          text-decoration: underline; }
+          outline-offset: -3px;
+          text-decoration: none; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:first-child {
           border-right: 2px solid #686868; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
