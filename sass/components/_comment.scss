@@ -96,14 +96,12 @@ $twenty-five: 1.389em;
 
 @include breakpoint(screen-md-min) {
   .comment__image {
-    width: 16.6667%;
-    float: left;
+    @extend .col-md-2;
     display: block;
   }
 
   .comment__body {
-    width: 50%;
-    float: left;
+    @extend .col-md-6;
 
     &:before {
       right: 100%;

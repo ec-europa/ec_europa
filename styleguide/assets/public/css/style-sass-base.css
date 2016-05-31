@@ -5038,25 +5038,6 @@ button.close {
   .nav-tabs {
     display: none !important; } }
 
-.icon--after, .btn.btn-ctn:after, .btn.btn-menu:after {
-  text-decoration: none;
-  font-family: 'EuropaIcons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  margin-left: 4px;
-  line-height: 1;
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-@media print {
-  .hidden-print, .btn, .btn-group, .form-control, .form-group, ul.nav-tabs,
-  .nav-tabs {
-    display: none !important; } }
-
 /**
 * Single responsibility helper/utility classes.
 * Logic: equal to inline styling.
@@ -5127,16 +5108,6 @@ blockquote,
   font-family: Arial, sans-serif;
   margin-bottom: 0; }
 
-/*
-Other typography
-
-Markup: html/typography.html
-
-Styleguide text.typography
-*/
-.text-small, .icon--text-small {
-  font-size: 0.778em; }
-
 .radio + .radio,
 .checkbox + .checkbox {
   margin-top: auto; }
@@ -5148,268 +5119,6 @@ ul.list-inline > li {
 .section .section--row-three {
   padding-top: 0;
   padding-bottom: 0; }
-
-/*
-Icon
-
-Icons using europa icons font
-
-Markup: html/icon.html
-
-.icon--external - External link icon
-.icon--arrow-up - Arrow up icon
-.icon--arrow-down - Arrow down icon
-.icon--feedback - Feedback icon
-.icon--spinner - Spinner icon
-.icon--search - Search icon
-.icon--language - Language icon
-.icon--facebook - Facebook icon
-.icon--twitter - Twitter icon
-.icon--googleplus - G+ icon
-.icon--linkedin - Linkedin icon
-.icon--rss - RSS icon
-.icon--up - Up icon
-.icon--right - Right icon
-.icon--down - Down icon
-.icon--left - Left icon
-.icon--file - File icon
-.icon--audio - Audio icon
-.icon--brochure - Brochure icon
-.icon--edit - Edit icon
-.icon--image - Image icon
-.icon--download - Download icon
-.icon--infographic - Infographic icon
-.icon--multiple-files - Multiple files icon
-.icon--organigram - Organigram icon
-.icon--package - Package icon
-.icon--slides - Slides icon
-.icon--video - Video icon
-.icon--error - Error icon
-.icon--success - Success icon
-.icon--warning - Warning icon
-.icon--check - Check icon
-.icon--generic-lang - Generic language icon
-.icon--budget - Budget
-.icon--digital - digital
-.icon--energy - energy
-.icon--euro - euro
-.icon--global - global
-.icon--growth - growth
-.icon--regulation - regulation
-.icon--tag-close - tag close
-.icon--tag-close-hover - tag close with hover state
-.icon--calendar - Calendar icon
-.icon--location - Location icon
-.icon--livestreaming - Live streaming icon
-
-Styleguide: icon
-*/
-@font-face {
-  font-family: 'EuropaIcons';
-  src: url("../fonts/europa-icons/europa-icons.eot");
-  src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/icomoon.svg#icomoon") format("svg"); }
-
-.icon:before {
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'EuropaIcons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  margin-right: 4px;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon--external, .icon--external:before {
-  content: '\e825' !important; }
-
-.icon--blue-dark {
-  color: #004494; }
-
-.icon--arrow-up, .icon--arrow-up:before {
-  content: '\e821'; }
-
-.icon--arrow-down, .icon--arrow-down:before, .btn.btn-menu:after {
-  content: '\e822'; }
-
-.icon--spinner:before {
-  content: '\e805'; }
-
-.icon--facebook:before {
-  content: '\e809'; }
-
-.icon--livestreaming:before {
-  content: "\e81c"; }
-
-.icon--location:before {
-  content: "\e81b"; }
-
-.icon--twitter:before {
-  content: '\e817'; }
-
-.icon--googleplus:before {
-  content: '\e80c'; }
-
-.icon--linkedin:before {
-  content: '\e810'; }
-
-.icon--rss:before {
-  content: '\e813'; }
-
-.icon--language:before {
-  content: '\e824'; }
-
-.icon--search:before {
-  content: '\e823'; }
-
-.icon--up:before {
-  content: '\e827'; }
-
-.icon--right, .icon--right:before, .btn.btn-ctn:after {
-  content: '\e828'; }
-
-.icon--breadcrumb {
-  content: '\e828' !important; }
-
-.icon--down {
-  content: '\e81F'; }
-  .icon--down:before {
-    content: '\e81F'; }
-
-.icon--left:before {
-  content: '\e826'; }
-
-.icon--file:before {
-  content: '\e80a'; }
-
-.icon--audio:before {
-  content: '\e801'; }
-
-.icon--brochure:before {
-  content: '\e802'; }
-
-.icon--edit:before {
-  content: '\e807'; }
-
-.icon--image:before {
-  content: '\e80d'; }
-
-.icon--download, .icon--download:before {
-  content: '\e806' !important; }
-
-.icon--infographic:before {
-  content: '\e80f'; }
-
-.icon--multiple-files:before {
-  content: '\e820'; }
-
-.icon--organigram:before {
-  content: '\e811'; }
-
-.icon--package:before {
-  content: '\e812'; }
-
-.icon--slides:before {
-  content: '\e814'; }
-
-.icon--video:before {
-  content: '\e800'; }
-
-.icon--error:before {
-  content: '\e82F'; }
-
-.icon--success:before {
-  content: '\e816'; }
-
-.icon--warning:before {
-  content: '\e804'; }
-
-.icon--budget:before {
-  content: '\e81a'; }
-
-.icon--digital:before {
-  content: '\e80b'; }
-
-.icon--energy:before {
-  content: '\e818'; }
-
-.icon--euro:before {
-  content: '\e803'; }
-
-.icon--global:before {
-  content: '\e829'; }
-
-.icon--growth:before {
-  content: '\e82a'; }
-
-.icon--regulation:before {
-  content: '\e82b'; }
-
-.icon--feedback:before {
-  content: '\e82e'; }
-
-.icon--check, .icon--check:before {
-  content: '\e816'; }
-
-.icon--generic-lang, .icon--generic-lang:before {
-  content: '\e81e'; }
-
-.icon--tag-close, .icon--tag-close:before {
-  content: '\e82c'; }
-
-.icon--tag-close-hover, .icon--tag-close-hover:before {
-  content: '\e82d'; }
-
-.icon--calendar:before {
-  content: '\e81d'; }
-
-.icon--yellowbg {
-  background-color: #ffd617;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  font-size: 14px;
-  text-align: center;
-  display: inline-block; }
-  .icon--yellowbg:before {
-    margin-right: 0;
-    line-height: inherit; }
-
-.icon--margin-right {
-  margin-right: 1.5em; }
-
-.is-spinning:before {
-  -webkit-animation: icon-spin-right 2s infinite linear;
-  -o-animation: icon-spin-right 2s infinite linear;
-  animation: icon-spin-right 2s infinite linear; }
-
-@-webkit-keyframes icon-spin-right {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-@keyframes icon-spin-right {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    transform: rotate(359deg); } }
 
 /*
 Buttons
@@ -6227,6 +5936,16 @@ textarea.error {
     font-size: inherit; }
   .form-group .messages.error p {
     font-size: 0.889em; }
+
+/*
+Other typography
+
+Markup: html/typography.html
+
+Styleguide text.typography
+*/
+.text-small {
+  font-size: 0.778em; }
 
 .container-fluid, .section__group--full-width > * {
   max-width: 1170px; }
