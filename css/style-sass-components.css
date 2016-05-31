@@ -3766,6 +3766,8 @@ Styleguide listing.2.4
   width: 140px;
   height: 72px;
   background: url("../images/svg/logo.svg") no-repeat; }
+  .logo span, .logo--logotype span, .no-svg .logo--logotype span {
+    display: none; }
 
 .no-svg .logo, .no-svg .logo--logotype {
   background-image: url("../images/png/logo.png"); }
