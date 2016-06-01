@@ -4832,11 +4832,11 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, body:not(.page-admin) .checkbox:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, body:not(.page-admin) .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
+.clearfix:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   content: " ";
   display: table; }
 
-.clearfix:after, body:not(.page-admin) .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
+.clearfix:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   clear: both; }
 
 .center-block {
@@ -5390,52 +5390,34 @@ Styleguide form.checkbox
 */
 /*
  * Please
- * @see http://bootsnipp.com/snippets/featured/funky-radio-buttons
- * @see http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+ * @see https://github.com/flatlogic/awesome-bootstrap-checkbox
+ * @see http://flatlogic.github.io/awesome-bootstrap-checkbox/demo/
  */
-body:not(.page-admin) .checkbox {
-  margin-bottom: 2px;
-  margin-top: 0; }
-  body:not(.page-admin) .checkbox input[type='checkbox'] {
-    margin: 1px 0 0 13px;
-    position: static;
-    margin-left: 0;
-    float: left;
-    height: 2.75em;
-    visibility: hidden; }
-    body:not(.page-admin) .checkbox input[type='checkbox'] + label {
-      color: #404040;
-      height: 2.75em;
-      line-height: 2.75em;
-      display: block;
-      text-align: left;
-      float: left;
-      margin-left: -0.7em;
-      padding-left: 1.4em; }
-      body:not(.page-admin) .checkbox input[type='checkbox'] + label:before {
-        pointer-events: none;
-        border: 3px solid transparent;
-        border-radius: 8px;
-        width: 1.25em;
-        height: 1.25em;
-        padding: 1.25em 0 0 1.25em;
-        content: '';
-        position: absolute;
-        display: block;
-        top: 0.45em;
-        left: -0.4em;
-        background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
-        background-size: auto 1.25em; }
-    body:not(.page-admin) .checkbox input[type='checkbox']:focus + label:before {
-      pointer-events: none; }
-      body:not(.page-admin) .checkbox input[type='checkbox']:focus + label:before:focus {
-        outline: 3px solid #ffd617;
-        outline-offset: 2px;
-        text-decoration: underline; }
-    body:not(.page-admin) .checkbox input[type='checkbox']:checked + label:before {
-      background-image: url("../images/svg/checkbox-checked--blue.svg");
-      background-size: 1.5em auto;
-      left: -0.5em; }
+.checkbox {
+  padding-left: 20px; }
+  .checkbox input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1; }
+    .checkbox input[type="checkbox"]:checked + label:before {
+      background-image: url("../images/svg/checkbox-checked--blue.svg"); }
+    .checkbox input[type="checkbox"]:focus + label:before {
+      background-image: url("../images/svg/checkbox-checked--blue--highlight.svg"); }
+  .checkbox label {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    vertical-align: middle; }
+    .checkbox label:before {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: "";
+      width: 1.375em;
+      height: 1.375em;
+      margin-left: -20px;
+      background: url("../images/svg/checkbox-unchecked.svg") no-repeat; }
+  .checkbox.checkbox--inline {
+    margin-top: 0; }
 
 .checkbox.checkbox--facet {
   left: 2px;
@@ -5446,29 +5428,18 @@ body:not(.page-admin) .checkbox {
     text-decoration: none;
     top: .25em; }
 
-.no-svg .checkbox label {
-  height: auto;
-  line-height: inherit;
-  display: inline;
-  background: none;
-  padding-left: 0; }
+.no-svg .checkbox input[type="checkbox"]:checked + label:before {
+  background: none !important; }
 
-.no-svg .checkbox input[type="checkbox"] {
-  margin: 0;
-  float: none;
-  height: auto; }
-  .no-svg .checkbox input[type="checkbox"]:before {
-    display: none; }
-  .no-svg .checkbox input[type="checkbox"]:not(checked) + label {
-    background: none;
-    padding: 0; }
-    .no-svg .checkbox input[type="checkbox"]:not(checked) + label:before {
-      display: none; }
-  .no-svg .checkbox input[type="checkbox"]:checked + label {
-    color: inherit;
-    background: none; }
-    .no-svg .checkbox input[type="checkbox"]:checked + label:before {
-      display: none; }
+.no-svg .checkbox label:before {
+  width: 1.250em !important;
+  height: 1.250em !important;
+  border: 1px solid #cccccc !important;
+  border-radius: 5px !important;
+  background: none !important;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
 
 /*
 Form
@@ -5789,69 +5760,44 @@ Styleguide form.radio
 */
 /*
  * Please
- * @see http://bootsnipp.com/snippets/featured/funky-radio-buttons
- * @see http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+ * @see https://github.com/flatlogic/awesome-bootstrap-checkbox
+ * @see http://flatlogic.github.io/awesome-bootstrap-checkbox/demo/
  */
 .radio {
-  margin-bottom: 2px;
-  margin-top: 0; }
-  .radio label {
-    color: #404040;
-    height: 2.75em;
-    line-height: 2.75em;
-    display: block;
-    text-align: left; }
-  .radio input {
-    margin: 1px 0 0 13px; }
+  padding-left: 20px; }
   .radio input[type="radio"] {
-    height: 2.75em;
-    margin-left: -9999px;
-    position: relative;
-    float: left; }
-    .radio input[type="radio"] + label:before {
-      border: transparent solid 3px;
-      border-radius: 50%;
-      padding: 1.25em 0 0 1.25em; }
-    .radio input[type="radio"]:focus + label:before {
-      border: #ffd617 solid 3px; }
-    .radio input[type="radio"]:not(checked) + label {
-      padding-left: 2.778em; }
-      .radio input[type="radio"]:not(checked) + label:before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 1.25em;
-        height: 1.25em;
-        top: 0.6em;
-        left: 1em;
-        background: url("../images/svg/radio-unchecked.svg") no-repeat;
-        background-size: auto 1.25em; }
+    opacity: 0;
+    z-index: 1; }
     .radio input[type="radio"]:checked + label:before {
-      background-image: url("../images/svg/radio-checked-blue.svg"); }
+      background-image: url("../images/svg/radio-checked--blue.svg"); }
+    .radio input[type="radio"]:focus + label:before {
+      background-image: url("../images/svg/radio-checked--blue--highlight.svg"); }
+  .radio label {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    vertical-align: middle; }
+    .radio label:before {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: "";
+      width: 1.375em;
+      height: 1.375em;
+      margin-left: -20px;
+      background: url("../images/svg/radio-unchecked.svg") no-repeat; }
+  .radio.radio--inline {
+    margin-top: 0; }
 
-.no-svg .radio label {
-  height: auto;
-  line-height: inherit;
-  display: inline;
-  background: none;
-  padding-left: 0; }
+.no-svg .radio input[type="radio"]:checked + label:before {
+  background: none !important; }
 
-.no-svg .radio input[type="radio"] {
-  margin: 0;
-  float: none;
-  height: auto; }
-  .no-svg .radio input[type="radio"]:before {
-    display: none; }
-  .no-svg .radio input[type="radio"]:not(checked) + label {
-    background: none;
-    padding: 0; }
-    .no-svg .radio input[type="radio"]:not(checked) + label:before {
-      display: none; }
-  .no-svg .radio input[type="radio"]:checked + label {
-    color: inherit;
-    background: none; }
-    .no-svg .radio input[type="radio"]:checked + label:before {
-      display: none; }
+.no-svg .radio label:before {
+  border: 1px solid #cccccc;
+  background: none !important;
+  -webkit-transition: border 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out; }
 
 /*
 Select
