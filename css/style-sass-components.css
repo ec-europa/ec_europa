@@ -1051,26 +1051,25 @@ Styleguide date-block
 .date-block {
   background: #f2f2f2;
   border-bottom: 0.222em solid #FED437;
-  width: 5.5em;
+  width: 5.556em;
   margin-right: 0.75em;
-  min-width: 5.556em;
   padding: 0.7em;
   text-align: center;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   .date-block:after {
     content: " ";
     position: absolute;
     top: -0.667em;
     right: -0.200em;
-    width: 0;
-    height: 0;
     border-top: 1em solid transparent;
     border-bottom: 1em solid transparent;
     border-right: 1em solid #fff;
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform: rotate(135deg); }
+
+.date-block__element, .date-block__day-text, .date-block__day, .date-block__month {
+  display: block; }
 
 .date-block__day-text {
   font-size: 0.889em;
@@ -1084,9 +1083,6 @@ Styleguide date-block
 .date-block__month {
   font-size: 0.889em;
   line-height: 1; }
-
-.date-block__element, .date-block__day-text, .date-block__day, .date-block__month {
-  display: block; }
 
 /*
 Datepicker
@@ -1147,7 +1143,8 @@ Styleguide datepicker
       right: 0; }
     .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
       margin: 0 50px;
-      height: 100%; }
+      height: 100%;
+      font-size: 0.889em; }
       .ui-datepicker .ui-datepicker-header .ui-datepicker-title span,
       .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
         color: #fff; }
@@ -1163,9 +1160,17 @@ Styleguide datepicker
         margin: 0;
         display: inline-block;
         float: none;
-        padding-right: 0; }
+        padding-right: 0;
+        padding-left: 0.750em;
+        position: relative; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+          outline: 3px solid #ffd617;
+          outline-offset: -3px;
+          text-decoration: none; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:first-child {
           border-right: 2px solid #686868; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+          z-index: 1; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
           color: #fff; }
   .ui-datepicker table.ui-datepicker-calendar {
