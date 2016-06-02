@@ -1,19 +1,9 @@
 <?php
 /**
  * @file
- * Display Suite NE Bootstrap Two Columns Stacked.
+ * Display Suite NE Bootstrap structured content.
  */
-
-  // Add sidebar classes so that we can apply the correct width in css.
-  // Second block is needed to activate display suite support on forms.
 ?>
-<?php /*
-<<?php print $layout_wrapper; print $layout_attributes; ?> class="<?php print $classes; ?>">
-  <<?php print $main_wrapper; ?> class="column-main <?php print $main_classes; ?>">
-    <?php print $main; ?>
-  </<?php print $main_wrapper; ?>>
-</<?php print $layout_wrapper ?>>
- */?>
 
 <div class="listing listing--navigation">
 
