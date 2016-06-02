@@ -5238,6 +5238,19 @@ Styleguide buttons
     margin-bottom: 0 !important; }
 
 /*
+Button Condensed
+
+Button condensed component
+
+Markup: html/btn-condensed.html
+
+Styleguide buttons.btn--condensed
+*/
+.btn.btn--condensed {
+  width: auto;
+  font-weight: normal; }
+
+/*
 Button block
 
 Button block component

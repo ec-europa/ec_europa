@@ -2,25 +2,39 @@
 File
 
 File component used to show info about the file that can be downloaded
-by clicking on the component
-
-Markup: html/file.html
-
-.file--widebar  - Full width download box (deprecated)
-.file--bare - Strip down version
+by clicking on the component.
 
 Styleguide file
 */
 
+/*
+File full width
+
+Full width download box version (deprecated)
+
+Markup: html/file.html
+
+Styleguide file.1
+*/
+
+/*
+File download with translations
+
+File component to download PDF files in various languages.
+
+Markup: html/file-translations.html
+
+Styleguide file.2
+*/
+
 .file {
+  @extend .hidden-print;
   @extend .row;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.944em;
   background: $grey-lighter;
-  padding: 1.333em 1.333em 1.333em 1.333em;
-  overflow: hidden;
-  @extend .hidden-print;
+  padding: 1.333em;
 }
 
 .file-video {
@@ -33,22 +47,22 @@ Styleguide file
 }
 
 .file__icon {
-  float: left;
-  @extend .col-xs-1;
-  @extend .col-md-1;
   @extend .col-sm-1;
-  padding-left: 0;
-  // We remove 5px on the left (as the image has some whitespace) as it causes a wrong looking margin. Then we add
-  // back the margin on the right, to have more spacing between those fields.
-  margin-right: 5px;
-  margin-left: -5px;
+  float: left;
+  padding: 0;
+  // We remove on the left (as the image has some whitespace) as it causes
+  // a wrong looking margin. Then we add back the margin on the right, to have
+  // more spacing between those fields.
+  margin-right: 0.1em;
+  margin-left: -0.315em;
   height: 2.556em;
-  overflow: hidden;
   text-align: center;
+
   &:before {
     color: $grey;
     font-size: 2.556em;
   }
+
   // Make it self scaling.
   @media (max-width: 650px) {
     &:before {
@@ -59,13 +73,13 @@ Styleguide file
 }
 
 .file__metadata {
-  line-height: 1;
   @extend .col-md-7;
   @extend .col-sm-8;
   @extend .col-xs-10;
   @extend .paragraph;
   margin-bottom: 0;
   padding-left: 0;
+  line-height: 1;
 }
 
 .file__title {
@@ -87,9 +101,9 @@ Styleguide file
 }
 
 .file__info {
+  margin-top: 0.778em;
   font-size: $font-size-xsmall;
   line-height: initial;
-  margin-top: 0.556em;
 }
 
 .file__contentlanguage {
@@ -107,9 +121,6 @@ Styleguide file
     @extend .icon--after;
     @extend .icon--download;
   }
-  @media (max-width: $screen-sm-min) {
-    margin-top: 15px;
-  }
 }
 
 .file--widebar {
@@ -124,52 +135,48 @@ Styleguide file
 
 // Modifications in the translations under a normal file.
 .file--bare {
-  background: none;
-  padding: 0.5em 0;
   margin: 0;
+  padding: 0.722em 0;
+  background: none;
 
   .file__btn {
-    padding-right: 0;
-    text-align: right;
-    float: right;
     border: none;
 
     &:hover {
       color: $text-color;
-      background: none;
     }
   }
 
-  @media (max-width: $screen-sm-min) {
-    .file__btn {
-      text-align: left;
-      float: left;
-      padding-left: 0;
-    }
-  }
-
-  .file__icon, .file__language {
+  .file__icon {
     display: none;
   }
 }
 
 .file__translations {
   margin-bottom: 1em;
-  float: left;
-  width: 100%;
+  padding: 0 1.450em;
+  font-size: 0.889em;
+  text-align: right;
 
   .file__translations-control {
-    margin-bottom: 0.3em;
-    padding: 0 1.333em;
+    margin-top: 0.444em;
+    font-size: 1em;
+    text-decoration: none;
 
-    &:active, &:hover, &:focus {
-      text-decoration: none;
-      color: $blue-dark;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $black;
+      text-decoration: underline;
+
+      &:after {
+        color: $black;
+      }
     }
 
     // The arrow, rotating on collapse change.
     &:after {
-      margin-left: 10px !important;
+      margin-left: 0.525em !important;
       position: relative;
       transition: all 0.3s ease 0s;
       @extend .icon--after;
@@ -185,15 +192,30 @@ Styleguide file
   }
 
   .file__translations-list {
-    width: 100%;
+    list-style: none;
+    margin: 0.944em 0 0 0;
     padding: 0;
-    margin: 0;
+    text-align: left;
+
+    .btn--condensed {
+      margin-right: -1.111em;
+    }
+
+    // Make it self scaling.
+    @media (max-width: $screen-sm-min) {
+      .btn--condensed {
+        margin-left: -1.111em;
+        margin-right: 0;
+      }
+    }
   }
 
   .file__translations-item {
     border-top: 1px solid $grey;
-    list-style: none;
-    margin: 0 1.389em;
+
+    &:last-child {
+      border-bottom: 1px solid $grey;
+    }
   }
 
   // "Looking for another language ..."
@@ -205,6 +227,15 @@ Styleguide file
 }
 
 @include breakpoint(screen-sm-min) {
+  .file__icon {
+    width: auto;
+    padding: 0;
+  }
+
+  .file__translations {
+    padding-left: 4.475em;
+  }
+
   .file__metadata,
   .file__btn {
     overflow: hidden;

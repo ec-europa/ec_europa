@@ -108,6 +108,18 @@
           ><span class="kss-nav__name">File</span>
         </a>
         <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-file.html#kssref-file-1">
+                <span class="kss-nav__ref">12.1</span
+                ><span class="kss-nav__name">File full width</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-file.html#kssref-file-2">
+                <span class="kss-nav__ref">12.2</span
+                ><span class="kss-nav__name">File download with translations</span>
+              </a>
+            </li>
         </ul>
       </li>
       <li class="kss-nav__menu-item">
@@ -285,58 +297,37 @@
 
       <div class="kss-description">
         <p>File component used to show info about the file that can be downloaded
-by clicking on the component</p>
+by clicking on the component.</p>
+
+      </div>
+    </div>
+
+
+      </div>
+      <section id="kssref-file-1" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-file-1">
+          <span class="kss-title__ref">12.1</span
+          >File full width
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Full width download box version (deprecated)</p>
 
       </div>
     </div>
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Examples
-        </div>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
+          Example
         </div>
         <div class="kss-modifier__example">
-          <div class="file [modifier class]">
-  <span class="file__icon icon icon--file"></span>
-  <div class="file__metadata">
-    <span class="file__title">File title example</span>
-    <div class="file__info"><span class="file__contentlanguage">English</span> 200 kB - PDF - 4 pages</div>
-  </div>
-  <a class="file__btn btn btn-default">Download
-    <span class="sr-only">PDF - 200 kB</span>
-  </a>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .file--widebar
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Full width download box (deprecated)
-        </div>
-        <div class="kss-modifier__example">
-          <div class="file file--widebar">
-  <span class="file__icon icon icon--file"></span>
-  <div class="file__metadata">
-    <span class="file__title">File title example</span>
-    <div class="file__info"><span class="file__contentlanguage">English</span> 200 kB - PDF - 4 pages</div>
-  </div>
-  <a class="file__btn btn btn-default">Download
-    <span class="sr-only">PDF - 200 kB</span>
-  </a>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .file--bare
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Strip down version
-        </div>
-        <div class="kss-modifier__example">
-          <div class="file file--bare">
+          <div class="file ">
   <span class="file__icon icon icon--file"></span>
   <div class="file__metadata">
     <span class="file__title">File title example</span>
@@ -351,7 +342,7 @@ by clicking on the component</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;file [modifier class]&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;file &quot;&gt;
   &lt;span class=&quot;file__icon icon icon--file&quot;&gt;&lt;/span&gt;
   &lt;div class=&quot;file__metadata&quot;&gt;
     &lt;span class=&quot;file__title&quot;&gt;File title example&lt;/span&gt;
@@ -364,7 +355,137 @@ by clicking on the component</p>
 </code></pre>
       </div>
 
+      </section>
+      <section id="kssref-file-2" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-file-2">
+          <span class="kss-title__ref">12.2</span
+          >File download with translations
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>File component to download PDF files in various languages.</p>
+
       </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="file ">
+  <span class="file__icon icon icon--file"></span>
+  <div class="file__metadata">
+    <span class="file__title">Belgium - Country factsheets</span>
+    <div class="file__info"><span class="file__contentlanguage">English</span> (392.23 KB - PDF - 2 pages)</div>
+  </div>
+  <a class="file__btn btn btn-default">Download
+    <span class="sr-only">392.23 KB - PDF - 2 pages</span>
+  </a>
+</div>
+
+<div class="file__translations">
+  <a href="#file" class="file__translations-control" title="Click to see translations" data-toggle="collapse" data-target="#file">Available languages (3)</a>
+  <ul id="file" class="file__translations-list collapse in"><!-- Class .in is just for the style guide -->
+    <li class="file__translations-item">
+      <div class="file file--bare">
+        <div class="file__metadata">
+          <span class="file__title">Name language</span>
+          <div class="file__info">(392.23 KB - PDF - 2 pages)</div>
+        </div>
+        <a href="#" class="file__btn btn is-internal btn--condensed">Download
+          <span class="sr-only">392.23 KB - PDF - 2 pages</span>
+        </a>
+      </div>
+    </li>
+    <li class="file__translations-item">
+      <div class="file file--bare">
+        <div class="file__metadata">
+          <span class="file__title">Name language</span>
+          <div class="file__info">(392.23 KB - PDF - 2 pages)</div>
+        </div>
+        <a href="#" class="file__btn btn is-internal btn--condensed">Download
+          <span class="sr-only">392.23 KB - PDF - 2 pages</span>
+        </a>
+      </div>
+    </li>
+    <li class="file__translations-item">
+      <div class="file file--bare">
+        <div class="file__metadata">
+          <span class="file__title">Name language</span>
+          <div class="file__info">(392.23 KB - PDF - 2 pages)</div>
+        </div>
+        <a href="#" class="file__btn btn is-internal btn--condensed">Download
+          <span class="sr-only">392.23 KB - PDF - 2 pages</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;file &quot;&gt;
+  &lt;span class=&quot;file__icon icon icon--file&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;file__metadata&quot;&gt;
+    &lt;span class=&quot;file__title&quot;&gt;Belgium - Country factsheets&lt;/span&gt;
+    &lt;div class=&quot;file__info&quot;&gt;&lt;span class=&quot;file__contentlanguage&quot;&gt;English&lt;/span&gt; (392.23 KB - PDF - 2 pages)&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;a class=&quot;file__btn btn btn-default&quot;&gt;Download
+    &lt;span class=&quot;sr-only&quot;&gt;392.23 KB - PDF - 2 pages&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;file__translations&quot;&gt;
+  &lt;a href=&quot;#file&quot; class=&quot;file__translations-control&quot; title=&quot;Click to see translations&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#file&quot;&gt;Available languages (3)&lt;/a&gt;
+  &lt;ul id=&quot;file&quot; class=&quot;file__translations-list collapse in&quot;&gt;&lt;!-- Class .in is just for the style guide --&gt;
+    &lt;li class=&quot;file__translations-item&quot;&gt;
+      &lt;div class=&quot;file file--bare&quot;&gt;
+        &lt;div class=&quot;file__metadata&quot;&gt;
+          &lt;span class=&quot;file__title&quot;&gt;Name language&lt;/span&gt;
+          &lt;div class=&quot;file__info&quot;&gt;(392.23 KB - PDF - 2 pages)&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;file__btn btn is-internal btn--condensed&quot;&gt;Download
+          &lt;span class=&quot;sr-only&quot;&gt;392.23 KB - PDF - 2 pages&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;file__translations-item&quot;&gt;
+      &lt;div class=&quot;file file--bare&quot;&gt;
+        &lt;div class=&quot;file__metadata&quot;&gt;
+          &lt;span class=&quot;file__title&quot;&gt;Name language&lt;/span&gt;
+          &lt;div class=&quot;file__info&quot;&gt;(392.23 KB - PDF - 2 pages)&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;file__btn btn is-internal btn--condensed&quot;&gt;Download
+          &lt;span class=&quot;sr-only&quot;&gt;392.23 KB - PDF - 2 pages&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;file__translations-item&quot;&gt;
+      &lt;div class=&quot;file file--bare&quot;&gt;
+        &lt;div class=&quot;file__metadata&quot;&gt;
+          &lt;span class=&quot;file__title&quot;&gt;Name language&lt;/span&gt;
+          &lt;div class=&quot;file__info&quot;&gt;(392.23 KB - PDF - 2 pages)&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;file__btn btn is-internal btn--condensed&quot;&gt;Download
+          &lt;span class=&quot;sr-only&quot;&gt;392.23 KB - PDF - 2 pages&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
 </article>
 
 <!-- SCRIPTS -->

@@ -33,6 +33,7 @@ Styleguide buttons
   text-decoration: none;
   @extend .hidden-print;
   @include _focus_outline_border(3px, $yellow-light, -3px);
+
   &:link {
     text-decoration: none;
   }
@@ -152,6 +153,7 @@ Styleguide buttons
   background: $yellow-light;
   color: #000;
   border-color: #000;
+
   &:hover,
   &:active {
     border-color: #000;
@@ -174,7 +176,22 @@ Styleguide buttons
   & * {
     margin-bottom: 0!important;
   }
+
   margin-bottom: 0!important;
+}
+
+/*
+Button Condensed
+
+Button condensed component
+
+Markup: html/btn-condensed.html
+
+Styleguide buttons.btn--condensed
+*/
+.btn.btn--condensed {
+  width: auto;
+  font-weight: normal;
 }
 
 /*
@@ -277,6 +294,7 @@ Styleguide buttons.btn-
 // External link specific adjustments
 @mixin _btn_external_link_mixin() {
   padding-right: 2.2em;
+
   &:after {
     position: absolute;
     line-height: 1.4 !important;
@@ -305,6 +323,7 @@ Styleguide buttons.btn-
     line-height: 3.5 !important;
   }
 }
+
 a.btn {
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
     .site-political & {
@@ -312,6 +331,7 @@ a.btn {
         @include _btn_external_link_mixin();
       }
     }
+
     .site-information & {
       @include _btn_external_link_mixin();
     }
