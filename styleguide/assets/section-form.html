@@ -372,7 +372,7 @@
     <label for="cb-example-1"></label>
   </div>
   <div class="checkbox">
-    <input type="checkbox" id="cb-example-2" value="" checked>
+    <input type="checkbox" id="cb-example-2" value="" checked="checked">
     <label for="cb-example-2"></label>
   </div>
   <div class="checkbox">
@@ -380,14 +380,14 @@
     <label for="cb-example-3">Unchecked with label</label>
   </div>
   <div class="checkbox">
-    <input type="checkbox" id="cb-example-4" value="">
-    <label for="cb-example-4">Focus with label</label>
+    <input type="checkbox" id="cb-example-4" value="" checked="checked">
+    <label for="cb-example-4">Checked with label</label>
   </div>
 </div>
 
 <script>
-  $( document ).ready(function() {
-    $( "#cb-example-4" ).focus();
+  $(function () {
+    $("#cb-example-4").focus();
   });
 </script>
 
@@ -401,7 +401,7 @@
     &lt;label for=&quot;cb-example-1&quot;&gt;&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;cb-example-2&quot; value=&quot;&quot; checked&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;cb-example-2&quot; value=&quot;&quot; checked=&quot;checked&quot;&gt;
     &lt;label for=&quot;cb-example-2&quot;&gt;&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;checkbox&quot;&gt;
@@ -409,14 +409,14 @@
     &lt;label for=&quot;cb-example-3&quot;&gt;Unchecked with label&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;cb-example-4&quot; value=&quot;&quot;&gt;
-    &lt;label for=&quot;cb-example-4&quot;&gt;Focus with label&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;cb-example-4&quot; value=&quot;&quot; checked=&quot;checked&quot;&gt;
+    &lt;label for=&quot;cb-example-4&quot;&gt;Checked with label&lt;/label&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;script&gt;
-  $( document ).ready(function() {
-    $( &quot;#cb-example-4&quot; ).focus();
+  $(function () {
+    $(&quot;#cb-example-4&quot;).focus();
   });
 &lt;/script&gt;
 </code></pre>
@@ -605,34 +605,52 @@
         </div>
         <div class="kss-modifier__example">
           <div class="form-group">
-  <label for="field-ID-1">Radio buttons</label>
   <div class="radio">
-    <input name="optionsRadios" type="radio" id="rd-example-1" value="" checked>
-    <label for="rd-example-1">Checked multiple option 1.</label>
+    <input type="radio" id="rd-example-1" value="">
+    <label for="rd-example-1">Unchecked multiple option 1</label>
   </div>
   <div class="radio">
-    <input name="optionsRadios" type="radio" id="rd-example-2" value="">
-    <label for="rd-example-2">Unchecked multiple option 2.</label>
+    <input type="radio" id="rd-example-2" value="" checked="checked">
+    <label for="rd-example-2">Checked multiple option 2</label>
+  </div>
+  <div class="radio">
+    <input type="radio" id="rd-example-3" value="" checked="checked">
+    <label for="rd-example-3">Checked multiple option 3</label>
   </div>
   <p class="form-field-feedback">Some feedback message</p>
 </div>
+
+<script>
+  $(function () {
+    $("#rd-example-3").focus();
+  });
+</script>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
-  &lt;label for=&quot;field-ID-1&quot;&gt;Radio buttons&lt;/label&gt;
   &lt;div class=&quot;radio&quot;&gt;
-    &lt;input name=&quot;optionsRadios&quot; type=&quot;radio&quot; id=&quot;rd-example-1&quot; value=&quot;&quot; checked&gt;
-    &lt;label for=&quot;rd-example-1&quot;&gt;Checked multiple option 1.&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;rd-example-1&quot; value=&quot;&quot;&gt;
+    &lt;label for=&quot;rd-example-1&quot;&gt;Unchecked multiple option 1&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;radio&quot;&gt;
-    &lt;input name=&quot;optionsRadios&quot; type=&quot;radio&quot; id=&quot;rd-example-2&quot; value=&quot;&quot;&gt;
-    &lt;label for=&quot;rd-example-2&quot;&gt;Unchecked multiple option 2.&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;rd-example-2&quot; value=&quot;&quot; checked=&quot;checked&quot;&gt;
+    &lt;label for=&quot;rd-example-2&quot;&gt;Checked multiple option 2&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;rd-example-3&quot; value=&quot;&quot; checked=&quot;checked&quot;&gt;
+    &lt;label for=&quot;rd-example-3&quot;&gt;Checked multiple option 3&lt;/label&gt;
   &lt;/div&gt;
   &lt;p class=&quot;form-field-feedback&quot;&gt;Some feedback message&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $(&quot;#rd-example-3&quot;).focus();
+  });
+&lt;/script&gt;
 </code></pre>
       </div>
 

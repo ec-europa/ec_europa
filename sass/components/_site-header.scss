@@ -30,7 +30,8 @@ Styleguide: siteheader
   & > .container-fluid {
     position: relative;
   }
-  a{
+
+  a {
     @include _focus_outline_border(3px, $yellow-light, 5px);
   }
 }
