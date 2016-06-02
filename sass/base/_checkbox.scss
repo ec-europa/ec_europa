@@ -8,63 +8,49 @@ Styleguide form.checkbox
 
 /*
  * Please
- * @see http://bootsnipp.com/snippets/featured/funky-radio-buttons
- * @see http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+ * @see https://github.com/flatlogic/awesome-bootstrap-checkbox
+ * @see http://flatlogic.github.io/awesome-bootstrap-checkbox/demo/
  */
 
 // Component
-body:not(.page-admin){ //temp fix for workbench checkboxes
-  .checkbox{
-    margin-bottom: 2px;
-    margin-top: 0;
-    @extend .clearfix;
+.checkbox {
+  padding-left: 20px;
 
+  input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
 
-    input[type='checkbox'] {
-      margin: 1px 0 0 13px;
-      position: static;
-      margin-left: 0;
-      float: left;
-      height: $form-control-height;
-      visibility: hidden;
-      & + label {
-        color: $grey-base;
-        height: $form-control-height;
-        line-height: $form-control-height;
-        display: block;
-        text-align: left;
-        float: left;
-        margin-left: -0.7em;
-        padding-left: 1.4em;
-        &:before {
-          pointer-events: none;
-          border: 3px solid transparent;
-          border-radius: 8px;
-          width: $form-checkbox-icon-size;
-          height: $form-checkbox-icon-size;
-          padding: $form-checkbox-icon-size 0 0 $form-checkbox-icon-size;
-          content: '';
-          position: absolute;
-          display: block;
-          top: 0.45em;
-          left: -0.4em;
-          background: url('../images/svg/checkbox-unchecked-trans-inside.svg') no-repeat;
-          background-size: auto $form-checkbox-icon-size;
-        }
-      }
-
-      // Focus state, not checked.
-      &:focus + label:before {
-        pointer-events: none;
-        @include _focus_outline_border(3px, $yellow-light, 2px);
-      }
-      // Checked state.
-      &:checked + label:before {
-        background-image: url('../images/svg/checkbox-checked--blue.svg');
-        background-size: 1.5em auto;
-        left: -0.5em;
-      }
+    // Checked state.
+    &:checked + label:before {
+      background-image: url('../images/svg/checkbox-checked--blue.svg');
     }
+
+    // Focus state, not checked.
+    &:focus + label:before {
+      background-image: url('../images/svg/checkbox-checked--blue--highlight.svg');
+    }
+  }
+
+  label {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    vertical-align: middle;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: "";
+      width: $form-checkbox-icon-size;
+      height: $form-checkbox-icon-size;
+      margin-left: -20px;
+      background: url('../images/svg/checkbox-unchecked.svg') no-repeat;
+    }
+  }
+
+  &.checkbox--inline {
+    margin-top: 0;
   }
 }
 
@@ -90,37 +76,19 @@ body:not(.page-admin){ //temp fix for workbench checkboxes
 // Turning off completely custom checkboxes when SVG's are not available
 .no-svg {
   .checkbox {
-    label {
-      height: auto;
-      line-height: inherit;
-      display: inline;
-      background: none;
-      padding-left: 0;
+    input[type="checkbox"]:checked + label:before {
+      background: none !important;
     }
-    input[type="checkbox"] {
-      margin: 0;
-      float: none;
-      height: auto;
-      &:before {
-        display: none;
-      }
 
-      &:not(checked)+label {
-        background: none;
-        padding: 0;
-        &:before {
-          display: none;
-        }
-      }
-
-      &:checked+label {
-        color: inherit;
-        background: none;
-
-        &:before {
-          display: none;
-        }
-      }
+    label:before {
+      width: 1.250em !important;
+      height: 1.250em !important;
+      border: 1px solid #cccccc !important;
+      border-radius: 5px !important;
+      background: none !important;
+      -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
     }
   }
 }

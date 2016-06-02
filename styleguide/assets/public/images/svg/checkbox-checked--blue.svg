@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+	 viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#004494;}
 	.st1{fill:#FFFFFF;}
 </style>
+<title>Group 2</title>
+<desc>Created with Sketch.</desc>
 <g id="Filter-and-Forms-">
-	<g id="Desktop_Form" transform="translate(-76.000000, -200.000000)">
-		<g id="Group-2-Copy" transform="translate(76.000000, 200.000000)">
-			<path id="Page-1" class="st0" d="M15.4,18.5H4.6c-1.7,0-3.1-1.4-3.1-3.1V4.6c0-1.7,1.4-3.1,3.1-3.1h10.8c1.7,0,3.1,1.4,3.1,3.1
-				v10.8C18.5,17.1,17.1,18.5,15.4,18.5"/>
-			<path id="Page-1_1_" class="st1" d="M12.8,7.5L9.3,11L7.7,9.4l-1.2,1.2l2.8,2.8L14,8.7L12.8,7.5z"/>
+	<g id="Desktop_Form" transform="translate(-132.000000, -159.000000)">
+		<g id="Checkbox-selected" transform="translate(132.000000, 158.000000)">
+			<g id="Group-2" transform="translate(0.515731, 1.000000)">
+				<path id="Page-1" class="st0" d="M16.2,20H4.7c-1.8,0-3.2-1.4-3.2-3.2V5.2C1.5,3.4,2.9,2,4.7,2h11.5c1.8,0,3.2,1.4,3.2,3.2v11.4
+					C19.5,18.6,18,20,16.2,20"/>
+				<polygon id="Page-1_1_" class="st1" points="13.8,8 9.6,12.2 7.7,10.3 6.3,11.7 9.6,15.1 15.3,9.4 				"/>
+			</g>
 		</g>
 	</g>
 </g>

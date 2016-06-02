@@ -4832,11 +4832,11 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, body:not(.page-admin) .checkbox:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, body:not(.page-admin) .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
+.clearfix:before, .section .section__group:before, .section .nav-tabs--with-content + .tab-content > :before, .clearfix:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   content: " ";
   display: table; }
 
-.clearfix:after, body:not(.page-admin) .checkbox:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
+.clearfix:after, .section .section__group:after, .section .nav-tabs--with-content + .tab-content > :after {
   clear: both; }
 
 .center-block {
@@ -5127,16 +5127,6 @@ blockquote,
   font-family: Arial, sans-serif;
   margin-bottom: 0; }
 
-/*
-Other typography
-
-Markup: html/typography.html
-
-Styleguide text.typography
-*/
-.text-small, .icon--text-small {
-  font-size: 0.778em; }
-
 .radio + .radio,
 .checkbox + .checkbox {
   margin-top: auto; }
@@ -5148,268 +5138,6 @@ ul.list-inline > li {
 .section .section--row-three {
   padding-top: 0;
   padding-bottom: 0; }
-
-/*
-Icon
-
-Icons using europa icons font
-
-Markup: html/icon.html
-
-.icon--external - External link icon
-.icon--arrow-up - Arrow up icon
-.icon--arrow-down - Arrow down icon
-.icon--feedback - Feedback icon
-.icon--spinner - Spinner icon
-.icon--search - Search icon
-.icon--language - Language icon
-.icon--facebook - Facebook icon
-.icon--twitter - Twitter icon
-.icon--googleplus - G+ icon
-.icon--linkedin - Linkedin icon
-.icon--rss - RSS icon
-.icon--up - Up icon
-.icon--right - Right icon
-.icon--down - Down icon
-.icon--left - Left icon
-.icon--file - File icon
-.icon--audio - Audio icon
-.icon--brochure - Brochure icon
-.icon--edit - Edit icon
-.icon--image - Image icon
-.icon--download - Download icon
-.icon--infographic - Infographic icon
-.icon--multiple-files - Multiple files icon
-.icon--organigram - Organigram icon
-.icon--package - Package icon
-.icon--slides - Slides icon
-.icon--video - Video icon
-.icon--error - Error icon
-.icon--success - Success icon
-.icon--warning - Warning icon
-.icon--check - Check icon
-.icon--generic-lang - Generic language icon
-.icon--budget - Budget
-.icon--digital - digital
-.icon--energy - energy
-.icon--euro - euro
-.icon--global - global
-.icon--growth - growth
-.icon--regulation - regulation
-.icon--tag-close - tag close
-.icon--tag-close-hover - tag close with hover state
-.icon--calendar - Calendar icon
-.icon--location - Location icon
-.icon--livestreaming - Live streaming icon
-
-Styleguide: icon
-*/
-@font-face {
-  font-family: 'EuropaIcons';
-  src: url("../fonts/europa-icons/europa-icons.eot");
-  src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/icomoon.svg#icomoon") format("svg"); }
-
-.icon:before {
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'EuropaIcons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  margin-right: 4px;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon--external, .icon--external:before {
-  content: '\e825' !important; }
-
-.icon--blue-dark {
-  color: #004494; }
-
-.icon--arrow-up, .icon--arrow-up:before {
-  content: '\e821'; }
-
-.icon--arrow-down, .icon--arrow-down:before, .btn.btn-menu:after {
-  content: '\e822'; }
-
-.icon--spinner:before {
-  content: '\e805'; }
-
-.icon--facebook:before {
-  content: '\e809'; }
-
-.icon--livestreaming:before {
-  content: "\e81c"; }
-
-.icon--location:before {
-  content: "\e81b"; }
-
-.icon--twitter:before {
-  content: '\e817'; }
-
-.icon--googleplus:before {
-  content: '\e80c'; }
-
-.icon--linkedin:before {
-  content: '\e810'; }
-
-.icon--rss:before {
-  content: '\e813'; }
-
-.icon--language:before {
-  content: '\e824'; }
-
-.icon--search:before {
-  content: '\e823'; }
-
-.icon--up:before {
-  content: '\e827'; }
-
-.icon--right, .icon--right:before, .btn.btn-ctn:after {
-  content: '\e828'; }
-
-.icon--breadcrumb {
-  content: '\e828' !important; }
-
-.icon--down {
-  content: '\e81F'; }
-  .icon--down:before {
-    content: '\e81F'; }
-
-.icon--left:before {
-  content: '\e826'; }
-
-.icon--file:before {
-  content: '\e80a'; }
-
-.icon--audio:before {
-  content: '\e801'; }
-
-.icon--brochure:before {
-  content: '\e802'; }
-
-.icon--edit:before {
-  content: '\e807'; }
-
-.icon--image:before {
-  content: '\e80d'; }
-
-.icon--download, .icon--download:before {
-  content: '\e806' !important; }
-
-.icon--infographic:before {
-  content: '\e80f'; }
-
-.icon--multiple-files:before {
-  content: '\e820'; }
-
-.icon--organigram:before {
-  content: '\e811'; }
-
-.icon--package:before {
-  content: '\e812'; }
-
-.icon--slides:before {
-  content: '\e814'; }
-
-.icon--video:before {
-  content: '\e800'; }
-
-.icon--error:before {
-  content: '\e82F'; }
-
-.icon--success:before {
-  content: '\e816'; }
-
-.icon--warning:before {
-  content: '\e804'; }
-
-.icon--budget:before {
-  content: '\e81a'; }
-
-.icon--digital:before {
-  content: '\e80b'; }
-
-.icon--energy:before {
-  content: '\e818'; }
-
-.icon--euro:before {
-  content: '\e803'; }
-
-.icon--global:before {
-  content: '\e829'; }
-
-.icon--growth:before {
-  content: '\e82a'; }
-
-.icon--regulation:before {
-  content: '\e82b'; }
-
-.icon--feedback:before {
-  content: '\e82e'; }
-
-.icon--check, .icon--check:before {
-  content: '\e816'; }
-
-.icon--generic-lang, .icon--generic-lang:before {
-  content: '\e81e'; }
-
-.icon--tag-close, .icon--tag-close:before {
-  content: '\e82c'; }
-
-.icon--tag-close-hover, .icon--tag-close-hover:before {
-  content: '\e82d'; }
-
-.icon--calendar:before {
-  content: '\e81d'; }
-
-.icon--yellowbg {
-  background-color: #ffd617;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  font-size: 14px;
-  text-align: center;
-  display: inline-block; }
-  .icon--yellowbg:before {
-    margin-right: 0;
-    line-height: inherit; }
-
-.icon--margin-right {
-  margin-right: 1.5em; }
-
-.is-spinning:before {
-  -webkit-animation: icon-spin-right 2s infinite linear;
-  -o-animation: icon-spin-right 2s infinite linear;
-  animation: icon-spin-right 2s infinite linear; }
-
-@-webkit-keyframes icon-spin-right {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-@keyframes icon-spin-right {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    transform: rotate(359deg); } }
 
 /*
 Buttons
@@ -5681,52 +5409,34 @@ Styleguide form.checkbox
 */
 /*
  * Please
- * @see http://bootsnipp.com/snippets/featured/funky-radio-buttons
- * @see http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+ * @see https://github.com/flatlogic/awesome-bootstrap-checkbox
+ * @see http://flatlogic.github.io/awesome-bootstrap-checkbox/demo/
  */
-body:not(.page-admin) .checkbox {
-  margin-bottom: 2px;
-  margin-top: 0; }
-  body:not(.page-admin) .checkbox input[type='checkbox'] {
-    margin: 1px 0 0 13px;
-    position: static;
-    margin-left: 0;
-    float: left;
-    height: 2.75em;
-    visibility: hidden; }
-    body:not(.page-admin) .checkbox input[type='checkbox'] + label {
-      color: #404040;
-      height: 2.75em;
-      line-height: 2.75em;
-      display: block;
-      text-align: left;
-      float: left;
-      margin-left: -0.7em;
-      padding-left: 1.4em; }
-      body:not(.page-admin) .checkbox input[type='checkbox'] + label:before {
-        pointer-events: none;
-        border: 3px solid transparent;
-        border-radius: 8px;
-        width: 1.25em;
-        height: 1.25em;
-        padding: 1.25em 0 0 1.25em;
-        content: '';
-        position: absolute;
-        display: block;
-        top: 0.45em;
-        left: -0.4em;
-        background: url("../images/svg/checkbox-unchecked-trans-inside.svg") no-repeat;
-        background-size: auto 1.25em; }
-    body:not(.page-admin) .checkbox input[type='checkbox']:focus + label:before {
-      pointer-events: none; }
-      body:not(.page-admin) .checkbox input[type='checkbox']:focus + label:before:focus {
-        outline: 3px solid #ffd617;
-        outline-offset: 2px;
-        text-decoration: underline; }
-    body:not(.page-admin) .checkbox input[type='checkbox']:checked + label:before {
-      background-image: url("../images/svg/checkbox-checked--blue.svg");
-      background-size: 1.5em auto;
-      left: -0.5em; }
+.checkbox {
+  padding-left: 20px; }
+  .checkbox input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1; }
+    .checkbox input[type="checkbox"]:checked + label:before {
+      background-image: url("../images/svg/checkbox-checked--blue.svg"); }
+    .checkbox input[type="checkbox"]:focus + label:before {
+      background-image: url("../images/svg/checkbox-checked--blue--highlight.svg"); }
+  .checkbox label {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    vertical-align: middle; }
+    .checkbox label:before {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: "";
+      width: 1.375em;
+      height: 1.375em;
+      margin-left: -20px;
+      background: url("../images/svg/checkbox-unchecked.svg") no-repeat; }
+  .checkbox.checkbox--inline {
+    margin-top: 0; }
 
 .checkbox.checkbox--facet {
   left: 2px;
@@ -5737,29 +5447,18 @@ body:not(.page-admin) .checkbox {
     text-decoration: none;
     top: .25em; }
 
-.no-svg .checkbox label {
-  height: auto;
-  line-height: inherit;
-  display: inline;
-  background: none;
-  padding-left: 0; }
+.no-svg .checkbox input[type="checkbox"]:checked + label:before {
+  background: none !important; }
 
-.no-svg .checkbox input[type="checkbox"] {
-  margin: 0;
-  float: none;
-  height: auto; }
-  .no-svg .checkbox input[type="checkbox"]:before {
-    display: none; }
-  .no-svg .checkbox input[type="checkbox"]:not(checked) + label {
-    background: none;
-    padding: 0; }
-    .no-svg .checkbox input[type="checkbox"]:not(checked) + label:before {
-      display: none; }
-  .no-svg .checkbox input[type="checkbox"]:checked + label {
-    color: inherit;
-    background: none; }
-    .no-svg .checkbox input[type="checkbox"]:checked + label:before {
-      display: none; }
+.no-svg .checkbox label:before {
+  width: 1.250em !important;
+  height: 1.250em !important;
+  border: 1px solid #cccccc !important;
+  border-radius: 5px !important;
+  background: none !important;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
 
 /*
 Form
@@ -6080,69 +5779,44 @@ Styleguide form.radio
 */
 /*
  * Please
- * @see http://bootsnipp.com/snippets/featured/funky-radio-buttons
- * @see http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+ * @see https://github.com/flatlogic/awesome-bootstrap-checkbox
+ * @see http://flatlogic.github.io/awesome-bootstrap-checkbox/demo/
  */
 .radio {
-  margin-bottom: 2px;
-  margin-top: 0; }
-  .radio label {
-    color: #404040;
-    height: 2.75em;
-    line-height: 2.75em;
-    display: block;
-    text-align: left; }
-  .radio input {
-    margin: 1px 0 0 13px; }
+  padding-left: 20px; }
   .radio input[type="radio"] {
-    height: 2.75em;
-    margin-left: -9999px;
-    position: relative;
-    float: left; }
-    .radio input[type="radio"] + label:before {
-      border: transparent solid 3px;
-      border-radius: 50%;
-      padding: 1.25em 0 0 1.25em; }
-    .radio input[type="radio"]:focus + label:before {
-      border: #ffd617 solid 3px; }
-    .radio input[type="radio"]:not(checked) + label {
-      padding-left: 2.778em; }
-      .radio input[type="radio"]:not(checked) + label:before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 1.25em;
-        height: 1.25em;
-        top: 0.6em;
-        left: 1em;
-        background: url("../images/svg/radio-unchecked.svg") no-repeat;
-        background-size: auto 1.25em; }
+    opacity: 0;
+    z-index: 1; }
     .radio input[type="radio"]:checked + label:before {
-      background-image: url("../images/svg/radio-checked-blue.svg"); }
+      background-image: url("../images/svg/radio-checked--blue.svg"); }
+    .radio input[type="radio"]:focus + label:before {
+      background-image: url("../images/svg/radio-checked--blue--highlight.svg"); }
+  .radio label {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    vertical-align: middle; }
+    .radio label:before {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: "";
+      width: 1.375em;
+      height: 1.375em;
+      margin-left: -20px;
+      background: url("../images/svg/radio-unchecked.svg") no-repeat; }
+  .radio.radio--inline {
+    margin-top: 0; }
 
-.no-svg .radio label {
-  height: auto;
-  line-height: inherit;
-  display: inline;
-  background: none;
-  padding-left: 0; }
+.no-svg .radio input[type="radio"]:checked + label:before {
+  background: none !important; }
 
-.no-svg .radio input[type="radio"] {
-  margin: 0;
-  float: none;
-  height: auto; }
-  .no-svg .radio input[type="radio"]:before {
-    display: none; }
-  .no-svg .radio input[type="radio"]:not(checked) + label {
-    background: none;
-    padding: 0; }
-    .no-svg .radio input[type="radio"]:not(checked) + label:before {
-      display: none; }
-  .no-svg .radio input[type="radio"]:checked + label {
-    color: inherit;
-    background: none; }
-    .no-svg .radio input[type="radio"]:checked + label:before {
-      display: none; }
+.no-svg .radio label:before {
+  border: 1px solid #cccccc;
+  background: none !important;
+  -webkit-transition: border 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out; }
 
 /*
 Select
@@ -6227,6 +5901,16 @@ textarea.error {
     font-size: inherit; }
   .form-group .messages.error p {
     font-size: 0.889em; }
+
+/*
+Other typography
+
+Markup: html/typography.html
+
+Styleguide text.typography
+*/
+.text-small {
+  font-size: 0.778em; }
 
 .container-fluid, .section__group--full-width > * {
   max-width: 1170px; }
