@@ -2,6 +2,7 @@
 @import "../bootstrap-sass/bootstrap/variables";
 @import "../bootstrap-sass/bootstrap/mixins";
 @import "../bootstrap-sass/bootstrap/grid";
+@import "../bootstrap-sass/bootstrap/labels";
 
 // Importing bootstrap variables
 @import "mixins";
@@ -9,7 +10,16 @@
 @import "variables";
 
 // Components
+// Needed Base Components
+@import "base/typography";
+@import "base/headings";
 @import "base/link";
+@import "base/btn";
+@import "base/paragraphs";
+@import "base/form-control";
+
+// Components
+@import "components/icon";
 @import "components/banner";
 @import "components/block";
 @import "components/breadcrumb";
@@ -30,7 +40,6 @@
 @import "components/help-block";
 @import "components/highlighted-item";
 @import "components/hr";
-@import "components/icon";
 @import "components/icon-social";
 @import "components/inpage-nav";
 @import "components/labels";
