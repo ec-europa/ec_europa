@@ -44,6 +44,13 @@ a.breadcrumb__link {
   color: #fff;
   text-decoration: none;
 
+  &:after {
+    @extend .breadcrumb__link-arrow;
+    vertical-align: middle;
+    position: relative;
+    top: 1px;
+  }
+
   &:hover,
   &:active,
   &:focus {
@@ -162,13 +169,6 @@ Styleguide breadcrumb.collapsible
   .breadcrumb__link {
     span {
       vertical-align: middle;
-    }
-
-    &:after {
-      @extend .breadcrumb__link-arrow;
-      vertical-align: middle;
-      position: relative;
-      top: 1px;
     }
   }
 
