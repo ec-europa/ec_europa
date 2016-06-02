@@ -86,14 +86,21 @@ Styleguide page-header.informational-home
   .page-header__top {
     text-transform: uppercase;
   }
+
   .page-header__main {
     line-height: $line-height-base;
   }
+
   .page-header__bottom {
     font-size: 26px;
   }
+
   .page-header__hero-title {
     padding-top: 2.39em;
+
+    .meta--header {
+      margin-bottom: 0;
+    }
   }
 }
 
