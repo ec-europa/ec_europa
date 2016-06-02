@@ -1429,9 +1429,7 @@ Styleguide field
   margin-bottom: 0.556em; }
   .field--labeled:last-child {
     margin-bottom: 0; }
-  .field--labeled .field__label {
-    display: block;
-    clear: both; }
+  .field--labeled .field__label,
   .field--labeled .field__items {
     display: block; }
   .field--labeled a:focus {
@@ -1457,9 +1455,7 @@ Styleguide field
     margin-right: -15px; }
     .field--labeled .field__label,
     .field--labeled .field__items {
-      float: left;
-      position: relative;
-      min-height: 1px;
+      display: inline;
       padding-left: 15px;
       padding-right: 15px; }
     .field--labeled .field__label {
@@ -1480,7 +1476,6 @@ Styleguide field
     padding-left: 0;
     padding-right: 0; }
   .col-lg-3 + .col-lg-9 .field--full-width {
-    position: relative;
     left: -25%;
     width: 125%; } }
 
@@ -1502,14 +1497,14 @@ Styleguide field.labeledalign
       width: 66.6%;
       margin-left: 33.3%;
       padding: 0 15px;
-      float: left; } }
+      display: inline; } }
 
 @media (min-width: 768px) {
   .field--labeled-align .field__items {
     width: 75%;
     margin-left: 25%;
     padding: 0 15px;
-    float: left; } }
+    display: inline; } }
 
 /*
 File
