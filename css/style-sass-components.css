@@ -4414,6 +4414,8 @@ Styleguide page-header.informational-home
     font-size: 26px; }
   .page-header .page-header__hero-title {
     padding-top: 2.39em; }
+    .page-header .page-header__hero-title .meta--header {
+      margin-bottom: 0; }
 
 .page-header--large-intro, .node-type-info-homepage .page-header {
   padding-bottom: 2.39em; }
