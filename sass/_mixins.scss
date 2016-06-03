@@ -152,3 +152,31 @@
     text-decoration: $text-decoration;
   }
 }
+
+// Should be used only with @extend
+.icon--after {
+  text-decoration: none;
+  font-family: 'EuropaIcons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  margin-left: 4px;
+  line-height: 1;
+  display: inline-block;
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// [converter] $parent hack
+@mixin hidden-print($selector) {
+  #{$selector} {
+    display: none !important;
+  }
+}
+
+@media print {
+  @include hidden-print('.hidden-print');
+}

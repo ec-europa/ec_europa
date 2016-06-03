@@ -12,8 +12,6 @@ $fifteen: 0.833em;
 $twenty: 1.111em;
 $twenty-five: 1.389em;
 
-.comments__wrapper {}
-
 .comment__form-wrapper {
   @extend .col-md-6;
   padding-left: 0;
@@ -33,17 +31,17 @@ $twenty-five: 1.389em;
     max-width: 6.944em;
   }
 }
+
 .comment__meta {
   color: $grey-dark;
   font-size: $font-size-little;
   padding-bottom: $fifteen;
   text-transform: uppercase;
+
   a {
     color: $grey-dark;
   }
 }
-
-.comment__meta-separator {}
 
 .comment__body {
   background: #fff;
@@ -59,6 +57,7 @@ $twenty-five: 1.389em;
   font-weight: bold;
   font-size: $font-size-medium;
   padding: $fifteen 0;
+
   &:focus{
     outline-offset: 0;
   }
@@ -88,6 +87,7 @@ $twenty-five: 1.389em;
   // Drupal-specific rule.
   .list-inline {
     padding-left: 0;
+
     li {
       padding-left: 0;
     }
@@ -96,12 +96,14 @@ $twenty-five: 1.389em;
 
 @include breakpoint(screen-md-min) {
   .comment__image {
-    @extend .col-md-2;
+    width: 16.6667%;
+    float: left;
     display: block;
   }
 
   .comment__body {
-    @extend .col-md-6;
+    width: 50%;
+    float: left;
 
     &:before {
       right: 100%;

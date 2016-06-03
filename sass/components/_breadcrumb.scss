@@ -232,7 +232,6 @@ Styleguide breadcrumb.collapsible
         }
 
         &:before {
-          @extend .breadcrumb__link-arrow;
           display: inline-block !important;
           position: absolute;
           right: 7px;
