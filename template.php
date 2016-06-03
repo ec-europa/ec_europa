@@ -603,7 +603,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   }
 
   // If we have a modifier, just append it to the class.
-  $file_class = (!$modifier ? ' ' . $modifier : '');
+  $file_class = (!empty($modifier) ? ' ' . $modifier : '');
 
   $file_icon = '<span class="file__icon icon ' . $file_icon_class . '"></span>';
   $file_size = format_size($file->filesize);
