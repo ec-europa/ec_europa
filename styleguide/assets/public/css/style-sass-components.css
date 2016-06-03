@@ -4361,7 +4361,7 @@ Styleguide listing.2.4
     content: url("../images/svg/logo/logo--sv.svg"); } }
 
 .logo--logotype {
-  width: 255px; }
+  width: 290px; }
 
 .no-svg .language-bg .logo--logotype {
   background-image: url("../images/png/logo/logo--bg.png"); }
@@ -4532,7 +4532,7 @@ Styleguide listing.2.4
     content: url("../images/png/logo/logo--sv.png"); } }
 
 .no-svg .logo--logotype {
-  width: 255px; }
+  width: 290px; }
 
 .site-header__logo::before, .site-header__logo::after {
   display: none !important; }
