@@ -62,28 +62,24 @@ Styleguide field
   padding-right: $grid-gutter-width / 2;
 
   & > * {
+    @extend .container-fluid;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
-    @extend .container-fluid;
   }
 }
 
 @include breakpoint(screen-xs-min) {
   .field--labeled {
-    margin-left: -15px;
-    margin-right: -15px;
-
     .field__label,
     .field__items {
-      display: inline;
-      padding-left: 15px;
-      padding-right: 15px;
+      display: inline-block;
+      vertical-align: top;
     }
 
     .field__label {
-      width: 33.3%;
+      width: 32.3%;
     }
 
     .field__items {
@@ -95,7 +91,7 @@ Styleguide field
 @include breakpoint(screen-sm-min) {
   .field--labeled {
     .field__label {
-      width: 25%;
+      width: 24%;
     }
 
     .field__items {
@@ -129,30 +125,15 @@ with fields that do have a label.
 
 Markup: html/field--labeled-align.html
 
-Styleguide field.labeledalign
+Styleguide field.labeled-align
 */
-
-@include breakpoint(screen-xs-min) {
-  .field--labeled-align {
-    margin-left: -15px;
-    margin-right: -15px;
-
-    .field__items {
-      width: 66.6%;
-      margin-left: 33.3%;
-      padding: 0 15px;
-      display: inline;
-    }
-  }
-}
 
 @include breakpoint(screen-sm-min) {
   .field--labeled-align {
     .field__items {
       width: 75%;
       margin-left: 25%;
-      padding: 0 15px;
-      display: inline;
+      display: inline-block;
     }
   }
 }

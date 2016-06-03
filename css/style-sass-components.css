@@ -1450,22 +1450,18 @@ Styleguide field
     padding-right: 0; }
 
 @media (min-width: 480px) {
-  .field--labeled {
-    margin-left: -15px;
-    margin-right: -15px; }
-    .field--labeled .field__label,
-    .field--labeled .field__items {
-      display: inline;
-      padding-left: 15px;
-      padding-right: 15px; }
-    .field--labeled .field__label {
-      width: 33.3%; }
-    .field--labeled .field__items {
-      width: 66.6%; } }
+  .field--labeled .field__label,
+  .field--labeled .field__items {
+    display: inline-block;
+    vertical-align: top; }
+  .field--labeled .field__label {
+    width: 32.3%; }
+  .field--labeled .field__items {
+    width: 66.6%; } }
 
 @media (min-width: 768px) {
   .field--labeled .field__label {
-    width: 25%; }
+    width: 24%; }
   .field--labeled .field__items {
     width: 75%; } }
 
@@ -1487,24 +1483,13 @@ with fields that do have a label.
 
 Markup: html/field--labeled-align.html
 
-Styleguide field.labeledalign
+Styleguide field.labeled-align
 */
-@media (min-width: 480px) {
-  .field--labeled-align {
-    margin-left: -15px;
-    margin-right: -15px; }
-    .field--labeled-align .field__items {
-      width: 66.6%;
-      margin-left: 33.3%;
-      padding: 0 15px;
-      display: inline; } }
-
 @media (min-width: 768px) {
   .field--labeled-align .field__items {
     width: 75%;
     margin-left: 25%;
-    padding: 0 15px;
-    display: inline; } }
+    display: inline-block; } }
 
 /*
 File
@@ -3100,6 +3085,9 @@ Styleguide labels
   color: #404040;
   background-color: #ececec; }
 
+.label--block {
+  margin-bottom: 1em; }
+
 .label--high {
   min-height: 2.75em;
   line-height: 2.75em;
@@ -3403,7 +3391,7 @@ Styleguide listing.5
     visibility: visible;
     white-space: pre; }
 
-.listing--person .listing__title + * {
+.listing--person .listing__title ~ * {
   line-height: 1.3;
   margin-top: 0; }
 
@@ -3665,7 +3653,7 @@ a.listing__title {
   a:link .listing__title,
   a:visited .listing__title {
     color: #004494; }
-  .listing__title + * {
+  .listing__title ~ * {
     font-size: 0.889em; }
 
 .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
