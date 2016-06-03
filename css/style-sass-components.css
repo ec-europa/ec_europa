@@ -46,7 +46,7 @@
   .listing__wrapper--row-two .listing:after {
     clear: both; }
 
-.col-xs-1, .file__icon, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .comment__image, .col-lg-2, .col-xs-3, .col-sm-3, .file__btn, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .listing__wrapper--two-columns .listing, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .file__metadata, .col-lg-7, .col-xs-8, .col-sm-8, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .file__icon, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .comment__image, .col-lg-2, .col-xs-3, .col-sm-3, .file__btn, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .listing__wrapper--two-columns .listing, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .file__metadata, .col-lg-7, .col-xs-8, .col-sm-8, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -315,7 +315,7 @@
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .file__icon, .col-md-2, .comment__image, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .file__icon, .col-md-2, .comment__image, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1, .file__icon {
     width: 8.3333333333%; }
@@ -327,7 +327,7 @@
     width: 33.3333333333%; }
   .col-md-5, .featured-item__image {
     width: 41.6666666667%; }
-  .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--two-columns .listing--title-large, .listing__wrapper--row-two .listing__item {
+  .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .comment__body, .listing__wrapper--row-two .listing__item {
     width: 50%; }
   .col-md-7, .featured-item__content, .file__metadata {
     width: 58.3333333333%; }
@@ -545,17 +545,18 @@ a:hover, a:active, a:focus {
   text-decoration: underline;
   color: #404040; }
 
-.listing a,
 .site-switcher a,
 .feedback-form a {
   z-index: 999;
   text-decoration: none; }
-  .listing a:focus,
   .site-switcher a:focus,
   .feedback-form a:focus {
     outline: 3px solid #ffd617;
     outline-offset: 10px;
     text-decoration: underline; }
+
+.listing a {
+  text-decoration: none; }
 
 a .feedback-form {
   outline-offset: 0; }
@@ -737,12 +738,16 @@ a.breadcrumb__link {
   max-width: 100%;
   color: #fff;
   text-decoration: none; }
+  a.breadcrumb__link:after {
+    vertical-align: middle;
+    position: relative;
+    top: 1px; }
   a.breadcrumb__link:hover, a.breadcrumb__link:active, a.breadcrumb__link:focus {
     color: #fff; }
     a.breadcrumb__link:hover .breadcrumb__text, a.breadcrumb__link:active .breadcrumb__text, a.breadcrumb__link:focus .breadcrumb__text {
       text-decoration: underline; }
 
-.breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
+.breadcrumb__link-arrow, a.breadcrumb__link:after, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
   color: #fff;
   line-height: inherit !important;
   margin-left: 8px !important;
@@ -811,11 +816,6 @@ Styleguide breadcrumb.collapsible
 
 .breadcrumb--collapsible .breadcrumb__link span {
   vertical-align: middle; }
-
-.breadcrumb--collapsible .breadcrumb__link:after {
-  vertical-align: middle;
-  position: relative;
-  top: 1px; }
 
 .breadcrumb--collapsible .breadcrumb__text {
   display: inline-block;
@@ -1050,26 +1050,25 @@ Styleguide date-block
 .date-block {
   background: #f2f2f2;
   border-bottom: 0.222em solid #FED437;
-  width: 5.5em;
+  width: 5.556em;
   margin-right: 0.75em;
-  min-width: 5.556em;
   padding: 0.7em;
   text-align: center;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   .date-block:after {
     content: " ";
     position: absolute;
     top: -0.667em;
     right: -0.200em;
-    width: 0;
-    height: 0;
     border-top: 1em solid transparent;
     border-bottom: 1em solid transparent;
     border-right: 1em solid #fff;
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform: rotate(135deg); }
+
+.date-block__element, .date-block__day-text, .date-block__day, .date-block__month {
+  display: block; }
 
 .date-block__day-text {
   font-size: 0.889em;
@@ -1083,9 +1082,6 @@ Styleguide date-block
 .date-block__month {
   font-size: 0.889em;
   line-height: 1; }
-
-.date-block__element, .date-block__day-text, .date-block__day, .date-block__month {
-  display: block; }
 
 /*
 Datepicker
@@ -1146,7 +1142,8 @@ Styleguide datepicker
       right: 0; }
     .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
       margin: 0 50px;
-      height: 100%; }
+      height: 100%;
+      font-size: 0.889em; }
       .ui-datepicker .ui-datepicker-header .ui-datepicker-title span,
       .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
         color: #fff; }
@@ -1162,9 +1159,17 @@ Styleguide datepicker
         margin: 0;
         display: inline-block;
         float: none;
-        padding-right: 0; }
+        padding-right: 0;
+        padding-left: 0.750em;
+        position: relative; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+          outline: 3px solid #ffd617;
+          outline-offset: -3px;
+          text-decoration: none; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:first-child {
           border-right: 2px solid #686868; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+          z-index: 1; }
         .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
           color: #fff; }
   .ui-datepicker table.ui-datepicker-calendar {
@@ -1247,6 +1252,13 @@ Styleguide expandable
     background: #ffd617;
     outline: none;
     text-decoration: underline; }
+
+.facetapi-facetapi-checkbox-links {
+  list-style: none; }
+  .facetapi-facetapi-checkbox-links input.facetapi-checkbox {
+    margin-right: .5em; }
+  .facetapi-facetapi-checkbox-links a.facetapi-checkbox {
+    text-decoration: none; }
 
 /*
 Featured item
@@ -1925,6 +1937,7 @@ Markup: html/icon.html
 .icon--external - External link icon
 .icon--arrow-up - Arrow up icon
 .icon--arrow-down - Arrow down icon
+.icon--feedback - Feedback icon
 .icon--spinner - Spinner icon
 .icon--search - Search icon
 .icon--language - Language icon
@@ -1990,7 +2003,7 @@ Styleguide: icon
 
 .icon--after, .is-external:after, .site-political a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
 .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
-.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before, .file__btn:after, .file__translations .file__translations-control:after, .lang-select-page--transparent select.lang-select-page__list:after, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after, .facet-tag--close .facet-tag__value:after, .facet-tag--close .facet-tag__value:hover:after {
+.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after, .breadcrumb__link-arrow, a.breadcrumb__link:after, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before, .file__btn:after, .file__translations .file__translations-control:after, .lang-select-page--transparent select.lang-select-page__list:after, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after, .facet-tag--close .facet-tag__value:after, .facet-tag--close .facet-tag__value:hover:after {
   text-decoration: none;
   font-family: 'EuropaIcons';
   speak: none;
@@ -2019,7 +2032,7 @@ Styleguide: icon
   content: '\e822'; }
 
 .icon--spinner:before {
-  content: '\e82f'; }
+  content: '\e805'; }
 
 .icon--facebook:before {
   content: '\e809'; }
@@ -2054,7 +2067,7 @@ Styleguide: icon
 .icon--right, .icon--right:before, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after {
   content: '\e828'; }
 
-.icon--breadcrumb, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
+.icon--breadcrumb, .breadcrumb__link-arrow, a.breadcrumb__link:after, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
   content: '\e828' !important; }
 
 .icon--down, .file__translations .file__translations-control:after {
@@ -2132,7 +2145,7 @@ Styleguide: icon
   content: '\e82b'; }
 
 .icon--feedback:before {
-  content: '\e82f'; }
+  content: '\e82e'; }
 
 .icon--check, .icon--check:before {
   content: '\e816'; }
@@ -3289,7 +3302,6 @@ Listing title is the component modifier used to style a list of titles.
 
 Markup: html/listing--title.html
 
-.listing--title-large - Listing title large
 .listing--title-medium - Listing title medium
 
 Styleguide listing.4
@@ -3333,19 +3345,15 @@ ul.listing--title {
 .listing--frontpage p {
   line-height: 1.375em; }
 
-.listing--title-large .listing__title,
 .listing--title-medium .listing__title {
   margin-top: 0.2em;
   margin-bottom: 0.4em; }
-
-.listing--title-large .listing__title {
-  font-size: 1.667em; }
 
 .listing--title-medium .listing__title {
   font-size: 1.222em; }
 
 /*
-Listing Agenda
+Listing agenda
 
 Listing for event like entities.
 
@@ -3464,6 +3472,68 @@ Styleguide listing.3
 
 .listing--short-spaced .listing__item {
   padding: 0.5em 0 !important; }
+
+/*
+Listing navigation
+
+Navigational listing.
+The following example is a general one, using "Section" styling.
+
+Markup: html/listing--navigation.html
+
+Styleguide listing.6
+*/
+.listing--navigation {
+  padding-bottom: 1.9333333333em; }
+  .listing--navigation:before, .listing--navigation:after {
+    content: " ";
+    display: table; }
+  .listing--navigation:after {
+    clear: both; }
+  .listing--navigation .listing__item-link {
+    display: block;
+    border-top: 3px #ffd617 solid;
+    padding: 0; }
+    .listing--navigation .listing__item-link:hover {
+      border-top-color: #000; }
+      .listing--navigation .listing__item-link:hover .listing__section-title {
+        color: #000;
+        text-decoration: underline; }
+  .listing--navigation .listing__section-title {
+    padding: 0.75em 0 1.5em 0;
+    font-size: 1.0666666667em;
+    color: #012b58;
+    line-height: 1.2728em; }
+  .listing--navigation .listing__description {
+    text-decoration: none;
+    color: #404040; }
+  .listing--navigation .listing__item {
+    border-bottom: none;
+    padding: 0; }
+  .listing--navigation .listing__title {
+    font-weight: normal; }
+  .listing--navigation .listing__separator {
+    border-top: 1px solid #e2e2e2;
+    padding-top: 0.6333333333em;
+    margin: 0.4333333333em 0 0 0;
+    width: 100%;
+    max-width: 32em;
+    float: left; }
+
+@media (min-width: 480px) {
+  .listing--navigation {
+    margin-bottom: 5em; }
+    .listing--navigation .listing__item-link {
+      padding: 0.9090909091em 0 2.3636363636em 0; }
+    .listing--navigation .listing__section-title {
+      font-size: 1.2222222222em; }
+    .listing--navigation .listing__item-link {
+      padding: 0; }
+    .listing--navigation .listing__description {
+      font-size: 1em; }
+    .listing--navigation .listing__separator {
+      padding-top: 1.1111111111em;
+      margin-top: 0.6111111111em; } }
 
 a.listing__title {
   color: #004494; }
