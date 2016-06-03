@@ -580,7 +580,7 @@ a.label:hover, a.label:focus {
 
 .icon--after, .is-external:after, .site-political a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
 .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
-.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after, .file__btn:after, .file__translations .file__translations-control:after, .lang-select-page--transparent select.lang-select-page__list:after, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after, .facet-tag--close .facet-tag__value:after, .facet-tag--close .facet-tag__value:hover:after {
+.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after, .breadcrumb__link-arrow, a.breadcrumb__link:after, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .file__btn:after, .file__translations .file__translations-control:after, .lang-select-page--transparent select.lang-select-page__list:after, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after, .facet-tag--close .facet-tag__value:after, .facet-tag--close .facet-tag__value:hover:after {
   text-decoration: none;
   font-family: 'EuropaIcons';
   speak: none;
@@ -1166,7 +1166,7 @@ Styleguide: icon
 .icon--right, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .icon--right:before, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after {
   content: '\e828'; }
 
-.icon--breadcrumb, .breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after {
+.icon--breadcrumb, .breadcrumb__link-arrow, a.breadcrumb__link:after, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after {
   content: '\e828' !important; }
 
 .icon--down, .file__translations .file__translations-control:after {
@@ -1431,12 +1431,16 @@ a.breadcrumb__link {
   max-width: 100%;
   color: #fff;
   text-decoration: none; }
+  a.breadcrumb__link:after {
+    vertical-align: middle;
+    position: relative;
+    top: 1px; }
   a.breadcrumb__link:hover, a.breadcrumb__link:active, a.breadcrumb__link:focus {
     color: #fff; }
     a.breadcrumb__link:hover .breadcrumb__text, a.breadcrumb__link:active .breadcrumb__text, a.breadcrumb__link:focus .breadcrumb__text {
       text-decoration: underline; }
 
-.breadcrumb__link-arrow, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .breadcrumb--collapsible .breadcrumb__link:after {
+.breadcrumb__link-arrow, a.breadcrumb__link:after, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after {
   color: #fff;
   line-height: inherit !important;
   margin-left: 8px !important;
@@ -1505,11 +1509,6 @@ Styleguide breadcrumb.collapsible
 
 .breadcrumb--collapsible .breadcrumb__link span {
   vertical-align: middle; }
-
-.breadcrumb--collapsible .breadcrumb__link:after {
-  vertical-align: middle;
-  position: relative;
-  top: 1px; }
 
 .breadcrumb--collapsible .breadcrumb__text {
   display: inline-block;
