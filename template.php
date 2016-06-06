@@ -1395,7 +1395,6 @@ function europa_pager_last($variables) {
  * Implements form_alter().
  */
 function europa_form_alter(&$form, &$form_state, $form_id) {
-
   if (isset($form['views_bulk_operations'])) {
     $children = element_children($form['views_bulk_operations']);
     foreach ($children as $child) {
