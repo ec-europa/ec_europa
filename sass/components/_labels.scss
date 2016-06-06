@@ -82,6 +82,10 @@ $label_text_color_light: #fff;
   background-color: $grey-lighter;
 }
 
+.label--block {
+  margin-bottom: 1em;
+}
+
 .label--high {
   min-height: 2.75em;
   line-height: 2.75em;

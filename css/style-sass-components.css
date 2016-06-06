@@ -46,16 +46,16 @@
   .listing__wrapper--row-two .listing:after {
     clear: both; }
 
-.col-xs-1, .file__icon, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .file__btn, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .listing__wrapper--two-columns .listing, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .file__metadata, .col-lg-7, .col-xs-8, .col-sm-8, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .file__btn, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .file__metadata, .listing__wrapper--two-columns .listing, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .file__metadata, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .file__icon, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .file__metadata, .col-xs-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .file__metadata, .col-xs-10, .col-xs-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn {
   float: left; }
 
-.col-xs-1, .file__icon {
+.col-xs-1 {
   width: 8.3333333333%; }
 
 .col-xs-2 {
@@ -79,10 +79,10 @@
 .col-xs-8 {
   width: 66.6666666667%; }
 
-.col-xs-9 {
+.col-xs-9, .file__metadata {
   width: 75%; }
 
-.col-xs-10, .file__metadata {
+.col-xs-10 {
   width: 83.3333333333%; }
 
 .col-xs-11 {
@@ -209,23 +209,23 @@
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .file__icon, .col-sm-2, .col-sm-3, .file__btn, .col-sm-4, .col-sm-5, .col-sm-6, .listing__wrapper--two-columns .listing, .col-sm-7, .col-sm-8, .file__metadata, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .file__icon, .col-sm-2, .col-sm-3, .col-sm-4, .file__btn, .col-sm-5, .col-sm-6, .file__metadata, .listing__wrapper--two-columns .listing, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
   .col-sm-1, .file__icon {
     width: 8.3333333333%; }
   .col-sm-2 {
     width: 16.6666666667%; }
-  .col-sm-3, .file__btn {
+  .col-sm-3 {
     width: 25%; }
-  .col-sm-4 {
+  .col-sm-4, .file__btn {
     width: 33.3333333333%; }
   .col-sm-5 {
     width: 41.6666666667%; }
-  .col-sm-6, .listing__wrapper--two-columns .listing {
+  .col-sm-6, .file__metadata, .listing__wrapper--two-columns .listing {
     width: 50%; }
   .col-sm-7 {
     width: 58.3333333333%; }
-  .col-sm-8, .file__metadata {
+  .col-sm-8 {
     width: 66.6666666667%; }
   .col-sm-9 {
     width: 75%; }
@@ -315,7 +315,7 @@
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .file__metadata, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1, .file__icon {
     width: 8.3333333333%; }
@@ -327,9 +327,9 @@
     width: 33.3333333333%; }
   .col-md-5, .featured-item__image {
     width: 41.6666666667%; }
-  .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .listing__wrapper--row-two .listing__item {
+  .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item {
     width: 50%; }
-  .col-md-7, .featured-item__content, .file__metadata {
+  .col-md-7, .featured-item__content {
     width: 58.3333333333%; }
   .col-md-8, .listing__wrapper--maxwidth .listing {
     width: 66.6666666667%; }
@@ -872,6 +872,19 @@ Styleguide buttons
   margin-bottom: 0 !important; }
   .btn--no-margin-bottom * {
     margin-bottom: 0 !important; }
+
+/*
+Button Condensed
+
+Button condensed component
+
+Markup: html/btn-condensed.html
+
+Styleguide buttons.btn--condensed
+*/
+.btn.btn--condensed, .inpage-nav__navbar .btn--condensed.inpage-nav__toggle {
+  width: auto;
+  font-weight: normal; }
 
 /*
 Button block
@@ -2126,9 +2139,7 @@ Styleguide field
   margin-bottom: 0.556em; }
   .field--labeled:last-child {
     margin-bottom: 0; }
-  .field--labeled .field__label {
-    display: block;
-    clear: both; }
+  .field--labeled .field__label,
   .field--labeled .field__items {
     display: block; }
   .field--labeled a:focus {
@@ -2149,24 +2160,18 @@ Styleguide field
     padding-right: 0; }
 
 @media (min-width: 480px) {
-  .field--labeled {
-    margin-left: -15px;
-    margin-right: -15px; }
-    .field--labeled .field__label,
-    .field--labeled .field__items {
-      float: left;
-      position: relative;
-      min-height: 1px;
-      padding-left: 15px;
-      padding-right: 15px; }
-    .field--labeled .field__label {
-      width: 33.3%; }
-    .field--labeled .field__items {
-      width: 66.6%; } }
+  .field--labeled .field__label,
+  .field--labeled .field__items {
+    display: inline-block;
+    vertical-align: top; }
+  .field--labeled .field__label {
+    width: 32.3%; }
+  .field--labeled .field__items {
+    width: 66.6%; } }
 
 @media (min-width: 768px) {
   .field--labeled .field__label {
-    width: 25%; }
+    width: 24%; }
   .field--labeled .field__items {
     width: 75%; } }
 
@@ -2177,7 +2182,6 @@ Styleguide field
     padding-left: 0;
     padding-right: 0; }
   .col-lg-3 + .col-lg-9 .field--full-width {
-    position: relative;
     left: -25%;
     width: 125%; } }
 
@@ -2189,45 +2193,44 @@ with fields that do have a label.
 
 Markup: html/field--labeled-align.html
 
-Styleguide field.labeledalign
+Styleguide field.labeled-align
 */
-@media (min-width: 480px) {
-  .field--labeled-align {
-    margin-left: -15px;
-    margin-right: -15px; }
-    .field--labeled-align .field__items {
-      width: 66.6%;
-      margin-left: 33.3%;
-      padding: 0 15px;
-      float: left; } }
-
 @media (min-width: 768px) {
   .field--labeled-align .field__items {
     width: 75%;
     margin-left: 25%;
-    padding: 0 15px;
-    float: left; } }
+    display: inline-block; } }
 
 /*
 File
 
 File component used to show info about the file that can be downloaded
-by clicking on the component
-
-Markup: html/file.html
-
-.file--widebar  - Full width download box (deprecated)
-.file--bare - Strip down version
+by clicking on the component.
 
 Styleguide file
 */
+/*
+File full width
+
+Full width download box version (deprecated)
+
+Markup: html/file.html
+
+Styleguide file.1
+*/
+/*
+File download with translations
+
+File component to download PDF files in various languages.
+
+Markup: html/file-translations.html
+
+Styleguide file.2
+*/
 .file {
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0.8em;
+  margin: 0 0 0.944em 0;
   background: #ececec;
-  padding: 1.333em 1.333em 1.333em 1.333em;
-  overflow: hidden; }
+  padding: 1.333em; }
 
 .file-video {
   background: none;
@@ -2238,24 +2241,20 @@ Styleguide file
 
 .file__icon {
   float: left;
-  padding-left: 0;
-  margin-right: 5px;
-  margin-left: -5px;
+  padding: 0;
+  margin-right: 0.1em;
+  margin-left: -0.315em;
   height: 2.556em;
-  overflow: hidden;
   text-align: center; }
   .file__icon:before {
     color: #b3b4b5;
     font-size: 2.556em; }
-  @media (max-width: 650px) {
-    .file__icon:before {
-      font-size: 1.556em;
-      font-size: 7.0833333333vw; } }
 
 .file__metadata {
-  line-height: 1;
   margin-bottom: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1; }
 
 .file__title {
   font-weight: bold;
@@ -2273,9 +2272,9 @@ Styleguide file
   margin-top: 0.556em; }
 
 .file__info {
+  margin-top: 0.778em;
   font-size: 0.778em;
-  line-height: initial;
-  margin-top: 0.556em; }
+  line-height: initial; }
 
 .file__contentlanguage {
   font-weight: bold; }
@@ -2283,9 +2282,6 @@ Styleguide file
 .file__btn {
   margin-bottom: 0;
   margin-top: 0.778em; }
-  @media (max-width: 768px) {
-    .file__btn {
-      margin-top: 15px; } }
 
 .file--widebar {
   max-width: 100%;
@@ -2295,37 +2291,32 @@ Styleguide file
   padding: 0em; }
 
 .file--bare {
-  background: none;
-  padding: 0.5em 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0.722em 0;
+  background: none; }
   .file--bare .file__btn {
-    padding-right: 0;
-    text-align: right;
-    float: right;
     border: none; }
     .file--bare .file__btn:hover {
-      color: #404040;
-      background: none; }
-  @media (max-width: 768px) {
-    .file--bare .file__btn {
-      text-align: left;
-      float: left;
-      padding-left: 0; } }
-  .file--bare .file__icon, .file--bare .file__language {
+      color: #404040; }
+  .file--bare .file__icon {
     display: none; }
 
 .file__translations {
   margin-bottom: 1em;
-  float: left;
-  width: 100%; }
+  padding: 0 1.450em;
+  font-size: 0.889em;
+  text-align: right; }
   .file__translations .file__translations-control {
-    margin-bottom: 0.3em;
-    padding: 0 1.333em; }
+    margin-top: 0.444em;
+    font-size: 1em;
+    text-decoration: none; }
     .file__translations .file__translations-control:active, .file__translations .file__translations-control:hover, .file__translations .file__translations-control:focus {
-      text-decoration: none;
-      color: #004494; }
+      color: #000;
+      text-decoration: underline; }
+      .file__translations .file__translations-control:active:after, .file__translations .file__translations-control:hover:after, .file__translations .file__translations-control:focus:after {
+        color: #000; }
     .file__translations .file__translations-control:after {
-      margin-left: 10px !important;
+      margin-left: 0.525em !important;
       position: relative;
       transition: all 0.3s ease 0s; }
     .file__translations .file__translations-control.is-collapsed:after {
@@ -2334,18 +2325,30 @@ Styleguide file
       -o-transform: rotate(180deg);
       transform: rotate(180deg); }
   .file__translations .file__translations-list {
-    width: 100%;
-    padding: 0;
-    margin: 0; }
-  .file__translations .file__translations-item, .file__translations .file__translations-details {
-    border-top: 1px solid #b3b4b5;
     list-style: none;
-    margin: 0 1.389em; }
+    margin: 0.944em 0 0 0;
+    padding: 0;
+    text-align: left; }
+    .file__translations .file__translations-list .btn--condensed {
+      margin-right: -1em; }
+    @media (max-width: 768px) {
+      .file__translations .file__translations-list .btn--condensed {
+        margin-left: -1em;
+        margin-right: 0; } }
+  .file__translations .file__translations-item, .file__translations .file__translations-details {
+    border-top: 1px solid #b3b4b5; }
+    .file__translations .file__translations-item:last-child, .file__translations .file__translations-details:last-child {
+      border-bottom: 1px solid #b3b4b5; }
   .file__translations .file__translations-details {
     font-size: 0.889em;
     padding-top: 0.5em; }
 
 @media (min-width: 768px) {
+  .file__icon {
+    width: auto;
+    padding: 0; }
+  .file__translations {
+    padding-left: 4.475em; }
   .file__metadata,
   .file__btn {
     overflow: hidden; }
@@ -3507,6 +3510,9 @@ Styleguide labels
   color: #404040;
   background-color: #ececec; }
 
+.label--block {
+  margin-bottom: 1em; }
+
 .label--high {
   min-height: 2.75em;
   line-height: 2.75em;
@@ -3810,7 +3816,7 @@ Styleguide listing.5
     visibility: visible;
     white-space: pre; }
 
-.listing--person .listing__title + * {
+.listing--person .listing__title ~ * {
   line-height: 1.3;
   margin-top: 0; }
 
@@ -4072,7 +4078,7 @@ a.listing__title {
   a:link .listing__title,
   a:visited .listing__title {
     color: #004494; }
-  .listing__title + * {
+  .listing__title ~ * {
     font-size: 0.889em; }
 
 .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
@@ -5261,7 +5267,7 @@ Styleguide: siteheader.searchform
         outline: 3px solid #404040;
         outline-offset: 2px;
         text-decoration: none; }
-  .site-menu .col-sm-4 .listing {
+  .site-menu .col-sm-4 .listing, .site-menu .file__btn .listing {
     margin-top: 2em; }
   .site-menu p {
     color: black;
@@ -5299,7 +5305,7 @@ Styleguide: siteheader.searchform
 @media (min-width: 768px) {
   .site-menu .listing__wrapper--two-columns .listing {
     width: 100%; }
-  .site-menu .col-sm-4 .listing {
+  .site-menu .col-sm-4 .listing, .site-menu .file__btn .listing {
     margin-top: 0; } }
 
 @media (min-width: 992px) {

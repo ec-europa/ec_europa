@@ -586,33 +586,27 @@ function europa_easy_breadcrumb(&$variables) {
 function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FALSE) {
   switch ($file->type) {
     case 'image':
-      $file_class = 'file--image';
       $file_icon_class = 'icon--image';
       break;
 
     case 'audio':
-      $file_class = 'file--audio';
       $file_icon_class = 'icon--audio';
       break;
 
     case 'video':
-      $file_class = 'file--video';
       $file_icon_class = 'icon--video';
       break;
 
     default:
-      $file_class = 'file--document';
       $file_icon_class = 'icon--file';
       break;
   }
 
   // If we have a modifier, just append it to the class.
-  if ($modifier && !empty($modifier)) {
-    $file_class .= ' ' . $modifier;
-  }
+  $file_class = (!empty($modifier) ? ' ' . $modifier : '');
 
   $file_icon = '<span class="file__icon icon ' . $file_icon_class . '"></span>';
-  $file_size = '<span class="file__size">' . format_size($file->filesize) . '</span>';
+  $file_size = format_size($file->filesize);
   $file_name = $file->uri;
   $file_extension = strtoupper(pathinfo($file_name, PATHINFO_EXTENSION));
 
@@ -676,7 +670,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
 
   $file_btn = l($file_text, $url['path'], array_merge($options, $url['options']));
 
-  return '<div class="file file--widebar ' . $file_class . '">' . $file_icon . $file_metadata . $file_btn . '</div>';
+  return '<div class="file file--widebar' . $file_class . '">' . $file_icon . $file_metadata . $file_btn . '</div>';
 }
 
 /**

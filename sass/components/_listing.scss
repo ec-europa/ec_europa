@@ -173,7 +173,6 @@ Styleguide listing.5
 
 // .listing--agenda modifier.
 .listing--agenda {
-
   p {
     margin: 0;
   }
@@ -220,8 +219,7 @@ Styleguide listing.5
 
 // .listing--person modifier.
 .listing--person {
-
-  .listing__title + * {
+  .listing__title ~ * {
     line-height: 1.3;
     margin-top: 0;
   }
@@ -318,6 +316,7 @@ Styleguide listing.3
     a {
       color: #ffffff;
     }
+
     &:first-child {
       border-top: none;
     }
@@ -530,10 +529,12 @@ a.listing__title {
   float: left;
   width: 100%;
   color: $grey-base;
+
   &:active,
   &:focus {
     text-decoration: none;
-    .listing__title{
+
+    .listing__title {
       text-decoration: underline;
       color: $grey-base;
     }
@@ -545,6 +546,7 @@ a.listing__title {
         @include _listing_external_link_mixin();
       }
     }
+
     .site-information & {
       @include _listing_external_link_mixin();
     }
@@ -623,11 +625,11 @@ a.listing__title {
   @extend .h3;
 
   a:link &,
-  a:visited &{
+  a:visited & {
     color: $brand-primary;
   }
 
-  & + * {
+  & ~ * {
     font-size: $font-size-little;
   }
 }
@@ -758,6 +760,7 @@ Styleguide listing.2.4
   .listing__title {
     margin: 0.2em 0 0.4em 0;
   }
+
   p {
     padding: 0;
   }
