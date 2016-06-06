@@ -17,6 +17,7 @@ Styleguide form.radio
   padding-left: 20px;
 
   input[type="radio"] {
+    margin-top: $form-checkbox-icon-size;
     opacity: 0;
     z-index: 1;
 
@@ -26,8 +27,8 @@ Styleguide form.radio
     }
 
     // Focus state, not checked.
-    &:focus + label:before {
-      background-image: url('../images/svg/radio-checked--blue--highlight.svg');
+    &:focus + label::before {
+      border: 3px solid $yellow-light;
     }
   }
 
@@ -45,7 +46,10 @@ Styleguide form.radio
       width: $form-checkbox-icon-size;
       height: $form-checkbox-icon-size;
       margin-left: -20px;
-      background: url('../images/svg/radio-unchecked.svg') no-repeat;
+      background: #fff url('../images/svg/radio-unchecked.svg') no-repeat;
+      border: 3px solid transparent;
+      border-radius: 50%;
+      @include transition(border 0.15s ease-in-out);
     }
   }
 
