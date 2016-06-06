@@ -46,13 +46,13 @@
   .listing__wrapper--row-two .listing:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .file__btn, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .listing__wrapper--two-columns .listing, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .file__metadata, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .file__btn, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .file__metadata, .listing__wrapper--two-columns .listing, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .file__metadata, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .file__metadata, .col-xs-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .file__metadata, .col-xs-10, .col-xs-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn {
   float: left; }
 
 .col-xs-1 {
@@ -79,10 +79,10 @@
 .col-xs-8 {
   width: 66.6666666667%; }
 
-.col-xs-9 {
+.col-xs-9, .file__metadata {
   width: 75%; }
 
-.col-xs-10, .file__metadata {
+.col-xs-10 {
   width: 83.3333333333%; }
 
 .col-xs-11 {
@@ -209,21 +209,21 @@
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .file__icon, .col-sm-2, .col-sm-3, .file__btn, .col-sm-4, .col-sm-5, .col-sm-6, .listing__wrapper--two-columns .listing, .col-sm-7, .file__metadata, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .file__icon, .col-sm-2, .col-sm-3, .col-sm-4, .file__btn, .col-sm-5, .col-sm-6, .file__metadata, .listing__wrapper--two-columns .listing, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
   .col-sm-1, .file__icon {
     width: 8.3333333333%; }
   .col-sm-2 {
     width: 16.6666666667%; }
-  .col-sm-3, .file__btn {
+  .col-sm-3 {
     width: 25%; }
-  .col-sm-4 {
+  .col-sm-4, .file__btn {
     width: 33.3333333333%; }
   .col-sm-5 {
     width: 41.6666666667%; }
-  .col-sm-6, .listing__wrapper--two-columns .listing {
+  .col-sm-6, .file__metadata, .listing__wrapper--two-columns .listing {
     width: 50%; }
-  .col-sm-7, .file__metadata {
+  .col-sm-7 {
     width: 58.3333333333%; }
   .col-sm-8 {
     width: 66.6666666667%; }
@@ -315,9 +315,9 @@
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
-  .col-md-1 {
+  .col-md-1, .file__icon {
     width: 8.3333333333%; }
   .col-md-2 {
     width: 16.6666666667%; }
@@ -2249,14 +2249,11 @@ Styleguide file.2
   .file__icon:before {
     color: #b3b4b5;
     font-size: 2.556em; }
-  @media (max-width: 650px) {
-    .file__icon:before {
-      font-size: 1.556em;
-      font-size: 7.0833333333vw; } }
 
 .file__metadata {
   margin-bottom: 0;
   padding-left: 0;
+  padding-right: 0;
   line-height: 1; }
 
 .file__title {
@@ -2333,10 +2330,10 @@ Styleguide file.2
     padding: 0;
     text-align: left; }
     .file__translations .file__translations-list .btn--condensed {
-      margin-right: -1.111em; }
+      margin-right: -1em; }
     @media (max-width: 768px) {
       .file__translations .file__translations-list .btn--condensed {
-        margin-left: -1.111em;
+        margin-left: -1em;
         margin-right: 0; } }
   .file__translations .file__translations-item, .file__translations .file__translations-details {
     border-top: 1px solid #b3b4b5; }
@@ -5270,7 +5267,7 @@ Styleguide: siteheader.searchform
         outline: 3px solid #404040;
         outline-offset: 2px;
         text-decoration: none; }
-  .site-menu .col-sm-4 .listing {
+  .site-menu .col-sm-4 .listing, .site-menu .file__btn .listing {
     margin-top: 2em; }
   .site-menu p {
     color: black;
@@ -5308,7 +5305,7 @@ Styleguide: siteheader.searchform
 @media (min-width: 768px) {
   .site-menu .listing__wrapper--two-columns .listing {
     width: 100%; }
-  .site-menu .col-sm-4 .listing {
+  .site-menu .col-sm-4 .listing, .site-menu .file__btn .listing {
     margin-top: 0; } }
 
 @media (min-width: 992px) {
