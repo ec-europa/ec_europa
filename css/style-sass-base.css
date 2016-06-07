@@ -5700,12 +5700,13 @@ Styleguide form.checkbox
 .checkbox {
   padding-left: 20px; }
   .checkbox input[type="checkbox"] {
+    margin-top: 1.5em;
     opacity: 0;
     z-index: 1; }
     .checkbox input[type="checkbox"]:checked + label:before {
       background-image: url("../images/svg/checkbox-checked--blue.svg"); }
-    .checkbox input[type="checkbox"]:focus + label:before {
-      background-image: url("../images/svg/checkbox-checked--blue--highlight.svg"); }
+    .checkbox input[type="checkbox"]:focus + label::before {
+      border: 3px solid #ffd617; }
   .checkbox label {
     position: relative;
     display: inline-block;
@@ -5716,10 +5717,23 @@ Styleguide form.checkbox
       left: 0;
       display: inline-block;
       content: "";
-      width: 1.375em;
-      height: 1.375em;
+      width: 1.5em;
+      height: 1.5em;
       margin-left: -20px;
-      background: url("../images/svg/checkbox-unchecked.svg") no-repeat; }
+      background: #fff url("../images/svg/checkbox-unchecked.svg") no-repeat;
+      border: 3px solid transparent;
+      border-radius: 6px;
+      -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+      transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
+    .checkbox label::after {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: "";
+      width: 1.5em;
+      height: 1.5em;
+      margin-left: -20px; }
   .checkbox.checkbox--inline {
     margin-top: 0; }
 
@@ -6070,12 +6084,13 @@ Styleguide form.radio
 .radio {
   padding-left: 20px; }
   .radio input[type="radio"] {
+    margin-top: 1.5em;
     opacity: 0;
     z-index: 1; }
     .radio input[type="radio"]:checked + label:before {
       background-image: url("../images/svg/radio-checked--blue.svg"); }
-    .radio input[type="radio"]:focus + label:before {
-      background-image: url("../images/svg/radio-checked--blue--highlight.svg"); }
+    .radio input[type="radio"]:focus + label::before {
+      border: 3px solid #ffd617; }
   .radio label {
     position: relative;
     display: inline-block;
@@ -6086,10 +6101,15 @@ Styleguide form.radio
       left: 0;
       display: inline-block;
       content: "";
-      width: 1.375em;
-      height: 1.375em;
+      width: 1.5em;
+      height: 1.5em;
       margin-left: -20px;
-      background: url("../images/svg/radio-unchecked.svg") no-repeat; }
+      background: #fff url("../images/svg/radio-unchecked.svg") no-repeat;
+      border: 3px solid transparent;
+      border-radius: 50%;
+      -webkit-transition: border 0.15s ease-in-out;
+      -o-transition: border 0.15s ease-in-out;
+      transition: border 0.15s ease-in-out; }
   .radio.radio--inline {
     margin-top: 0; }
 

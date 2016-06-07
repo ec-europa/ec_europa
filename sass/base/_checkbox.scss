@@ -17,6 +17,7 @@ Styleguide form.checkbox
   padding-left: 20px;
 
   input[type="checkbox"] {
+    margin-top: $form-checkbox-icon-size;
     opacity: 0;
     z-index: 1;
 
@@ -26,8 +27,8 @@ Styleguide form.checkbox
     }
 
     // Focus state, not checked.
-    &:focus + label:before {
-      background-image: url('../images/svg/checkbox-checked--blue--highlight.svg');
+    &:focus + label::before {
+      border: 3px solid $yellow-light;
     }
   }
 
@@ -45,7 +46,20 @@ Styleguide form.checkbox
       width: $form-checkbox-icon-size;
       height: $form-checkbox-icon-size;
       margin-left: -20px;
-      background: url('../images/svg/checkbox-unchecked.svg') no-repeat;
+      background: #fff url('../images/svg/checkbox-unchecked.svg') no-repeat;
+      border: 3px solid transparent;
+      border-radius: 6px;
+      @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out);
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: "";
+      width: $form-checkbox-icon-size;
+      height: $form-checkbox-icon-size;
+      margin-left: -20px;
     }
   }
 
