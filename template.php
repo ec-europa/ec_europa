@@ -765,12 +765,14 @@ function europa_preprocess_block(&$variables) {
 
     if (!empty($variables['elements']['other']['#markup'])) {
       foreach ($variables['elements']['other']['#markup'] as $code => $lang) {
-        $options = array(
-          'query' => drupal_get_query_parameters(),
-        );
+        $options = array();
+        $options['query'] = drupal_get_query_parameters();
         $options['query']['2nd-language'] = $code;
+        $options['attributes']['lang'] = $code;
+        $options['attributes']['hreflang'] = $code;
+        $options['attributes']['rel'] = 'alternate';
 
-        $other .= "<li class='lang-select-page__option lang-select-page__other'>" . l($lang->native, current_path(), $options) . '</li>';
+        $other .= '<li class="lang-select-page__option lang-select-page__other">' . l($lang->native, current_path(), $options) . '</li>';
       }
     }
 
@@ -780,6 +782,7 @@ function europa_preprocess_block(&$variables) {
     // Add content to block.
     $content = "<span class='lang-select-page__icon icon icon--generic-lang'></span>";
     $content .= "<ul class='lang-select-page__list'>" . $not_available . $served . $other . '</ul>';
+
     $variables['content'] = $content;
   }
 
