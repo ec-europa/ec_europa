@@ -28,7 +28,7 @@ Styleguide form.checkbox
 
     // Focus state, not checked.
     &:focus + label::before {
-      border: 3px solid $yellow-light;
+      border: 3px solid $form-control-border-color-focus;
     }
   }
 
