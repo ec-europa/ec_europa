@@ -12,10 +12,8 @@
           body = 'body';
 
       $('.lang-select-site').on('click', 'a.lang-select-site__link', function (event) {
-
         // We only want to load it once.
         if (!$overlay.find(closeBtn).length) {
-
           $.get($(this).attr('href'), function (splashscreen) {
             // Store our object.
             var $jQueryObject = $($.parseHTML(splashscreen));

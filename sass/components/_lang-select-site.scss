@@ -9,25 +9,21 @@ Styleguide: siteheader.langselect
 */
 
 .lang-select-site {
-  text-align: center;
+  @extend .hidden-print;
   position: absolute;
   top: 0;
   right: $grid-gutter-width / 2;
-  @extend .hidden-print;
+  text-align: center;
 
   .lang-select-site__link {
-    color: inherit;
     display: inline-block;
-    text-align: center;
-    text-decoration: none;
+    padding: 7.5px 15px;
     font-size: $font-size-little;
     font-weight: bold;
-    padding: 7.5px 15px;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
     border: 3px solid transparent;
-
-    &:hover{
-      text-decoration: underline;
-    }
 
     &:focus {
       border-color: $yellow-light;
@@ -37,6 +33,10 @@ Styleguide: siteheader.langselect
 
   .lang-select-site__label {
     margin-right: 0.556em;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .lang-select-site__code {
@@ -49,8 +49,8 @@ Styleguide: siteheader.langselect
 
   .lang-select-site__code-text {
     position: relative;
-    top: -1px;
-    left: -2px;
+    top: 0px;
+    left: -1px;
     font-size: $font-size-xsmall;
     color: #fff;
   }
@@ -62,9 +62,8 @@ Styleguide: siteheader.langselect
     color: $brand-primary;
     font-size: $font-size-xsmall * 2;
     line-height: 1.4;
-    display: inline-block;
 
-    &:before{
+    &:before {
       font-weight: inherit;
     }
   }

@@ -46,8 +46,15 @@
 
               // Build a regular option element.
               case String(settings.item + ' ' + settings.other):
-                var $option = $('<option />');
-                $option.attr('value', $(this).find('a').attr('href')).html($(this).html());
+                var $option = $('<option />'),
+                  $this = $(this),
+                  optionTarget = $this.find('a').attr('href'),
+                  optionLabel = $this.text();
+
+                $option.attr({
+                  'value': optionTarget,
+                  'lang': $this.find('a').attr('lang')
+                }).text(optionLabel);
                 $select.append($option);
                 break;
             }
