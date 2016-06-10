@@ -20,7 +20,8 @@ a.feedback-form__trigger {
   color: $brand-primary;
   display: inline-block;
   font-size: $font-size-little;
-  padding: 0.5em 0 0.5em 1em;
+  padding: 0.5em 0;
+  margin-left: 1em;
 
   &:focus{
     outline-offset: 0;
@@ -141,7 +142,7 @@ a.feedback-form__trigger {
 
 @include breakpoint(screen-lg-min) {
   a.feedback-form__trigger {
-    padding-left: 0;
+    margin-left: 0;
   }
 }
 

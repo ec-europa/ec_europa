@@ -2032,7 +2032,8 @@ a.feedback-form__trigger {
   color: #004494;
   display: inline-block;
   font-size: 0.889em;
-  padding: 0.5em 0 0.5em 1em; }
+  padding: 0.5em 0;
+  margin-left: 1em; }
   a.feedback-form__trigger:focus {
     outline-offset: 0; }
   a.feedback-form__trigger:active {
@@ -2111,7 +2112,7 @@ a.feedback-form__trigger {
 
 @media (min-width: 1200px) {
   a.feedback-form__trigger {
-    padding-left: 0; } }
+    margin-left: 0; } }
 
 .no-svg #feedback-form__accordion .panel .panel-title {
   background: url("../images/png/checkbox.png") no-repeat; }
