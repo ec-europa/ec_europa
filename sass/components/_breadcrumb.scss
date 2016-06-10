@@ -190,8 +190,15 @@ Styleguide breadcrumb.collapsible
     }
   }
 
+  // Indent the last segment, leaving space for .breadcrumb__btn-separator
   .breadcrumb__segment--last {
     padding-left: 60px;
+  }
+
+  // In case of 2 .breadcrumb__segment-s, don't indent the second one.
+  .breadcrumb__segment:first-child:nth-last-child(2),
+  .breadcrumb__segment:first-child:nth-last-child(2) ~ .breadcrumb__segment {
+    padding-left: 0;
   }
 
   // List of breadcrumbs is open.

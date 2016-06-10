@@ -1539,6 +1539,10 @@ Styleguide breadcrumb.collapsible
 .breadcrumb--collapsible .breadcrumb__segment--last {
   padding-left: 60px; }
 
+.breadcrumb--collapsible .breadcrumb__segment:first-child:nth-last-child(2),
+.breadcrumb--collapsible .breadcrumb__segment:first-child:nth-last-child(2) ~ .breadcrumb__segment {
+  padding-left: 0; }
+
 .breadcrumb--collapsible.is-open .breadcrumb__link {
   display: block; }
 

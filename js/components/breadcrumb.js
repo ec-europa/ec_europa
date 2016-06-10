@@ -71,7 +71,7 @@
 
         // Adding button to breadcrumb element that will be used for showing
         // hidden breadcrumb elements.
-        if ($breadcrumbSegments.length > 1) {
+        if ($breadcrumbSegments.length > 2) {
           $breadcrumbWrapper.append('<span class="breadcrumb__btn-separator">...</span>');
           var $breadcrumbButton = $breadcrumbWrapper.find('.breadcrumb__btn-separator');
         }
