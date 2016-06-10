@@ -34,6 +34,7 @@ $breadcrumb-heigth: 2.778em;
   display: none;
   position: relative;
   margin: 1em 0 0.8em;
+  width: 100%;
 }
 
 a.breadcrumb__link {
@@ -112,6 +113,7 @@ a.breadcrumb__link {
 
   .breadcrumb__segment {
     display: inline-block;
+    width: auto;
   }
 
   .breadcrumb__segment--first {
@@ -189,7 +191,7 @@ Styleguide breadcrumb.collapsible
   }
 
   .breadcrumb__segment--last {
-    padding-left: 52px;
+    padding-left: 60px;
   }
 
   // List of breadcrumbs is open.
