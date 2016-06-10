@@ -1407,6 +1407,10 @@ Styleguide banner.video
     margin: 0 -999em;
     padding: 0 999em; } }
 
+@media (max-width: 500px) {
+  .block--full-width {
+    margin: 0; } }
+
 /*
 Breadcrumb
 
@@ -2027,7 +2031,8 @@ a.feedback-form__trigger {
   text-decoration: none;
   color: #004494;
   display: inline-block;
-  font-size: 0.889em; }
+  font-size: 0.889em;
+  padding: 0.5em 0 0.5em 1em; }
   a.feedback-form__trigger:focus {
     outline-offset: 0; }
   a.feedback-form__trigger:active {
@@ -2104,9 +2109,9 @@ a.feedback-form__trigger {
     #feedback-form__accordion .panel-heading {
       padding-left: 0; } }
 
-@media (min-width: 992px) {
-  .feedback-form__trigger {
-    margin: 0.667em 0 0.556em 0; } }
+@media (min-width: 1200px) {
+  a.feedback-form__trigger {
+    padding-left: 0; } }
 
 .no-svg #feedback-form__accordion .panel .panel-title {
   background: url("../images/png/checkbox.png") no-repeat; }
