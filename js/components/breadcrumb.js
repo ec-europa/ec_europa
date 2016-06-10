@@ -66,8 +66,6 @@
         // Showing all hidden breadcrumbs.
         function showBreadcrumbs($selector) {
           $selector.hide();
-
-          var $breadcrumbWrapper = $('#breadcrumb');
           $breadcrumbWrapper.addClass('is-open');
         }
 
