@@ -38,6 +38,14 @@ Styleguide file.2
 .file-video {
   background: none;
   padding: 1em 0;
+
+  .content iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    min-height: 260px;
+  }
+
 }
 
 .file-video--withbackground {
