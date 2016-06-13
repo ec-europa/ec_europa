@@ -44,7 +44,7 @@
   // This is for fixing the automatic zoom in IOS.
   Drupal.behaviors.noZoom = {
     attach: function (context) {
-      $('select:first').once(function(){
+      $('select:first').once(function () {
         $('meta[name=viewport]').remove();
         $('head').append('<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=0">');
       });
