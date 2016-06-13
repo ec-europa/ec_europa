@@ -608,7 +608,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   $file_icon = '<span class="file__icon icon ' . $file_icon_class . '"></span>';
   $file_size = format_size($file->filesize);
   $file_name = $file->uri;
-  $file_extension = strtoupper(pathinfo($file_name, PATHINFO_EXTENSION));
+  $file_extension = drupal_strtoupper(pathinfo($file_name, PATHINFO_EXTENSION));
 
   // Get our full language string.
   if (isset($file->entity->language) || isset($file->language)) {
