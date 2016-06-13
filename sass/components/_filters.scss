@@ -125,19 +125,20 @@ Styleguide filters.filters
   display: inline-block;
 }
 
+// Button should be visible by default but hidden depending on breakpoint.
+html {
+  &.js {
+    .filters__btn-submit {
+      display: inline-block;
+    }
+  }
+}
+
 @include breakpoint(screen-xs-min) {
   .filters__close {
     &:after {
       height: 9px;
       width: 12px;
-    }
-  }
-
-  html {
-    &.js {
-      .filters__btn-submit {
-        display: inline-block;
-      }
     }
   }
 }
@@ -152,5 +153,13 @@ Styleguide filters.filters
   .filters__btn-reset--small,
   .filters__btn-collapse {
     display: none;
+  }
+
+  html {
+    &.js {
+      .filters__btn-submit {
+        display: none;
+      }
+    }
   }
 }
