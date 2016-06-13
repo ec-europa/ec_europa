@@ -14,22 +14,22 @@
   Drupal.europa.breakpoints.small = 'screen and (min-width: 768px)';
 
   Drupal.behaviors.timeline = {
-    attach: function(context) {
+    attach: function (context) {
       var $timelineSelector = $('.timeline');
-      $($timelineSelector).once('timeline', function(){
+      $($timelineSelector).once('timeline', function () {
         var timelineItemSelector = '.timeline .timeline__item',
             timelineItemsCount = $(timelineItemSelector).length,
             timeLineButton = '<button class="btn btn-time-line">' + Drupal.t("Show all timeline") + '</button>';
 
         if (timelineItemsCount > 4) {
           $timelineSelector.append(timeLineButton);
-          $(timelineItemSelector).each(function(i){
+          $(timelineItemSelector).each(function (i) {
             if (i > 4) {
               $(this).addClass('hidden');
             }
           });
 
-          $('.btn-time-line', this).click(function(e) {
+          $('.btn-time-line', this).click(function (e) {
             e.preventDefault();
             $(this).hide();
             $(timelineItemSelector).removeClass('hidden');
@@ -43,17 +43,17 @@
 
   Drupal.behaviors.equal_blocks = {
     attach: function (context) {
-      $('.equal-height').once('equal-height-blocks', function() {
+      $('.equal-height').once('equal-height-blocks', function () {
         var $equal_height_block = $(this);
         if (typeof enquire !== 'undefined') {
           // Runs on device width change.
           enquire.register(Drupal.europa.breakpoints.small, {
             // Desktop.
-            match : function() {
+            match : function () {
               Drupal.behaviors.equal_blocks.fixBlockHeights($equal_height_block, false);
             },
             // Mobile.
-            unmatch : function() {
+            unmatch : function () {
               Drupal.behaviors.equal_blocks.fixBlockHeights($equal_height_block, true);
             }
           });
@@ -94,7 +94,7 @@
           }
 
           // First column always contains more items if not equal.
-          $first_column.each(function(index, item) {
+          $first_column.each(function (index, item) {
             // Only applicable if there's an item in the other column at index.
             if (!$last_column.eq(index)) {
               return;
@@ -127,7 +127,7 @@
     }
   };
 
-  Drupal.europa.collapsing = function(showText, hideText) {
+  Drupal.europa.collapsing = function (showText, hideText) {
     if (!showText) {
       showText = Drupal.t("Show");
     }
@@ -136,14 +136,14 @@
       hideText = Drupal.t("Hide");
     }
 
-    $('button[data-toggle=collapse]').each(function() {
+    $('button[data-toggle=collapse]').each(function () {
       var dependentId = $(this).attr('data-target');
       var toggler = $(dependentId).hasClass('in') ? hideText : showText;
       var arrow = $('.icon', $(this));
       var fillMe = $('.toggling-text', $(this));
       fillMe.text(toggler);
 
-      $(this).click(function() {
+      $(this).click(function () {
         var up = 'icon--up';
         var down = 'icon--down';
         var add = arrow.hasClass(down) ? up : down;
@@ -175,7 +175,7 @@
    *  Defines category in piwik.
    */
   PiwikDTT = {
-    sendTrack: function(triggerValue, action, category, value, data) {
+    sendTrack: function (triggerValue, action, category, value, data) {
       if (typeof action === "undefined" || action === null || action === '') {
         action = "trackEvent";
       }
