@@ -5784,7 +5784,7 @@ Styleguide form
     box-shadow: none; }
   .form-control:focus {
     outline: 3px solid #ffd617;
-    outline-offset: -3px;
+    outline-offset: 0px;
     text-decoration: none; }
   .form-control.is-disabled {
     color: #b3b4b5;
