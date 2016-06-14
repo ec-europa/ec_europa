@@ -16,7 +16,7 @@ Styleguide form
 
   &.has-error {
     border-width: 2px;
-    padding: 5px 11px;
+    padding: 5px 11px; 
   }
 
   // Focus state.
@@ -26,7 +26,8 @@ Styleguide form
     color: $form-control-text-color-focus;
     @include box-shadow(none);
   }
-  @include _focus_outline_border(3px, $yellow-light, -3px,none);
+
+  @include _focus_outline_border(3px, $yellow-light, 0px, none);
 
   // Disabled modifier.
   &.is-disabled {
