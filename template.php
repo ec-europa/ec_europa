@@ -721,6 +721,7 @@ function europa_link($variables) {
     $variables['options']['attributes']['class'][] = 'is-internal';
   }
 
+  // @codingStandardsIgnoreLine
   return theme_link($variables);
 }
 
@@ -855,7 +856,7 @@ function europa_preprocess_bootstrap_fieldgroup_nav(&$variables) {
   }
 
   $i = 0;
-  foreach ($variables['items'] as $key => $item) {
+  foreach ($variables['items'] as $item) {
     // Check if item is not empty and we have access to it.
     if ($item && (!isset($item['#access']) || $item['#access'])) {
       $variables['panes'][$i]['title'] = check_plain($item['#title']);
@@ -905,7 +906,7 @@ function europa_preprocess_field(&$variables) {
 function europa_preprocess_image(&$variables) {
   // Fix issue between print module and bootstrap theme, print module put a
   // string instead of an array in $variables['attributes']['class'].
-  if ($shape = theme_get_setting('bootstrap_image_responsive')) {
+  if (theme_get_setting('bootstrap_image_responsive')) {
     if (isset($variables['attributes']['class'])) {
       if (is_array($variables['attributes']['class'])) {
         $variables['attributes']['class'][] = 'img-responsive';
@@ -1061,8 +1062,6 @@ function europa_preprocess_page(&$variables) {
  * Implements hook_preprocess_views_view().
  */
 function europa_preprocess_views_view(&$variables) {
-  $view = $variables['view'];
-
   // Checking if exposed filters are set and add variable that stores active
   // filters.
   if (module_exists('dt_exposed_filter_data')) {
@@ -1076,7 +1075,6 @@ function europa_preprocess_views_view(&$variables) {
 function europa_pager($variables) {
   drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/pager.js');
 
-  $tags = $variables['tags'];
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $quantity = $variables['quantity'];
