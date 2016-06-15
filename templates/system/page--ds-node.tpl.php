@@ -85,7 +85,7 @@
  */
 ?>
 
-<?php if (!empty($page['header_top'])): ?>
+<?php if (!empty($page['header_top'])) : ?>
 <section class="header-top">
   <div class="container-fluid">
     <?php print render($page['header_top']); ?>
@@ -96,15 +96,15 @@
 <header class="site-header" role="banner">
   <div class="container-fluid">
     <a href="<?php print $front_page; ?>" class="<?php print $logo_classes; ?>" title="<?php print $page_logo_title; ?>"><span class="sr-only"><?php print $page_logo_title; ?></span></a>
-    <?php if($is_front && !empty($site_slogan)): ?>
+    <?php if ($is_front && !empty($site_slogan)) : ?>
       <p class="site-slogan"><?php print $site_slogan; ?></p>
     <?php endif; ?>
 
-    <?php if (!empty($page['header'])): ?>
+    <?php if (!empty($page['header'])) : ?>
       <section class="top-bar" aria-label="Site tools">
         <div>
           <div class="top-bar__wrapper">
-            <?php if($is_front): ?>
+            <?php if ($is_front) : ?>
               <h1 class="sr-only"><?php print $site_name; ?></h1>
               <h2 class="sr-only"><?php print t('Classes'); ?></h2>
             <?php endif; ?>
@@ -116,7 +116,7 @@
   </div>
 </header>
 
-<?php if (!empty($page['header_bottom'])): ?>
+<?php if (!empty($page['header_bottom'])) : ?>
 <nav class="page-navigation" role="navigation">
   <div class="container-fluid">
     <?php print render($page['header_bottom']); ?>
@@ -124,7 +124,7 @@
 </nav>
 <?php endif; ?>
 
-<?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+<?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])) : ?>
   <section id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -138,13 +138,13 @@
 
       <div class="navbar-collapse collapse">
         <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
+          <?php if (!empty($primary_nav)) : ?>
             <?php print render($primary_nav); ?>
           <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
+          <?php if (!empty($secondary_nav)) : ?>
             <?php print render($secondary_nav); ?>
           <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
+          <?php if (!empty($page['navigation'])) : ?>
             <?php print render($page['navigation']); ?>
           <?php endif; ?>
         </nav>
@@ -153,10 +153,16 @@
   </section>
 <?php endif; ?>
 
+<?php if (!empty($page['user'])) : ?>
+  <div class="container-fluid">
+    <?php print render($page['user']); ?>
+  </div>
+<?php endif; ?>
+
 <section class="main-content">
   <!-- Generic sections -->
   <div class="container-fluid">
-    <?php if (!empty($page['help'])): ?>
+    <?php if (!empty($page['help'])) : ?>
       <?php print render($page['help']); ?>
     <?php endif; ?>
 
@@ -172,7 +178,7 @@
   </div>
 </section>
 
-<?php if (!empty($page['footer_top'])): ?>
+<?php if (!empty($page['footer_top'])) : ?>
   <section class="footer-top">
     <div class="container-fluid">
       <?php print render($page['footer_top']); ?>
@@ -183,7 +189,7 @@
 <footer class="footer">
   <div class="container-fluid">
     <div class="row">
-      <?php if (!empty($page['footer_right'])): ?>
+      <?php if (!empty($page['footer_right'])) : ?>
         <aside class="col-sm-4 footer__column-right">
           <?php print render($page['footer_right']); ?>
         </aside>
