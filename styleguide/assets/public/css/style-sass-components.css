@@ -4808,13 +4808,20 @@ Styleguide page-header.informational-home
   border-bottom: none; }
   .page-header h1 {
     margin: 0;
+    line-height: 1.25;
     color: #fff; }
+    .page-header h1 span {
+      display: block;
+      margin-top: 0.175em;
+      font-size: 0.750em;
+      font-weight: 400;
+      line-height: 1.34; }
   .page-header p {
     margin: 0;
-    font-size: 1em;
-    line-height: 1.5;
-    color: #fff;
-    max-width: 40em; }
+    max-width: 40em;
+    font-size: 1.222em;
+    line-height: 1.45;
+    color: #fff; }
   .page-header a {
     color: #fff; }
     .page-header a:hover:not(.breadcrumb__link, .btn) {
