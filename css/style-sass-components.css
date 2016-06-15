@@ -1515,9 +1515,6 @@ Styleguide breadcrumb.collapsible
   line-height: 2.778em;
   display: inline-block;
   padding: 0 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   cursor: pointer;
   color: #fff; }
   .breadcrumb--collapsible .breadcrumb__btn-separator:hover, .breadcrumb--collapsible .breadcrumb__btn-separator:active, .breadcrumb--collapsible .breadcrumb__btn-separator:focus {
@@ -4817,27 +4814,27 @@ Styleguide page-header.informational-home
     max-width: 40em; }
   .page-header a {
     color: #fff; }
-    .page-header a:hover:not(.breadcrumb__link, .btn) {
+    .page-header a:hover:not(.breadcrumb__link):not(.btn):not(.inpage-nav__navbar .inpage-nav__toggle) {
       color: #ffd617; }
     .page-header a:focus {
       outline: 3px solid #ffd617;
       outline-offset: 2px;
       text-decoration: underline; }
-    .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
+    .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]):after {
+      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]):after {
         position: absolute;
         line-height: 2.2; }
-      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
+      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
         padding-right: 2.1em; }
-    .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title) {
+    .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title):after {
+      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title):after {
         position: absolute;
         line-height: 2.2; }
-      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title) {
+      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title) {
         padding-right: 2.1em; }
   .page-header .page-header__top,
   .page-header .page-header__main,

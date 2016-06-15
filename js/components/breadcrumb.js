@@ -14,49 +14,49 @@
 
         // Global selectors.
         var $breadcrumbSegmentsWrapper = $breadcrumbWrapper.children('.breadcrumb__segments-wrapper'),
-            $breadcrumbSegments = $breadcrumbSegmentsWrapper.children('.breadcrumb__segment'),
+            $breadcrumbSegments = $breadcrumbSegmentsWrapper.children('.breadcrumb__segment:not(".breadcrumb__segment--last")'),
             $breadcrumbSegmentFirst = $breadcrumbSegmentsWrapper.children('.breadcrumb__segment--first'),
             $breadcrumbSegmentSecond = $breadcrumbSegmentFirst.next();
+            $last = $breadcrumbSegments.slice(-1);
 
-        // Calculating items that are not hidden.
-        var $breadcrumbVisibleSegments = $breadcrumbSegments.not('.is-hidden');
 
         // Hiding breadcrumb segments when there is not enough space.
         function toggleBreadcrumbSegments() {
-          for (var i = 0; i < $breadcrumbVisibleSegments.length; i++) {
-            // Calculating sizes.
-            var breadcrumbCalculations = {};
-            breadcrumbCalculations.wrapperWidth = $breadcrumbWrapper.width();
-            breadcrumbCalculations.width = $breadcrumbSegmentsWrapper.width();
+          // Calculating items that are not hidden.
+          var $breadcrumbVisibleSegments = $breadcrumbSegments.not('.is-hidden');
+          // Calculating sizes.
+          var breadcrumbCalculations = {};
+          breadcrumbCalculations.wrapperWidth = $breadcrumbWrapper.width();
+          breadcrumbCalculations.width = $breadcrumbSegmentsWrapper.width();
+          breadcrumbCalculations.itemsWidth = 0;
 
-            breadcrumbCalculations.itemsWidth = 0;
-            $breadcrumbSegments.not('.is-hidden').each(function (i) {
-              breadcrumbCalculations.itemsWidth += $(this).outerWidth(true);
-            });
+          $breadcrumbVisibleSegments = $breadcrumbSegments.not('.is-hidden');
+          
+          for (var i = 0; i < $breadcrumbSegments.length; i++) {
+            breadcrumbCalculations.itemsWidth += $breadcrumbVisibleSegments.eq(i).outerWidth();
+          }        
+          // Local variables.
+          var $lastHiddenItem = $breadcrumbSegments.siblings('.is-hidden').last(),
+              lastHiddenItemWidth = $lastHiddenItem.width();
 
-            // Local variables.
-            var $lastHiddenItem = $breadcrumbSegments.siblings('.is-hidden').last(),
-                lastHiddenItemWidth = $lastHiddenItem.width();
-
-            // Hiding segments.
-            if (breadcrumbCalculations.wrapperWidth <= breadcrumbCalculations.itemsWidth) {
-              if ($breadcrumbSegmentSecond.hasClass('is-hidden')) {
-                $lastHiddenItem.next().not('.breadcrumb__segment--last').addClass('is-hidden');
-              }
-              else {
-                $breadcrumbSegmentFirst.addClass('breadcrumb__segment--next-hidden');
-                $breadcrumbSegmentSecond.addClass('is-hidden');
-              }
+          // Hiding segments.
+          if (breadcrumbCalculations.wrapperWidth <= breadcrumbCalculations.itemsWidth) {
+            if ($breadcrumbSegmentSecond.hasClass('is-hidden')) {
+              $lastHiddenItem.next().not('.breadcrumb__segment--last').addClass('is-hidden');
             }
+            else {
+              $breadcrumbSegmentFirst.addClass('breadcrumb__segment--next-hidden');
+              $breadcrumbSegmentSecond.addClass('is-hidden');
+            }
+          }
 
-            // Showing segments.
-            if ((breadcrumbCalculations.itemsWidth + lastHiddenItemWidth) < breadcrumbCalculations.wrapperWidth) {
-              if ($lastHiddenItem.hasClass('is-hidden')) {
-                $lastHiddenItem.removeClass('is-hidden');
-              }
-              else {
-                $breadcrumbSegmentFirst.removeClass('breadcrumb__segment--next-hidden');
-              }
+          // Showing segments.
+          if ((breadcrumbCalculations.itemsWidth + lastHiddenItemWidth) < breadcrumbCalculations.wrapperWidth) {
+            if ($lastHiddenItem.hasClass('is-hidden')) {
+              $lastHiddenItem.removeClass('is-hidden');
+            }
+            else {
+              $breadcrumbSegmentFirst.removeClass('breadcrumb__segment--next-hidden');
             }
           }
 
@@ -72,7 +72,8 @@
         // Adding button to breadcrumb element that will be used for showing
         // hidden breadcrumb elements.
         if ($breadcrumbSegments.length > 2) {
-          $breadcrumbWrapper.append('<span class="breadcrumb__btn-separator">...</span>');
+
+          $last.before('<span class="breadcrumb__btn-separator">...</span>');
           var $breadcrumbButton = $breadcrumbWrapper.find('.breadcrumb__btn-separator');
         }
 
@@ -82,6 +83,7 @@
             // Desktop.
             match : function () {
               $breadcrumbWrapper.removeClass('is-open');
+              $last.css('display', '');
 
               if ($breadcrumbButton) {
                 $breadcrumbButton.hide();
@@ -98,8 +100,9 @@
               if ($breadcrumbButton) {
                 $breadcrumbButton.show();
               }
-              $breadcrumbSegments.removeClass('is-hidden');
 
+              $last.css('display', 'block');
+              $breadcrumbSegments.removeClass('is-hidden');
               $breadcrumbSegmentFirst.removeClass('breadcrumb__segment--next-hidden');
               $(window).off('resize');
             },

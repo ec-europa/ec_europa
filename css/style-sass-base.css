@@ -5460,9 +5460,7 @@ textarea.error {
 
 .row > .row, .section .section--row-two > .row,
 .section .section--row-three > .row, .section .row > .section--row-two, .section .section--row-two > .section--row-two, .section .section--row-three > .section--row-two,
-.section .row > .section--row-three,
-.section .section--row-two > .section--row-three,
-.section .section--row-three > .section--row-three {
+.section .row > .section--row-three, .section .section--row-two > .section--row-three, .section .section--row-three > .section--row-three {
   margin: 0; }
 
 .page-navigation {
