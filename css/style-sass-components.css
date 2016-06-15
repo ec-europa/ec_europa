@@ -2249,7 +2249,7 @@ Styleguide file.2
   padding: 1em 0; }
   .file-video .content iframe {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     min-height: 260px; }
 
