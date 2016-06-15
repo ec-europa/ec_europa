@@ -19,7 +19,6 @@
             $breadcrumbSegmentSecond = $breadcrumbSegmentFirst.next();
             $last = $breadcrumbSegments.slice(-1);
 
-
         // Hiding breadcrumb segments when there is not enough space.
         function toggleBreadcrumbSegments() {
           // Calculating items that are not hidden.
@@ -31,10 +30,10 @@
           breadcrumbCalculations.itemsWidth = 0;
 
           $breadcrumbVisibleSegments = $breadcrumbSegments.not('.is-hidden');
-          
+
           for (var i = 0; i < $breadcrumbSegments.length; i++) {
             breadcrumbCalculations.itemsWidth += $breadcrumbVisibleSegments.eq(i).outerWidth();
-          }        
+          }
           // Local variables.
           var $lastHiddenItem = $breadcrumbSegments.siblings('.is-hidden').last(),
               lastHiddenItemWidth = $lastHiddenItem.width();
