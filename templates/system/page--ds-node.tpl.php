@@ -153,9 +153,9 @@
   </section>
 <?php endif; ?>
 
-<?php if (!empty($page['user'])) : ?>
+<?php if (!empty($page['top_bar'])) : ?>
   <div class="container-fluid">
-    <?php print render($page['user']); ?>
+    <?php print render($page['top_bar']); ?>
   </div>
 <?php endif; ?>
 
