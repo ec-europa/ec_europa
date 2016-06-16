@@ -4624,9 +4624,6 @@ Styleguide messages
   background-size: 2em; }
   .messages.messages--icon-center, .messages--icon-center.feedback-message {
     background-position: 1em center; }
-  .messages > :last-child, .feedback-message > :last-child {
-    margin-bottom: 0;
-    padding-bottom: 0; }
   .messages.status, .status.feedback-message {
     border-color: #467a39;
     background-image: url("../images/svg/messages-success.svg"); }
@@ -4645,6 +4642,7 @@ Styleguide messages
     padding-top: 0; }
   .messages p, .feedback-message p {
     max-width: 95%;
+    margin-bottom: 0;
     font-size: 0.889em; }
 
 .messages__list, .messages ul, .feedback-message ul {

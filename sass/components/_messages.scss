@@ -30,11 +30,6 @@ $messages-icon-size: 2em;
     background-position: 1em center;
   }
 
-  > :last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
   &.status {
     border-color: $green;
     background-image: url("../images/svg/messages-success.svg");
@@ -64,6 +59,7 @@ $messages-icon-size: 2em;
 
   p {
     max-width: 95%;
+    margin-bottom: 0;
     font-size: $messages-text-size;
   }
 }
@@ -77,6 +73,7 @@ $messages-icon-size: 2em;
 
 .messages__list-item {
   margin-top: 0.5em;
+
   &:first-child {
     margin-top: 0;
   }
@@ -105,6 +102,7 @@ $messages-icon-size: 2em;
   .alert {
     .close {
       background-image: url("../images/png/close.png");
+
       &:hover {
         background-image: url("../images/png/close_hover.png");
       }
@@ -116,6 +114,7 @@ $messages-icon-size: 2em;
 .messages {
   ul {
     @extend .messages__list;
+
     li {
       @extend .messages__list-item;
     }
@@ -135,6 +134,7 @@ $messages-icon-size: 2em;
 
     background: url("../images/svg/close.svg") no-repeat right top;
     padding: 0 0 0 5px;
+
     &:hover {
       background-image: url("../images/svg/close_hover.svg");
     }
