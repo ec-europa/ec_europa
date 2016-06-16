@@ -1573,10 +1573,25 @@ Styleguide breadcrumb.collapsible
       top: -4px;
       color: #ffffff; }
     .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
+      text-decoration: none;
+      font-family: 'EuropaIcons';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      margin-right: 4px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       display: inline-block !important;
       position: absolute;
-      right: 7px;
-      top: 30%; }
+      right: 0;
+      top: 30%;
+      color: #fff;
+      line-height: inherit !important;
+      margin-left: 8px !important;
+      font-size: 0.778em;
+      content: '\e828' !important; }
   .breadcrumb--collapsible .breadcrumb__btn-separator {
     display: none; }
   .breadcrumb--collapsible .breadcrumb__segment--first {
