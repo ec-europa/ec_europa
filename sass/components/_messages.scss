@@ -62,15 +62,9 @@ $messages-icon-size: 2em;
     padding-top: 0;
   }
 
-  p,
-  ul {
-    max-width: 100%;
-    margin-bottom: 0 !important;
-  }
-
-  li {
+  p {
+    max-width: 95%;
     font-size: $messages-text-size;
-    list-style-type: none;
   }
 }
 
