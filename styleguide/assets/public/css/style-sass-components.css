@@ -2247,6 +2247,11 @@ Styleguide file.2
 .file-video {
   background: none;
   padding: 1em 0; }
+  .file-video .content iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 260px; }
 
 .file-video--withbackground {
   background: #ececec; }
