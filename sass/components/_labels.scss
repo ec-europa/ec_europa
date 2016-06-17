@@ -82,7 +82,8 @@ $label_text_color_light: #fff;
 }
 
 .label--block {
-  margin-bottom: 1em;
+  display: inline-block;
+  margin-bottom: 0.833em;
 }
 
 .label--high {

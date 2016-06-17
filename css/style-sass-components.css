@@ -3532,7 +3532,8 @@ Styleguide labels
   background-color: #ececec; }
 
 .label--block {
-  margin-bottom: 1em; }
+  display: inline-block;
+  margin-bottom: 0.833em; }
 
 .label--high {
   min-height: 2.75em;
@@ -4018,8 +4019,7 @@ a.listing__title {
   .listing__item > p,
   .listing__item .listing__column-main > p,
   .listing__item .listing__item-link > p {
-    font-size: 0.889em;
-    border: 1px solid red; }
+    font-size: 0.889em; }
 
 .listing__item--fullwidth {
   max-width: none; }
