@@ -516,6 +516,13 @@ a.listing__title {
   p {
     margin-bottom: 0;
   }
+
+  > p,
+  .listing__column-main > p,
+  .listing__item-link > p {
+    font-size: $font-size-little;
+    border: 1px solid red;
+  }
 }
 
 .listing__item--fullwidth {
@@ -626,10 +633,6 @@ a.listing__title {
   a:link &,
   a:visited & {
     color: $brand-primary;
-  }
-
-  & ~ * {
-    font-size: $font-size-little;
   }
 }
 

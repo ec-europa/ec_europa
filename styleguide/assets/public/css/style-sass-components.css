@@ -4015,6 +4015,11 @@ a.listing__title {
     text-decoration: underline; }
   .listing__item p {
     margin-bottom: 0; }
+  .listing__item > p,
+  .listing__item .listing__column-main > p,
+  .listing__item .listing__item-link > p {
+    font-size: 0.889em;
+    border: 1px solid red; }
 
 .listing__item--fullwidth {
   max-width: none; }
@@ -4097,8 +4102,6 @@ a.listing__title {
   a:link .listing__title,
   a:visited .listing__title {
     color: #004494; }
-  .listing__title ~ * {
-    font-size: 0.889em; }
 
 .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
   margin-left: 10px;
