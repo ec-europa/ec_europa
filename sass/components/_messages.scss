@@ -129,13 +129,14 @@ $messages-icon-size: 2em;
   border-radius: 0;
 
   .close {
-    text-shadow: none;
+    position: absolute;
+    right: 0.715em;
+    padding: 0 0 0 5px;
+    background: url("../images/svg/close.svg") no-repeat right top;
     color: transparent;
+    text-shadow: none;
     text-decoration: none;
     opacity: 1;
-
-    background: url("../images/svg/close.svg") no-repeat right top;
-    padding: 0 0 0 5px;
 
     &:hover {
       background-image: url("../images/svg/close_hover.svg");

@@ -4677,12 +4677,14 @@ Styleguide messages
   margin: 1.667em 0;
   border-radius: 0; }
   .alert .close {
-    text-shadow: none;
-    color: transparent;
-    text-decoration: none;
-    opacity: 1;
+    position: absolute;
+    right: 0.715em;
+    padding: 0 0 0 5px;
     background: url("../images/svg/close.svg") no-repeat right top;
-    padding: 0 0 0 5px; }
+    color: transparent;
+    text-shadow: none;
+    text-decoration: none;
+    opacity: 1; }
     .alert .close:hover {
       background-image: url("../images/svg/close_hover.svg"); }
 
