@@ -2144,7 +2144,7 @@ Styleguide field
     padding: 0; }
 
 .field__label {
-  margin-bottom: 0.444em;
+  margin-bottom: 0.430em;
   font-size: 0.778em;
   font-weight: 600; }
   .field__label a:focus {
@@ -2156,7 +2156,7 @@ Styleguide field
 .field--labeled .field__label {
   display: block;
   margin-bottom: 0;
-  padding-top: 0.111em; }
+  padding-top: 0.215em; }
 
 .field--labeled .field__items {
   display: block; }
