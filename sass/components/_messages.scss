@@ -14,8 +14,7 @@ $messages-text-size: $font-size-little;
 $messages-icon-size: 2em;
 
 .messages {
-  border: 2px solid;
-  border-color: $blue;
+  border: 2px solid $blue;
   color: $messages-text-color;
   font-family: $font-family-sans-serif;
   font-size: $messages-text-size;
@@ -28,11 +27,6 @@ $messages-icon-size: 2em;
 
   &.messages--icon-center {
     background-position: 1em center;
-  }
-
-  > :last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
   }
 
   &.status {
@@ -61,15 +55,14 @@ $messages-icon-size: 2em;
     padding-top: 0;
   }
 
-  p,
-  ul {
-    max-width: 100%;
-    margin-bottom: 0 !important;
+  p {
+    max-width: 95%;
+    margin-bottom: 0;
+    font-size: $messages-text-size;
   }
 
-  li {
-    font-size: $messages-text-size;
-    list-style-type: none;
+  > :last-child {
+    padding-bottom: 0;
   }
 }
 
@@ -82,6 +75,7 @@ $messages-icon-size: 2em;
 
 .messages__list-item {
   margin-top: 0.5em;
+
   &:first-child {
     margin-top: 0;
   }
@@ -110,6 +104,7 @@ $messages-icon-size: 2em;
   .alert {
     .close {
       background-image: url("../images/png/close.png");
+
       &:hover {
         background-image: url("../images/png/close_hover.png");
       }
@@ -121,6 +116,7 @@ $messages-icon-size: 2em;
 .messages {
   ul {
     @extend .messages__list;
+
     li {
       @extend .messages__list-item;
     }
@@ -133,13 +129,15 @@ $messages-icon-size: 2em;
   border-radius: 0;
 
   .close {
-    text-shadow: none;
+    position: absolute;
+    right: 0.715em;
+    padding: 0 0 0 5px;
+    background: url("../images/svg/close.svg") no-repeat right top;
     color: transparent;
+    text-shadow: none;
     text-decoration: none;
     opacity: 1;
 
-    background: url("../images/svg/close.svg") no-repeat right top;
-    padding: 0 0 0 5px;
     &:hover {
       background-image: url("../images/svg/close_hover.svg");
     }

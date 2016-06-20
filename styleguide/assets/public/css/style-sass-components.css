@@ -4636,8 +4636,7 @@ Markup: html/messages.html
 Styleguide messages
 */
 .messages, .feedback-message {
-  border: 2px solid;
-  border-color: #006fb4;
+  border: 2px solid #006fb4;
   color: #404040;
   font-family: Arial, sans-serif;
   font-size: 0.889em;
@@ -4649,9 +4648,6 @@ Styleguide messages
   background-size: 2em; }
   .messages.messages--icon-center, .messages--icon-center.feedback-message {
     background-position: 1em center; }
-  .messages > :last-child, .feedback-message > :last-child {
-    margin-bottom: 0;
-    padding-bottom: 0; }
   .messages.status, .status.feedback-message {
     border-color: #467a39;
     background-image: url("../images/svg/messages-success.svg"); }
@@ -4668,13 +4664,12 @@ Styleguide messages
     font-size: inherit;
     font-weight: bold;
     padding-top: 0; }
-  .messages p, .feedback-message p,
-  .messages ul, .feedback-message ul {
-    max-width: 100%;
-    margin-bottom: 0 !important; }
-  .messages li, .feedback-message li {
-    font-size: 0.889em;
-    list-style-type: none; }
+  .messages p, .feedback-message p {
+    max-width: 95%;
+    margin-bottom: 0;
+    font-size: 0.889em; }
+  .messages > :last-child, .feedback-message > :last-child {
+    padding-bottom: 0; }
 
 .messages__list, .messages ul, .feedback-message ul {
   padding-left: 0;
@@ -4707,12 +4702,14 @@ Styleguide messages
   margin: 1.667em 0;
   border-radius: 0; }
   .alert .close {
-    text-shadow: none;
-    color: transparent;
-    text-decoration: none;
-    opacity: 1;
+    position: absolute;
+    right: 0.715em;
+    padding: 0 0 0 5px;
     background: url("../images/svg/close.svg") no-repeat right top;
-    padding: 0 0 0 5px; }
+    color: transparent;
+    text-shadow: none;
+    text-decoration: none;
+    opacity: 1; }
     .alert .close:hover {
       background-image: url("../images/svg/close_hover.svg"); }
 
