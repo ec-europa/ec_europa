@@ -4611,8 +4611,7 @@ Markup: html/messages.html
 Styleguide messages
 */
 .messages, .feedback-message {
-  border: 2px solid;
-  border-color: #006fb4;
+  border: 2px solid #006fb4;
   color: #404040;
   font-family: Arial, sans-serif;
   font-size: 0.889em;
@@ -4644,6 +4643,8 @@ Styleguide messages
     max-width: 95%;
     margin-bottom: 0;
     font-size: 0.889em; }
+  .messages > :last-child, .feedback-message > :last-child {
+    padding-bottom: 0; }
 
 .messages__list, .messages ul, .feedback-message ul {
   padding-left: 0;

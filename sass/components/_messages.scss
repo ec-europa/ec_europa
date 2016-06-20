@@ -14,8 +14,7 @@ $messages-text-size: $font-size-little;
 $messages-icon-size: 2em;
 
 .messages {
-  border: 2px solid;
-  border-color: $blue;
+  border: 2px solid $blue;
   color: $messages-text-color;
   font-family: $font-family-sans-serif;
   font-size: $messages-text-size;
@@ -60,6 +59,10 @@ $messages-icon-size: 2em;
     max-width: 95%;
     margin-bottom: 0;
     font-size: $messages-text-size;
+  }
+
+  > :last-child {
+    padding-bottom: 0;
   }
 }
 
