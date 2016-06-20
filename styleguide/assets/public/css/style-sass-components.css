@@ -2149,25 +2149,32 @@ Markup: html/field.html
 
 Styleguide field
 */
-.field .sections .container {
-  padding: 0; }
+.field {
+  margin-bottom: 0.556em;
+  line-height: normal; }
+  .field .sections .container {
+    padding: 0; }
 
 .field__label {
+  margin-bottom: 0.430em;
   font-size: 0.778em;
-  line-height: 2em;
   font-weight: 600; }
   .field__label a:focus {
     outline-offset: 2px; }
 
-.field--labeled {
-  margin-bottom: 0.556em; }
-  .field--labeled:last-child {
-    margin-bottom: 0; }
-  .field--labeled .field__label,
-  .field--labeled .field__items {
-    display: block; }
-  .field--labeled a:focus {
-    outline-offset: 2px; }
+.field--labeled:last-child {
+  margin-bottom: 0; }
+
+.field--labeled .field__label {
+  display: block;
+  margin-bottom: 0;
+  padding-top: 0.215em; }
+
+.field--labeled .field__items {
+  display: block; }
+
+.field--labeled a:focus {
+  outline-offset: 2px; }
 
 .field--labeled-align a:focus {
   outline-offset: 2px; }
@@ -3501,13 +3508,12 @@ Styleguide labels
 */
 .label {
   display: inline-block;
-  padding: 0 0.5em;
-  border-radius: 0;
+  padding: 0.475em 0.5em 0.5em;
   font-size: 0.67em;
   font-weight: normal;
   letter-spacing: 0.12em;
   color: #404040;
-  line-height: 2; }
+  border-radius: 0; }
 
 .label--default {
   color: #fff; }
@@ -3543,7 +3549,8 @@ Styleguide labels
   background-color: #ececec; }
 
 .label--block {
-  margin-bottom: 1em; }
+  display: inline-block;
+  margin-bottom: 0.833em; }
 
 .label--high {
   min-height: 2.75em;
@@ -3555,11 +3562,11 @@ Styleguide labels
   padding-left: 0; }
 
 .label--meta, .label--meta-medium {
-  margin: 0.25em 1.3em 0.3em 0.5em; }
+  margin: 0.25em 1.3em 0.3em 0; }
 
 .label--meta-medium {
   font-size: 75%;
-  margin: 0.35em 0.5em 0.45em 0.5em; }
+  margin: 0.35em 0.5em 0.45em 0; }
 
 /*
 Language select (Site)
@@ -3997,7 +4004,7 @@ a.listing__title {
   float: left; }
 
 .listing__column-main .listing__with {
-  margin-top: 0px; }
+  margin-top: 0; }
 
 .listing--meta .listing__title {
   margin-bottom: 0; }
@@ -4013,8 +4020,7 @@ a.listing__title {
 .listing__item {
   border-bottom: 1px solid #ececec;
   list-style: none;
-  list-style-image: none;
-  padding: 1.22em 0 1.11em;
+  padding: 1.111em 0;
   max-width: 32em;
   width: 100%;
   float: left; }
@@ -4027,6 +4033,10 @@ a.listing__title {
     text-decoration: underline; }
   .listing__item p {
     margin-bottom: 0; }
+  .listing__item > p,
+  .listing__item .listing__column-main > p,
+  .listing__item .listing__item-link > p {
+    font-size: 0.889em; }
 
 .listing__item--fullwidth {
   max-width: none; }
@@ -4109,8 +4119,6 @@ a.listing__title {
   a:link .listing__title,
   a:visited .listing__title {
     color: #004494; }
-  .listing__title ~ * {
-    font-size: 0.889em; }
 
 .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
   margin-left: 10px;

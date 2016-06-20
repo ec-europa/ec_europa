@@ -12,6 +12,9 @@ Styleguide field
 */
 
 .field {
+  margin-bottom: 0.556em;
+  line-height: normal;
+
   .label-above {
     @extend .h3;
   }
@@ -23,8 +26,8 @@ Styleguide field
 }
 
 .field__label {
+  margin-bottom: 0.430em;
   font-size: $font-size-xsmall;
-  line-height: 2em;
   font-weight: $font-weight-bold;
 
   a:focus {
@@ -33,13 +36,16 @@ Styleguide field
 }
 
 .field--labeled {
-  margin-bottom: 0.556em;
-
   &:last-child {
     margin-bottom: 0;
   }
 
-  .field__label,
+  .field__label {
+    display: block;
+    margin-bottom: 0;
+    padding-top: 0.215em;
+  }
+
   .field__items {
     display: block;
   }
