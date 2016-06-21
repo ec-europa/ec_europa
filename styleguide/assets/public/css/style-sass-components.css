@@ -2150,31 +2150,28 @@ Markup: html/field.html
 Styleguide field
 */
 .field {
-  margin-bottom: 0.556em;
   line-height: normal; }
   .field .sections .container {
     padding: 0; }
 
 .field__label {
-  margin-bottom: 0.430em;
+  padding: 0.500em 0 0.430em 0;
   font-size: 0.778em;
   font-weight: 600; }
   .field__label a:focus {
     outline-offset: 2px; }
 
-.field--labeled:last-child {
-  margin-bottom: 0; }
-
-.field--labeled .field__label {
-  display: block;
-  margin-bottom: 0;
-  padding-top: 0.215em; }
-
-.field--labeled .field__items {
-  display: block; }
-
-.field--labeled a:focus {
-  outline-offset: 2px; }
+.field--labeled {
+  margin-bottom: 0.556em; }
+  .field--labeled:last-child {
+    margin-bottom: 0; }
+  .field--labeled .field__label {
+    display: block;
+    padding: 0.215em 0 0 0; }
+  .field--labeled .field__items {
+    display: block; }
+  .field--labeled a:focus {
+    outline-offset: 2px; }
 
 .field--labeled-align a:focus {
   outline-offset: 2px; }
@@ -4839,27 +4836,27 @@ Styleguide page-header.informational-home
     max-width: 40em; }
   .page-header a {
     color: #fff; }
-    .page-header a:hover:not(.breadcrumb__link):not(.btn):not(.inpage-nav__navbar .inpage-nav__toggle) {
+    .page-header a:hover:not(.breadcrumb__link, .btn) {
       color: #ffd617; }
     .page-header a:focus {
       outline: 3px solid #ffd617;
       outline-offset: 2px;
       text-decoration: underline; }
-    .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
+    .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]):after {
+      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]):after {
         position: absolute;
         line-height: 2.2; }
-      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
+      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
         padding-right: 2.1em; }
-    .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title) {
+    .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title):after {
+      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title):after {
         position: absolute;
         line-height: 2.2; }
-      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title) {
+      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title) {
         padding-right: 2.1em; }
   .page-header .page-header__top,
   .page-header .page-header__main,
