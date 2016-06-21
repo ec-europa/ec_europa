@@ -2149,20 +2149,19 @@ Markup: html/field.html
 
 Styleguide field
 */
-.field {
-  line-height: normal; }
-  .field .sections .container {
-    padding: 0; }
+.field .sections .container {
+  padding: 0; }
 
 .field__label {
-  padding: 0.500em 0 0.430em 0;
+  padding: 0.215em 0 0.145em 0;
   font-size: 0.778em;
   font-weight: 600; }
   .field__label a:focus {
     outline-offset: 2px; }
 
 .field--labeled {
-  margin-bottom: 0.556em; }
+  margin-bottom: 0.556em;
+  line-height: normal; }
   .field--labeled:last-child {
     margin-bottom: 0; }
   .field--labeled .field__label {
