@@ -49,8 +49,9 @@
 <!--[if (gt IE 8)|!(IE)]><!-->
   <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces;?>>
 <!--<![endif]-->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head profile="<?php print $grddl_profile; ?>">
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
