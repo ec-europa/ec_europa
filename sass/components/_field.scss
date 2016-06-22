@@ -12,8 +12,6 @@ Styleguide field
 */
 
 .field {
-  line-height: normal;
-
   .label-above {
     @extend .h3;
   }
@@ -25,7 +23,7 @@ Styleguide field
 }
 
 .field__label {
-  padding: 0.500em 0 0.430em 0;
+  padding: 0.215em 0 0.145em 0;
   font-size: $font-size-xsmall;
   font-weight: $font-weight-bold;
 
@@ -36,6 +34,7 @@ Styleguide field
 
 .field--labeled {
   margin-bottom: 0.556em;
+  line-height: normal;
 
   &:last-child {
     margin-bottom: 0;
