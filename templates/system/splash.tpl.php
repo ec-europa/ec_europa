@@ -21,23 +21,25 @@
 
   <?php print $languages_list; ?>
 
-  <?php if (isset($overlay_helper_text) || $splash_helper_text): ?>
+  <?php if (isset($overlay_helper_text) || isset($splash_helper_text)): ?>
     <div class="splash-page__helper-text">
 
-      <div class="overlay-helper-text">
-        <?php print $overlay_helper_text; ?>
-      </div>
+      <?php if (isset($overlay_helper_text)): ?>
+        <div class="overlay-helper-text">
+          <?php print $overlay_helper_text; ?>
+        </div>
+      <?php endif; ?>
 
-      <div class="splash-helper-text">
-        <?php print $splash_helper_text; ?>
-      </div>
+      <?php if (isset($splash_helper_text)): ?>
+        <div class="splash-helper-text">
+          <?php print $splash_helper_text; ?>
+        </div>
+      <?php endif; ?>
 
     </div>
   <?php endif; ?>
 
-
   <?php if (isset($close_button)): ?>
     <?php print $close_button; ?>
   <?php endif; ?>
-
 </nav>
