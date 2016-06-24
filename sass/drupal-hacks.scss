@@ -17,21 +17,17 @@
       }
     }
   }
-
   .view-workbench-moderation {
     .views-exposed-widget {
       width: 50%;
       clear: none;
-
       &:nth-child(odd) {
         padding-right: 2%;
       }
     }
-
     .views-widget-per-page {
       clear: left;
     }
-
     .filters__btn-submit {
       width: auto;
       float: left;
@@ -41,12 +37,11 @@
 }
 
 //VBO hacks
-.page-admin {
-  input[type='checkbox'] {
+.page-admin{
+  input[type='checkbox']{
     zoom: 1.6;
     margin-left: 0;
-
-    &.vbo-table-select-all {
+    &.vbo-table-select-all{
       position: static;
     }
   }

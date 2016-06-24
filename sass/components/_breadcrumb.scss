@@ -145,6 +145,9 @@ Styleguide breadcrumb.collapsible
     line-height: $breadcrumb-heigth;
     display: inline-block;
     padding: 0 10px;
+    position: absolute;
+    bottom:0;
+    left:0;
     cursor: pointer;
     color: #fff;
 
@@ -229,7 +232,7 @@ Styleguide breadcrumb.collapsible
         padding-right: 25px;
 
         &:after {
-          content: '...'; 
+          content: '...';
           display: inline-block !important;
           position: relative;
           top: -4px;
@@ -237,25 +240,10 @@ Styleguide breadcrumb.collapsible
         }
 
         &:before {
-          text-decoration: none;
-          font-family: 'EuropaIcons';
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          margin-right: 4px;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
           display: inline-block !important;
           position: absolute;
-          right: 0;
+          right: 7px;
           top: 30%;
-          color: #fff;
-          line-height: inherit !important;
-          margin-left: 8px !important;
-          font-size: $font-size-xsmall;
-          content: '\e828' !important;
         }
       }
     }
