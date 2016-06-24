@@ -4660,10 +4660,13 @@ Styleguide messages
     font-size: inherit;
     font-weight: bold;
     padding-top: 0; }
+  .messages ul, .feedback-message ul,
   .messages p, .feedback-message p {
     max-width: 95%;
     margin-bottom: 0;
     font-size: 0.889em; }
+  .messages li, .feedback-message li {
+    list-style-type: none; }
   .messages > :last-child, .feedback-message > :last-child {
     padding-bottom: 0; }
 
