@@ -70,7 +70,7 @@
           enquire.register('screen and (min-width: 992px)', {
             // Desktop.
             match : function () {
-                $filtersWrapper = $(".filters__wrapper");
+              $filtersWrapper = $(".filters__wrapper");
 
               $filtersSubmit.addClass('ctools-auto-submit-click');
 
@@ -141,6 +141,11 @@
           });
         }
       });
+
+      // Check and show Clear button.
+      if (window.location.search != "") {
+        $(".js-showonsubmit").show();
+      }
     }
   };
 })(jQuery);
