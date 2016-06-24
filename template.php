@@ -545,7 +545,6 @@ function europa_easy_breadcrumb(&$variables) {
       }
       elseif ($i == ($s - 1)) {
         $classes[] = 'breadcrumb__segment--last';
-        $classes[] = 'element-invisible';
       }
 
       $content = '<span class="breadcrumb__text">' . check_plain(decode_entities($item['content'])) . '</span>';
