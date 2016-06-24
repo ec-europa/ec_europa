@@ -747,6 +747,8 @@ function europa_preprocess_block(&$variables) {
 
   // Page-level language switcher.
   if (isset($block->bid) && $block->bid === 'language_selector_page-language_selector_page') {
+    global $language;
+
     // selectify.js is the library to convert between ul and select.
     drupal_add_js(drupal_get_path('theme', 'europa') . '/js/selectify.js');
     drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/lang-switcher.js');
@@ -772,6 +774,7 @@ function europa_preprocess_block(&$variables) {
         $options['attributes']['lang'] = $code;
         $options['attributes']['hreflang'] = $code;
         $options['attributes']['rel'] = 'alternate';
+        $options['language'] = $language;
 
         $other .= '<li class="lang-select-page__option lang-select-page__other">' . l($lang->native, current_path(), $options) . '</li>';
       }
