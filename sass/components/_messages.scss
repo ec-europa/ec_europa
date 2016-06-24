@@ -55,10 +55,15 @@ $messages-icon-size: 2em;
     padding-top: 0;
   }
 
+  ul,
   p {
     max-width: 95%;
     margin-bottom: 0;
     font-size: $messages-text-size;
+  }
+
+  li {
+    list-style-type: none;
   }
 
   > :last-child {
