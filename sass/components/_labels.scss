@@ -21,12 +21,13 @@ $label_text_color_light: #fff;
 
 .label {
   display: inline-block;
-  padding: 0.475em 0.5em 0.5em;
+  padding: 0 0.5em;
+  border-radius: 0;
   font-size: $font-size-xxsmall;
   font-weight: normal;
   letter-spacing: 0.12em;
   color: $grey-base;
-  border-radius: 0;
+  line-height: 2;
 }
 
 .label--default {
@@ -82,8 +83,7 @@ $label_text_color_light: #fff;
 }
 
 .label--block {
-  display: inline-block;
-  margin-bottom: 0.833em;
+  margin-bottom: 1em;
 }
 
 .label--high {
@@ -99,11 +99,11 @@ $label_text_color_light: #fff;
 
 .label--meta {
   @extend .meta__item;
-  margin: 0.25em 1.3em 0.3em 0;
+  margin: 0.25em 1.3em 0.3em 0.5em;
 }
 
 .label--meta-medium {
   @extend .label--meta;
   font-size: 75%;
-  margin: 0.35em 0.5em 0.45em 0;
+  margin: 0.35em 0.5em 0.45em 0.5em;
 }

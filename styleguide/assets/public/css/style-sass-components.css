@@ -1514,6 +1514,9 @@ Styleguide breadcrumb.collapsible
   line-height: 2.778em;
   display: inline-block;
   padding: 0 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   cursor: pointer;
   color: #fff; }
   .breadcrumb--collapsible .breadcrumb__btn-separator:hover, .breadcrumb--collapsible .breadcrumb__btn-separator:active, .breadcrumb--collapsible .breadcrumb__btn-separator:focus {
@@ -1572,25 +1575,10 @@ Styleguide breadcrumb.collapsible
       top: -4px;
       color: #ffffff; }
     .breadcrumb--collapsible .breadcrumb__segment.breadcrumb__segment--next-hidden:before {
-      text-decoration: none;
-      font-family: 'EuropaIcons';
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      margin-right: 4px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       display: inline-block !important;
       position: absolute;
-      right: 0;
-      top: 30%;
-      color: #fff;
-      line-height: inherit !important;
-      margin-left: 8px !important;
-      font-size: 0.778em;
-      content: '\e828' !important; }
+      right: 7px;
+      top: 30%; }
   .breadcrumb--collapsible .breadcrumb__btn-separator {
     display: none; }
   .breadcrumb--collapsible .breadcrumb__segment--first {
@@ -2153,20 +2141,17 @@ Styleguide field
   padding: 0; }
 
 .field__label {
-  padding: 0.215em 0 0.145em 0;
   font-size: 0.778em;
+  line-height: 2em;
   font-weight: 600; }
   .field__label a:focus {
     outline-offset: 2px; }
 
 .field--labeled {
-  margin-bottom: 0.556em;
-  line-height: normal; }
+  margin-bottom: 0.556em; }
   .field--labeled:last-child {
     margin-bottom: 0; }
-  .field--labeled .field__label {
-    display: block;
-    padding: 0.215em 0 0 0; }
+  .field--labeled .field__label,
   .field--labeled .field__items {
     display: block; }
   .field--labeled a:focus {
@@ -2262,11 +2247,6 @@ Styleguide file.2
 .file-video {
   background: none;
   padding: 1em 0; }
-  .file-video .content iframe {
-    display: block;
-    width: 100%;
-    height: auto;
-    min-height: 260px; }
 
 .file-video--withbackground {
   background: #ececec; }
@@ -3504,12 +3484,13 @@ Styleguide labels
 */
 .label {
   display: inline-block;
-  padding: 0.475em 0.5em 0.5em;
+  padding: 0 0.5em;
+  border-radius: 0;
   font-size: 0.67em;
   font-weight: normal;
   letter-spacing: 0.12em;
   color: #404040;
-  border-radius: 0; }
+  line-height: 2; }
 
 .label--default {
   color: #fff; }
@@ -3545,8 +3526,7 @@ Styleguide labels
   background-color: #ececec; }
 
 .label--block {
-  display: inline-block;
-  margin-bottom: 0.833em; }
+  margin-bottom: 1em; }
 
 .label--high {
   min-height: 2.75em;
@@ -3558,11 +3538,11 @@ Styleguide labels
   padding-left: 0; }
 
 .label--meta, .label--meta-medium {
-  margin: 0.25em 1.3em 0.3em 0; }
+  margin: 0.25em 1.3em 0.3em 0.5em; }
 
 .label--meta-medium {
   font-size: 75%;
-  margin: 0.35em 0.5em 0.45em 0; }
+  margin: 0.35em 0.5em 0.45em 0.5em; }
 
 /*
 Language select (Site)
@@ -4002,7 +3982,7 @@ a.listing__title {
   float: left; }
 
 .listing__column-main .listing__with {
-  margin-top: 0; }
+  margin-top: 0px; }
 
 .listing--meta .listing__title {
   margin-bottom: 0; }
@@ -4018,7 +3998,8 @@ a.listing__title {
 .listing__item {
   border-bottom: 1px solid #ececec;
   list-style: none;
-  padding: 1.111em 0;
+  list-style-image: none;
+  padding: 1.22em 0 1.11em;
   max-width: 32em;
   width: 100%;
   float: left; }
@@ -4031,10 +4012,6 @@ a.listing__title {
     text-decoration: underline; }
   .listing__item p {
     margin-bottom: 0; }
-  .listing__item > p,
-  .listing__item .listing__column-main > p,
-  .listing__item .listing__item-link > p {
-    font-size: 0.889em; }
 
 .listing__item--fullwidth {
   max-width: none; }
@@ -4117,6 +4094,8 @@ a.listing__title {
   a:link .listing__title,
   a:visited .listing__title {
     color: #004494; }
+  .listing__title ~ * {
+    font-size: 0.889em; }
 
 .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after {
   margin-left: 10px;
@@ -4634,7 +4613,8 @@ Markup: html/messages.html
 Styleguide messages
 */
 .messages, .feedback-message {
-  border: 2px solid #006fb4;
+  border: 2px solid;
+  border-color: #006fb4;
   color: #404040;
   font-family: Arial, sans-serif;
   font-size: 0.889em;
@@ -4646,6 +4626,9 @@ Styleguide messages
   background-size: 2em; }
   .messages.messages--icon-center, .messages--icon-center.feedback-message {
     background-position: 1em center; }
+  .messages > :last-child, .feedback-message > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0; }
   .messages.status, .status.feedback-message {
     border-color: #467a39;
     background-image: url("../images/svg/messages-success.svg"); }
@@ -4703,14 +4686,12 @@ Styleguide messages
   margin: 1.667em 0;
   border-radius: 0; }
   .alert .close {
-    position: absolute;
-    right: 0.715em;
-    padding: 0 0 0 5px;
-    background: url("../images/svg/close.svg") no-repeat right top;
-    color: transparent;
     text-shadow: none;
+    color: transparent;
     text-decoration: none;
-    opacity: 1; }
+    opacity: 1;
+    background: url("../images/svg/close.svg") no-repeat right top;
+    padding: 0 0 0 5px; }
     .alert .close:hover {
       background-image: url("../images/svg/close_hover.svg"); }
 
@@ -4831,20 +4812,13 @@ Styleguide page-header.informational-home
   border-bottom: none; }
   .page-header h1 {
     margin: 0;
-    line-height: 1.25;
     color: #fff; }
-    .page-header h1 span {
-      display: block;
-      margin-top: 0.175em;
-      font-size: 0.750em;
-      font-weight: 400;
-      line-height: 1.34; }
   .page-header p {
     margin: 0;
-    max-width: 40em;
-    font-size: 1.222em;
-    line-height: 1.45;
-    color: #fff; }
+    font-size: 1em;
+    line-height: 1.5;
+    color: #fff;
+    max-width: 40em; }
   .page-header a {
     color: #fff; }
     .page-header a:hover:not(.breadcrumb__link, .btn) {
