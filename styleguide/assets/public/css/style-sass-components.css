@@ -1431,7 +1431,6 @@ Styleguide breadcrumb
   .breadcrumb ol,
   .breadcrumb ul {
     list-style: none;
-    list-style-image: none;
     padding: 0;
     margin: 0;
     max-width: none; }
@@ -4643,13 +4642,15 @@ Styleguide messages
     font-size: inherit;
     font-weight: bold;
     padding-top: 0; }
-  .messages p, .feedback-message p,
-  .messages ul, .feedback-message ul {
-    max-width: 100%;
-    margin-bottom: 0 !important; }
+  .messages ul, .feedback-message ul,
+  .messages p, .feedback-message p {
+    max-width: 95%;
+    margin-bottom: 0;
+    font-size: 0.889em; }
   .messages li, .feedback-message li {
-    font-size: 0.889em;
     list-style-type: none; }
+  .messages > :last-child, .feedback-message > :last-child {
+    padding-bottom: 0; }
 
 .messages__list, .messages ul, .feedback-message ul {
   padding-left: 0;
