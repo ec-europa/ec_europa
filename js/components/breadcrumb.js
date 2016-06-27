@@ -14,7 +14,7 @@
 
         // Global selectors.
         var $breadcrumbSegmentsWrapper = $breadcrumbWrapper.children('.breadcrumb__segments-wrapper'),
-            $breadcrumbSegments = $breadcrumbSegmentsWrapper.children('.breadcrumb__segment:not(".breadcrumb__segment--last")'),
+            $breadcrumbSegments = $breadcrumbSegmentsWrapper.children('.breadcrumb__segment'),
             $breadcrumbSegmentFirst = $breadcrumbSegmentsWrapper.children('.breadcrumb__segment--first'),
             $breadcrumbSegmentSecond = $breadcrumbSegmentFirst.next(),
             $last = $breadcrumbSegments.slice(-1);
