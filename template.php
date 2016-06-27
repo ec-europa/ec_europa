@@ -136,11 +136,11 @@ function europa_form_element(&$variables) {
   }
   if (!empty($element['#name'])) {
     $attributes['class'][] = 'form-item-' . strtr($element['#name'], array(
-        ' ' => '-',
-        '_' => '-',
-        '[' => '-',
-        ']' => '',
-      ));
+      ' ' => '-',
+      '_' => '-',
+      '[' => '-',
+      ']' => '',
+    ));
   }
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
@@ -552,7 +552,7 @@ function europa_easy_breadcrumb(&$variables) {
       if (isset($item['url'])) {
         $full_item = l($content, $item['url'], array(
           'attributes' => $attributes,
-          'html' => TRUE
+          'html' => TRUE,
         ));
       }
       else {
@@ -920,7 +920,7 @@ function europa_preprocess_image(&$variables) {
       else {
         $variables['attributes']['class'] = array(
           $variables['attributes']['class'],
-          'img-responsive'
+          'img-responsive',
         );
       }
     }
@@ -1150,8 +1150,8 @@ function europa_pager($variables) {
     $items[] = array(
       'class' => array('pager__item pager__middle'),
       'data' => "<span class='pager__combo-container'><span class='pager__combo-current'>" . t('Page !page', array('!page' => $pager_current)) . '&nbsp;</span>' .
-        '<span class="pager__combo-total">' . t('of !total', array('!total' => $pager_max)) . '</span>' .
-        '</span>',
+      '<span class="pager__combo-total">' . t('of !total', array('!total' => $pager_max)) . '</span>' .
+      '</span>',
     );
     // When there is more than one page, create the pager list.
     if ($i != $pager_max) {
@@ -1208,9 +1208,9 @@ function europa_pager($variables) {
     }
 
     $pager_markup = '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme('item_list', array(
-        'items' => $items,
-        'attributes' => array('class' => array('pager')),
-      ));
+      'items' => $items,
+      'attributes' => array('class' => array('pager')),
+    ));
 
     return '<div class="pager__wrapper">' . $pager_markup . '</div>';
   }
