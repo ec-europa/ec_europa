@@ -184,6 +184,10 @@ Styleguide listing.5
 
   .meta {
     margin-bottom: 0;
+
+    div { 
+      display: inline-block;
+    }
   }
 
   .listing__item-link {

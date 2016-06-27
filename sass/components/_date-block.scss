@@ -10,13 +10,14 @@ Styleguide date-block
 $agenda-yellow: #FED437;
 
 .date-block {
-  background: $grey-lightest;
-  border-bottom: 0.222em solid $agenda-yellow;
-  width: 5.556em;
+  position: relative;
+  display: inline-block;
+  min-width: 5.556em;
   margin-right: 0.75em;
   padding: 0.7em;
+  background: $grey-lightest;
+  border-bottom: 0.222em solid $agenda-yellow;
   text-align: center;
-  position: relative;
 
   &:after {
     content: " ";
