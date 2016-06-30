@@ -528,7 +528,7 @@ a.listing__title {
   }
 }
 
-.listing__item--fullwidth {
+.listing__item--fullwidth { 
   max-width: none;
 }
 
@@ -653,11 +653,11 @@ a.listing__title {
 
 // .listing__read_more element.
 .listing__read-more {
-  margin-top: 0.5em;
+  padding-top: 0.5em;
   text-align: right;
   font-weight: $font-weight-bold;
   display: block;
-  float: right;
+  clear: both;
   text-transform: uppercase;
   font-size: $font-size-tiny;
 
