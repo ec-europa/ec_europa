@@ -5731,10 +5731,10 @@ Markup: html/top-image.html
 Styleguide top-image
 */
 .top-image {
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
   .top-image picture {
-    display: block;
-    text-align: center; }
+    display: inline-block; }
 
 .views-exposed-form .views-exposed-widget {
   padding: 0; }
