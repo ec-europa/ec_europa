@@ -3754,6 +3754,15 @@ Styleguide listing.1
   display: none; }
 
 /*
+Listing default with div's
+
+Default implementation of the listing component with div's.
+
+Markup: html/listing-withdivs.html
+
+Styleguide listing.1.1
+*/
+/*
 Listing title
 
 Listing title is the component modifier used to style a list of titles.
@@ -4014,6 +4023,8 @@ a.listing__title {
     display: table; }
   .listing__wrapper:after {
     clear: both; }
+  .listing__wrapper .listing {
+    max-width: inherit; }
 
 .listing__item {
   border-bottom: 1px solid #ececec;
@@ -4144,7 +4155,7 @@ This is actually a modifier that applies changes to the listing__item element.
 
 Markup: html/listing--column-left.html
 
-Styleguide listing.1.1
+Styleguide listing.1.2
 */
 .listing--column-left .listing__column-main {
   width: auto;
