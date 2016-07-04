@@ -1384,11 +1384,12 @@ Styleguide banner.video
     height: 100%; }
 
 .banner__caption {
-  background: #ececec;
-  font-size: 0.778em;
-  padding: 0.500em 1em;
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 0.725em 1em;
+  background: #ececec;
+  line-height: 1.435em;
+  font-size: 0.778em; }
 
 .banner__paragraph {
   margin-top: 1em;
@@ -2268,6 +2269,9 @@ Styleguide file.2
     height: auto;
     min-height: 260px; }
 
+.file-image {
+  padding: 0; }
+
 .file-video--withbackground {
   background: #ececec; }
 
@@ -2293,8 +2297,9 @@ Styleguide file.2
   line-height: initial; }
 
 .file__caption {
-  font-size: 0.778em;
-  padding: 0.5em; }
+  padding: 0.725em 1em;
+  line-height: 1.435em;
+  font-size: 0.778em; }
 
 .file__language {
   font-weight: bold;
@@ -2320,7 +2325,7 @@ Styleguide file.2
   width: 100%; }
 
 .file--condensed {
-  padding: 0em; }
+  padding: 0; }
 
 .file--bare {
   margin: 0;
