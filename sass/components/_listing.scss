@@ -215,20 +215,6 @@ Styleguide listing.5
     font-size: $font-size-tiny;
     margin-top: 1em;
   }
-
-  div.addressfield-container-inline {
-    float: left;
-
-    // override on the address module css rules */
-    &:after {
-      content: ", ";
-      display: inline;
-      height: auto;
-      clear: none;
-      visibility: visible;
-      white-space: pre;
-    }
-  }
 }
 
 // .listing--person modifier.

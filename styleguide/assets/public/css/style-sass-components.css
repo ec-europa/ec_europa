@@ -3851,16 +3851,6 @@ Styleguide listing.5
   font-size: 0.833em;
   margin-top: 1em; }
 
-.listing--agenda div.addressfield-container-inline {
-  float: left; }
-  .listing--agenda div.addressfield-container-inline:after {
-    content: ", ";
-    display: inline;
-    height: auto;
-    clear: none;
-    visibility: visible;
-    white-space: pre; }
-
 .listing--person .listing__title ~ * {
   line-height: 1.3;
   margin-top: 0; }
