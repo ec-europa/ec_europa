@@ -12,9 +12,10 @@ $agenda-yellow: #FED437;
 .date-block {
   position: relative;
   display: inline-block;
+  min-height: 5.556em;
   min-width: 5.556em;
   margin-right: 0.75em;
-  padding: 0.7em;
+  padding: 0.9em 0.5em 0.7em;
   background: $grey-lightest;
   border-bottom: 0.222em solid $agenda-yellow;
   text-align: center;
@@ -34,13 +35,20 @@ $agenda-yellow: #FED437;
 }
 
 .date-block__element {
+  color: $grey-base;
   display: block;
+}
+
+.date-block__year {
+  @extend .date-block__element;
+  font-size: $font-size-little;
+  line-height: 1;
 }
 
 .date-block__day-text {
   @extend .date-block__element;
-  font-size: $font-size-little;
-  line-height: 1;
+  font-size: $font-size-xsmall;
+  line-height: 1.2;
 }
 
 .date-block__day {
@@ -53,5 +61,80 @@ $agenda-yellow: #FED437;
 .date-block__month {
   @extend .date-block__element;
   font-size: $font-size-little;
+  font-weight: $font-weight-bold;
   line-height: 1;
+}
+
+/*
+Event Date Block
+
+Date components
+
+Markup: html/date-block-event.html
+
+.live-streaming - Live-streaming event date block
+.cancelled      - cancelled Event date block
+
+Styleguide date-block.event
+*/
+.date-block.event {
+  &.live-streaming {
+    background: $agenda-yellow;
+  }
+
+  &.cancelled {
+    border-bottom-color: $grey-lighter;
+    .date-block__element {
+      text-decoration: line-through;
+    }
+  }
+}
+
+/*
+Past Event Date Block
+
+Date components
+
+Markup: html/date-block-event-past.html
+
+.past - past Event date block
+
+Styleguide date-block.event.past
+*/
+.date-block.event.past {
+  background: #fff;
+  border: 0.166em solid $grey;
+  padding: 0.8em 0.5em 0.7em;
+
+  .date-block__day {
+    line-height: 1;
+  }
+
+  .date-block__month {
+    line-height: 1.3;
+  }
+
+  &:before {
+    content: " ";
+    position: absolute;
+    top: -0.85em;
+    right: -0.4em;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    border-right: 1em solid #fff;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  &:after {
+    top: -0.35em;
+    right: 0.45em;
+    border: none;
+    border-right: 0.166em solid $grey;
+    height: 1.7em;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
 }
