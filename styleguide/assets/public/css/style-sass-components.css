@@ -2536,12 +2536,6 @@ Styleguide footer
   display: block;
   margin-right: 20px; }
 
-.footer__disclaimer {
-  padding-top: 8px; }
-  .footer__disclaimer > * {
-    width: 100%;
-    display: block; }
-
 .footer__menu {
   padding-left: 0;
   margin: 0; }
@@ -2596,11 +2590,7 @@ Styleguide footer
   .footer__label {
     display: inline-block; }
     .footer__label ~ .footer__menu {
-      display: inline-block; }
-  .footer__disclaimer > * {
-    width: auto;
-    display: inline-block;
-    margin-right: 4px; } }
+      display: inline-block; } }
 
 .footer a {
   padding-right: 1.1em !important; }

@@ -37,14 +37,6 @@ Styleguide footer
   margin-right: 20px;
 }
 
-.footer__disclaimer {
-  padding-top: 8px;
-  & > * {
-    width: 100%;
-    display: block;
-  }
-}
-
 // Menus
 .footer__menu {
   padding-left: 0;
@@ -130,14 +122,6 @@ Styleguide footer
 
     & ~ .footer__menu {
       display: inline-block;
-    }
-  }
-
-  .footer__disclaimer {
-    & > * {
-      width: auto;
-      display: inline-block;
-      margin-right: 4px;
     }
   }
 }
