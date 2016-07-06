@@ -40,6 +40,33 @@ function europa_css_alter(&$css) {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function europa_theme($existing, $type, $theme, $path) {
+  return [
+    'europa_status_message' => [
+      'template' => 'status_message',
+      'path' => $path . '/templates',
+      'variables' => [
+        'message_title' => '',
+        'message_body' => '',
+        'message_type' => '',
+        'message_classes' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_europa_status_message().
+ */
+function europa_preprocess_europa_status_message(&$variables) {
+  if (isset($variables['message_classes']) && is_array($variables['message_classes'])) {
+    $variables['message_classes'] = ' ' . implode(' ', $variables['message_classes']);
+  }
+}
+
+/**
  * Overrides theme_form_required_marker().
  */
 function europa_form_required_marker($variables) {
@@ -1408,4 +1435,33 @@ function europa_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+}
+
+/**
+ * Implements hook_status_messages().
+ */
+function europa_status_messages($variables) {
+  $display = $variables['display'];
+  $output = [];
+
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $body = '';
+    foreach ($messages as $message) {
+      $body .= '  <p>' . $message . "</p>\n";
+    }
+
+    $output[] = [
+      '#theme' => 'europa_status_message',
+      '#message_classes' => [
+        'alert',
+        'alert-block',
+        $type,
+        count($messages) > 1 ?: 'messages--icon-center',
+      ],
+      '#message_type' => $type . ' message',
+      '#message_body' => $body,
+    ];
+  }
+
+  return drupal_render($output);
 }
