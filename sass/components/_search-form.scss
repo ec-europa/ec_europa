@@ -7,31 +7,27 @@ Styleguide: siteheader.searchform
 */
 .search-form {
   @extend .hidden-print;
+  display: inline-block;
   margin-bottom: 1em;
   overflow: hidden;
   border: 1px solid $grey;
 
-  & > div {
-    display: table;
-    border-collapse: separate;
-  }
-
-  .search-form__textfield-wrapper,
-  .search-form__btn-wrapper {
+  .search-form__textfield-wrapper {
     position: relative;
     display: table-cell;
+    margin-bottom: 0;
+    border: 3px solid transparent;
   }
 
   .search-form__btn-wrapper {
-    width: 1%;
-    vertical-align: middle;
-    white-space: nowrap;
+    font-size: inherit;
   }
 }
 
 .search-form__textfield {
-  width: 100%;
-  margin: 0;
+  min-height: 2.325em;
+  height: 2.325em;
+  font-size: inherit;
   border: none;
 }
 
@@ -59,20 +55,11 @@ Styleguide: siteheader.searchform
 
 @include breakpoint(screen-md-min) {
   .search-form {
-    & > div {
-      display: block;
-    }
+    margin-bottom: 0;
 
-    .search-form__textfield-wrapper {
-      float: left;
-    }
-
+    .search-form__textfield-wrapper,
     .search-form__btn-wrapper {
       float: left;
-      width: auto;
-      display: block;
-      vertical-align: inherit;
-      white-space: inherit;
     }
   }
 
@@ -83,5 +70,11 @@ Styleguide: siteheader.searchform
     &:before {
       display: none !important;
     }
+  }
+}
+
+@include breakpoint(screen-xs-min) {
+  .search-form__textfield {
+    min-height: 2.375em;
   }
 }
