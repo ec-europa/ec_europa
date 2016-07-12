@@ -154,13 +154,17 @@
   </section>
 <?php endif; ?>
 
+<?php if (!empty($page['utility'])): ?>
+  <div class="utility">
+    <div class="container-fluid">
+      <?php print render($page['utility']); ?>
+    </div>
+  </div>
+<?php endif; ?>
+
 <section class="main-content">
   <!-- Generic sections -->
   <div class="container-fluid">
-    <?php if (!empty($page['utility'])): ?>
-      <?php print render($page['utility']); ?>
-    <?php endif; ?>
-
     <?php if (!empty($page['help'])): ?>
       <?php print render($page['help']); ?>
     <?php endif; ?>
