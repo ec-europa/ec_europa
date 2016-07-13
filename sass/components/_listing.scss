@@ -130,7 +130,6 @@ ul.listing--title {
   a .listing__title {
     display: block;
     padding-right: 2em;
-    text-decoration: none;
   }
 
   a.listing__title {
@@ -300,6 +299,7 @@ Styleguide listing.3
   .listing__item-link {
     padding: $font-size-mid;
     background-color: $brand-primary;
+
     &:hover,
     &:active,
     &:focus {
@@ -368,8 +368,8 @@ Markup: html/listing--navigation.html
 Styleguide listing.6
 */
 .listing--navigation {
-  padding-bottom: (29/15)+em;
   @include clearfix();
+  padding-bottom: (29/15)+em;
 
   // Top of the block:
   // - listing__section-title or
@@ -417,13 +417,13 @@ Styleguide listing.6
 
   // Listing separator.
   .listing__separator {
-    border-top: 1px solid $grey-light;
-    padding-top: (14/15 - 0.3)+em; // 14px
-    // Margin bottom 0.5em of the previous item.
-    margin: (14/15 - 0.5)+em 0 0 0; // 14px
+    float: left;
     width: 100%;
     max-width: 32em;
-    float: left;
+    // Margin bottom 0.5em of the previous item.
+    margin: (14/15 - 0.5)+em 0 0 0; // 14px
+    padding-top: (14/15 - 0.3)+em; // 14px
+    border-top: 1px solid $grey-light;
   }
 }
 
@@ -455,9 +455,9 @@ Styleguide listing.6
     }
 
    .listing__separator {
-      padding-top: (20/18)+em; // 20px
       // Margin bottom 9px of the previous item.
       margin-top: (20/18 - 9/18)+em; // 20-9px
+      padding-top: (20/18)+em; // 20px
     }
   }
 }
@@ -487,8 +487,8 @@ a.listing__title {
 
 // .listing__wrapper element.
 .listing__wrapper {
-  margin-bottom: 1.667em;
   @include clearfix;
+  margin-bottom: 1.667em;
 
   .listing {
     max-width: inherit;
@@ -497,12 +497,12 @@ a.listing__title {
 
 // .listing__item element.
 .listing__item {
-  border-bottom: 1px solid $grey-lighter;
-  list-style: none;
-  padding: 1.111em 0;
+  float: left;
   max-width: 32em;
   width: 100%;
-  float: left;
+  padding: 1.111em 0;
+  list-style: none;
+  border-bottom: 1px solid $grey-lighter;
 
   &:first-child {
     border-top: 1px solid $grey-lighter;
@@ -569,9 +569,9 @@ a.listing__title {
 }
 
 .listing__column-main {
+  float: left;
   width: 100%;
   padding-left: 0;
-  float: left;
 }
 
 .listing__column-second--no-link {
@@ -589,8 +589,8 @@ a.listing__title {
   .listing__column-second {
     float: right;
     width: 25%;
-    padding-left: 15px;
     margin: 0;
+    padding-left: 15px;
 
     & + .listing__column-main {
       width: 75%;
@@ -612,8 +612,8 @@ a.listing__title {
   .listing__column-second--no-link {
     float: right;
     width: 33.3%;
-    padding-left: 15px;
     padding-top: 0.85em;
+    padding-left: 15px;
 
     .btn {
       margin-top: 1.667em;
@@ -624,14 +624,14 @@ a.listing__title {
 // .listing__title element.
 //  Modifiers: .listing__title--arrow.
 .listing__title {
-  font-family: $font-family-sans-serif;
-  font-size: 1em;
+  @extend .h3;
+  position: relative;
+  margin-bottom: 0.5em;
   padding: 0;
   display: inline-block;
+  font-family: $font-family-sans-serif;
+  font-size: 1em;
   line-height: 1.3;
-  margin-bottom: 0.5em;
-  position: relative;
-  @extend .h3;
 
   a:link &,
   a:visited & {
@@ -642,12 +642,12 @@ a.listing__title {
 // .listing__title--arrow.
 .listing__title--arrow {
   &:after {
+    @extend .icon--after;
+    @extend .icon--right;
+    position: absolute;
     margin-left: 10px;
     margin-top: 2px;
     font-size: 1.2em;
-    position: absolute;
-    @extend .icon--after;
-    @extend .icon--right;
   }
 }
 
@@ -778,8 +778,8 @@ Styleguide listing.2.4
 
 .listing__wrapper--two-columns {
   .listing {
-    margin-bottom: 2em;
     @extend .col-sm-6;
+    margin-bottom: 2em;
   }
 }
 
@@ -799,6 +799,7 @@ Styleguide listing.2.4
 .listing__wrapper--row-two {
   .listing__item {
     @extend .col-md-6;
+
     &:nth-child(odd) {
       clear: left;
     }
