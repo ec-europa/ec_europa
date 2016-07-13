@@ -31,10 +31,11 @@ Styleguide: siteswitcher
   vertical-align: middle;
   width: 50%;
 
-  a{
+  a {
     text-decoration: none;
+
     &:hover,
-    &:focus{
+    &:focus {
       text-decoration: underline;
     }
   }
@@ -46,7 +47,8 @@ Styleguide: siteswitcher
     line-height: 1.3;
     font-weight: bold;
 
-    &:after, &.is-external:after {
+    &:after,
+    &.is-external:after {
       content: none !important;
     }
   }
@@ -99,6 +101,7 @@ Styleguide: siteswitcher
 
   .site-switcher__option {
     position: relative;
+
     &.is-selected:after {
       bottom: 95%;
       left: 50%;
