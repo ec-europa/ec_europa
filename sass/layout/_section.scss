@@ -108,10 +108,6 @@ $section-spacing: 1.667em;
   .section--row-three {
     @extend .row;
   }
-
-  .section__group + .section__group .listing__item:first-child {
-    border-top: none;
-  }
 }
 
 // Sidebar-field-group__main floats, it would break the collapsing margins.
