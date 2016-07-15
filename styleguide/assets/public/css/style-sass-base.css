@@ -5215,6 +5215,8 @@ ul.nav-tabs,
     padding-right: 1em; }
   .nav-tabs--with-content + .tab-content {
     padding: 0; }
+    .nav-tabs--with-content + .tab-content > * {
+      margin-bottom: 1.667em !important; }
 
 /*
 Bootstrap: Nav tabs right.
@@ -5448,9 +5450,6 @@ textarea.error {
       width: auto; }
       .top-bar .site-menu__toggle .btn {
         margin-bottom: auto; } }
-
-.page-bottom-header {
-  margin-top: -1px; }
 
 .ceiling {
   border-top: #ffd617 solid 10px; }

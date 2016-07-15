@@ -32,14 +32,17 @@
         });
         // If the .once on .pager__items has aggregated markup for the options, make the select.
         if (options != '') {
-          var $select = $('<select class="pager__dropdown">' + options + '</select><span class="pager__separator"></span>');
+          var $select = $('<select class="pager__dropdown">' + options + '</select>');
           // Listen for a change in the select, take the option value and emulate a click on the original element.
           $select.on('change', function (e) {
-            var valueSelected = this.value;
+            var link = document.querySelector('a[href="' + this.value + '"]');
             // Emulate the selection.
-            $(pagerItemClass).find('a[href="' + valueSelected + '"]').click();
+            if (link) {
+              link.click();
+            }
           });
           $(pagerContainer, this).before($select);
+          $select.after($('<span class="pager__separator"></span>'));
           $(pagerContainer).hide();
         }
       });
