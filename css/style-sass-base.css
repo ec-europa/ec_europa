@@ -5608,7 +5608,7 @@ Styleguide sections.3
 
 .section--row-three .section__item {
   margin-top: 15px; }
-  .section--row-three .section__item:nth-child(3n+1) {
+  .section--row-three .section__item:nth-child(3n+4) {
     clear: left; }
 
 @media (min-width: 1200px) {
