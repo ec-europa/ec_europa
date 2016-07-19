@@ -193,6 +193,10 @@ $section-spacing: 1.667em;
   .section__item {
     @extend .col-md-4;
     margin-top: 15px;
+
+    &:nth-child(3n+4) {
+      clear: left;
+    }
   }
 }
 
