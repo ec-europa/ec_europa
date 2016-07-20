@@ -5519,10 +5519,10 @@ Markup: html/splash-page.html
 Styleguide splashpage
 */
 .splash-page__site-header {
-  background: #ffffff; }
+  background-color: #ffffff; }
   .splash-page__site-header .logo, .splash-page__site-header .logo--logotype {
-    margin: 16px auto 40px auto;
     float: none;
+    margin: 16px auto 40px auto;
     background: url("../images/svg/logo.svg") center center no-repeat;
     background-origin: content-box; }
     .no-svg .splash-page__site-header .logo, .no-svg .splash-page__site-header .logo--logotype {
@@ -5539,69 +5539,69 @@ Styleguide splashpage
   padding-top: 3em; }
   .splash-page__content h2 {
     display: none;
-    color: #ffffff;
-    font-size: 1.222em;
     padding-top: 2em;
     padding-bottom: 2em;
+    font-size: 1.222em;
+    color: #ffffff;
     clear: both; }
 
 .splash-page__helper-text {
+  margin-top: 2em;
   color: #ffffff;
   font-size: 0.889em;
-  margin-top: 2em;
   clear: both; }
   .splash-page__helper-text p {
     max-width: 100%; }
 
 .splash-page__btn-language {
-  background: #ffffff;
-  margin-bottom: 4px;
   width: 100%;
-  text-align: left !important; }
+  margin-bottom: 4px;
+  background-color: #ffffff;
+  text-align: left; }
   .splash-page__btn-language:hover {
     color: #000000;
-    background: #ffd617; }
+    background-color: #ffd617; }
   .splash-page__btn-language.icon--check:before {
     display: none; }
 
 .splash-page__btn-close {
+  display: none;
   position: absolute;
   top: -15px;
   right: 0;
   padding: 0.5em 0 0.5em 1em;
   font-size: 0.889em;
   font-weight: normal;
-  color: #ffffff;
-  display: none; }
+  color: #ffffff; }
   .splash-page__btn-close:hover {
     color: #ffffff; }
   .splash-page__btn-close:after {
     content: "X";
     float: right;
     display: inline-block;
-    border: 1px solid #ffffff;
-    margin-left: 0.5em;
     width: 1.6em;
     height: 1.6em;
+    margin-left: 0.5em;
+    border: 1px solid #ffffff;
     border-radius: 1.1em;
     text-align: center; }
 
 .splash-page--overlay {
   display: none;
   position: fixed;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background: rgba(0, 68, 148, 0.95);
+  text-align: left;
   overflow-x: auto;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  text-align: left; }
+  z-index: 1000; }
   .splash-page--overlay h2 {
     display: block; }
   .splash-page--overlay .splash-page__btn-language.is-active {
     color: #000000;
-    background: #ffd617;
+    background-color: #ffd617;
     box-shadow: none; }
   .splash-page--overlay .splash-page__btn-language.icon--check:before {
     float: right;
@@ -5613,7 +5613,7 @@ body.disablescroll {
   overflow: hidden; }
 
 .page-splash {
-  background: #004494; }
+  background-color: #004494; }
 
 .splash-page__helper-text table {
   width: 100%; }
@@ -5630,6 +5630,11 @@ body.disablescroll {
       padding-top: 0.6em; }
     .splash-page__helper-text tbody tr td, .splash-page__helper-text tbody tr th {
       padding: 0.6em 0 0.6em 0; }
+
+@media (min-width: 992px) {
+  .splash-page__btn-language:hover {
+    color: #000000;
+    background-color: #ffd617; } }
 
 /*
 Tags
