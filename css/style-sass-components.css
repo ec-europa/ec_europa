@@ -5827,4 +5827,7 @@ Styleguide top-image
   .page-admin input[type='checkbox'].vbo-table-select-all {
     position: static; }
 
+.node-type-event .field--field-event-website .field__items {
+  font-weight: bold; }
+
 /*# sourceMappingURL=style-sass-components.css.map */
