@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
-    <title>cast copy 2</title>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard Copy 4</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Event-detail-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Event_during" transform="translate(-337.000000, -455.000000)" fill="#FFC412">
-            <g id="Group-9" transform="translate(-7.000000, 203.000000)">
-                <g id="cast-copy-2" transform="translate(344.000000, 252.000000)">
-                    <path d="M20,0 L2,0 C0.9,0 0,0.9 0,2 L0,5 L2,5 L2,2 L20,2 L20,16 L13,16 L13,18 L20,18 C21.1,18 22,17.1 22,16 L22,2 C22,0.9 21.1,0 20,0 L20,0 Z M0,15 L0,18 L3,18 C3,16.3 1.7,15 0,15 L0,15 Z M0,11 L0,13 C2.8,13 5,15.2 5,18 L7,18 C7,14.1 3.9,11 0,11 L0,11 Z M0,7 L0,9 C5,9 9,13 9,18 L11,18 C11,11.9 6.1,7 0,7 L0,7 Z" id="Shape"></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-4" fill="#FFC412">
+            <g id="live_streaming" transform="translate(1.000000, 4.000000)">
+                <g id="cast-copy-2">
+                    <g id="Event-detail-page">
+                        <g id="Event_during">
+                            <g id="Group-9">
+                                <g id="cast-copy-2">
+                                    <path d="M30.9090909,0 L3.09090909,0 C1.39090909,0 0,1.39090909 0,3.09090909 L0,7.72727273 L3.09090909,7.72727273 L3.09090909,3.09090909 L30.9090909,3.09090909 L30.9090909,24.7272727 L20.0909091,24.7272727 L20.0909091,27.8181818 L30.9090909,27.8181818 C32.6090909,27.8181818 34,26.4272727 34,24.7272727 L34,3.09090909 C34,1.39090909 32.6090909,0 30.9090909,0 L30.9090909,0 L30.9090909,0 Z M0,23.1818182 L0,27.8181818 L4.63636364,27.8181818 C4.63636364,25.1909091 2.62727273,23.1818182 0,23.1818182 L0,23.1818182 L0,23.1818182 Z M0,17 L0,20.0909091 C4.32727273,20.0909091 7.72727273,23.4909091 7.72727273,27.8181818 L10.8181818,27.8181818 C10.8181818,21.7909091 6.02727273,17 0,17 L0,17 L0,17 Z M0,10.8181818 L0,13.9090909 C7.72727273,13.9090909 13.9090909,20.0909091 13.9090909,27.8181818 L17,27.8181818 C17,18.3909091 9.42727273,10.8181818 0,10.8181818 L0,10.8181818 L0,10.8181818 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
                 </g>
             </g>
         </g>

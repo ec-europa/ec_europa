@@ -4696,16 +4696,15 @@ Markup: html/messages.html
 Styleguide messages
 */
 .messages, .feedback-message {
-  border: 2px solid #006fb4;
-  color: #404040;
-  font-family: Arial, sans-serif;
-  font-size: 0.889em;
+  position: relative;
   margin: 0 0 1em;
   padding: 1em 1em 1em 4em;
-  position: relative;
-  overflow: hidden;
-  background: url("../images/svg/messages-info.svg") no-repeat 1em 1.1em;
-  background-size: 2em; }
+  background: url("../images/svg/messages-info.svg") no-repeat 1em 1em;
+  font-family: Arial, sans-serif;
+  font-size: 0.889em;
+  color: #404040;
+  border: 2px solid #006fb4;
+  overflow: hidden; }
   .messages.messages--icon-center, .messages--icon-center.feedback-message {
     background-position: 1em center; }
   .messages.status, .status.feedback-message {
@@ -4721,9 +4720,9 @@ Styleguide messages
     border-color: #ffc412;
     background-image: url("../images/svg/live_streaming.svg"); }
   .messages h3, .feedback-message h3 {
+    padding-top: 0;
     font-size: inherit;
-    font-weight: bold;
-    padding-top: 0; }
+    font-weight: bold; }
   .messages ul, .feedback-message ul,
   .messages p, .feedback-message p {
     max-width: 95%;
@@ -4735,9 +4734,9 @@ Styleguide messages
     padding-bottom: 0; }
 
 .messages__list, .messages ul, .feedback-message ul {
-  padding-left: 0;
-  margin-bottom: 0;
   max-width: auto;
+  margin-bottom: 0;
+  padding-left: 0;
   font-family: Arial, sans-serif; }
 
 .messages__list-item, .messages ul li, .feedback-message ul li {

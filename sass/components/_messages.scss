@@ -11,19 +11,17 @@ Styleguide messages
 $messages-text-color: $grey-base;
 $messages-heading-size: $font-size-little;
 $messages-text-size: $font-size-little;
-$messages-icon-size: 2em;
 
 .messages {
-  border: 2px solid $blue;
-  color: $messages-text-color;
-  font-family: $font-family-sans-serif;
-  font-size: $messages-text-size;
+  position: relative;
   margin: 0 0 1em;
   padding: 1em 1em 1em 4em;
-  position: relative;
+  background: url("../images/svg/messages-info.svg") no-repeat 1em 1em;
+  font-family: $font-family-sans-serif;
+  font-size: $messages-text-size;
+  color: $messages-text-color;
+  border: 2px solid $blue;
   overflow: hidden;
-  background: url("../images/svg/messages-info.svg") no-repeat 1em 1.1em;
-  background-size:  $messages-icon-size;
 
   &.messages--icon-center {
     background-position: 1em center;
@@ -50,9 +48,9 @@ $messages-icon-size: 2em;
   }
 
   h3 {
+    padding-top: 0;
     font-size: inherit;
     font-weight: bold;
-    padding-top: 0;
   }
 
   ul,
@@ -72,9 +70,9 @@ $messages-icon-size: 2em;
 }
 
 .messages__list {
-  padding-left: 0;
-  margin-bottom: 0;
   max-width: auto;
+  margin-bottom: 0;
+  padding-left: 0;
   font-family: $font-family-sans-serif;
 }
 
@@ -106,6 +104,7 @@ $messages-icon-size: 2em;
       background-image: url("../images/png/live_streaming.png");
     }
   }
+
   .alert {
     .close {
       background-image: url("../images/png/close.png");
