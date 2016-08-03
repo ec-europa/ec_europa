@@ -668,8 +668,10 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
 
     $node = menu_get_object();
     // Use the description as the link text if available.
-    if (isset($file->entity)) {
+    if (isset($file->entity) && isset($file->entity->nid) && $node && $file->entity->nid !== $node->nid) {
       // We have access to the entity, so we can use that title.
+      // If the file entity is different form the current node we use that
+      // title.
       $file_wrapper = entity_metadata_wrapper('node', $file->entity);
       $title_string = $file_wrapper->title->value();
     }
