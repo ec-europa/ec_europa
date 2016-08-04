@@ -87,10 +87,10 @@ settings[bootstrap_cdn] = ""
 ; Breakpoints
 ; --------------
 breakpoints[wide] = only screen and (min-width: 992px)
-breakpoints[normal] = (min-width: 768px)
-breakpoints[medium] = (min-width: 480px)
-breakpoints[narrow] = (min-width: 320px)
-breakpoints[mobile] = (min-width: 0px)
+breakpoints[normal] = (min-width: 768px) and (max-width: 991px)
+breakpoints[medium] = (min-width: 480px) and (max-width: 767px)
+breakpoints[narrow] = (min-width: 320px) and (max-width: 479px)
+breakpoints[mobile] = (min-width: 0px) and (max-width: 319px)
 multipliers[wide][] = 2x
 multipliers[normal][] = 2x
 multipliers[medium][] = 2x
