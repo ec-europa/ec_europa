@@ -648,7 +648,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   // Get our full language string.
   if (isset($file->entity->language) || isset($file->language)) {
     $language_to_use = isset($file->entity->language) ? entity_translation_get_existing_language('node', $file->entity) : $file->language;
-    $file_language_string = _dt_shared_functions_get_language_obj($language_to_use);
+    $file_language_string = _dt_shared_functions_get_language_obj($language_to_use, 'native');
   }
 
   // If we have a full language string and it's not a subfile, we add it to the
@@ -666,9 +666,8 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   else {
     $file_info_string = $file_language . '(' . $file_size . ' - ' . $file_extension . ')';
 
-    $node = menu_get_object();
     // Use the description as the link text if available.
-    if (isset($file->entity) && isset($file->entity->nid) && $node && $file->entity->nid !== $node->nid) {
+    if (isset($file->entity)) {
       // We have access to the entity, so we can use that title.
       // If the file entity is different form the current node we use that
       // title.
@@ -682,21 +681,6 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
       }
       else {
         $title_string = $file->filename;
-      }
-      if (isset($file->entity) && isset($file->entity->nid) && $node && $file->entity->nid !== $node->nid) {
-        // We have access to the entity, so we can use that title. If the file
-        // entity is different form the current node we use that title.
-        $file_wrapper = entity_metadata_wrapper('node', $file->entity);
-        $title_string = $file_wrapper->title->value();
-      }
-      else {
-        if (!empty($file->description)) {
-          $title_string = $file->description;
-          $options['attributes']['title'] = check_plain($file->filename);
-        }
-        else {
-          $title_string = $file->filename;
-        }
       }
     }
   }
