@@ -1,24 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard Copy 4</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard-Copy-4" fill="#FFC412">
-            <g id="live_streaming" transform="translate(1.000000, 4.000000)">
-                <g id="cast-copy-2">
-                    <g id="Event-detail-page">
-                        <g id="Event_during">
-                            <g id="Group-9">
-                                <g id="cast-copy-2">
-                                    <path d="M30.9090909,0 L3.09090909,0 C1.39090909,0 0,1.39090909 0,3.09090909 L0,7.72727273 L3.09090909,7.72727273 L3.09090909,3.09090909 L30.9090909,3.09090909 L30.9090909,24.7272727 L20.0909091,24.7272727 L20.0909091,27.8181818 L30.9090909,27.8181818 C32.6090909,27.8181818 34,26.4272727 34,24.7272727 L34,3.09090909 C34,1.39090909 32.6090909,0 30.9090909,0 L30.9090909,0 L30.9090909,0 Z M0,23.1818182 L0,27.8181818 L4.63636364,27.8181818 C4.63636364,25.1909091 2.62727273,23.1818182 0,23.1818182 L0,23.1818182 L0,23.1818182 Z M0,17 L0,20.0909091 C4.32727273,20.0909091 7.72727273,23.4909091 7.72727273,27.8181818 L10.8181818,27.8181818 C10.8181818,21.7909091 6.02727273,17 0,17 L0,17 L0,17 Z M0,10.8181818 L0,13.9090909 C7.72727273,13.9090909 13.9090909,20.0909091 13.9090909,27.8181818 L17,27.8181818 C17,18.3909091 9.42727273,10.8181818 0,10.8181818 L0,10.8181818 L0,10.8181818 Z" id="Shape"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="36px" height="36px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFC412;}
+</style>
+<title>Artboard Copy 4</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Artboard-Copy-4">
+		<g id="live_streaming" transform="translate(1.000000, 4.000000)">
+			<g id="cast-copy-2_1_">
+				<g id="Event-detail-page">
+					<g id="Event_during">
+						<g id="Group-9">
+							<g id="cast-copy-2">
+								<path id="Shape" class="st0" d="M30.9,0H3.1C1.4,0,0,1.4,0,3.1v4.6h3.1V3.1h27.8v21.6H20.1v3.1h10.8c1.7,0,3.1-1.4,3.1-3.1
+									V3.1C34,1.4,32.6,0,30.9,0L30.9,0L30.9,0z M0,23.2v4.6h4.6C4.6,25.2,2.6,23.2,0,23.2L0,23.2L0,23.2z M0,17v3.1
+									c4.3,0,7.7,3.4,7.7,7.7h3.1C10.8,21.8,6,17,0,17L0,17L0,17z M0,10.8v3.1c7.7,0,13.9,6.2,13.9,13.9H17
+									C17,18.4,9.4,10.8,0,10.8L0,10.8L0,10.8z"/>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
 </svg>
