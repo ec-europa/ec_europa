@@ -1001,6 +1001,19 @@ function europa_preprocess_html(&$variables) {
   );
   drupal_add_html_head($ie9_js, 'ie9_js');
 
+  // For some reason, the front page handles tokens different.
+  if (drupal_is_front_page()) {
+    $data = ['node' => menu_get_object('node')];
+    $last_modified = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'last-modified',
+        'content' => token_replace('[dt_tokens:dt_update_date]', $data),
+      ],
+    ];
+    drupal_add_html_head($last_modified, 'last_modified');
+  }
+
   // Override splash screen title.
   $menu_item = menu_get_item();
   if (isset($menu_item['path']) && $menu_item['path'] == 'splash' && !variable_get('splash_screen_title_value', FALSE)) {
