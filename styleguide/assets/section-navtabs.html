@@ -306,33 +306,59 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="nav nav-tabs nav-tabs--with-content nav-tabs-processed">
-  <li class="active">
-    <a href="#bootstrap-fieldgroup-nav-item--actions" data-toggle="tab">Actions</a>
-  </li>
-  <li class="">
-    <a href="#bootstrap-fieldgroup-nav-item--latest" data-toggle="tab">Latest</a>
-  </li>
-  <li class="">
-    <a href="#bootstrap-fieldgroup-nav-item--details" data-toggle="tab">Details</a>
-  </li>
-</ul>
+          <script src="public/js/libraries/jquery-accessible-tabs.js"></script>
+<div class="js-tabs bootstrap-nav-wrapper">
+  <ul class="js-tablist nav nav-tabs nav-tabs--with-content nav-tabs-processed">
+    <li class="js-tablist__item active">
+      <a href="#bootstrap-fieldgroup-nav-item--actions" class="js-tablist__link" data-toggle="tab">Actions</a>
+    </li>
+    <li class="js-tablist__item">
+      <a href="#bootstrap-fieldgroup-nav-item--latest" class="js-tablist__link" data-toggle="tab">Latest</a>
+    </li>
+    <li class="js-tablist__item">
+      <a href="#bootstrap-fieldgroup-nav-item--details" class="js-tablist__link" data-toggle="tab">Details</a>
+    </li>
+  </ul>
+
+  <div id="bootstrap-fieldgroup-nav-item--actions" class="js-tabcontent">
+    Content of Actions tab
+  </div>
+  <div id="bootstrap-fieldgroup-nav-item--latest" class="js-tabcontent">
+    Content of Latest tab
+  </div>
+  <div id="bootstrap-fieldgroup-nav-item--details" class="js-tabcontent">
+    Content of Details tab
+  </div>
+</div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;nav nav-tabs nav-tabs--with-content nav-tabs-processed&quot;&gt;
-  &lt;li class=&quot;active&quot;&gt;
-    &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--actions&quot; data-toggle=&quot;tab&quot;&gt;Actions&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;&quot;&gt;
-    &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--latest&quot; data-toggle=&quot;tab&quot;&gt;Latest&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;&quot;&gt;
-    &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--details&quot; data-toggle=&quot;tab&quot;&gt;Details&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;script src=&quot;public/js/libraries/jquery-accessible-tabs.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;js-tabs bootstrap-nav-wrapper&quot;&gt;
+  &lt;ul class=&quot;js-tablist nav nav-tabs nav-tabs--with-content nav-tabs-processed&quot;&gt;
+    &lt;li class=&quot;js-tablist__item active&quot;&gt;
+      &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--actions&quot; class=&quot;js-tablist__link&quot; data-toggle=&quot;tab&quot;&gt;Actions&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;js-tablist__item&quot;&gt;
+      &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--latest&quot; class=&quot;js-tablist__link&quot; data-toggle=&quot;tab&quot;&gt;Latest&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;js-tablist__item&quot;&gt;
+      &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--details&quot; class=&quot;js-tablist__link&quot; data-toggle=&quot;tab&quot;&gt;Details&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div id=&quot;bootstrap-fieldgroup-nav-item--actions&quot; class=&quot;js-tabcontent&quot;&gt;
+    Content of Actions tab
+  &lt;/div&gt;
+  &lt;div id=&quot;bootstrap-fieldgroup-nav-item--latest&quot; class=&quot;js-tabcontent&quot;&gt;
+    Content of Latest tab
+  &lt;/div&gt;
+  &lt;div id=&quot;bootstrap-fieldgroup-nav-item--details&quot; class=&quot;js-tabcontent&quot;&gt;
+    Content of Details tab
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
 
@@ -360,35 +386,59 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <h3>Navigation tabs title</h3>
-<ul class="nav nav-tabs nav-tabs-right">
-  <li class="active">
-    <a href="#bootstrap-fieldgroup-nav-item--actions" data-toggle="tab">Actions</a>
-  </li>
-  <li class="">
-    <a href="#bootstrap-fieldgroup-nav-item--latest" data-toggle="tab">Latest</a>
-  </li>
-  <li class="">
-    <a href="#bootstrap-fieldgroup-nav-item--details" data-toggle="tab">Details</a>
-  </li>
-</ul>
+          <div class="js-tabs bootstrap-nav-wrapper">
+  <h3>Navigation tabs title</h3>
+  <ul class="js-tablist nav nav-tabs nav-tabs-right">
+    <li class="js-tablist__item active">
+      <a href="#bootstrap-fieldgroup-nav-item--actions2" class="js-tablist__link" data-toggle="tab">Actions</a>
+    </li>
+    <li class="js-tablist__item">
+      <a href="#bootstrap-fieldgroup-nav-item--latest2" class="js-tablist__link" data-toggle="tab">Latest</a>
+    </li>
+    <li class="js-tablist__item">
+      <a href="#bootstrap-fieldgroup-nav-item--details2" class="js-tablist__link" data-toggle="tab">Details</a>
+    </li>
+  </ul>
+
+  <div id="bootstrap-fieldgroup-nav-item--actions2" class="js-tabcontent">
+    Content of Actions tab
+  </div>
+  <div id="bootstrap-fieldgroup-nav-item--latest2" class="js-tabcontent">
+    Content of Latest tab
+  </div>
+  <div id="bootstrap-fieldgroup-nav-item--details2" class="js-tabcontent">
+    Content of Details tab
+  </div>
+</div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h3&gt;Navigation tabs title&lt;/h3&gt;
-&lt;ul class=&quot;nav nav-tabs nav-tabs-right&quot;&gt;
-  &lt;li class=&quot;active&quot;&gt;
-    &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--actions&quot; data-toggle=&quot;tab&quot;&gt;Actions&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;&quot;&gt;
-    &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--latest&quot; data-toggle=&quot;tab&quot;&gt;Latest&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;&quot;&gt;
-    &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--details&quot; data-toggle=&quot;tab&quot;&gt;Details&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;js-tabs bootstrap-nav-wrapper&quot;&gt;
+  &lt;h3&gt;Navigation tabs title&lt;/h3&gt;
+  &lt;ul class=&quot;js-tablist nav nav-tabs nav-tabs-right&quot;&gt;
+    &lt;li class=&quot;js-tablist__item active&quot;&gt;
+      &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--actions2&quot; class=&quot;js-tablist__link&quot; data-toggle=&quot;tab&quot;&gt;Actions&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;js-tablist__item&quot;&gt;
+      &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--latest2&quot; class=&quot;js-tablist__link&quot; data-toggle=&quot;tab&quot;&gt;Latest&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;js-tablist__item&quot;&gt;
+      &lt;a href=&quot;#bootstrap-fieldgroup-nav-item--details2&quot; class=&quot;js-tablist__link&quot; data-toggle=&quot;tab&quot;&gt;Details&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div id=&quot;bootstrap-fieldgroup-nav-item--actions2&quot; class=&quot;js-tabcontent&quot;&gt;
+    Content of Actions tab
+  &lt;/div&gt;
+  &lt;div id=&quot;bootstrap-fieldgroup-nav-item--latest2&quot; class=&quot;js-tabcontent&quot;&gt;
+    Content of Latest tab
+  &lt;/div&gt;
+  &lt;div id=&quot;bootstrap-fieldgroup-nav-item--details2&quot; class=&quot;js-tabcontent&quot;&gt;
+    Content of Details tab
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
 

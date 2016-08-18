@@ -140,3 +140,12 @@ ul.nav-tabs-right {
     }
   }
 }
+
+/*
+WAI-ARIA: Accessible tab panel system.
+
+Implementation of WAI-ARIA attributes on nav tabs for the CWS.
+*/
+.js-tabcontent[aria-hidden=true] {
+  display: none;
+}

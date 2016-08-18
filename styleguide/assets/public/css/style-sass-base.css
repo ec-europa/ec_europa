@@ -5253,6 +5253,14 @@ ul.nav-tabs-right {
     visibility: visible !important; } }
 
 /*
+WAI-ARIA: Accessible tab panel system.
+
+Implementation of WAI-ARIA attributes on nav tabs for the CWS.
+*/
+.js-tabcontent[aria-hidden=true] {
+  display: none; }
+
+/*
 Paragraphs
 
 Markup: html/paragraphs.html
