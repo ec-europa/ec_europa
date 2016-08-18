@@ -649,6 +649,9 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   if (isset($file->entity->language) || isset($file->language)) {
     $language_to_use = isset($file->entity->language) ? entity_translation_get_existing_language('node', $file->entity) : $file->language;
     $file_language_string = _dt_shared_functions_get_language_obj($language_to_use, 'native');
+    if (!$subfile && module_exists('locale') && isset($GLOBALS['language_content']->language)) {
+      $file_language_string = locale($file_language_string, NULL, $GLOBALS['language_content']->language);
+    }
   }
 
   // If we have a full language string and it's not a subfile, we add it to the
@@ -659,7 +662,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   }
 
   // File information and title setter.
-  if ($subfile) {
+  if ($subfile && isset($file_language_string)) {
     $file_info_string = $file_size . ' - ' . $file_extension;
     $title_string = $file_language_string . ' ' . t('version');
   }
