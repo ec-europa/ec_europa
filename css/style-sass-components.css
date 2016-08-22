@@ -3812,9 +3812,8 @@ Styleguide inpagenav
 
 .inpage-nav .inpage-nav__list {
   margin: 0 0 0 -11px !important;
-  padding: 0;
-  list-style: none;
-  list-style-image: none; }
+  padding-left: 0 !important;
+  list-style: none; }
   .inpage-nav .inpage-nav__list li.active .inpage_nav__list-item {
     border-color: #004494;
     background: #ececec; }
@@ -3844,7 +3843,7 @@ Styleguide inpagenav
     overflow: hidden; }
   .inpage-nav__navbar .inpage-nav__current,
   .inpage-nav__navbar .inpage-nav__help {
-    padding-bottom: 0px; }
+    padding-bottom: 0; }
   .inpage-nav__navbar .inpage-nav__current {
     color: #ffffff;
     text-overflow: ellipsis;
@@ -3888,7 +3887,7 @@ Styleguide inpagenav
     margin: 5px 4px;
     font-size: 10px; }
     .inpage-nav__navbar .inpage-nav__icon-arrow:before {
-      margin-right: 0px; }
+      margin-right: 0; }
   .inpage-nav__navbar .inpage-nav__close-text {
     display: none;
     font-size: 15px;
@@ -4143,12 +4142,12 @@ Styleguide: langselect.dropdown
 
 ul.lang-select-page__list {
   float: left;
-  padding: 0;
-  margin: 0; }
+  padding-left: 0 !important;
+  margin-bottom: 0 !important; }
   ul.lang-select-page__list .lang-select-page__option {
-    list-style: none;
     float: left;
-    padding: 0.85em; }
+    padding: 0.85em;
+    list-style: none; }
     ul.lang-select-page__list .lang-select-page__option a {
       display: block; }
     ul.lang-select-page__list .lang-select-page__option.is-selected {
@@ -4187,7 +4186,8 @@ select.lang-select-page__list {
 @-moz-document url-prefix() {
   .lang-select-page--transparent select.lang-select-page__list {
     height: 3.4em; } }
-  .lang-select-page--transparent .lang-select-page__option.is-selected, .lang-select-page--transparent .lang-select-page__option.is-selected a {
+  .lang-select-page--transparent .lang-select-page__option.is-selected,
+  .lang-select-page--transparent .lang-select-page__option.is-selected a {
     color: #000; }
   .lang-select-page--transparent .lang-select-page__option a {
     color: #fff; }
@@ -5325,27 +5325,27 @@ Styleguide page-header.informational-home
     color: #fff; }
   .page-header a {
     color: #fff; }
-    .page-header a:hover:not(.breadcrumb__link, .btn) {
+    .page-header a:hover:not(.breadcrumb__link):not(.btn):not(.inpage-nav__navbar .inpage-nav__toggle) {
       color: #ffd617; }
     .page-header a:focus {
       outline: 3px solid #ffd617;
       outline-offset: 2px;
       text-decoration: underline; }
-    .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
+    .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]):after {
+      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]):after {
         position: absolute;
         line-height: 2.2; }
-      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
+      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
         padding-right: 2.1em; }
-    .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title) {
+    .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title):after {
+      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title):after {
         position: absolute;
         line-height: 2.2; }
-      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title) {
+      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title) {
         padding-right: 2.1em; }
   .page-header .page-header__top,
   .page-header .page-header__main,
