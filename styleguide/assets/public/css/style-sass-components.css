@@ -4704,7 +4704,7 @@ Styleguide listing.2.4
   .listing__wrapper--two-columns .listing {
     margin-bottom: 0; } }
 
-.logo, .logo--logotype, .no-svg .logo--logotype {
+.logo, .logo--logotype {
   display: block;
   float: left;
   width: 140px;
@@ -4883,7 +4883,7 @@ Styleguide listing.2.4
     content: url("../images/svg/logo/logo--sv.svg"); } }
 
 .logo--logotype {
-  width: 290px; }
+  width: 190px; }
 
 .no-svg .language-bg .logo--logotype {
   background-image: url("../images/png/logo/logo--bg.png"); }
@@ -5054,7 +5054,11 @@ Styleguide listing.2.4
     content: url("../images/png/logo/logo--sv.png"); } }
 
 .no-svg .logo--logotype {
-  width: 290px; }
+  width: 190px; }
+
+@media (min-width: 480px) {
+  .logo--logotype {
+    width: 290px; } }
 
 .site-header__logo::before, .site-header__logo::after {
   display: none !important; }
