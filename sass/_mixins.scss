@@ -180,3 +180,16 @@
 @media print {
   @include hidden-print('.hidden-print');
 }
+
+// Social icons image
+@mixin social_icon_background($selector, $social_path, $image, $image_hover, $extra: null, $extra_hover: null) {
+  #{$selector} {
+    &:before {
+      background: url($social_path + $image) no-repeat $extra;
+    }
+
+    &:hover:before {
+      background-image: url($social_path + $image_hover) $extra_hover;
+    }
+  }
+}

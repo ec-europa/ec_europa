@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Display Suite NE Bootstrap structured content.
@@ -7,7 +8,7 @@
 
 <div class="listing listing--navigation">
 
-  <a href="<?php print url($node->path['source']); ?>" class="listing__item-link">
+  <a href="<?php print $node_url; ?>" class="listing__item-link">
     <h2 class="listing__section-title">
       <?php print $title; ?>
     </h2>

@@ -35,3 +35,8 @@ libraries[modernizr][destination] = "themes/europa"
 libraries[modernizr][directory_name] = "js/libraries/modernizr"
 libraries[modernizr][download][type] = "get"
 libraries[modernizr][download][url] = "https://github.com/Modernizr/Modernizr/archive/v2.8.3.zip"
+
+libraries[accessibleTabs][destination] = "themes/europa"
+libraries[accessibleTabs][directory_name] = "js/libraries"
+libraries[accessibleTabs][download][type] = "get"
+libraries[accessibleTabs][download][url] = "https://raw.githubusercontent.com/ec-europa/jquery-accessible-tabs-aria/master/jquery-accessible-tabs.js"

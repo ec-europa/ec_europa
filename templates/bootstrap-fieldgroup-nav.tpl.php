@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Displays a Bootstrap-style nav for tabs/pills.
@@ -17,12 +18,12 @@
 ?>
 <?php if (!$is_empty) : ?>
 
-  <div class="<?php print $wrapper_classes; ?>">
+  <div class="js-tabs <?php print $wrapper_classes; ?>">
 
     <?php if ($flip) : ?>
       <div class="tab-content <?php print $pane_classes; ?>">
         <?php foreach ($panes as $index => $pane) : ?>
-          <div id="<?php print $pane['id']; ?>" class="tab-pane <?php if ($index === $active) : print 'active';
+          <div id="<?php print $pane['id']; ?>" class="js-tabcontent tab-pane <?php if ($index === $active) : print 'active';
          endif; ?>">
             <?php print $pane['content']; ?>
           </div>
@@ -31,11 +32,13 @@
     <?php endif; ?>
 
     <?php if (!$is_single) : ?>
-      <ul class="nav<?php print $nav_classes; ?>">
+      <ul class="js-tablist nav<?php print $nav_classes; ?>">
         <?php foreach ($navs as $index => $nav) : ?>
-          <li class="<?php if ($index === $active) : print 'active';
+          <li class="js-tablist__item <?php if ($index === $active) : print 'active';
          endif; ?>">
-            <?php print $nav['content']; ?>
+            <?php
+            print $nav['content'];
+            ?>
           </li>
         <?php endforeach; ?>
       </ul>
@@ -44,7 +47,7 @@
     <?php if (!$flip) : ?>
       <div class="tab-content <?php print $pane_classes; ?>">
         <?php foreach ($panes as $index => $pane) : ?>
-          <div id="<?php print $pane['id']; ?>" class="<?php if ($index === $active) : print 'active';
+          <div id="<?php print $pane['id']; ?>" class="js-tabcontent <?php if ($index === $active) : print 'active';
          endif; ?>">
             <h2 class="tab-title"><?php print $pane['title']; ?></h2>
             <?php print $pane['content']; ?>

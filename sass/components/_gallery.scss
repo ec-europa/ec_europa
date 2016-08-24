@@ -1,0 +1,122 @@
+/*
+Gallery
+
+Gallery component
+
+Markup: html/gallery.html
+
+Styleguide gallery
+*/
+
+.mediagallery {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .row {
+    padding-left: 0;
+    padding-right: 0;
+
+    &:first-child {
+      .mediagallery__item {
+        padding-top: 0!important;
+      }
+    }
+    &:last-child {
+      .mediagallery__item {
+        padding-bottom: 0!important;
+      }
+    }
+  }
+}
+
+.mediagallery__item {
+  // Makes the images 185px;
+  height: auto;
+  overflow: hidden;
+  padding: 0px;
+
+  .mediagallery__item_container {
+    margin: 5px 5px 0px 5px;
+    width: 100%;
+    height: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &:first-child {
+    .mediagallery__item_container {
+      margin-left: 0px;
+    }
+  }
+
+  &:hover {
+    .mediagallery__caption {
+      display: block; /* Fallback for non-webkit */
+      display: -webkit-box;
+    }
+  }
+}
+
+.mediagallery__caption {
+  color: white;
+  width: 100%;
+  bottom: 0;
+  display: none;
+  padding: 5px 10px 5px 5px;
+  position: absolute;
+  overflow: hidden;
+  font-size: 0.667em;
+  max-height: 4.0em;
+  min-height: 2.0em;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  background-color: $grey-base;
+}
+
+/* Firefox alternative to webkit-line-clamp */
+@-moz-document url-prefix() {
+  .mediagallery__caption {
+    &:after {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), $grey-base 50%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+      top: 0;
+      content: "...";
+      font-weight: bold;
+      margin-top: 2.0em;
+      padding: 0 20px 1px 45px;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-min) {
+  .mediagallery__item_container {
+    margin-left: 0!important;
+  }
+}
+
+@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+  .mediagallery__item {
+    width: 50%;
+    float: left;
+  }
+  .mediagallery__item:nth-of-type(3) .mediagallery__item_container {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .mediagallery {
+    .row {
+      margin-left: -20px;
+    }
+  }
+  .mediagallery__item {
+    height: auto;
+  }
+}

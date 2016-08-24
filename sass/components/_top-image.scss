@@ -7,9 +7,9 @@ Styleguide top-image
 */
 .top-image {
   overflow: hidden;
+  text-align: center;
 
   picture {
-    display: block;
-    text-align: center;
+    display: inline-block;
   }
 }

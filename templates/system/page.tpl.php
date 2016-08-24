@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Default theme implementation to display a single Drupal page.
@@ -97,7 +98,7 @@
 <header class="site-header" role="banner">
   <div class="container-fluid">
     <a href="<?php print $front_page; ?>" class="<?php print $logo_classes; ?>" title="<?php print $page_logo_title; ?>"><span class="sr-only"><?php print $page_logo_title; ?></span></a>
-    <?php if($is_front && !empty($site_slogan)): ?>
+    <?php if ($is_front && !empty($site_slogan)): ?>
       <p class="site-slogan"><?php print $site_slogan; ?></p>
     <?php endif; ?>
 
@@ -105,7 +106,7 @@
       <section class="top-bar" aria-label="Site tools">
         <div>
           <div class="top-bar__wrapper">
-            <?php if($is_front): ?>
+            <?php if ($is_front): ?>
               <h1 class="sr-only"><?php print $site_name; ?></h1>
               <h2 class="sr-only"><?php print t('Classes'); ?></h2>
             <?php endif; ?>
@@ -148,7 +149,8 @@
 
 <section class="main-content">
   <!-- Page Header -->
-  <div class="page-header">
+  <div class="page-header <?php if (isset($header_back)) : print ' page-header--image';
+ endif; ?>">
     <?php if (!empty($page['header_bottom'])): ?>
       <nav class="page-navigation" role="navigation">
         <div class="container-fluid">
@@ -163,7 +165,7 @@
           <?php if (!empty($page['custom_title'])): ?>
             <?php print render($page['custom_title']); ?>
           <?php else: ?>
-            <h1><?php print $title ?></h1>
+            <h1><?php print $title; ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
 
@@ -174,6 +176,14 @@
       </div>
     </div>
   </div>
+
+  <?php if (!empty($page['utility'])): ?>
+    <div class="utility">
+      <div class="container-fluid">
+        <?php print render($page['utility']); ?>
+      </div>
+    </div>
+  <?php endif; ?>
 
   <!-- Generic sections -->
   <div class="container-fluid">
@@ -198,7 +208,7 @@
         <?php if (!empty($page['sidebar_first'])): ?>
           <aside class="col-md-3" role="complementary">
             <?php print render($page['sidebar_first']); ?>
-          </aside>  <!-- /#sidebar-first -->
+          </aside> <!-- /#sidebar-first -->
         <?php endif; ?>
 
         <section class="section <?php print $content_column_class; ?>">

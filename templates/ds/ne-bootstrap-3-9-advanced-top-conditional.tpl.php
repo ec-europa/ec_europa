@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Display Suite NE Bootstrap Three Columns Stacked.
@@ -57,13 +58,13 @@
         <div class="row">
 
           <?php if (isset($top_middle_left) && !empty($top_middle_left)) : ?>
-            <<?php print $top_middle_left_wrapper; ?> class="section section--content-top-middle-left col-lg-4 <?php print $top_middle_left_classes; ?>">
+            <<?php print $top_middle_left_wrapper; ?> class="section section--content-top-middle-left col-lg-5 <?php print $top_middle_left_classes; ?>">
               <?php print $top_middle_left; ?>
           </<?php print $top_middle_left_wrapper; ?>>
           <?php endif; ?>
 
           <?php if (isset($top_middle_right) && !empty($top_middle_right)) : ?>
-            <<?php print $top_middle_right_wrapper; ?> class="section section--content-top-middle-right col-lg-8 <?php print $top_middle_right_classes; ?>">
+            <<?php print $top_middle_right_wrapper; ?> class="section section--content-top-middle-right col-lg-7 <?php print $top_middle_right_classes; ?>">
               <?php print $top_middle_right; ?>
             </<?php print $top_middle_right_wrapper; ?>>
           <?php endif; ?>

@@ -66,14 +66,19 @@
 
 .logo--logotype {
   @extend .logo;
-  width: 290px;
+  width: 190px;
 }
 
 .no-svg {
   @include logo-background-languages('../images/png/logo/logo--', '.png');
 
   .logo--logotype {
-    @extend .logo;
+    width: 190px;
+  }
+}
+
+@include breakpoint(screen-xs-min) {
+  .logo--logotype {
     width: 290px;
   }
 }

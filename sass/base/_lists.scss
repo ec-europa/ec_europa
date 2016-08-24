@@ -12,7 +12,7 @@ ol {
 }
 
 .region-content {
-  ul,
+  ul:not(.listing),
   ol {
     @extend .paragraph;
     margin-left: 0;
