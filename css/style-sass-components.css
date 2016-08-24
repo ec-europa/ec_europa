@@ -4627,8 +4627,8 @@ Styleguide listing.1.2
 */
 .listing--column-left .listing__column-main {
   width: auto;
-  overflow: hidden;
-  float: none; }
+  float: none;
+  overflow: hidden; }
 
 .listing--column-left .listing__column-second {
   width: auto;
@@ -4698,6 +4698,9 @@ Styleguide listing.2.4
   margin-bottom: 2em; }
 
 .listing__wrapper--row-two .listing__item:nth-child(odd) {
+  clear: left; }
+
+.listing__wrapper--row-three .listing__item:nth-child(3n+4) {
   clear: left; }
 
 @media (min-width: 992px) {
