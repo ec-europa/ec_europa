@@ -5,6 +5,9 @@ Social Media Links
 
 Markup: html/social-media-links.html
 
+.social-media-links__horizontal - Horizontal modifier
+
+
 Styleguide social
 */
 
@@ -14,13 +17,25 @@ Styleguide social
   float: left;
   width: 100%;
 
-  .social-media-links__list {
-    list-style-type: none;
-    padding: 0px !important;
-    margin: 0px !important;
-  }
-
   @extend .hidden-print;
+}
+
+.social-media-links__list {
+  list-style-type: none;
+  padding: 0px !important;
+  margin: 0px !important;
+
+}
+
+.social-media-links__horizontal {
+  li {
+    float: left;
+    margin-right: 0.6em;
+
+    a {
+      line-height: $font-size-huge;
+    }
+  }
 }
 
 .social-media-links__label {
@@ -36,7 +51,6 @@ Styleguide social
     width: 100%;
     display: block;
     @include _focus_outline_border(3px, $yellow-light, -1px);
-
 
     &:before {
       margin-bottom: 0px;
@@ -62,11 +76,11 @@ Styleguide social
     background: transparent !important;
     padding: 0;
 
-    a{
+    a {
       &[href^="http"]:not(.is-internal):after {
         display: none !important;
       }
-      &:focus{
+      &:focus {
         outline-offset: -1px;
         text-decoration: underline;
       }

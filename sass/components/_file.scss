@@ -38,6 +38,17 @@ Styleguide file.2
 .file-video {
   background: none;
   padding: 1em 0;
+
+  .content iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 260px;
+  }
+}
+
+.file-image {
+  padding: 0;
 }
 
 .file-video--withbackground {
@@ -80,8 +91,9 @@ Styleguide file.2
 }
 
 .file__caption {
+  padding: 0.725em 1em;
+  line-height: 1.435em;
   font-size: $font-size-xsmall;
-  padding: 0.5em;
 }
 
 .file__language {
@@ -122,7 +134,7 @@ Styleguide file.2
 }
 
 .file--condensed {
-  padding: 0em;
+  padding: 0;
 }
 
 // Modifications in the translations under a normal file.

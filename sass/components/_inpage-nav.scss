@@ -13,19 +13,19 @@ Styleguide inpagenav
 
 .inpage-nav__wrapper {
   margin-bottom: 1.667em;
+  @extend .hidden-print;
+
   &.affix,
   &.affix-top {
     position:relative;
   }
-  @extend .hidden-print;
 }
 
 .inpage-nav {
   .inpage-nav__list {
     margin: 0 0 0 -11px !important;
-    padding: 0;
+    padding-left: 0 !important;
     list-style: none;
-    list-style-image: none;
 
     li {
       &.active {
@@ -71,7 +71,7 @@ Styleguide inpagenav
 
   .inpage-nav__current,
   .inpage-nav__help {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   .inpage-nav__current {
@@ -114,6 +114,7 @@ Styleguide inpagenav
     background-color: $blue-darkest;
     border-color: $blue-darkest;
     padding: 1em;
+
     &:hover,
     &:active,
     &:focus {
@@ -130,8 +131,9 @@ Styleguide inpagenav
     color: #ffffff;
     margin: 5px 4px;
     font-size: 10px;
+
     &:before {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 
@@ -157,12 +159,14 @@ Styleguide inpagenav
 
   .inpage-nav__list--navbar {
     padding: 0 15px;
+
     li {
       &.active {
         .inpage_nav__list-item {
           color: inherit;
         }
       }
+
       .inpage_nav__list-item {
         color: #fff;
         border-top: 1px solid $blue-darkest;
@@ -181,25 +185,31 @@ Styleguide inpagenav
 
 .inpage-nav__navbar-wrapper {
   display: none;
+
   &.is-active {
     display: inherit;
   }
+
   &.is-collapsed,
   &.is-collapsing {
     .inpage-nav__navbar {
       height: 100%;
     }
+
     .inpage-nav__help,
     .inpage-nav__close-text {
        display: block;
     }
+
     .inpage-nav__current {
      display: none;
     }
+
     .inpage-nav__header{
      background-color: $grey-lighter;
      font-weight: normal;
     }
+
     .inpage-nav__toggle {
       background-color: $grey;
       border-color: $grey;

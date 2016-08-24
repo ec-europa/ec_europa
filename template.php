@@ -40,6 +40,33 @@ function europa_css_alter(&$css) {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function europa_theme($existing, $type, $theme, $path) {
+  return [
+    'europa_status_message' => [
+      'template' => 'status_message',
+      'path' => $path . '/templates',
+      'variables' => [
+        'message_title' => '',
+        'message_body' => '',
+        'message_type' => '',
+        'message_classes' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_europa_status_message().
+ */
+function europa_preprocess_europa_status_message(&$variables) {
+  if (isset($variables['message_classes']) && is_array($variables['message_classes'])) {
+    $variables['message_classes'] = ' ' . implode(' ', $variables['message_classes']);
+  }
+}
+
+/**
  * Overrides theme_form_required_marker().
  */
 function europa_form_required_marker($variables) {
@@ -151,6 +178,11 @@ function europa_form_element(&$variables) {
     $attributes['class'][] = 'form-autocomplete';
   }
   $attributes['class'][] = 'form-item';
+
+  // See https://www.drupal.org/node/154137
+  if ($element['#id'] == 'edit-querytext') {
+    $element['#children'] = str_replace('type="text"', 'type="search"', $element['#children']);
+  }
 
   // See http://getbootstrap.com/css/#forms-controls.
   if (isset($element['#type'])) {
@@ -469,14 +501,13 @@ function europa_html_head_alter(&$head_elements) {
  * A search_form alteration.
  */
 function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_state, $form_id) {
-  $form['search_input_group']['#prefix'] = '';
-  $form['search_input_group']['#suffix'] = '';
-  $form['search_input_group']['europa_search_submit']['#prefix'] = '<div class="search-form__btn-wrapper">';
-  $form['search_input_group']['europa_search_submit']['#suffix'] = '</div>';
+  $form['search_input_group']['europa_search_submit']['#prefix'] = '<span class="input-group-btn search-form__btn-wrapper">';
+  $form['search_input_group']['europa_search_submit']['#suffix'] = '</span>';
   $form['search_input_group']['europa_search_submit']['#attributes']['class'][] = 'search-form__btn';
-  $form['search_input_group']['QueryText']['#prefix'] = '<div class="search-form__textfield-wrapper">';
-  $form['search_input_group']['QueryText']['#suffix'] = '</div>';
+  $form['search_input_group']['QueryText']['#prefix'] = '<label class="search-form__textfield-wrapper"><span class="sr-only">' . t('Search this website') . '</span>';
+  $form['search_input_group']['QueryText']['#suffix'] = '</label>';
   $form['search_input_group']['QueryText']['#attributes']['class'][] = 'search-form__textfield';
+  $form['search_input_group']['QueryText']['#attributes']['title'] = t('Search');
 
   unset($form['search_input_group']['QueryText']['#attributes']['placeholder']);
   unset($form['search_input_group']['europa_search_submit']['#attributes']['tabindex']);
@@ -551,7 +582,10 @@ function europa_easy_breadcrumb(&$variables) {
       $content = '<span class="breadcrumb__text">' . check_plain(decode_entities($item['content'])) . '</span>';
       $class = implode(' ', $classes);
       if (isset($item['url'])) {
-        $full_item = l($content, $item['url'], array('attributes' => $attributes, 'html' => TRUE));
+        $full_item = l($content, $item['url'], array(
+          'attributes' => $attributes,
+          'html' => TRUE,
+        ));
       }
       else {
         $full_item = '<span class="' . $class . '">' . $content . '</span>';
@@ -614,7 +648,10 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   // Get our full language string.
   if (isset($file->entity->language) || isset($file->language)) {
     $language_to_use = isset($file->entity->language) ? entity_translation_get_existing_language('node', $file->entity) : $file->language;
-    $file_language_string = _dt_shared_functions_get_language_obj($language_to_use);
+    $file_language_string = _dt_shared_functions_get_language_obj($language_to_use, 'native');
+    if (!$subfile && module_exists('locale') && isset($GLOBALS['language_content']->language)) {
+      $file_language_string = locale($file_language_string, NULL, $GLOBALS['language_content']->language);
+    }
   }
 
   // If we have a full language string and it's not a subfile, we add it to the
@@ -625,7 +662,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   }
 
   // File information and title setter.
-  if ($subfile) {
+  if ($subfile && isset($file_language_string)) {
     $file_info_string = $file_size . ' - ' . $file_extension;
     $title_string = $file_language_string . ' ' . t('version');
   }
@@ -635,6 +672,8 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
     // Use the description as the link text if available.
     if (isset($file->entity)) {
       // We have access to the entity, so we can use that title.
+      // If the file entity is different form the current node we use that
+      // title.
       $file_wrapper = entity_metadata_wrapper('node', $file->entity);
       $title_string = $file_wrapper->title->value();
     }
@@ -839,6 +878,7 @@ function europa_preprocess_block(&$variables) {
  * Implements hook_preprocess_bootstrap_tabs().
  */
 function europa_preprocess_bootstrap_fieldgroup_nav(&$variables) {
+  drupal_add_js(drupal_get_path('theme', 'europa') . '/js/libraries/jquery-accessible-tabs.js');
   $group = &$variables['group'];
 
   $variables['nav_classes'] = '';
@@ -863,6 +903,36 @@ function europa_preprocess_bootstrap_fieldgroup_nav(&$variables) {
   foreach ($variables['items'] as $item) {
     // Check if item is not empty and we have access to it.
     if ($item && (!isset($item['#access']) || $item['#access'])) {
+
+      $id = 'bootstrap-fieldgroup-nav-item--' . drupal_html_id($item['#title']);
+
+      // Is an explicit nav item?
+      if (!empty($item['#type']) && 'bootstrap_fieldgroup_nav_item' == $item['#type']) {
+        $classes = $item['#group']->classes;
+      }
+      // Otherwise, just a regular field under the nav.
+      else {
+        $classes = '';
+      }
+
+      $variables['navs'][$i] = array(
+        'content' => l(
+          $item['#title'],
+          NULL,
+          array(
+            'attributes' => array(
+              'data-toggle' => 'tab',
+              'class' => ['js-tablist__link'],
+            ),
+            'fragment' => $id,
+            'external' => TRUE,
+            'html' => TRUE,
+          )
+        ),
+        'classes' => $classes,
+      );
+
+      $variables['panes'][$i]['id'] = $id;
       $variables['panes'][$i]['title'] = check_plain($item['#title']);
       $i++;
     }
@@ -916,7 +986,10 @@ function europa_preprocess_image(&$variables) {
         $variables['attributes']['class'][] = 'img-responsive';
       }
       else {
-        $variables['attributes']['class'] = array($variables['attributes']['class'], 'img-responsive');
+        $variables['attributes']['class'] = array(
+          $variables['attributes']['class'],
+          'img-responsive',
+        );
       }
     }
   }
@@ -961,6 +1034,19 @@ function europa_preprocess_html(&$variables) {
     '#suffix' => '</script><![endif]-->',
   );
   drupal_add_html_head($ie9_js, 'ie9_js');
+
+  // For some reason, the front page handles tokens different.
+  if (drupal_is_front_page()) {
+    $data = ['node' => menu_get_object('node')];
+    $last_modified = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'last-modified',
+        'content' => token_replace('[dt_tokens:dt_update_date]', $data),
+      ],
+    ];
+    drupal_add_html_head($last_modified, 'last_modified');
+  }
 
   // Override splash screen title.
   $menu_item = menu_get_item();
@@ -1402,4 +1488,33 @@ function europa_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+}
+
+/**
+ * Implements hook_status_messages().
+ */
+function europa_status_messages($variables) {
+  $display = $variables['display'];
+  $output = [];
+
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $body = '';
+    foreach ($messages as $message) {
+      $body .= '  <p>' . $message . "</p>\n";
+    }
+
+    $output[] = [
+      '#theme' => 'europa_status_message',
+      '#message_classes' => [
+        'alert',
+        'alert-block',
+        $type,
+        count($messages) > 1 ?: 'messages--icon-center',
+      ],
+      '#message_type' => $type . ' message',
+      '#message_body' => $body,
+    ];
+  }
+
+  return drupal_render($output);
 }

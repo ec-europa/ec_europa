@@ -4240,7 +4240,7 @@ button.close {
 
 @media print {
   .hidden-print, .btn, .btn-group, .form-control, .form-group, ul.nav-tabs,
-  .nav-tabs {
+  .nav-tabs, .utility {
     display: none !important; } }
 
 .icon--after, .btn.btn-ctn:after, .btn.btn-menu:after {
@@ -4259,7 +4259,7 @@ button.close {
 
 @media print {
   .hidden-print, .btn, .btn-group, .form-control, .form-group, ul.nav-tabs,
-  .nav-tabs {
+  .nav-tabs, .utility {
     display: none !important; } }
 
 /**
@@ -5128,7 +5128,7 @@ ul,
 ol {
   padding-left: 18px; }
 
-.region-content ul,
+.region-content ul:not(.listing),
 .region-content ol {
   margin-left: 0;
   margin-right: 0;
@@ -5215,6 +5215,8 @@ ul.nav-tabs,
     padding-right: 1em; }
   .nav-tabs--with-content + .tab-content {
     padding: 0; }
+    .nav-tabs--with-content + .tab-content > * {
+      margin-bottom: 1.667em !important; }
 
 /*
 Bootstrap: Nav tabs right.
@@ -5251,6 +5253,14 @@ ul.nav-tabs-right {
     visibility: visible !important; } }
 
 /*
+WAI-ARIA: Accessible tab panel system.
+
+Implementation of WAI-ARIA attributes on nav tabs for the CWS.
+*/
+.js-tabcontent[aria-hidden=true] {
+  display: none; }
+
+/*
 Paragraphs
 
 Markup: html/paragraphs.html
@@ -5260,7 +5270,7 @@ Markup: html/paragraphs.html
 
 Styleguide text.paragraphs
 */
-.paragraph, .region-content ul,
+.paragraph, .region-content ul:not(.listing),
 .region-content ol, p {
   margin-bottom: 0.8em;
   max-width: 32em; }
@@ -5449,9 +5459,6 @@ textarea.error {
       .top-bar .site-menu__toggle .btn {
         margin-bottom: auto; } }
 
-.page-bottom-header {
-  margin-top: -1px; }
-
 .ceiling {
   border-top: #ffd617 solid 10px; }
 
@@ -5460,9 +5467,7 @@ textarea.error {
 
 .row > .row, .section .section--row-two > .row,
 .section .section--row-three > .row, .section .row > .section--row-two, .section .section--row-two > .section--row-two, .section .section--row-three > .section--row-two,
-.section .row > .section--row-three,
-.section .section--row-two > .section--row-three,
-.section .section--row-three > .section--row-three {
+.section .row > .section--row-three, .section .section--row-two > .section--row-three, .section .section--row-three > .section--row-three {
   margin: 0; }
 
 .page-navigation {
@@ -5551,8 +5556,6 @@ Styleguide sections.3
   .section .section:last-child,
   .section .listing__wrapper:last-child {
     margin-bottom: 0; }
-  .section .section__group + .section__group .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > * + .section__group .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > .section__group + * .listing__item:first-child, .section .nav-tabs--with-content + .tab-content > * + * .listing__item:first-child {
-    border-top: none; }
 
 .section__group.sidebar-field-group + .section__group.sidebar-field-group__main, .nav-tabs--with-content + .tab-content > .sidebar-field-group + .sidebar-field-group__main {
   margin-top: 0; }
@@ -5610,6 +5613,8 @@ Styleguide sections.3
 
 .section--row-three .section__item {
   margin-top: 15px; }
+  .section--row-three .section__item:nth-child(3n+4) {
+    clear: left; }
 
 @media (min-width: 1200px) {
   .section__group--full-width {
@@ -5679,5 +5684,14 @@ Styleguide sections.3
     vertical-align: bottom; }
     .field-group--inline-bottom .field:last-child {
       padding-right: 0; }
+
+/*
+Utility
+
+Placeholder for adding the user menu .site-user-menu
+*/
+.utility {
+  background-color: #f2f2f2;
+  font-size: 0.889em; }
 
 /*# sourceMappingURL=style-sass-base.css.map */
