@@ -5518,6 +5518,28 @@ Styleguide pager
     display: none; }
 
 /*
+Profile topbar
+
+Defines the profile topbar component
+
+Markup: html/profile_topbar.html
+
+Styleguide profile_topbar
+*/
+.profile_topbar__column {
+  position: relative;
+  min-height: 160px;
+  height: 100%; }
+  .profile_topbar__column .btn-collapse {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0; }
+
+.profile_topbar__expander {
+  background-color: #ececec;
+  overflow: hidden; }
+
+/*
 RSS Link
 
 Markup: html/rss-link.html
@@ -6170,11 +6192,10 @@ Styleguide timeline
 */
 .timeline {
   border-left: 4px solid #ffd617;
-  padding-left: 1.667em;
-  padding-bottom: 0;
-  padding-top: 2em;
+  padding: 2em 0 0 1.667em;
   position: relative;
-  float: left; }
+  float: left;
+  margin-bottom: 1.667em; }
   .timeline .listing__item {
     padding: 0; }
   .timeline .timeline__item-title {

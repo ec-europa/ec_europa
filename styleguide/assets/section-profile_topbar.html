@@ -215,6 +215,8 @@
           <span class="kss-nav__ref">30</span
           ><span class="kss-nav__name">Profile topbar</span>
         </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-rsslink.html">
@@ -257,20 +259,6 @@
           <span class="kss-nav__ref">37</span
           ><span class="kss-nav__name">Tags</span>
         </a>
-        <ul class="kss-nav__menu-child">
-            <li class="kss-nav__menu-item">
-              <a href="section-tags.html#kssref-tags-facet-close">
-                <span class="kss-nav__ref">37.1</span
-                ><span class="kss-nav__name">Facet tag with close</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-tags.html#kssref-tags-facettag">
-                <span class="kss-nav__ref">37.2</span
-                ><span class="kss-nav__name">Facet tag</span>
-              </a>
-            </li>
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-text.html">
@@ -295,20 +283,20 @@
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-tags" class="kss-section kss-section--depth-1">
+      <div     id="kssref-profile_topbar" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
-        <a class="kss-title__permalink" href="#kssref-tags">
-          <span class="kss-title__ref">37</span
-          >Tags
+        <a class="kss-title__permalink" href="#kssref-profile_topbar">
+          <span class="kss-title__ref">30</span
+          >Profile topbar
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h1>
 
 
       <div class="kss-description">
-        <p>Tags component used to display tag section that is typically displayed under a content</p>
+        <p>Defines the profile topbar component</p>
 
       </div>
     </div>
@@ -318,149 +306,77 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="tags">
-  <span class="tags__label">Tags:</span>
-  <div class="tags__items">
-    <a class="tags__item" href="#">Boot</a>
-    <a class="tags__item" href="#">Strap</a>
-    <a class="tags__item" href="#">Apple</a>
-  </div>
-</div>
+          <div class="profile_topbar">
 
-<!-- Or -->
+    <div class="container">
+        <div class="section__group row">
+            <div class="col-md-2 profile_topbar__image">
+                <img src="http://placehold.it/160x160"/>
+            </div>
 
-<div class="tags">
-  <span class="tags__label">Tags:</span>
-  <div class="tags__items">
-    <span class="tags__item">
-      <a href="#">Boot</a>
-    </span>
-    <span class="tags__item">
-      <a href="#">Strap</a>
-    </span>
-    <span class="tags__item">
-      <a href="#">Apple</a>
-    </span>
-  </div>
-</div>
+            <div class="col-md-10 profile_topbar__column">
+                <div class="context-nav group-context-nav field-group-context_nav"><span
+                        class="context-nav__label">Department</span>
+                    <div class="context-nav__items">
+                        <span class="context-nav__item"><a href="#">Trade</a></span>
+                        <span class="context-nav__item"><a href="#">European Anti-Fraud Office</a></span>
+                    </div>
+                </div>
 
+                <button class="btn btn-collapse" data-target="#collapse" data-toggle="collapse">
+                    <span class="toggling-text">Show</span>
+                    <span class="icon icon--blue-dark icon--down"></span>
+                </button>
+            </div>
         </div>
-      </div>
-
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;tags&quot;&gt;
-  &lt;span class=&quot;tags__label&quot;&gt;Tags:&lt;/span&gt;
-  &lt;div class=&quot;tags__items&quot;&gt;
-    &lt;a class=&quot;tags__item&quot; href=&quot;#&quot;&gt;Boot&lt;/a&gt;
-    &lt;a class=&quot;tags__item&quot; href=&quot;#&quot;&gt;Strap&lt;/a&gt;
-    &lt;a class=&quot;tags__item&quot; href=&quot;#&quot;&gt;Apple&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- Or --&gt;
-
-&lt;div class=&quot;tags&quot;&gt;
-  &lt;span class=&quot;tags__label&quot;&gt;Tags:&lt;/span&gt;
-  &lt;div class=&quot;tags__items&quot;&gt;
-    &lt;span class=&quot;tags__item&quot;&gt;
-      &lt;a href=&quot;#&quot;&gt;Boot&lt;/a&gt;
-    &lt;/span&gt;
-    &lt;span class=&quot;tags__item&quot;&gt;
-      &lt;a href=&quot;#&quot;&gt;Strap&lt;/a&gt;
-    &lt;/span&gt;
-    &lt;span class=&quot;tags__item&quot;&gt;
-      &lt;a href=&quot;#&quot;&gt;Apple&lt;/a&gt;
-    &lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-      </div>
-
-      </div>
-      <section id="kssref-tags-facet-close" class="kss-section kss-section--depth-2">
-
-    <div class="kss-style">
-      <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-tags-facet-close">
-          <span class="kss-title__ref">37.1</span
-          >Facet tag with close
-          <span class="kss-title__permalink-hash">#permalink</span>
-        </a>
-      </h2>
-
-
     </div>
 
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    <div id="collapse" class="profile_topbar__expander">
+        <div class="container">
+            Expander content
         </div>
-        <div class="kss-modifier__example">
-          <div class="facet-tag facet-tag--close">
-  <span class="facet-tag__label">Type</span>
-  <a class="facet-tag__value" href="#">Item 1.</a>
-  <span class="facet-tag__label">Department</span>
-  <a class="facet-tag__value" href="#">Item 2.</a>
-</div>
-
-        </div>
-      </div>
-
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;facet-tag facet-tag--close&quot;&gt;
-  &lt;span class=&quot;facet-tag__label&quot;&gt;Type&lt;/span&gt;
-  &lt;a class=&quot;facet-tag__value&quot; href=&quot;#&quot;&gt;Item 1.&lt;/a&gt;
-  &lt;span class=&quot;facet-tag__label&quot;&gt;Department&lt;/span&gt;
-  &lt;a class=&quot;facet-tag__value&quot; href=&quot;#&quot;&gt;Item 2.&lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-      </div>
-
-      </section>
-      <section id="kssref-tags-facettag" class="kss-section kss-section--depth-2">
-
-    <div class="kss-style">
-      <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-tags-facettag">
-          <span class="kss-title__ref">37.2</span
-          >Facet tag
-          <span class="kss-title__permalink-hash">#permalink</span>
-        </a>
-      </h2>
-
-
     </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
-        </div>
-        <div class="kss-modifier__example">
-          <div class="facet-tag">
-  <span class="facet-tag__label">
-    containing
-  </span>
-  <span class="facet-tag__value">
-    Words that the facet is containing
-  </span>
 </div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;facet-tag&quot;&gt;
-  &lt;span class=&quot;facet-tag__label&quot;&gt;
-    containing
-  &lt;/span&gt;
-  &lt;span class=&quot;facet-tag__value&quot;&gt;
-    Words that the facet is containing
-  &lt;/span&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;profile_topbar&quot;&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;section__group row&quot;&gt;
+            &lt;div class=&quot;col-md-2 profile_topbar__image&quot;&gt;
+                &lt;img src=&quot;http://placehold.it/160x160&quot;/&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-md-10 profile_topbar__column&quot;&gt;
+                &lt;div class=&quot;context-nav group-context-nav field-group-context_nav&quot;&gt;&lt;span
+                        class=&quot;context-nav__label&quot;&gt;Department&lt;/span&gt;
+                    &lt;div class=&quot;context-nav__items&quot;&gt;
+                        &lt;span class=&quot;context-nav__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Trade&lt;/a&gt;&lt;/span&gt;
+                        &lt;span class=&quot;context-nav__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;European Anti-Fraud Office&lt;/a&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;button class=&quot;btn btn-collapse&quot; data-target=&quot;#collapse&quot; data-toggle=&quot;collapse&quot;&gt;
+                    &lt;span class=&quot;toggling-text&quot;&gt;Show&lt;/span&gt;
+                    &lt;span class=&quot;icon icon--blue-dark icon--down&quot;&gt;&lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;collapse&quot; class=&quot;profile_topbar__expander&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            Expander content
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
       </div>
 
-      </section>
+      </div>
 </article>
 
 <!-- SCRIPTS -->
