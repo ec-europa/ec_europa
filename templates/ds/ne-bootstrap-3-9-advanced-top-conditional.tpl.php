@@ -14,8 +14,7 @@
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
   <!-- Page Header -->
-  <div class="page-header<?php if (isset($header_back)) : print ' page-header--image';
- endif; ?>">
+  <div class="page-header<?php print isset($header_back) ? ' page-header--image' : ''; ?>">
     <nav class="page-navigation" role="navigation">
       <div class="container-fluid">
         <?php print render($header_bottom); ?>
@@ -36,10 +35,14 @@
     </div>
   </div>
 
-  <div class="page-content">
-
+  <div class="utility">
     <div class="container-fluid">
+      <?php print render($utility); ?>
+    </div>
+  </div>
 
+  <div class="page-content">
+    <div class="container-fluid">
       <?php if (!empty($top_top) || !empty($local_tabs) || !empty($messages)) : ?>
         <div class="row">
           <section class="section section--content-top col-md-12 <?php print $top_top_classes; ?>">

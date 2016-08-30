@@ -169,11 +169,13 @@ $datepicker-color-background: #eaeaea;
 }
 
 // Positioning the calendar icon
+// Positioning the calendar icon
 .date-picker {
   position: relative;
-  .icon{
+  .date-picker--icon {
+    @extend .icon;
     position: absolute;
-    top: .5em;
+    top: 2.35em;
     right: .5em;
     //pointer-events:none to get the Icon not interfering with the clickable area.
     pointer-events: none;

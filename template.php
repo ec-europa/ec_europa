@@ -134,12 +134,6 @@ function europa_form_element(&$variables) {
     '#title_display' => 'before',
   );
 
-  // Hide datepicker-popup label.
-  $datepicker_popup_pattern = '/edit-.*-datepicker-popup-.*/i';
-  if (!empty($element['#id']) && preg_match($datepicker_popup_pattern, $element['#id'])) {
-    $element['#title_display'] = 'invisible';
-  }
-
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
@@ -256,6 +250,7 @@ function europa_form_element(&$variables) {
     case 'after':
       if ($is_radio || $is_checkbox) {
         $output .= ' ' . $prefix . $element['#children'] . $suffix;
+        unset($element['#children']);
       }
       else {
         $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;
@@ -273,13 +268,6 @@ function europa_form_element(&$variables) {
 
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       $output .= $feedback_message;
-  }
-
-  // Adding the calendar icon on text fields with JS UI PopUp calendar.
-  if ($variables['element']['#type'] == 'date_popup') {
-    $prefix = '<div class="date-picker">';
-    $suffix = '<span class="icon icon--calendar"></span>';
-    $output = ' ' . $prefix . $element['#children'] . $suffix . "\n";
   }
 
   $output .= "</div>\n";
@@ -1126,6 +1114,11 @@ function europa_preprocess_page(&$variables) {
           // Move the header_bottom to the node.
           $variables['node']->header_bottom = $variables['page']['header_bottom'];
           unset($variables['page']['header_bottom']);
+        }
+        if (isset($variables['page']['utility'])) {
+          // Move the utility to the node.
+          $variables['node']->utility = $variables['page']['utility'];
+          unset($variables['page']['utility']);
         }
         ctools_class_add($layout['layout']);
 

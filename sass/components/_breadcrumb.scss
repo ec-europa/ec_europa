@@ -214,8 +214,8 @@ Styleguide breadcrumb.collapsible
     }
 
     .breadcrumb__segment--last {
-      @include transition(all 0.3s ease 0s);
       padding-left: 0;
+      @include transition(all 0.3s ease 0s);
     }
   }
 

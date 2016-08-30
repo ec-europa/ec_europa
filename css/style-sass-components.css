@@ -595,7 +595,7 @@ a.label:hover, a.label:focus {
   -moz-osx-font-smoothing: grayscale; }
 
 @media print {
-  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .breadcrumb, .feedback-message, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
+  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .breadcrumb, .feedback-message, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
   #skip-link, .social-media-links {
     display: none !important; } }
 
@@ -943,15 +943,15 @@ Styleguide buttons.btn-
 .btn-collapse:focus span.toggling-text::after {
   text-decoration: underline; }
 
-.btn-collapse .icon, .btn-collapse .search-form__btn {
+.btn-collapse .icon, .btn-collapse .date-picker .date-picker--icon, .date-picker .btn-collapse .date-picker--icon, .btn-collapse .search-form__btn {
   margin-left: 0.3em; }
-  .btn-collapse .icon::before, .btn-collapse .search-form__btn::before {
+  .btn-collapse .icon::before, .btn-collapse .date-picker .date-picker--icon::before, .date-picker .btn-collapse .date-picker--icon::before, .btn-collapse .search-form__btn::before {
     vertical-align: bottom; }
 
-.btn-collapse:hover:not(:focus) .icon::before, .btn-collapse:hover:not(:focus) .search-form__btn::before {
+.btn-collapse:hover:not(:focus) .icon::before, .btn-collapse:hover:not(:focus) .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover:not(:focus) .date-picker--icon::before, .btn-collapse:hover:not(:focus) .search-form__btn::before {
   color: #fff; }
 
-.btn-collapse.collapsed:span.icon, .btn-collapse.collapsed.search-form__btn:span {
+.btn-collapse.collapsed:span.icon, .date-picker .btn-collapse.collapsed.date-picker--icon:span, .btn-collapse.collapsed.search-form__btn:span {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -1115,7 +1115,7 @@ Styleguide: icon
   src: url("../fonts/europa-icons/europa-icons.eot");
   src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/icomoon.svg#icomoon") format("svg"); }
 
-.icon:before, .search-form__btn:before {
+.icon:before, .date-picker .date-picker--icon:before, .search-form__btn:before {
   text-decoration: none;
   display: inline-block;
   font-family: 'EuropaIcons';
@@ -1556,10 +1556,10 @@ Styleguide breadcrumb.collapsible
   display: block; }
 
 .breadcrumb--collapsible.is-open .breadcrumb__segment--last {
+  padding-left: 0;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  padding-left: 0; }
+  transition: all 0.3s ease 0s; }
 
 @media (min-width: 480px) {
   .breadcrumb--collapsible .breadcrumb__segment.is-hidden {
@@ -1726,7 +1726,7 @@ Styleguide contextnav
       text-decoration: underline; }
   .context-nav__more-button {
     text-decoration: underline; }
-    .context-nav__more-button .icon, .context-nav__more-button .search-form__btn {
+    .context-nav__more-button .icon, .context-nav__more-button .date-picker .date-picker--icon, .date-picker .context-nav__more-button .date-picker--icon, .context-nav__more-button .search-form__btn {
       padding-left: 2px;
       top: 3px;
       position: relative; }
@@ -2004,9 +2004,9 @@ Styleguide datepicker
 
 .date-picker {
   position: relative; }
-  .date-picker .icon, .date-picker .search-form__btn {
+  .date-picker .date-picker--icon {
     position: absolute;
-    top: .5em;
+    top: 2.35em;
     right: .5em;
     pointer-events: none;
     color: #b3b4b5; }
@@ -2043,7 +2043,7 @@ Styleguide expandable
   background: #ffd617; }
   .expandable__toggle.collapsed {
     background: none; }
-  .expandable__toggle .icon, .expandable__toggle .search-form__btn {
+  .expandable__toggle .icon, .expandable__toggle .date-picker .date-picker--icon, .date-picker .expandable__toggle .date-picker--icon, .expandable__toggle .search-form__btn {
     margin-right: 0.833em; }
   .expandable__toggle h3 {
     font-size: 1.222em; }
@@ -2136,7 +2136,7 @@ a.feedback-form__trigger {
 .feedback-form__btn {
   width: 12em;
   margin-left: 2.500em; }
-  .feedback-form__btn .icon, .feedback-form__btn .search-form__btn {
+  .feedback-form__btn .icon, .feedback-form__btn .date-picker .date-picker--icon, .date-picker .feedback-form__btn .date-picker--icon, .feedback-form__btn .search-form__btn {
     font-size: 0.778em; }
 
 #feedback-form__accordion {
@@ -2235,6 +2235,8 @@ Styleguide field
   .field--labeled .field__label {
     display: block;
     padding: 0.215em 0 0 0; }
+    .field--labeled .field__label h4 {
+      padding: 0; }
   .field--labeled .field__items {
     display: block; }
   .field--labeled a:focus {
@@ -2516,6 +2518,10 @@ Styleguide filters.filters
     margin-top: 0; }
   .filters__result-count + .filters__active-facets {
     margin-top: -0.5em; }
+
+.filters__result-range {
+  padding-bottom: 15px;
+  font-weight: bold; }
 
 .filters__active-facets {
   padding: 0 0 1em; }
@@ -4128,12 +4134,12 @@ Styleguide: langselect.dropdown
   overflow: hidden;
   width: 100%; }
 
-.icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn {
+.icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn {
   float: left;
   margin: 0;
   font-size: 2em;
   padding: 0; }
-  .icon.lang-select-page__icon:before, .lang-select-page__icon.search-form__btn:before {
+  .icon.lang-select-page__icon:before, .date-picker .lang-select-page__icon.date-picker--icon:before, .lang-select-page__icon.search-form__btn:before {
     padding-top: 30%;
     float: left; }
 
@@ -5109,6 +5115,9 @@ Styleguide meta
   line-height: inherit;
   max-width: none; }
 
+.meta .label {
+  font-size: 0.889em !important; }
+
 /*
 
 Messages
@@ -5248,7 +5257,7 @@ Styleguide notification
 
 .notification__content__more {
   font-weight: 600; }
-  .notification__content__more .icon, .notification__content__more .search-form__btn {
+  .notification__content__more .icon, .notification__content__more .date-picker .date-picker--icon, .date-picker .notification__content__more .date-picker--icon, .notification__content__more .search-form__btn {
     top: 2px;
     position: relative; }
 
@@ -5387,9 +5396,9 @@ Styleguide page-header.informational-home
   font-size: 0.778em; }
   .page-header__eventinfo .page-header__date--cancelled {
     text-decoration: line-through; }
-  .page-header__eventinfo .icon, .page-header__eventinfo .search-form__btn {
+  .page-header__eventinfo .icon, .page-header__eventinfo .date-picker .date-picker--icon, .date-picker .page-header__eventinfo .date-picker--icon, .page-header__eventinfo .search-form__btn {
     margin: 1em 2em 1em 0; }
-    .page-header__eventinfo .icon::before, .page-header__eventinfo .search-form__btn::before {
+    .page-header__eventinfo .icon::before, .page-header__eventinfo .date-picker .date-picker--icon::before, .date-picker .page-header__eventinfo .date-picker--icon::before, .page-header__eventinfo .search-form__btn::before {
       margin-right: 0.5em; }
 
 /*
@@ -5480,10 +5489,12 @@ Styleguide pager
   display: inline-block;
   padding: 0 1em;
   text-align: center; }
-  .pager__back-arrow.icon:before, .pager__back-arrow.search-form__btn:before, .pager__back-arrow.icon::before, .pager__back-arrow.search-form__btn::before,
+  .pager__back-arrow.icon:before, .date-picker .pager__back-arrow.date-picker--icon:before, .pager__back-arrow.search-form__btn:before, .pager__back-arrow.icon::before, .date-picker .pager__back-arrow.date-picker--icon::before, .pager__back-arrow.search-form__btn::before,
   .pager__forward-arrow.icon:before,
+  .date-picker .pager__forward-arrow.date-picker--icon:before,
   .pager__forward-arrow.search-form__btn:before,
   .pager__forward-arrow.icon::before,
+  .date-picker .pager__forward-arrow.date-picker--icon::before,
   .pager__forward-arrow.search-form__btn::before {
     font-size: 1.7em;
     vertical-align: middle;

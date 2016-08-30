@@ -18,7 +18,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
     clean: ['styleguide/assets'],
     sass: {
       options: {
@@ -68,5 +67,4 @@ module.exports = function (grunt) {
   grunt.registerTask('styleguide', ['clean', 'sass', 'shell', 'copy:main']);
   grunt.registerTask('copyall', ['copy:all']);
   grunt.registerTask('kss', ['shell']);
-
 };

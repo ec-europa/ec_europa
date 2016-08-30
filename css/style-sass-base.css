@@ -4931,14 +4931,6 @@ Styleguide form.checkbox
       -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
       -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
       transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
-    .checkbox label::after {
-      position: absolute;
-      left: 0;
-      display: inline-block;
-      content: "";
-      width: 1.5em;
-      height: 1.5em;
-      margin-left: -20px; }
   .checkbox.checkbox--inline {
     margin-top: 0; }
 
