@@ -32,7 +32,17 @@
     content: "[Modifier] ";
     font-size: 0.778em;
     clear: both; }
-
+#kss-node .styleguide-example {
+  padding: 1em 0 0.5em;
+  background: #575757;
+  color: #fff;
+  clear: left;
+  float: left;
+  width: 100%;}
+  #kss-node .styleguide-example p {
+    text-align: center;
+    max-width: none;
+  }
 #kss-node .kss-modifier__description {
   background-color: #eee;
   border-bottom: 1px solid #ccc;

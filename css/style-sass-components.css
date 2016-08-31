@@ -5341,27 +5341,27 @@ Styleguide page-header.informational-home
     color: #fff; }
   .page-header a {
     color: #fff; }
-    .page-header a:hover:not(.breadcrumb__link):not(.btn):not(.inpage-nav__navbar .inpage-nav__toggle) {
+    .page-header a:hover:not(.breadcrumb__link, .btn) {
       color: #ffd617; }
     .page-header a:focus {
       outline: 3px solid #ffd617;
       outline-offset: 2px;
       text-decoration: underline; }
-    .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
+    .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]):after {
+      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]):after {
         position: absolute;
         line-height: 2.2; }
-      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
+      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
         padding-right: 2.1em; }
-    .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title) {
+    .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title):after {
+      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title):after {
         position: absolute;
         line-height: 2.2; }
-      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title) {
+      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title) {
         padding-right: 2.1em; }
   .page-header .page-header__top,
   .page-header .page-header__main,
@@ -6265,6 +6265,84 @@ Styleguide top-image
   text-align: center; }
   .top-image picture {
     display: inline-block; }
+
+/*
+Table responsive
+
+Responsive table component
+
+Markup: html/table-responsive.html
+
+Styleguide table responsive
+*/
+.table-responsive {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: none;
+  margin: 1em 0;
+  font-size: 0.889em; }
+  .table-responsive th {
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    color: #404040; }
+  .table-responsive td, .table-responsive th {
+    padding: 1em;
+    vertical-align: middle;
+    display: table-cell; }
+    .table-responsive td p, .table-responsive th p {
+      margin: 0; }
+
+@media (max-width: 768px) {
+  .table-responsive thead {
+    display: none; }
+  .table-responsive tr {
+    border-bottom: 1px solid #b3b4b5; }
+    .table-responsive tr:nth-of-type(2n) {
+      background-color: inherit; }
+  .table-responsive tbody td {
+    display: block;
+    position: relative;
+    padding: 0.5em; }
+    .table-responsive tbody td[data-th-group] {
+      margin-top: 2.2em; }
+    .table-responsive tbody td:before {
+      content: attr(data-th);
+      display: block;
+      font-weight: bold; }
+    .table-responsive tbody td.table-responsive__heading {
+      font-weight: bold;
+      color: #fff;
+      background: #404040; }
+    .table-responsive tbody td.table-responsive__group_label {
+      font-size: 0.889em;
+      padding-left: 1.5em; }
+      .table-responsive tbody td.table-responsive__group_label:after {
+        content: attr(data-th-group);
+        display: block;
+        font-weight: bold;
+        position: absolute;
+        top: -1.7em;
+        left: 0.5em;
+        font-size: 1.222em; }
+      .table-responsive tbody td.table-responsive__group_label ~ .table-responsive__group_element {
+        font-size: 0.889em;
+        padding-left: 1.5em;
+        margin: 0; } }
+
+@media (min-width: 769px) {
+  table.table-responsive {
+    /* Zebra striping */ }
+    table.table-responsive thead {
+      display: table-header-group; }
+      table.table-responsive thead tr:first-child th {
+        border-bottom: 1px solid #404040;
+        vertical-align: top; }
+      table.table-responsive thead tr:last-child:not(:first-child) {
+        border-bottom: 3px solid #404040; }
+    table.table-responsive tr:nth-of-type(even) {
+      background: #f2f2f2; } }
 
 .views-exposed-form .views-exposed-widget {
   padding: 0; }
