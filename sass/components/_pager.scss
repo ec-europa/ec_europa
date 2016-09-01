@@ -1,173 +1,119 @@
 /*
 Pager
 
-Depends on 'icon' component for showing back/forward arrows.
+Note: Resize the width of the page to see the responsive layout.
 
 Markup: html/pager.html
 
 Styleguide pager
 */
 
-.pager__wrapper {
-  text-align: center;
-}
-
 .pager {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0.938em auto;
-  max-width: none !important;
-  background: $blue-dark;
-  height: 3em;
-  line-height: 3em;
-  padding-left: 0;
-
-  &::after {
-    clear: both;
-  }
-
-  & > .pager__item {
-    // Prettifying.
-    transition: all .2s linear; 
-    list-style: none;
-    float: left;
-
-    & > .pager__btn {
-      color: #fff;
-      margin: 0;
-      font-size: $font-size-little;
-      display: inline-block;
-      text-align: center;
-      text-decoration: none;
-      
-      // States.
-      &:hover, &:focus, &:active, &:visited {
-        color: #fff;
-      }
-
-      &:focus {
-        position: relative;
-        z-index: 1;
-        outline: 6px solid $yellow-light;
-
-      }
-    }
-  }
-}
-
-.pager__middle {
-  position: relative;
-  background: $grey-lighter;
-
-  .pager__separator {
-    position: absolute;
-    height: 100%;
-    width: 1px;
-    border: 1px solid #d3d4d4;
-    right: 3.5em;
-    top: 0;
-  }
-
-  .pager__dropdown {
-    background: url("../images/svg/arrow-down--blue.svg") 86% 50% no-repeat;
-    background-size: 1.3em;
-    // Removing native arrow in all browsers.
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    color: $blue-dark;
-    font-size: $font-size-little;
-    padding: 0 6em 0 1.5em;
-    height: 3.35em;
-
-    &:hover {
-      background-image: url("../images/svg/arrow-down--blue.svg");
-      background-size: 1.3em !important;
-    }
-
-    // This is just to make the dropdown nicer in ff, webkit doesn't support this.
-    option {
-      outline: none;
-      padding-bottom: 0.3em;
-      font-size: $font-size-little;
-      padding: 0.3em 0 0.3em 0.9em;
-      font-weight: normal;
-    }
-
-    &:focus {
-      @include _focus_outline_border(3px, $yellow-light);
-    }
-
-    &:-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 $blue-dark;
-    }
-  }
-}
-
-// Cover up case of misunderstood svg.
-.no-svg {
-  .pager__dropdown {
-    background-image: url("../images/png/arrow-down-blue.png");
-  }
-}
-
-// Arrows inside the pager items.
-.pager__back-arrow,
-.pager__forward-arrow {
-  height: 3em;
-  display: inline-block;
-  padding: 0 1em;
   text-align: center;
-
-  // Override font icon rather than parent elements,
-  // because parents could have padding and margin.
-  // Avoiding: increasing font size with padding resize the whole element.
-  &.icon:before, &.icon::before {
-    font-size: 1.7em;
-    vertical-align: middle;
-    margin-right: 0;
-    margin-top: -2px;
-  }
+  border-top: 2px solid $black;
 }
 
-// Mobile-first does not contain button labels.
-.pager__back-text,
-.pager__forward-text {
-  display: none;
+.pager__list {
+  display: inline-block;
+  padding-left: 0;
+  margin: $line-height-computed 0;
+  position: relative;
+  width: 100%;
+
+  > li {
+    color: $black;
+    font-size: $font-size-little;
+    font-weight: $font-weight-bold;
+    border: 2px solid transparent;
+    margin: 0 $padding-base-horizontal/2;
+    min-width: 28px;
+    height: 28px;
+
+    &.pager__item {
+      // Prettifying.
+      list-style: none;
+
+      // Mobile-first hides all pager items.
+      display: none;
+      // Except prev, next and current.
+      &.pager__item--previous,
+      &.pager__item--next {
+        display: inline;
+      }
+
+      &.pager__item--ellipsis {
+        font-weight: $font-weight-normal;
+      }
+
+      &.pager__item--previous,
+      &.pager__item--next {
+        a {
+          font-weight: $font-weight-bold;
+        }
+      }
+      &.pager__item--previous {
+        float: left;
+        clear: left;
+      }
+      &.pager__item--next {
+        float: right;
+        clear: right;
+      }
+
+      &.pager__item--current {
+        border-radius: 14px;
+        
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        width: inherit;
+        z-index: -1;
+      }
+
+      &--padding {
+        padding: 0 7px;
+      }
+    }
+
+    > a {
+      color: $blue-dark;
+      font-weight: $font-weight-normal;
+      text-decoration: none;
+
+      &:hover {
+        color: $black;
+        text-decoration: underline;
+      }
+    }
+
+  }
 }
 
 @include breakpoint(screen-msm-min) {
-  // Resets.
-  .pager__back,
-  .pager__forward {
-    .pager__btn {
-      width: auto;
-      &:hover {
-        text-decoration: none;
+  .pager__item__text {
+    display: none;
+  }
+
+  // Show page items.
+  .pager__list {
+    width: auto;
+
+    > li {
+      &.pager__item {
+        display: inline;
+        float: left !important;
+
+        &.pager__item--current {
+          border: 2px solid $black;
+          position: relative;
+        }
       }
     }
-  }
-
-  // Show buttons' labels.
-  .pager__back-text,
-  .pager__forward-text {
-    display: inline-block;
-    padding: 0 2em 0 0;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .pager__forward-text {
-    padding: 0 0 0 2em;
   }
 }
 
 // Drupal-specific hack.
-.region-content ul.pager {
+.region-content ul.pager__list {
   margin: 0.938em auto;
   padding: 0;
   // The throbber should not mess up sizing.

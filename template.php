@@ -1156,24 +1156,43 @@ function europa_preprocess_views_view(&$variables) {
  * Implements theme_pager().
  */
 function europa_pager($variables) {
-  drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/pager.js');
-
   $element = $variables['element'];
   $parameters = $variables['parameters'];
-  $quantity = $variables['quantity'];
   global $pager_page_array, $pager_total;
+  $pager_items_quantity = 9;
+  $pager_max_quantity = 7;
+  $pager_min_quantity = 5;
 
   // Calculate various markers within this pager piece:
-  // $pager_middle is used to "center" pages around the current page.
-  $pager_middle = ceil($quantity / 2);
-  // $pager_current is the page we are currently paged to.
+  // Current is the page we are currently paged to.
   $pager_current = $pager_page_array[$element] + 1;
-  // $pager_first is the first page listed by this pager piece (re quantity).
-  $pager_first = $pager_current - $pager_middle + 1;
-  // $pager_last is the last page listed by this pager piece (re quantity).
-  $pager_last = $pager_current + $quantity - $pager_middle;
-  // $pager_max is the maximum page number.
+  // Max is the maximum page number.
   $pager_max = $pager_total[$element];
+  // Re-calculate quantity.
+  $quantity = $pager_items_quantity;
+  if ($pager_max > $pager_items_quantity) {
+    $quantity = $pager_max_quantity;
+    if ($pager_current > $pager_min_quantity && $pager_current <= $pager_max - $pager_min_quantity) {
+      $quantity = $pager_min_quantity;
+    }
+  }
+  // Middle is used to "center" pages around the current page.
+  $pager_middle = ceil($quantity / 2);
+  // First is the first page listed by this pager piece (re quantity).
+  $pager_first = $pager_current - $pager_middle + 1;
+  // Last is the last page listed by this pager piece (re quantity).
+  $pager_last = $pager_current + $quantity - $pager_middle;
+  // Adjust $pager_first & $pager_last depending on $pager_current.
+  if ($quantity == $pager_max_quantity) {
+    if ($pager_current <= $pager_min_quantity) {
+      $pager_first = 1;
+      $pager_last = $pager_max_quantity;
+    }
+    elseif ($pager_current > $pager_max - $pager_min_quantity) {
+      $pager_first = $pager_max - $pager_max_quantity + 1;
+      $pager_last = $pager_max;
+    }
+  }
 
   // Prepare for generation loop.
   $i = $pager_first;
@@ -1188,58 +1207,70 @@ function europa_pager($variables) {
     $i = 1;
   }
 
-  $li_first = theme('pager_first', [
-    'text' => t('first'),
-    'element' => $element,
-    'parameters' => $parameters,
-  ]);
-  $li_previous = theme('pager_previous', [
-    'text' => '<span class="pager__back-arrow icon icon--left"></span><span class="pager__back-text">' . t('Previous') . '</span>',
-    'element' => $element,
-    'interval' => 1,
-    'parameters' => $parameters,
-    'attributes' => ['class' => 'pager__btn'],
-  ]);
-  $li_next = theme('pager_next', [
-    'text' => '<span class="pager__forward-text">' . t('Next') . "</span><span class='pager__forward-arrow icon icon--right'></span>",
-    'element' => $element,
-    'interval' => 1,
-    'parameters' => $parameters,
-    'attributes' => ['class' => 'pager__btn'],
-  ]);
-  $li_last = theme('pager_last', [
-    'text' => t('last'),
-    'element' => $element,
-    'parameters' => $parameters,
-    'attributes' => ['class' => 'pager__btn'],
-  ]);
+  $li_first = '';
+  if ($i >= 2) {
+    $li_first = theme('pager_first',
+      [
+        'text' => 1,
+        'element' => $element,
+        'parameters' => $parameters,
+      ]
+    );
+  }
+  $li_previous = theme('pager_previous',
+    [
+      'text' => t('‹ Previous'),
+      'element' => $element,
+      'interval' => 1,
+      'parameters' => $parameters,
+    ]
+  );
+  $li_next = theme('pager_next',
+    [
+      'text' => t('Next ›'),
+      'element' => $element,
+      'interval' => 1,
+      'parameters' => $parameters,
+    ]
+  );
+  $li_last = '';
+  if ($pager_last < $pager_max) {
+    $li_last = theme('pager_last',
+      [
+        'text' => $pager_max,
+        'element' => $element,
+        'parameters' => $parameters,
+      ]
+    );
+  }
 
   if ($pager_total[$element] > 1) {
     if ($li_previous) {
       $items[] = [
-        'class' => ['pager__item pager__back'],
+        'class' => ['pager__item', 'pager__item--previous'],
         'data' => $li_previous,
       ];
     }
-    $items[] = [
-      'class' => ['pager__item pager__middle'],
-      'data' => "<span class='pager__combo-container'><span class='pager__combo-current'>" . t('Page !page', ['!page' => $pager_current]) . '&nbsp;</span>' .
-      '<span class="pager__combo-total">' . t('of !total', ['!total' => $pager_max]) . '</span>' .
-      '</span>',
-    ];
+    if ($li_first) {
+      $items[] = [
+        'class' => ['pager__item', 'pager__item--first'],
+        'data' => $li_first,
+      ];
+    }
+
     // When there is more than one page, create the pager list.
     if ($i != $pager_max) {
-      if ($li_first && $i > 1) {
+      if ($i > 2) {
         $items[] = [
-          'class' => ['pager__item select'],
-          'data' => $li_first,
+          'class' => ['pager__item', 'pager__item--ellipsis'],
+          'data' => '…',
         ];
       }
       // Now generate the actual pager piece.
       for (; $i <= $pager_last && $i <= $pager_max; $i++) {
         if ($i < $pager_current) {
           $items[] = [
-            'class' => ['pager__item select'],
+            'class' => ['pager__item'],
             'data' => theme('pager_previous', [
               'text' => $i,
               'element' => $element,
@@ -1250,13 +1281,16 @@ function europa_pager($variables) {
         }
         if ($i == $pager_current) {
           $items[] = [
-            'class' => ['pager__item is-current select'],
-            'data' => $i,
+            'class' => [
+              'pager__item',
+              'pager__item--current' . ($i >= 100 ? ' pager__item--padding' : ''),
+            ],
+            'data' => '<span class="pager__item__text">' . t('Page') . ' </span>' . $i,
           ];
         }
         if ($i > $pager_current) {
           $items[] = [
-            'class' => ['pager__item select'],
+            'class' => ['pager__item'],
             'data' => theme('pager_next', [
               'text' => $i,
               'element' => $element,
@@ -1266,27 +1300,36 @@ function europa_pager($variables) {
           ];
         }
       }
+      if ($i < $pager_max) {
+        $items[] = [
+          'class' => ['pager__item', 'pager__item--ellipsis'],
+          'data' => '…',
+        ];
+      }
     }
-    if ($li_last && $i < $pager_max) {
+    // End generation.
+    if ($li_last) {
       $items[] = [
-        'class' => ['pager__item select'],
+        'class' => ['pager__item', 'pager__item--last'],
         'data' => $li_last,
       ];
     }
-    // End generation.
     if ($li_next) {
       $items[] = [
-        'class' => ['pager__item pager__forward'],
+        'class' => ['pager__item', 'pager__item--next'],
         'data' => $li_next,
       ];
     }
 
-    $pager_markup = '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme('item_list', [
-      'items' => $items,
-      'attributes' => ['class' => ['pager']],
-    ]);
+    $pager_markup = '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme(
+        'item_list',
+        [
+          'items' => $items,
+          'attributes' => ['class' => ['pager__list']],
+        ]
+      );
 
-    return '<div class="pager__wrapper">' . $pager_markup . '</div>';
+    return '<div class="pager">' . $pager_markup . '</div>';
   }
 }
 
@@ -1317,10 +1360,8 @@ function europa_pager_link($variables) {
     static $titles = NULL;
     if (!isset($titles)) {
       $titles = [
-        t('« first') => t('Go to first page'),
-        t('‹ previous') => t('Go to previous page'),
-        t('next ›') => t('Go to next page'),
-        t('last »') => t('Go to last page'),
+        t('‹ Previous') => t('Go to previous page'),
+        t('Next ›') => t('Go to next page'),
       ];
     }
     if (isset($titles[$text])) {
@@ -1344,11 +1385,11 @@ function europa_pager_link($variables) {
  * Implements theme_pager_first().
  */
 function europa_pager_first($variables) {
-  $text = $variables['text'];
+  global $pager_page_array;
   $element = $variables['element'];
+  $text = $variables['text'];;
   $parameters = $variables['parameters'];
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
-  global $pager_page_array;
   $output = '';
 
   // If we are anywhere but the first page.
@@ -1369,12 +1410,12 @@ function europa_pager_first($variables) {
  * Implements theme_pager_previous().
  */
 function europa_pager_previous($variables) {
+  global $pager_page_array;
   $text = $variables['text'];
   $element = $variables['element'];
   $interval = $variables['interval'];
   $parameters = $variables['parameters'];
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
-  global $pager_page_array;
   $output = '';
 
   // If we are anywhere but the first page.
@@ -1448,14 +1489,14 @@ function europa_pager_next($variables) {
  * Implements theme_pager_last().
  */
 function europa_pager_last($variables) {
-  $text = $variables['text'];
+  global $pager_page_array, $pager_total;
   $element = $variables['element'];
+  $text = $variables['text'];
   $parameters = $variables['parameters'];
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
-  global $pager_page_array, $pager_total;
   $output = '';
 
-  // If we are anywhere but the last page.
+  // If we are anywhere but the n-5th page.
   if ($pager_page_array[$element] < ($pager_total[$element] - 1)) {
     $output = theme('pager_link', [
       'text' => $text,

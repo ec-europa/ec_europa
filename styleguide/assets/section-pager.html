@@ -299,7 +299,7 @@
 
 
       <div class="kss-description">
-        <p>Depends on &#39;icon&#39; component for showing back/forward arrows.</p>
+        <p>Note: Resize the width of the page to see the responsive layout.</p>
 
       </div>
     </div>
@@ -309,56 +309,146 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="pager">
-    <li class="pager__item pager__back">
-        <a class="pager__btn" href="/filter?value=test&amp;page=1" title="Back">
-            <span class="pager__back-arrow icon icon--left"></span>
-            <span class="pager__back-text">Previous</span>
-        </a>
-    </li>
-    <li class="pager__item pager__middle">
-        <select class="pager__dropdown">
-            <option value="/filter?value=test">Page 1</option>
-            <option value="/filter?value=test&amp;page=1">Page 2</option>
-            <option value="" selected="selected">Page 3</option>
-            <option value="/filter?value=test&amp;page=3">Page 4</option>
-        </select>
-        <span class="pager__separator"></span>
-    </li>
-    <li class="pager__item pager__forward">
-        <a class="pager__btn" href="/filter?value=test&amp;page=3" title="Forward">
-            <span class="pager__forward-text">Next</span>
-            <span class="pager__forward-arrow icon icon--right"></span>
-        </a>
-    </li>
-</ul>
+          <div class="pager">
+    <ul class="pager__list">
+        <li class="pager__item pager__item--previous">
+            <a title="Go to previous page" href="/page=9">‹ Previous</a>
+        </li>
+        <li class="pager__item pager__item--first">
+            <a title="Go to page 1" href="/">1</a>
+        </li>
+        <li class="pager__item pager__item--ellipsis">…</li>
+        <li class="pager__item">
+            <a title="Go to page 9" href="/page=8">9</a>
+        </li>
+        <li class="pager__item">
+            <a title="Go to page 10" href="/page=9">10</a>
+        </li>
+        <li class="pager__item pager__item--current">
+            <span class="pager__item__text">Page</span> 11
+        </li>
+        <li class="pager__item">
+            <a title="Go to page 12" href="/page=11">12</a>
+        </li>
+        <li class="pager__item">
+            <a title="Go to page 13" href="/page=12">13</a>
+        </li>
+        <li class="pager__item pager__item--ellipsis">…</li>
+        <li class="pager__item pager__item--last">
+            <a title="Go to page 22" href="/page=21">22</a>
+        </li>
+        <li class="pager__item pager__item--next">
+            <a title="Go to next page" href="/page=11">Next ›</a>
+        </li>
+    </ul>
+</div>
+
+<div class="pager">
+    <ul class="pager__list">
+        <li class="pager__item pager__item--previous">
+            <a title="Go to previous page" href="/page=229">‹ Previous</a>
+        </li>
+        <li class="pager__item pager__item--first">
+            <a title="Go to page 1" href="/">1</a>
+        </li>
+        <li class="pager__item pager__item--ellipsis">…</li>
+        <li class="pager__item">
+            <a title="Go to page 209" href="/page=208">209</a>
+        </li>
+        <li class="pager__item">
+            <a title="Go to page 210" href="/page=209">210</a>
+        </li>
+        <li class="pager__item pager__item--current pager__item--padding">
+            <span class="pager__item__text">Page </span>211
+        </li>
+        <li class="pager__item">
+            <a title="Go to page 212" href="/page=211">212</a>
+        </li>
+        <li class="pager__item">
+            <a title="Go to page 213" href="/page=212">213</a>
+        </li>
+        <li class="pager__item pager__item--ellipsis">…</li>
+        <li class="pager__item pager__item--last">
+            <a title="Go to page 222" href="/page=221">222</a>
+        </li>
+        <li class="pager__item pager__item--next">
+            <a title="Go to next page" href="/page=211">Next ›</a>
+        </li>
+    </ul>
+</div>
+
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;pager&quot;&gt;
-    &lt;li class=&quot;pager__item pager__back&quot;&gt;
-        &lt;a class=&quot;pager__btn&quot; href=&quot;/filter?value=test&amp;amp;page=1&quot; title=&quot;Back&quot;&gt;
-            &lt;span class=&quot;pager__back-arrow icon icon--left&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;pager__back-text&quot;&gt;Previous&lt;/span&gt;
-        &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;pager__item pager__middle&quot;&gt;
-        &lt;select class=&quot;pager__dropdown&quot;&gt;
-            &lt;option value=&quot;/filter?value=test&quot;&gt;Page 1&lt;/option&gt;
-            &lt;option value=&quot;/filter?value=test&amp;amp;page=1&quot;&gt;Page 2&lt;/option&gt;
-            &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Page 3&lt;/option&gt;
-            &lt;option value=&quot;/filter?value=test&amp;amp;page=3&quot;&gt;Page 4&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;span class=&quot;pager__separator&quot;&gt;&lt;/span&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;pager__item pager__forward&quot;&gt;
-        &lt;a class=&quot;pager__btn&quot; href=&quot;/filter?value=test&amp;amp;page=3&quot; title=&quot;Forward&quot;&gt;
-            &lt;span class=&quot;pager__forward-text&quot;&gt;Next&lt;/span&gt;
-            &lt;span class=&quot;pager__forward-arrow icon icon--right&quot;&gt;&lt;/span&gt;
-        &lt;/a&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;pager&quot;&gt;
+    &lt;ul class=&quot;pager__list&quot;&gt;
+        &lt;li class=&quot;pager__item pager__item--previous&quot;&gt;
+            &lt;a title=&quot;Go to previous page&quot; href=&quot;/page=9&quot;&gt;‹ Previous&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--first&quot;&gt;
+            &lt;a title=&quot;Go to page 1&quot; href=&quot;/&quot;&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--ellipsis&quot;&gt;…&lt;/li&gt;
+        &lt;li class=&quot;pager__item&quot;&gt;
+            &lt;a title=&quot;Go to page 9&quot; href=&quot;/page=8&quot;&gt;9&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item&quot;&gt;
+            &lt;a title=&quot;Go to page 10&quot; href=&quot;/page=9&quot;&gt;10&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--current&quot;&gt;
+            &lt;span class=&quot;pager__item__text&quot;&gt;Page&lt;/span&gt; 11
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item&quot;&gt;
+            &lt;a title=&quot;Go to page 12&quot; href=&quot;/page=11&quot;&gt;12&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item&quot;&gt;
+            &lt;a title=&quot;Go to page 13&quot; href=&quot;/page=12&quot;&gt;13&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--ellipsis&quot;&gt;…&lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--last&quot;&gt;
+            &lt;a title=&quot;Go to page 22&quot; href=&quot;/page=21&quot;&gt;22&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--next&quot;&gt;
+            &lt;a title=&quot;Go to next page&quot; href=&quot;/page=11&quot;&gt;Next ›&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;pager&quot;&gt;
+    &lt;ul class=&quot;pager__list&quot;&gt;
+        &lt;li class=&quot;pager__item pager__item--previous&quot;&gt;
+            &lt;a title=&quot;Go to previous page&quot; href=&quot;/page=229&quot;&gt;‹ Previous&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--first&quot;&gt;
+            &lt;a title=&quot;Go to page 1&quot; href=&quot;/&quot;&gt;1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--ellipsis&quot;&gt;…&lt;/li&gt;
+        &lt;li class=&quot;pager__item&quot;&gt;
+            &lt;a title=&quot;Go to page 209&quot; href=&quot;/page=208&quot;&gt;209&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item&quot;&gt;
+            &lt;a title=&quot;Go to page 210&quot; href=&quot;/page=209&quot;&gt;210&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--current pager__item--padding&quot;&gt;
+            &lt;span class=&quot;pager__item__text&quot;&gt;Page &lt;/span&gt;211
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item&quot;&gt;
+            &lt;a title=&quot;Go to page 212&quot; href=&quot;/page=211&quot;&gt;212&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item&quot;&gt;
+            &lt;a title=&quot;Go to page 213&quot; href=&quot;/page=212&quot;&gt;213&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--ellipsis&quot;&gt;…&lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--last&quot;&gt;
+            &lt;a title=&quot;Go to page 222&quot; href=&quot;/page=221&quot;&gt;222&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;pager__item pager__item--next&quot;&gt;
+            &lt;a title=&quot;Go to next page&quot; href=&quot;/page=211&quot;&gt;Next ›&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
       </div>
 
       </div>
