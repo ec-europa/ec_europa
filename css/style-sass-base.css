@@ -5116,7 +5116,7 @@ Markup: html/lists.html
 
 Styleguide text.lists
 */
-ul,
+ul:not(.listing),
 ol {
   padding-left: 18px; }
 
