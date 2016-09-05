@@ -96,3 +96,4 @@ multipliers[normal][] = 2x
 multipliers[medium][] = 2x
 multipliers[narrow][] = 2x
 multipliers[mobile][] = 2x
+multisite_version = 2.2
