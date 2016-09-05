@@ -5264,8 +5264,9 @@ Styleguide text.paragraphs
 */
 .paragraph, .region-content ul:not(.listing),
 .region-content ol, p {
+  max-width: 32em;
   margin-bottom: 0.8em;
-  max-width: 32em; }
+  display: block; }
 
 .paragraph--width-auto {
   width: auto; }

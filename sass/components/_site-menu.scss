@@ -1,13 +1,16 @@
 .site-menu {
   margin-bottom: 0;
   @extend .hidden-print;
+
   .listing__wrapper--two-columns .listing,
   .listing__wrapper {
     margin-bottom: 0;
   }
+
   .listing__item {
     border-color: #dcb812;
     font-size: $font-size-little;
+
     &:first-child {
       border-top: none;
     }
@@ -17,7 +20,8 @@
       padding: 0;
     }
   }
-  .listing__item-link{
+
+  .listing__item-link {
     @include _focus_outline_border(3px, $grey-base, 8px);
   }
 
@@ -31,16 +35,19 @@
       margin-top: 2em;
       float: left;
       width: 100%;
-      &:hover{
+
+      &:hover {
         color: #000000;
         text-decoration: none;
       }
+
       &:focus {
         @include _focus_outline_border(3px, $grey-base, 2px, none);
       }
     }
   }
-  .col-sm-4 .listing{
+
+  .col-sm-4 .listing {
     margin-top: 2em;
   }
 
@@ -56,14 +63,17 @@
 
       .listing__title {
         @extend .listing__title--arrow;
+
         &:after {
           margin-left: 0.5em;
           margin-top: 3px;
           font-size: 0.8em;
         }
+
         &:hover {
           color: $grey-base;
         }
+
         &:focus {
           outline: 3px solid $grey-base;
         }
@@ -73,10 +83,8 @@
 }
 
 .front {
-  .site-menu {
-    p {
-      font-size: $font-size-little;
-    }
+  .site-menu p {
+    font-size: $font-size-little;
   }
 }
 
@@ -84,21 +92,24 @@
   border-bottom: 1px solid rgba(0,0,0,0.2);
   padding-top: 1em;
   padding-bottom: 1.5em;
+
   &:last-child {
     border: none;
   }
 }
 
 .site-menu__toggle {
+  @extend .hidden-print;
+
   .btn {
     width: 100%;
     border: 3px solid $brand-primary;
   }
-  @extend .hidden-print;
 }
 
 .js .site-menu {
   height: 0;
+
   &.collapse {
     height: inherit;
   }
@@ -106,10 +117,11 @@
 
 @include breakpoint(screen-sm-min) {
   .site-menu {
-    .listing__wrapper--two-columns .listing{
+    .listing__wrapper--two-columns .listing {
       width: 100%;
     }
-    .col-sm-4 .listing{
+
+    .col-sm-4 .listing {
       margin-top: 0;
     }
   }
@@ -121,10 +133,12 @@
     .listing__wrapper {
       margin-bottom: auto;
     }
-    .listing__wrapper--two-columns .listing{
+
+    .listing__wrapper--two-columns .listing {
       width: 50%;
     }
   }
+
   .site-menu__section {
     padding-top: 2em;
     padding-bottom: 3em;
