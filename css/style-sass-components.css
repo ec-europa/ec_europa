@@ -1008,9 +1008,9 @@ Markup: html/paragraphs.html
 Styleguide text.paragraphs
 */
 .paragraph, p, .file__metadata {
+  display: block;
   max-width: 32em;
-  margin-bottom: 0.8em;
-  display: block; }
+  margin-bottom: 0.8em; }
 
 .paragraph--width-auto {
   width: auto; }

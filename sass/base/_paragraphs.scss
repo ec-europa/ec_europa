@@ -10,9 +10,9 @@ Styleguide text.paragraphs
 */
 
 .paragraph {
+  display: block;
   max-width: 32em;
   margin-bottom: 0.8em;
-  display: block;
 }
 
 p {
