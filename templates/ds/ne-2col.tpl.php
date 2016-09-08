@@ -16,7 +16,7 @@
   <?php if (!isset($prevent_link)) : ?>
     <a href="<?php print $node_url; ?>" class="listing__item-link">
   <?php else: ?>
-    <div class="listing__item-link">
+    <div class="listing__item-nolink">
   <?php endif; ?>
     <?php if (!empty($second)) : ?>
       <<?php print $second_wrapper; ?> class="listing__column-second column-second <?php print $second_classes; ?>">

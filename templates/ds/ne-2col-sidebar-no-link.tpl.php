@@ -18,7 +18,7 @@
     <?php if (!isset($prevent_link)) : ?>
       <a href="<?php print $node_url; ?>" class="listing__item-link">
     <?php else: ?>
-      <div class="listing__item-link">
+      <div class="listing__item-nolink">
     <?php endif; ?>
       <?php print $main; ?>
     <?php if (!isset($prevent_link)) : ?>
