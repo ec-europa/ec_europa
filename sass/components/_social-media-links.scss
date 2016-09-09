@@ -7,24 +7,26 @@ Markup: html/social-media-links.html
 
 .social-media-links__horizontal - Horizontal modifier
 
-
 Styleguide social
 */
 
 .social-media-links {
-  background-color: $grey-lighter;
-  padding: 30px;
-  float: left;
-  width: 100%;
-
   @extend .hidden-print;
+  width: 100%;
+  float: left;
+  padding: 30px;
+  background-color: $grey-lighter;
+}
+
+.social-media-links--field {
+  @extend .hidden-print;
+  width: 100%;
 }
 
 .social-media-links__list {
   list-style-type: none;
   padding: 0px !important;
   margin: 0px !important;
-
 }
 
 .social-media-links__horizontal {
@@ -39,9 +41,9 @@ Styleguide social
 }
 
 .social-media-links__label {
-  margin-bottom: 0.8em;
   display: block;
   width: 100%;
+  margin-bottom: 0.8em;
 }
 
 .social-media-links__item {
@@ -56,7 +58,8 @@ Styleguide social
       margin-bottom: 0px;
     }
 
-    &:after, &.is-external:after {
+    &:after,
+    &.is-external:after {
       display: none !important;
     }
   }
@@ -70,9 +73,9 @@ Styleguide social
 .social-media-links--webtool-vertical {
   // Extending for social bookmark kit web tools.
   .wtShareList {
+    @extend .social-media-links__item;
     overflow: visible;
     float: left;
-    @extend .social-media-links__item;
     background: transparent !important;
     padding: 0;
 
@@ -80,6 +83,7 @@ Styleguide social
       &[href^="http"]:not(.is-internal):after {
         display: none !important;
       }
+
       &:focus {
         outline-offset: -1px;
         text-decoration: underline;
@@ -102,6 +106,7 @@ Styleguide social
     a.wtShareMore {
       font-size: 0.8em;
       margin-top: 1.2em;
+
       &:focus {
         outline-offset: 2px;
       }
@@ -120,6 +125,7 @@ Styleguide social
 
   .wtShareList {
     overflow: visible;
+
     li {
       float: left;
     }

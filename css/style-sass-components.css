@@ -596,7 +596,7 @@ a.label:hover, a.label:focus {
 
 @media print {
   .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .breadcrumb, .feedback-message, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
-  #skip-link, .social-media-links {
+  #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
 
 /*
@@ -5870,13 +5870,15 @@ Markup: html/social-media-links.html
 
 .social-media-links__horizontal - Horizontal modifier
 
-
 Styleguide social
 */
 .social-media-links {
-  background-color: #ececec;
-  padding: 30px;
+  width: 100%;
   float: left;
+  padding: 30px;
+  background-color: #ececec; }
+
+.social-media-links--field {
   width: 100%; }
 
 .social-media-links__list, .social-media-links--webtool-vertical .wtShareList ul, .social-media-links--webtool-horizontal .wtShareList ul {
@@ -5891,9 +5893,9 @@ Styleguide social
     line-height: 1.667em; }
 
 .social-media-links__label {
-  margin-bottom: 0.8em;
   display: block;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 0.8em; }
 
 .social-media-links__item, .social-media-links--webtool-vertical .wtShareList, .social-media-links--webtool-horizontal .wtShareList, .social-media-links--webtool-vertical .wtShareList .wtShareLink, .social-media-links--webtool-horizontal .wtShareList .wtShareLink {
   margin-bottom: 0.7em; }
