@@ -45,9 +45,9 @@
  * @ingroup themeable
  */
 ?>
-<div class="<?php print $classes; ?> field--labeled"<?php print $attributes; ?>>
+<div class="social-media-links--field <?php print $classes; ?> field--labeled"<?php print $attributes; ?>>
   <?php if (!$label_hidden): ?>
-    <div class="field__label"<?php print $title_attributes; ?>><?php print $label ?></div>
+    <div class="field__label"<?php print $title_attributes; ?>><?php print $label; ?></div>
   <?php endif; ?>
   <ul class="field__items social-media-links__list social-media-links__horizontal"<?php print $content_attributes; ?>>
     <?php foreach ($items as $delta => $item): ?>
