@@ -5830,6 +5830,26 @@ Styleguide: siteheader.searchform
     padding-top: 2em;
     padding-bottom: 3em; } }
 
+/*
+Site user menu
+*/
+.site-user-menu__list {
+  list-style: none;
+  float: right;
+  margin-bottom: 0 !important;
+  padding: 0;
+  font-weight: 600; }
+
+.site-user-menu__option {
+  display: inline-block;
+  padding: 0.685em 1.333em; }
+  .site-user-menu__option a {
+    text-decoration: none; }
+    .site-user-menu__option a:hover, .site-user-menu__option a:focus {
+      text-decoration: underline; }
+  .site-user-menu__option:last-child {
+    padding-right: 0; }
+
 .skip-link,
 #skip-link {
   position: fixed;

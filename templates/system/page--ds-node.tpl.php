@@ -118,11 +118,11 @@
 </header>
 
 <?php if (!empty($page['header_bottom'])): ?>
-<nav class="page-navigation" role="navigation">
-  <div class="container-fluid">
-    <?php print render($page['header_bottom']); ?>
-  </div>
-</nav>
+  <nav class="page-navigation" role="navigation">
+    <div class="container-fluid">
+      <?php print render($page['header_bottom']); ?>
+    </div>
+  </nav>
 <?php endif; ?>
 
 <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>

@@ -35,11 +35,13 @@
     </div>
   </div>
 
-  <div class="utility">
-    <div class="container-fluid">
-      <?php print render($utility); ?>
+  <?php if (isset($utility) && !empty($utility)): ?>
+    <div class="utility">
+      <div class="container-fluid">
+        <?php print render($utility); ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 
   <div class="page-content">
     <div class="container-fluid">
