@@ -508,12 +508,16 @@ a.listing__title {
   max-width: none;
 }
 
-// .listing__item-link element
-.listing__item-link {
+.listing__item-nolink {
   display: block;
   float: left;
   width: 100%;
   color: $grey-base;
+}
+
+// .listing__item-link element
+.listing__item-link {
+  @extend .listing__item-nolink;
 
   &:active,
   &:focus {

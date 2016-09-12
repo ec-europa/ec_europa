@@ -5120,7 +5120,7 @@ ul:not(.listing),
 ol {
   padding-left: 18px; }
 
-.region-content ul:not(.listing),
+.region-content ul:not(.listing):not(.field__items),
 .region-content ol {
   margin-bottom: 30px !important; }
 
@@ -5264,7 +5264,7 @@ Markup: html/paragraphs.html
 
 Styleguide text.paragraphs
 */
-.paragraph, .region-content ul:not(.listing),
+.paragraph, .region-content ul:not(.listing):not(.field__items),
 .region-content ol, p {
   display: block;
   max-width: 32em;

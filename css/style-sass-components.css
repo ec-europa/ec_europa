@@ -596,7 +596,7 @@ a.label:hover, a.label:focus {
 
 @media print {
   .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .breadcrumb, .feedback-message, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
-  #skip-link, .social-media-links {
+  #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
 
 /*
@@ -4525,34 +4525,39 @@ a.listing__title {
 .listing__item--fullwidth {
   max-width: none; }
 
-.listing__item-link {
+.listing__item-nolink, .listing__item-link {
   display: block;
   float: left;
   width: 100%;
   color: #404040; }
-  .listing__item-link:active, .listing__item-link:focus {
-    text-decoration: none; }
-    .listing__item-link:active .listing__title, .listing__item-link:focus .listing__title {
-      text-decoration: underline;
-      color: #404040; }
-  .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
-    display: none !important; }
-  .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title,
-  .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3 {
-    padding-right: 1.2em; }
-    .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
-    .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after {
-      position: absolute;
-      line-height: 1.6; }
-  .site-information .listing__item-link[href^="http"]:not(.is-internal):after {
-    display: none !important; }
-  .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title,
-  .site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3 {
-    padding-right: 1.2em; }
-    .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
-    .site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after {
-      position: absolute;
-      line-height: 1.6; }
+
+.listing__item-link:active, .listing__item-link:focus {
+  text-decoration: none; }
+  .listing__item-link:active .listing__title, .listing__item-link:focus .listing__title {
+    text-decoration: underline;
+    color: #404040; }
+
+.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
+  display: none !important; }
+
+.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title,
+.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3 {
+  padding-right: 1.2em; }
+  .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
+  .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after {
+    position: absolute;
+    line-height: 1.6; }
+
+.site-information .listing__item-link[href^="http"]:not(.is-internal):after {
+  display: none !important; }
+
+.site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title,
+.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3 {
+  padding-right: 1.2em; }
+  .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
+  .site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after {
+    position: absolute;
+    line-height: 1.6; }
 
 .listing__column-second {
   width: 100%;
@@ -5873,13 +5878,15 @@ Markup: html/social-media-links.html
 
 .social-media-links__horizontal - Horizontal modifier
 
-
 Styleguide social
 */
 .social-media-links {
-  background-color: #ececec;
-  padding: 30px;
+  width: 100%;
   float: left;
+  padding: 30px;
+  background-color: #ececec; }
+
+.social-media-links--field {
   width: 100%; }
 
 .social-media-links__list, .social-media-links--webtool-vertical .wtShareList ul, .social-media-links--webtool-horizontal .wtShareList ul {
@@ -5894,9 +5901,9 @@ Styleguide social
     line-height: 1.667em; }
 
 .social-media-links__label {
-  margin-bottom: 0.8em;
   display: block;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 0.8em; }
 
 .social-media-links__item, .social-media-links--webtool-vertical .wtShareList, .social-media-links--webtool-horizontal .wtShareList, .social-media-links--webtool-vertical .wtShareList .wtShareLink, .social-media-links--webtool-horizontal .wtShareList .wtShareLink {
   margin-bottom: 0.7em; }
