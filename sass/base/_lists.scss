@@ -14,7 +14,7 @@ ol {
 .region-content {
   ul:not(.listing, .field__items),
   ol {
-    @extend .paragraph;
+    max-width: 32em;
     margin-bottom: 30px !important;
   }
 }

@@ -5122,6 +5122,7 @@ ol {
 
 .region-content ul:not(.listing):not(.field__items),
 .region-content ol {
+  max-width: 32em;
   margin-bottom: 30px !important; }
 
 li > ul,
@@ -5264,8 +5265,7 @@ Markup: html/paragraphs.html
 
 Styleguide text.paragraphs
 */
-.paragraph, .region-content ul:not(.listing):not(.field__items),
-.region-content ol, p {
+.paragraph, p {
   display: block;
   max-width: 32em;
   margin-bottom: 0.8em; }
