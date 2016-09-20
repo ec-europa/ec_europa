@@ -22,6 +22,7 @@ Styleguide buttons
 }
 
 .btn {
+  @extend .hidden-print;
   margin-bottom: 1em;
   line-height: 1;
   border-radius: 0;
@@ -31,7 +32,6 @@ Styleguide buttons
   min-height: 2.75em;
   font-size: $font-size-little;
   text-decoration: none;
-  @extend .hidden-print;
   @include _focus_outline_border(3px, $yellow-light, -3px);
 
   &:link {
@@ -326,13 +326,7 @@ Styleguide buttons.btn-
 
 a.btn {
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    .site-political & {
-      &:not(#{$ec_url_patterns}) {
-        @include _btn_external_link_mixin();
-      }
-    }
-
-    .site-information & {
+    &:not(#{$ec_url_patterns}) {
       @include _btn_external_link_mixin();
     }
   }

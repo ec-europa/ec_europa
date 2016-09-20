@@ -25,8 +25,8 @@ Styleguide social
 
 .social-media-links__list {
   list-style-type: none;
-  padding: 0px !important;
-  margin: 0px !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .social-media-links__horizontal {
@@ -55,7 +55,7 @@ Styleguide social
     @include _focus_outline_border(3px, $yellow-light, -1px);
 
     &:before {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     &:after,

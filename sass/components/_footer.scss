@@ -9,6 +9,7 @@ Styleguide footer
 */
 
 .footer {
+  @extend .hidden-print;
   background: $brand-primary;
   color: #fff;
   font-size: $font-size-little;
@@ -24,7 +25,6 @@ Styleguide footer
       text-decoration: none;
     }
   }
-  @extend .hidden-print;
 }
 
 .footer__column-main {
@@ -52,8 +52,9 @@ Styleguide footer
     }
 
     a {
-      padding: 0;
+      padding: 0 1.1em 0 0;
       @include _focus_outline_border(3px, $yellow-light, 5px);
+
       &:hover,
       &:active,
       &:focus {
@@ -62,6 +63,7 @@ Styleguide footer
       }
     }
   }
+
   .footer__menu-item-right {
     @extend .footer__menu-item;
     float: right;
@@ -133,17 +135,11 @@ Styleguide footer
     line-height: 2.2;
   }
 }
+
 .footer {
   a {
-    padding-right: 1.1em !important;
-
     &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-      .site-political & {
-        &:not(#{$ec_url_patterns}) {
-          @include _footer_external_link_mixin();
-        }
-      }
-      .site-information & {
+      &:not(#{$ec_url_patterns}) {
         @include _footer_external_link_mixin();
       }
     }

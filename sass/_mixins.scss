@@ -66,6 +66,7 @@
       .logo--logotype {
         background-image: url("#{$file_path}#{$item}#{$file_extension}");
       }
+
       @media print {
         .logo--logotype:before {
           content: url("#{$file_path}#{$item}#{$file_extension}");
@@ -101,7 +102,7 @@
 
     &::before {
       background: transparent;
-      font-size: 0px;
+      font-size: 0;
     }
   }
 }
@@ -117,6 +118,7 @@
 @mixin _page_header_external_link_mixin() {
   padding-right: 1.1em;
   display: inline-block;
+
   &:after {
     position: absolute;
     line-height: 2.2;
@@ -131,6 +133,7 @@
   &:after {
     display: none !important;
   }
+
   .listing__title,
   .highlighted-item h3 {
     @extend .is-external;

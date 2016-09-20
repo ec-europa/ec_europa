@@ -530,13 +530,7 @@ a.listing__title {
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    .site-political & {
-      &:not(#{$ec_url_patterns}) {
-        @include _listing_external_link_mixin();
-      }
-    }
-
-    .site-information & {
+    &:not(#{$ec_url_patterns}) {
       @include _listing_external_link_mixin();
     }
   }

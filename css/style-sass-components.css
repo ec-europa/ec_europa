@@ -578,9 +578,8 @@ a.label:hover, a.label:focus {
   .label-danger[href]:hover, [href].label--danger:hover, .label-danger[href]:focus, [href].label--danger:focus {
     background-color: #c9302c; }
 
-.icon--after, .is-external:after, .site-political a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
-.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
-.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after, .breadcrumb__link-arrow, a.breadcrumb__link:after, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .file__btn:after, .file__translations .file__translations-control:after, .lang-select-page--transparent select.lang-select-page__list:after, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after, .facet-tag--close .facet-tag__value:after, .facet-tag--close .facet-tag__value:hover:after {
+.icon--after, .is-external:after, a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .listing__title:after,
+.listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .highlighted-item h3:after, .btn.btn-ctn:after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:after, .btn.btn-time-line:after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:after, .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after, .breadcrumb__link-arrow, a.breadcrumb__link:after, .no-js .breadcrumb__segment--first:before, .breadcrumb--collapsible .breadcrumb__btn-separator:after, .file__btn:after, .file__translations .file__translations-control:after, .lang-select-page--transparent select.lang-select-page__list:after, .listing__title--arrow:after, .listing--cta .listing__title:after, .site-menu .field--field-site-menu-links .listing__item .listing__title:after, .listing__read-more:after, .notification__content .notification__btn:after, .facet-tag--close .facet-tag__value:after, .facet-tag--close .facet-tag__value:hover:after {
   text-decoration: none;
   font-family: 'EuropaIcons';
   speak: none;
@@ -732,28 +731,20 @@ a[href^="mailto"] {
   a:after {
     content: none !important; } }
 
-.is-external, .site-political a[href^="http"]:not(.is-internal):not([href*="europa.eu"]), .site-information a[href^="http"]:not(.is-internal), .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title,
-.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title,
-.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3 {
+.is-external, a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]), .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .listing__title,
+.listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .highlighted-item h3 {
   position: relative; }
-  .is-external:after, .site-political a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
-  .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
-  .site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after {
+  .is-external:after, a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .listing__title:after,
+  .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .highlighted-item h3:after {
     font-size: 75%;
     margin-left: 0.4em;
     margin-right: 0.2em;
     text-decoration: underline; }
 
-.site-political .page-content ul a[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn, .site-political .page-content ul .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-content ul a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]), .site-political
-.page-content p a[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn, .site-political
-.page-content p .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]), .inpage-nav__navbar .site-political
-.page-content p a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]) {
-  padding-right: 2.1em; }
-
-.site-information .page-content ul a[href^="http"]:not(.is-internal).btn, .site-information .page-content ul .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .site-information .page-content ul a[href^="http"].inpage-nav__toggle:not(.is-internal), .site-information
-.page-content p a[href^="http"]:not(.is-internal).btn, .site-information
-.page-content p .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .site-information
-.page-content p a[href^="http"].inpage-nav__toggle:not(.is-internal) {
+.page-content ul a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn, .page-content ul .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]), .inpage-nav__navbar .page-content ul a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]),
+.page-content p a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn,
+.page-content p .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]), .inpage-nav__navbar
+.page-content p a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 2.1em; }
 
 /*
@@ -961,39 +952,21 @@ Styleguide buttons.btn-
   display: none;
   visibility: hidden; }
 
-.site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]), .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]), .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]) {
+a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]), .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 2.2em; }
-  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]):after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]):after {
     position: absolute;
     line-height: 1.4 !important;
     margin-left: 0.5em; }
-  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-block, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-block {
     padding-right: 1em; }
-    .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-block:after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block:after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-block:after {
+    a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block:after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-block:after {
       position: static;
       line-height: inherit; }
-  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-ctn:after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-ctn:after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-ctn:after, .site-political a.btn[href^="http"].btn-time-line:not(.is-internal):not([href*="europa.eu"]):after, .site-political .inpage-nav__navbar a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after, .inpage-nav__navbar .site-political a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]):after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn:after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn:after, a.btn[href^="http"].btn-time-line:not(.is-internal):not([href*="ec.europa.eu"]):after, .inpage-nav__navbar a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]):after {
     position: absolute;
     line-height: 2.0 !important; }
-  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-menu:after, .site-political .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-menu:after, .inpage-nav__navbar .site-political a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="europa.eu"]).btn-menu:after {
-    position: absolute;
-    line-height: 3.5 !important; }
-
-.site-information a.btn[href^="http"]:not(.is-internal), .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal), .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal) {
-  padding-right: 2.2em; }
-  .site-information a.btn[href^="http"]:not(.is-internal):after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal):after {
-    position: absolute;
-    line-height: 1.4 !important;
-    margin-left: 0.5em; }
-  .site-information a.btn[href^="http"]:not(.is-internal).btn-block, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block {
-    padding-right: 1em; }
-    .site-information a.btn[href^="http"]:not(.is-internal).btn-block:after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block:after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-block:after {
-      position: static;
-      line-height: inherit; }
-  .site-information a.btn[href^="http"]:not(.is-internal).btn-ctn:after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-ctn:after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-ctn:after, .site-information a.btn[href^="http"].btn-time-line:not(.is-internal):after, .site-information .inpage-nav__navbar a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):after, .inpage-nav__navbar .site-information a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):after {
-    position: absolute;
-    line-height: 2.0 !important; }
-  .site-information a.btn[href^="http"]:not(.is-internal).btn-menu:after, .site-information .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-menu:after, .inpage-nav__navbar .site-information a[href^="http"].inpage-nav__toggle:not(.is-internal).btn-menu:after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu:after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu:after {
     position: absolute;
     line-height: 3.5 !important; }
 
@@ -1130,9 +1103,8 @@ Styleguide: icon
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon--external, .is-external:after, .site-political a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
-.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
-.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after, .icon--external:before {
+.icon--external, .is-external:after, a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .listing__title:after,
+.listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .highlighted-item h3:after, .icon--external:before {
   content: '\e825' !important; }
 
 .icon--blue-dark, .file__translations .file__translations-control:after {
@@ -2620,7 +2592,7 @@ Styleguide footer
     .footer__menu .footer__menu-item:first-child > a, .footer__menu .footer__menu-item-right:first-child > a {
       padding-left: 0; }
     .footer__menu .footer__menu-item a, .footer__menu .footer__menu-item-right a {
-      padding: 0; }
+      padding: 0 1.1em 0 0; }
       .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
         outline: 3px solid #ffd617;
         outline-offset: 5px;
@@ -2666,14 +2638,9 @@ Styleguide footer
     .footer__label ~ .footer__menu {
       display: inline-block; } }
 
-.footer a {
-  padding-right: 1.1em !important; }
-  .site-political .footer a[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
-    position: absolute;
-    line-height: 2.2; }
-  .site-information .footer a[href^="http"]:not(.is-internal):after {
-    position: absolute;
-    line-height: 2.2; }
+.footer a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]):after {
+  position: absolute;
+  line-height: 2.2; }
 
 .footer .footer__icon--social {
   padding-right: 0 !important; }
@@ -4537,25 +4504,14 @@ a.listing__title {
     text-decoration: underline;
     color: #404040; }
 
-.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
+.listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]):after {
   display: none !important; }
 
-.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title,
-.site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3 {
+.listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .listing__title,
+.listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .highlighted-item h3 {
   padding-right: 1.2em; }
-  .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .listing__title:after,
-  .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .highlighted-item h3:after {
-    position: absolute;
-    line-height: 1.6; }
-
-.site-information .listing__item-link[href^="http"]:not(.is-internal):after {
-  display: none !important; }
-
-.site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title,
-.site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3 {
-  padding-right: 1.2em; }
-  .site-information .listing__item-link[href^="http"]:not(.is-internal) .listing__title:after,
-  .site-information .listing__item-link[href^="http"]:not(.is-internal) .highlighted-item h3:after {
+  .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .listing__title:after,
+  .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .highlighted-item h3:after {
     position: absolute;
     line-height: 1.6; }
 
@@ -5277,15 +5233,9 @@ Styleguide notification
   .notification__content__more {
     float: right; } }
 
-.site-political .notification a[href^="http"]:not(.is-internal):not([href*="europa.eu"]) {
+.notification a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 1.1em; }
-  .site-political .notification a[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
-    position: absolute;
-    line-height: 2.2; }
-
-.site-information .notification a[href^="http"]:not(.is-internal) {
-  padding-right: 1.1em; }
-  .site-information .notification a[href^="http"]:not(.is-internal):after {
+  .notification a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]):after {
     position: absolute;
     line-height: 2.2; }
 
@@ -5348,27 +5298,19 @@ Styleguide page-header.informational-home
     color: #fff; }
   .page-header a {
     color: #fff; }
-    .page-header a:hover:not(.breadcrumb__link):not(.btn):not(.inpage-nav__navbar .inpage-nav__toggle) {
-      color: #ffd617; }
     .page-header a:focus {
       outline: 3px solid #ffd617;
       outline-offset: 2px;
       text-decoration: underline; }
-    .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
+    .page-header a:hover:not(.breadcrumb__link):not(.btn):not(.inpage-nav__navbar .inpage-nav__toggle) {
+      color: #ffd617; }
+    .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]):after {
+      .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]):after {
         position: absolute;
         line-height: 2.2; }
-      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
-        padding-right: 2.1em; }
-    .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title) {
-      padding-right: 1.1em;
-      display: inline-block; }
-      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title):after {
-        position: absolute;
-        line-height: 2.2; }
-      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title) {
+      .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]).btn, .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]), .inpage-nav__navbar .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]) {
         padding-right: 2.1em; }
   .page-header .page-header__top,
   .page-header .page-header__main,
@@ -5639,7 +5581,7 @@ Styleguide: siteswitcher
     padding: 0.5em 1.667em;
     line-height: 1.3;
     font-weight: bold; }
-    .site-switcher__option > a:after, .site-switcher__option > a.is-external:after, .site-political .site-switcher__option > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information .site-switcher__option > a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .site-switcher__option > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .site-switcher__option > a.listing__title:after {
+    .site-switcher__option > a:after, .site-switcher__option > a.is-external:after, .site-switcher__option > a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .site-switcher__option > a.listing__title:after {
       content: none !important; }
   .site-switcher__option.is-selected {
     background: #004494;
@@ -5891,8 +5833,8 @@ Styleguide social
 
 .social-media-links__list, .social-media-links--webtool-vertical .wtShareList ul, .social-media-links--webtool-horizontal .wtShareList ul {
   list-style-type: none;
-  padding: 0px !important;
-  margin: 0px !important; }
+  padding: 0 !important;
+  margin: 0 !important; }
 
 .social-media-links__horizontal li {
   float: left;
@@ -5915,8 +5857,8 @@ Styleguide social
       outline-offset: -1px;
       text-decoration: underline; }
     .social-media-links__item > a:before, .social-media-links--webtool-vertical .wtShareList > a:before, .social-media-links--webtool-horizontal .wtShareList > a:before, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:before, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:before {
-      margin-bottom: 0px; }
-    .social-media-links__item > a:after, .social-media-links--webtool-vertical .wtShareList > a:after, .social-media-links--webtool-horizontal .wtShareList > a:after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:after, .social-media-links__item > a.is-external:after, .social-media-links--webtool-vertical .wtShareList > a.is-external:after, .social-media-links--webtool-horizontal .wtShareList > a.is-external:after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.is-external:after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.is-external:after, .site-political .social-media-links__item > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-vertical .site-political .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-vertical .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-horizontal .site-political .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-horizontal .wtShareList > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-vertical .wtShareList .site-political .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-vertical .wtShareList .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList .site-political .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-political .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a[href^="http"]:not([href*="europa.eu"]):not(.is-internal):after, .site-information .social-media-links__item > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-vertical .site-information .wtShareList > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-vertical .wtShareList > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .site-information .wtShareList > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-horizontal .wtShareList > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-vertical .wtShareList .site-information .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-vertical .wtShareList .wtShareLink > a[href^="http"]:not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList .site-information .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-information .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a[href^="http"]:not(.is-internal):after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links__item > a.listing__title:after, .social-media-links--webtool-vertical .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareList > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-vertical .wtShareList > a.listing__title:after, .social-media-links--webtool-horizontal .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareList > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-horizontal .wtShareList > a.listing__title:after, .social-media-links--webtool-vertical .wtShareList .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareLink > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.listing__title:after, .social-media-links--webtool-horizontal .wtShareList .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .wtShareLink > a.listing__title:after, .site-political .listing__item-link[href^="http"]:not(.is-internal):not([href*="europa.eu"]) .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links__item > a.listing__title:after, .social-media-links--webtool-vertical .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareList > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-vertical .wtShareList > a.listing__title:after, .social-media-links--webtool-horizontal .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareList > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-horizontal .wtShareList > a.listing__title:after, .social-media-links--webtool-vertical .wtShareList .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.listing__title:after, .social-media-links--webtool-horizontal .wtShareList .site-information .listing__item-link[href^="http"]:not(.is-internal) .wtShareLink > a.listing__title:after, .site-information .listing__item-link[href^="http"]:not(.is-internal) .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.listing__title:after {
+      margin-bottom: 0; }
+    .social-media-links__item > a:after, .social-media-links--webtool-vertical .wtShareList > a:after, .social-media-links--webtool-horizontal .wtShareList > a:after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a:after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a:after, .social-media-links__item > a.is-external:after, .social-media-links--webtool-vertical .wtShareList > a.is-external:after, .social-media-links--webtool-horizontal .wtShareList > a.is-external:after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.is-external:after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.is-external:after, .social-media-links__item > a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .social-media-links--webtool-vertical .wtShareList > a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList > a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .social-media-links--webtool-vertical .wtShareList .wtShareLink > a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal):after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .social-media-links__item > a.listing__title:after, .social-media-links--webtool-vertical .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .wtShareList > a.listing__title:after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .social-media-links--webtool-vertical .wtShareList > a.listing__title:after, .social-media-links--webtool-horizontal .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .wtShareList > a.listing__title:after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .social-media-links--webtool-horizontal .wtShareList > a.listing__title:after, .social-media-links--webtool-vertical .wtShareList .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .wtShareLink > a.listing__title:after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .social-media-links--webtool-vertical .wtShareList .wtShareLink > a.listing__title:after, .social-media-links--webtool-horizontal .wtShareList .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .wtShareLink > a.listing__title:after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .social-media-links--webtool-horizontal .wtShareList .wtShareLink > a.listing__title:after {
       display: none !important; }
   .social-media-links__item--noicon {
     font-size: 0.8em;

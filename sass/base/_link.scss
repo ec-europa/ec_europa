@@ -35,7 +35,7 @@ a {
     text-decoration: none;
   }
 
-  .feedback-form{
+  .feedback-form {
     outline-offset: 0;
   }
 
@@ -73,13 +73,7 @@ a {
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    .site-political & {
-      &:not(#{$ec_url_patterns}) {
-        @include _external_link_mixin();
-      }
-    }
-
-    .site-information & {
+    &:not(#{$ec_url_patterns}) {
       @include _external_link_mixin();
     }
   }
@@ -102,6 +96,7 @@ a {
 
 .is-external {
   position: relative;
+
   &:after {
     @extend .icon--after;
     @extend .icon--external;
@@ -125,13 +120,7 @@ a {
   p {
     a {
       &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-        .site-political & {
-          &:not(#{$ec_url_patterns}) {
-            @include _link_external_link_mixin();
-          }
-        }
-
-        .site-information & {
+        &:not(#{$ec_url_patterns}) {
           @include _link_external_link_mixin();
         }
       }

@@ -4821,39 +4821,21 @@ Styleguide buttons.btn-
   display: none;
   visibility: hidden; }
 
-.site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]) {
+a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 2.2em; }
-  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]):after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]):after {
     position: absolute;
     line-height: 1.4 !important;
     margin-left: 0.5em; }
-  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-block {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block {
     padding-right: 1em; }
-    .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-block:after {
+    a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block:after {
       position: static;
       line-height: inherit; }
-  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-ctn:after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn:after {
     position: absolute;
     line-height: 2.0 !important; }
-  .site-political a.btn[href^="http"]:not(.is-internal):not([href*="europa.eu"]).btn-menu:after {
-    position: absolute;
-    line-height: 3.5 !important; }
-
-.site-information a.btn[href^="http"]:not(.is-internal) {
-  padding-right: 2.2em; }
-  .site-information a.btn[href^="http"]:not(.is-internal):after {
-    position: absolute;
-    line-height: 1.4 !important;
-    margin-left: 0.5em; }
-  .site-information a.btn[href^="http"]:not(.is-internal).btn-block {
-    padding-right: 1em; }
-    .site-information a.btn[href^="http"]:not(.is-internal).btn-block:after {
-      position: static;
-      line-height: inherit; }
-  .site-information a.btn[href^="http"]:not(.is-internal).btn-ctn:after {
-    position: absolute;
-    line-height: 2.0 !important; }
-  .site-information a.btn[href^="http"]:not(.is-internal).btn-menu:after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu:after {
     position: absolute;
     line-height: 3.5 !important; }
 
