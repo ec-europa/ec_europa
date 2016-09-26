@@ -5098,9 +5098,10 @@ Markup: html/lists.html
 
 Styleguide text.lists
 */
-ul:not(.listing),
+ul:not(.listing):not(.social-media-links__list):not(.file__translations-list):not(.site-switcher__list):not(.menu):not(.site-user-menu__list):not(#admin-menu-wrapper ul),
 ol {
-  padding-left: 18px; }
+  padding-left: 18px;
+  max-width: 32em; }
 
 .region-content ul:not(.listing, .field__items),
 .region-content ol {

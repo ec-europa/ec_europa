@@ -13,10 +13,6 @@
 //    .listing__title
 //     Element modifiers: .listing__title--arrow
 //
-//    .listing__item
-//     Element modifiers:
-//      .listing__item--fullwidth
-//
 //    .listing__column-main
 //     Element modifiers:
 //      .listing__column-main--sidebar-next
@@ -474,7 +470,6 @@ a.listing__title {
 // .listing__item element.
 .listing__item {
   float: left;
-  max-width: 32em;
   width: 100%;
   padding: 1.111em 0;
   list-style: none;
@@ -502,10 +497,6 @@ a.listing__title {
   .listing__item-link > p {
     font-size: $font-size-little;
   }
-}
-
-.listing__item--fullwidth {
-  max-width: none;
 }
 
 .listing__item-nolink {
