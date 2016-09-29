@@ -1008,8 +1008,9 @@ Markup: html/paragraphs.html
 Styleguide text.paragraphs
 */
 .paragraph, p, .file__metadata {
-  margin-bottom: 0.8em;
-  max-width: 32em; }
+  display: block;
+  max-width: 32em;
+  margin-bottom: 0.8em; }
 
 .paragraph--width-auto {
   width: auto; }
@@ -5334,27 +5335,27 @@ Styleguide page-header.informational-home
     color: #fff; }
   .page-header a {
     color: #fff; }
-    .page-header a:hover:not(.breadcrumb__link):not(.btn):not(.inpage-nav__navbar .inpage-nav__toggle) {
+    .page-header a:hover:not(.breadcrumb__link, .btn) {
       color: #ffd617; }
     .page-header a:focus {
       outline: 3px solid #ffd617;
       outline-offset: 2px;
       text-decoration: underline; }
-    .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
+    .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]):after {
+      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]):after {
         position: absolute;
         line-height: 2.2; }
-      .site-political .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="europa.eu"]) {
+      .site-political .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="europa.eu"]).btn, .site-political .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]), .inpage-nav__navbar .site-political .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="europa.eu"]) {
         padding-right: 2.1em; }
-    .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title) {
+    .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title) {
       padding-right: 1.1em;
       display: inline-block; }
-      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title):after {
+      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title):after {
         position: absolute;
         line-height: 2.2; }
-      .site-information .page-header a[href^="http"]:not(.is-internal):not(.listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title) {
+      .site-information .page-header a[href^="http"]:not(.is-internal, .listing__title).btn, .site-information .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title), .inpage-nav__navbar .site-information .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title) {
         padding-right: 2.1em; }
   .page-header .page-header__top,
   .page-header .page-header__main,
@@ -5397,126 +5398,78 @@ Styleguide page-header.informational-home
 /*
 Pager
 
-Depends on 'icon' component for showing back/forward arrows.
+Note: Resize the width of the page to see the responsive layout.
 
 Markup: html/pager.html
 
 Styleguide pager
 */
-.pager__wrapper {
-  text-align: center; }
-
 .pager {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0.938em auto;
-  max-width: none !important;
-  background: #004494;
-  height: 3em;
-  line-height: 3em;
-  padding-left: 0; }
-  .pager::after {
-    clear: both; }
-  .pager > .pager__item {
-    transition: all .2s linear;
-    list-style: none;
-    float: left; }
-    .pager > .pager__item > .pager__btn {
-      color: #fff;
-      margin: 0;
-      font-size: 0.889em;
-      display: inline-block;
-      text-align: center;
-      text-decoration: none; }
-      .pager > .pager__item > .pager__btn:hover, .pager > .pager__item > .pager__btn:focus, .pager > .pager__item > .pager__btn:active, .pager > .pager__item > .pager__btn:visited {
-        color: #fff; }
-      .pager > .pager__item > .pager__btn:focus {
-        position: relative;
-        z-index: 1;
-        outline: 6px solid #ffd617; }
+  text-align: center;
+  border-top: 2px solid #000; }
 
-.pager__middle {
+.pager__list {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
   position: relative;
-  background: #ececec; }
-  .pager__middle .pager__separator {
-    position: absolute;
-    height: 100%;
-    width: 1px;
-    border: 1px solid #d3d4d4;
-    right: 3.5em;
-    top: 0; }
-  .pager__middle .pager__dropdown {
-    background: url("../images/svg/arrow-down--blue.svg") 86% 50% no-repeat;
-    background-size: 1.3em;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    color: #004494;
+  width: 100%; }
+  .pager__list > li {
+    color: #000;
     font-size: 0.889em;
-    padding: 0 6em 0 1.5em;
-    height: 3.35em; }
-    .pager__middle .pager__dropdown:hover {
-      background-image: url("../images/svg/arrow-down--blue.svg");
-      background-size: 1.3em !important; }
-    .pager__middle .pager__dropdown option {
-      outline: none;
-      padding-bottom: 0.3em;
-      font-size: 0.889em;
-      padding: 0.3em 0 0.3em 0.9em;
-      font-weight: normal; }
-    .pager__middle .pager__dropdown:focus:focus {
-      outline: 3px solid #ffd617;
-      outline-offset: 0;
-      text-decoration: underline; }
-    .pager__middle .pager__dropdown:-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 #004494; }
-
-.no-svg .pager__dropdown {
-  background-image: url("../images/png/arrow-down-blue.png"); }
-
-.pager__back-arrow,
-.pager__forward-arrow {
-  height: 3em;
-  display: inline-block;
-  padding: 0 1em;
-  text-align: center; }
-  .pager__back-arrow.icon:before, .pager__back-arrow.search-form__btn:before, .pager__back-arrow.icon::before, .pager__back-arrow.search-form__btn::before,
-  .pager__forward-arrow.icon:before,
-  .pager__forward-arrow.search-form__btn:before,
-  .pager__forward-arrow.icon::before,
-  .pager__forward-arrow.search-form__btn::before {
-    font-size: 1.7em;
-    vertical-align: middle;
-    margin-right: 0;
-    margin-top: -2px; }
-
-.pager__back-text,
-.pager__forward-text {
-  display: none; }
+    font-weight: 600;
+    border: 2px solid transparent;
+    margin: 0 6px;
+    min-width: 28px;
+    height: 28px; }
+    .pager__list > li.pager__item {
+      list-style: none;
+      display: none; }
+      .pager__list > li.pager__item.pager__item--previous, .pager__list > li.pager__item.pager__item--next {
+        display: inline; }
+      .pager__list > li.pager__item.pager__item--ellipsis {
+        font-weight: 400; }
+      .pager__list > li.pager__item.pager__item--previous a, .pager__list > li.pager__item.pager__item--next a {
+        font-weight: 600; }
+      .pager__list > li.pager__item.pager__item--previous {
+        float: left;
+        clear: left; }
+      .pager__list > li.pager__item.pager__item--next {
+        float: right;
+        clear: right; }
+      .pager__list > li.pager__item.pager__item--current {
+        border-radius: 14px;
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        width: inherit;
+        z-index: -1; }
+      .pager__list > li.pager__item--padding {
+        padding: 0 7px; }
+    .pager__list > li > a {
+      color: #004494;
+      font-weight: 400;
+      text-decoration: none; }
+      .pager__list > li > a:hover {
+        color: #000;
+        text-decoration: underline; }
 
 @media (min-width: 622px) {
-  .pager__back .pager__btn,
-  .pager__forward .pager__btn {
+  .pager__item__text {
+    display: none; }
+  .pager__list {
     width: auto; }
-    .pager__back .pager__btn:hover,
-    .pager__forward .pager__btn:hover {
-      text-decoration: none; }
-  .pager__back-text,
-  .pager__forward-text {
-    display: inline-block;
-    padding: 0 2em 0 0; }
-    .pager__back-text:hover,
-    .pager__forward-text:hover {
-      text-decoration: underline; }
-  .pager__forward-text {
-    padding: 0 0 0 2em; } }
+    .pager__list > li.pager__item {
+      display: inline;
+      float: left !important; }
+      .pager__list > li.pager__item.pager__item--current {
+        border: 2px solid #000;
+        position: relative; } }
 
-.region-content ul.pager {
+.region-content ul.pager__list {
   margin: 0.938em auto;
   padding: 0; }
-  .region-content ul.pager .ajax-progress {
+  .region-content ul.pager__list .ajax-progress {
     display: none; }
 
 /*
@@ -5846,6 +5799,26 @@ Styleguide: siteheader.searchform
   .site-menu__section {
     padding-top: 2em;
     padding-bottom: 3em; } }
+
+/*
+Site user menu
+*/
+.site-user-menu__list {
+  list-style: none;
+  float: right;
+  margin-bottom: 0 !important;
+  padding: 0;
+  font-weight: 600; }
+
+.site-user-menu__option {
+  display: inline-block;
+  padding: 0.685em 1.333em; }
+  .site-user-menu__option a {
+    text-decoration: none; }
+    .site-user-menu__option a:hover, .site-user-menu__option a:focus {
+      text-decoration: underline; }
+  .site-user-menu__option:last-child {
+    padding-right: 0; }
 
 .skip-link,
 #skip-link {

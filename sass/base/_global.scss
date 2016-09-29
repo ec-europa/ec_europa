@@ -1,13 +1,10 @@
 // Global
 body {
+  min-width: 320px;
   font-family: $font-family-base;
   font-weight: 400;
   line-height: 1.667;
-
   overflow-x: hidden;
-
-  min-width: 320px;
-
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,11 +14,9 @@ body {
   }
 }
 
-.no-js {
-  .collapse {
-    display: block;
-    visibility: visible;
-  }
+.no-js .collapse {
+  display: block;
+  visibility: visible;
 }
 
 .region-sidebar-first {

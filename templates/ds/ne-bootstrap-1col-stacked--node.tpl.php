@@ -14,8 +14,7 @@
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
   <!-- Page Header -->
-  <div class="page-header<?php if (isset($header_back)) : print ' page-header--image';
- endif; ?>">
+  <div class="page-header<?php print isset($header_back) ? ' page-header--image' : ''; ?>">
     <nav class="page-navigation" role="navigation">
       <div class="container-fluid">
         <?php print render($header_bottom); ?>
@@ -37,6 +36,15 @@
     </div>
     <?php endif; ?>
   </div>
+
+  <?php if (isset($utility) && !empty($utility)): ?>
+    <div class="utility">
+      <div class="container-fluid">
+        <?php print render($utility); ?>
+      </div>
+    </div>
+  <?php endif; ?>
+
   <div class="page-content">
     <div class="container-fluid">
       <div class="row<?php if (isset($ceiling)) : print ' ' . $ceiling;

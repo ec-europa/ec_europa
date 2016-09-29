@@ -72,10 +72,10 @@ function europa_preprocess_europa_status_message(&$variables) {
 function europa_form_required_marker($variables) {
   // This is also used in the installer, pre-database setup.
   $t = get_t();
-  $attributes = array(
+  $attributes = [
     'class' => 'form-required text-danger',
     'title' => $t('This field is required.'),
-  );
+  ];
   return '<span' . drupal_attributes($attributes) . '>*</span>';
 }
 
@@ -130,15 +130,9 @@ function europa_form_element(&$variables) {
 
   // This function is invoked as theme wrapper, but the rendered form element
   // may not necessarily have been processed by form_builder().
-  $element += array(
+  $element += [
     '#title_display' => 'before',
-  );
-
-  // Hide datepicker-popup label.
-  $datepicker_popup_pattern = '/edit-.*-datepicker-popup-.*/i';
-  if (!empty($element['#id']) && preg_match($datepicker_popup_pattern, $element['#id'])) {
-    $element['#title_display'] = 'invisible';
-  }
+  ];
 
   // Add element #id for #type 'item'.
   if (isset($element['#markup']) && !empty($element['#id'])) {
@@ -149,7 +143,7 @@ function europa_form_element(&$variables) {
   if (isset($element['#parents']) && form_get_error($element)) {
     $attributes['class'][] = 'has-error';
 
-    if (in_array($element['#type'], array('radio', 'checkbox'))) {
+    if (in_array($element['#type'], ['radio', 'checkbox'])) {
       if ($element['#required']) {
         $feedback_message = '<p class="feedback-message is-error">' . form_get_error($element) . '</p>';
       }
@@ -163,12 +157,12 @@ function europa_form_element(&$variables) {
     $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
   }
   if (!empty($element['#name'])) {
-    $attributes['class'][] = 'form-item-' . strtr($element['#name'], array(
+    $attributes['class'][] = 'form-item-' . strtr($element['#name'], [
       ' ' => '-',
       '_' => '-',
       '[' => '-',
       ']' => '',
-    ));
+    ]);
   }
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
@@ -256,6 +250,7 @@ function europa_form_element(&$variables) {
     case 'after':
       if ($is_radio || $is_checkbox) {
         $output .= ' ' . $prefix . $element['#children'] . $suffix;
+        unset($element['#children']);
       }
       else {
         $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;
@@ -273,13 +268,6 @@ function europa_form_element(&$variables) {
 
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       $output .= $feedback_message;
-  }
-
-  // Adding the calendar icon on text fields with JS UI PopUp calendar.
-  if ($variables['element']['#type'] == 'date_popup') {
-    $prefix = '<div class="date-picker">';
-    $suffix = '<span class="icon icon--calendar"></span>';
-    $output = ' ' . $prefix . $element['#children'] . $suffix . "\n";
   }
 
   $output .= "</div>\n";
@@ -344,150 +332,150 @@ function europa_menu_link__menu_dt_menu_social_media(&$variables) {
 function europa_html_head_alter(&$head_elements) {
   // Creating favicons links and meta tags for the html header.
   $europa_theme_png_path = base_path() . drupal_get_path('theme', 'europa') . '/images/png/favicon/';
-  $elements = array(
-    array(
+  $elements = [
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'apple-touch-icon',
         'sizes' => '57x57',
         'href' => 'apple-touch-icon-57x57.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'apple-touch-icon',
         'sizes' => '60x60',
         'href' => 'apple-touch-icon-60x60.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'apple-touch-icon',
         'sizes' => '114x114',
         'href' => 'apple-touch-icon-114x114.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'apple-touch-icon',
         'sizes' => '120x120',
         'href' => 'apple-touch-icon-120x120.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'apple-touch-icon',
         'sizes' => '144x144',
         'href' => 'apple-touch-icon-144x144.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'apple-touch-icon',
         'sizes' => '152x152',
         'href' => 'apple-touch-icon-152x152.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'apple-touch-icon',
         'sizes' => '180x180',
         'href' => 'apple-touch-icon-180x180.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'icon',
         'type' => 'image/png',
         'sizes' => '32x32',
         'href' => 'favicon-32x32.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'icon',
         'type' => 'image/png',
         'sizes' => '192x192',
         'href' => 'android-chrome-192x192.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'icon',
         'type' => 'image/png',
         'sizes' => '96x96',
         'href' => 'favicon-96x96.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'link',
-      '#attributes' => array(
+      '#attributes' => [
         'rel' => 'icon',
         'type' => 'image/png',
         'sizes' => '16x16',
         'href' => 'favicon-16x16.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' => [
         'name' => 'msapplication-TileColor',
         'content' => '#034ea1',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' => [
         'name' => 'msapplication-TileImage',
         'content' => $europa_theme_png_path . 'mstile-144x144.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' => [
         'name' => 'theme-color',
         'content' => '#034ea1',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' => [
         'name' => 'msapplication-square70x70logo',
         'content' => $europa_theme_png_path . 'mstile-70x70.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' => [
         'name' => 'msapplication-square150x150logo',
         'content' => $europa_theme_png_path . 'mstile-150x150.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' => [
         'name' => 'msapplication-wide310x150logo',
         'content' => $europa_theme_png_path . 'mstile-310x150.png',
-      ),
-    ),
-    array(
+      ],
+    ],
+    [
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' => [
         'name' => 'msapplication-square310x310logo',
         'content' => $europa_theme_png_path . 'mstile-310x310.png',
-      ),
-    ),
+      ],
+    ],
 
-  );
+  ];
   foreach ($elements as $element) {
     $element['#type'] = 'html_tag';
     if (isset($element['#attributes']['href'])) {
@@ -518,7 +506,7 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
  */
 function _europa_breadcrumb_menu(&$variables) {
   $menu_links = menu_tree('menu-dt-breadcrumb-menu');
-  $new_items = array();
+  $new_items = [];
   global $language;
   $front = drupal_is_front_page();
 
@@ -528,9 +516,9 @@ function _europa_breadcrumb_menu(&$variables) {
       if (is_numeric($key)) {
         // We don't want to show the home link in the home page.
         if (!($front && $menu_item['#href'] == '<front>')) {
-          $options = array('language' => $language);
+          $options = ['language' => $language];
           $title = token_replace($menu_item['#title'], $menu_item, $options);
-          $new_items[] = _easy_breadcrumb_build_item($title, array(), $menu_item['#href']);
+          $new_items[] = _easy_breadcrumb_build_item($title, [], $menu_item['#href']);
           $i++;
         }
       }
@@ -566,14 +554,14 @@ function europa_easy_breadcrumb(&$variables) {
       $classes = $item['class'];
       $classes[] = 'breadcrumb__segment';
 
-      $attributes = array(
-        'class' => array('breadcrumb__link'),
-      );
+      $attributes = [
+        'class' => ['breadcrumb__link'],
+      ];
 
       if ($i == 0) {
         $classes[] = 'breadcrumb__segment--first';
         $attributes['class'][] = 'is-internal';
-        $attributes += array('rel' => 'home');
+        $attributes += ['rel' => 'home'];
       }
       elseif ($i == ($s - 1)) {
         $classes[] = 'breadcrumb__segment--last';
@@ -582,10 +570,10 @@ function europa_easy_breadcrumb(&$variables) {
       $content = '<span class="breadcrumb__text">' . check_plain(decode_entities($item['content'])) . '</span>';
       $class = implode(' ', $classes);
       if (isset($item['url'])) {
-        $full_item = l($content, $item['url'], array(
+        $full_item = l($content, $item['url'], [
           'attributes' => $attributes,
           'html' => TRUE,
-        ));
+        ]);
       }
       else {
         $full_item = '<span class="' . $class . '">' . $content . '</span>';
@@ -697,14 +685,14 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
 
   // Set options as per anchor format described at
   // http://microformats.org/wiki/file-format-examples
-  $options = array(
-    'attributes' => array(
+  $options = [
+    'attributes' => [
       'type' => $file->filemime . '; length=' . $file->filesize,
-      'class' => array('file__btn', 'btn', 'btn-default'),
+      'class' => ['file__btn', 'btn', 'btn-default'],
       'title' => check_plain($file->filename),
-    ),
+    ],
     'html' => TRUE,
-  );
+  ];
 
   $file_text = t('Download') . '<span class="sr-only">' . $file_extension . ' - ' . format_size($file->filesize) . '</span>';
 
@@ -726,7 +714,7 @@ function europa_file_link($variables) {
   }
 
   $url['path'] = file_create_url($file->uri);
-  $url['options'] = array();
+  $url['options'] = [];
 
   return _europa_file_markup($file, $url);
 }
@@ -808,7 +796,7 @@ function europa_preprocess_block(&$variables) {
 
     if (!empty($variables['elements']['other']['#markup'])) {
       foreach ($variables['elements']['other']['#markup'] as $code => $lang) {
-        $options = array();
+        $options = [];
         $options['query'] = drupal_get_query_parameters();
         $options['query']['2nd-language'] = $code;
         $options['attributes']['lang'] = $code;
@@ -859,7 +847,7 @@ function europa_preprocess_block(&$variables) {
 
           // Passing block id to Drupal.settings in order to pass it through
           // data attribute in the collapsible panel.
-          drupal_add_js(array('europa' => array('exposedBlockId' => $variables['block_html_id'])), 'setting');
+          drupal_add_js(['europa' => ['exposedBlockId' => $variables['block_html_id']]], 'setting');
 
           // Adding filters.js file.
           drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/filters.js');
@@ -915,22 +903,22 @@ function europa_preprocess_bootstrap_fieldgroup_nav(&$variables) {
         $classes = '';
       }
 
-      $variables['navs'][$i] = array(
+      $variables['navs'][$i] = [
         'content' => l(
           $item['#title'],
           NULL,
-          array(
-            'attributes' => array(
+          [
+            'attributes' => [
               'data-toggle' => 'tab',
               'class' => ['js-tablist__link'],
-            ),
+            ],
             'fragment' => $id,
             'external' => TRUE,
             'html' => TRUE,
-          )
+          ]
         ),
         'classes' => $classes,
-      );
+      ];
 
       $variables['panes'][$i]['id'] = $id;
       $variables['panes'][$i]['title'] = check_plain($item['#title']);
@@ -986,10 +974,10 @@ function europa_preprocess_image(&$variables) {
         $variables['attributes']['class'][] = 'img-responsive';
       }
       else {
-        $variables['attributes']['class'] = array(
+        $variables['attributes']['class'] = [
           $variables['attributes']['class'],
           'img-responsive',
-        );
+        ];
       }
     }
   }
@@ -1017,22 +1005,22 @@ function europa_preprocess_html(&$variables) {
   // Add the ie9 only css.
   drupal_add_css(
     $this_theme_path . '/css/ie9.css',
-    array(
-      'browsers' => array(
+    [
+      'browsers' => [
         'IE' => 'IE 9',
         '!IE' => FALSE,
-      ),
-    )
+      ],
+    ]
   );
   // Add conditional js.
-  $ie9_js = array(
+  $ie9_js = [
     '#tag' => 'script',
-    '#attributes' => array(
+    '#attributes' => [
       'src' => $this_theme_path . '/js/ie9.js',
-    ),
+    ],
     '#prefix' => '<!--[if IE 9]>',
     '#suffix' => '</script><![endif]-->',
-  );
+  ];
   drupal_add_html_head($ie9_js, 'ie9_js');
 
   // For some reason, the front page handles tokens different.
@@ -1066,10 +1054,10 @@ function europa_preprocess_node(&$variables) {
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
   $variables['submitted'] = '';
   if (theme_get_setting('display_submitted')) {
-    $variables['submitted'] = t('Submitted by !username on !datetime', array(
+    $variables['submitted'] = t('Submitted by !username on !datetime', [
       '!username' => $variables['name'],
       '!datetime' => $variables['date'],
-    ));
+    ]);
   }
   $variables['messages'] = theme('status_messages');
 
@@ -1107,14 +1095,14 @@ function europa_preprocess_page(&$variables) {
     $variables['footer_column_class'] = 'col-sm-12';
   }
 
-  $variables['page_logo_title'] = t('Home - @sitename', array('@sitename' => variable_get('site_name', 'European Commission')));
+  $variables['page_logo_title'] = t('Home - @sitename', ['@sitename' => variable_get('site_name', 'European Commission')]);
 
   $node = &$variables['node'];
 
   if (isset($node)) {
     // Adding generic introduction field to be later rendered in page template.
     $variables['field_core_introduction'] = isset($node->field_core_introduction) ?
-      field_view_field('node', $node, 'field_core_introduction', array('label' => 'hidden')) :
+      field_view_field('node', $node, 'field_core_introduction', ['label' => 'hidden']) :
       NULL;
 
     // Check if Display Suite is handling node.
@@ -1126,6 +1114,11 @@ function europa_preprocess_page(&$variables) {
           // Move the header_bottom to the node.
           $variables['node']->header_bottom = $variables['page']['header_bottom'];
           unset($variables['page']['header_bottom']);
+        }
+        if (isset($variables['page']['utility'])) {
+          // Move the utility to the node.
+          $variables['node']->utility = $variables['page']['utility'];
+          unset($variables['page']['utility']);
         }
         ctools_class_add($layout['layout']);
 
@@ -1163,24 +1156,43 @@ function europa_preprocess_views_view(&$variables) {
  * Implements theme_pager().
  */
 function europa_pager($variables) {
-  drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/pager.js');
-
   $element = $variables['element'];
   $parameters = $variables['parameters'];
-  $quantity = $variables['quantity'];
   global $pager_page_array, $pager_total;
+  $pager_items_quantity = 9;
+  $pager_max_quantity = 7;
+  $pager_min_quantity = 5;
 
   // Calculate various markers within this pager piece:
-  // $pager_middle is used to "center" pages around the current page.
-  $pager_middle = ceil($quantity / 2);
-  // $pager_current is the page we are currently paged to.
+  // Current is the page we are currently paged to.
   $pager_current = $pager_page_array[$element] + 1;
-  // $pager_first is the first page listed by this pager piece (re quantity).
-  $pager_first = $pager_current - $pager_middle + 1;
-  // $pager_last is the last page listed by this pager piece (re quantity).
-  $pager_last = $pager_current + $quantity - $pager_middle;
-  // $pager_max is the maximum page number.
+  // Max is the maximum page number.
   $pager_max = $pager_total[$element];
+  // Re-calculate quantity.
+  $quantity = $pager_items_quantity;
+  if ($pager_max > $pager_items_quantity) {
+    $quantity = $pager_max_quantity;
+    if ($pager_current > $pager_min_quantity && $pager_current <= $pager_max - $pager_min_quantity) {
+      $quantity = $pager_min_quantity;
+    }
+  }
+  // Middle is used to "center" pages around the current page.
+  $pager_middle = ceil($quantity / 2);
+  // First is the first page listed by this pager piece (re quantity).
+  $pager_first = $pager_current - $pager_middle + 1;
+  // Last is the last page listed by this pager piece (re quantity).
+  $pager_last = $pager_current + $quantity - $pager_middle;
+  // Adjust $pager_first & $pager_last depending on $pager_current.
+  if ($quantity == $pager_max_quantity) {
+    if ($pager_current <= $pager_min_quantity) {
+      $pager_first = 1;
+      $pager_last = $pager_max_quantity;
+    }
+    elseif ($pager_current > $pager_max - $pager_min_quantity) {
+      $pager_first = $pager_max - $pager_max_quantity + 1;
+      $pager_last = $pager_max;
+    }
+  }
 
   // Prepare for generation loop.
   $i = $pager_first;
@@ -1195,105 +1207,129 @@ function europa_pager($variables) {
     $i = 1;
   }
 
-  $li_first = theme('pager_first', array(
-    'text' => t('first'),
-    'element' => $element,
-    'parameters' => $parameters,
-  ));
-  $li_previous = theme('pager_previous', array(
-    'text' => '<span class="pager__back-arrow icon icon--left"></span><span class="pager__back-text">' . t('Previous') . '</span>',
-    'element' => $element,
-    'interval' => 1,
-    'parameters' => $parameters,
-    'attributes' => array('class' => 'pager__btn'),
-  ));
-  $li_next = theme('pager_next', array(
-    'text' => '<span class="pager__forward-text">' . t('Next') . "</span><span class='pager__forward-arrow icon icon--right'></span>",
-    'element' => $element,
-    'interval' => 1,
-    'parameters' => $parameters,
-    'attributes' => array('class' => 'pager__btn'),
-  ));
-  $li_last = theme('pager_last', array(
-    'text' => t('last'),
-    'element' => $element,
-    'parameters' => $parameters,
-    'attributes' => array('class' => 'pager__btn'),
-  ));
+  $li_first = '';
+  if ($i >= 2) {
+    $li_first = theme('pager_first',
+      [
+        'text' => 1,
+        'element' => $element,
+        'parameters' => $parameters,
+      ]
+    );
+  }
+  $li_previous = theme('pager_previous',
+    [
+      'text' => t('‹ Previous'),
+      'element' => $element,
+      'interval' => 1,
+      'parameters' => $parameters,
+    ]
+  );
+  $li_next = theme('pager_next',
+    [
+      'text' => t('Next ›'),
+      'element' => $element,
+      'interval' => 1,
+      'parameters' => $parameters,
+    ]
+  );
+  $li_last = '';
+  if ($pager_last < $pager_max) {
+    $li_last = theme('pager_last',
+      [
+        'text' => $pager_max,
+        'element' => $element,
+        'parameters' => $parameters,
+      ]
+    );
+  }
 
   if ($pager_total[$element] > 1) {
     if ($li_previous) {
-      $items[] = array(
-        'class' => array('pager__item pager__back'),
+      $items[] = [
+        'class' => ['pager__item', 'pager__item--previous'],
         'data' => $li_previous,
-      );
+      ];
     }
-    $items[] = array(
-      'class' => array('pager__item pager__middle'),
-      'data' => "<span class='pager__combo-container'><span class='pager__combo-current'>" . t('Page !page', array('!page' => $pager_current)) . '&nbsp;</span>' .
-      '<span class="pager__combo-total">' . t('of !total', array('!total' => $pager_max)) . '</span>' .
-      '</span>',
-    );
+    if ($li_first) {
+      $items[] = [
+        'class' => ['pager__item', 'pager__item--first'],
+        'data' => $li_first,
+      ];
+    }
+
     // When there is more than one page, create the pager list.
     if ($i != $pager_max) {
-      if ($li_first && $i > 1) {
-        $items[] = array(
-          'class' => array('pager__item select'),
-          'data' => $li_first,
-        );
+      if ($i > 2) {
+        $items[] = [
+          'class' => ['pager__item', 'pager__item--ellipsis'],
+          'data' => '…',
+        ];
       }
       // Now generate the actual pager piece.
       for (; $i <= $pager_last && $i <= $pager_max; $i++) {
         if ($i < $pager_current) {
-          $items[] = array(
-            'class' => array('pager__item select'),
-            'data' => theme('pager_previous', array(
+          $items[] = [
+            'class' => ['pager__item'],
+            'data' => theme('pager_previous', [
               'text' => $i,
               'element' => $element,
               'interval' => ($pager_current - $i),
               'parameters' => $parameters,
-            )),
-          );
+            ]),
+          ];
         }
         if ($i == $pager_current) {
-          $items[] = array(
-            'class' => array('pager__item is-current select'),
-            'data' => $i,
-          );
+          $items[] = [
+            'class' => [
+              'pager__item',
+              'pager__item--current' . ($i >= 100 ? ' pager__item--padding' : ''),
+            ],
+            'data' => '<span class="pager__item__text">' . t('Page') . ' </span>' . $i,
+          ];
         }
         if ($i > $pager_current) {
-          $items[] = array(
-            'class' => array('pager__item select'),
-            'data' => theme('pager_next', array(
+          $items[] = [
+            'class' => ['pager__item'],
+            'data' => theme('pager_next', [
               'text' => $i,
               'element' => $element,
               'interval' => ($i - $pager_current),
               'parameters' => $parameters,
-            )),
-          );
+            ]),
+          ];
         }
       }
-    }
-    if ($li_last && $i < $pager_max) {
-      $items[] = array(
-        'class' => array('pager__item select'),
-        'data' => $li_last,
-      );
+      if ($i < $pager_max) {
+        $items[] = [
+          'class' => ['pager__item', 'pager__item--ellipsis'],
+          'data' => '…',
+        ];
+      }
     }
     // End generation.
+    if ($li_last) {
+      $items[] = [
+        'class' => ['pager__item', 'pager__item--last'],
+        'data' => $li_last,
+      ];
+    }
     if ($li_next) {
-      $items[] = array(
-        'class' => array('pager__item pager__forward'),
+      $items[] = [
+        'class' => ['pager__item', 'pager__item--next'],
         'data' => $li_next,
-      );
+      ];
     }
 
-    $pager_markup = '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme('item_list', array(
-      'items' => $items,
-      'attributes' => array('class' => array('pager')),
-    ));
+    $pager_markup = '<h2 class="sr-only">' . t('Pages') . '</h2>' . theme(
+        'item_list',
+        [
+          'items' => $items,
+          'attributes' => ['class' => ['pager__list']],
+        ]
+      );
 
-    return '<div class="pager__wrapper">' . $pager_markup . '</div>';
+    return '<div class="pager">' . $pager_markup . '</div>';
   }
 }
 
@@ -1311,9 +1347,9 @@ function europa_pager_link($variables) {
     $parameters['page'] = $new_page;
   }
 
-  $query = array();
+  $query = [];
   if (count($parameters)) {
-    $query = drupal_get_query_parameters($parameters, array());
+    $query = drupal_get_query_parameters($parameters, []);
   }
   if ($query_pager = pager_get_query_parameters()) {
     $query = array_merge($query, $query_pager);
@@ -1323,18 +1359,16 @@ function europa_pager_link($variables) {
   if (!isset($attributes['title'])) {
     static $titles = NULL;
     if (!isset($titles)) {
-      $titles = array(
-        t('« first') => t('Go to first page'),
-        t('‹ previous') => t('Go to previous page'),
-        t('next ›') => t('Go to next page'),
-        t('last »') => t('Go to last page'),
-      );
+      $titles = [
+        t('‹ Previous') => t('Go to previous page'),
+        t('Next ›') => t('Go to next page'),
+      ];
     }
     if (isset($titles[$text])) {
       $attributes['title'] = $titles[$text];
     }
     elseif (is_numeric($text)) {
-      $attributes['title'] = t('Go to page @number', array('@number' => $text));
+      $attributes['title'] = t('Go to page @number', ['@number' => $text]);
     }
   }
 
@@ -1343,7 +1377,7 @@ function europa_pager_link($variables) {
   //   none of the pager links is active at any time - but it should still be
   //   possible to use l() here.
   // @see http://drupal.org/node/1410574
-  $attributes['href'] = url($_GET['q'], array('query' => $query));
+  $attributes['href'] = url($_GET['q'], ['query' => $query]);
   return '<a' . drupal_attributes($attributes) . '>' . $text . '</a>';
 }
 
@@ -1351,22 +1385,22 @@ function europa_pager_link($variables) {
  * Implements theme_pager_first().
  */
 function europa_pager_first($variables) {
-  $text = $variables['text'];
-  $element = $variables['element'];
-  $parameters = $variables['parameters'];
-  $attributes = isset($variables['attributes']) ? $variables['attributes'] : array();
   global $pager_page_array;
+  $element = $variables['element'];
+  $text = $variables['text'];;
+  $parameters = $variables['parameters'];
+  $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
   $output = '';
 
   // If we are anywhere but the first page.
   if ($pager_page_array[$element] > 0) {
-    $output = theme('pager_link', array(
+    $output = theme('pager_link', [
       'text' => $text,
       'page_new' => pager_load_array(0, $element, $pager_page_array),
       'element' => $element,
       'parameters' => $parameters,
       'attributes' => $attributes,
-    ));
+    ]);
   }
 
   return $output;
@@ -1376,12 +1410,12 @@ function europa_pager_first($variables) {
  * Implements theme_pager_previous().
  */
 function europa_pager_previous($variables) {
+  global $pager_page_array;
   $text = $variables['text'];
   $element = $variables['element'];
   $interval = $variables['interval'];
   $parameters = $variables['parameters'];
-  $attributes = isset($variables['attributes']) ? $variables['attributes'] : array();
-  global $pager_page_array;
+  $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
   $output = '';
 
   // If we are anywhere but the first page.
@@ -1390,22 +1424,22 @@ function europa_pager_previous($variables) {
 
     // If the previous page is the first page, mark the link as such.
     if ($page_new[$element] == 0) {
-      $output = theme('pager_first', array(
+      $output = theme('pager_first', [
         'text' => $text,
         'element' => $element,
         'parameters' => $parameters,
         'attributes' => $attributes,
-      ));
+      ]);
     }
     // The previous page is not the first page.
     else {
-      $output = theme('pager_link', array(
+      $output = theme('pager_link', [
         'text' => $text,
         'page_new' => $page_new,
         'element' => $element,
         'parameters' => $parameters,
         'attributes' => $attributes,
-      ));
+      ]);
     }
   }
 
@@ -1420,7 +1454,7 @@ function europa_pager_next($variables) {
   $element = $variables['element'];
   $interval = $variables['interval'];
   $parameters = $variables['parameters'];
-  $attributes = isset($variables['attributes']) ? $variables['attributes'] : array();
+  $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
   global $pager_page_array, $pager_total;
   $output = '';
 
@@ -1429,22 +1463,22 @@ function europa_pager_next($variables) {
     $page_new = pager_load_array($pager_page_array[$element] + $interval, $element, $pager_page_array);
     // If the next page is the last page, mark the link as such.
     if ($page_new[$element] == ($pager_total[$element] - 1)) {
-      $output = theme('pager_last', array(
+      $output = theme('pager_last', [
         'text' => $text,
         'element' => $element,
         'parameters' => $parameters,
         'attributes' => $attributes,
-      ));
+      ]);
     }
     // The next page is not the last page.
     else {
-      $output = theme('pager_link', array(
+      $output = theme('pager_link', [
         'text' => $text,
         'page_new' => $page_new,
         'element' => $element,
         'parameters' => $parameters,
         'attributes' => $attributes,
-      ));
+      ]);
     }
   }
 
@@ -1455,22 +1489,22 @@ function europa_pager_next($variables) {
  * Implements theme_pager_last().
  */
 function europa_pager_last($variables) {
-  $text = $variables['text'];
-  $element = $variables['element'];
-  $parameters = $variables['parameters'];
-  $attributes = isset($variables['attributes']) ? $variables['attributes'] : array();
   global $pager_page_array, $pager_total;
+  $element = $variables['element'];
+  $text = $variables['text'];
+  $parameters = $variables['parameters'];
+  $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
   $output = '';
 
-  // If we are anywhere but the last page.
+  // If we are anywhere but the n-5th page.
   if ($pager_page_array[$element] < ($pager_total[$element] - 1)) {
-    $output = theme('pager_link', array(
+    $output = theme('pager_link', [
       'text' => $text,
       'page_new' => pager_load_array($pager_total[$element] - 1, $element, $pager_page_array),
       'element' => $element,
       'parameters' => $parameters,
       'attributes' => $attributes,
-    ));
+    ]);
   }
 
   return $output;
