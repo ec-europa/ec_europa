@@ -53,6 +53,12 @@
 }
 
 // Event page hack.
-.node-type-event .field--field-event-website .field__items {
-  font-weight: bold;
+.node-type-event {
+  .field--field-event-website .field__items {
+    font-weight: bold;
+  }
+  #practicalinformation .field--attend .field__items span {
+    clear: left;
+    padding: 0;
+  }
 }

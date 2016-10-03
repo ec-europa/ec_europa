@@ -6290,4 +6290,8 @@ Styleguide table responsive
 .node-type-event .field--field-event-website .field__items {
   font-weight: bold; }
 
+.node-type-event #practicalinformation .field--attend .field__items span {
+  clear: left;
+  padding: 0; }
+
 /*# sourceMappingURL=style-sass-components.css.map */
