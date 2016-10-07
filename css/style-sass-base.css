@@ -4406,6 +4406,7 @@ Markup: html/icon.html
 .icon--calendar - Calendar icon
 .icon--location - Location icon
 .icon--livestreaming - Live streaming icon
+.icon--camera - Camera icon
 
 Styleguide: icon
 */
@@ -4570,6 +4571,9 @@ Styleguide: icon
 
 .icon--calendar:before {
   content: '\e81d'; }
+
+.icon--camera:before {
+  content: '\e900'; }
 
 .icon--yellowbg {
   background-color: #ffd617;

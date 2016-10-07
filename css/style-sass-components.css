@@ -1081,6 +1081,7 @@ Markup: html/icon.html
 .icon--calendar - Calendar icon
 .icon--location - Location icon
 .icon--livestreaming - Live streaming icon
+.icon--camera - Camera icon
 
 Styleguide: icon
 */
@@ -1246,6 +1247,9 @@ Styleguide: icon
 
 .icon--calendar:before {
   content: '\e81d'; }
+
+.icon--camera:before {
+  content: '\e900'; }
 
 .icon--yellowbg {
   background-color: #ffd617;
@@ -2699,18 +2703,42 @@ Styleguide gallery
 .mediagallery__caption {
   color: white;
   width: 100%;
+  height: 4em;
   bottom: 0;
   display: none;
   padding: 5px 10px 5px 5px;
   position: absolute;
   overflow: hidden;
   font-size: 0.667em;
-  max-height: 4.0em;
-  min-height: 2.0em;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   background-color: #404040; }
+
+.mediagallery__item.has-icon .mediagallery__caption {
+  padding-right: 4.0em !important; }
+
+.mediagallery__item.has-icon .mediagallery__icon {
+  color: white;
+  width: 2.667em;
+  height: 2.667em;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  background-color: #404040; }
+  .mediagallery__item.has-icon .mediagallery__icon .icon, .mediagallery__item.has-icon .mediagallery__icon .date-picker .date-picker--icon, .date-picker .mediagallery__item.has-icon .mediagallery__icon .date-picker--icon, .mediagallery__item.has-icon .mediagallery__icon .search-form__btn {
+    font-size: 1em;
+    line-height: 2.667em; }
+    .mediagallery__item.has-icon .mediagallery__icon .icon:before, .mediagallery__item.has-icon .mediagallery__icon .date-picker .date-picker--icon:before, .date-picker .mediagallery__item.has-icon .mediagallery__icon .date-picker--icon:before, .mediagallery__item.has-icon .mediagallery__icon .search-form__btn:before {
+      margin-right: 0; }
+  .mediagallery__item.has-icon .mediagallery__icon .icon--camera {
+    font-size: 0.667em;
+    line-height: 4.000em; }
 
 /* Firefox alternative to webkit-line-clamp */
 @-moz-document url-prefix() {
