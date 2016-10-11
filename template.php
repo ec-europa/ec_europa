@@ -1159,7 +1159,7 @@ function europa_pager($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   global $pager_page_array, $pager_total;
-  $pager_items_quantity = 9;
+  $pager_items_quantity = isset($variables['quantity']) ? $variables['quantity'] : 9;
   $pager_max_quantity = 7;
   $pager_min_quantity = 5;
 
