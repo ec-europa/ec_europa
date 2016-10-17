@@ -602,36 +602,25 @@ function europa_easy_breadcrumb(&$variables) {
  *   Class modefier for the file block element.
  * @param bool $subfile
  *   True/False parameter to set if it is a subfile.
+ * @param bool $is_external
+ *   If the file links to an external resource.
  *
  * @return string
  *   HTML markup.
  */
-function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FALSE) {
-  switch ($file->type) {
-    case 'image':
-      $file_icon_class = 'icon--image';
-      break;
-
-    case 'audio':
-      $file_icon_class = 'icon--audio';
-      break;
-
-    case 'video':
-      $file_icon_class = 'icon--video';
-      break;
-
-    default:
-      $file_icon_class = 'icon--file';
-      break;
-  }
+function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FALSE, $is_external = FALSE) {
+  // Define the file icon class.
+  $icons_available = ['image', 'audio', 'video'];
+  $file_icon_class = in_array($file->type, $icons_available) ? 'icon--' . $file->type : 'icon--file';
 
   // If we have a modifier, just append it to the class.
   $file_class = (!empty($modifier) ? ' ' . $modifier : '');
 
-  $file_icon = '<span class="file__icon icon ' . $file_icon_class . '"></span>';
-  $file_size = format_size($file->filesize);
-  $file_name = $file->uri;
-  $file_extension = drupal_strtoupper(pathinfo($file_name, PATHINFO_EXTENSION));
+  // If the file is internal, we have additional information.
+  if (!$is_external) {
+    $file_extension = drupal_strtoupper(pathinfo($file->uri, PATHINFO_EXTENSION));
+    $file_size = format_size($file->filesize);
+  }
 
   // Get our full language string.
   if (isset($file->entity->language) || isset($file->language)) {
@@ -642,63 +631,92 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
     }
   }
 
-  // If we have a full language string and it's not a subfile, we add it to the
-  // file information.
-  $file_language = '';
-  if (isset($file_language_string) && !$subfile) {
-    $file_language = '<span class="file__contentlanguage">' . $file_language_string . ' </span>';
+  // Init file info array.
+  $file_info_parts = [];
+
+  // Add the file size if available.
+  if (isset($file_size)) {
+    $file_info_parts[] = $file_size;
+  }
+  // Add the file extension if available.
+  if (isset($file_extension)) {
+    $file_info_parts[] = $file_extension;
   }
 
   // File information and title setter.
   if ($subfile && isset($file_language_string)) {
-    $file_info_string = $file_size . ' - ' . $file_extension;
+    $file_info_string = implode(' - ', $file_info_parts);
     $title_string = $file_language_string . ' ' . t('version');
   }
   else {
-    $file_info_string = $file_language . '(' . $file_size . ' - ' . $file_extension . ')';
+    $file_info_string = isset($file_language_string) ? '<span class="file__contentlanguage">' . $file_language_string . ' </span>' : '';
+    $file_info_string .= !empty($file_info_parts) ? '(' . implode(' - ', $file_info_parts) . ')' : '';
 
     // Use the description as the link text if available.
     if (isset($file->entity)) {
-      // We have access to the entity, so we can use that title.
-      // If the file entity is different form the current node we use that
-      // title.
-      $file_wrapper = entity_metadata_wrapper('node', $file->entity);
-      $title_string = $file_wrapper->title->value();
+      $file_node = entity_metadata_wrapper('node', $file->entity);
+      $title_string = $file_node->title->value();
     }
     else {
-      if (!empty($file->description)) {
-        $title_string = $file->description;
-        $options['attributes']['title'] = check_plain($file->filename);
-      }
-      else {
-        $title_string = $file->filename;
-      }
+      $title_string = !empty($file->description) ? $file->description : $file->filename;
     }
   }
 
-  // File markup parts.
-  $file_info = '<div class="file__info">' . $file_info_string . '</div>';
-
-  $file_title = '<span class="file__title">' . $title_string . '</span>';
-
-  $file_metadata = '<div class="file__metadata">' . $file_title . $file_info . '</div>';
-
-  // Set options as per anchor format described at
-  // http://microformats.org/wiki/file-format-examples
+  // Button information.
   $options = [
     'attributes' => [
-      'type' => $file->filemime . '; length=' . $file->filesize,
       'class' => ['file__btn', 'btn', 'btn-default'],
       'title' => check_plain($file->filename),
     ],
     'html' => TRUE,
   ];
 
-  $file_text = t('Download') . '<span class="sr-only">' . $file_extension . ' - ' . format_size($file->filesize) . '</span>';
+  if (isset($file->filemime, $file->filesize)) {
+    $options['attributes']['type'] = $file->filemime . '; length=' . $file->filesize;
+  }
 
-  $file_btn = l($file_text, $url['path'], array_merge($options, $url['options']));
+  $file_text = t('Download');
+  if (isset($file_extension, $file->filesize)) {
+    $file_text .= '<span class="sr-only">' . $file_extension . ' - ' . format_size($file->filesize) . '</span>';
+  }
 
-  return '<div class="file file--widebar' . $file_class . '">' . $file_icon . $file_metadata . $file_btn . '</div>';
+  // Build the render array.
+  $render_array = [
+    '#type' => 'markup',
+    '#prefix' => '<div class="file file--widebar' . $file_class . '">',
+    '#suffix' => '</div>',
+  ];
+
+  $render_array['icon'] = [
+    '#markup' => '<span class="file__icon icon ' . $file_icon_class . '"></span>',
+  ];
+
+  $render_array['file_metadata'] = [
+    '#type' => 'markup',
+    '#prefix' => '<div class="file__metadata">',
+    '#suffix' => '</div>',
+  ];
+
+  $render_array['file_metadata']['title'] = [
+    '#type' => 'markup',
+    '#markup' => $title_string,
+    '#prefix' => '<span class="file__title">',
+    '#suffix' => '</span>',
+  ];
+
+  $render_array['file_metadata']['info'] = [
+    '#type' => 'markup',
+    '#markup' => $file_info_string,
+    '#prefix' => '<div class="file__info">',
+    '#suffix' => '</div>',
+  ];
+
+  $render_array['button'] = [
+    '#type' => 'markup',
+    '#markup' => l($file_text, $url['path'], array_merge($options, $url['options'])),
+  ];
+
+  return drupal_render($render_array);
 }
 
 /**
