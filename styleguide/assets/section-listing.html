@@ -485,7 +485,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
         <div class="kss-modifier__example">
           <div class="listing__wrapper">
   <div class="listing ">
-    <div class="listing__item listing__item--fullwidth">
+    <div class="listing__item">
       <a href="#" class="listing__item-link">
         <div class="listing__column-second">
           <img src="http://placehold.it/300x200">
@@ -503,7 +503,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
       </a>
     </div>
 
-    <div class="listing__item listing__item--fullwidth">
+    <div class="listing__item">
       <a href="#" class="listing__item-link">
         <div class="listing__column-second">
           <img src="http://placehold.it/300x200">
@@ -530,7 +530,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper&quot;&gt;
   &lt;div class=&quot;listing &quot;&gt;
-    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
+    &lt;div class=&quot;listing__item&quot;&gt;
       &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
         &lt;div class=&quot;listing__column-second&quot;&gt;
           &lt;img src=&quot;http://placehold.it/300x200&quot;&gt;
@@ -548,7 +548,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
       &lt;/a&gt;
     &lt;/div&gt;
 
-    &lt;div class=&quot;listing__item listing__item--fullwidth&quot;&gt;
+    &lt;div class=&quot;listing__item&quot;&gt;
       &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
         &lt;div class=&quot;listing__column-second&quot;&gt;
           &lt;img src=&quot;http://placehold.it/300x200&quot;&gt;
@@ -597,7 +597,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
         <div class="kss-modifier__example">
           <div class="listing__wrapper">
   <ul class="listing listing--column-left">
-    <li class="listing__item listing__item--fullwidth">
+    <li class="listing__item">
       <a href="#" class="listing__item-link">
         <div class="listing__column-second">
           <img src="http://placehold.it/80x80">
@@ -612,7 +612,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
         </div>
       </a>
     </li>
-    <li class="listing__item listing__item--fullwidth">
+    <li class="listing__item">
       <a href="#" class="listing__item-link">
         <div class="listing__column-second ">
           <img src="http://placehold.it/80x80">
@@ -627,6 +627,21 @@ The width of the element listing__item is limited to 32em, a modifier is availab
         </div>
       </a>
     </li>
+    <li class="listing__item">
+      <div class="listing__item-link">
+        <div class="listing__column-second ">
+          <img src="http://placehold.it/80x80">
+        </div>
+        <div class="listing__column-main">
+          <h3 class="listing__title"><a href="#">Dialogue with Commissioner Pierre Moscovici in Paris</a></h3>
+          <div class="listing__status-container listing__status-container--inline">
+            <span class="icon icon--location icon--text-small icon--margin-right">Online only</span>
+            <span class="icon icon--livestreaming icon--text-small">live streaming available</span>
+          </div>
+          <a href="#" class="btn btn-ctn btn--no-margin-bottom listing__btn">Watch live streaming</a>
+        </div>
+      </div>
+    </li>
   </ul>
 </div>
 
@@ -636,7 +651,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;listing__wrapper&quot;&gt;
   &lt;ul class=&quot;listing listing--column-left&quot;&gt;
-    &lt;li class=&quot;listing__item listing__item--fullwidth&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
       &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
         &lt;div class=&quot;listing__column-second&quot;&gt;
           &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
@@ -651,7 +666,7 @@ The width of the element listing__item is limited to 32em, a modifier is availab
         &lt;/div&gt;
       &lt;/a&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;listing__item listing__item--fullwidth&quot;&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
       &lt;a href=&quot;#&quot; class=&quot;listing__item-link&quot;&gt;
         &lt;div class=&quot;listing__column-second &quot;&gt;
           &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
@@ -665,6 +680,21 @@ The width of the element listing__item is limited to 32em, a modifier is availab
           &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
         &lt;/div&gt;
       &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;listing__item&quot;&gt;
+      &lt;div class=&quot;listing__item-link&quot;&gt;
+        &lt;div class=&quot;listing__column-second &quot;&gt;
+          &lt;img src=&quot;http://placehold.it/80x80&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;listing__column-main&quot;&gt;
+          &lt;h3 class=&quot;listing__title&quot;&gt;&lt;a href=&quot;#&quot;&gt;Dialogue with Commissioner Pierre Moscovici in Paris&lt;/a&gt;&lt;/h3&gt;
+          &lt;div class=&quot;listing__status-container listing__status-container--inline&quot;&gt;
+            &lt;span class=&quot;icon icon--location icon--text-small icon--margin-right&quot;&gt;Online only&lt;/span&gt;
+            &lt;span class=&quot;icon icon--livestreaming icon--text-small&quot;&gt;live streaming available&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;a href=&quot;#&quot; class=&quot;btn btn-ctn btn--no-margin-bottom listing__btn&quot;&gt;Watch live streaming&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;

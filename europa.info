@@ -33,11 +33,8 @@ stylesheets[all][] = css/style-sass-components.css
 ; ========================================
 scripts[] = bootstrap-sass/js/bootstrap/affix.js
 scripts[] = bootstrap-sass/js/bootstrap/alert.js
-;scripts[] = bootstrap-sass/js/bootstrap/button.js
-;scripts[] = bootstrap-sass/js/bootstrap/carousel.js
 scripts[] = bootstrap-sass/js/bootstrap/collapse.js
 scripts[] = bootstrap-sass/js/bootstrap/dropdown.js
-;scripts[] = bootstrap-sass/js/bootstrap/modal.js
 scripts[] = bootstrap-sass/js/bootstrap/tooltip.js
 scripts[] = bootstrap-sass/js/bootstrap/popover.js
 scripts[] = bootstrap-sass/js/bootstrap/scrollspy.js
@@ -46,10 +43,8 @@ scripts[] = bootstrap-sass/js/bootstrap/transition.js
 scripts[] = js/libraries/modernizr/modernizr.js
 scripts[] = js/libraries/enquire.min.js
 scripts[] = js/libraries/velocity.min.js
-
 scripts[] = js/misc/ajax.js
 scripts[] = js/libraries/jquery.equalheight.min.js
-
 scripts[] = js/europa.js
 scripts[] = js/europa_tabs.js
 scripts[] = js/components/table-responsive.js

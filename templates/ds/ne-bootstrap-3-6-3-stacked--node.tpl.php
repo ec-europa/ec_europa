@@ -2,11 +2,8 @@
 
 /**
  * @file
- * Display Suite NE Bootstrap Three Columns Stacked.
+ * Display Suite NE Bootstrap Three-Six-Three Stacked.
  */
-
-  // Add sidebar classes so that we can apply the correct width in css.
-  // Second block is needed to activate display suite support on forms.
 ?>
 
 <<?php print $layout_wrapper . $layout_attributes; ?> class="<?php print $classes; ?>">
@@ -25,7 +22,6 @@
         <<?php print $left_header_wrapper; ?> class="col-lg-9 <?php print $left_header_classes; ?>">
           <?php print $left_header; ?>
         </<?php print $left_header_wrapper; ?>>
-
         <?php if (!empty($right_header)) : ?>
           <<?php print $right_header_wrapper; ?> class="col-lg-3 <?php print $right_header_classes; ?>">
             <?php print $right_header; ?>
@@ -54,7 +50,6 @@
           <?php if (!empty($messages)) : ?>
             <?php print $messages; ?>
           <?php endif; ?>
-
           <?php print $top; ?>
         </section>
       </div>

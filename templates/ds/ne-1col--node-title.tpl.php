@@ -2,11 +2,8 @@
 
 /**
  * @file
- * Display Suite NE Bootstrap Two Columns Stacked.
+ * Display Suite NE Bootstrap One Column.
  */
-
-  // Add sidebar classes so that we can apply the correct width in css.
-  // Second block is needed to activate display suite support on forms.
 ?>
 
 <div <?php print $layout_attributes; ?> class="<?php print $classes; ?>">
