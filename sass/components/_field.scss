@@ -26,6 +26,8 @@ Styleguide field
   padding: 0.215em 0 0.145em 0;
   font-size: $font-size-xsmall;
   font-weight: $font-weight-bold;
+  position: relative;
+  float: left;
 
   a:focus {
     outline-offset: 2px;
