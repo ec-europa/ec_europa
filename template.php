@@ -789,6 +789,11 @@ function europa_preprocess_block(&$variables) {
     case 'menu-dt-service-links':
       $block->subject = '';
       break;
+
+    case 'views_related_links':
+      $variables['classes_array'][] = 'link-block';
+      $variables['title_attributes_array']['class'][] = 'link-block__title';
+      break;
   }
 
   // Page-level language switcher.

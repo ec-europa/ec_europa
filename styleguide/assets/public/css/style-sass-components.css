@@ -4213,6 +4213,36 @@ select.lang-select-page__list {
   background: #004494; }
 
 /*
+Link block
+
+Markup: html/link-block.html
+
+Styleguide link-block
+*/
+.link-block {
+  background-color: #f2f2f2;
+  padding: 1.111em; }
+
+.link-block__links {
+  font-size: 0.889em;
+  list-style: none;
+  padding: 0; }
+  .link-block__links a:link, .link-block__links a:visited {
+    text-decoration: none; }
+  .link-block__links a:hover, .link-block__links a:active {
+    text-decoration: underline; }
+  .link-block__links li {
+    margin-bottom: 0.688em; }
+
+.link-block__title {
+  font-weight: 600;
+  font-size: 0.889em;
+  line-height: 1.875em;
+  color: #012b58;
+  margin-bottom: 0.688em;
+  padding: 0px; }
+
+/*
 Listing
 
 Component used to render list of entities, usually the landing page of a class.
