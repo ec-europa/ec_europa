@@ -8,12 +8,12 @@ Markup: html/pager.html
 Styleguide pager
 */
 
-.pager {
+.pager__wrapper {
   text-align: center;
   border-top: 2px solid $black;
 }
 
-.pager__list {
+.pager {
   display: inline-block;
   padding-left: 0;
   margin: $line-height-computed 0;
@@ -95,7 +95,7 @@ Styleguide pager
   }
 
   // Show page items.
-  .pager__list {
+  .pager {
     width: auto;
 
     > li {
@@ -113,7 +113,7 @@ Styleguide pager
 }
 
 // Drupal-specific hack.
-.region-content ul.pager__list {
+.region-content ul.pager {
   margin: 0.938em auto;
   padding: 0;
   // The throbber should not mess up sizing.

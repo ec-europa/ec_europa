@@ -46,7 +46,7 @@
   .listing__wrapper--row-two .listing:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .file__btn, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .file__metadata, .listing__wrapper--two-columns .listing, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .file__metadata, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .file__btn, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .file__metadata, .listing__wrapper--two-columns .listing, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .file__metadata, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .col-sm-12, .col-md-12, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -315,7 +315,7 @@
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__paragraph, .banner__left, .comment__form-wrapper, .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .col-md-11, .col-md-12, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content {
     float: left; }
   .col-md-1, .file__icon {
     width: 8.3333333333%; }
@@ -339,7 +339,7 @@
     width: 83.3333333333%; }
   .col-md-11 {
     width: 91.6666666667%; }
-  .col-md-12 {
+  .col-md-12, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content {
     width: 100%; }
   .col-md-pull-0 {
     right: auto; }
@@ -2041,26 +2041,53 @@ Styleguide expandable
 /*
 Featured item
 
-Markup: html/featured-item.html
+Component used to render featured/highlighted items.
 
 Styleguide featureditem
 */
+/*
+Featured item
+
+Markup: html/featured-item.html
+
+Styleguide featureditem.1
+*/
 .featured-item {
-  background-color: #ececec;
-  padding: 15px 0px;
-  border-left: 0.556em solid #ffd617;
   width: 100%;
   float: left;
-  margin-bottom: 1.667em; }
+  padding: 30px 0px 0px; }
+  .listing__wrapper--three-columns .featured-item {
+    padding-top: 15px; }
 
-.featured-item__image picture img {
-  width: 100%; }
+/*
+Featured item extended
+
+Visual changes and link option
+
+Markup: html/featured-item__extended.html
+
+Styleguide featureditem.2
+*/
+.featured-item__extended {
+  margin-bottom: 1.667em;
+  padding: 15px 0px;
+  background-color: #ececec;
+  border-left: 0.556em solid #ffd617; }
+
+.featured-item__image {
+  margin-bottom: 1em; }
+  .featured-item__image picture img {
+    width: 100%; }
 
 .featured-item__content p {
   font-size: 0.889em; }
 
 .featured-item__content h3 a {
   color: #404040; }
+
+.listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns
+.featured-item__content {
+  clear: left; }
 
 /*
 Feedback message
@@ -4744,6 +4771,9 @@ Styleguide listing.2.4
   .listing__wrapper--two-columns .listing {
     margin-bottom: 0; } }
 
+.listing__wrapper--no-margin-bottom {
+  margin-bottom: 0; }
+
 .logo, .logo--logotype {
   display: block;
   float: left;
@@ -5428,17 +5458,17 @@ Markup: html/pager.html
 
 Styleguide pager
 */
-.pager {
+.pager__wrapper {
   text-align: center;
   border-top: 2px solid #000; }
 
-.pager__list {
+.pager {
   display: inline-block;
   padding-left: 0;
   margin: 20px 0;
   position: relative;
   width: 100%; }
-  .pager__list > li {
+  .pager > li {
     color: #000;
     font-size: 0.889em;
     font-weight: 600;
@@ -5446,54 +5476,54 @@ Styleguide pager
     margin: 0 6px;
     min-width: 28px;
     height: 28px; }
-    .pager__list > li.pager__item {
+    .pager > li.pager__item {
       list-style: none;
       display: none; }
-      .pager__list > li.pager__item.pager__item--previous, .pager__list > li.pager__item.pager__item--next {
+      .pager > li.pager__item.pager__item--previous, .pager > li.pager__item.pager__item--next {
         display: inline; }
-      .pager__list > li.pager__item.pager__item--ellipsis {
+      .pager > li.pager__item.pager__item--ellipsis {
         font-weight: 400; }
-      .pager__list > li.pager__item.pager__item--previous a, .pager__list > li.pager__item.pager__item--next a {
+      .pager > li.pager__item.pager__item--previous a, .pager > li.pager__item.pager__item--next a {
         font-weight: 600; }
-      .pager__list > li.pager__item.pager__item--previous {
+      .pager > li.pager__item.pager__item--previous {
         float: left;
         clear: left; }
-      .pager__list > li.pager__item.pager__item--next {
+      .pager > li.pager__item.pager__item--next {
         float: right;
         clear: right; }
-      .pager__list > li.pager__item.pager__item--current {
+      .pager > li.pager__item.pager__item--current {
         border-radius: 14px;
         display: block;
         position: absolute;
         margin: 0 auto;
         width: inherit;
         z-index: -1; }
-      .pager__list > li.pager__item--padding {
+      .pager > li.pager__item--padding {
         padding: 0 7px; }
-    .pager__list > li > a {
+    .pager > li > a {
       color: #004494;
       font-weight: 400;
       text-decoration: none; }
-      .pager__list > li > a:hover {
+      .pager > li > a:hover {
         color: #000;
         text-decoration: underline; }
 
 @media (min-width: 622px) {
   .pager__item__text {
     display: none; }
-  .pager__list {
+  .pager {
     width: auto; }
-    .pager__list > li.pager__item {
+    .pager > li.pager__item {
       display: inline;
       float: left !important; }
-      .pager__list > li.pager__item.pager__item--current {
+      .pager > li.pager__item.pager__item--current {
         border: 2px solid #000;
         position: relative; } }
 
-.region-content ul.pager__list {
+.region-content ul.pager {
   margin: 0.938em auto;
   padding: 0; }
-  .region-content ul.pager__list .ajax-progress {
+  .region-content ul.pager .ajax-progress {
     display: none; }
 
 /*

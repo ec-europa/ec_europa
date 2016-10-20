@@ -14,6 +14,7 @@ regions[header_bottom] = Header bottom
 regions[utility] = Utility
 regions[highlighted] = Highlighted
 regions[help] = Help
+regions[content_top] = Content top
 regions[content] = Content
 regions[content_bottom] = Content bottom
 regions[sidebar_first] = Sidebar first

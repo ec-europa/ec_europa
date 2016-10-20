@@ -1339,11 +1339,11 @@ function europa_pager($variables) {
         'item_list',
         [
           'items' => $items,
-          'attributes' => ['class' => ['pager__list']],
+          'attributes' => ['class' => ['pager']],
         ]
       );
 
-    return '<div class="pager">' . $pager_markup . '</div>';
+    return '<div class="pager__wrapper">' . $pager_markup . '</div>';
   }
 }
 

@@ -200,10 +200,15 @@
     <?php endif; ?>
   </div>
 
-  <a id="main-content" tabindex="-1"></a>
-
   <div class="page-content">
     <div class="container-fluid">
+      <?php if (!empty($page['content_top'])): ?>
+        <a id="top-content" tabindex="-2"></a>
+        <div class="row">
+          <?php print render($page['content_top']); ?>
+        </div>
+      <?php endif; ?>
+      <a id="main-content" tabindex="-1"></a>
       <div class="row">
         <?php if (!empty($page['sidebar_first'])): ?>
           <aside class="col-md-3" role="complementary">
