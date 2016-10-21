@@ -345,7 +345,6 @@ Styleguide listing.6
 */
 .listing--navigation {
   @include clearfix();
-  padding-bottom: (29/15)+em;
 
   // Top of the block:
   // - listing__section-title or

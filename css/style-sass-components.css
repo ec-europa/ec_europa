@@ -4481,42 +4481,47 @@ Markup: html/listing--navigation.html
 
 Styleguide listing.6
 */
-.listing--navigation {
-  padding-bottom: 1.9333333333em; }
-  .listing--navigation:before, .listing--navigation:after {
-    content: " ";
-    display: table; }
-  .listing--navigation:after {
-    clear: both; }
-  .listing--navigation .listing__item-link {
-    display: block;
-    border-top: 3px #ffd617 solid;
-    padding: 0; }
-    .listing--navigation .listing__item-link:hover {
-      border-top-color: #000; }
-      .listing--navigation .listing__item-link:hover .listing__section-title {
-        color: #000;
-        text-decoration: underline; }
-  .listing--navigation .listing__section-title {
-    padding: 0.75em 0 1.5em 0;
-    font-size: 1.0666666667em;
-    color: #012b58;
-    line-height: 1.2728em; }
-  .listing--navigation .listing__description {
-    text-decoration: none;
-    color: #404040; }
-  .listing--navigation .listing__item {
-    border-bottom: none;
-    padding: 0; }
-  .listing--navigation .listing__title {
-    font-weight: normal; }
-  .listing--navigation .listing__separator {
-    float: left;
-    width: 100%;
-    max-width: 32em;
-    margin: 0.4333333333em 0 0 0;
-    padding-top: 0.6333333333em;
-    border-top: 1px solid #e2e2e2; }
+.listing--navigation:before, .listing--navigation:after {
+  content: " ";
+  display: table; }
+
+.listing--navigation:after {
+  clear: both; }
+
+.listing--navigation .listing__item-link {
+  display: block;
+  border-top: 3px #ffd617 solid;
+  padding: 0; }
+  .listing--navigation .listing__item-link:hover {
+    border-top-color: #000; }
+    .listing--navigation .listing__item-link:hover .listing__section-title {
+      color: #000;
+      text-decoration: underline; }
+
+.listing--navigation .listing__section-title {
+  padding: 0.75em 0 1.5em 0;
+  font-size: 1.0666666667em;
+  color: #012b58;
+  line-height: 1.2728em; }
+
+.listing--navigation .listing__description {
+  text-decoration: none;
+  color: #404040; }
+
+.listing--navigation .listing__item {
+  border-bottom: none;
+  padding: 0; }
+
+.listing--navigation .listing__title {
+  font-weight: normal; }
+
+.listing--navigation .listing__separator {
+  float: left;
+  width: 100%;
+  max-width: 32em;
+  margin: 0.4333333333em 0 0 0;
+  padding-top: 0.6333333333em;
+  border-top: 1px solid #e2e2e2; }
 
 @media (min-width: 480px) {
   .listing--navigation {
@@ -5401,15 +5406,15 @@ Styleguide page-header.informational-home
       outline: 3px solid #ffd617;
       outline-offset: 2px;
       text-decoration: underline; }
-    .page-header a:hover:not(.breadcrumb__link, .btn) {
+    .page-header a:hover:not(.breadcrumb__link):not(.btn):not(.inpage-nav__navbar .inpage-nav__toggle) {
       color: #ffd617; }
-    .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="ec.europa.eu"]) {
+    .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]) {
       padding-right: 1.1em;
       display: inline-block; }
-      .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="ec.europa.eu"]):after {
+      .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]):after {
         position: absolute;
         line-height: 2.2; }
-      .page-header a[href^="http"]:not(.is-internal, .listing__title):not([href*="ec.europa.eu"]).btn, .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="ec.europa.eu"]), .inpage-nav__navbar .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal, .listing__title):not([href*="ec.europa.eu"]) {
+      .page-header a[href^="http"]:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]).btn, .page-header .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]), .inpage-nav__navbar .page-header a[href^="http"].inpage-nav__toggle:not(.is-internal):not(.listing__title):not([href*="ec.europa.eu"]) {
         padding-right: 2.1em; }
   .page-header .page-header__top,
   .page-header .page-header__main,
