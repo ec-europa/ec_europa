@@ -4035,6 +4035,9 @@ Styleguide labels
 .label--warning {
   color: #fff; }
 
+.label--next {
+  background-color: #ffe574; }
+
 .label--danger {
   color: #fff; }
 

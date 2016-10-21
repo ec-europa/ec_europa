@@ -54,6 +54,10 @@ $label_text_color_light: #fff;
   color: $label_text_color_light;
 }
 
+.label--next {
+  background-color: $yellow-sad;
+}
+
 .label--danger {
   @extend .label-danger;
   color: $label_text_color_light;
