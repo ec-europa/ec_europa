@@ -114,11 +114,11 @@ Styleguide file.2
 }
 
 .file__btn {
-  margin-bottom: 0;
-  margin-top: 0.778em;
   @extend .col-md-4;
   @extend .col-sm-4;
   @extend .col-xs-12;
+  margin-bottom: 0;
+  margin-top: 0.778em;
 
   &:after {
     @extend .icon--after;
@@ -179,12 +179,12 @@ Styleguide file.2
 
     // The arrow, rotating on collapse change.
     &:after {
-      margin-left: 0.525em !important;
-      position: relative;
-      transition: all 0.3s ease 0s;
       @extend .icon--after;
       @extend .icon--down;
       @extend .icon--blue-dark;
+      margin-left: 0.525em !important;
+      position: relative;
+      transition: all 0.3s ease 0s;
     }
 
     &.is-collapsed {

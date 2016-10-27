@@ -7,13 +7,10 @@
   Drupal.behaviors.dt_file = {
     attach: function (context) {
       "use strict";
-      var $button = $('.file__translations-control'),
-          $translations = $('.file__translations-list');
+      var $button = $('.file__translations-control');
 
-      $button.click(function () {
-        var self = this;
-        $translations.collapse('toggle');
-        $(self).toggleClass('is-collapsed');
+      $button.click(function (event) {
+        $(event.target).toggleClass('is-collapsed');
       });
     }
   };

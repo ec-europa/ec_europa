@@ -5104,10 +5104,10 @@ Styleguide text.lists
 */
 ul:not(.listing):not(.social-media-links__list):not(.file__translations-list):not(.site-switcher__list):not(.menu):not(.site-user-menu__list):not(#admin-menu-wrapper ul),
 ol {
-  padding-left: 18px;
-  max-width: 32em; }
+  max-width: 32em;
+  padding-left: 18px; }
 
-.region-content ul:not(.listing):not(.field__items),
+.region-content ul:not(.listing):not(.field__items):not(.file__translations-list),
 .region-content ol {
   max-width: 32em;
   margin-bottom: 30px; }

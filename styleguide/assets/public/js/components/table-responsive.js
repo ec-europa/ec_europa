@@ -40,16 +40,16 @@
         // For every row, set the attributes we use to make this happen.
         tableRows.each(function () {
           for (var j = 0; j < cellPerRow; j++) {
-              if (headerText[j] == '' || headerText[j] == '\u00a0') {
-                  $('td', $(this)).eq(j).attr({
+            if (headerText[j] == '' || headerText[j] == '\u00a0') {
+                $('td', $(this)).eq(j).attr({
                   "class": "table-responsive__heading"
                 });
             }
             else {
                   $('td', $(this)).eq(j).attr("data-th", headerText[j]);
-              }
+            }
 
-              if (colspanIndex !== -1) {
+            if (colspanIndex !== -1) {
               $('td', $(this)).eq(colspanIndex).attr({
                 "data-th-group": textColspan,
                 "class": "table-responsive__group_label"
@@ -61,9 +61,9 @@
                   });
               }
             }
-            }
-          });
-          });
+          }
+        });
+      });
     }
   };
 })(jQuery);
