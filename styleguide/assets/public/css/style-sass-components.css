@@ -5989,7 +5989,7 @@ Styleguide social
   font-size: 0.889em;
   font-weight: bold;
   line-height: 100%;
-  margin-bottom: 1.4em; }
+  margin: 1.4em 0; }
 
 .social-media-links--webtool-vertical .wtShareList {
   overflow: visible;
