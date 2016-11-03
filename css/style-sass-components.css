@@ -2345,6 +2345,7 @@ Styleguide file.2
     min-height: 260px; }
 
 .file-image {
+  background: none;
   padding: 0; }
 
 .file-video--withbackground {
