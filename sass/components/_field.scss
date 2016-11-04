@@ -12,6 +12,14 @@ Styleguide field
 */
 
 .field {
+  .field__items p:last-child {
+    margin: 0;
+  }
+
+  .field__item--expired {
+    text-decoration: line-through;
+  }
+
   .label-above {
     @extend .h3;
   }

@@ -17,6 +17,18 @@ Styleguide text.paragraphs
 
 p {
   @extend .paragraph;
+
+  &.dashed {
+    padding-left: 0.8em;
+    position: relative;
+
+    &:before {
+      content: '-';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+    }
+  }
 }
 
 .paragraph--width-auto {

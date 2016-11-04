@@ -5107,7 +5107,7 @@ ol {
   max-width: 32em;
   padding-left: 18px; }
 
-.region-content ul:not(.listing):not(.field__items):not(.file__translations-list),
+.region-content ul:not(.listing):not(.field__items):not(.file__translations-list):not(.wtShareNetworks),
 .region-content ol {
   max-width: 32em;
   margin-bottom: 30px; }
@@ -5256,6 +5256,15 @@ Styleguide text.paragraphs
   display: block;
   max-width: 32em;
   margin-bottom: 0.8em; }
+
+p.dashed {
+  padding-left: 0.8em;
+  position: relative; }
+  p.dashed:before {
+    content: '-';
+    display: inline-block;
+    position: absolute;
+    left: 0; }
 
 .paragraph--width-auto {
   width: auto; }

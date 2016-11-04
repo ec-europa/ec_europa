@@ -985,6 +985,15 @@ Styleguide text.paragraphs
   max-width: 32em;
   margin-bottom: 0.8em; }
 
+p.dashed {
+  padding-left: 0.8em;
+  position: relative; }
+  p.dashed:before {
+    content: '-';
+    display: inline-block;
+    position: absolute;
+    left: 0; }
+
 .paragraph--width-auto {
   width: auto; }
 
@@ -2221,6 +2230,12 @@ Markup: html/field.html
 
 Styleguide field
 */
+.field .field__items p:last-child {
+  margin: 0; }
+
+.field .field__item--expired {
+  text-decoration: line-through; }
+
 .field .sections .container {
   padding: 0; }
 
