@@ -5,18 +5,27 @@
 <!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <title>Europa Style Guide</title>
-
-  <meta name="description" content="">
-  <meta name="generator" content="kss-node">
-  <meta name="viewport" content="width=device-width">
-
-  <link rel="stylesheet" href="public/kss.css">
-  <link rel="stylesheet" href="public/css/style-sass-base.css">
+<meta charset="utf-8">
+<title>Europa Style Guide</title>
+<meta name="description" content="">
+<meta name="generator" content="kss-node">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="public/kss.css">
+<link rel="stylesheet" href="public/css/style-sass-base.css">
 <link rel="stylesheet" href="public/css/style-sass-components.css">
 <link rel="stylesheet" href="public/css/europa_styleguide.css">
 
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+<script src="public/js/jquery-1.9.1.min.js"></script>
+<script src="public/js/jquery.ui.core.min.js"></script>
+<script src="public/js/modernizr.js"></script>
+<script src="public/js/drupal.js"></script>
+<script src="public/js/components/table-responsive.js"></script>
 
 </head>
 <body id="kss-node">
@@ -406,9 +415,9 @@
   </div>
 </div>
 
-<script>
-  $(function () {
-    $("#cb-example-4").focus();
+<script>;
+  jQuery(function () {
+    jQuery('#cb-example-4').focus();
   });
 </script>
 
@@ -435,9 +444,9 @@
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;script&gt;
-  $(function () {
-    $(&quot;#cb-example-4&quot;).focus();
+&lt;script&gt;;
+  jQuery(function () {
+    jQuery(&#x27;#cb-example-4&#x27;).focus();
   });
 &lt;/script&gt;
 </code></pre>
@@ -642,8 +651,8 @@
 </div>
 
 <script>
-  $(function () {
-    $("#rd-example-3").focus();
+  jQuery(function () {
+    jQuery('#rd-example-3').focus();
   });
 </script>
 
@@ -668,8 +677,8 @@
 &lt;/div&gt;
 
 &lt;script&gt;
-  $(function () {
-    $(&quot;#rd-example-3&quot;).focus();
+  jQuery(function () {
+    jQuery(&#x27;#rd-example-3&#x27;).focus();
   });
 &lt;/script&gt;
 </code></pre>
@@ -917,13 +926,13 @@
           <div class="form-group">
   <label for="field-ID-1">Field label</label>
   <p class="help-block">This is some placeholder help text.</p>
-  <textarea name="field-name" id="field-ID-1" rows="4" class="form-control"></textarea>
+  <textarea name="field-name" id="field-ID-1" rows="4" class="form-textarea form-control"></textarea>
 </div>
 
 <div class="form-group">
   <label for="field-ID-2">Field label - error</label>
   <p class="help-block">This is some placeholder help text.</p>
-  <textarea name="field-name" id="field-ID-2" rows="4" class="form-control error"></textarea>
+  <textarea name="field-name" id="field-ID-2" rows="4" class="form-control form-textarea error"></textarea>
   <div class="messages error">
     <h3><span class="sr-only">Error message: </span>Some feedback title</h3>
     <p>Some feedback message</p>
@@ -937,13 +946,13 @@
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
   &lt;label for=&quot;field-ID-1&quot;&gt;Field label&lt;/label&gt;
   &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
-  &lt;textarea name=&quot;field-name&quot; id=&quot;field-ID-1&quot; rows=&quot;4&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
+  &lt;textarea name=&quot;field-name&quot; id=&quot;field-ID-1&quot; rows=&quot;4&quot; class=&quot;form-textarea form-control&quot;&gt;&lt;/textarea&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;form-group&quot;&gt;
   &lt;label for=&quot;field-ID-2&quot;&gt;Field label - error&lt;/label&gt;
   &lt;p class=&quot;help-block&quot;&gt;This is some placeholder help text.&lt;/p&gt;
-  &lt;textarea name=&quot;field-name&quot; id=&quot;field-ID-2&quot; rows=&quot;4&quot; class=&quot;form-control error&quot;&gt;&lt;/textarea&gt;
+  &lt;textarea name=&quot;field-name&quot; id=&quot;field-ID-2&quot; rows=&quot;4&quot; class=&quot;form-control form-textarea error&quot;&gt;&lt;/textarea&gt;
   &lt;div class=&quot;messages error&quot;&gt;
     &lt;h3&gt;&lt;span class=&quot;sr-only&quot;&gt;Error message: &lt;/span&gt;Some feedback title&lt;/h3&gt;
     &lt;p&gt;Some feedback message&lt;/p&gt;
@@ -954,19 +963,6 @@
 
       </section>
 </article>
-
-<!-- SCRIPTS -->
-<script src="public/kss.js"></script>
-<script src="public/prettify.js"></script>
-<script>
-  prettyPrint();
-</script>
-<script src="public/js/jquery-1.9.1.min.js"></script>
-<script src="public/js/jquery.ui.core.min.js"></script>
-<script src="public/js/modernizr.js"></script>
-<script src="public/js/drupal.js"></script>
-<script src="public/js/components/table-responsive.js"></script>
-
 
 
 <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
