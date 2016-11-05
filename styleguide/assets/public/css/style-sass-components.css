@@ -764,14 +764,14 @@ Markup: html/btn.html
 Styleguide buttons
 */
 .btn, .inpage-nav__navbar .inpage-nav__toggle {
-  margin-bottom: 1em;
-  line-height: 1;
-  border-radius: 0;
-  border-width: 2px;
-  font-weight: 600;
-  padding: 0.75em 1em;
   min-height: 2.75em;
+  margin-bottom: 1em;
+  padding: 0.75em 1em;
+  line-height: 1;
   font-size: 0.889em;
+  font-weight: 600;
+  border-width: 2px;
+  border-radius: 0;
   text-decoration: none; }
   .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
     outline: 3px solid #ffd617;
@@ -780,18 +780,18 @@ Styleguide buttons
   .btn:link, .inpage-nav__navbar .inpage-nav__toggle:link {
     text-decoration: none; }
   .btn:hover, .inpage-nav__navbar .inpage-nav__toggle:hover, .btn:active, .inpage-nav__navbar .inpage-nav__toggle:active, .btn:focus, .inpage-nav__navbar .inpage-nav__toggle:focus {
+    position: relative;
     text-decoration: underline;
     -webkit-box-shadow: none;
     box-shadow: none;
-    z-index: 999;
-    position: relative; }
+    z-index: 999; }
   .btn:after, .inpage-nav__navbar .inpage-nav__toggle:after {
-    line-height: inherit;
-    position: static; }
+    position: static;
+    line-height: inherit; }
   .btn.btn-default, .btn.btn-collapse, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle, .inpage-nav__navbar .btn-default.inpage-nav__toggle {
-    border-color: #004494;
+    background: none;
     color: #004494;
-    background: none; }
+    border-color: #004494; }
     .btn.btn-default:hover, .btn.btn-collapse:hover, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:hover, .inpage-nav__navbar .btn-default.inpage-nav__toggle:hover, .btn.btn-default:focus, .btn.btn-collapse:focus, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:focus, .inpage-nav__navbar .btn-default.inpage-nav__toggle:focus {
       background: #004494;
       color: #fff; }
@@ -801,19 +801,19 @@ Styleguide buttons
       background: #fff;
       color: #004494; }
     .btn.btn-primary:focus, .inpage-nav__navbar .btn-primary.inpage-nav__toggle:focus {
-      color: #fff;
-      background: #004494; }
+      background: #004494;
+      color: #fff; }
   .btn.btn-secondary, .inpage-nav__navbar .btn-secondary.inpage-nav__toggle {
-    border-color: #fff;
     background: #fff;
-    color: #004494; }
+    color: #004494;
+    border-color: #fff; }
   .btn.btn-ctn, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle, .btn.btn-time-line, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle {
     background: #ffd617;
     color: #000;
-    white-space: normal;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    line-height: 1.667; }
+    line-height: 1.667;
+    white-space: normal; }
     .btn.btn-ctn:hover, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:hover, .btn.btn-time-line:hover, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:hover, .btn.btn-ctn:active, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:active, .btn.btn-time-line:active, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:active {
       border-color: #404040;
       background: #ffd617; }
@@ -824,9 +824,9 @@ Styleguide buttons
       margin-left: 10px;
       font-size: 0.8em; }
   .btn.btn-menu, .inpage-nav__navbar .btn-menu.inpage-nav__toggle {
-    border-color: #004494;
     background: #004494;
-    color: #fff; }
+    color: #fff;
+    border-color: #004494; }
     .btn.btn-menu:hover, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:hover, .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
       color: #fff; }
     .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
@@ -836,10 +836,10 @@ Styleguide buttons
       border-color: #ffd617;
       outline-color: #ffd617; }
     .btn.btn-menu:after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:after {
+      position: relative;
+      top: -2px;
       margin-left: 6px !important;
       font-size: 0.45em;
-      top: -2px;
-      position: relative;
       transition: all 0.3s ease 0s; }
     .btn.btn-menu.is-collapsed:after, .inpage-nav__navbar .btn-menu.is-collapsed.inpage-nav__toggle:after {
       -webkit-transform: rotate(180deg);
@@ -889,12 +889,12 @@ Styleguide buttons.btn-block
 .btn-block {
   width: 100%;
   max-width: 450px;
-  text-align: left;
   margin-bottom: -2px !important;
-  white-space: normal;
+  text-align: left;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  line-height: 1.667; }
+  line-height: 1.667;
+  white-space: normal; }
   .btn-block:last-child {
     margin-bottom: 10px; }
   .btn-block + .btn-block {
@@ -910,9 +910,9 @@ Markup: html/btn-search.html
 Styleguide buttons.btn-search
 */
 .btn.btn-search, .inpage-nav__navbar .btn-search.inpage-nav__toggle {
-  border-color: #fff;
   background: #e2e2e2;
-  color: #004494; }
+  color: #004494;
+  border-color: #fff; }
   .btn.btn-search:hover, .inpage-nav__navbar .btn-search.inpage-nav__toggle:hover {
     background: #e2e2e2;
     color: #404040; }
@@ -956,8 +956,8 @@ a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]), .inpage-nav__
   padding-right: 2.2em; }
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]):after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]):after {
     position: absolute;
-    line-height: 1.4 !important;
-    margin-left: 0.5em; }
+    margin-left: 0.5em;
+    line-height: 1.4 !important; }
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-block {
     padding-right: 1em; }
     a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block:after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-block:after {
@@ -1010,7 +1010,7 @@ Styleguide form
 */
 .form-control, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
   color: #404040;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #404040;
   border-radius: 0;
   margin-bottom: 1.1em;
@@ -2728,74 +2728,74 @@ Styleguide gallery
 
 .mediagallery__item {
   height: auto;
-  overflow: hidden;
-  padding: 0px; }
+  padding: 0;
+  overflow: hidden; }
   .mediagallery__item .mediagallery__item_container {
-    margin: 5px 5px 0px 5px;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    margin: 5px 5px 0 5px; }
     .mediagallery__item .mediagallery__item_container img {
       display: block;
       width: 100%;
       height: auto; }
   .mediagallery__item:first-child .mediagallery__item_container {
-    margin-left: 0px; }
+    margin-left: 0; }
   .mediagallery__item:hover .mediagallery__caption {
     display: block;
     /* Fallback for non-webkit */
     display: -webkit-box; }
 
 .mediagallery__caption {
-  color: white;
+  display: none;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 4em;
-  bottom: 0;
-  display: none;
   padding: 5px 10px 5px 5px;
-  position: absolute;
-  overflow: hidden;
   font-size: 0.667em;
+  color: #fff;
+  background-color: #404040;
+  overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  background-color: #404040; }
+  -webkit-box-orient: vertical; }
 
 .mediagallery__item.has-icon .mediagallery__caption {
   padding-right: 4.0em !important; }
 
 .mediagallery__item.has-icon .mediagallery__icon {
-  color: white;
-  width: 2.667em;
-  height: 2.667em;
-  text-align: center;
+  position: absolute;
   bottom: 0;
   right: 0;
+  width: 2.667em;
+  height: 2.667em;
   padding: 0;
-  position: absolute;
+  background-color: #404040;
+  color: #fff;
+  text-align: center;
   overflow: hidden;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  background-color: #404040; }
+  -webkit-box-orient: vertical; }
   .mediagallery__item.has-icon .mediagallery__icon .icon, .mediagallery__item.has-icon .mediagallery__icon .date-picker .date-picker--icon, .date-picker .mediagallery__item.has-icon .mediagallery__icon .date-picker--icon, .mediagallery__item.has-icon .mediagallery__icon .search-form__btn {
-    font-size: 1em;
-    line-height: 2.667em; }
+    line-height: 2.667em;
+    font-size: 1em; }
     .mediagallery__item.has-icon .mediagallery__icon .icon:before, .mediagallery__item.has-icon .mediagallery__icon .date-picker .date-picker--icon:before, .date-picker .mediagallery__item.has-icon .mediagallery__icon .date-picker--icon:before, .mediagallery__item.has-icon .mediagallery__icon .search-form__btn:before {
       margin-right: 0; }
   .mediagallery__item.has-icon .mediagallery__icon .icon--camera {
-    font-size: 0.667em;
-    line-height: 4.000em; }
+    line-height: 4.000em;
+    font-size: 0.667em; }
 
 /* Firefox alternative to webkit-line-clamp */
 @-moz-document url-prefix() {
   .mediagallery__caption:after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #404040 50%) repeat scroll 0 0 transparent;
+    position: absolute;
     top: 0;
-    content: "...";
-    font-weight: bold;
+    right: 0;
     margin-top: 2.0em;
     padding: 0 20px 1px 45px;
-    position: absolute;
-    right: 0; } }
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #404040 50%) repeat scroll 0 0 transparent;
+    content: "...";
+    font-weight: bold; } }
 
 @media (max-width: 480px) {
   .mediagallery__item_container {
@@ -2803,8 +2803,8 @@ Styleguide gallery
 
 @media (min-width: 480px) and (max-width: 767px) {
   .mediagallery__item {
-    width: 50%;
-    float: left; }
+    float: left;
+    width: 50%; }
   .mediagallery__item:nth-of-type(3) .mediagallery__item_container {
     margin-left: 0; } }
 

@@ -4637,14 +4637,14 @@ Markup: html/btn.html
 Styleguide buttons
 */
 .btn {
-  margin-bottom: 1em;
-  line-height: 1;
-  border-radius: 0;
-  border-width: 2px;
-  font-weight: 600;
-  padding: 0.75em 1em;
   min-height: 2.75em;
+  margin-bottom: 1em;
+  padding: 0.75em 1em;
+  line-height: 1;
   font-size: 0.889em;
+  font-weight: 600;
+  border-width: 2px;
+  border-radius: 0;
   text-decoration: none; }
   .btn:focus {
     outline: 3px solid #ffd617;
@@ -4653,18 +4653,18 @@ Styleguide buttons
   .btn:link {
     text-decoration: none; }
   .btn:hover, .btn:active, .btn:focus {
+    position: relative;
     text-decoration: underline;
     -webkit-box-shadow: none;
     box-shadow: none;
-    z-index: 999;
-    position: relative; }
+    z-index: 999; }
   .btn:after {
-    line-height: inherit;
-    position: static; }
+    position: static;
+    line-height: inherit; }
   .btn.btn-default, .btn.btn-collapse {
-    border-color: #004494;
+    background: none;
     color: #004494;
-    background: none; }
+    border-color: #004494; }
     .btn.btn-default:hover, .btn.btn-collapse:hover, .btn.btn-default:focus, .btn.btn-collapse:focus {
       background: #004494;
       color: #fff; }
@@ -4674,19 +4674,19 @@ Styleguide buttons
       background: #fff;
       color: #004494; }
     .btn.btn-primary:focus {
-      color: #fff;
-      background: #004494; }
+      background: #004494;
+      color: #fff; }
   .btn.btn-secondary {
-    border-color: #fff;
     background: #fff;
-    color: #004494; }
+    color: #004494;
+    border-color: #fff; }
   .btn.btn-ctn {
     background: #ffd617;
     color: #000;
-    white-space: normal;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    line-height: 1.667; }
+    line-height: 1.667;
+    white-space: normal; }
     .btn.btn-ctn:hover, .btn.btn-ctn:active {
       border-color: #404040;
       background: #ffd617; }
@@ -4697,9 +4697,9 @@ Styleguide buttons
       margin-left: 10px;
       font-size: 0.8em; }
   .btn.btn-menu {
-    border-color: #004494;
     background: #004494;
-    color: #fff; }
+    color: #fff;
+    border-color: #004494; }
     .btn.btn-menu:hover, .btn.btn-menu:active, .btn.btn-menu:focus {
       color: #fff; }
     .btn.btn-menu:active, .btn.btn-menu:focus {
@@ -4709,10 +4709,10 @@ Styleguide buttons
       border-color: #ffd617;
       outline-color: #ffd617; }
     .btn.btn-menu:after {
+      position: relative;
+      top: -2px;
       margin-left: 6px !important;
       font-size: 0.45em;
-      top: -2px;
-      position: relative;
       transition: all 0.3s ease 0s; }
     .btn.btn-menu.is-collapsed:after {
       -webkit-transform: rotate(180deg);
@@ -4762,12 +4762,12 @@ Styleguide buttons.btn-block
 .btn-block {
   width: 100%;
   max-width: 450px;
-  text-align: left;
   margin-bottom: -2px !important;
-  white-space: normal;
+  text-align: left;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  line-height: 1.667; }
+  line-height: 1.667;
+  white-space: normal; }
   .btn-block:last-child {
     margin-bottom: 10px; }
   .btn-block + .btn-block {
@@ -4783,9 +4783,9 @@ Markup: html/btn-search.html
 Styleguide buttons.btn-search
 */
 .btn.btn-search {
-  border-color: #fff;
   background: #e2e2e2;
-  color: #004494; }
+  color: #004494;
+  border-color: #fff; }
   .btn.btn-search:hover {
     background: #e2e2e2;
     color: #404040; }
@@ -4829,8 +4829,8 @@ a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 2.2em; }
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]):after {
     position: absolute;
-    line-height: 1.4 !important;
-    margin-left: 0.5em; }
+    margin-left: 0.5em;
+    line-height: 1.4 !important; }
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block {
     padding-right: 1em; }
     a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block:after {
@@ -4865,10 +4865,10 @@ Styleguide buttons.group
 .btn-group-row-two {
   width: 100%; }
   .btn-group-row-two .btn {
-    margin-left: 0 !important;
-    margin-bottom: -2px;
     float: left;
     width: 48.5%;
+    margin-left: 0 !important;
+    margin-bottom: -2px;
     text-align: left; }
     .btn-group-row-two .btn:nth-child(odd) {
       margin-right: 3%;
@@ -4949,7 +4949,7 @@ Styleguide form
 */
 .form-control {
   color: #404040;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #404040;
   border-radius: 0;
   margin-bottom: 1.1em;
