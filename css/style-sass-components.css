@@ -750,7 +750,7 @@ a[href^="mailto"] {
 /*
 Buttons
 
-Custom bootstrap buttons styling
+Custom bootstrap buttons styling.
 
 Markup: html/btn.html
 
@@ -761,7 +761,7 @@ Markup: html/btn.html
 .btn-ctn--border - Button call to action with border
 .btn-menu        - Button menu
 
-Styleguide buttons
+Style guide buttons
 */
 .btn, .inpage-nav__navbar .inpage-nav__toggle {
   min-height: 2.75em;
@@ -867,11 +867,11 @@ Styleguide buttons
 /*
 Button Condensed
 
-Button condensed element
+Button condensed element.
 
 Markup: html/btn-condensed.html
 
-Styleguide buttons.btn--condensed
+Style guide buttons.btn--condensed
 */
 .btn.btn--condensed, .inpage-nav__navbar .btn--condensed.inpage-nav__toggle {
   width: auto;
@@ -880,11 +880,11 @@ Styleguide buttons.btn--condensed
 /*
 Button block
 
-Button block component
+Button block component.
 
 Markup: html/btn-block.html
 
-Styleguide buttons.btn-block
+Style guide buttons.btn-block
 */
 .btn-block {
   width: 100%;
@@ -903,11 +903,11 @@ Styleguide buttons.btn-block
 /*
 Button Search
 
-Button search component
+Button search component.
 
 Markup: html/btn-search.html
 
-Styleguide buttons.btn-search
+Style guide buttons.btn-search
 */
 .btn.btn-search, .inpage-nav__navbar .btn-search.inpage-nav__toggle {
   background: #e2e2e2;
@@ -920,29 +920,30 @@ Styleguide buttons.btn-search
 /*
 Button Collapse
 
-Button collapse element
+Button collapse element.
 
 Markup: html/btn-collapse.html
 
-Styleguide buttons.btn-
+Style guide buttons.btn-collapse
 */
-.btn-collapse span.toggling-text::after {
+.btn-collapse span.toggling-text:after {
   content: "\00a0"; }
 
 .btn-collapse:hover span.toggling-text,
-.btn-collapse:hover span.toggling-text::after, .btn-collapse:focus span.toggling-text,
-.btn-collapse:focus span.toggling-text::after {
+.btn-collapse:hover span.toggling-text:after, .btn-collapse:focus span.toggling-text,
+.btn-collapse:focus span.toggling-text:after {
   text-decoration: underline; }
 
 .btn-collapse .icon, .btn-collapse .date-picker .date-picker--icon, .date-picker .btn-collapse .date-picker--icon, .btn-collapse .search-form__btn {
   margin-left: 0.3em; }
-  .btn-collapse .icon::before, .btn-collapse .date-picker .date-picker--icon::before, .date-picker .btn-collapse .date-picker--icon::before, .btn-collapse .search-form__btn::before {
-    vertical-align: bottom; }
+  .btn-collapse .icon:before, .btn-collapse .date-picker .date-picker--icon:before, .date-picker .btn-collapse .date-picker--icon:before, .btn-collapse .search-form__btn:before {
+    vertical-align: bottom;
+    transition: all 0.3s ease 0s; }
 
-.btn-collapse:hover:not(:focus) .icon::before, .btn-collapse:hover:not(:focus) .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover:not(:focus) .date-picker--icon::before, .btn-collapse:hover:not(:focus) .search-form__btn::before {
+.btn-collapse:hover .icon:before, .btn-collapse:hover .date-picker .date-picker--icon:before, .date-picker .btn-collapse:hover .date-picker--icon:before, .btn-collapse:hover .search-form__btn:before, .btn-collapse:focus .icon:before, .btn-collapse:focus .date-picker .date-picker--icon:before, .date-picker .btn-collapse:focus .date-picker--icon:before, .btn-collapse:focus .search-form__btn:before {
   color: #fff; }
 
-.btn-collapse.collapsed:span.icon, .date-picker .btn-collapse.collapsed.date-picker--icon:span, .btn-collapse.collapsed.search-form__btn:span {
+.btn-collapse.collapsed .icon:before, .btn-collapse.collapsed .date-picker .date-picker--icon:before, .date-picker .btn-collapse.collapsed .date-picker--icon:before, .btn-collapse.collapsed .search-form__btn:before {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -5557,7 +5558,7 @@ Defines the profile topbar component
 
 Markup: html/profile_topbar.html
 
-Styleguide profile_topbar
+Style guide profile_topbar
 */
 .profile_topbar__column {
   position: relative;

@@ -1,7 +1,7 @@
 /*
 Buttons
 
-Custom bootstrap buttons styling
+Custom bootstrap buttons styling.
 
 Markup: html/btn.html
 
@@ -12,7 +12,7 @@ Markup: html/btn.html
 .btn-ctn--border - Button call to action with border
 .btn-menu        - Button menu
 
-Styleguide buttons
+Style guide buttons
 */
 @mixin _white_space_reset_mixin() {
   padding-top: 0.5em;
@@ -169,9 +169,8 @@ Styleguide buttons
   }
 }
 
-
 // Class that can be also used on a button wrapper since there are sometimes
-// situations where button is wrapped in unnecessary markup coming from a CMS
+// situations where button is wrapped in unnecessary markup coming from a CMS.
 .btn--no-margin-bottom {
   & * {
     margin-bottom: 0 !important;
@@ -183,11 +182,11 @@ Styleguide buttons
 /*
 Button Condensed
 
-Button condensed element
+Button condensed element.
 
 Markup: html/btn-condensed.html
 
-Styleguide buttons.btn--condensed
+Style guide buttons.btn--condensed
 */
 .btn.btn--condensed {
   width: auto;
@@ -197,11 +196,11 @@ Styleguide buttons.btn--condensed
 /*
 Button block
 
-Button block component
+Button block component.
 
 Markup: html/btn-block.html
 
-Styleguide buttons.btn-block
+Style guide buttons.btn-block
 */
 .btn-block {
   width: 100%;
@@ -222,11 +221,11 @@ Styleguide buttons.btn-block
 /*
 Button Search
 
-Button search component
+Button search component.
 
 Markup: html/btn-search.html
 
-Styleguide buttons.btn-search
+Style guide buttons.btn-search
 */
 .btn.btn-search {
   background: $grey-light;
@@ -242,23 +241,23 @@ Styleguide buttons.btn-search
 /*
 Button Collapse
 
-Button collapse element
+Button collapse element.
 
 Markup: html/btn-collapse.html
 
-Styleguide buttons.btn-
+Style guide buttons.btn-collapse
 */
 .btn-collapse {
   @extend .btn-default;
 
-  span.toggling-text::after {
+  span.toggling-text:after {
     content: "\00a0";
   }
 
   &:hover,
   &:focus {
     span.toggling-text,
-    span.toggling-text::after {
+    span.toggling-text:after {
       text-decoration: underline;
     }
   }
@@ -266,19 +265,21 @@ Styleguide buttons.btn-
   .icon {
     margin-left: 0.3em;
 
-    &::before {
+    &:before {
       vertical-align: bottom;
+      transition: all 0.3s ease 0s;
     }
   }
 
-  &:hover:not(:focus) {
-    .icon::before {
+  &:hover,
+  &:focus {
+    .icon:before {
       color: #fff;
     }
   }
 
   &.collapsed {
-    &:span.icon {
+    .icon:before {
       @include rotate(180deg);
     }
   }
@@ -291,7 +292,7 @@ Styleguide buttons.btn-
   }
 }
 
-// External link specific adjustments
+// External link specific adjustments.
 @mixin _btn_external_link_mixin() {
   padding-right: 2.2em;
 
@@ -301,7 +302,7 @@ Styleguide buttons.btn-
     line-height: 1.4 !important;
   }
 
-  // Reseting for .btn-block
+  // Reset for ".btn-block".
   &.btn-block {
     padding-right: 1em;
 
