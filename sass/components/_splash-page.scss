@@ -3,7 +3,7 @@ Splash Page
 
 Markup: html/splash-page.html
 
-Styleguide splashpage
+Style guide splashpage
 */
 
 // Local variables
@@ -73,7 +73,7 @@ $padding-splash-xl: 2em; // 52px
       background-color: $yellow-light;
     }
 
-    &.icon--check:before {
+    &.icon--check::before {
       display: none;
     }
   }
@@ -92,7 +92,7 @@ $padding-splash-xl: 2em; // 52px
       color: #ffffff;
     }
 
-    &:after {
+    &::after {
       content: "X";
       float: right;
       display: inline-block;
@@ -112,7 +112,7 @@ $padding-splash-xl: 2em; // 52px
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 68, 148, 0.95);
+    background-color: rgba(0, 68, 148, 0.95);
     text-align: left;
     overflow-x: auto;
     z-index: 1000;
@@ -128,7 +128,7 @@ $padding-splash-xl: 2em; // 52px
         box-shadow: none;
       }
 
-      &.icon--check:before {
+      &.icon--check::before {
         float: right;
         display: block;
       }

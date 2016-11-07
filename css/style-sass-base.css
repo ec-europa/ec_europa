@@ -4243,7 +4243,7 @@ button.close {
   .nav-tabs, .utility {
     display: none !important; } }
 
-.icon--after, .btn.btn-ctn:after, .btn.btn-menu:after {
+.icon--after, .btn.btn-ctn::after, .btn.btn-menu::after {
   text-decoration: none;
   font-family: 'EuropaIcons';
   speak: none;
@@ -4297,7 +4297,7 @@ Blockquote
 
 Markup: html/blockquote.html
 
-Styleguide text.blockquote
+Style guide text.blockquote
 */
 blockquote,
 .blockquote {
@@ -4317,11 +4317,11 @@ blockquote,
   .blockquote p {
     line-height: inherit;
     display: inline; }
-  blockquote:before,
-  .blockquote:before {
+  blockquote::before,
+  .blockquote::before {
     content: open-quote; }
-  blockquote:after,
-  .blockquote:after {
+  blockquote::after,
+  .blockquote::after {
     content: close-quote; }
 
 .blockquote--small {
@@ -4337,7 +4337,7 @@ Other typography
 
 Markup: html/typography.html
 
-Styleguide text.typography
+Style guide text.typography
 */
 .text-small, .icon--text-small {
   font-size: 0.778em; }
@@ -4357,7 +4357,7 @@ ul.list-inline > li {
 /*
 Icon
 
-Icons using europa icons font
+Icons using europa icons font.
 
 Markup: html/icon.html
 
@@ -4408,14 +4408,14 @@ Markup: html/icon.html
 .icon--livestreaming - Live streaming icon
 .icon--camera - Camera icon
 
-Styleguide: icon
+Style guide: icon
 */
 @font-face {
   font-family: 'EuropaIcons';
   src: url("../fonts/europa-icons/europa-icons.eot");
   src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/icomoon.svg#icomoon") format("svg"); }
 
-.icon:before {
+.icon::before {
   text-decoration: none;
   display: inline-block;
   font-family: 'EuropaIcons';
@@ -4429,52 +4429,52 @@ Styleguide: icon
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon--external, .icon--external:before {
+.icon--external, .icon--external::before {
   content: '\e825' !important; }
 
 .icon--blue-dark {
   color: #004494; }
 
-.icon--arrow-up, .icon--arrow-up:before {
+.icon--arrow-up, .icon--arrow-up::before {
   content: '\e821'; }
 
-.icon--arrow-down, .icon--arrow-down:before, .btn.btn-menu:after {
+.icon--arrow-down, .icon--arrow-down::before, .btn.btn-menu::after {
   content: '\e822'; }
 
-.icon--spinner:before {
+.icon--spinner::before {
   content: '\e805'; }
 
-.icon--facebook:before {
+.icon--facebook::before {
   content: '\e809'; }
 
-.icon--livestreaming:before {
+.icon--livestreaming::before {
   content: "\e81c"; }
 
-.icon--location:before {
+.icon--location::before {
   content: "\e81b"; }
 
-.icon--twitter:before {
+.icon--twitter::before {
   content: '\e817'; }
 
-.icon--googleplus:before {
+.icon--googleplus::before {
   content: '\e80c'; }
 
-.icon--linkedin:before {
+.icon--linkedin::before {
   content: '\e810'; }
 
-.icon--rss:before {
+.icon--rss::before {
   content: '\e813'; }
 
-.icon--language:before {
+.icon--language::before {
   content: '\e824'; }
 
-.icon--search:before {
+.icon--search::before {
   content: '\e823'; }
 
-.icon--up:before {
+.icon--up::before {
   content: '\e827'; }
 
-.icon--right, .icon--right:before, .btn.btn-ctn:after {
+.icon--right, .icon--right::before, .btn.btn-ctn::after {
   content: '\e828'; }
 
 .icon--breadcrumb {
@@ -4482,97 +4482,97 @@ Styleguide: icon
 
 .icon--down {
   content: '\e81F'; }
-  .icon--down:before {
+  .icon--down::before {
     content: '\e81F'; }
 
-.icon--left:before {
+.icon--left::before {
   content: '\e826'; }
 
-.icon--file:before {
+.icon--file::before {
   content: '\e80a'; }
 
-.icon--audio:before {
+.icon--audio::before {
   content: '\e801'; }
 
-.icon--brochure:before {
+.icon--brochure::before {
   content: '\e802'; }
 
-.icon--edit:before {
+.icon--edit::before {
   content: '\e807'; }
 
-.icon--image:before {
+.icon--image::before {
   content: '\e80d'; }
 
-.icon--download, .icon--download:before {
+.icon--download, .icon--download::before {
   content: '\e806' !important; }
 
-.icon--infographic:before {
+.icon--infographic::before {
   content: '\e80f'; }
 
-.icon--multiple-files:before {
+.icon--multiple-files::before {
   content: '\e820'; }
 
-.icon--organigram:before {
+.icon--organigram::before {
   content: '\e811'; }
 
-.icon--package:before {
+.icon--package::before {
   content: '\e812'; }
 
-.icon--slides:before {
+.icon--slides::before {
   content: '\e814'; }
 
-.icon--video:before {
+.icon--video::before {
   content: '\e800'; }
 
-.icon--error:before {
+.icon--error::before {
   content: '\e82F'; }
 
-.icon--success:before {
+.icon--success::before {
   content: '\e816'; }
 
-.icon--warning:before {
+.icon--warning::before {
   content: '\e804'; }
 
-.icon--budget:before {
+.icon--budget::before {
   content: '\e81a'; }
 
-.icon--digital:before {
+.icon--digital::before {
   content: '\e80b'; }
 
-.icon--energy:before {
+.icon--energy::before {
   content: '\e818'; }
 
-.icon--euro:before {
+.icon--euro::before {
   content: '\e803'; }
 
-.icon--global:before {
+.icon--global::before {
   content: '\e829'; }
 
-.icon--growth:before {
+.icon--growth::before {
   content: '\e82a'; }
 
-.icon--regulation:before {
+.icon--regulation::before {
   content: '\e82b'; }
 
-.icon--feedback:before {
+.icon--feedback::before {
   content: '\e82e'; }
 
-.icon--check, .icon--check:before {
+.icon--check, .icon--check::before {
   content: '\e816'; }
 
-.icon--generic-lang, .icon--generic-lang:before {
+.icon--generic-lang, .icon--generic-lang::before {
   content: '\e81e'; }
 
-.icon--tag-close, .icon--tag-close:before {
+.icon--tag-close, .icon--tag-close::before {
   content: '\e82c'; }
 
-.icon--tag-close-hover, .icon--tag-close-hover:before {
+.icon--tag-close-hover, .icon--tag-close-hover::before {
   content: '\e82d'; }
 
-.icon--calendar:before {
+.icon--calendar::before {
   content: '\e81d'; }
 
-.icon--camera:before {
+.icon--camera::before {
   content: '\e900'; }
 
 .icon--yellowbg {
@@ -4584,14 +4584,14 @@ Styleguide: icon
   font-size: 14px;
   text-align: center;
   display: inline-block; }
-  .icon--yellowbg:before {
+  .icon--yellowbg::before {
     margin-right: 0;
     line-height: inherit; }
 
 .icon--margin-right {
   margin-right: 1.5em; }
 
-.is-spinning:before {
+.is-spinning::before {
   -webkit-animation: icon-spin-right 2s infinite linear;
   -o-animation: icon-spin-right 2s infinite linear;
   animation: icon-spin-right 2s infinite linear; }
@@ -4658,7 +4658,7 @@ Style guide buttons
     -webkit-box-shadow: none;
     box-shadow: none;
     z-index: 999; }
-  .btn:after {
+  .btn::after {
     position: static;
     line-height: inherit; }
   .btn.btn-default, .btn.btn-collapse {
@@ -4693,7 +4693,7 @@ Style guide buttons
     .btn.btn-ctn:focus {
       border-color: #404040;
       outline-color: #404040; }
-    .btn.btn-ctn:after {
+    .btn.btn-ctn::after {
       margin-left: 10px;
       font-size: 0.8em; }
   .btn.btn-menu {
@@ -4708,13 +4708,13 @@ Style guide buttons
     .btn.btn-menu:focus {
       border-color: #ffd617;
       outline-color: #ffd617; }
-    .btn.btn-menu:after {
+    .btn.btn-menu::after {
       position: relative;
       top: -2px;
       margin-left: 6px !important;
       font-size: 0.45em;
       transition: all 0.3s ease 0s; }
-    .btn.btn-menu.is-collapsed:after {
+    .btn.btn-menu.is-collapsed::after {
       -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       -o-transform: rotate(180deg);
@@ -4729,7 +4729,7 @@ Style guide buttons
   .btn-ctn--border:focus {
     border-color: #404040;
     outline-color: #404040; }
-  .btn-ctn--border:after {
+  .btn-ctn--border::after {
     display: none; }
 
 .btn--no-margin-bottom {
@@ -4799,24 +4799,24 @@ Markup: html/btn-collapse.html
 
 Style guide buttons.btn-collapse
 */
-.btn-collapse span.toggling-text:after {
+.btn-collapse span.toggling-text::after {
   content: "\00a0"; }
 
 .btn-collapse:hover span.toggling-text,
-.btn-collapse:hover span.toggling-text:after, .btn-collapse:focus span.toggling-text,
-.btn-collapse:focus span.toggling-text:after {
+.btn-collapse:hover span.toggling-text::after, .btn-collapse:focus span.toggling-text,
+.btn-collapse:focus span.toggling-text::after {
   text-decoration: underline; }
 
 .btn-collapse .icon {
   margin-left: 0.3em; }
-  .btn-collapse .icon:before {
+  .btn-collapse .icon::before {
     vertical-align: bottom;
     transition: all 0.3s ease 0s; }
 
-.btn-collapse:hover .icon:before, .btn-collapse:focus .icon:before {
+.btn-collapse:hover .icon::before, .btn-collapse:focus .icon::before {
   color: #fff; }
 
-.btn-collapse.collapsed .icon:before {
+.btn-collapse.collapsed .icon::before {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -4828,19 +4828,19 @@ Style guide buttons.btn-collapse
 
 a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 2.2em; }
-  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]):after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"])::after {
     position: absolute;
     margin-left: 0.5em;
     line-height: 1.4 !important; }
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block {
     padding-right: 1em; }
-    a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block:after {
+    a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block::after {
       position: static;
       line-height: inherit; }
-  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn:after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn::after {
     position: absolute;
     line-height: 2.0 !important; }
-  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu:after {
+  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu::after {
     position: absolute;
     line-height: 3.5 !important; }
 
@@ -4853,7 +4853,7 @@ Markup: html/btn-group.html
 
 .btn-group-row-two    - Two column button block
 
-Styleguide buttons.group
+Style guide buttons.group
 */
 .btn-group {
   margin-top: 1em; }
@@ -4882,7 +4882,7 @@ Checkbox
 
 Markup: html/checkbox.html
 
-Styleguide form.checkbox
+Style guide form.checkbox
 */
 /*
  * Please
@@ -4895,7 +4895,7 @@ Styleguide form.checkbox
     margin-top: 1.5em;
     opacity: 0;
     z-index: 1; }
-    .checkbox input[type="checkbox"]:checked + label:before {
+    .checkbox input[type="checkbox"]:checked + label::before {
       background-image: url("../images/svg/checkbox-checked--blue.svg"); }
     .checkbox input[type="checkbox"]:focus + label::before {
       border: 3px solid #ffd617; }
@@ -4904,7 +4904,7 @@ Styleguide form.checkbox
     display: inline-block;
     padding-left: 12px;
     vertical-align: middle; }
-    .checkbox label:before {
+    .checkbox label::before {
       position: absolute;
       left: 0;
       display: inline-block;
@@ -4930,10 +4930,10 @@ Styleguide form.checkbox
     text-decoration: none;
     top: .25em; }
 
-.no-svg .checkbox input[type="checkbox"]:checked + label:before {
+.no-svg .checkbox input[type="checkbox"]:checked + label::before {
   background: none !important; }
 
-.no-svg .checkbox label:before {
+.no-svg .checkbox label::before {
   width: 1.250em !important;
   height: 1.250em !important;
   border: 1px solid #cccccc !important;
@@ -4946,7 +4946,7 @@ Styleguide form.checkbox
 /*
 Form
 
-Styleguide form
+Style guide form
 */
 .form-control {
   color: #404040;
@@ -4981,7 +4981,7 @@ Form Group
 
 Markup: html/form-group.html
 
-Styleguide form.form-group
+Style guide form.form-group
 */
 .form-group {
   margin-bottom: 1.7em; }
@@ -5007,15 +5007,10 @@ body {
   padding: 1.667em 0; }
 
 /*
-Typography
-
-Styleguide text
-*/
-/*
 Headings
 
 Site headings. They also can be applied by adding a class with the name of
-the heading tag
+the heading tag.
 
 Markup: html/headings.html
 
@@ -5026,45 +5021,39 @@ Markup: html/headings.html
 .h5 - Heading 5
 .h6 - Heading 6
 
-Styleguide text.headings
+Style guide text.headings
 */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  padding: 0.5em 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0.5em 0; }
 
-h1,
-.h1 {
+h1, .h1 {
   font-size: 2.222em;
   font-weight: 600;
   color: #000; }
 
-h2,
-.h2 {
+h2, .h2 {
   font-size: 1.667em;
   font-weight: 600;
   color: #000; }
 
-h3,
-.h3 {
+h3, .h3 {
   font-size: 1.222em;
   font-weight: 600;
   color: #404040; }
 
-h4,
-.h4 {
+h4, .h4 {
   font-size: 1em;
   font-weight: 600;
   color: #404040; }
 
-h5,
-.h5 {
+h5, .h5 {
   font-size: 0.778em;
   color: #404040;
   text-transform: uppercase; }
 
-h6,
-.h6 {
+h6, .h6 {
   font-size: 0.778em;
   text-transform: uppercase;
   color: #404040; }
@@ -5074,7 +5063,7 @@ Label
 
 Markup: html/label.html
 
-Styleguide form.label
+Style guide form.label
 */
 .form_label, form .label, label {
   color: #404040;
@@ -5091,7 +5080,7 @@ Legend
 
 Markup: html/legend.html
 
-Styleguide form.legend
+Style guide form.legend
 */
 .legend, legend {
   font-size: 0.67em; }
@@ -5101,7 +5090,7 @@ Lists
 
 Markup: html/lists.html
 
-Styleguide text.lists
+Style guide text.lists
 */
 ul:not(.listing):not(.social-media-links__list):not(.file__translations-list):not(.site-switcher__list):not(.menu):not(.site-user-menu__list):not(#admin-menu-wrapper ul),
 ol {
@@ -5137,7 +5126,7 @@ Implementation of bootstrap nav tabs
 
 Markup: html/nav-tabs.html
 
-Styleguide navtabs
+Style guide navtabs
 */
 ul.nav-tabs,
 .nav-tabs {
@@ -5150,20 +5139,16 @@ ul.nav-tabs,
     margin-bottom: -2px; }
     ul.nav-tabs > li.active > a,
     .nav-tabs > li.active > a {
-      border-bottom: 2px solid #fff;
-      border-top: 2px solid #b3b4b5;
-      border-right: 2px solid #b3b4b5;
-      border-left: 2px solid #b3b4b5;
-      color: #404040; }
+      color: #404040;
+      border: 2px solid #b3b4b5;
+      border-bottom: 2px solid #fff; }
       ul.nav-tabs > li.active > a:hover, ul.nav-tabs > li.active > a:active, ul.nav-tabs > li.active > a:focus,
       .nav-tabs > li.active > a:hover,
       .nav-tabs > li.active > a:active,
       .nav-tabs > li.active > a:focus {
-        border-bottom: 2px solid #fff;
-        border-top: 2px solid #b3b4b5;
-        border-right: 2px solid #b3b4b5;
-        border-left: 2px solid #b3b4b5;
-        color: #404040; }
+        color: #404040;
+        border: 2px solid #b3b4b5;
+        border-bottom: 2px solid #fff; }
       ul.nav-tabs > li.active > a:hover,
       .nav-tabs > li.active > a:hover {
         text-decoration: none; }
@@ -5208,7 +5193,7 @@ Implementation of bootstrap nav tabs for the CWS.
 
 Markup: html/nav-tabs-right.html
 
-Styleguide navtabs.nav-tabs-right
+Style guide navtabs.nav-tabs-right
 */
 ul.nav-tabs-right {
   text-align: right; }
@@ -5251,7 +5236,7 @@ Markup: html/paragraphs.html
 .paragraph--intro - Intro
 .paragraph--small - Small body text
 
-Styleguide text.paragraphs
+Style guide text.paragraphs
 */
 .paragraph, p {
   display: block;
@@ -5259,13 +5244,13 @@ Styleguide text.paragraphs
   margin-bottom: 0.8em; }
 
 p.dashed {
-  padding-left: 0.8em;
-  position: relative; }
-  p.dashed:before {
-    content: '-';
-    display: inline-block;
+  position: relative;
+  padding-left: 0.8em; }
+  p.dashed::before {
     position: absolute;
-    left: 0; }
+    left: 0;
+    display: inline-block;
+    content: '-'; }
 
 .paragraph--width-auto {
   width: auto; }
@@ -5281,7 +5266,7 @@ Radio
 
 Markup: html/radio.html
 
-Styleguide form.radio
+Style guide form.radio
 */
 /*
  * Please
@@ -5294,7 +5279,7 @@ Styleguide form.radio
     margin-top: 1.5em;
     opacity: 0;
     z-index: 1; }
-    .radio input[type="radio"]:checked + label:before {
+    .radio input[type="radio"]:checked + label::before {
       background-image: url("../images/svg/radio-checked--blue.svg"); }
     .radio input[type="radio"]:focus + label::before {
       border: 3px solid #ffd617; }
@@ -5303,7 +5288,7 @@ Styleguide form.radio
     display: inline-block;
     padding-left: 12px;
     vertical-align: middle; }
-    .radio label:before {
+    .radio label::before {
       position: absolute;
       left: 0;
       display: inline-block;
@@ -5320,10 +5305,10 @@ Styleguide form.radio
   .radio.radio--inline {
     margin-top: 0; }
 
-.no-svg .radio input[type="radio"]:checked + label:before {
+.no-svg .radio input[type="radio"]:checked + label::before {
   background: none !important; }
 
-.no-svg .radio label:before {
+.no-svg .radio label::before {
   border: 1px solid #cccccc;
   background: none !important;
   -webkit-transition: border 0.15s ease-in-out;
@@ -5339,10 +5324,9 @@ Markup: html/select.html
 :focus      - Select focus (select to see style applied)
 .is-down    - Select is-down
 
-Styleguide form.select
+Style guide form.select
 */
 .select, select {
-  /* Hide the arrow */
   appearance: none;
   -moz-appearance: none;
   /* Firefox */
@@ -5394,21 +5378,21 @@ Text Input
 
 Markup: html/text-input.html
 
-Styleguide form.text-input
+Style guide form.text-input
 */
 /*
 Textarea
 
 Markup: html/textarea.html
 
-Styleguide form.textarea
+Style guide form.textarea
 */
 textarea.error {
   border-color: #da2131; }
 
 .form-group .messages.error {
-  border: none;
-  background-color: #ececec; }
+  background-color: #ececec;
+  border: none; }
   .form-group .messages.error h3 {
     font-size: inherit; }
   .form-group .messages.error p {
@@ -5484,27 +5468,32 @@ Section
 Section component.
 
 The section component is used to wrap block of contents.
-Its implementation ensures the correct vertical spacing between different groups of contents,
-it uses the margin collapse mechanism (css2) so that you don't have to worry when you place two
-sections one after the other, only one of the two margins will be applied, indeed.
+Its implementation ensures the correct vertical spacing between different
+groups of contents, it uses the margin collapse mechanism (css2) so that you
+don't have to worry when you place two sections one after the other, only one
+of the two margins will be applied, indeed.
 
-It can contain different set of html elements and components, but the predefined ones are its
-unique element {section group}, the {listing wrapper}, the {sidebar-field-group}.
+It can contain different set of html elements and components, but the
+predefined ones are its unique element {section group}, the {listing wrapper},
+the {sidebar-field-group}.
 
-The way it works is that the first {section group} in the section doesn't get any margin (the parent
-is already defining that) while the last doesn't get the margin-bottom (still for the same reason).
+The way it works is that the first {section group} in the section doesn't get
+any margin (the parent is already defining that) while the last doesn't get the
+margin-bottom (still for the same reason).
 When there's only one {section group} element it doesn't get any vertical margin.
 Please do not reset any of these margins.
 
-Mind that there is also a .section__group--full-width modifier which is not demoed here, it works when the
-section is not wrapped into a width limiting container.
+Mind that there is also a .section__group--full-width modifier which is not
+demoed here, it works when the section is not wrapped into a width limiting
+container.
 
 WHAT TO AVOID:
-Do not wrap a section component into a row element, this would break the collpasing margin.
+Do not wrap a section component into a row element, this would break the
+collapsing margin.
 
 Markup: html/section.html
 
-Styleguide sections
+Style guide sections
 */
 /*
 section--row-two modifier
@@ -5513,7 +5502,7 @@ section--row-two modifier
 
 Markup: html/section--row-two.html
 
-Styleguide sections.1
+Style guide sections.1
 */
 /*
 section--row-three modifier
@@ -5522,7 +5511,7 @@ section--row-three modifier
 
 Markup: html/section--row-three.html
 
-Styleguide sections.2
+Style guide sections.2
 */
 /*
 Section group modifiers
@@ -5534,7 +5523,7 @@ Section group modifiers
 
 Markup: html/section__group.html
 
-Styleguide sections.3
+Style guide sections.3
 */
 .section {
   margin-bottom: 1.667em;

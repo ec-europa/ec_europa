@@ -64,7 +64,7 @@
       .listing__title {
         @extend .listing__title--arrow;
 
-        &:after {
+        &::after {
           margin-left: 0.5em;
           margin-top: 3px;
           font-size: 0.8em;

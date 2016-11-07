@@ -1,12 +1,13 @@
 /*
 Icon Social
 
-Social network icons
+Social network icons.
 
 Markup: html/icon-social.html
 
-Styleguide icon.social
+Style guide icon.social
 */
+
 $icon-size: 40px;
 $icon-size-small: 26px;
 
@@ -15,7 +16,8 @@ $icon-size-small: 26px;
   padding-left: 50px;
   padding-top: 5px;
   min-height: $icon-size;
-  &:before {
+
+  &::before {
     content: '';
     display: inline-block;
     width: $icon-size;
@@ -39,7 +41,7 @@ $icon-size-small: 26px;
     padding-top: 0;
     min-height: $icon-size-small;
 
-    &:before {
+    &::before {
       width: $icon-size-small;
       height: $icon-size-small;
     }

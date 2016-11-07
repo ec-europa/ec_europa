@@ -7,7 +7,7 @@ Markup: html/social-media-links.html
 
 .social-media-links__horizontal - Horizontal modifier
 
-Styleguide social
+Style guide social
 */
 
 .social-media-links {
@@ -64,12 +64,12 @@ Styleguide social
     display: block;
     @include _focus_outline_border(3px, $yellow-light, -1px);
 
-    &:before {
+    &::before {
       margin-bottom: 0;
     }
 
-    &:after,
-    &.is-external:after {
+    &::after,
+    &.is-external::after {
       display: none !important;
     }
   }
@@ -77,7 +77,7 @@ Styleguide social
 
 .social-media-links--webtool-horizontal {
   .wtShareList {
-    background: transparent;
+    background-color: transparent;
     padding: 0;
 
     li:nth-last-child(2) {
@@ -88,7 +88,7 @@ Styleguide social
       line-height: 5em;
     }
 
-    a[href^="http"]:not(.is-internal):after {
+    a[href^="http"]:not(.is-internal)::after {
       display: none !important;
     }
   }
@@ -107,11 +107,11 @@ Styleguide social
   .wtShareList {
     overflow: visible;
     float: left;
-    background: transparent !important;
+    background-color: transparent !important;
     padding: 0;
 
     a {
-      &[href^="http"]:not(.is-internal):after {
+      &[href^="http"]:not(.is-internal)::after {
         display: none !important;
       }
 

@@ -3,7 +3,7 @@ Checkbox
 
 Markup: html/checkbox.html
 
-Styleguide form.checkbox
+Style guide form.checkbox
 */
 
 /*
@@ -22,7 +22,7 @@ Styleguide form.checkbox
     z-index: 1;
 
     // Checked state.
-    &:checked + label:before {
+    &:checked + label::before {
       background-image: url('../images/svg/checkbox-checked--blue.svg');
     }
 
@@ -38,7 +38,7 @@ Styleguide form.checkbox
     padding-left: 12px;
     vertical-align: middle;
 
-    &:before {
+    &::before {
       position: absolute;
       left: 0;
       display: inline-block;
@@ -79,11 +79,11 @@ Styleguide form.checkbox
 // Turning off completely custom checkboxes when SVG's are not available
 .no-svg {
   .checkbox {
-    input[type="checkbox"]:checked + label:before {
+    input[type="checkbox"]:checked + label::before {
       background: none !important;
     }
 
-    label:before {
+    label::before {
       width: 1.250em !important;
       height: 1.250em !important;
       border: 1px solid #cccccc !important;

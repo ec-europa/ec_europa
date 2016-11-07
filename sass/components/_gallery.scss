@@ -1,11 +1,11 @@
 /*
 Gallery
 
-Gallery component
+Gallery component.
 
 Markup: html/gallery.html
 
-Styleguide gallery
+Style guide gallery
 */
 
 .mediagallery {
@@ -31,7 +31,7 @@ Styleguide gallery
 }
 
 .mediagallery__item {
-  // Makes the images 185px;
+  // Makes the images 185px.
   height: auto;
   padding: 0;
   overflow: hidden;
@@ -56,7 +56,7 @@ Styleguide gallery
 
   &:hover {
     .mediagallery__caption {
-      display: block; /* Fallback for non-webkit */
+      display: block; /* Fallback for non-webkit. */
       display: -webkit-box;
     }
   }
@@ -101,7 +101,7 @@ Styleguide gallery
       line-height: 2.667em;
       font-size: 1em;
 
-      &:before {
+      &::before {
         margin-right: 0;
       }
     }
@@ -113,10 +113,10 @@ Styleguide gallery
   }
 }
 
-/* Firefox alternative to webkit-line-clamp */
+// Firefox alternative to webkit-line-clamp.
 @-moz-document url-prefix() {
   .mediagallery__caption {
-    &:after {
+    &::after {
       position: absolute;
       top: 0;
       right: 0;

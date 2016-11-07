@@ -3,11 +3,11 @@ Datepicker
 
 This example is based on jQuery Datepicker widget. It requires both jQuery and jQuery UI libraries.<br/>
 Also, it assumes that the default CSS styles from jQuery UI are included as well.<br/>
-The CSS applied from styleguide is an override over the default CSS of jQuery UI.<br/>
+The CSS applied from style guide is an override over the default CSS of jQuery UI.<br/>
 
 Markup: html/datepicker.html
 
-Styleguide datepicker
+Style guide datepicker
 */
 
 // Local Variables
@@ -28,7 +28,6 @@ $datepicker-color-background: #eaeaea;
   font-family: $font-family-sans-serif;
   padding: 0;
 
-
   // Datepicker header
   .ui-datepicker-header {
     background: $datepicker-color-header;
@@ -46,11 +45,12 @@ $datepicker-color-background: #eaeaea;
       top: 0;
       background: none;
       border: none;
+
       &:hover {
         cursor: pointer;
       }
 
-      .ui-icon{
+      .ui-icon {
         display: block;
         height: 100%;
         width: 100%;
@@ -59,7 +59,7 @@ $datepicker-color-background: #eaeaea;
         margin: 0;
         background: url('../images/svg/arrow.svg') center center no-repeat;
         background-size: 7px;
-       }
+      }
     }
 
     .ui-datepicker-prev {
@@ -69,10 +69,10 @@ $datepicker-color-background: #eaeaea;
         @include rotate(-180deg);
       }
     }
+
     .ui-datepicker-next {
       right: 0;
     }
-
 
     .ui-datepicker-title {
       margin: 0 50px;
@@ -90,6 +90,7 @@ $datepicker-color-background: #eaeaea;
       }
 
       select {
+        @extend .form-control;
         background: $datepicker-color-select;
         color: #fff;
         border: none;
@@ -100,7 +101,6 @@ $datepicker-color-background: #eaeaea;
         float: none;
         padding-right: 0;
         padding-left: 0.750em;
-        @extend .form-control;
         @include _focus_outline_border(3px, $yellow-light, -3px, none);
         position: relative;
 
@@ -161,6 +161,7 @@ $datepicker-color-background: #eaeaea;
       background-image: url('../images/png/arrow-left.png');
     }
   }
+
   .ui-datepicker-next {
     .ui-icon {
       background-image: url('../images/png/arrow.png');
@@ -172,6 +173,7 @@ $datepicker-color-background: #eaeaea;
 // Positioning the calendar icon
 .date-picker {
   position: relative;
+
   .date-picker--icon {
     @extend .icon;
     position: absolute;

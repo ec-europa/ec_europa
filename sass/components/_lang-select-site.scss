@@ -5,7 +5,7 @@ Language selector that is used across the whole site
 
 Markup: html/lang-select-site.html
 
-Styleguide: siteheader.langselect
+Style guide: siteheader.langselect
 */
 
 .lang-select-site {
@@ -49,7 +49,7 @@ Styleguide: siteheader.langselect
 
   .lang-select-site__code-text {
     position: relative;
-    top: 0px;
+    top: 0;
     left: -1px;
     font-size: $font-size-xsmall;
     color: #fff;
@@ -63,7 +63,7 @@ Styleguide: siteheader.langselect
     font-size: $font-size-xsmall * 2;
     line-height: 1.4;
 
-    &:before {
+    &::before {
       font-weight: inherit;
     }
   }

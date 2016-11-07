@@ -2,13 +2,13 @@
 Field
 
 Drupal note:
-Field styling appearing in this styleguide is only valid for Default drupal field settings
+Field styling appearing in this style guide is only valid for Default drupal field settings
 
 Markup: html/field.html
 
 .field--labeled - Field component with a label
 
-Styleguide field
+Style guide field
 */
 
 .field {
@@ -144,7 +144,7 @@ with fields that do have a label.
 
 Markup: html/field--labeled-align.html
 
-Styleguide field.labeled-align
+Style guide field.labeled-align
 */
 
 @include breakpoint(screen-sm-min) {

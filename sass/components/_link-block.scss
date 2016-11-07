@@ -3,8 +3,9 @@ Link block
 
 Markup: html/link-block.html
 
-Styleguide link-block
+Style guide link-block
 */
+
 .link-block {
   background-color: $grey-lightest;
   padding: 1.111em;
@@ -14,16 +15,19 @@ Styleguide link-block
   font-size: $font-size-little;
   list-style: none;
   padding: 0;
+
   & a {
     &:link,
     &:visited {
       text-decoration: none;
     }
+
     &:hover,
     &:active {
       text-decoration: underline;
     }
   }
+
   li {
     margin-bottom: 0.688em;
   }
@@ -35,5 +39,5 @@ Styleguide link-block
   line-height: 1.875em;
   color: $blue-darker;
   margin-bottom: 0.688em;
-  padding: 0px;
+  padding: 0;
 }

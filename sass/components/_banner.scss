@@ -4,7 +4,7 @@ Banner
 The banner itself is not a standalone component, the banner subcomponents should
 always be used.
 
-Styleguide banner
+Style guide banner
 */
 
 /*
@@ -12,15 +12,7 @@ Quote Banner
 
 Markup: html/banner-quote.html
 
-Styleguide banner.quote
-*/
-
-/*
-Video Banner
-
-Markup: html/banner-video.html
-
-Styleguide banner.video
+Style guide banner.quote
 */
 
 $quote_border_offset: 0.556em;
@@ -43,10 +35,18 @@ $quote_border_offset: 0.556em;
   font-weight: $font-weight-bold;
   padding-bottom: 0.6em;
 
-  &:before {
+  &::before {
     content: ' - ';
   }
 }
+
+/*
+Video Banner
+
+Markup: html/banner-video.html
+
+Style guide banner.video
+*/
 
 .banner--video {
   @extend .row;

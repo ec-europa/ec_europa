@@ -3,10 +3,10 @@ Lists
 
 Markup: html/lists.html
 
-Styleguide text.lists
+Style guide text.lists
 */
 
-ul:not(.listing, .social-media-links__list, .file__translations-list, .site-switcher__list, .menu, .site-user-menu__list):not(#admin-menu-wrapper ul),
+ul:not(.listing, .social-media-links__list, .file__translations-list, .site-switcher__list, .menu, .site-user-menu__list, #admin-menu-wrapper ul),
 ol {
   max-width: 32em;
   padding-left: 18px;
