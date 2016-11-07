@@ -108,12 +108,24 @@
             <li class="kss-nav__menu-item">
               <a href="section-file.html#kssref-file-1">
                 <span class="kss-nav__ref">12.1</span
-                ><span class="kss-nav__name">File download</span>
+                ><span class="kss-nav__name">File download default</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-file.html#kssref-file-2">
                 <span class="kss-nav__ref">12.2</span
+                ><span class="kss-nav__name">File image</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-file.html#kssref-file-3">
+                <span class="kss-nav__ref">12.3</span
+                ><span class="kss-nav__name">File video</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-file.html#kssref-file-4">
+                <span class="kss-nav__ref">12.4</span
                 ><span class="kss-nav__name">File download with translations</span>
               </a>
             </li>
@@ -317,8 +329,8 @@
 
 
       <div class="kss-description">
-        <p>File component used to show info about the file that can be downloaded
-by clicking on the component.</p>
+        <p>File component used to show info about the file that can be downloaded or how
+is displayed multimedia files (image and video).</p>
 
       </div>
     </div>
@@ -331,14 +343,14 @@ by clicking on the component.</p>
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-file-1">
           <span class="kss-title__ref">12.1</span
-          >File download
+          >File download default
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h2>
 
 
       <div class="kss-description">
-        <p>File component to download a file.</p>
+        <p>Default implementation of the file download component.</p>
 
       </div>
     </div>
@@ -387,6 +399,108 @@ by clicking on the component.</p>
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-file-2">
           <span class="kss-title__ref">12.2</span
+          >File image
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Displays the download file available in several languages.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="col-md-4"> <!-- only required for the style guide -->
+  <div class="file file-image">
+    <img src="http://placehold.it/300x200" alt="">
+    <div class="file__caption">
+      <div class="field__items">Image caption</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;col-md-4&quot;&gt; &lt;!-- only required for the style guide --&gt;
+  &lt;div class=&quot;file file-image&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/300x200&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;file__caption&quot;&gt;
+      &lt;div class=&quot;field__items&quot;&gt;Image caption&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-file-3" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-file-3">
+          <span class="kss-title__ref">12.3</span
+          >File video
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Displays the download file available in several languages.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="col-lg-10"> <!-- only required for the style guide -->
+  <div class="file file-video file-video--with-background">
+    <iframe src="http://ec.europa.eu/avservices/play.cfm?ref=I101631"
+            id="videoplayer-example" width="555" height="325" frameborder="0" scrolling="no"
+            webkitAllowFullScreen="false" mozallowfullscreen="false" allowFullScreen="false">
+    </iframe>
+    <div class="file__caption">
+      <div class="field__items">Video caption</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;col-lg-10&quot;&gt; &lt;!-- only required for the style guide --&gt;
+  &lt;div class=&quot;file file-video file-video--with-background&quot;&gt;
+    &lt;iframe src=&quot;http://ec.europa.eu/avservices/play.cfm?ref=I101631&quot;
+            id=&quot;videoplayer-example&quot; width=&quot;555&quot; height=&quot;325&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;
+            webkitAllowFullScreen=&quot;false&quot; mozallowfullscreen=&quot;false&quot; allowFullScreen=&quot;false&quot;&gt;
+    &lt;/iframe&gt;
+    &lt;div class=&quot;file__caption&quot;&gt;
+      &lt;div class=&quot;field__items&quot;&gt;Video caption&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-file-4" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-file-4">
+          <span class="kss-title__ref">12.4</span
           >File download with translations
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -394,7 +508,7 @@ by clicking on the component.</p>
 
 
       <div class="kss-description">
-        <p>File component to download files in various languages.</p>
+        <p>Displays the download file available in several languages.</p>
 
       </div>
     </div>
@@ -412,7 +526,7 @@ by clicking on the component.</p>
       <span class="file__content-language">English</span> (392.23 KB - PDF - 2 pages)
     </div>
   </div>
-  <a class="btn btn-default file__btn">
+  <a href="#" class="btn btn-default file__btn">
     Download<span class="sr-only">(392.23 KB - PDF - 2 pages)</span>
   </a>
 </div>
@@ -468,7 +582,7 @@ by clicking on the component.</p>
       &lt;span class=&quot;file__content-language&quot;&gt;English&lt;/span&gt; (392.23 KB - PDF - 2 pages)
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;a class=&quot;btn btn-default file__btn&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-default file__btn&quot;&gt;
     Download&lt;span class=&quot;sr-only&quot;&gt;(392.23 KB - PDF - 2 pages)&lt;/span&gt;
   &lt;/a&gt;
 &lt;/div&gt;

@@ -2307,34 +2307,47 @@ Styleguide field.labeled-align
 /*
 File
 
-File component used to show info about the file that can be downloaded
-by clicking on the component.
+File component used to show info about the file that can be downloaded or how
+is displayed multimedia files (image and video).
 
 Styleguide file
 */
 /*
-File download
+File download default
 
-File component to download a file.
+Default implementation of the file download component.
 
 Markup: html/file.html
 
 Styleguide file.1
-*/
-/*
-File download with translations
-
-File component to download files in various languages.
-
-Markup: html/file-translations.html
-
-Styleguide file.2
 */
 .file {
   margin: 0 0 0.944em 0;
   padding: 1.333em;
   background-color: #ececec; }
 
+/*
+File image
+
+Displays the download file available in several languages.
+
+Markup: html/file-image.html
+
+Styleguide file.2
+*/
+.file-image {
+  padding: 0;
+  background-color: transparent; }
+
+/*
+File video
+
+Displays the download file available in several languages.
+
+Markup: html/file-video.html
+
+Styleguide file.3
+*/
 .file-video {
   padding: 1em 0;
   background-color: transparent; }
@@ -2346,10 +2359,6 @@ Styleguide file.2
 
 .file-video--with-background {
   background-color: #ececec; }
-
-.file-image {
-  padding: 0;
-  background-color: transparent; }
 
 .file__icon {
   float: left;
@@ -2408,6 +2417,15 @@ Styleguide file.2
   .file--bare .file__icon {
     display: none; }
 
+/*
+File download with translations
+
+Displays the download file available in several languages.
+
+Markup: html/file-translations.html
+
+Styleguide file.4
+*/
 .file__translations {
   margin-bottom: 1em;
   padding: 0 1.450em;
