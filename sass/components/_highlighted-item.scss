@@ -3,12 +3,13 @@ Highlighted item
 
 Markup: html/highlighted-item.html
 
-Styleguide highlighted-item
+Style guide highlighted-item
 */
 
-
 .highlighted-item {
+  padding: 0 0 2em 0;
   background-color: $grey-lighter;
+
   &:hover,
   &:active,
   &:focus {
@@ -16,7 +17,6 @@ Styleguide highlighted-item
       text-decoration: underline;
     }
   }
-  padding: 0 0 2em 0;
 }
 
 .highlighted-item__image {
@@ -27,7 +27,7 @@ Styleguide highlighted-item
 }
 
 .highlighted-item__content {
-  color: $brand-primary;
   margin: 0;
   padding: 0 1em;
+  color: $brand-primary;
 }

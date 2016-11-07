@@ -1,1 +1,1 @@
-Styleguide containing Next Europa platform components
+Style guide containing Next Europa platform components.

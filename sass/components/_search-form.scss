@@ -3,8 +3,9 @@ Search form
 
 Markup: html/search-form.html
 
-Styleguide: siteheader.searchform
+Style guide: siteheader.searchform
 */
+
 .search-form {
   @extend .hidden-print;
   display: inline-block;
@@ -42,7 +43,7 @@ Styleguide: siteheader.searchform
   overflow: visible;
   border: none !important;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -67,7 +68,7 @@ Styleguide: siteheader.searchform
     padding: 0 1em;
     text-indent: 0;
 
-    &:before {
+    &::before {
       display: none !important;
     }
   }

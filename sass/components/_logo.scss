@@ -4,7 +4,7 @@
 //
 // Markup: html/logo.html
 //
-// Styleguide siteheader.logo
+// Style guide siteheader.logo
 
 .logo {
   display: block;
@@ -20,7 +20,7 @@
 //
 // Markup: html/logo--no-svg.html
 //
-// Styleguide siteheader.logo no-svg
+// Style guide siteheader.logo no-svg
 
 .no-svg {
   .logo {
@@ -59,9 +59,10 @@
 // .language-fi - Finnish
 // .language-sv - Swedish
 //
-// Styleguide siteheader.logo--logotype
+// Style guide siteheader.logo--logotype
 
-// Sets language-specific background image on .logo--logotype element nested in {{modifier_class}} modifier.
+// Sets language-specific background image on .logo--logotype element nested
+// in {{modifier_class}} modifier.
 @include logo-background-languages('../images/svg/logo/logo--', '.svg');
 
 .logo--logotype {

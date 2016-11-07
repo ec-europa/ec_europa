@@ -5,34 +5,32 @@ Implementation of bootstrap nav tabs
 
 Markup: html/nav-tabs.html
 
-Styleguide navtabs
+Style guide navtabs
 */
+
 ul.nav-tabs,
 .nav-tabs {
+  @extend .hidden-print;
   max-width: inherit !important;
   padding: 0;
   margin-bottom: 2em !important;
   border-bottom: 2px solid $grey;
-  @extend .hidden-print;
 
   & > li {
     margin-bottom: -2px;
+
     &.active {
       & > a {
-        border-bottom: 2px solid #fff;
-        border-top: 2px solid $grey;
-        border-right: 2px solid $grey;
-        border-left: 2px solid $grey;
         color: $grey-base;
+        border: 2px solid $grey;
+        border-bottom: 2px solid #fff;
 
         &:hover,
         &:active,
         &:focus {
-          border-bottom: 2px solid #fff;
-          border-top: 2px solid $grey;
-          border-right: 2px solid $grey;
-          border-left: 2px solid $grey;
           color: $grey-base;
+          border: 2px solid $grey;
+          border-bottom: 2px solid #fff;
         }
 
         &:hover {
@@ -45,6 +43,7 @@ ul.nav-tabs,
         }
       }
     }
+
     & > a {
       border-width: 2px;
       border-radius: 0;
@@ -97,15 +96,19 @@ Implementation of bootstrap nav tabs for the CWS.
 
 Markup: html/nav-tabs-right.html
 
-Styleguide navtabs.nav-tabs-right
+Style guide navtabs.nav-tabs-right
 */
+
 ul.nav-tabs-right {
   text-align: right;
+
   li {
     display: inline-block;
     float: none;
+
     a {
       font-size: inherit;
+
       &:hover {
         border-bottom: inherit;
       }

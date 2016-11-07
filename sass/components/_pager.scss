@@ -5,7 +5,7 @@ Note: Resize the width of the page to see the responsive layout.
 
 Markup: html/pager.html
 
-Styleguide pager
+Style guide pager
 */
 
 .pager__wrapper {
@@ -32,9 +32,9 @@ Styleguide pager
     &.pager__item {
       // Prettifying.
       list-style: none;
-
       // Mobile-first hides all pager items.
       display: none;
+
       // Except prev, next and current.
       &.pager__item--previous,
       &.pager__item--next {
@@ -51,10 +51,12 @@ Styleguide pager
           font-weight: $font-weight-bold;
         }
       }
+
       &.pager__item--previous {
         float: left;
         clear: left;
       }
+
       &.pager__item--next {
         float: right;
         clear: right;
@@ -85,7 +87,6 @@ Styleguide pager
         text-decoration: underline;
       }
     }
-
   }
 }
 
@@ -116,6 +117,7 @@ Styleguide pager
 .region-content ul.pager {
   margin: 0.938em auto;
   padding: 0;
+
   // The throbber should not mess up sizing.
   .ajax-progress {
     display: none;

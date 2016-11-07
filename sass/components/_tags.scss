@@ -5,7 +5,7 @@ Tags component used to display tag section that is typically displayed under a c
 
 Markup: html/tags.html
 
-Styleguide tags
+Style guide tags
 */
 
 .tags {
@@ -46,11 +46,13 @@ Styleguide tags
 .tags__item a,
 a.tags__item {
   color: $text-color;
+
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
   }
+
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px $yellow-light;
@@ -62,7 +64,7 @@ Facet tag
 
 Markup: html/facet-tag.html
 
-Styleguide tags.facettag
+Style guide tags.facettag
 */
 
 .facet-tag {
@@ -74,8 +76,8 @@ Styleguide tags.facettag
 }
 
 .facet-tag__label {
-  float: left;
   @extend .tags__label;
+  float: left;
 }
 
 .facet-tag__value {
@@ -88,23 +90,24 @@ Facet tag with close
 
 Markup: html/facet-tag--close.html
 
-Styleguide tags.facet-close
+Style guide tags.facet-close
 */
 
 .facet-tag--close {
   .facet-tag__value {
     // Close icon.
-    &:after {
+    &::after {
       @extend .icon--after;
       @extend .icon--tag-close;
       vertical-align: bottom;
     }
-    &:hover:after {
+
+    &:hover::after {
       @extend .icon--after;
       @extend .icon--tag-close-hover;
-
     }
   }
+
   .tags__item a,
   a.tags__item {
     &:hover {

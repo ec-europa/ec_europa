@@ -3,8 +3,9 @@ RSS Link
 
 Markup: html/rss-link.html
 
-Styleguide rsslink
+Style guide rsslink
 */
+
 $rss-link-icon-height: 40px;
 
 .rss-link {
@@ -41,7 +42,7 @@ $rss-link-icon-height: 40px;
 .rss-link__icon {
   float: left;
 
-  &:before {
+  &::before {
     width: 100%;
   }
 }

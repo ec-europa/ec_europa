@@ -3,7 +3,7 @@ Filters
 
 Filter components on content filtering pages.
 
-Styleguide filters
+Style guide filters
 */
 
 /*
@@ -12,7 +12,7 @@ Filters
 Filters implementation
 Drupal implementation guidelines can be found [PLACEHOLDER FOR GUIDELINES ON IMPLEMENTATION]
 
-Styleguide filters.filters
+Style guide filters.filters
 */
 
 .filters {
@@ -97,7 +97,7 @@ Styleguide filters.filters
   text-decoration: none;
   text-shadow: none;
 
-  &:after {
+  &::after {
     content: "";
     background: url('../images/svg/arrow-up--blue.svg') no-repeat;
     height: 8px;
@@ -141,18 +141,18 @@ html {
 
 @include breakpoint(screen-xs-min) {
   .filters__close {
-    &:after {
-      height: 9px;
+    &::after {
       width: 12px;
+      height: 9px;
     }
   }
 }
 
 @include breakpoint(screen-md-min) {
   .filters {
-    background: transparent;
     margin: 0;
     padding: 0;
+    background-color: transparent;
   }
 
   .filters__btn-reset--small,

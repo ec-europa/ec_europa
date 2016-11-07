@@ -649,7 +649,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
     $title_string = $file_language_string . ' ' . t('version');
   }
   else {
-    $file_info_string = isset($file_language_string) ? '<span class="file__contentlanguage">' . $file_language_string . ' </span>' : '';
+    $file_info_string = isset($file_language_string) ? '<span class="file__content-language">' . $file_language_string . ' </span>' : '';
     $file_info_string .= !empty($file_info_parts) ? '(' . implode(' - ', $file_info_parts) . ')' : '';
 
     // Use the description as the link text if available.

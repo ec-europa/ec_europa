@@ -1,14 +1,13 @@
 /*
-
 Notification
 
-Notification that appears at the top of the site
+Notification that appears at the top of the site.
 
 Markup: html/notification.html
 
-Styleguide notification
-
+Style guide notification
 */
+
 .notification {
   @extend .hidden-print;
   background: $yellow-light;
@@ -48,7 +47,7 @@ Styleguide notification
     float: left;
     margin-bottom: 6px;
 
-    &:after {
+    &::after {
       @extend .icon--after;
       @extend .icon--right;
       font-size: 12px;
@@ -92,7 +91,7 @@ Styleguide notification
 @mixin _notification_external_link_mixin() {
   padding-right: 1.1em;
 
-  &:after {
+  &::after {
     position: absolute;
     line-height: 2.2;
   }

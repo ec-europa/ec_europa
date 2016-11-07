@@ -3,7 +3,7 @@ Radio
 
 Markup: html/radio.html
 
-Styleguide form.radio
+Style guide form.radio
 */
 
 /*
@@ -22,7 +22,7 @@ Styleguide form.radio
     z-index: 1;
 
     // Checked state.
-    &:checked + label:before {
+    &:checked + label::before {
       background-image: url('../images/svg/radio-checked--blue.svg');
     }
 
@@ -38,7 +38,7 @@ Styleguide form.radio
     padding-left: 12px;
     vertical-align: middle;
 
-    &:before {
+    &::before {
       position: absolute;
       left: 0;
       display: inline-block;
@@ -61,11 +61,11 @@ Styleguide form.radio
 // Turning off completely custom radios when SVG's are not available
 .no-svg {
   .radio {
-    input[type="radio"]:checked + label:before {
+    input[type="radio"]:checked + label::before {
       background: none !important;
     }
 
-    label:before {
+    label::before {
       border: 1px solid #cccccc;
       background: none !important;
       -webkit-transition: border 0.15s ease-in-out;

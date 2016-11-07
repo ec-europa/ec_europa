@@ -5,7 +5,7 @@ Site-wide footer component
 
 Markup: html/footer.html
 
-Styleguide footer
+Style guide footer
 */
 
 .footer {
@@ -37,7 +37,7 @@ Styleguide footer
   margin-right: 20px;
 }
 
-// Menus
+// Menus.
 .footer__menu {
   padding-left: 0;
   margin: 0;
@@ -77,28 +77,28 @@ Styleguide footer
   width: 100%;
 }
 
-// Icons
+// Icons.
 .footer__icon--social {
-  &:before {
+  &::before {
     position: relative;
     top: 4px;
     margin-right: 8px !important;
   }
 
-  &:after {
+  &::after {
     content: none !important;
     display: none !important;
   }
 }
 
 .footer__icon--facebook {
-  &:before {
+  &::before {
     font-size: 22px;
   }
 }
 
 .footer__icon--twitter {
-  &:before {
+  &::before {
     font-size: 18px;
   }
 }
@@ -108,7 +108,7 @@ Styleguide footer
     text-align: left;
   }
 
-  // Columns
+  // Columns.
   .footer__column-main {
     padding-bottom: 60px;
     padding-top: 60px;
@@ -128,9 +128,9 @@ Styleguide footer
   }
 }
 
-// External link specific adjustments
+// External link specific adjustments.
 @mixin _footer_external_link_mixin() {
-  &:after {
+  &::after {
     position: absolute;
     line-height: 2.2;
   }

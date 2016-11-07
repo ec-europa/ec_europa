@@ -3,8 +3,9 @@ Link
 
 Markup: html/link.html
 
-Styleguide text.link
+Style guide text.link
 */
+
 // Default external link mixin.
 @mixin _external_link_mixin() {
   @extend .is-external;
@@ -88,7 +89,7 @@ a {
   }
 
   @media print { 
-    &:after {
+    &::after {
       content: none !important; 
     }
   }
@@ -97,7 +98,7 @@ a {
 .is-external {
   position: relative;
 
-  &:after {
+  &::after {
     @extend .icon--after;
     @extend .icon--external;
     font-size: 75%;
@@ -108,7 +109,7 @@ a {
   }
 }
 
-// External link specific adjustments
+// External link specific adjustments.
 @mixin _link_external_link_mixin() {
   &.btn {
     padding-right: 2.1em;

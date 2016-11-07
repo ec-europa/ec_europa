@@ -14,7 +14,7 @@ Markup: html/labels.html
 .label--warning - Warning
 .label--danger - Danger
 
-Styleguide labels
+Style guide labels
 */
 
 $label_text_color_light: #fff;
@@ -73,7 +73,7 @@ $label_text_color_light: #fff;
   background-color: $yellow-light;
 
   &.label--meta {
-    &:after {
+    &::after {
       content: "";
       margin: 0;
     }

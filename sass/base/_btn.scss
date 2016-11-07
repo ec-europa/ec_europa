@@ -14,6 +14,7 @@ Markup: html/btn.html
 
 Style guide buttons
 */
+
 @mixin _white_space_reset_mixin() {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -47,7 +48,7 @@ Style guide buttons
     z-index: 999;
   }
 
-  &:after {
+  &::after {
     position: static;
     line-height: inherit;
   }
@@ -101,7 +102,7 @@ Style guide buttons
       outline-color: $text-color;
     }
 
-    &:after {
+    &::after {
       @extend .icon--after;
       @extend .icon--right;
       margin-left: 10px;
@@ -131,7 +132,7 @@ Style guide buttons
       outline-color: $yellow-light;
     }
 
-    &:after {
+    &::after {
       @extend .icon--after;
       @extend .icon--arrow-down;
       position: relative;
@@ -142,7 +143,7 @@ Style guide buttons
     }
 
     &.is-collapsed {
-      &:after {
+      &::after {
         @include rotate(180deg);
       }
     }
@@ -164,7 +165,7 @@ Style guide buttons
     outline-color: $text-color;
   }
 
-  &:after {
+  &::after {
     display: none;
   }
 }
@@ -188,6 +189,7 @@ Markup: html/btn-condensed.html
 
 Style guide buttons.btn--condensed
 */
+
 .btn.btn--condensed {
   width: auto;
   font-weight: normal;
@@ -202,6 +204,7 @@ Markup: html/btn-block.html
 
 Style guide buttons.btn-block
 */
+
 .btn-block {
   width: 100%;
   max-width: 450px;
@@ -227,6 +230,7 @@ Markup: html/btn-search.html
 
 Style guide buttons.btn-search
 */
+
 .btn.btn-search {
   background: $grey-light;
   color: $blue-dark;
@@ -247,17 +251,18 @@ Markup: html/btn-collapse.html
 
 Style guide buttons.btn-collapse
 */
+
 .btn-collapse {
   @extend .btn-default;
 
-  span.toggling-text:after {
+  span.toggling-text::after {
     content: "\00a0";
   }
 
   &:hover,
   &:focus {
     span.toggling-text,
-    span.toggling-text:after {
+    span.toggling-text::after {
       text-decoration: underline;
     }
   }
@@ -265,7 +270,7 @@ Style guide buttons.btn-collapse
   .icon {
     margin-left: 0.3em;
 
-    &:before {
+    &::before {
       vertical-align: bottom;
       transition: all 0.3s ease 0s;
     }
@@ -273,13 +278,13 @@ Style guide buttons.btn-collapse
 
   &:hover,
   &:focus {
-    .icon:before {
+    .icon::before {
       color: #fff;
     }
   }
 
   &.collapsed {
-    .icon:before {
+    .icon::before {
       @include rotate(180deg);
     }
   }
@@ -296,7 +301,7 @@ Style guide buttons.btn-collapse
 @mixin _btn_external_link_mixin() {
   padding-right: 2.2em;
 
-  &:after {
+  &::after {
     position: absolute;
     margin-left: 0.5em;
     line-height: 1.4 !important;
@@ -306,20 +311,20 @@ Style guide buttons.btn-collapse
   &.btn-block {
     padding-right: 1em;
 
-    &:after {
+    &::after {
       position: static;
       line-height: inherit;
     }
   }
 
   // Call to action button.
-  &.btn-ctn:after {
+  &.btn-ctn::after {
     position: absolute;
     line-height: 2.0 !important;
   }
 
   // Call to action button.
-  &.btn-menu:after {
+  &.btn-menu::after {
     position: absolute;
     line-height: 3.5 !important;
   }
