@@ -1,6 +1,6 @@
-// Bootstrap overrides and new variables
+// Bootstrap overrides and new variables.
 
-// Colors
+// Colors.
 $black:                  #000;
 
 $grey-dark:              #575757;
@@ -34,11 +34,11 @@ $brand-danger:           $red;
 
 $text-color:             $grey-base;
 
-// Typography
+// Typography.
 $font-family-sans-serif: Arial, sans-serif;
 $font-family-base:       $font-family-sans-serif;
 
-$font-size-base:         15px; // this is mobile first default, desktop default is 18px
+$font-size-base:         15px; // this is mobile first default, desktop default is 18px.
 $font-size-huge:         1.667em; // 30px
 $font-size-big:          1.333em; // 24px
 $font-size-mid:          1.222em; // 22px
@@ -58,11 +58,11 @@ $font-size-h6:           $font-size-xsmall;
 $font-weight-normal:     400;
 $font-weight-bold:       600;
 
-// Medium Small screen / tablet
+// Medium small screen / tablet.
 $screen-msm:             622px !default;
 $screen-msm-min:         $screen-msm !default;
 
-// Grid defaults
+// Grid defaults.
 $grid-columns: 12;
 
 $col-1: percentage((1/ $grid-columns));
@@ -81,7 +81,7 @@ $col-12: percentage((12/ $grid-columns));
 // Grid sizes without percentages.
 $col-1-no-percentage: (85 / $grid-columns);
 
-// Form control
+// Form control.
 $form-control-height:                             2.750em; //44px basing on form control base font size.
 
 // Form colors.
@@ -99,7 +99,7 @@ $state-danger-text:                               $brand-danger;
 $form-control-border-select-color-hover:          $brand-primary;
 $form-control-border-select-color-down:           $grey-base;
 
-// Checkbox and radio
+// Checkbox and radio.
 // Unchecked.
 $form-checkbox-color-unchecked:                   $grey-dark;
 $form-checkbox-background-color-unchecked:        $grey-lighter;
@@ -141,12 +141,12 @@ $external_link_pattern: 'href^="http"';
 $ec_url_patterns: '[href*="ec.europa.eu"]';
 
 // In order to override the 'default!', bootstrap variables have to be added
-// after the overrides
+// after the overrides.
 @import "../bootstrap-sass/bootstrap/variables";
 
-//** Point at which the navbar becomes uncollapsed.
+// Point at which the navbar becomes un-collapsed.
 $grid-float-breakpoint:     $screen-lg-min;
-//** Point at which the navbar begins collapsing.
+// Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 // Used languages.
