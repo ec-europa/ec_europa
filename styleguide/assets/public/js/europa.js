@@ -76,8 +76,9 @@
 
     fixBlockHeights: function ($block, stop) {
       $block.each(function () {
-        $wrapper = $(this);
-        var $blocks = [];
+        var $wrapper = $(this),
+            $blocks = [],
+            i, max;
 
         // Columns and rows.
         if ($wrapper.hasClass('listing__wrapper--two-columns') || $wrapper.hasClass('listing__wrapper--row-two') || $wrapper.hasClass('listing__wrapper--row-three')) {
@@ -126,7 +127,6 @@
           $blocks.push($wrapper.find('.listing__item-link > :first-child'));
         }
 
-        var i, max;
         for (i = 0, max = $blocks.length; i < max; i++) {
           var $block = $blocks[i].equalHeight();
         }
@@ -140,36 +140,38 @@
     }
   };
 
-  Drupal.europa.collapsing = function (showText, hideText) {
-    if (!showText) {
-      showText = Drupal.t("Show");
+  Drupal.europa.collapsing = function (show_text, hide_text) {
+    if (!show_text) {
+      show_text = Drupal.t('Show');
     }
 
-    if (!hideText) {
-      hideText = Drupal.t("Hide");
+    if (!hide_text) {
+      hide_text = Drupal.t('Hide');
     }
 
     $('button[data-toggle=collapse]').each(function () {
-      var dependentId = $(this).attr('data-target');
-      var toggler = $(dependentId).hasClass('in') ? hideText : showText;
-      var arrow = $('.icon', $(this));
-      var fillMe = $('.toggling-text', $(this));
-      fillMe.text(toggler);
+      var $this = $(this),
+          dependentId = $this.attr('data-target'),
+          toggler_text = $(dependentId).hasClass('in') ? hide_text : show_text,
+          $arrow = $('.icon', $this),
+          fillMe = $('.toggling-text', $this),
+          clicked = false;
 
-      $(this).click(function () {
-        var up = 'icon--up';
-        var down = 'icon--down';
-        var add = arrow.hasClass(down) ? up : down;
-        var rem = arrow.hasClass(down) ? down : up;
-        toggler = fillMe.text() == hideText ? showText : hideText;
-        fillMe.text(toggler);
-        arrow.addClass(add).removeClass(rem);
+      fillMe.text(toggler_text);
+
+      $this.click(function (event) {
+        toggler_text = fillMe.text() == hide_text ? show_text : hide_text;
+        if (!clicked) {
+          $arrow.removeClass('icon--down').addClass('icon--up');
+          clicked = true;
+        }
+        fillMe.text(toggler_text);
       });
     });
   };
 
-  var trackElements = [];
-  var errorEventSent = 'Piwik, trackEvent was not fired up.';
+  var trackElements = [],
+      errorEventSent = 'Piwik, trackEvent was not fired up.';
   /**
    * Acts like a wrapper for Piwik push method.
    *
