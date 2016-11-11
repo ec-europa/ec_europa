@@ -611,7 +611,7 @@ function europa_easy_breadcrumb(&$variables) {
 function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FALSE, $is_external = FALSE) {
   // Define the file icon class.
   $icons_available = ['image', 'audio', 'video'];
-  $file_icon_class = in_array($file->type, $icons_available) ? 'icon--' . $file->type : 'icon--file';
+  $file_icon_class = in_array($file->type, $icons_available) ? ' icon--' . $file->type : ' icon--file';
 
   // If we have a modifier, just append it to the class.
   $file_class = (!empty($modifier) ? ' ' . $modifier : '');
@@ -683,12 +683,12 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
   // Build the render array.
   $render_array = [
     '#type' => 'markup',
-    '#prefix' => '<div class="file file--widebar' . $file_class . '">',
+    '#prefix' => '<div class="file' . $file_class . '">',
     '#suffix' => '</div>',
   ];
 
   $render_array['icon'] = [
-    '#markup' => '<span class="file__icon icon ' . $file_icon_class . '"></span>',
+    '#markup' => '<span class="file__icon icon' . $file_icon_class . '"></span>',
   ];
 
   $render_array['file_metadata'] = [
