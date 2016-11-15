@@ -5442,7 +5442,7 @@ Style guide page-header.informational-home
     line-height: 1.33; }
 
 .page-header--image {
-  background: transparent url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) center cover no-repeat; }
+  background: transparent url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) center/cover no-repeat; }
 
 .page-header__eventinfo {
   float: left;
