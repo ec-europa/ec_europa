@@ -10,27 +10,27 @@ Markup: html/datepicker.html
 Style guide datepicker
 */
 
-// Local Variables
+// Local Variables.
 $datepicker-color-header: #393939;
 $datepicker-color-select: #4f4f4f;
 $datepicker-color-select-separator: #686868;
 $datepicker-color-background: #eaeaea;
 
-// Component
+// Component.
 #ui-datepicker-div {
-  border: none;
   width: 100%;
+  border: none;
 }
 
 .ui-datepicker {
+  padding: 0;
+  font-family: $font-family-sans-serif;
   border: none;
   border-radius: 0;
-  font-family: $font-family-sans-serif;
-  padding: 0;
 
-  // Datepicker header
+  // Datepicker header.
   .ui-datepicker-header {
-    background: $datepicker-color-header;
+    background-color: $datepicker-color-header;
     border: none;
     border-radius: 0;
     padding: 0 !important;
@@ -81,7 +81,7 @@ $datepicker-color-background: #eaeaea;
 
       span,
       select {
-        color: #fff;
+        color: $white;
       }
 
       span {
@@ -91,8 +91,8 @@ $datepicker-color-background: #eaeaea;
 
       select {
         @extend .form-control;
-        background: $datepicker-color-select;
-        color: #fff;
+        background-color: $datepicker-color-select;
+        color: $white;
         border: none;
         height: 100%;
         width: 49% !important;
@@ -116,7 +116,7 @@ $datepicker-color-background: #eaeaea;
         &:hover,
         &:active,
         &:focus {
-          color: #fff;
+          color: $white;
         }
       }
     }
@@ -137,7 +137,7 @@ $datepicker-color-background: #eaeaea;
 
   .ui-state-default {
     border: none;
-    background: #fff;
+    background-color: $white;
     color: #404040;
     text-align: center;
     margin: 1px;
@@ -150,8 +150,8 @@ $datepicker-color-background: #eaeaea;
   }
 
   .ui-state-highlight {
-    background: #fed500;
-    color: #000;
+    background-color: #fed500;
+    color: $black;
   }
 }
 
@@ -169,8 +169,7 @@ $datepicker-color-background: #eaeaea;
   }
 }
 
-// Positioning the calendar icon
-// Positioning the calendar icon
+// Positioning the calendar icon.
 .date-picker {
   position: relative;
 
@@ -179,7 +178,7 @@ $datepicker-color-background: #eaeaea;
     position: absolute;
     top: 2.35em;
     right: .5em;
-    //pointer-events:none to get the Icon not interfering with the clickable area.
+    // For the icon does not interfere with the clickable area.
     pointer-events: none;
     color: $grey;
   }

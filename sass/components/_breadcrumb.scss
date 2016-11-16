@@ -9,52 +9,52 @@ Style guide breadcrumb
 $breadcrumb-heigth: 2.778em;
 
 .breadcrumb {
-  border-bottom: 1px solid #fff;
-  background: none;
-  padding: 0;
+  @extend .hidden-print;
+  position: relative;
   margin: 0;
+  padding: 0;
+  line-height: normal;
+  background: none;
   font-size: 0.833em;
   font-weight: 600;
-  position: relative;
+  border-bottom: 1px solid $white;
   border-radius: 0;
-  line-height: normal;
-  @extend .hidden-print;
 
   ol,
   ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     max-width: none;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .breadcrumb__segment {
   display: none;
   position: relative;
-  margin: 1em 0 0.8em;
   width: 100%;
+  margin: 1em 0 0.8em;
 }
 
 a.breadcrumb__link {
   display: inline-block;
-  font-weight: bold;
-  margin-right: 8px;
   max-width: 100%;
-  color: #fff;
+  margin-right: 8px;
+  font-weight: bold;
+  color: $white;
   text-decoration: none;
 
   &::after {
     @extend .breadcrumb__link-arrow;
-    vertical-align: middle;
     position: relative;
     top: 1px;
+    vertical-align: middle;
   }
 
   &:hover,
   &:active,
   &:focus {
-    color: #fff;
+    color: $white;
 
     .breadcrumb__text {
       text-decoration: underline;
@@ -65,14 +65,14 @@ a.breadcrumb__link {
 .breadcrumb__link-arrow {
   @extend .icon--after;
   @extend .icon--breadcrumb;
-  color: #fff;
-  line-height: inherit !important;
-  margin-left: 8px !important;
-  font-weight: normal;
-  font-size: $font-size-xsmall;
   // Width has to be defined, otherwise javascript has issues with calculating
   // the breadcrumb segment width.
   width: 11px;
+  margin-left: 8px !important;
+  line-height: inherit !important;
+  font-size: $font-size-xsmall;
+  font-weight: normal;
+  color: $white;
 }
 
 .breadcrumb__segment--last,
@@ -141,17 +141,17 @@ Style guide breadcrumb.collapsible
 
 .breadcrumb--collapsible {
   .breadcrumb__btn-separator {
-    background: $blue-darkest;
-    line-height: $breadcrumb-heigth;
     display: inline-block;
     padding: 0 10px;
+    line-height: $breadcrumb-heigth;
+    background-color: $blue-darkest;
+    color: $white;
     cursor: pointer;
-    color: #fff;
 
     &:hover,
     &:active,
     &:focus {
-      background: #fff;
+      background-color: $white;
       color: $brand-primary;
 
       &::after {
@@ -204,9 +204,9 @@ Style guide breadcrumb.collapsible
     }
 
     .breadcrumb__text {
+      max-width: none;
       white-space: normal;
       overflow: visible;
-      max-width: none;
     }
 
     .breadcrumb__segment {
@@ -229,33 +229,33 @@ Style guide breadcrumb.collapsible
         padding-right: 25px;
 
         &::after {
-          content: '...'; 
+          content: '...';
           display: inline-block !important;
           position: relative;
           top: -4px;
-          color: #ffffff;
+          color: $white;
         }
 
         &::before {
-          text-decoration: none;
+          content: '\e828' !important;
+          display: inline-block !important;
+          position: absolute;
+          top: 30%;
+          right: 0;
+          margin-left: 8px !important;
+          margin-right: 4px;
+          line-height: inherit !important;
           font-family: 'EuropaIcons';
-          speak: none;
+          font-size: $font-size-xsmall;
           font-style: normal;
           font-weight: normal;
           font-variant: normal;
+          color: $white;
           text-transform: none;
-          margin-right: 4px;
+          text-decoration: none;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          display: inline-block !important;
-          position: absolute;
-          right: 0;
-          top: 30%;
-          color: #fff;
-          line-height: inherit !important;
-          margin-left: 8px !important;
-          font-size: $font-size-xsmall;
-          content: '\e828' !important;
+          speak: none;
         }
       }
     }

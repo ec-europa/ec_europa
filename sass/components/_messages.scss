@@ -16,35 +16,35 @@ $messages-text-size: $font-size-little;
   position: relative;
   margin: 0 0 1em;
   padding: 1em 1em 1em 4em;
+  overflow: hidden;
   background: url("../images/svg/messages-info.svg") no-repeat 1em 1em;
   font-family: $font-family-sans-serif;
   font-size: $messages-text-size;
   color: $messages-text-color;
   border: 2px solid $blue;
-  overflow: hidden;
 
   &.messages--icon-center {
     background-position: 1em center;
   }
 
   &.status {
-    border-color: $green;
     background-image: url("../images/svg/messages-success.svg");
+    border-color: $green;
   }
 
   &.warning {
-    border-color: $yellow;
     background-image: url("../images/svg/messages-warning.svg");
+    border-color: $yellow;
   }
 
   &.error {
-    border-color: #da2131;
     background-image: url("../images/svg/messages-error.svg");
+    border-color: $red;
   }
 
   &.live {
-    border-color: $yellow;
     background-image: url("../images/svg/live_streaming.svg");
+    border-color: $yellow;
   }
 
   h3 {

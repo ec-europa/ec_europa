@@ -9,12 +9,12 @@ Style guide table responsive
 */
 
 .table-responsive {
-  width: 100%; 
-  border-collapse: collapse;
-  table-layout: fixed;
-  border: none;
+  width: 100%;
   margin: 1em 0;
+  table-layout: fixed;
   font-size: $font-size-little;
+  border-collapse: collapse;
+  border: none;
 
   th {
     background-color: transparent;
@@ -23,9 +23,9 @@ Style guide table responsive
   }
 
   td, th {
+    display: table-cell;
     padding: 1em;
     vertical-align: middle;
-    display: table-cell;
 
     p {
       margin: 0;
@@ -58,29 +58,29 @@ Style guide table responsive
         }
 
         &::before {
-          content: attr(data-th); 
           display: block;
+          content: attr(data-th);
           font-weight: bold;
         }
 
         &.table-responsive__heading {
-          font-weight: bold;
-          color: #fff;
           background-color: $grey-base;
+          font-weight: bold;
+          color: $white;
         }
 
         &.table-responsive__group_label {
-          font-size: $font-size-little;
           padding-left: 1.5em;
+          font-size: $font-size-little;
 
           &::after {
-            content: attr(data-th-group);
             display: block;
-            font-weight: bold;
             position: absolute;
             top: -1.7em;
             left: 0.5em;
+            content: attr(data-th-group);
             font-size: $font-size-mid;
+            font-weight: bold;
           }
 
           ~ .table-responsive__group_element {
@@ -111,7 +111,7 @@ Style guide table responsive
 
     /* Zebra striping */
     tr:nth-of-type(even) { 
-      background-color: #f2f2f2;
+      background-color: $grey-lightest;
     }
   }
 }

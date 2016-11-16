@@ -139,50 +139,56 @@
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-form.html#kssref-form-form-group">
+              <a href="section-form.html#kssref-form-file-upload">
                 <span class="kss-nav__ref">14.3</span
+                ><span class="kss-nav__name">File upload</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-form.html#kssref-form-form-group">
+                <span class="kss-nav__ref">14.4</span
                 ><span class="kss-nav__name">Form Group</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-form.html#kssref-form-help-block">
-                <span class="kss-nav__ref">14.4</span
+                <span class="kss-nav__ref">14.5</span
                 ><span class="kss-nav__name">Help Block</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-form.html#kssref-form-label">
-                <span class="kss-nav__ref">14.5</span
+                <span class="kss-nav__ref">14.6</span
                 ><span class="kss-nav__name">Label</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-form.html#kssref-form-legend">
-                <span class="kss-nav__ref">14.6</span
+                <span class="kss-nav__ref">14.7</span
                 ><span class="kss-nav__name">Legend</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-form.html#kssref-form-radio">
-                <span class="kss-nav__ref">14.7</span
+                <span class="kss-nav__ref">14.8</span
                 ><span class="kss-nav__name">Radio</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-form.html#kssref-form-select">
-                <span class="kss-nav__ref">14.8</span
+                <span class="kss-nav__ref">14.9</span
                 ><span class="kss-nav__name">Select</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-form.html#kssref-form-text-input">
-                <span class="kss-nav__ref">14.9</span
+                <span class="kss-nav__ref">14.10</span
                 ><span class="kss-nav__name">Text Input</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-form.html#kssref-form-textarea">
-                <span class="kss-nav__ref">14.10</span
+                <span class="kss-nav__ref">14.11</span
                 ><span class="kss-nav__name">Textarea</span>
               </a>
             </li>
@@ -489,12 +495,148 @@
       </div>
 
       </section>
+      <section id="kssref-form-file-upload" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-form-file-upload">
+          <span class="kss-title__ref">14.3</span
+          >File upload
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <form>
+<div class="file-upload">
+  <label>Attach a file</label>
+  <div class="input-group">
+    <div class="form-control file-upload__input" tabindex="0">
+      <span class="file-upload__message">No file selected.</span>
+    </div>
+    <span class="input-group-btn">
+      <label class="btn btn-default file-upload__label" for="field-name-1">Browse</label>
+      <button class="btn btn-primary" type="button" tabindex="2">Upload</button>
+    </span>
+  </div>
+  <input type="file" id="field-name-1">
+  <button type="submit" value="upload">Upload</button>
+  <p class="help-block">
+    Files must be less than <strong>120 KB</strong>.<br>
+    Allowed file types: <strong>txt pdf</strong>.
+  </p>
+</div>
+</form>
+
+<h4>File upload error</h4>
+
+<div class="form-group has-error">
+  <div class="file-upload">
+    <div class="input-group">
+      <div class="form-control file-upload__input has-error" tabindex="0">
+        <span class="file-upload__message">No file selected.</span>
+      </div>
+      <span class="input-group-btn">
+        <label class="btn btn-default file-upload__label" for="field-name-2" tabindex="1">Browse</label>
+      </span>
+    </div>
+    <input type="file" id="field-name-2">
+  </div>
+</div>
+
+<script>
+  jQuery(function () {
+    jQuery('input[type="file"]').each(function () {
+      var $input = jQuery(this),
+          $message = $input.parent().find('.file-upload__message');
+
+      $input.on('change', function (event) {
+        if (this.files && event.target.value) {
+          // The value comes in the form of C:\something\fileName.
+          var filename = event.target.value.split('\\').pop();
+          // Show the selected filename in the field.
+          $message.html(filename);
+        }
+      });
+    });
+  });
+</script>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
+&lt;div class=&quot;file-upload&quot;&gt;
+  &lt;label&gt;Attach a file&lt;/label&gt;
+  &lt;div class=&quot;input-group&quot;&gt;
+    &lt;div class=&quot;form-control file-upload__input&quot; tabindex=&quot;0&quot;&gt;
+      &lt;span class=&quot;file-upload__message&quot;&gt;No file selected.&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;input-group-btn&quot;&gt;
+      &lt;label class=&quot;btn btn-default file-upload__label&quot; for=&quot;field-name-1&quot;&gt;Browse&lt;/label&gt;
+      &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; tabindex=&quot;2&quot;&gt;Upload&lt;/button&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;file&quot; id=&quot;field-name-1&quot;&gt;
+  &lt;button type=&quot;submit&quot; value=&quot;upload&quot;&gt;Upload&lt;/button&gt;
+  &lt;p class=&quot;help-block&quot;&gt;
+    Files must be less than &lt;strong&gt;120 KB&lt;/strong&gt;.&lt;br&gt;
+    Allowed file types: &lt;strong&gt;txt pdf&lt;/strong&gt;.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+
+&lt;h4&gt;File upload error&lt;/h4&gt;
+
+&lt;div class=&quot;form-group has-error&quot;&gt;
+  &lt;div class=&quot;file-upload&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;div class=&quot;form-control file-upload__input has-error&quot; tabindex=&quot;0&quot;&gt;
+        &lt;span class=&quot;file-upload__message&quot;&gt;No file selected.&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;span class=&quot;input-group-btn&quot;&gt;
+        &lt;label class=&quot;btn btn-default file-upload__label&quot; for=&quot;field-name-2&quot; tabindex=&quot;1&quot;&gt;Browse&lt;/label&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;input type=&quot;file&quot; id=&quot;field-name-2&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  jQuery(function () {
+    jQuery(&#x27;input[type=&quot;file&quot;]&#x27;).each(function () {
+      var $input = jQuery(this),
+          $message = $input.parent().find(&#x27;.file-upload__message&#x27;);
+
+      $input.on(&#x27;change&#x27;, function (event) {
+        if (this.files &amp;&amp; event.target.value) {
+          // The value comes in the form of C:\something\fileName.
+          var filename = event.target.value.split(&#x27;\\&#x27;).pop();
+          // Show the selected filename in the field.
+          $message.html(filename);
+        }
+      });
+    });
+  });
+&lt;/script&gt;
+</code></pre>
+      </div>
+
+      </section>
       <section id="kssref-form-form-group" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-form-form-group">
-          <span class="kss-title__ref">14.3</span
+          <span class="kss-title__ref">14.4</span
           >Form Group
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -536,7 +678,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-form-help-block">
-          <span class="kss-title__ref">14.4</span
+          <span class="kss-title__ref">14.5</span
           >Help Block
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -564,7 +706,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-form-label">
-          <span class="kss-title__ref">14.5</span
+          <span class="kss-title__ref">14.6</span
           >Label
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -592,7 +734,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-form-legend">
-          <span class="kss-title__ref">14.6</span
+          <span class="kss-title__ref">14.7</span
           >Legend
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -620,7 +762,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-form-radio">
-          <span class="kss-title__ref">14.7</span
+          <span class="kss-title__ref">14.8</span
           >Radio
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -690,7 +832,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-form-select">
-          <span class="kss-title__ref">14.8</span
+          <span class="kss-title__ref">14.9</span
           >Select
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -823,7 +965,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-form-text-input">
-          <span class="kss-title__ref">14.9</span
+          <span class="kss-title__ref">14.10</span
           >Text Input
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
@@ -909,7 +1051,7 @@
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-form-textarea">
-          <span class="kss-title__ref">14.10</span
+          <span class="kss-title__ref">14.11</span
           >Textarea
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>

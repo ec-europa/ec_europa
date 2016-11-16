@@ -46,7 +46,7 @@ Style guide form.checkbox
       width: $form-checkbox-icon-size;
       height: $form-checkbox-icon-size;
       margin-left: -20px;
-      background: #fff url('../images/svg/checkbox-unchecked.svg') no-repeat;
+      background: $white url('../images/svg/checkbox-unchecked.svg') no-repeat;
       border: 3px solid transparent;
       border-radius: 6px;
       @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out);

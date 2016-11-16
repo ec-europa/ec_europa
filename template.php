@@ -1013,19 +1013,18 @@ function europa_preprocess_html(&$variables) {
   $this_theme_path = drupal_get_path('theme', 'europa');
   $variables['theme_path'] = base_path() . $this_theme_path;
   $language = $variables['language'];
+
   if (isset($language->prefix)) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
   }
 
   // Add the ie9 only css.
-  drupal_add_css(
-    $this_theme_path . '/css/ie9.css',
-    [
-      'browsers' => [
-        'IE' => 'IE 9',
-        '!IE' => FALSE,
-      ],
-    ]
+  drupal_add_css($this_theme_path . '/css/ie9.css', [
+    'browsers' => [
+      'IE' => 'IE 9',
+      '!IE' => FALSE,
+    ],
+  ]
   );
   // Add conditional js.
   $ie9_js = [
@@ -1115,9 +1114,8 @@ function europa_preprocess_page(&$variables) {
 
   if (isset($node)) {
     // Adding generic introduction field to be later rendered in page template.
-    $variables['field_core_introduction'] = isset($node->field_core_introduction) ?
-      field_view_field('node', $node, 'field_core_introduction', ['label' => 'hidden']) :
-      NULL;
+    $variables['field_core_introduction'] = isset($node->field_core_introduction)
+        ? field_view_field('node', $node, 'field_core_introduction', ['label' => 'hidden']) : NULL;
 
     // Check if Display Suite is handling node.
     if (module_exists('ds')) {
@@ -1170,9 +1168,10 @@ function europa_preprocess_views_view(&$variables) {
  * Implements theme_pager().
  */
 function europa_pager($variables) {
+  global $pager_page_array, $pager_total;
+
   $element = $variables['element'];
   $parameters = $variables['parameters'];
-  global $pager_page_array, $pager_total;
   $pager_items_quantity = 9;
   $pager_max_quantity = 7;
   $pager_min_quantity = 5;
@@ -1223,39 +1222,32 @@ function europa_pager($variables) {
 
   $li_first = '';
   if ($i >= 2) {
-    $li_first = theme('pager_first',
-      [
-        'text' => 1,
-        'element' => $element,
-        'parameters' => $parameters,
-      ]
-    );
+    $li_first = theme('pager_first', [
+      'text' => 1,
+      'element' => $element,
+      'parameters' => $parameters,
+    ]);
   }
-  $li_previous = theme('pager_previous',
-    [
-      'text' => t('‹ Previous'),
-      'element' => $element,
-      'interval' => 1,
-      'parameters' => $parameters,
-    ]
-  );
-  $li_next = theme('pager_next',
-    [
-      'text' => t('Next ›'),
-      'element' => $element,
-      'interval' => 1,
-      'parameters' => $parameters,
-    ]
-  );
+  $li_previous = theme('pager_previous', [
+    'text' => t('‹ Previous'),
+    'element' => $element,
+    'interval' => 1,
+    'parameters' => $parameters,
+  ]);
+  $li_next = theme('pager_next', [
+    'text' => t('Next ›'),
+    'element' => $element,
+    'interval' => 1,
+    'parameters' => $parameters,
+  ]);
+
   $li_last = '';
   if ($pager_last < $pager_max) {
-    $li_last = theme('pager_last',
-      [
-        'text' => $pager_max,
-        'element' => $element,
-        'parameters' => $parameters,
-      ]
-    );
+    $li_last = theme('pager_last', [
+      'text' => $pager_max,
+      'element' => $element,
+      'parameters' => $parameters,
+    ]);
   }
 
   if ($pager_total[$element] > 1) {
@@ -1340,8 +1332,7 @@ function europa_pager($variables) {
         [
           'items' => $items,
           'attributes' => ['class' => ['pager']],
-        ]
-      );
+        ]);
 
     return '<div class="pager__wrapper">' . $pager_markup . '</div>';
   }
@@ -1356,6 +1347,7 @@ function europa_pager_link($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = $variables['attributes'];
+
   $page = isset($_GET['page']) ? $_GET['page'] : '';
   if ($new_page = implode(',', pager_load_array($page_new[$element], $element, explode(',', $page)))) {
     $parameters['page'] = $new_page;
@@ -1392,6 +1384,7 @@ function europa_pager_link($variables) {
   //   possible to use l() here.
   // @see http://drupal.org/node/1410574
   $attributes['href'] = url($_GET['q'], ['query' => $query]);
+
   return '<a' . drupal_attributes($attributes) . '>' . $text . '</a>';
 }
 
@@ -1400,11 +1393,12 @@ function europa_pager_link($variables) {
  */
 function europa_pager_first($variables) {
   global $pager_page_array;
+
+  $output = '';
+  $text = $variables['text'];
   $element = $variables['element'];
-  $text = $variables['text'];;
   $parameters = $variables['parameters'];
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
-  $output = '';
 
   // If we are anywhere but the first page.
   if ($pager_page_array[$element] > 0) {
@@ -1425,12 +1419,13 @@ function europa_pager_first($variables) {
  */
 function europa_pager_previous($variables) {
   global $pager_page_array;
+
+  $output = '';
+  $interval = $variables['interval'];
   $text = $variables['text'];
   $element = $variables['element'];
-  $interval = $variables['interval'];
   $parameters = $variables['parameters'];
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
-  $output = '';
 
   // If we are anywhere but the first page.
   if ($pager_page_array[$element] > 0) {
@@ -1464,13 +1459,14 @@ function europa_pager_previous($variables) {
  * Implements theme_pager_next().
  */
 function europa_pager_next($variables) {
+  global $pager_page_array, $pager_total;
+
+  $output = '';
+  $interval = $variables['interval'];
   $text = $variables['text'];
   $element = $variables['element'];
-  $interval = $variables['interval'];
   $parameters = $variables['parameters'];
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
-  global $pager_page_array, $pager_total;
-  $output = '';
 
   // If we are anywhere but the last page.
   if ($pager_page_array[$element] < ($pager_total[$element] - 1)) {
@@ -1504,11 +1500,12 @@ function europa_pager_next($variables) {
  */
 function europa_pager_last($variables) {
   global $pager_page_array, $pager_total;
-  $element = $variables['element'];
+
+  $output = '';
   $text = $variables['text'];
+  $element = $variables['element'];
   $parameters = $variables['parameters'];
   $attributes = isset($variables['attributes']) ? $variables['attributes'] : [];
-  $output = '';
 
   // If we are anywhere but the n-5th page.
   if ($pager_page_array[$element] < ($pager_total[$element] - 1)) {

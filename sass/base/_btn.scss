@@ -60,8 +60,8 @@ Style guide buttons
 
     &:hover,
     &:focus  {
-      background: $brand-primary;
-      color: #fff;
+      background-color: $brand-primary;
+      color: $white;
     }
   }
 
@@ -70,31 +70,31 @@ Style guide buttons
 
     &:hover,
     &:active {
-      background: #fff;
+      background-color: $white;
       color: $brand-primary;
     }
 
     &:focus {
-      background: $brand-primary;
-      color: #fff;
+      background-color: $brand-primary;
+      color: $white;
     }
   }
 
   &.btn-secondary {
-    background: #fff;
+    background-color: $white;
     color: $brand-primary;
-    border-color: #fff;
+    border-color: $white;
   }
 
   &.btn-ctn {
-    background: $yellow-light;
-    color: #000;
     @include _white_space_reset_mixin();
+    background-color: $yellow-light;
+    color: $black;
 
     &:hover,
     &:active {
+      background-color: $yellow-light;
       border-color: $text-color;
-      background: $yellow-light;
     }
 
     &:focus {
@@ -111,14 +111,14 @@ Style guide buttons
   }
 
   &.btn-menu {
-    background: $brand-primary;
-    color: #fff;
+    background-color: $brand-primary;
+    color: $white;
     border-color: $brand-primary;
 
     &:hover,
     &:active,
     &:focus {
-      color: #fff;
+      color: $white;
     }
 
     &:active,
@@ -139,7 +139,7 @@ Style guide buttons
       top: -2px;
       margin-left: 6px !important;
       font-size: 0.45em;
-      transition: all 0.3s ease 0s;
+      @include transition(all 0.3s ease 0s);
     }
 
     &.is-collapsed {
@@ -151,13 +151,13 @@ Style guide buttons
 }
 
 .btn-ctn--border {
-  background: $yellow-light;
-  color: #000;
-  border-color: #000;
+  background-color: $yellow-light;
+  color: $black;
+  border-color: $black;
 
   &:hover,
   &:active {
-    border-color: #000;
+    border-color: $black;
   }
 
   &:focus {
@@ -206,11 +206,11 @@ Style guide buttons.btn-block
 */
 
 .btn-block {
-  width: 100%;
   max-width: 450px;
+  width: 100%;
   margin-bottom: -2px !important;
-  text-align: left;
   @include _white_space_reset_mixin();
+  text-align: left;
 
   &:last-child {
     margin-bottom: 10px;
@@ -232,12 +232,12 @@ Style guide buttons.btn-search
 */
 
 .btn.btn-search {
-  background: $grey-light;
+  background-color: $grey-light;
   color: $blue-dark;
-  border-color: #fff;
+  border-color: $white;
 
   &:hover {
-    background: $grey-light;
+    background-color: $grey-light;
     color: $grey-base;
   }
 }
@@ -272,14 +272,14 @@ Style guide buttons.btn-collapse
 
     &::before {
       vertical-align: bottom;
-      transition: all 0.3s ease 0s;
+      @include transition(all 0.3s ease 0s);
     }
   }
 
   &:hover,
   &:focus {
     .icon::before {
-      color: #fff;
+      color: $white;
     }
   }
 

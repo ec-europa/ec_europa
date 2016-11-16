@@ -11,12 +11,12 @@ Style guide inpagenav
 */
 
 .inpage-nav__wrapper {
-  margin-bottom: 1.667em;
   @extend .hidden-print;
+  margin-bottom: 1.667em;
 
   &.affix,
   &.affix-top {
-    position:relative;
+    position: relative;
   }
 }
 
@@ -29,19 +29,19 @@ Style guide inpagenav
     li {
       &.active {
         .inpage_nav__list-item {
+          background-color: $grey-lighter;
           border-color: $brand-primary;
-          background: $grey-lighter;
         }
       }
     }
   }
 
   .inpage_nav__list-item {
+    display: block;
     padding-top: 7px;
     padding-bottom: 7px;
     padding-left: 8px;
-    display: block;
-    color: #000;
+    color: $black;
     font-size: $font-size-little;
     font-weight: bold;
     border-left: 3px solid transparent;
@@ -53,7 +53,7 @@ Style guide inpagenav
     }
 
     &:focus {
-      background: $yellow-light !important;
+      background-color: $yellow-light !important;
       outline: none;
       text-decoration: underline;
     }
@@ -61,8 +61,8 @@ Style guide inpagenav
 }
 
 .inpage-nav__navbar {
-  background-color: #ffffff;
-  color: #ffffff;
+  background-color: $white;
+  color: $white;
 
   .inpage-nav__current-wrapper {
     overflow: hidden;
@@ -74,62 +74,62 @@ Style guide inpagenav
   }
 
   .inpage-nav__current {
-    color: #ffffff;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     display: block;
     width: 100%;
-    overflow: hidden;
-    font-weight: bold;
-    font-size: 1em;
-    cursor: pointer;
     padding-top: 1em;
+    overflow: hidden;
+    font-size: $font-size-medium;
+    font-weight: bold;
+    color: $white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
 
     &:hover {
-      color: #fff;
+      color: $white;
     }
   }
 
   .inpage-nav__help {
     display: none;
+    padding-top: 1.35em;
     background-color: $grey-lighter;
     font-size: $font-size-xsmall;
-    text-transform: uppercase;
     color: $grey-dark;
-    padding-top: 1.35em;
+    text-transform: uppercase;
   }
 
   .inpage-nav__title {
     display: block;
-    font-size: 1em;
     padding: 1em;
     line-height: 1;
+    font-size: $font-size-medium;
     font-weight: bold;
   }
 
   .inpage-nav__toggle {
     @extend .btn;
     margin: 0;
+    padding: 1em;
     background-color: $blue-darkest;
     border-color: $blue-darkest;
-    padding: 1em;
 
     &:hover,
     &:active,
     &:focus {
       background-color: $blue-darkest;
+      color: $white;
       text-decoration: none;
-      color: #ffffff;
     }
   }
 
   .inpage-nav__icon-arrow {
     display: block;
-    transition: all 0.3s ease 0s;
-    transform-origin: 50% 50%;
-    color: #ffffff;
     margin: 5px 4px;
     font-size: 10px;
+    color: $white;
+    @include transition(all 0.3s ease 0s);
+    transform-origin: 50% 50%;
 
     &::before {
       margin-right: 0;
@@ -147,8 +147,8 @@ Style guide inpagenav
   }
 
   .inpage-nav__container {
-    padding: 0;
     width: auto;
+    padding: 0;
     background-color: $blue-dark;
 
     .navbar-collapse {
@@ -167,10 +167,10 @@ Style guide inpagenav
       }
 
       .inpage_nav__list-item {
-        color: #fff;
-        border-top: 1px solid $blue-darkest;
         padding: 0.8em 0 0.8em 1em;
         font-size: $font-size-little;
+        color: $white;
+        border-top: 1px solid $blue-darkest;
 
         &:hover,
         &:focus {
@@ -197,16 +197,16 @@ Style guide inpagenav
 
     .inpage-nav__help,
     .inpage-nav__close-text {
-       display: block;
+      display: block;
     }
 
     .inpage-nav__current {
-     display: none;
+      display: none;
     }
 
     .inpage-nav__header{
-     background-color: $grey-lighter;
-     font-weight: normal;
+      background-color: $grey-lighter;
+      font-weight: normal;
     }
 
     .inpage-nav__toggle {
@@ -214,8 +214,8 @@ Style guide inpagenav
       border-color: $grey;
 
       .inpage-nav__icon-arrow {
-        @include rotate(180deg);
         color: $grey-dark;
+        @include rotate(180deg);
       }
     }
   }
@@ -224,9 +224,9 @@ Style guide inpagenav
 .inpage-nav__block-title {
   display: inherit;
   font-size: $font-size-base;
-  text-transform: uppercase;
   font-weight: normal;
   color: $grey-dark;
+  text-transform: uppercase;
 }
 
 .is-inpage-nav-open {

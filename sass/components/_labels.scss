@@ -17,7 +17,7 @@ Markup: html/labels.html
 Style guide labels
 */
 
-$label_text_color_light: #fff;
+$label_text_color_light: $white;
 
 .label {
   display: inline-block;
@@ -64,13 +64,13 @@ $label_text_color_light: #fff;
 }
 
 .label--upper {
-  text-transform: uppercase;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .label--highlight {
-  color: $grey-base;
   background-color: $yellow-light;
+  color: $grey-base;
 
   &.label--meta {
     &::after {
@@ -81,8 +81,8 @@ $label_text_color_light: #fff;
 }
 
 .label--status {
-  color: $grey-base;
   background-color: $grey-lighter;
+  color: $grey-base;
 }
 
 .label--block {
@@ -92,8 +92,8 @@ $label_text_color_light: #fff;
 
 .label--high {
   min-height: 2.75em;
-  line-height: 2.75em;
   padding: 0.3em 1em;
+  line-height: 2.75em;
   font-size: $font-size-xsmall;
 }
 
@@ -108,6 +108,6 @@ $label_text_color_light: #fff;
 
 .label--meta-medium {
   @extend .label--meta;
-  font-size: 75%;
   margin: 0.35em 0.5em 0.45em 0;
+  font-size: 75%;
 }

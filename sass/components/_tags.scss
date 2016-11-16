@@ -9,19 +9,19 @@ Style guide tags
 */
 
 .tags {
+  width: 100%;
   padding-top: 0.2em;
   padding-bottom: 0.8em;
-  width: 100%;
   overflow: hidden;
 }
 
 .tags__label {
   float: left;
-  text-transform: uppercase;
   margin-right: 0.7em;
   margin-bottom: 0.5em;
-  font-size: $font-size-xsmall;
   padding-top: 0.15em;
+  font-size: $font-size-xsmall;
+  text-transform: uppercase;
 }
 
 .tags__items {
@@ -33,13 +33,13 @@ Style guide tags
   display: inline-block;
   margin-right: 1.4em;
   margin-bottom: 0.4em;
-  background: $grey-light;
-  border-radius: 5px;
-  font-size: $font-size-xsmall;
-  line-height: 1;
   padding: 0.5em;
-  text-transform: lowercase;
+  line-height: 1;
+  background-color: $grey-light;
+  font-size: $font-size-xsmall;
   color: $text-color;
+  text-transform: lowercase;
+  border-radius: 5px;
   outline: 3px transparent solid;
 }
 
@@ -69,9 +69,10 @@ Style guide tags.facettag
 
 .facet-tag {
   @extend .tags;
+
   @include breakpoint(screen-xs-min) {
-    width: auto;
     display: inline-block;
+    width: auto;
   }
 }
 
@@ -111,8 +112,8 @@ Style guide tags.facet-close
   .tags__item a,
   a.tags__item {
     &:hover {
-      color: #fff;
       background-color: $grey-base;
+      color: $white;
     }
   }
 }

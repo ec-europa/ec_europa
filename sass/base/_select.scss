@@ -12,9 +12,9 @@ Style guide form.select
 
 .select {
   // Hide the arrow.
-  appearance:none;
-  -moz-appearance:none; /* Firefox */
-  -webkit-appearance:none; /* Safari and Chrome */
+  appearance: none;
+  -moz-appearance: none;    // Firefox.
+  -webkit-appearance: none; // Safari and Chrome.
   text-indent: 0.01px;
   text-overflow: '';
   cursor: pointer;
@@ -25,20 +25,20 @@ Style guide form.select
   }
 
   &.form-control {
-    @include select-list-arrow($form-control-border-color);
     // To not make it overlap.
     padding-right: 50px;
+    @include select-list-arrow($form-control-border-color);
   }
 
   // Hover state.
   &:hover,&.hover {
-    border-color: $form-control-border-select-color-hover;
     @include select-list-arrow($form-control-border-select-color-hover);
+    border-color: $form-control-border-select-color-hover;
   }
 
   // Down state.
   &.is-down {
-    @include select-list-arrow(#ffffff, true);
+    @include select-list-arrow($white, true);
   }
 }
 

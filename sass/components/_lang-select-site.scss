@@ -41,10 +41,10 @@ Style guide: siteheader.langselect
 
   .lang-select-site__code {
     display: inline-block;
-    text-transform: uppercase;
     position: relative;
-    color: $brand-primary;
     width: $font-size-xsmall * 2;
+    color: $brand-primary;
+    text-transform: uppercase;
   }
 
   .lang-select-site__code-text {
@@ -52,16 +52,16 @@ Style guide: siteheader.langselect
     top: 0;
     left: -1px;
     font-size: $font-size-xsmall;
-    color: #fff;
+    color: $white;
   }
 
   .lang-select-site__icon {
     position: absolute;
     top: -1px;
     left: -1px;
-    color: $brand-primary;
-    font-size: $font-size-xsmall * 2;
     line-height: 1.4;
+    font-size: $font-size-xsmall * 2;
+    color: $brand-primary;
 
     &::before {
       font-weight: inherit;
@@ -71,7 +71,7 @@ Style guide: siteheader.langselect
 
 @include breakpoint(screen-md-min) {
   .lang-select-site {
-    position: static;
     float: left;
+    position: static;
   }
 }

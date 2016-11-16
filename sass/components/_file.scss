@@ -170,12 +170,12 @@ Style guide file.4
 .file__translations {
   margin-bottom: 1em;
   padding: 0 1.450em;
-  font-size: 0.889em;
+  font-size: $font-size-little;
   text-align: right;
 
   .file__translations-control {
     margin-top: 0.444em;
-    font-size: 1em;
+    font-size: $font-size-medium;
     text-decoration: none;
 
     &:active,
@@ -196,7 +196,7 @@ Style guide file.4
       @extend .icon--blue-dark;
       position: relative;
       margin-left: 0.525em !important;
-      transition: all 0.3s ease 0s;
+      @include transition(all 0.3s ease 0s);
     }
 
     &.is-collapsed {
