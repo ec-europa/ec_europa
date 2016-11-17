@@ -1,6 +1,6 @@
-// Custom mixins
+// Custom mixins.
 
-// Breakpoints
+// Breakpoints.
 @mixin breakpoint($point) {
   @if $point == screen-lg-min {
     @media (min-width: $screen-lg-min) {
@@ -37,11 +37,13 @@
 @mixin select-list-arrow($background-color, $arrow-grey:false) {
   @if ($arrow-grey) {
     background: url("../images/svg/arrow-down.svg"), linear-gradient(to bottom, $background-color, $background-color);
+
     .no-svg & {
       background: url("../images/png/arrow-down.png"), linear-gradient(to bottom, $background-color, $background-color);
     }
   } @else {
     background: url("../images/svg/arrow-down--white.svg"), linear-gradient(to bottom, $background-color, $background-color);
+
     .no-svg & {
       background: url("../images/png/arrow-down--white.png"), linear-gradient(to bottom, $background-color, $background-color);
     }
@@ -49,11 +51,11 @@
 
   background-repeat: no-repeat;
   background-position: right (($form-control-height - $font-size-medium) / 2) - $form-border-width center, right;
-  // Important to make the styleguide not break.
+  // Important to make the style guide not break.
   background-size: $font-size-medium + 0.10em (20em / 32.6em) * $font-size-medium, $form-control-height 100%!important;
   transition: none;
 
-  // Specific size for internet explorer 10+.
+  // Specific size for IE10+.
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     background-size: $font-size-medium + 0.10em (20em / 32.6em) * $font-size-medium, $form-control-height 100%!important;
   }
@@ -66,8 +68,9 @@
       .logo--logotype {
         background-image: url("#{$file_path}#{$item}#{$file_extension}");
       }
+
       @media print {
-        .logo--logotype:before {
+        .logo--logotype::before {
           content: url("#{$file_path}#{$item}#{$file_extension}");
         }
       }
@@ -87,7 +90,7 @@
     position: absolute;
     visibility: visible;
     right: 0;
-    background: $grey-base;
+    background-color: $grey-base;
     color: #fff;
     padding: 0.2em 1em;
     cursor: pointer;
@@ -100,8 +103,8 @@
     max-height: none;
 
     &::before {
-      background: transparent;
-      font-size: 0px;
+      background-color: transparent;
+      font-size: 0;
     }
   }
 }
@@ -113,11 +116,12 @@
   position: relative;
 }
 
-// External link specific adjustments
+// External link specific adjustments.
 @mixin _page_header_external_link_mixin() {
   padding-right: 1.1em;
   display: inline-block;
-  &:after {
+
+  &::after {
     position: absolute;
     line-height: 2.2;
   }
@@ -128,23 +132,23 @@
 }
 
 @mixin _listing_external_link_mixin() {
-  &:after {
+  &::after {
     display: none !important;
   }
+
   .listing__title,
   .highlighted-item h3 {
     @extend .is-external;
     padding-right: 1.2em;
 
-    &:after {
+    &::after {
       position: absolute;
       line-height: 1.6;
     }
   }
 }
 
-// Focus outline border
-
+// Focus outline border.
 @mixin _focus_outline_border($thicknes:3px, $color:$yellow-light, $offset:0, $text-decoration:underline) {
   &:focus {
     outline: $thicknes solid $color;
@@ -153,7 +157,7 @@
   }
 }
 
-// Should be used only with @extend
+// Should be used only with @extend.
 .icon--after {
   text-decoration: none;
   font-family: 'EuropaIcons';
@@ -170,7 +174,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-// [converter] $parent hack
+// [converter] $parent hack.
 @mixin hidden-print($selector) {
   #{$selector} {
     display: none !important;
@@ -181,14 +185,14 @@
   @include hidden-print('.hidden-print');
 }
 
-// Social icons image
+// Social icons image.
 @mixin social_icon_background($selector, $social_path, $image, $image_hover, $extra: null, $extra_hover: null) {
   #{$selector} {
-    &:before {
+    &::before {
       background: url($social_path + $image) no-repeat $extra;
     }
 
-    &:hover:before {
+    &:hover::before {
       background-image: url($social_path + $image_hover) $extra_hover;
     }
   }

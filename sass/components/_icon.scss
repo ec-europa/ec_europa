@@ -1,7 +1,7 @@
 /*
 Icon
 
-Icons using europa icons font
+Icons using europa icons font.
 
 Markup: html/icon.html
 
@@ -50,8 +50,9 @@ Markup: html/icon.html
 .icon--calendar - Calendar icon
 .icon--location - Location icon
 .icon--livestreaming - Live streaming icon
+.icon--camera - Camera icon
 
-Styleguide: icon
+Style guide: icon
 */
 
 @font-face {
@@ -64,7 +65,7 @@ Styleguide: icon
 }
 
 .icon {
-  &:before {
+  &::before {
     text-decoration: none;
     display: inline-block;
     font-family: 'EuropaIcons';
@@ -87,7 +88,7 @@ Styleguide: icon
 }
 
 .icon--external {
-  &:before {
+  &::before {
     @extend .icon--external;
   }
 }
@@ -102,7 +103,7 @@ Styleguide: icon
 }
 
 .icon--arrow-up {
-  &:before {
+  &::before {
     @extend .icon--arrow-up;
   }
 }
@@ -112,73 +113,73 @@ Styleguide: icon
 }
 
 .icon--arrow-down {
-  &:before {
+  &::before {
     @extend .icon--arrow-down;
   }
 }
 
 .icon--spinner {
-  &:before {
+  &::before {
     content: '\e805';
   }
 }
 
 .icon--facebook {
-  &:before {
+  &::before {
     content: '\e809';
   }
 }
 
 .icon--livestreaming {
-  &:before {
+  &::before {
     content: "\e81c";
   }
 }
 
 .icon--location {
-  &:before {
+  &::before {
     content: "\e81b";
   }
 }
 
 .icon--twitter {
-  &:before {
+  &::before {
     content: '\e817';
   }
 }
 
 .icon--googleplus {
-  &:before {
+  &::before {
     content: '\e80c';
   }
 }
 
 .icon--linkedin {
-  &:before {
+  &::before {
     content: '\e810';
   }
 }
 
 .icon--rss {
-  &:before {
+  &::before {
     content: '\e813';
   }
 }
 
 .icon--language {
-  &:before {
+  &::before {
     content: '\e824';
   }
 }
 
 .icon--search {
-  &:before {
+  &::before {
     content: '\e823';
   }
 }
 
 .icon--up {
-  &:before {
+  &::before {
     content: '\e827';
   }
 }
@@ -188,7 +189,7 @@ Styleguide: icon
 }
 
 .icon--right {
-  &:before {
+  &::before {
     @extend .icon--right;
   }
 }
@@ -200,43 +201,43 @@ Styleguide: icon
 .icon--down {
   content: '\e81F';
 
-  &:before {
+  &::before {
     content: '\e81F';
   }
 }
 
 .icon--left {
-  &:before {
+  &::before {
     content: '\e826';
   }
 }
 
 .icon--file {
-  &:before {
+  &::before {
     content: '\e80a';
   }
 }
 
 .icon--audio {
-  &:before {
+  &::before {
     content: '\e801';
   }
 }
 
 .icon--brochure {
-  &:before {
+  &::before {
     content: '\e802';
   }
 }
 
 .icon--edit {
-  &:before {
+  &::before {
     content: '\e807';
   }
 }
 
 .icon--image {
-  &:before {
+  &::before {
     content: '\e80d';
   }
 }
@@ -246,109 +247,109 @@ Styleguide: icon
 }
 
 .icon--download {
-  &:before {
+  &::before {
     @extend .icon--download;
   }
 }
 
 .icon--infographic {
-  &:before {
+  &::before {
     content: '\e80f';
   }
 }
 
 .icon--multiple-files {
-  &:before {
+  &::before {
     content: '\e820';
   }
 }
 
 .icon--organigram {
-  &:before {
+  &::before {
     content: '\e811';
   }
 }
 
 .icon--package {
-  &:before {
+  &::before {
     content: '\e812';
   }
 }
 
 .icon--slides {
-  &:before {
+  &::before {
     content: '\e814';
   }
 }
 
 .icon--video {
-  &:before {
+  &::before {
     content: '\e800';
   }
 }
 
 .icon--error {
-  &:before {
+  &::before {
     content: '\e82F';
   }
 }
 
 .icon--success {
-  &:before {
+  &::before {
     content: '\e816';
   }
 }
 
 .icon--warning {
-  &:before {
+  &::before {
     content: '\e804';
   }
 }
 
 .icon--budget {
-  &:before {
+  &::before {
     content: '\e81a';
   }
 }
 
 .icon--digital {
-  &:before {
+  &::before {
     content: '\e80b';
   }
 }
 
 .icon--energy {
-  &:before {
+  &::before {
     content: '\e818';
   }
 }
 
 .icon--euro {
-  &:before {
+  &::before {
     content: '\e803';
   }
 }
 
 .icon--global {
-  &:before {
+  &::before {
     content: '\e829';
   }
 }
 
 .icon--growth {
-  &:before {
+  &::before {
     content: '\e82a';
   }
 }
 
 .icon--regulation {
-  &:before {
+  &::before {
     content: '\e82b';
   }
 }
 
 .icon--feedback {
-  &:before {
+  &::before {
     content: '\e82e';
   }
 }
@@ -356,7 +357,7 @@ Styleguide: icon
 .icon--check {
   content: '\e816';
 
-  &:before {
+  &::before {
     @extend .icon--check;
   }
 }
@@ -364,7 +365,7 @@ Styleguide: icon
 .icon--generic-lang {
   content: '\e81e';
 
-  &:before {
+  &::before {
     @extend .icon--generic-lang;
   }
 }
@@ -372,7 +373,7 @@ Styleguide: icon
 .icon--tag-close {
   content: '\e82c';
 
-  &:before {
+  &::before {
     @extend .icon--tag-close;
   }
 }
@@ -380,14 +381,20 @@ Styleguide: icon
 .icon--tag-close-hover {
   content: '\e82d';
 
-  &:before {
+  &::before {
     @extend .icon--tag-close-hover;
   }
 }
 
 .icon--calendar {
-  &:before {
+  &::before {
     content: '\e81d';
+  }
+}
+
+.icon--camera {
+  &::before {
+    content: '\e900';
   }
 }
 
@@ -401,7 +408,7 @@ Styleguide: icon
   text-align: center;
   display: inline-block;
 
-  &:before {
+  &::before {
     margin-right: 0;
     line-height: inherit;
   }
@@ -418,7 +425,7 @@ Styleguide: icon
 // States
 // creating spinning animation for an icon
 // in order to enable spinning apend .is-spinning class next to the .icon class
-.is-spinning:before {
+.is-spinning::before {
   @include animation(icon-spin-right 2s infinite linear);
 }
 

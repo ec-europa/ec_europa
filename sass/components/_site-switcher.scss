@@ -8,14 +8,14 @@ Markup: html/site-switcher.html
 .site-switcher--header - Header modifier
 .site-switcher--footer - Footer modifier
 
-Styleguide: siteswitcher
+Style guide: siteswitcher
 */
 
 .site-switcher {
+  @extend .hidden-print;
   background: $grey-lightest;
   display: block;
   font-size: $font-size-little;
-  @extend .hidden-print;
 }
 
 .site-switcher__list {
@@ -47,14 +47,14 @@ Styleguide: siteswitcher
     line-height: 1.3;
     font-weight: bold;
 
-    &:after,
-    &.is-external:after {
+    &::after,
+    &.is-external::after {
       content: none !important;
     }
   }
 
   &.is-selected {
-    background: $blue-dark;
+    background-color: $blue-dark;
     border-left: none;
 
     & > a {
@@ -73,19 +73,17 @@ Styleguide: siteswitcher
   .site-switcher__option {
     position: relative;
 
-    &.is-selected:after {
+    &.is-selected::after {
+      position: absolute;
       top: 95%;
       left: 50%;
-      border: solid transparent;
-      content: " " !important;
-      height: 0;
       width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-color: rgba(0, 68, 148, 0);
-      border-top-color: $blue-dark;
-      border-width: 10px;
+      height: 0;
       margin-left: -10px;
+      content: " " !important;
+      border: 10px solid rgba(0, 68, 148, 0);
+      border-top-color: $blue-dark;
+      pointer-events: none;
     }
   }
 }
@@ -102,19 +100,17 @@ Styleguide: siteswitcher
   .site-switcher__option {
     position: relative;
 
-    &.is-selected:after {
-      bottom: 95%;
-      left: 50%;
-      border: solid transparent;
-      content: " " !important;
-      height: 0;
-      width: 0;
+    &.is-selected::after {
       position: absolute;
-      pointer-events: none;
-      border-color: rgba(0, 68, 148, 0);
-      border-bottom-color: $blue-dark;
-      border-width: 10px;
+      left: 50%;
+      bottom: 95%;
+      width: 0;
+      height: 0;
       margin-left: -10px;
+      content: " " !important;
+      border: 10px solid rgba(0, 68, 148, 0);
+      border-bottom-color: $blue-dark;
+      pointer-events: none;
     }
   }
 }

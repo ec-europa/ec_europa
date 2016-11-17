@@ -649,7 +649,7 @@ function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FAL
     $title_string = $file_language_string . ' ' . t('version');
   }
   else {
-    $file_info_string = isset($file_language_string) ? '<span class="file__contentlanguage">' . $file_language_string . ' </span>' : '';
+    $file_info_string = isset($file_language_string) ? '<span class="file__content-language">' . $file_language_string . ' </span>' : '';
     $file_info_string .= !empty($file_info_parts) ? '(' . implode(' - ', $file_info_parts) . ')' : '';
 
     // Use the description as the link text if available.
@@ -788,6 +788,11 @@ function europa_preprocess_block(&$variables) {
 
     case 'menu-dt-service-links':
       $block->subject = '';
+      break;
+
+    case 'views_related_links':
+      $variables['classes_array'][] = 'link-block';
+      $variables['title_attributes_array']['class'][] = 'link-block__title';
       break;
   }
 
@@ -1012,14 +1017,6 @@ function europa_preprocess_html(&$variables) {
     $variables['classes_array'][] = 'language-' . $language->prefix;
   }
 
-  // Add site information. This is just a temporary solution.
-  if (module_exists('dt_core_pol')) {
-    $variables['classes_array'][] = 'site-political';
-  }
-  elseif (module_exists('dt_core_info')) {
-    $variables['classes_array'][] = 'site-information';
-  }
-
   // Add the ie9 only css.
   drupal_add_css(
     $this_theme_path . '/css/ie9.css',
@@ -1061,7 +1058,6 @@ function europa_preprocess_html(&$variables) {
     $variables['head_title'] = $site_name;
     drupal_set_title($site_name);
   }
-
 }
 
 /**
@@ -1177,7 +1173,7 @@ function europa_pager($variables) {
   $element = $variables['element'];
   $parameters = $variables['parameters'];
   global $pager_page_array, $pager_total;
-  $pager_items_quantity = isset($variables['quantity']) ? $variables['quantity'] : 9;
+  $pager_items_quantity = 9;
   $pager_max_quantity = 7;
   $pager_min_quantity = 5;
 
@@ -1343,11 +1339,11 @@ function europa_pager($variables) {
         'item_list',
         [
           'items' => $items,
-          'attributes' => ['class' => ['pager__list']],
+          'attributes' => ['class' => ['pager']],
         ]
       );
 
-    return '<div class="pager">' . $pager_markup . '</div>';
+    return '<div class="pager__wrapper">' . $pager_markup . '</div>';
   }
 }
 

@@ -3,7 +3,7 @@ Textarea
 
 Markup: html/textarea.html
 
-Styleguide form.textarea
+Style guide form.textarea
 */
 
 textarea {
@@ -13,12 +13,13 @@ textarea {
 }
 
 .form-group .messages.error {
-  border: none;
   background-color: $grey-lighter;
+  border: none;
 
   h3 {
     font-size: inherit;
   }
+
   p {
     font-size: $font-size-little;
   }

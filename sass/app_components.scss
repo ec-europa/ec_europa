@@ -24,7 +24,6 @@
 @import "components/block";
 @import "components/breadcrumb";
 @import "components/comment";
-@import "components/comments-counter";
 @import "components/context-nav";
 @import "components/date-block";
 @import "components/datepicker";
@@ -46,6 +45,7 @@
 @import "components/labels";
 @import "components/lang-select-site";
 @import "components/lang-select-page";
+@import "components/link-block";
 @import "components/listing";
 @import "components/logo";
 @import "components/meta";
@@ -53,6 +53,7 @@
 @import "components/notification";
 @import "components/page-header";
 @import "components/pager";
+@import "components/profile-topbar";
 @import "components/rss-link";
 @import "components/site-header";
 @import "components/site-slogan";
@@ -66,6 +67,7 @@
 @import "components/tags";
 @import "components/timeline";
 @import "components/top-image";
+@import "components/table-responsive";
 
 // Drupal hacks
 @import "drupal-hacks";

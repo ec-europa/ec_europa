@@ -5,15 +5,15 @@ Note: Resize the width of the page to see the responsive layout.
 
 Markup: html/pager.html
 
-Styleguide pager
+Style guide pager
 */
 
-.pager {
+.pager__wrapper {
   text-align: center;
   border-top: 2px solid $black;
 }
 
-.pager__list {
+.pager {
   display: inline-block;
   padding-left: 0;
   margin: $line-height-computed 0;
@@ -32,9 +32,9 @@ Styleguide pager
     &.pager__item {
       // Prettifying.
       list-style: none;
-
       // Mobile-first hides all pager items.
       display: none;
+
       // Except prev, next and current.
       &.pager__item--previous,
       &.pager__item--next {
@@ -51,10 +51,12 @@ Styleguide pager
           font-weight: $font-weight-bold;
         }
       }
+
       &.pager__item--previous {
         float: left;
         clear: left;
       }
+
       &.pager__item--next {
         float: right;
         clear: right;
@@ -85,7 +87,6 @@ Styleguide pager
         text-decoration: underline;
       }
     }
-
   }
 }
 
@@ -95,7 +96,7 @@ Styleguide pager
   }
 
   // Show page items.
-  .pager__list {
+  .pager {
     width: auto;
 
     > li {
@@ -113,9 +114,10 @@ Styleguide pager
 }
 
 // Drupal-specific hack.
-.region-content ul.pager__list {
+.region-content ul.pager {
   margin: 0.938em auto;
   padding: 0;
+
   // The throbber should not mess up sizing.
   .ajax-progress {
     display: none;

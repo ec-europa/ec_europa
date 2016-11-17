@@ -1,7 +1,7 @@
 /*
 Buttons
 
-Custom bootstrap buttons styling
+Custom bootstrap buttons styling.
 
 Markup: html/btn.html
 
@@ -12,26 +12,27 @@ Markup: html/btn.html
 .btn-ctn--border - Button call to action with border
 .btn-menu        - Button menu
 
-Styleguide buttons
+Style guide buttons
 */
-@mixin white-space-reset() {
-  white-space: normal;
+
+@mixin _white_space_reset_mixin() {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   line-height: 1.667;
+  white-space: normal;
 }
 
 .btn {
-  margin-bottom: 1em;
-  line-height: 1;
-  border-radius: 0;
-  border-width: 2px;
-  font-weight: $font-weight-bold;
-  padding: 0.75em 1em;
-  min-height: 2.75em;
-  font-size: $font-size-little;
-  text-decoration: none;
   @extend .hidden-print;
+  min-height: 2.75em;
+  margin-bottom: 1em;
+  padding: 0.75em 1em;
+  line-height: 1;
+  font-size: $font-size-little;
+  font-weight: $font-weight-bold;
+  border-width: 2px;
+  border-radius: 0;
+  text-decoration: none;
   @include _focus_outline_border(3px, $yellow-light, -3px);
 
   &:link {
@@ -41,21 +42,21 @@ Styleguide buttons
   &:hover,
   &:active,
   &:focus {
+    position: relative;
     text-decoration: underline;
     @include box-shadow(none);
     z-index: 999;
-    position: relative;
   }
 
-  &:after {
-    line-height: inherit;
+  &::after {
     position: static;
+    line-height: inherit;
   }
 
   &.btn-default {
-    border-color: $brand-primary;
-    color: $brand-primary;
     background: none;
+    color: $brand-primary;
+    border-color: $brand-primary;
 
     &:hover,
     &:focus  {
@@ -74,21 +75,21 @@ Styleguide buttons
     }
 
     &:focus {
-      color: #fff;
       background: $brand-primary;
+      color: #fff;
     }
   }
 
   &.btn-secondary {
-    border-color: #fff;
     background: #fff;
     color: $brand-primary;
+    border-color: #fff;
   }
 
   &.btn-ctn {
     background: $yellow-light;
     color: #000;
-    @include white-space-reset();
+    @include _white_space_reset_mixin();
 
     &:hover,
     &:active {
@@ -101,18 +102,18 @@ Styleguide buttons
       outline-color: $text-color;
     }
 
-    &:after {
-      margin-left: 10px;
-      font-size: 0.8em;
+    &::after {
       @extend .icon--after;
       @extend .icon--right;
+      margin-left: 10px;
+      font-size: 0.8em;
     }
   }
 
   &.btn-menu {
-    border-color: $brand-primary;
     background: $brand-primary;
     color: #fff;
+    border-color: $brand-primary;
 
     &:hover,
     &:active,
@@ -131,18 +132,18 @@ Styleguide buttons
       outline-color: $yellow-light;
     }
 
-    &:after {
-      margin-left: 6px !important;
-      font-size: 0.45em;
-      top: -2px;
-      position: relative;
-      transition: all 0.3s ease 0s;
+    &::after {
       @extend .icon--after;
       @extend .icon--arrow-down;
+      position: relative;
+      top: -2px;
+      margin-left: 6px !important;
+      font-size: 0.45em;
+      transition: all 0.3s ease 0s;
     }
 
     &.is-collapsed {
-      &:after {
+      &::after {
         @include rotate(180deg);
       }
     }
@@ -164,31 +165,31 @@ Styleguide buttons
     outline-color: $text-color;
   }
 
-  &:after {
+  &::after {
     display: none;
   }
 }
 
-
 // Class that can be also used on a button wrapper since there are sometimes
-// situations where button is wrapped in unnecessary markup coming from a CMS
+// situations where button is wrapped in unnecessary markup coming from a CMS.
 .btn--no-margin-bottom {
   & * {
-    margin-bottom: 0!important;
+    margin-bottom: 0 !important;
   }
 
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
 
 /*
 Button Condensed
 
-Button condensed element
+Button condensed element.
 
 Markup: html/btn-condensed.html
 
-Styleguide buttons.btn--condensed
+Style guide buttons.btn--condensed
 */
+
 .btn.btn--condensed {
   width: auto;
   font-weight: normal;
@@ -197,18 +198,19 @@ Styleguide buttons.btn--condensed
 /*
 Button block
 
-Button block component
+Button block component.
 
 Markup: html/btn-block.html
 
-Styleguide buttons.btn-block
+Style guide buttons.btn-block
 */
+
 .btn-block {
   width: 100%;
   max-width: 450px;
-  text-align: left;
   margin-bottom: -2px !important;
-  @include white-space-reset();
+  text-align: left;
+  @include _white_space_reset_mixin();
 
   &:last-child {
     margin-bottom: 10px;
@@ -222,16 +224,17 @@ Styleguide buttons.btn-block
 /*
 Button Search
 
-Button search component
+Button search component.
 
 Markup: html/btn-search.html
 
-Styleguide buttons.btn-search
+Style guide buttons.btn-search
 */
+
 .btn.btn-search {
-  border-color: #fff;
   background: $grey-light;
   color: $blue-dark;
+  border-color: #fff;
 
   &:hover {
     background: $grey-light;
@@ -242,12 +245,13 @@ Styleguide buttons.btn-search
 /*
 Button Collapse
 
-Button collapse element
+Button collapse element.
 
 Markup: html/btn-collapse.html
 
-Styleguide buttons.btn-
+Style guide buttons.btn-collapse
 */
+
 .btn-collapse {
   @extend .btn-default;
 
@@ -268,17 +272,19 @@ Styleguide buttons.btn-
 
     &::before {
       vertical-align: bottom;
+      transition: all 0.3s ease 0s;
     }
   }
 
-  &:hover:not(:focus) {
+  &:hover,
+  &:focus {
     .icon::before {
       color: #fff;
     }
   }
 
   &.collapsed {
-    &:span.icon {
+    .icon::before {
       @include rotate(180deg);
     }
   }
@@ -291,34 +297,34 @@ Styleguide buttons.btn-
   }
 }
 
-// External link specific adjustments
+// External link specific adjustments.
 @mixin _btn_external_link_mixin() {
   padding-right: 2.2em;
 
-  &:after {
+  &::after {
     position: absolute;
-    line-height: 1.4 !important;
     margin-left: 0.5em;
+    line-height: 1.4 !important;
   }
 
-  // Reseting for .btn-block
+  // Reset for ".btn-block".
   &.btn-block {
     padding-right: 1em;
 
-    &:after {
+    &::after {
       position: static;
       line-height: inherit;
     }
   }
 
   // Call to action button.
-  &.btn-ctn:after {
+  &.btn-ctn::after {
     position: absolute;
     line-height: 2.0 !important;
   }
 
   // Call to action button.
-  &.btn-menu:after {
+  &.btn-menu::after {
     position: absolute;
     line-height: 3.5 !important;
   }
@@ -326,13 +332,7 @@ Styleguide buttons.btn-
 
 a.btn {
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    .site-political & {
-      &:not(#{$ec_url_patterns}) {
-        @include _btn_external_link_mixin();
-      }
-    }
-
-    .site-information & {
+    &:not(#{$ec_url_patterns}) {
       @include _btn_external_link_mixin();
     }
   }

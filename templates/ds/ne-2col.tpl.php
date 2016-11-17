@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Display Suite NE Bootstrap Two Columns Stacked.
+ * Display Suite NE Bootstrap Two Columns.
  */
 
   // Add sidebar classes so that we can apply the correct width in css.

@@ -7,7 +7,7 @@ Markup: html/lang-select-page.html
 
 .lang-select-page--transparent  - Transparent background
 
-Styleguide: langselect
+Style guide: langselect
 */
 
 /*
@@ -19,26 +19,26 @@ Markup: html/lang-select-page-dropdown.html
 
 .lang-select-page--transparent  - Transparent background
 
-Styleguide: langselect.dropdown
+Style guide: langselect.dropdown
 */
 
 .lang-select-page {
+  @extend .hidden-print;
   background: $grey-lightest;
   border-bottom: 1px solid $grey;
   font-size: $font-size-xsmall;
   overflow: hidden;
   width: 100%;
-  @extend .hidden-print;
 }
 
 .icon.lang-select-page__icon {
+  @extend .hidden-print;
   float: left;
   margin: 0;
   font-size: 2em;
   padding: 0;
-  @extend .hidden-print;
 
-  &:before {
+  &::before {
     padding-top: 30%;
     float: left;
   }
@@ -71,6 +71,7 @@ ul.lang-select-page__list {
 }
 
 select.lang-select-page__list {
+  @extend .hidden-print;
   background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
   border: 0;
   border-radius: 0;
@@ -80,7 +81,6 @@ select.lang-select-page__list {
   line-height: 3.4em;
   height: 3.4em;
   width: 10em;
-  @extend .hidden-print;
 
   &:hover {
     // select component is using a font icon with too much specificity that has to be overridden.
@@ -110,7 +110,7 @@ select.lang-select-page__list {
       background: $blue-darker;
     }
 
-    &:after {
+    &::after {
       @extend .icon--after;
       @extend .icon--arrow-down;
     }
@@ -144,7 +144,6 @@ select.lang-select-page__list {
   }
 }
 
-
 // Drupal specifics
 
 // Dynamic header image now being DS.
@@ -159,7 +158,7 @@ select.lang-select-page__list {
   }
 }
 
-// Styleguide
+// Style guide.
 #kssref-langselect,
 #kssref-langselect-dropdown {
   .lang-select-page--transparent {

@@ -1,14 +1,15 @@
 /*
 Meta
 
-Meta is a component that is used for displaying meta information in single pages and listings
-It could also be reused in blocks
+Meta is a component that is used for displaying meta information in single
+pages and listings.
+It could also be reused in blocks.
 
 Markup: html/meta.html
 
 .meta--header - Meta header modifier  that is currently used in the page header, it is larger than the meta component alone
 
-Styleguide meta
+Style guide meta
 */
 
 .meta {
@@ -24,7 +25,7 @@ Styleguide meta
 .meta__item {
   white-space: nowrap;
 
-  &:after {
+  &::after {
     content: "|";
     color: $grey;
     margin: 0 0.6em 0 0.85em;
@@ -33,7 +34,7 @@ Styleguide meta
   }
 
   &:last-child {
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -49,7 +50,7 @@ Styleguide meta
 }
 
 // Drupal fix due to basic_html text formatter settings that are generating
-// <p> tag
+// <p> tag.
 .meta {
   .meta__item {
     p {
@@ -58,5 +59,9 @@ Styleguide meta
       line-height: inherit;
       max-width: none;
     }
+  }
+
+  .label {
+    font-size: $font-size-little !important;
   }
 }

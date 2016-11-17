@@ -25,27 +25,32 @@ Section
 Section component.
 
 The section component is used to wrap block of contents.
-Its implementation ensures the correct vertical spacing between different groups of contents,
-it uses the margin collapse mechanism (css2) so that you don't have to worry when you place two
-sections one after the other, only one of the two margins will be applied, indeed.
+Its implementation ensures the correct vertical spacing between different
+groups of contents, it uses the margin collapse mechanism (css2) so that you
+don't have to worry when you place two sections one after the other, only one
+of the two margins will be applied, indeed.
 
-It can contain different set of html elements and components, but the predefined ones are its
-unique element {section group}, the {listing wrapper}, the {sidebar-field-group}.
+It can contain different set of html elements and components, but the
+predefined ones are its unique element {section group}, the {listing wrapper},
+the {sidebar-field-group}.
 
-The way it works is that the first {section group} in the section doesn't get any margin (the parent
-is already defining that) while the last doesn't get the margin-bottom (still for the same reason).
+The way it works is that the first {section group} in the section doesn't get
+any margin (the parent is already defining that) while the last doesn't get the
+margin-bottom (still for the same reason).
 When there's only one {section group} element it doesn't get any vertical margin.
 Please do not reset any of these margins.
 
-Mind that there is also a .section__group--full-width modifier which is not demoed here, it works when the
-section is not wrapped into a width limiting container.
+Mind that there is also a .section__group--full-width modifier which is not
+demoed here, it works when the section is not wrapped into a width limiting
+container.
 
 WHAT TO AVOID:
-Do not wrap a section component into a row element, this would break the collpasing margin.
+Do not wrap a section component into a row element, this would break the
+collapsing margin.
 
 Markup: html/section.html
 
-Styleguide sections
+Style guide sections
 */
 
 /*
@@ -55,7 +60,7 @@ section--row-two modifier
 
 Markup: html/section--row-two.html
 
-Styleguide sections.1
+Style guide sections.1
 */
 
 /*
@@ -65,7 +70,7 @@ section--row-three modifier
 
 Markup: html/section--row-three.html
 
-Styleguide sections.2
+Style guide sections.2
 */
 
 /*
@@ -78,7 +83,7 @@ Section group modifiers
 
 Markup: html/section__group.html
 
-Styleguide sections.3
+Style guide sections.3
 */
 
 $section-spacing: 1.667em;

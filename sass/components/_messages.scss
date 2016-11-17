@@ -1,13 +1,13 @@
 /*
-
 Messages
 
 Markup: html/messages.html
 
 .messages--icon-center - Centralized icon
 
-Styleguide messages
+Style guide messages
 */
+
 $messages-text-color: $grey-base;
 $messages-heading-size: $font-size-little;
 $messages-text-size: $font-size-little;
@@ -116,7 +116,7 @@ $messages-text-size: $font-size-little;
   }
 }
 
-// Drupal Overrides
+// Drupal overrides.
 .messages {
   ul {
     @extend .messages__list;
@@ -127,7 +127,7 @@ $messages-text-size: $font-size-little;
   }
 }
 
-// Bootstrap Overrides
+// Bootstrap overrides.
 .alert {
   margin: 1.667em 0;
   border-radius: 0;

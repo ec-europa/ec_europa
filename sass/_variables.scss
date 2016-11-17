@@ -2,22 +2,24 @@
 
 // Colors
 $black:                  #000;
-$grey-base:              #404040;
+
 $grey-dark:              #575757;
+$grey-base:              #404040;
 $grey:                   #b3b4b5;
 $grey-light:             #e2e2e2;
 $grey-lighter:           #ececec;
 $grey-lightest:          #f2f2f2;
 
-$blue-light:             #b0c5de;
-$blue:                   #006fb4;
-$blue-dark:              #004494;
 $blue-darkest:           #023066;
 $blue-darker:            #012b58;
+$blue-dark:              #004494;
+$blue:                   #006fb4;
+$blue-light:             #b0c5de;
 
-$yellow-light:           #ffd617;
-$yellow:                 #ffc412;
 $yellow-dark:            #f2a615;
+$yellow:                 #ffc412;
+$yellow-light:           #ffd617;
+$yellow-lighter:         #ffe574;
 
 $green:                  #467a39;
 
@@ -32,7 +34,7 @@ $brand-danger:           $red;
 
 $text-color:             $grey-base;
 
-// Typegraphy
+// Typography
 $font-family-sans-serif: Arial, sans-serif;
 $font-family-base:       $font-family-sans-serif;
 
@@ -89,7 +91,7 @@ $form-control-text-color:                         $grey-base;
 $form-control-text-color-focus:                   #000;
 $form-control-border-color:                       $grey-base;
 $form-control-border-color-focus:                 $yellow-light;
-$form-control-background-color:                   #ffffff;
+$form-control-background-color:                   #fff;
 $form-control-background-color-disabled:          $grey-light;
 $state-danger-text:                               $brand-danger;
 
@@ -105,14 +107,14 @@ $form-checkbox-background-color-unchecked:        $grey-lighter;
 // Unchecked, hover.
 $form-checkbox-color-unchecked-hover:             $grey-dark;
 $form-checkbox-border-color-unchecked-hover:      $brand-primary;
-$form-checkbox-background-color-unchecked-hover:  #ffffff;
+$form-checkbox-background-color-unchecked-hover:  #fff;
 
 // Checked.
-$form-checkbox-color-checked:                     #ffffff;
+$form-checkbox-color-checked:                     #fff;
 $form-checkbox-background-color-checked:          $brand-primary;
 
 // Checked, hover.
-$form-checkbox-color-checked-hover:               #ffffff;
+$form-checkbox-color-checked-hover:               #fff;
 $form-checkbox-border-color-checked-hover:        $yellow-light;
 $form-checkbox-background-color-checked-hover:    $brand-primary;
 
@@ -136,7 +138,7 @@ $form-item-legend-font-size:                      $font-size-xxsmall;
 
 // Attribute selector for external links.
 $external_link_pattern: 'href^="http"';
-$ec_url_patterns: '[href*="europa.eu"]';
+$ec_url_patterns: '[href*="ec.europa.eu"]';
 
 // In order to override the 'default!', bootstrap variables have to be added
 // after the overrides

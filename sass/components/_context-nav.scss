@@ -3,7 +3,7 @@ Contextual navigation
 
 Markup: html/context-nav.html
 
-Styleguide contextnav
+Style guide contextnav
 */
 
 .context-nav {
@@ -11,10 +11,10 @@ Styleguide contextnav
   font-size: $font-size-xsmall;
 
   &__expander {
-    border: none;
     display: inline-block;
-    cursor: pointer;
     color: $blue-dark;
+    border: none;
+    cursor: pointer;
 
     &:hover {
       text-decoration: underline;
@@ -23,6 +23,7 @@ Styleguide contextnav
 
   &__more-button {
     text-decoration: underline;
+
     & .icon {
       padding-left: 2px;
       top: 3px;
@@ -56,24 +57,26 @@ Styleguide contextnav
 .context-nav__item {
   display: inline-block;
 
-  &:after {
+  &::after {
     content: " |";
     color: $grey;
     margin-right: 4px;
   }
 
   &:last-child {
-    &:after {
+    &::after {
       display: none;
       margin-right: 0;
     }
   }
 
   a {
+    @include _focus_outline_border(3px, $yellow-light, 2px);
+
     &:link {
       text-decoration: none;
     }
-    @include _focus_outline_border(3px, $yellow-light, 2px);
+
     &:hover {
       text-decoration: underline;
     }
@@ -86,12 +89,12 @@ Styleguide contextnav
   }
 }
 
-
 // Drupal specific override for the node-person-name display mode.
 .context-nav__item {
   .view-mode-name {
     display: inline-block;
   }
+
   & > * {
     display: inline;
   }

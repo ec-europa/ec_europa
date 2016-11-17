@@ -9,7 +9,7 @@ Markup: html/page-header.html
 .page-header--large-intro - Header with larger intro text
 
 
-Styleguide page-header
+Style guide page-header
 */
 
 /*
@@ -17,7 +17,7 @@ Political page header
 
 Markup: html/page-header--political.html
 
-Styleguide page-header.political
+Style guide page-header.political
 */
 
 /*
@@ -25,7 +25,7 @@ Informational site page header
 
 Markup: html/page-header--informational.html
 
-Styleguide page-header.informational
+Style guide page-header.informational
 */
 
 /*
@@ -33,11 +33,11 @@ Informational site homepage header
 
 Markup: html/page-header--informational-home.html
 
-Styleguide page-header.informational-home
+Style guide page-header.informational-home
 */
 
 .page-header {
-  background: $brand-primary;
+  background-color: $brand-primary;
   margin: 0;
   padding: 0 0 1.5em;
   color: #fff;
@@ -49,11 +49,14 @@ Styleguide page-header.informational-home
     color: #fff;
 
     span {
-      display: block;
       margin-top: 0.175em;
       font-size: 0.750em;
       font-weight: 400;
       line-height: 1.34;
+    }
+
+    .paragraph {
+      margin-bottom: 0;
     }
   }
 
@@ -67,20 +70,14 @@ Styleguide page-header.informational-home
 
   a {
     color: #fff;
+    @include _focus_outline_border(3px, $yellow-light, 2px);
 
     &:hover:not(.breadcrumb__link, .btn) {
       color: $yellow-light;
     }
 
-    @include _focus_outline_border(3px, $yellow-light, 2px);
-
     &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title) {
-      .site-political & {
-        &:not(#{$ec_url_patterns}) {
-          @include _page_header_external_link_mixin();
-        }
-      }
-      .site-information & {
+      &:not(#{$ec_url_patterns}) {
         @include _page_header_external_link_mixin();
       }
     }
@@ -124,12 +121,8 @@ Styleguide page-header.informational-home
 }
 
 .page-header--image {
-  background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: transparent url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) center/cover no-repeat;
 }
-
 
 // Drupal connect.
 .node-type-info-homepage .page-header {
@@ -141,14 +134,14 @@ Styleguide page-header.informational-home
   font-size: $font-size-xsmall;
 
   .page-header__date--cancelled {
-    text-decoration: line-through; 
+    text-decoration: line-through;
   }
 
-  .icon { 
+  .icon {
     margin: 1em 2em 1em 0;
 
     &::before {
       margin-right: 0.5em;
-    }  
+    }
   }
 }

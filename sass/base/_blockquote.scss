@@ -3,7 +3,7 @@ Blockquote
 
 Markup: html/blockquote.html
 
-Styleguide text.blockquote
+Style guide text.blockquote
 */
 
 $small-quote-size: 1em;
@@ -29,11 +29,12 @@ blockquote,
     line-height: inherit;
     display: inline;
   }
-  &:before {
+
+  &::before {
     content: open-quote;
   }
 
-  &:after {
+  &::after {
     content: close-quote;
   }
 }

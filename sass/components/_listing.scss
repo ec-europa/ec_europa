@@ -13,10 +13,6 @@
 //    .listing__title
 //     Element modifiers: .listing__title--arrow
 //
-//    .listing__item
-//     Element modifiers:
-//      .listing__item--fullwidth
-//
 //    .listing__column-main
 //     Element modifiers:
 //      .listing__column-main--sidebar-next
@@ -48,10 +44,19 @@
 Listing
 
 Component used to render list of entities, usually the landing page of a class.
-It defines the following modifiers: Listing with no border, Listing with no stripe, Listing of persons, Listing CTA, Listing line left, Listing no padding, Listing short spaced, Listing line left.
-The width of the element listing__item is limited to 32em, a modifier is available to reset this limit, the first two examples are using that.
+It defines the following modifiers:
+- Listing with no border;
+- Listing with no stripe;
+- Listing of persons, Listing CTA;
+- Listing line left;
+- Listing no padding;
+- Listing short spaced;
+- Listing line left.
 
-Styleguide listing
+The width of the element listing__item is limited to 32em, a modifier is
+available to reset this limit, the first two examples are using that.
+
+Style guide listing
 */
 
 /*
@@ -61,7 +66,7 @@ Default implementation of the listing component.
 
 Markup: html/listing.html
 
-Styleguide listing.1
+Style guide listing.1
 */
 
 .listing {
@@ -69,21 +74,9 @@ Styleguide listing.1
 }
 
 // .listing--priorities modifier.
-.listing--priorities {
-  .meta {
-    display: none;
-  }
+.listing--priorities .meta {
+  display: none;
 }
-
-/*
-Listing default with div's
-
-Default implementation of the listing component with div's.
-
-Markup: html/listing-withdivs.html
-
-Styleguide listing.1.1
-*/
 
 /*
 Listing title
@@ -94,7 +87,7 @@ Markup: html/listing--title.html
 
 .listing--title-medium - Listing title medium
 
-Styleguide listing.4
+Style guide listing.4
 */
 
 // listing--title modifier.
@@ -121,9 +114,9 @@ ul.listing--title {
 
   .listing__item-link,
   .listing__title {
-    padding: 0;
-    margin: 0;
     display: block;
+    margin: 0;
+    padding: 0;
   }
 
   a.listing__title,
@@ -132,42 +125,32 @@ ul.listing--title {
     padding-right: 2em;
   }
 
-  a.listing__title {
-    &:after {
-      line-height: 1.6;
-    }
+  a.listing__title::after {
+    line-height: 1.6;
   }
 }
 
-.listing--title {
-  .listing__title {
-    &:hover,
-    &:focus {
-      text-decoration: underline !important;
-      color: $grey-base;
-    }
+.listing--title .listing__title {
+  &:hover,
+  &:focus {
+    text-decoration: underline !important;
+    color: $grey-base;
   }
 }
 
-.listing--frontpage {
-  p {
-    line-height: 1.375em;
-  }
+.listing--frontpage p {
+  line-height: 1.375em;
 }
 
 // .listing--title-medium modifier.
-.listing--title-medium {
-  .listing__title {
-    margin-top: 0.2em;
-    margin-bottom: 0.4em;
-  }
+.listing--title-medium .listing__title {
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
 }
 
 // .listing--title-medium modifier.
-.listing--title-medium {
-  .listing__title {
-    font-size: $font-size-h3;
-  }
+.listing--title-medium .listing__title {
+  font-size: $font-size-h3;
 }
 
 /*
@@ -177,7 +160,7 @@ Listing for event like entities.
 
 Markup: html/listing--agenda.html
 
-Styleguide listing.5
+Style guide listing.5
 */
 
 // .listing--agenda modifier.
@@ -203,11 +186,9 @@ Styleguide listing.5
     padding: 0;
   }
 
-  h3 {
-    &.listing__title {
-      font-size: $font-size-medium;
-      color: $grey-base;
-    }
+  h3.listing__title {
+    font-size: $font-size-medium;
+    color: $grey-base;
   }
 
   .listing__author {
@@ -243,7 +224,7 @@ Markup: html/listing--teaser.html
 .listing--nostripe - Listing with no stripe
 .listing--meta     - Listing meta
 
-Styleguide listing.3
+Style guide listing.3
 */
 
 // Modifier to add line on the left.
@@ -330,31 +311,25 @@ Styleguide listing.3
     position: relative;
     padding-right: 1.3em;
 
-    &:after {
+    &::after {
       @extend .listing__title--arrow;
     }
   }
 }
 
 // .listing--no-padding modifier.
-.listing--no-padding {
-  ul {
-    padding-left: 0 !important;
-  }
+.listing--no-padding ul {
+  padding-left: 0 !important;
 }
 
 // .listing--no-border modifier.
-.listing--no-border {
-  .listing__item {
-    border: none !important;
-  }
+.listing--no-border .listing__item {
+  border: none !important;
 }
 
 // .listing--short-spaced modifier.
-.listing--short-spaced {
-  .listing__item {
-    padding: 0.5em 0 !important;
-  }
+.listing--short-spaced .listing__item {
+  padding: 0.5em 0 !important;
 }
 
 /*
@@ -365,11 +340,11 @@ The following example is a general one, using "Section" styling.
 
 Markup: html/listing--navigation.html
 
-Styleguide listing.6
+Style guide listing.6
 */
+
 .listing--navigation {
   @include clearfix();
-  padding-bottom: (29/15)+em;
 
   // Top of the block:
   // - listing__section-title or
@@ -454,7 +429,7 @@ Styleguide listing.6
       font-size: 1em;
     }
 
-   .listing__separator {
+    .listing__separator {
       // Margin bottom 9px of the previous item.
       margin-top: (20/18 - 9/18)+em; // 20-9px
       padding-top: (20/18)+em; // 20px
@@ -472,17 +447,13 @@ a.listing__title {
 }
 
 // .listing__column-main element.
-.listing__column-main {
-  .listing__with {
-    margin-top: 0;
-  }
+.listing__column-main .listing__with {
+  margin-top: 0;
 }
 
 // .listing--meta
-.listing--meta {
-  .listing__title {
-    margin-bottom: 0;
-  }
+.listing--meta .listing__title {
+  margin-bottom: 0;
 }
 
 // .listing__wrapper element.
@@ -498,7 +469,6 @@ a.listing__title {
 // .listing__item element.
 .listing__item {
   float: left;
-  max-width: 32em;
   width: 100%;
   padding: 1.111em 0;
   list-style: none;
@@ -506,6 +476,12 @@ a.listing__title {
 
   &:first-child {
     border-top: 1px solid $grey-lighter;
+  }
+
+  // @todo: check if we can remove safely position relative that is applied
+  // in this class in the file _mixins.scss line 139, and then this can removed.
+  .listing__title {
+    position: static;
   }
 
   &:hover,
@@ -526,10 +502,6 @@ a.listing__title {
   .listing__item-link > p {
     font-size: $font-size-little;
   }
-}
-
-.listing__item--fullwidth {
-  max-width: none;
 }
 
 .listing__item-nolink {
@@ -554,13 +526,7 @@ a.listing__title {
   }
 
   &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-    .site-political & {
-      &:not(#{$ec_url_patterns}) {
-        @include _listing_external_link_mixin();
-      }
-    }
-
-    .site-information & {
+    &:not(#{$ec_url_patterns}) {
       @include _listing_external_link_mixin();
     }
   }
@@ -632,7 +598,6 @@ a.listing__title {
   position: relative;
   margin-bottom: 0.5em;
   padding: 0;
-  display: inline-block;
   font-family: $font-family-sans-serif;
   font-size: 1em;
   line-height: 1.3;
@@ -644,15 +609,13 @@ a.listing__title {
 }
 
 // .listing__title--arrow.
-.listing__title--arrow {
-  &:after {
-    @extend .icon--after;
-    @extend .icon--right;
-    position: absolute;
-    margin-left: 10px;
-    margin-top: 2px;
-    font-size: 1.2em;
-  }
+.listing__title--arrow::after {
+  @extend .icon--after;
+  @extend .icon--right;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 2px;
+  font-size: 1.2em;
 }
 
 // .listing__read_more element.
@@ -665,7 +628,7 @@ a.listing__title {
   text-transform: uppercase;
   font-size: $font-size-tiny;
 
-  &:after {
+  &::after {
     @extend .icon--after;
     @extend .icon--right;
     font-size: $font-size-xsmall;
@@ -676,6 +639,26 @@ a.listing__title {
   }
 }
 
+// .listing__status-container element.
+.listing__status-container {
+  display: block;
+  margin-bottom: 0.8em;
+}
+
+@include breakpoint(screen-md-min) {
+  .listing {
+    .listing__status-container--inline {
+      display: inline-block;
+      padding-top: 0.4em;
+      margin-bottom: 0;
+    }
+
+    .listing__btn {
+      float: right;
+    }
+  }
+}
+
 /*
 Listing column left
 
@@ -683,14 +666,14 @@ This is actually a modifier that applies changes to the listing__item element.
 
 Markup: html/listing--column-left.html
 
-Styleguide listing.1.2
+Style guide listing.1.2
 */
 
 .listing--column-left {
   .listing__column-main {
     width: auto;
-    overflow: hidden;
     float: none;
+    overflow: hidden;
   }
 
   .listing__column-second {
@@ -704,9 +687,10 @@ Styleguide listing.1.2
 /*
 Listing layouts
 
-Listing layouts are implemented as modifiers of the listing__wrapper element which is actually the container of the component.
+Listing layouts are implemented as modifiers of the listing__wrapper element
+which is actually the container of the component.
 
-Styleguide listing.2
+Style guide listing.2
 */
 
 /*
@@ -716,7 +700,7 @@ This is a way to put two listings in two different columns.
 
 Markup: html/listing__wrapper--two-columns.html
 
-Styleguide listing.2.1
+Style guide listing.2.1
 */
 
 /*
@@ -726,7 +710,7 @@ This is a way to put three listings in three different columns.
 
 Markup: html/listing__wrapper--three-columns.html
 
-Styleguide listing.2.2
+Style guide listing.2.2
 */
 
 /*
@@ -736,7 +720,7 @@ This is a way to put two listing_item in the same row.
 
 Markup: html/listing__wrapper--row-two.html
 
-Styleguide listing.2.3
+Style guide listing.2.3
 */
 
 /*
@@ -746,7 +730,7 @@ This is a way to put three listing_item in the same row.
 
 Markup: html/listing__wrapper--row-three.html
 
-Styleguide listing.2.4
+Style guide listing.2.4
 */
 
 // .listing__wrapper--maxwidth.
@@ -780,17 +764,13 @@ Styleguide listing.2.4
   @extend .row;
 }
 
-.listing__wrapper--two-columns {
-  .listing {
-    @extend .col-sm-6;
-    margin-bottom: 2em;
-  }
+.listing__wrapper--two-columns .listing {
+  @extend .col-sm-6;
+  margin-bottom: 2em;
 }
 
-.listing__wrapper--three-columns {
-  .listing {
-    @extend .col-md-4;
-  }
+.listing__wrapper--three-columns .listing {
+  @extend .col-md-4;
 }
 
 .listing__wrapper--row-three,
@@ -813,13 +793,19 @@ Styleguide listing.2.4
 .listing__wrapper--row-three {
   .listing__item {
     @extend .col-md-4;
+
+    &:nth-child(3n+4) {
+      clear: left;
+    }
   }
 }
 
 @include breakpoint(screen-md-min) {
-  .listing__wrapper--two-columns {
-    .listing {
-      margin-bottom: 0;
-    }
+  .listing__wrapper--two-columns .listing {
+    margin-bottom: 0;
   }
+}
+
+.listing__wrapper--no-margin-bottom {
+  margin-bottom: 0;
 }

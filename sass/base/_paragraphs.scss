@@ -6,7 +6,7 @@ Markup: html/paragraphs.html
 .paragraph--intro - Intro
 .paragraph--small - Small body text
 
-Styleguide text.paragraphs
+Style guide text.paragraphs
 */
 
 .paragraph {
@@ -17,6 +17,19 @@ Styleguide text.paragraphs
 
 p {
   @extend .paragraph;
+
+  &.dashed {
+    position: relative;
+    padding-left: 0.8em;
+
+
+    &::before {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      content: '-';
+    }
+  }
 }
 
 .paragraph--width-auto {
@@ -24,7 +37,7 @@ p {
 }
 
 .paragraph--intro {
-   font-size: $font-size-mid;
+  font-size: $font-size-mid;
 }
 
 .paragraph--small {

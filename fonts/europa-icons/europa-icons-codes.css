@@ -139,3 +139,6 @@
 .icon-error:before {
   content: '\e82f';
 } /* '' */
+.icon-camera:before {
+  content: '\e900';
+} /* '' */

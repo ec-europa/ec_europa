@@ -2,11 +2,8 @@
 
 /**
  * @file
- * Display Suite NE Bootstrap Three Columns Stacked.
+ * Display Suite NE Bootstrap One Column Stacked With Bottom Header.
  */
-
-  // Add sidebar classes so that we can apply the correct width in css.
-  // Second block is needed to activate display suite support on forms.
 ?>
 
 <<?php print $layout_wrapper . $layout_attributes; ?> class="<?php print $classes; ?>">
@@ -38,8 +35,7 @@
   </div>
 
   <?php if (!empty($bottom_header)) : ?>
-    <div class="page-bottom-header <?php if (isset($header_bottom_modifier)) : print $header_bottom_modifier;
-   endif; ?>">
+    <div class="page-bottom-header <?php print isset($header_bottom_modifier) ? $header_bottom_modifier : ''; ?>">
       <<?php print $bottom_header_wrapper; ?> class="<?php print $bottom_header_classes; ?>">
         <?php print $bottom_header; ?>
       </<?php print $bottom_header_wrapper; ?>>
@@ -56,19 +52,19 @@
 
   <div class="page-content">
     <div class="container-fluid">
-    <?php if (!empty($top) || !empty($local_tabs) || !empty($messages)) : ?>
-      <div class="row">
-        <section class="section section--content-top col-md-12 <?php print $top_classes; ?>">
-          <?php if (!empty($local_tabs)) : ?>
-            <?php print $local_tabs; ?>
-          <?php endif; ?>
-          <?php if (!empty($messages)) : ?>
-            <?php print $messages; ?>
-          <?php endif; ?>
-          <?php print $top; ?>
-        </section>
-      </div>
-    <?php endif; ?>
+      <?php if (!empty($top) || !empty($local_tabs) || !empty($messages)) : ?>
+        <div class="row">
+          <section class="section section--content-top col-md-12 <?php print $top_classes; ?>">
+            <?php if (!empty($local_tabs)) : ?>
+              <?php print $local_tabs; ?>
+            <?php endif; ?>
+            <?php if (!empty($messages)) : ?>
+              <?php print $messages; ?>
+            <?php endif; ?>
+            <?php print $top; ?>
+          </section>
+        </div>
+      <?php endif; ?>
       <div class="row">
         <a id="main-content" tabindex="-1"></a>
         <section class="section col-md-12 <?php print $central_classes; ?>">

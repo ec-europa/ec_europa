@@ -3,7 +3,7 @@ Breadcrumb
 
 Markup: html/breadcrumb.html
 
-Styleguide breadcrumb
+Style guide breadcrumb
 */
 
 $breadcrumb-heigth: 2.778em;
@@ -44,7 +44,7 @@ a.breadcrumb__link {
   color: #fff;
   text-decoration: none;
 
-  &:after {
+  &::after {
     @extend .breadcrumb__link-arrow;
     vertical-align: middle;
     position: relative;
@@ -84,18 +84,18 @@ a.breadcrumb__link {
   .breadcrumb__segment--first {
     padding-right: 25px;
 
-    &:after {
+    &::after {
       content: '...';
       display: inline-block;
       position: relative;
       top: -4px;
     }
 
-    &:before {
+    &::before {
       @extend .breadcrumb__link-arrow;
       position: absolute;
-      right: 7px;
       top: 16%;
+      right: 7px;
     }
   }
 }
@@ -104,7 +104,7 @@ a.breadcrumb__link {
   .breadcrumb__link {
     width: auto;
 
-    &:after {
+    &::after {
       position: static;
       @include translate(0, 0);
     }
@@ -118,8 +118,8 @@ a.breadcrumb__link {
   .breadcrumb__segment--first {
     padding-right: 0;
 
-    &:after,
-    &:before {
+    &::before,
+    &::after {
       display: none !important;
     }
   }
@@ -136,7 +136,7 @@ Breadcrumb collapsible
 
 Markup: html/breadcrumb--collapsible.html
 
-Styleguide breadcrumb.collapsible
+Style guide breadcrumb.collapsible
 */
 
 .breadcrumb--collapsible {
@@ -154,12 +154,12 @@ Styleguide breadcrumb.collapsible
       background: #fff;
       color: $brand-primary;
 
-      &:after {
+      &::after {
         color: $brand-primary;
       }
     }
 
-    &:after {
+    &::after {
       @extend .breadcrumb__link-arrow;
     }
   }
@@ -180,8 +180,8 @@ Styleguide breadcrumb.collapsible
   .breadcrumb__segment--first {
     padding-right: 0;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -214,8 +214,8 @@ Styleguide breadcrumb.collapsible
     }
 
     .breadcrumb__segment--last {
-      @include transition(all 0.3s ease 0s);
       padding-left: 0;
+      @include transition(all 0.3s ease 0s);
     }
   }
 
@@ -228,7 +228,7 @@ Styleguide breadcrumb.collapsible
       &.breadcrumb__segment--next-hidden {
         padding-right: 25px;
 
-        &:after {
+        &::after {
           content: '...'; 
           display: inline-block !important;
           position: relative;
@@ -236,7 +236,7 @@ Styleguide breadcrumb.collapsible
           color: #ffffff;
         }
 
-        &:before {
+        &::before {
           text-decoration: none;
           font-family: 'EuropaIcons';
           speak: none;

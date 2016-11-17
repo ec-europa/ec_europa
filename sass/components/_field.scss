@@ -2,16 +2,24 @@
 Field
 
 Drupal note:
-Field styling appearing in this styleguide is only valid for Default drupal field settings
+Field styling appearing in this style guide is only valid for Default drupal field settings
 
 Markup: html/field.html
 
 .field--labeled - Field component with a label
 
-Styleguide field
+Style guide field
 */
 
 .field {
+  .field__items p:last-child {
+    margin: 0;
+  }
+
+  .field__item--expired {
+    text-decoration: line-through;
+  }
+
   .label-above {
     @extend .h3;
   }
@@ -26,6 +34,8 @@ Styleguide field
   padding: 0.215em 0 0.145em 0;
   font-size: $font-size-xsmall;
   font-weight: $font-weight-bold;
+  position: relative;
+  float: left;
 
   a:focus {
     outline-offset: 2px;
@@ -43,6 +53,10 @@ Styleguide field
   .field__label {
     display: block;
     padding: 0.215em 0 0 0;
+
+    h4 {
+      padding: 0;
+    }
   }
 
   .field__items {
@@ -130,7 +144,7 @@ with fields that do have a label.
 
 Markup: html/field--labeled-align.html
 
-Styleguide field.labeled-align
+Style guide field.labeled-align
 */
 
 @include breakpoint(screen-sm-min) {

@@ -7,35 +7,38 @@ Markup: html/btn-group.html
 
 .btn-group-row-two    - Two column button block
 
-Styleguide buttons.group
+Style guide buttons.group
 */
 
 .btn-group {
-  margin-top: 1em;
   @extend .hidden-print;
+  margin-top: 1em;
 
   .btn {
-   margin-right: 0.4em;
-   margin-bottom: 0;
+    margin-right: 0.4em;
+    margin-bottom: 0;
 
-   &:last-child {
-     margin-right: 0;
-   }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .btn-group-row-two {
   width: 100%;
+
   .btn {
-    margin-left: 0 !important;
-    margin-bottom: -2px;
     float: left;
     width: 48.5%;
+    margin-left: 0 !important;
+    margin-bottom: -2px;
     text-align: left;
+
     &:nth-child(odd) {
       margin-right: 3%;
       clear: left;
     }
+
     &:nth-child(even) {
       margin-right: 0;
     }

@@ -1,25 +1,25 @@
 /*
-
 Notification
 
-Notification that appears at the top of the site
+Notification that appears at the top of the site.
 
 Markup: html/notification.html
 
-Styleguide notification
-
+Style guide notification
 */
+
 .notification {
+  @extend .hidden-print;
   background: $yellow-light;
   padding: 10px 0 6px;
   font-size: 14px;
-  @extend .hidden-print;
 
   a {
     color: #000;
     @include _focus_outline_border(3px, $black, 2px);
+
     &:hover,
-    &:focus{
+    &:focus {
       text-decoration: none; 
     }
   }
@@ -47,10 +47,10 @@ Styleguide notification
     float: left;
     margin-bottom: 6px;
 
-    &:after {
-      font-size: 12px;
+    &::after {
       @extend .icon--after;
       @extend .icon--right;
+      font-size: 12px;
     }
   }
 
@@ -90,7 +90,8 @@ Styleguide notification
 // External link specific adjustments
 @mixin _notification_external_link_mixin() {
   padding-right: 1.1em;
-  &:after {
+
+  &::after {
     position: absolute;
     line-height: 2.2;
   }
@@ -98,14 +99,8 @@ Styleguide notification
 
 .notification {
   a {
-
     &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
-      .site-political & {
-        &:not(#{$ec_url_patterns}) {
-          @include _notification_external_link_mixin();
-        }
-      }
-      .site-information & {
+      &:not(#{$ec_url_patterns}) {
         @include _notification_external_link_mixin();
       }
     }
