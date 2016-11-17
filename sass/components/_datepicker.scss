@@ -90,8 +90,8 @@ $datepicker-color-background: #eaeaea;
       }
 
       select {
-        @extend .form-control;
-        background-color: $datepicker-color-select;
+        @include form-control();
+        background: $datepicker-color-select;
         color: $white;
         border: none;
         height: 100%;

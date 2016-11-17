@@ -5,37 +5,5 @@ Style guide form
 */
 
 .form-control {
-  @extend .hidden-print;
-  min-height: $form-control-height;
-  margin-bottom: 1.1em;
-  font-size: $font-size-little;
-  background-color: $form-control-background-color;
-  color: $form-control-text-color;
-  border: 1px solid $form-control-border-color;
-  border-radius: 0;
-  @include _focus_outline_border(3px, $yellow-light, 0, none);
-  @include box-shadow(none);
-
-  &.has-error {
-    padding: 5px 11px;
-    border-width: 2px;
-  }
-
-  // Focus state.
-  &:focus,
-  &.is-focused,
-  .has-error &:focus {
-    color: $form-control-text-color-focus;
-    @include box-shadow(none);
-  }
-
-  // Disabled modifier.
-  &.is-disabled {
-    background-color: $form-control-background-color-disabled;
-    color: $form-control-color-disabled;
-  }
-
-  &.select {
-    border-width: 1px;
-  }
+  @include form-control();
 }

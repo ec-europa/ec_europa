@@ -13,12 +13,13 @@ $breadcrumb-heigth: 2.778em;
   position: relative;
   margin: 0;
   padding: 0;
-  line-height: normal;
   background: none;
   font-size: 0.833em;
   font-weight: 600;
   border-bottom: 1px solid $white;
   border-radius: 0;
+  line-height: normal;
+  @extend .hidden-print;
 
   ol,
   ul {
@@ -46,9 +47,9 @@ a.breadcrumb__link {
 
   &::after {
     @extend .breadcrumb__link-arrow;
+    vertical-align: middle;
     position: relative;
     top: 1px;
-    vertical-align: middle;
   }
 
   &:hover,
@@ -64,14 +65,14 @@ a.breadcrumb__link {
 
 .breadcrumb__link-arrow {
   @extend .icon--after;
-  @extend .icon--breadcrumb;
+  @include icon('breadcrumb');
+  line-height: inherit !important;
+  margin-left: 8px !important;
+  font-weight: normal;
+  font-size: $font-size-xsmall;
   // Width has to be defined, otherwise javascript has issues with calculating
   // the breadcrumb segment width.
   width: 11px;
-  margin-left: 8px !important;
-  line-height: inherit !important;
-  font-size: $font-size-xsmall;
-  font-weight: normal;
   color: $white;
 }
 

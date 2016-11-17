@@ -43,3 +43,7 @@ p {
 .paragraph--small {
   font-size: $font-size-little;
 }
+
+.text-small {
+  @include text-small();
+}
