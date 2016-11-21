@@ -103,9 +103,9 @@
         </a>
         <ul class="kss-nav__menu-child">
             <li class="kss-nav__menu-item">
-              <a href="section-field.html#kssref-field-labeled-align">
+              <a href="section-field.html#kssref-field-aligned">
                 <span class="kss-nav__ref">10.1</span
-                ><span class="kss-nav__name">Field labeled align</span>
+                ><span class="kss-nav__name">Field aligned</span>
               </a>
             </li>
         </ul>
@@ -328,31 +328,28 @@ Field styling appearing in this style guide is only valid for Default drupal fie
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Examples
-        </div>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
+          Example
         </div>
         <div class="kss-modifier__example">
-          <div class="field [modifier class]">
+          <div class="field ">
   <div class="field__label">Name</div>
   <div class="field__items">
     John Doe
   </div>
 </div>
-<div class="field [modifier class]">
+<div class="field ">
   <div class="field__label">Address</div>
   <div class="field__items">
     Street name, Number 54, Brussels
   </div>
 </div>
-<div class="field [modifier class]">
+<div class="field ">
   <div class="field__label">Phone number</div>
   <div class="field__items">
     +48 531 555 003
   </div>
 </div>
-<div class="field [modifier class]">
+<div class="field ">
   <div class="field__label">Date</div>
   <div class="field__items">
     <div class="field__item field__item--expired">
@@ -360,53 +357,7 @@ Field styling appearing in this style guide is only valid for Default drupal fie
     </div>
   </div>
 </div>
-<div class="field [modifier class] social-media-links--field field-label-inline clearfix">
-  <div class="field__label">Social media</div>
-  <ul class="field__items social-media-links__list social-media-links__horizontal">
-    <li class="social-media-links__item icon-social--smaller">
-      <a href="fb.com" title="Facebook" class="icon-social icon-social--facebook">Facebook</a>
-    </li>
-    <li class="social-media-links__item icon-social--smaller">
-      <a href="goo.gl" title="G+" class="icon-social icon-social--gplus">G+</a>
-    </li>
-  </ul>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .field--labeled
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Field component with a label
-        </div>
-        <div class="kss-modifier__example">
-          <div class="field field--labeled">
-  <div class="field__label">Name</div>
-  <div class="field__items">
-    John Doe
-  </div>
-</div>
-<div class="field field--labeled">
-  <div class="field__label">Address</div>
-  <div class="field__items">
-    Street name, Number 54, Brussels
-  </div>
-</div>
-<div class="field field--labeled">
-  <div class="field__label">Phone number</div>
-  <div class="field__items">
-    +48 531 555 003
-  </div>
-</div>
-<div class="field field--labeled">
-  <div class="field__label">Date</div>
-  <div class="field__items">
-    <div class="field__item field__item--expired">
-      12 October 2016 (CET)
-    </div>
-  </div>
-</div>
-<div class="field field--labeled social-media-links--field field-label-inline clearfix">
+<div class="field  social-media-links--field field-label-inline clearfix">
   <div class="field__label">Social media</div>
   <ul class="field__items social-media-links__list social-media-links__horizontal">
     <li class="social-media-links__item icon-social--smaller">
@@ -422,25 +373,25 @@ Field styling appearing in this style guide is only valid for Default drupal fie
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;field [modifier class]&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;field &quot;&gt;
   &lt;div class=&quot;field__label&quot;&gt;Name&lt;/div&gt;
   &lt;div class=&quot;field__items&quot;&gt;
     John Doe
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;field [modifier class]&quot;&gt;
+&lt;div class=&quot;field &quot;&gt;
   &lt;div class=&quot;field__label&quot;&gt;Address&lt;/div&gt;
   &lt;div class=&quot;field__items&quot;&gt;
     Street name, Number 54, Brussels
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;field [modifier class]&quot;&gt;
+&lt;div class=&quot;field &quot;&gt;
   &lt;div class=&quot;field__label&quot;&gt;Phone number&lt;/div&gt;
   &lt;div class=&quot;field__items&quot;&gt;
     +48 531 555 003
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;field [modifier class]&quot;&gt;
+&lt;div class=&quot;field &quot;&gt;
   &lt;div class=&quot;field__label&quot;&gt;Date&lt;/div&gt;
   &lt;div class=&quot;field__items&quot;&gt;
     &lt;div class=&quot;field__item field__item--expired&quot;&gt;
@@ -448,7 +399,7 @@ Field styling appearing in this style guide is only valid for Default drupal fie
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;field [modifier class] social-media-links--field field-label-inline clearfix&quot;&gt;
+&lt;div class=&quot;field  social-media-links--field field-label-inline clearfix&quot;&gt;
   &lt;div class=&quot;field__label&quot;&gt;Social media&lt;/div&gt;
   &lt;ul class=&quot;field__items social-media-links__list social-media-links__horizontal&quot;&gt;
     &lt;li class=&quot;social-media-links__item icon-social--smaller&quot;&gt;
@@ -463,20 +414,20 @@ Field styling appearing in this style guide is only valid for Default drupal fie
       </div>
 
       </div>
-      <section id="kssref-field-labeled-align" class="kss-section kss-section--depth-2">
+      <section id="kssref-field-aligned" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-field-labeled-align">
+        <a class="kss-title__permalink" href="#kssref-field-aligned">
           <span class="kss-title__ref">10.1</span
-          >Field labeled align
+          >Field aligned
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h2>
 
 
       <div class="kss-description">
-        <p>Labeled align modifier should be used for aligning fields that do not have a label
+        <p>The field aligned modifier should be used for aligning fields that do not have a label
 with fields that do have a label.</p>
 
       </div>
@@ -487,14 +438,14 @@ with fields that do have a label.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="field field--labeled">
+          <div class="field">
   <div class="field__label">Phone number</div>
   <div class="field__items">
     +48531555003
   </div>
 </div>
 
-<div class="field field--labeled-align">
+<div class="field field--aligned">
   <div class="field__items">
     Some text that gets aligned to the right
   </div>
@@ -504,14 +455,14 @@ with fields that do have a label.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;field field--labeled&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;field&quot;&gt;
   &lt;div class=&quot;field__label&quot;&gt;Phone number&lt;/div&gt;
   &lt;div class=&quot;field__items&quot;&gt;
     +48531555003
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;field field--labeled-align&quot;&gt;
+&lt;div class=&quot;field field--aligned&quot;&gt;
   &lt;div class=&quot;field__items&quot;&gt;
     Some text that gets aligned to the right
   &lt;/div&gt;

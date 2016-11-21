@@ -6,14 +6,15 @@ Field styling appearing in this style guide is only valid for Default drupal fie
 
 Markup: html/field.html
 
-.field--labeled - Field component with a label
-
 Style guide field
 */
 
 .field {
-  .field__items p:last-child {
-    margin: 0;
+  margin-bottom: 0.556em;
+  line-height: normal;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   .field__item--expired {
@@ -24,134 +25,68 @@ Style guide field
     @extend .h3;
   }
 
+  .field__items {
+    display: block;
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
   // Why do we have this html? (body field in priorities)
   .sections .container {
     padding: 0;
   }
-}
-
-.field__label {
-  padding: 0.215em 0 0.145em 0;
-  font-size: $font-size-xsmall;
-  font-weight: $font-weight-bold;
-  position: relative;
-  float: left;
-
-  a:focus {
-    outline-offset: 2px;
-  }
-}
-
-.field--labeled {
-  margin-bottom: 0.556em;
-  line-height: normal;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   .field__label {
+    padding: 0.215em 0 0.145em 0;
+    font-size: $font-size-xsmall;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.5em;
     display: block;
     padding: 0.215em 0 0 0;
 
     h4 {
       padding: 0;
     }
-  }
 
-  .field__items {
-    display: block;
-  }
-
-  a:focus {
-    outline-offset: 2px;
-  }
-}
-
-.field--labeled-align {
-  a:focus {
-    outline-offset: 2px;
-  }
-}
-
-.field--full-width {
-  margin-left: -$grid-gutter-width / 2;
-  margin-right: -$grid-gutter-width / 2;
-  padding-left: $grid-gutter-width / 2;
-  padding-right: $grid-gutter-width / 2;
-
-  & > * {
-    @extend .container-fluid;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@include breakpoint(screen-xs-min) {
-  .field--labeled {
-    .field__label,
-    .field__items {
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    .field__label {
-      width: 32.3%;
-    }
-
-    .field__items {
-      width: 66.6%;
+    a:focus {
+      outline-offset: 2px;
     }
   }
 }
 
+// Desktop and tablets breakpoint.
 @include breakpoint(screen-sm-min) {
-  .field--labeled {
-    .field__label {
-      width: 24%;
-    }
+  .field {
+    .field__label:not(.field__label--above) {
+      width: 20%;
+      margin-bottom: 0;
+      display: inline-block;
 
-    .field__items {
-      width: 75%;
-    }
-  }
-}
-
-@include breakpoint(screen-lg-min) {
-  .field--full-width {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  // Bootstrap specific when in 9-sized column that is next to 3-sized column
-  .col-lg-3 + .col-lg-9 {
-    .field--full-width {
-      left: -25%;
-      width: 125%;
+      & + .field__items {
+        display: inline-block;
+        width: 79%;
+      }
     }
   }
 }
 
 /*
-Field labeled align
+Field aligned
 
-Labeled align modifier should be used for aligning fields that do not have a label
+The field aligned modifier should be used for aligning fields that do not have a label
 with fields that do have a label.
 
-Markup: html/field--labeled-align.html
+Markup: html/field--aligned.html
 
-Style guide field.labeled-align
+Style guide field.aligned
 */
-
 @include breakpoint(screen-sm-min) {
-  .field--labeled-align {
+  .field--aligned {
     .field__items {
-      width: 75%;
-      margin-left: 25%;
+      width: 79%;
+      margin-left: 20%;
       display: inline-block;
     }
   }
