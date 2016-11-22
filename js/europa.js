@@ -149,7 +149,7 @@
       hideText = Drupal.t("Hide");
     }
 
-    $('button[data-toggle=collapse]').each(function () {
+    $('button[data-toggle=collapse]:not(.c-toggle)').each(function () {
       var dependentId = $(this).attr('data-target');
       var toggler = $(dependentId).hasClass('in') ? hideText : showText;
       var arrow = $('.icon', $(this));
