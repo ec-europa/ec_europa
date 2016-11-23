@@ -1,7 +1,7 @@
 // Bootstrap
 @import "bootstrap";
 
-// Importing bootstrap variables
+// Importing mixins and  variables
 @import "mixins";
 
 // Importing simple helpers
@@ -11,16 +11,12 @@
 @import "base/helpers";
 @import "base/img";
 @import "base/blockquote";
-@import "base/typography";
 @import "base/bootstrap-reset";
-@import "components/icon";
-@import "base/btn";
 @import "base/btn-group";
 @import "base/checkbox";
 @import "base/form-control";
 @import "base/form-group";
 @import "base/global";
-@import "base/headings";
 @import "base/label";
 @import "base/legend";
 @import "base/lists";

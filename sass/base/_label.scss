@@ -6,23 +6,18 @@ Markup: html/label.html
 Style guide form.label
 */
 
-form {
-  .label {
-    @extend .form_label;
-  }
-}
-
-label {
+label,
+form .label {
   @extend .form_label;
 }
 
 .form_label {
-  color: $form-control-text-color;
-  font-size: $font-size-little;
   display: block;
-  text-align: left;
-  padding: 0;
   margin-bottom: 0.556em;
+  padding: 0;
+  font-size: $font-size-little;
+  color: $form-control-text-color;
+  text-align: left;
 
   &.is-disabled {
     color: $form-control-color-disabled;

@@ -9,8 +9,8 @@ Style guide timeline
 .timeline {
   position: relative;
   float: left;
-  padding: 2em 0 0 1.667em;
   margin-bottom: 1.667em;
+  padding: 2em 0 0 1.667em;
   border-left: 4px solid $yellow-light;
 
   .listing__item {
@@ -29,7 +29,7 @@ Style guide timeline
       height: 14px;
       margin-top: 0.2em;
       content: '';
-      background-color: #fff;
+      background-color: $white;
       border: 3px solid $grey-dark;
       border-radius: 50%;
     }

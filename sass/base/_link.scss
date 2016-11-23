@@ -69,7 +69,7 @@ a {
 
   .listing--cta & {
     &:focus {
-      color: #ffffff;
+      color: $white;
     }
   }
 
@@ -100,7 +100,7 @@ a {
 
   &::after {
     @extend .icon--after;
-    @extend .icon--external;
+    @include icon('external');
     font-size: 75%;
     margin-left: 0.4em;
     margin-right: 0.2em;

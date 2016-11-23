@@ -37,7 +37,7 @@
 
   .kss-modifier__name {
     background: $brand-primary;
-    color: #fff;
+    color: $white;
     width: 50%;
     margin-left: -0.6em;
 
@@ -64,7 +64,7 @@
   .styleguide-example {
     padding: 1em 0 0.5em;
     background: #575757;
-    color: #fff;
+    color: $white;
     clear: left;
     float: left;
     width: 100%;
@@ -79,7 +79,7 @@
 .section-styleguide-random {
   background: #666;
   text-align: center;
-  color: #fff;
+  color: $white;
 }
 
 .section-styleguide {

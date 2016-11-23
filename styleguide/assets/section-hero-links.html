@@ -137,6 +137,8 @@
           <span class="kss-nav__ref">16</span
           ><span class="kss-nav__name">Hero links</span>
         </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-highlighted-item.html">
@@ -227,8 +229,6 @@
           <span class="kss-nav__ref">31</span
           ><span class="kss-nav__name">Profile topbar</span>
         </a>
-        <ul class="kss-nav__menu-child">
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-rsslink.html">
@@ -301,22 +301,18 @@
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-profile_topbar" class="kss-section kss-section--depth-1">
+      <div     id="kssref-hero-links" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
-        <a class="kss-title__permalink" href="#kssref-profile_topbar">
-          <span class="kss-title__ref">31</span
-          >Profile topbar
+        <a class="kss-title__permalink" href="#kssref-hero-links">
+          <span class="kss-title__ref">16</span
+          >Hero links
           <span class="kss-title__permalink-hash">#permalink</span>
         </a>
       </h1>
 
 
-      <div class="kss-description">
-        <p>Defines the profile topbar component</p>
-
-      </div>
     </div>
 
       <div class="kss-modifier__wrapper">
@@ -324,72 +320,56 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="profile_topbar">
-
-    <div class="container">
-        <div class="section__group row">
-            <div class="col-md-2 profile_topbar__image">
-                <img src="http://placehold.it/160x160"/>
-            </div>
-
-            <div class="col-md-10 profile_topbar__column">
-                <div class="context-nav group-context-nav field-group-context_nav"><span
-                        class="context-nav__label">Department</span>
-                    <div class="context-nav__items">
-                        <span class="context-nav__item"><a href="#">Trade</a></span>
-                        <span class="context-nav__item"><a href="#">European Anti-Fraud Office</a></span>
-                    </div>
-                </div>
-
-                <button class="btn btn-collapse" data-target="#collapse" data-toggle="collapse">
-                    <span class="toggling-text">Show</span>
-                    <span class="icon icon--blue-dark icon--down"></span>
-                </button>
-            </div>
-        </div>
+          <div class="hero-links">
+  <div class="container-fluid">
+    <div class="hero-links__text">
+      <p>The European Commission is the executive of the European Union and promotes its general interest.</p>
     </div>
-
-    <div id="collapse" class="profile_topbar__expander">
-        <div class="container">
-            Expander content
-        </div>
+  </div>
+  <div class="container-fluid">
+    <div class="hero-links__items">
+      <div class="hero-links__item">
+        <a href="#" class="hero-links__btn">
+          <strong>Image text</strong>
+          <img src="http://placehold.it/550x200" alt="">
+        </a>
+      </div>
+      <div class="hero-links__item">
+        <a href="#" class="hero-links__btn">
+          <strong>Image text</strong>
+          <img src="http://placehold.it/550x200" alt="">
+        </a>
+      </div>
     </div>
+  </div>
 </div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;profile_topbar&quot;&gt;
-
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;section__group row&quot;&gt;
-            &lt;div class=&quot;col-md-2 profile_topbar__image&quot;&gt;
-                &lt;img src=&quot;http://placehold.it/160x160&quot;/&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;col-md-10 profile_topbar__column&quot;&gt;
-                &lt;div class=&quot;context-nav group-context-nav field-group-context_nav&quot;&gt;&lt;span
-                        class=&quot;context-nav__label&quot;&gt;Department&lt;/span&gt;
-                    &lt;div class=&quot;context-nav__items&quot;&gt;
-                        &lt;span class=&quot;context-nav__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Trade&lt;/a&gt;&lt;/span&gt;
-                        &lt;span class=&quot;context-nav__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;European Anti-Fraud Office&lt;/a&gt;&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-
-                &lt;button class=&quot;btn btn-collapse&quot; data-target=&quot;#collapse&quot; data-toggle=&quot;collapse&quot;&gt;
-                    &lt;span class=&quot;toggling-text&quot;&gt;Show&lt;/span&gt;
-                    &lt;span class=&quot;icon icon--blue-dark icon--down&quot;&gt;&lt;/span&gt;
-                &lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;hero-links&quot;&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;div class=&quot;hero-links__text&quot;&gt;
+      &lt;p&gt;The European Commission is the executive of the European Union and promotes its general interest.&lt;/p&gt;
     &lt;/div&gt;
-
-    &lt;div id=&quot;collapse&quot; class=&quot;profile_topbar__expander&quot;&gt;
-        &lt;div class=&quot;container&quot;&gt;
-            Expander content
-        &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;div class=&quot;hero-links__items&quot;&gt;
+      &lt;div class=&quot;hero-links__item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;hero-links__btn&quot;&gt;
+          &lt;strong&gt;Image text&lt;/strong&gt;
+          &lt;img src=&quot;http://placehold.it/550x200&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hero-links__item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;hero-links__btn&quot;&gt;
+          &lt;strong&gt;Image text&lt;/strong&gt;
+          &lt;img src=&quot;http://placehold.it/550x200&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
       </div>

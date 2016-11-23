@@ -13,7 +13,7 @@ $padding-splash-xl: 2em; // 52px
 .splash-page {
 
   &__site-header {
-    background-color: #ffffff;
+    background-color: $white;
 
     .logo {
       float: none;
@@ -46,14 +46,14 @@ $padding-splash-xl: 2em; // 52px
       padding-top: $padding-splash-xl;
       padding-bottom: $padding-splash-xl;
       font-size: $font-size-mid;
-      color: #ffffff;
+      color: $white;
       clear: both;
     }
   }
 
   &__helper-text {
     margin-top: $padding-splash-xl;
-    color: #ffffff;
+    color: $white;
     font-size: $font-size-little;
     clear: both;
 
@@ -65,11 +65,11 @@ $padding-splash-xl: 2em; // 52px
   &__btn-language {
     width: 100%;
     margin-bottom: 4px;
-    background-color: #ffffff;
+    background-color: $white;
     text-align: left; // overriding bootstrap btn class
 
     &:hover {
-      color: #000000;
+      color: $black;
       background-color: $yellow-light;
     }
 
@@ -86,10 +86,10 @@ $padding-splash-xl: 2em; // 52px
     padding: 0.5em 0 0.5em 1em;
     font-size: $font-size-little;
     font-weight: normal;
-    color: #ffffff;
+    color: $white;
 
     &:hover {
-      color: #ffffff;
+      color: $white;
     }
 
     &::after {
@@ -99,7 +99,7 @@ $padding-splash-xl: 2em; // 52px
       width: 1.6em;
       height: 1.6em;
       margin-left: 0.5em;
-      border: 1px solid #ffffff;
+      border: 1px solid $white;
       border-radius: 1.1em;
       text-align: center;
     }
@@ -110,8 +110,8 @@ $padding-splash-xl: 2em; // 52px
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: rgba(0, 68, 148, 0.95);
     text-align: left;
     overflow-x: auto;
@@ -123,8 +123,8 @@ $padding-splash-xl: 2em; // 52px
 
     .splash-page__btn-language {
       &.is-active {
-        color: #000000;
         background-color: $yellow-light;
+        color: $black;
         box-shadow: none;
       }
 
@@ -166,10 +166,10 @@ body {
         clear: both;
 
         th {
-          vertical-align: top;
           min-width: 6em;
-          font-weight: bold;
           padding-top: 0.6em;
+          font-weight: bold;
+          vertical-align: top;
         }
 
         td, th {
@@ -183,7 +183,7 @@ body {
 @include breakpoint(screen-md-min) {
   .splash-page__btn-language {
     &:hover {
-      color: #000000;
+      color: $black;
       background-color: $yellow-light;
     }
   }

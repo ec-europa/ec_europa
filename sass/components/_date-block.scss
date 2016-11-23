@@ -28,7 +28,7 @@ $agenda-yellow: #FED437;
     content: " ";
     border-top: 1em solid transparent;
     border-bottom: 1em solid transparent;
-    border-right: 1em solid #fff;
+    border-right: 1em solid $white;
     @include rotate(135deg);
   }
 }
@@ -105,7 +105,7 @@ Style guide date-block.event.past
 
 .date-block.event.past {
   padding: 0.8em 0.5em 0.7em;
-  background-color: #fff;
+  background-color: $white;
   border: 0.166em solid $grey;
 
   .date-block__day {
@@ -123,7 +123,7 @@ Style guide date-block.event.past
     content: " ";
     border-top: 1em solid transparent;
     border-bottom: 1em solid transparent;
-    border-right: 1em solid #fff;
+    border-right: 1em solid $white;
     @include rotate(135deg);
   }
 

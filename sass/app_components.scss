@@ -7,16 +7,10 @@
 // Importing bootstrap variables
 @import "mixins";
 
-@import "variables";
-
-// Components
 // Needed Base Components
-@import "base/typography";
+@import "base/btn";
 @import "base/headings";
 @import "base/link";
-@import "base/btn";
-@import "base/paragraphs";
-@import "base/form-control";
 
 // Components
 @import "components/icon";
@@ -34,10 +28,12 @@
 @import "components/feedback-form";
 @import "components/field";
 @import "components/file";
+@import "components/file-upload";
 @import "components/filters";
 @import "components/footer";
 @import "components/gallery";
 @import "components/help-block";
+@import "components/hero-links";
 @import "components/highlighted-item";
 @import "components/hr";
 @import "components/icon-social";
