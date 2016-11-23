@@ -64,6 +64,8 @@
 }
 
 // Publication listing hack.
-.field--publication-listing-exposed {
-  margin-top: 43px;
+@include breakpoint(screen-md-min) {
+  .field--publication-listing-exposed {
+    margin-top: 43px;
+  }
 }

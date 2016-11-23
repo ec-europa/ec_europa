@@ -6432,7 +6432,8 @@ Style guide table responsive
   clear: left;
   padding: 0; }
 
-.field--publication-listing-exposed {
-  margin-top: 43px; }
+@media (min-width: 992px) {
+  .field--publication-listing-exposed {
+    margin-top: 43px; } }
 
 /*# sourceMappingURL=style-sass-components.css.map */
