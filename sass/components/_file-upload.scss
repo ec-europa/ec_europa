@@ -10,7 +10,10 @@ Styleguide form.file-upload
 
   .file-upload__input {
     position: relative;
+    display: table;
+    table-layout: fixed;
     margin: 0;
+    white-space: nowrap;
     z-index: 2;
 
     &:focus {
@@ -20,8 +23,11 @@ Styleguide form.file-upload
   }
 
   .file-upload__message {
+    display: table-cell;
+    overflow: hidden;
     line-height: 1.9;
     color: #999999;
+    text-overflow: ellipsis;
   }
 
   .input-group-btn {

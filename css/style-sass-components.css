@@ -2402,7 +2402,10 @@ Styleguide form.file-upload
 */
 .file-upload .file-upload__input {
   position: relative;
+  display: table;
+  table-layout: fixed;
   margin: 0;
+  white-space: nowrap;
   z-index: 2; }
   .file-upload .file-upload__input:focus {
     border-color: #ffd617; }
@@ -2412,8 +2415,11 @@ Styleguide form.file-upload
       text-decoration: none; }
 
 .file-upload .file-upload__message {
+  display: table-cell;
+  overflow: hidden;
   line-height: 1.9;
-  color: #999999; }
+  color: #999999;
+  text-overflow: ellipsis; }
 
 .file-upload .input-group-btn {
   font-size: inherit; }
