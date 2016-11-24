@@ -2155,38 +2155,38 @@ Markup: html/field.html
 Style guide field
 */
 .field {
-  margin-bottom: 0.556em;
-  line-height: normal; }
-  .field:last-child {
+  margin-bottom: 0.556em; }
+  .field + .field--aligned, .field:last-child {
     margin-bottom: 0; }
   .field .field__item--expired {
     text-decoration: line-through; }
-  .field .field__items {
-    display: block; }
-    .field .field__items p:last-child {
-      margin: 0; }
-  .field .sections .container {
-    padding: 0; }
+  .field .field__items p:last-child,
+  .field .field__items ul:last-child {
+    margin-bottom: 0 !important; }
   .field .field__label {
-    padding: 0.215em 0 0.145em 0;
     font-size: 0.778em;
-    font-weight: 600;
-    margin-bottom: 0.5em;
-    display: block;
-    padding: 0.215em 0 0 0; }
+    font-weight: 600; }
     .field .field__label h4 {
       padding: 0; }
     .field .field__label a:focus {
       outline-offset: 2px; }
+  .field .sections .container {
+    padding: 0; }
 
 @media (min-width: 768px) {
-  .field .field__label:not(.field__label--above) {
-    width: 20%;
-    margin-bottom: 0;
-    display: inline-block; }
-    .field .field__label:not(.field__label--above) + .field__items {
+  .field {
+    white-space: nowrap; }
+    .field .field__label,
+    .field .field__items {
+      white-space: normal; }
+    .field .field__label:not(.field__label--above) {
       display: inline-block;
-      width: 79%; } }
+      width: 20%;
+      padding: 0.335em 0 0 0;
+      vertical-align: top; }
+      .field .field__label:not(.field__label--above) + .field__items {
+        display: inline-block;
+        width: 80%; } }
 
 /*
 Field aligned
@@ -2199,10 +2199,16 @@ Markup: html/field--aligned.html
 Style guide field.aligned
 */
 @media (min-width: 768px) {
+  .field--aligned {
+    margin-top: -0.556em; }
+    .field--aligned .field__items {
+      display: inline-block;
+      width: 80%;
+      margin-left: 20.8%; } }
+
+@media (min-width: 992px) {
   .field--aligned .field__items {
-    width: 79%;
-    margin-left: 20%;
-    display: inline-block; } }
+    margin-left: 20.6%; } }
 
 /*
 File

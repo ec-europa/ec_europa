@@ -11,8 +11,8 @@ Style guide field
 
 .field {
   margin-bottom: 0.556em;
-  line-height: normal;
 
+  + .field--aligned,
   &:last-child {
     margin-bottom: 0;
   }
@@ -26,25 +26,15 @@ Style guide field
   }
 
   .field__items {
-    display: block;
-
-    p:last-child {
-      margin: 0;
+    p:last-child,
+    ul:last-child {
+      margin-bottom: 0 !important;
     }
   }
 
-  // Why do we have this html? (body field in priorities)
-  .sections .container {
-    padding: 0;
-  }
-
   .field__label {
-    padding: 0.215em 0 0.145em 0;
     font-size: $font-size-xsmall;
     font-weight: $font-weight-bold;
-    margin-bottom: 0.5em;
-    display: block;
-    padding: 0.215em 0 0 0;
 
     h4 {
       padding: 0;
@@ -54,19 +44,32 @@ Style guide field
       outline-offset: 2px;
     }
   }
+
+  // @todo: Why do we have this html? (body field in priorities)
+  .sections .container {
+    padding: 0;
+  }
 }
 
 // Desktop and tablets breakpoint.
 @include breakpoint(screen-sm-min) {
   .field {
+    white-space: nowrap;
+
+    .field__label, 
+    .field__items {
+      white-space: normal;
+    }
+    
     .field__label:not(.field__label--above) {
-      width: 20%;
-      margin-bottom: 0;
       display: inline-block;
+      width: 20%;
+      padding: 0.335em 0 0 0;
+      vertical-align: top;
 
       & + .field__items {
         display: inline-block;
-        width: 79%;
+        width: 80%;
       }
     }
   }
@@ -84,10 +87,18 @@ Style guide field.aligned
 */
 @include breakpoint(screen-sm-min) {
   .field--aligned {
+    margin-top: -0.556em;
+
     .field__items {
-      width: 79%;
-      margin-left: 20%;
       display: inline-block;
+      width: 80%;
+      margin-left: 20.8%;
     }
+  }
+}
+
+@include breakpoint(screen-md-min) {
+  .field--aligned .field__items {
+    margin-left: 20.6%;
   }
 }
