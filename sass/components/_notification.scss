@@ -10,12 +10,12 @@ Style guide notification
 
 .notification {
   @extend .hidden-print;
-  background: $yellow-light;
   padding: 10px 0 6px;
+  background-color: $yellow-light;
   font-size: 14px;
 
   a {
-    color: #000;
+    color: $black;
     @include _focus_outline_border(3px, $black, 2px);
 
     &:hover,
@@ -27,9 +27,9 @@ Style guide notification
 
 .notification__label {
   display: inline-block;
-  text-transform: uppercase;
-  font-weight: bold;
   margin-right: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .notification__content {
@@ -37,15 +37,15 @@ Style guide notification
 
   .notification__text {
     float: left;
+    width: 100%;
     margin-bottom: 6px;
     margin-right: 8px;
-    width: 100%;
   }
 
   .notification__btn {
-    font-weight: bold;
     float: left;
     margin-bottom: 6px;
+    font-weight: bold;
 
     &::after {
       @extend .icon--after;
@@ -64,8 +64,8 @@ Style guide notification
   font-weight: $font-weight-bold;
 
   & .icon {
-    top: 2px;
     position: relative;
+    top: 2px;
   }
 }
 

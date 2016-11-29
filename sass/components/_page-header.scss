@@ -37,22 +37,22 @@ Style guide page-header.informational-home
 */
 
 .page-header {
-  background-color: $brand-primary;
   margin: 0;
   padding: 0 0 1.5em;
-  color: #fff;
+  background-color: $brand-primary;
+  color: $white;
   border-bottom: none;
 
   h1 {
     margin: 0;
     line-height: 1.25;
-    color: #fff;
+    color: $white;
 
     span {
       margin-top: 0.175em;
+      line-height: 1.34;
       font-size: 0.750em;
       font-weight: 400;
-      line-height: 1.34;
     }
 
     .paragraph {
@@ -61,15 +61,15 @@ Style guide page-header.informational-home
   }
 
   p {
-    margin: 0;
     max-width: 40em;
-    font-size: $font-size-h3;
+    margin: 0;
     line-height: 1.45;
-    color: #fff;
+    font-size: $font-size-h3;
+    color: $white;
   }
 
   a {
-    color: #fff;
+    color: $white;
     @include _focus_outline_border(3px, $yellow-light, 2px);
 
     &:hover:not(.breadcrumb__link, .btn) {

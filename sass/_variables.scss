@@ -1,97 +1,99 @@
-// Bootstrap overrides and new variables
+// Bootstrap overrides and new variables.
 
-// Colors
-$black:                  #000;
+// Colors.
+$white:           #ffffff;
 
-$grey-dark:              #575757;
-$grey-base:              #404040;
-$grey:                   #b3b4b5;
-$grey-light:             #e2e2e2;
-$grey-lighter:           #ececec;
-$grey-lightest:          #f2f2f2;
+$black:           #000000;
 
-$blue-darkest:           #023066;
-$blue-darker:            #012b58;
-$blue-dark:              #004494;
-$blue:                   #006fb4;
-$blue-light:             #b0c5de;
+$grey-dark:       #575757;
+$grey-base:       #404040;
+$grey:            #b3b4b5;
+$grey-light:      #e2e2e2;
+$grey-lighter:    #ececec;
+$grey-lightest:   #f2f2f2;
 
-$yellow-dark:            #f2a615;
-$yellow:                 #ffc412;
-$yellow-light:           #ffd617;
-$yellow-lighter:         #ffe574;
+$blue-darkest:    #023066;
+$blue-darker:     #012b58;
+$blue-dark:       #004494;
+$blue:            #006fb4;
+$blue-light:      #b0c5de;
 
-$green:                  #467a39;
+$yellow-dark:     #f2a615;
+$yellow:          #ffc412;
+$yellow-light:    #ffd617;
+$yellow-lighter:  #ffe574;
 
-$red:                    #ff2423;
+$green:           #467a39;
 
-$brand-primary:          $blue-dark;
-$brand-political:        $blue-darker;
-$brand-success:          $green;
-$brand-info:             $grey-dark;
-$brand-warning:          $yellow-dark;
-$brand-danger:           $red;
+$red:             #da2131;
 
-$text-color:             $grey-base;
+$brand-primary:   $blue-dark;
+$brand-political: $blue-darker;
+$brand-success:   $green;
+$brand-info:      $grey-dark;
+$brand-warning:   $yellow-dark;
+$brand-danger:    $red;
 
-// Typography
-$font-family-sans-serif: Arial, sans-serif;
-$font-family-base:       $font-family-sans-serif;
+$text-color:      $grey-base;
 
-$font-size-base:         15px; // this is mobile first default, desktop default is 18px
-$font-size-huge:         1.667em; // 30px
-$font-size-big:          1.333em; // 24px
-$font-size-mid:          1.222em; // 22px
-$font-size-medium:       1em;     // 18px
-$font-size-little:       0.889em; // 16px
-$font-size-tiny:         0.833em; // 15px
-$font-size-xsmall:       0.778em; // 14px
-$font-size-xxsmall:      0.67em;  // 12px
+// Typography.
+$font-family-sans-serif:  Arial, sans-serif;
+$font-family-base:        $font-family-sans-serif;
 
-$font-size-h1:           2.222em;
-$font-size-h2:           $font-size-huge;
-$font-size-h3:           $font-size-mid;
-$font-size-h4:           $font-size-medium;
-$font-size-h5:           $font-size-xsmall;
-$font-size-h6:           $font-size-xsmall;
+$font-size-base:    15px;    // mobile default first, desktop default is 18px.
+$font-size-huge:    1.667em; // 30px
+$font-size-big:     1.333em; // 24px
+$font-size-mid:     1.222em; // 22px
+$font-size-medium:  1em;     // 18px
+$font-size-little:  0.889em; // 16px
+$font-size-tiny:    0.833em; // 15px
+$font-size-xsmall:  0.778em; // 14px
+$font-size-xxsmall: 0.67em;  // 12px
 
-$font-weight-normal:     400;
-$font-weight-bold:       600;
+$font-size-h1:  2.222em;
+$font-size-h2:  $font-size-huge;
+$font-size-h3:  $font-size-mid;
+$font-size-h4:  $font-size-medium;
+$font-size-h5:  $font-size-xsmall;
+$font-size-h6:  $font-size-xsmall;
 
-// Medium Small screen / tablet
-$screen-msm:             622px !default;
-$screen-msm-min:         $screen-msm !default;
+$font-weight-normal:  400;
+$font-weight-bold:    600;
 
-// Grid defaults
+// Medium small screen / tablet.
+$screen-msm:      622px !default;
+$screen-msm-min:  $screen-msm !default;
+
+// Grid defaults.
 $grid-columns: 12;
 
-$col-1: percentage((1/ $grid-columns));
-$col-2: percentage((2/ $grid-columns));
-$col-3: percentage((3/ $grid-columns));
-$col-4: percentage((4/ $grid-columns));
-$col-5: percentage((5/ $grid-columns));
-$col-6: percentage((6/ $grid-columns));
-$col-7: percentage((7/ $grid-columns));
-$col-8: percentage((8/ $grid-columns));
-$col-9: percentage((9/ $grid-columns));
-$col-10: percentage((10/ $grid-columns));
-$col-11: percentage((11/ $grid-columns));
-$col-12: percentage((12/ $grid-columns));
+$col-1:   percentage((1/ $grid-columns));
+$col-2:   percentage((2/ $grid-columns));
+$col-3:   percentage((3/ $grid-columns));
+$col-4:   percentage((4/ $grid-columns));
+$col-5:   percentage((5/ $grid-columns));
+$col-6:   percentage((6/ $grid-columns));
+$col-7:   percentage((7/ $grid-columns));
+$col-8:   percentage((8/ $grid-columns));
+$col-9:   percentage((9/ $grid-columns));
+$col-10:  percentage((10/ $grid-columns));
+$col-11:  percentage((11/ $grid-columns));
+$col-12:  percentage((12/ $grid-columns));
 
 // Grid sizes without percentages.
 $col-1-no-percentage: (85 / $grid-columns);
 
-// Form control
-$form-control-height:                             2.750em; //44px basing on form control base font size.
+// Form control.
+$form-control-height: 2.750em; //44px basing on form control base font size.
 
 // Form colors.
 $form-control-color-disabled:                     $grey;
 
 $form-control-text-color:                         $grey-base;
-$form-control-text-color-focus:                   #000;
+$form-control-text-color-focus:                   $black;
 $form-control-border-color:                       $grey-base;
 $form-control-border-color-focus:                 $yellow-light;
-$form-control-background-color:                   #fff;
+$form-control-background-color:                   $white;
 $form-control-background-color-disabled:          $grey-light;
 $state-danger-text:                               $brand-danger;
 
@@ -99,7 +101,7 @@ $state-danger-text:                               $brand-danger;
 $form-control-border-select-color-hover:          $brand-primary;
 $form-control-border-select-color-down:           $grey-base;
 
-// Checkbox and radio
+// Checkbox and radio.
 // Unchecked.
 $form-checkbox-color-unchecked:                   $grey-dark;
 $form-checkbox-background-color-unchecked:        $grey-lighter;
@@ -107,46 +109,46 @@ $form-checkbox-background-color-unchecked:        $grey-lighter;
 // Unchecked, hover.
 $form-checkbox-color-unchecked-hover:             $grey-dark;
 $form-checkbox-border-color-unchecked-hover:      $brand-primary;
-$form-checkbox-background-color-unchecked-hover:  #fff;
+$form-checkbox-background-color-unchecked-hover:  $white;
 
 // Checked.
-$form-checkbox-color-checked:                     #fff;
+$form-checkbox-color-checked:                     $white;
 $form-checkbox-background-color-checked:          $brand-primary;
 
 // Checked, hover.
-$form-checkbox-color-checked-hover:               #fff;
+$form-checkbox-color-checked-hover:               $white;
 $form-checkbox-border-color-checked-hover:        $yellow-light;
 $form-checkbox-background-color-checked-hover:    $brand-primary;
 
 // Navigation block color settings.
-$navigation-title-color:                          $blue-darker;
-$navigation-title-hover-color:                    #000;
-$navigation-top-border-color:                     $yellow-light;
+$navigation-title-color:        $blue-darker;
+$navigation-title-hover-color:  $black;
+$navigation-top-border-color:   $yellow-light;
 
 // Icon size.
-$form-checkbox-icon-size:                         1.500em; // 24px
+$form-checkbox-icon-size: 1.500em; // 24px
 
 // Form border width.
-$form-border-width:                               0.111em;
+$form-border-width: 0.111em;
 
 // Help block.
-$form-group-help-block-text-color:                $grey-dark;
-$form-group-help-block-text-color-disabled:       $form-control-color-disabled;
-$form-group-help-block-text-color-has-error:      $form-group-help-block-text-color;
+$form-group-help-block-text-color:            $grey-dark;
+$form-group-help-block-text-color-disabled:   $form-control-color-disabled;
+$form-group-help-block-text-color-has-error:  $form-group-help-block-text-color;
 
-$form-item-legend-font-size:                      $font-size-xxsmall;
+$form-item-legend-font-size: $font-size-xxsmall;
 
 // Attribute selector for external links.
 $external_link_pattern: 'href^="http"';
 $ec_url_patterns: '[href*="ec.europa.eu"]';
 
 // In order to override the 'default!', bootstrap variables have to be added
-// after the overrides
+// after the overrides.
 @import "../bootstrap-sass/bootstrap/variables";
 
-//** Point at which the navbar becomes uncollapsed.
+// Point at which the navbar becomes un-collapsed.
 $grid-float-breakpoint:     $screen-lg-min;
-//** Point at which the navbar begins collapsing.
+// Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 // Used languages.

@@ -14,7 +14,6 @@ $twenty-five: 1.389em;
 
 .comment__form-wrapper {
   @extend .col-md-6;
-
   padding-left: 0;
   padding-right: 0;
 }
@@ -27,16 +26,16 @@ $twenty-five: 1.389em;
   display: none;
 
   img {
-    border: 1px solid $yellow-light;
-    padding: 1px;
     max-width: 6.944em;
+    padding: 1px;
+    border: 1px solid $yellow-light;
   }
 }
 
 .comment__meta {
-  color: $grey-dark;
-  font-size: $font-size-little;
   padding-bottom: $fifteen;
+  font-size: $font-size-little;
+  color: $grey-dark;
   text-transform: uppercase;
 
   a {
@@ -45,19 +44,19 @@ $twenty-five: 1.389em;
 }
 
 .comment__body {
-  background: #fff;
-  font-size: $font-size-little;
-  padding: $twenty $twenty-five;
   position: relative;
+  padding: $twenty $twenty-five;
+  background-color: $white;
+  font-size: $font-size-little;
 }
 
 .comment__title {
+  display: block;
+  padding: $fifteen 0;
+  font-size: $font-size-medium;
+  font-weight: bold;
   color: $grey-base;
   border-top: 1px solid $yellow-light;
-  display: block;
-  font-weight: bold;
-  font-size: $font-size-medium;
-  padding: $fifteen 0;
 
   &:focus{
     outline-offset: 0;
@@ -97,25 +96,25 @@ $twenty-five: 1.389em;
 
 @include breakpoint(screen-md-min) {
   .comment__image {
-    width: 16.6667%;
     float: left;
     display: block;
+    width: 16.6667%;
   }
 
   .comment__body {
-    width: 50%;
     float: left;
+    width: 50%;
 
     &::before {
       position: absolute;
-      right: 100%;
       top: 15%;
+      right: 100%;
       width: 0;
       height: 0;
       margin-top: -$ten;
       content: " ";
       border: $ten solid rgba(255, 255, 255, 0);
-      border-right-color: #fff;
+      border-right-color: $white;
       pointer-events: none;
     }
   }

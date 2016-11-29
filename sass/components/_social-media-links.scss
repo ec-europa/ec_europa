@@ -141,3 +141,25 @@ Style guide social
     }
   }
 }
+
+// Social network links in a field component.
+
+.field ul.social-media-links__horizontal li {
+  float: none;
+  margin-bottom: 0.1em;
+}
+
+@include breakpoint(screen-sm-min) {
+  .field ul.social-media-links__horizontal {
+    vertical-align: top;
+
+    li {
+      float: left;
+
+      &:nth-last-child(2) {
+        margin-right: 0.6em;
+      }
+    }
+  }
+}
+

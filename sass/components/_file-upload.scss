@@ -1,0 +1,66 @@
+/*
+File upload
+
+Markup: html/file-upload.html
+
+Styleguide form.file-upload
+*/
+
+.file-upload {
+
+  .file-upload__input {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 2;
+
+    &:focus {
+      border-color: $yellow-light;
+      @include _focus_outline_border(3px, $yellow-light, 0, none);
+    }
+  }
+
+  .file-upload__message {
+    display: table-cell;
+    overflow: hidden;
+    line-height: 1.9;
+    color: #999999;
+    text-overflow: ellipsis;
+  }
+
+  .input-group-btn {
+    font-size: inherit;
+  }
+
+  .file-upload__label {
+    display: inline-block;
+    max-width: none;
+    background-color: $grey-base;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid $grey-base;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus  {
+      border-color: $yellow-light;
+    }
+  }
+
+  .has-error & {
+    .file-upload__label {
+      border-color: $red;
+      background-color: $red;
+    }
+  }
+
+  input[type="file"],
+  .no-js &,
+  button[type="submit"] {
+    display: none;
+  }
+}

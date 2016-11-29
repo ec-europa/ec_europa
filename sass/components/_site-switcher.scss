@@ -13,8 +13,8 @@ Style guide: siteswitcher
 
 .site-switcher {
   @extend .hidden-print;
-  background: $grey-lightest;
   display: block;
+  background-color: $grey-lightest;
   font-size: $font-size-little;
 }
 
@@ -27,9 +27,9 @@ Style guide: siteswitcher
 .site-switcher__option {
   display: inline-block;
   float: left;
+  width: 50%;
   text-align: center;
   vertical-align: middle;
-  width: 50%;
 
   a {
     text-decoration: none;
@@ -58,7 +58,7 @@ Style guide: siteswitcher
     border-left: none;
 
     & > a {
-      color: #fff;
+      color: $white;
     }
   }
 }
@@ -74,13 +74,13 @@ Style guide: siteswitcher
     position: relative;
 
     &.is-selected::after {
+      content: " " !important;
       position: absolute;
       top: 95%;
       left: 50%;
       width: 0;
       height: 0;
       margin-left: -10px;
-      content: " " !important;
       border: 10px solid rgba(0, 68, 148, 0);
       border-top-color: $blue-dark;
       pointer-events: none;
@@ -101,13 +101,13 @@ Style guide: siteswitcher
     position: relative;
 
     &.is-selected::after {
+      content: " " !important;
       position: absolute;
       left: 50%;
       bottom: 95%;
       width: 0;
       height: 0;
       margin-left: -10px;
-      content: " " !important;
       border: 10px solid rgba(0, 68, 148, 0);
       border-bottom-color: $blue-dark;
       pointer-events: none;

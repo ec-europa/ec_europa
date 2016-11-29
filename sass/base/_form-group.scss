@@ -7,6 +7,6 @@ Style guide form.form-group
 */
 
 .form-group {
-  margin-bottom: 1.7em;
   @extend .hidden-print;
+  margin-bottom: 1.7em;
 }

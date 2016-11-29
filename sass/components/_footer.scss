@@ -10,13 +10,13 @@ Style guide footer
 
 .footer {
   @extend .hidden-print;
-  background: $brand-primary;
-  color: #fff;
+  background-color: $brand-primary;
   font-size: $font-size-little;
+  color: $white;
   text-align: center;
 
   a {
-    color: #fff;
+    color: $white;
     text-decoration: underline;
 
     &:hover,
@@ -39,8 +39,8 @@ Style guide footer
 
 // Menus.
 .footer__menu {
-  padding-left: 0;
   margin: 0;
+  padding-left: 0;
 
   .footer__menu-item {
     margin-right: 15px;
@@ -71,10 +71,10 @@ Style guide footer
 }
 
 .footer__menu--separator {
-  border-top: 1px solid #4d7cb4;
+  width: 100%;
   margin-top: 0.6em;
   padding-top: 1.2em;
-  width: 100%;
+  border-top: 1px solid #4d7cb4;
 }
 
 // Icons.
@@ -110,13 +110,13 @@ Style guide footer
 
   // Columns.
   .footer__column-main {
-    padding-bottom: 60px;
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .footer__column-right {
-    padding-bottom: 0;
     float: right;
+    padding-bottom: 0;
   }
 
   .footer__label {
