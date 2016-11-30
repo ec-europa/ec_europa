@@ -54,16 +54,9 @@ Style guide field
 // Desktop and tablets breakpoint.
 @include breakpoint(screen-sm-min) {
   .field {
-    white-space: nowrap;
-
-    .field__label, 
-    .field__items {
-      white-space: normal;
-    }
-    
     .field__label:not(.field__label--above) {
       display: inline-block;
-      width: 20%;
+      width: 19%;
       padding: 0.335em 0 0 0;
       vertical-align: top;
 
