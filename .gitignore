@@ -5,6 +5,3 @@ sass/app.css
 # Ignore css.map
 css/*css.map
 styleguide/assets/public/css/*css.map
-
-# Ignore external libraries
-js/libraries
