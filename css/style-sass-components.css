@@ -2174,19 +2174,14 @@ Style guide field
     padding: 0; }
 
 @media (min-width: 768px) {
-  .field {
-    white-space: nowrap; }
-    .field .field__label,
-    .field .field__items {
-      white-space: normal; }
-    .field .field__label:not(.field__label--above) {
+  .field .field__label:not(.field__label--above) {
+    display: inline-block;
+    width: 19%;
+    padding: 0.335em 0 0 0;
+    vertical-align: top; }
+    .field .field__label:not(.field__label--above) + .field__items {
       display: inline-block;
-      width: 20%;
-      padding: 0.335em 0 0 0;
-      vertical-align: top; }
-      .field .field__label:not(.field__label--above) + .field__items {
-        display: inline-block;
-        width: 80%; } }
+      width: 80%; } }
 
 /*
 Field aligned
