@@ -5384,6 +5384,10 @@ Markup: html/page-header.html
 .page-header--image - Header with a background image
 .page-header--large-intro - Header with larger intro text
 
+Markup: html/page-header--xlarge-intro.html
+
+.page-header--xlarge-intro - Header with xlarger intro text
+
 
 Style guide page-header
 */
@@ -5481,6 +5485,43 @@ Style guide page-header.informational-home
     margin: 1em 2em 1em 0; }
     .page-header__eventinfo .icon::before, .page-header__eventinfo .date-picker .date-picker--icon::before, .date-picker .page-header__eventinfo .date-picker--icon::before, .page-header__eventinfo .search-form__btn::before {
       margin-right: 0.5em; }
+
+.page-header--xlarge-intro, .node-info-homepage.view-mode-homepage_political .page-header {
+  padding-bottom: 0;
+  min-height: 150px; }
+  .page-header--xlarge-intro .page-header__hero-title, .node-info-homepage.view-mode-homepage_political .page-header .page-header__hero-title {
+    background-color: #012b58;
+    margin: 75px 0 0;
+    padding: 16px;
+    min-height: 75px; }
+  .page-header--xlarge-intro .field__label--above, .node-info-homepage.view-mode-homepage_political .page-header .field__label--above {
+    color: #ffffff;
+    font-size: 0.778em;
+    font-weight: 400;
+    padding: 0;
+    text-transform: uppercase; }
+  .page-header--xlarge-intro p, .node-info-homepage.view-mode-homepage_political .page-header p {
+    font-size: 1.222em; }
+
+@media (min-width: 622px) {
+  .page-header--xlarge-intro, .node-info-homepage.view-mode-homepage_political .page-header {
+    height: 320px; }
+    .page-header--xlarge-intro .page-header__hero-title, .node-info-homepage.view-mode-homepage_political .page-header .page-header__hero-title {
+      background-color: transparent;
+      padding-top: 5em;
+      margin: auto; }
+    .page-header--xlarge-intro .field__label--above, .node-info-homepage.view-mode-homepage_political .page-header .field__label--above {
+      background-color: #012b58;
+      text-align: center;
+      line-height: 34px;
+      height: 34px;
+      width: 146px;
+      margin: 0; }
+    .page-header--xlarge-intro p, .node-info-homepage.view-mode-homepage_political .page-header p {
+      background-color: #ffffff;
+      color: #004494;
+      width: 550px;
+      padding: 22px 5px 22px 33px; } }
 
 /*
 Pager

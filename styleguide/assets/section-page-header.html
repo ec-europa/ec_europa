@@ -333,6 +333,9 @@
 
       <div class="kss-description">
         <p>Page header component</p>
+<p>Markup: html/page-header.html</p>
+<p>.page-header--image - Header with a background image
+.page-header--large-intro - Header with larger intro text</p>
 
       </div>
     </div>
@@ -347,35 +350,23 @@
         <div class="kss-modifier__example">
           <div class="page-header [modifier class]">
   <div class="container-fluid page-header__hero-title">
-    <p>The <strong>European Commission</strong> is the European Union’s executive body. It represents the interests of the European Union as a whole.</p>
+    <div class="field__label field__label--above">Highlight</div>
+    <p>The <strong>European Commission</strong> is the European Union’s executive body.</p>
   </div>
 </div>
 
         </div>
         <div class="kss-modifier__name kss-style">
-          .page-header--image
+          .page-header--xlarge-intro
         </div>
         <div class="kss-modifier__description kss-style">
-          Header with a background image
+          Header with xlarger intro text
         </div>
         <div class="kss-modifier__example">
-          <div class="page-header page-header--image">
+          <div class="page-header page-header--xlarge-intro">
   <div class="container-fluid page-header__hero-title">
-    <p>The <strong>European Commission</strong> is the European Union’s executive body. It represents the interests of the European Union as a whole.</p>
-  </div>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .page-header--large-intro
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Header with larger intro text
-        </div>
-        <div class="kss-modifier__example">
-          <div class="page-header page-header--large-intro">
-  <div class="container-fluid page-header__hero-title">
-    <p>The <strong>European Commission</strong> is the European Union’s executive body. It represents the interests of the European Union as a whole.</p>
+    <div class="field__label field__label--above">Highlight</div>
+    <p>The <strong>European Commission</strong> is the European Union’s executive body.</p>
   </div>
 </div>
 
@@ -385,7 +376,8 @@
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;page-header [modifier class]&quot;&gt;
   &lt;div class=&quot;container-fluid page-header__hero-title&quot;&gt;
-    &lt;p&gt;The &lt;strong&gt;European Commission&lt;/strong&gt; is the European Union’s executive body. It represents the interests of the European Union as a whole.&lt;/p&gt;
+    &lt;div class=&quot;field__label field__label--above&quot;&gt;Highlight&lt;/div&gt;
+    &lt;p&gt;The &lt;strong&gt;European Commission&lt;/strong&gt; is the European Union’s executive body.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>

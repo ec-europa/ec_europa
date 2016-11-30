@@ -8,6 +8,10 @@ Markup: html/page-header.html
 .page-header--image - Header with a background image
 .page-header--large-intro - Header with larger intro text
 
+Markup: html/page-header--xlarge-intro.html
+
+.page-header--xlarge-intro - Header with xlarger intro text
+
 
 Style guide page-header
 */
@@ -143,5 +147,69 @@ Style guide page-header.informational-home
     &::before {
       margin-right: 0.5em;
     }
+  }
+}
+
+// Political homepage.
+.page-header--xlarge-intro {
+  padding-bottom: 0;
+  min-height: 150px;
+
+  .page-header__hero-title {
+    background-color: $blue-darker;
+    margin: 75px 0 0;
+    padding: 16px;
+    min-height: 75px;
+  }
+
+  .field__label--above {
+    color: $white;
+    font-size: $font-size-h5;
+    font-weight: $font-weight-normal;
+
+    padding: 0;
+
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: $font-size-h3;
+  }
+}
+
+@include breakpoint(screen-msm-min) {
+  .page-header--xlarge-intro {
+    height: 320px;
+
+    .page-header__hero-title {
+      background-color: transparent;
+      padding-top: 5em;
+      margin: auto;
+    }
+
+    .field__label--above {
+      background-color: $blue-darker;
+      text-align: center;
+
+      line-height: 34px;
+      height: 34px;
+      width: 146px;
+
+      margin: 0;
+    }
+
+    p {
+      background-color: $white;
+      color: $blue-dark;
+
+      width: 550px;
+      padding: 22px 5px 22px 33px;
+    }
+  }
+}
+
+.node-info-homepage.view-mode-homepage_political {
+  .page-header {
+    @extend .page-header--xlarge-intro;
   }
 }
