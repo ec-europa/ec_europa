@@ -592,183 +592,20 @@ function europa_easy_breadcrumb(&$variables) {
 }
 
 /**
- * Helper for providing markup to file component.
- *
- * @param object $file
- *   File object.
- * @param array $url
- *   Url depending on field type.
- * @param string $modifier
- *   Class modefier for the file block element.
- * @param bool $subfile
- *   True/False parameter to set if it is a subfile.
- * @param bool $is_external
- *   If the file links to an external resource.
- *
- * @return string
- *   HTML markup.
- */
-function _europa_file_markup($file, array $url, $modifier = NULL, $subfile = FALSE, $is_external = FALSE) {
-  // Define the file icon class.
-  $icons_available = ['image', 'audio', 'video'];
-  $file_icon_class = in_array($file->type, $icons_available) ? ' icon--' . $file->type : ' icon--file';
-
-  // If we have a modifier, just append it to the class.
-  $file_class = (!empty($modifier) ? ' ' . $modifier : '');
-
-  // If the file is internal, we have additional information.
-  if (!$is_external) {
-    $file_extension = drupal_strtoupper(pathinfo($file->uri, PATHINFO_EXTENSION));
-    $file_size = format_size($file->filesize);
-  }
-
-  // Get our full language string.
-  if (isset($file->entity->language) || isset($file->language)) {
-    $language_to_use = isset($file->entity->language) ? entity_translation_get_existing_language('node', $file->entity) : $file->language;
-    $file_language_string = _dt_shared_functions_get_language_obj($language_to_use, 'native');
-    if (!$subfile && module_exists('locale') && isset($GLOBALS['language_content']->language)) {
-      $file_language_string = locale($file_language_string, NULL, $GLOBALS['language_content']->language);
-    }
-  }
-
-  // Init file info array.
-  $file_info_parts = [];
-
-  // Add the file size if available.
-  if (isset($file_size)) {
-    $file_info_parts[] = $file_size;
-  }
-  // Add the file extension if available.
-  if (isset($file_extension)) {
-    $file_info_parts[] = $file_extension;
-  }
-
-  // File information and title setter.
-  if ($subfile && isset($file_language_string)) {
-    $file_info_string = implode(' - ', $file_info_parts);
-    $title_string = $file_language_string . ' ' . t('version');
-  }
-  else {
-    $file_info_string = isset($file_language_string) ? '<span class="file__content-language">' . $file_language_string . ' </span>' : '';
-    $file_info_string .= !empty($file_info_parts) ? '(' . implode(' - ', $file_info_parts) . ')' : '';
-
-    // Use the description as the link text if available.
-    if (isset($file->entity)) {
-      $file_node = entity_metadata_wrapper('node', $file->entity);
-      $title_string = $file_node->title->value();
-    }
-    else {
-      $title_string = !empty($file->description) ? $file->description : $file->filename;
-    }
-  }
-
-  // Button information.
-  $options = [
-    'attributes' => [
-      'class' => ['file__btn', 'btn', 'btn-default'],
-      'title' => check_plain($file->filename),
-    ],
-    'html' => TRUE,
-  ];
-
-  if (isset($file->filemime, $file->filesize)) {
-    $options['attributes']['type'] = $file->filemime . '; length=' . $file->filesize;
-  }
-
-  $file_text = t('Download');
-  if (isset($file_extension, $file->filesize)) {
-    $file_text .= '<span class="sr-only">' . $file_extension . ' - ' . format_size($file->filesize) . '</span>';
-  }
-
-  // Build the render array.
-  $render_array = [
-    '#type' => 'markup',
-    '#prefix' => '<div class="file' . $file_class . '">',
-    '#suffix' => '</div>',
-  ];
-
-  $render_array['icon'] = [
-    '#markup' => '<span class="file__icon icon' . $file_icon_class . '"></span>',
-  ];
-
-  $render_array['file_metadata'] = [
-    '#type' => 'markup',
-    '#prefix' => '<div class="file__metadata">',
-    '#suffix' => '</div>',
-  ];
-
-  $render_array['file_metadata']['title'] = [
-    '#type' => 'markup',
-    '#markup' => $title_string,
-    '#prefix' => '<span class="file__title">',
-    '#suffix' => '</span>',
-  ];
-
-  $render_array['file_metadata']['info'] = [
-    '#type' => 'markup',
-    '#markup' => $file_info_string,
-    '#prefix' => '<div class="file__info">',
-    '#suffix' => '</div>',
-  ];
-
-  $render_array['button'] = [
-    '#type' => 'markup',
-    '#markup' => l($file_text, $url['path'], array_merge($options, $url['options'])),
-  ];
-
-  return drupal_render($render_array);
-}
-
-/**
  * Override theme_file_link().
  */
 function europa_file_link($variables) {
-  $file = $variables['file'];
+  if (function_exists('_nexteuropa_formatters_file_markup')) {
+    $file = $variables['file'];
 
-  // Submit the language along witht the file.
-  $langcode = $GLOBALS['language_content']->language;
-  if (!empty($langcode)) {
-    $file->language = $langcode;
+    // Submit the language along witht the file.
+    $langcode = $GLOBALS['language_content']->language;
+    if (!empty($langcode)) {
+      $file->language = $langcode;
+    }
+
+    return _nexteuropa_formatters_file_markup($file);
   }
-
-  $url['path'] = file_create_url($file->uri);
-  $url['options'] = [];
-
-  return _europa_file_markup($file, $url);
-}
-
-/**
- * Override theme_file_entity_download_link().
- */
-function europa_file_entity_download_link($variables) {
-  $file = $variables['file'];
-
-  // Submit the language along witht the file.
-  $langcode = $GLOBALS['language_content']->language;
-  if (!empty($langcode)) {
-    $file->language = $langcode;
-  }
-
-  $uri = file_entity_download_uri($file);
-
-  return _europa_file_markup($file, $uri);
-}
-
-/**
- * Overrides theme_link().
- */
-function europa_link($variables) {
-  // Link module creates absolute URLs for internal links as well, resulting
-  // in having the external link icon on these internal links. We attempt to
-  // re-convert these to relative.
-  global $base_url;
-  $internal_url = explode($base_url, $variables['path']);
-  if (count($internal_url) > 1) {
-    $variables['options']['attributes']['class'][] = 'is-internal';
-  }
-
-  // @codingStandardsIgnoreLine
-  return theme_link($variables);
 }
 
 /**
