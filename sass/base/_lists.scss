@@ -6,6 +6,7 @@ Markup: html/lists.html
 Style guide text.lists
 */
 
+// @todo: this list component needs a review and a refinement
 ul:not(.listing, .social-media-links__list, .file__translations-list, .site-switcher__list, .menu, .site-user-menu__list, #admin-menu-wrapper ul),
 ol {
   max-width: 32em;
@@ -30,4 +31,10 @@ li > ol {
 
 li > ul {
   list-style-type: disc;
+}
+
+.field ul:not(.social-media-links__list) {
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 1em;
 }

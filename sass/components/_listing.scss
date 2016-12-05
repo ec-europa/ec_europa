@@ -535,6 +535,10 @@ a.listing__title {
 .listing__column-second {
   width: 100%;
   margin: 0.2em 0 0.8em 0;
+
+  img {
+    text-align: right;
+  }
 }
 
 .listing__column-main {

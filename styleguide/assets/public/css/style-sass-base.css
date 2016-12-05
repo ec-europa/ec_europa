@@ -4559,6 +4559,11 @@ li > ol {
 li > ul {
   list-style-type: disc; }
 
+.field ul:not(.social-media-links__list) {
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 1em; }
+
 .navbar-toggle {
   border-radius: 0px;
   border: none; }
