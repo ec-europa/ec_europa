@@ -33,7 +33,6 @@ Style guide hero-links
     @extend .col-sm-6;
     @extend .col-xs-12;
     margin-bottom: 30px;
-    text-align: center;
 
     &:last-child {
       margin-bottom: 0;
@@ -62,7 +61,7 @@ Style guide hero-links
 @media (min-width: $screen-xs-min) {
   .hero-links__text {
     padding: 55px 0 80px;
-    font-size: $font-size-big;
+    font-size: $font-size-mid;
   }
 
   .hero-links__btn strong {
@@ -79,5 +78,6 @@ Style guide hero-links
   .hero-links__text p {
     margin-left: auto;
     margin-right: auto;
+    max-width: 700px;
   }
 }
