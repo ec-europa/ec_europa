@@ -3,6 +3,25 @@
   overflow: hidden;
   width: 100%;
 }
+.site-header--homepage {
+  .top-bar {
+    height: 90px;
+    padding: 0;
+    top: 0;
+    float: right;
+
+    .lang-select-site {
+      .lang-select-site__link {
+        padding-right: 0;
+      }
+    }
+  }
+  @include breakpoint(screen-xs-min) {
+    .top-bar {
+      height: 156px;
+    }
+  }
+}
 
 .site-menu__toggle {
   float: right;

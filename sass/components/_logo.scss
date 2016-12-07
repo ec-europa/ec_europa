@@ -78,9 +78,61 @@
   }
 }
 
+// EC logotype with text below the logo
+//
+// EC logo with text below.
+//
+// Markup: html/logo--logotypebelow.html
+//
+// .language-bg - Bulgarian
+// .language-cs - Czech
+// .language-da - Danish
+// .language-de - German
+// .language-et - Estonian
+// .language-el - Greek
+// .language-en - English
+// .language-es - Spanish
+// .language-fr - French
+// .language-ga - Irish/Gaeilge
+// .language-hr - Croatian
+// .language-it - Italian
+// .language-lv - Latvian
+// .language-lt - Lithuanian
+// .language-hu - Hungarian
+// .language-mt - Maltese
+// .language-nl - Dutch
+// .language-pl - Polish
+// .language-pt - Portuguese
+// .language-ro - Romanian
+// .language-sk - Slovak
+// .language-sl - Slovene
+// .language-fi - Finnish
+// .language-sv - Swedish
+//
+// Style guide siteheader.logo--logotypebelow
+
+// Sets language-specific background image on .logo--logotypebelow element nested
+// in {{modifier_class}} modifier.
+@include logo-background-languages('../images/svg/logo/logotypebelow--', '.svg', 'logo--logotypebelow');
+
+.no-svg {
+  @include logo-background-languages('../images/png/logo/logotypebelow--', '.png', 'logo--logotypebelow');
+}
+
+.logo--logotypebelow {
+  @extend .logo;
+  width: 198px;
+  height: 72px;
+}
+
 @include breakpoint(screen-xs-min) {
   .logo--logotype {
     width: 290px;
+  }
+
+  .logo--logotypebelow {
+    width: 324px;
+    height: 118px;
   }
 }
 

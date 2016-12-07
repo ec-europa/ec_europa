@@ -34,7 +34,6 @@ Style guide: siteheader.searchform
 
 .search-form__btn {
   @extend .icon;
-  @extend .icon--search;
   min-height: 2.75em;
   margin-right: -1px;
   margin-bottom: 0;
@@ -44,6 +43,7 @@ Style guide: siteheader.searchform
   border: none !important;
 
   &::before {
+    @extend .icon--search;
     position: absolute;
     top: 0;
     left: 0;

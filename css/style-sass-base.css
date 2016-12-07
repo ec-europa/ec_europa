@@ -4859,6 +4859,18 @@ textarea.error {
   overflow: hidden;
   width: 100%; }
 
+.site-header--homepage .top-bar {
+  height: 90px;
+  padding: 0;
+  top: 0;
+  float: right; }
+  .site-header--homepage .top-bar .lang-select-site .lang-select-site__link {
+    padding-right: 0; }
+
+@media (min-width: 480px) {
+  .site-header--homepage .top-bar {
+    height: 156px; } }
+
 .site-menu__toggle {
   float: right;
   width: 25%;

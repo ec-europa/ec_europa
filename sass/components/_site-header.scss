@@ -36,3 +36,23 @@ Style guide: siteheader
     @include _focus_outline_border(3px, $yellow-light, 5px);
   }
 }
+
+/*
+Site Header for Homepage
+
+Markup: html/site-header-homepage.html
+
+.site-header--homepage
+
+Style guide: siteheader.site-header--homepage
+*/
+.site-header--homepage {
+  padding: 0;
+
+  .site-header__logo {
+    float: none;
+    position: relative;
+    top: 38px;
+    margin: 0 auto;
+  }
+}

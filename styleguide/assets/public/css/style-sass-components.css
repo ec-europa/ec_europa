@@ -1069,7 +1069,7 @@ Style guide: icon
 .icon--language, .icon--language::before {
   content: '\e824'; }
 
-.icon--search, .icon--search::before, .search-form__btn {
+.icon--search, .icon--search::before, .search-form__btn::before {
   content: '\e823'; }
 
 .icon--up, .icon--up::before {
@@ -2770,6 +2770,33 @@ Style guide gallery
     margin-left: -20px; }
   .mediagallery__item {
     height: auto; } }
+
+/*
+Site header search bar
+
+Markup: html/header-search-bar.html
+
+Style guide: siteheader.header-search-bar
+*/
+.header-search-bar {
+  margin: 38px 0 0;
+  padding: 9px 0;
+  background-color: #004494; }
+  .header-search-bar .block-nexteuropa-europa-search {
+    float: right;
+    width: auto; }
+    .header-search-bar .block-nexteuropa-europa-search .search-form {
+      float: right;
+      margin-bottom: 0;
+      border: none; }
+      .header-search-bar .block-nexteuropa-europa-search .search-form .search-form__textfield-wrapper,
+      .header-search-bar .block-nexteuropa-europa-search .search-form .search-form__btn-wrapper {
+        float: none; }
+      .header-search-bar .block-nexteuropa-europa-search .search-form .search-form__textfield-wrapper {
+        background-color: #ffffff; }
+    @media (min-width: 480px) {
+      .header-search-bar .block-nexteuropa-europa-search .search-form {
+        width: 320px; } }
 
 /*
 Help Block
@@ -4809,14 +4836,14 @@ Style guide listing.2.4
 .listing__wrapper--no-margin-bottom {
   margin-bottom: 0; }
 
-.logo, .logo--logotype {
+.logo, .logo--logotype, .logo--logotypebelow {
   display: block;
   float: left;
   width: 140px;
   height: 72px;
   background: url("../images/svg/logo.svg") no-repeat; }
 
-.no-svg .logo, .no-svg .logo--logotype {
+.no-svg .logo, .no-svg .logo--logotype, .no-svg .logo--logotypebelow {
   background-image: url("../images/png/logo.png"); }
 
 .language-bg .logo--logotype {
@@ -5161,9 +5188,352 @@ Style guide listing.2.4
 .no-svg .logo--logotype {
   width: 190px; }
 
+.language-bg .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--bg.svg"); }
+
+@media print {
+  .language-bg .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--bg.svg"); } }
+
+.language-cs .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--cs.svg"); }
+
+@media print {
+  .language-cs .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--cs.svg"); } }
+
+.language-da .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--da.svg"); }
+
+@media print {
+  .language-da .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--da.svg"); } }
+
+.language-de .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--de.svg"); }
+
+@media print {
+  .language-de .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--de.svg"); } }
+
+.language-el .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--el.svg"); }
+
+@media print {
+  .language-el .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--el.svg"); } }
+
+.language-en .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--en.svg"); }
+
+@media print {
+  .language-en .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--en.svg"); } }
+
+.language-es .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--es.svg"); }
+
+@media print {
+  .language-es .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--es.svg"); } }
+
+.language-et .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--et.svg"); }
+
+@media print {
+  .language-et .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--et.svg"); } }
+
+.language-fi .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--fi.svg"); }
+
+@media print {
+  .language-fi .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--fi.svg"); } }
+
+.language-fr .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--fr.svg"); }
+
+@media print {
+  .language-fr .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--fr.svg"); } }
+
+.language-ga .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--ga.svg"); }
+
+@media print {
+  .language-ga .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--ga.svg"); } }
+
+.language-hr .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--hr.svg"); }
+
+@media print {
+  .language-hr .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--hr.svg"); } }
+
+.language-hu .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--hu.svg"); }
+
+@media print {
+  .language-hu .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--hu.svg"); } }
+
+.language-it .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--it.svg"); }
+
+@media print {
+  .language-it .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--it.svg"); } }
+
+.language-lt .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--lt.svg"); }
+
+@media print {
+  .language-lt .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--lt.svg"); } }
+
+.language-lv .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--lv.svg"); }
+
+@media print {
+  .language-lv .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--lv.svg"); } }
+
+.language-mt .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--mt.svg"); }
+
+@media print {
+  .language-mt .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--mt.svg"); } }
+
+.language-nl .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--nl.svg"); }
+
+@media print {
+  .language-nl .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--nl.svg"); } }
+
+.language-pl .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--pl.svg"); }
+
+@media print {
+  .language-pl .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--pl.svg"); } }
+
+.language-pt .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--pt.svg"); }
+
+@media print {
+  .language-pt .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--pt.svg"); } }
+
+.language-ro .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--ro.svg"); }
+
+@media print {
+  .language-ro .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--ro.svg"); } }
+
+.language-sk .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--sk.svg"); }
+
+@media print {
+  .language-sk .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--sk.svg"); } }
+
+.language-sl .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--sl.svg"); }
+
+@media print {
+  .language-sl .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--sl.svg"); } }
+
+.language-sv .logo--logotypebelow {
+  background-image: url("../images/svg/logo/logotypebelow--sv.svg"); }
+
+@media print {
+  .language-sv .logo--logotypebelow::before {
+    content: url("../images/svg/logo/logotypebelow--sv.svg"); } }
+
+.no-svg .language-bg .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--bg.png"); }
+
+@media print {
+  .no-svg .language-bg .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--bg.png"); } }
+
+.no-svg .language-cs .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--cs.png"); }
+
+@media print {
+  .no-svg .language-cs .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--cs.png"); } }
+
+.no-svg .language-da .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--da.png"); }
+
+@media print {
+  .no-svg .language-da .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--da.png"); } }
+
+.no-svg .language-de .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--de.png"); }
+
+@media print {
+  .no-svg .language-de .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--de.png"); } }
+
+.no-svg .language-el .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--el.png"); }
+
+@media print {
+  .no-svg .language-el .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--el.png"); } }
+
+.no-svg .language-en .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--en.png"); }
+
+@media print {
+  .no-svg .language-en .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--en.png"); } }
+
+.no-svg .language-es .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--es.png"); }
+
+@media print {
+  .no-svg .language-es .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--es.png"); } }
+
+.no-svg .language-et .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--et.png"); }
+
+@media print {
+  .no-svg .language-et .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--et.png"); } }
+
+.no-svg .language-fi .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--fi.png"); }
+
+@media print {
+  .no-svg .language-fi .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--fi.png"); } }
+
+.no-svg .language-fr .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--fr.png"); }
+
+@media print {
+  .no-svg .language-fr .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--fr.png"); } }
+
+.no-svg .language-ga .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--ga.png"); }
+
+@media print {
+  .no-svg .language-ga .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--ga.png"); } }
+
+.no-svg .language-hr .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--hr.png"); }
+
+@media print {
+  .no-svg .language-hr .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--hr.png"); } }
+
+.no-svg .language-hu .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--hu.png"); }
+
+@media print {
+  .no-svg .language-hu .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--hu.png"); } }
+
+.no-svg .language-it .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--it.png"); }
+
+@media print {
+  .no-svg .language-it .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--it.png"); } }
+
+.no-svg .language-lt .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--lt.png"); }
+
+@media print {
+  .no-svg .language-lt .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--lt.png"); } }
+
+.no-svg .language-lv .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--lv.png"); }
+
+@media print {
+  .no-svg .language-lv .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--lv.png"); } }
+
+.no-svg .language-mt .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--mt.png"); }
+
+@media print {
+  .no-svg .language-mt .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--mt.png"); } }
+
+.no-svg .language-nl .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--nl.png"); }
+
+@media print {
+  .no-svg .language-nl .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--nl.png"); } }
+
+.no-svg .language-pl .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--pl.png"); }
+
+@media print {
+  .no-svg .language-pl .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--pl.png"); } }
+
+.no-svg .language-pt .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--pt.png"); }
+
+@media print {
+  .no-svg .language-pt .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--pt.png"); } }
+
+.no-svg .language-ro .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--ro.png"); }
+
+@media print {
+  .no-svg .language-ro .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--ro.png"); } }
+
+.no-svg .language-sk .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--sk.png"); }
+
+@media print {
+  .no-svg .language-sk .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--sk.png"); } }
+
+.no-svg .language-sl .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--sl.png"); }
+
+@media print {
+  .no-svg .language-sl .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--sl.png"); } }
+
+.no-svg .language-sv .logo--logotypebelow {
+  background-image: url("../images/png/logo/logotypebelow--sv.png"); }
+
+@media print {
+  .no-svg .language-sv .logo--logotypebelow::before {
+    content: url("../images/png/logo/logotypebelow--sv.png"); } }
+
+.logo--logotypebelow {
+  width: 198px;
+  height: 72px; }
+
 @media (min-width: 480px) {
   .logo--logotype {
-    width: 290px; } }
+    width: 290px; }
+  .logo--logotypebelow {
+    width: 324px;
+    height: 118px; } }
 
 .site-header__logo::before, .site-header__logo::after {
   display: none !important; }
@@ -5374,40 +5744,35 @@ Style guide notification
 /*
 Page header
 
-Page header component
+Page header default component.
 
 Markup: html/page-header.html
 
 .page-header--image - Header with a background image
 .page-header--large-intro - Header with larger intro text
 
+Style guide: page-header
+*/
+/*
+Page header component with xlarger intro text.
+
 Markup: html/page-header--xlarge-intro.html
 
-.page-header--xlarge-intro - Header with xlarger intro text
-
-
-Style guide page-header
+Style guide: page-header.xlarge-intro
 */
 /*
 Political page header
 
 Markup: html/page-header--political.html
 
-Style guide page-header.political
+Style guide: page-header.political
 */
 /*
 Informational site page header
 
 Markup: html/page-header--informational.html
 
-Style guide page-header.informational
-*/
-/*
-Informational site homepage header
-
-Markup: html/page-header--informational-home.html
-
-Style guide page-header.informational-home
+Style guide: page-header.informational
 */
 .page-header {
   margin: 0;
@@ -5484,18 +5849,18 @@ Style guide page-header.informational-home
       margin-right: 0.5em; }
 
 .page-header--xlarge-intro, .node-info-homepage.view-mode-homepage_political .page-header {
-  padding-bottom: 0;
-  min-height: 150px; }
+  min-height: 150px;
+  padding-bottom: 0; }
   .page-header--xlarge-intro .page-header__hero-title, .node-info-homepage.view-mode-homepage_political .page-header .page-header__hero-title {
-    background-color: #012b58;
+    min-height: 75px;
     margin: 75px 0 0;
     padding: 16px;
-    min-height: 75px; }
+    background-color: #012b58; }
   .page-header--xlarge-intro .field__label--above, .node-info-homepage.view-mode-homepage_political .page-header .field__label--above {
+    padding: 0;
     color: #ffffff;
     font-size: 0.778em;
     font-weight: 400;
-    padding: 0;
     text-transform: uppercase; }
   .page-header--xlarge-intro p, .node-info-homepage.view-mode-homepage_political .page-header p {
     font-size: 1.222em; }
@@ -5504,21 +5869,21 @@ Style guide page-header.informational-home
   .page-header--xlarge-intro, .node-info-homepage.view-mode-homepage_political .page-header {
     height: 320px; }
     .page-header--xlarge-intro .page-header__hero-title, .node-info-homepage.view-mode-homepage_political .page-header .page-header__hero-title {
-      background-color: transparent;
+      margin: auto;
       padding-top: 5em;
-      margin: auto; }
+      background-color: transparent; }
     .page-header--xlarge-intro .field__label--above, .node-info-homepage.view-mode-homepage_political .page-header .field__label--above {
-      background-color: #012b58;
-      text-align: center;
-      line-height: 34px;
-      height: 34px;
       width: 146px;
-      margin: 0; }
+      height: 34px;
+      margin: 0;
+      line-height: 34px;
+      background-color: #012b58;
+      text-align: center; }
     .page-header--xlarge-intro p, .node-info-homepage.view-mode-homepage_political .page-header p {
-      background-color: #ffffff;
-      color: #004494;
       width: 550px;
-      padding: 22px 5px 22px 33px; } }
+      padding: 22px 5px 22px 33px;
+      background-color: #ffffff;
+      color: #004494; } }
 
 /*
 Pager
@@ -5693,6 +6058,23 @@ Style guide: siteheader
     outline: 3px solid #ffd617;
     outline-offset: 5px;
     text-decoration: underline; }
+
+/*
+Site Header for Homepage
+
+Markup: html/site-header-homepage.html
+
+.site-header--homepage
+
+Style guide: siteheader.site-header--homepage
+*/
+.site-header--homepage {
+  padding: 0; }
+  .site-header--homepage .site-header__logo {
+    float: none;
+    position: relative;
+    top: 38px;
+    margin: 0 auto; }
 
 .site-slogan {
   color: #404040;
@@ -6092,15 +6474,15 @@ Style guide splashpage
 */
 .splash-page__site-header {
   background-color: #ffffff; }
-  .splash-page__site-header .logo, .splash-page__site-header .logo--logotype {
+  .splash-page__site-header .logo, .splash-page__site-header .logo--logotype, .splash-page__site-header .logo--logotypebelow {
     float: none;
     margin: 16px auto 40px auto;
     background: url("../images/svg/logo.svg") center center no-repeat;
     background-origin: content-box; }
-    .no-svg .splash-page__site-header .logo, .no-svg .splash-page__site-header .logo--logotype {
+    .no-svg .splash-page__site-header .logo, .no-svg .splash-page__site-header .logo--logotype, .no-svg .splash-page__site-header .logo--logotypebelow {
       background: url("../images/png/logo--big.png") center center no-repeat; }
   @media (min-width: 480px) {
-    .splash-page__site-header .logo, .splash-page__site-header .logo--logotype {
+    .splash-page__site-header .logo, .splash-page__site-header .logo--logotype, .splash-page__site-header .logo--logotypebelow {
       width: 290px;
       height: 153px; } }
 
