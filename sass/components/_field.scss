@@ -56,13 +56,13 @@ Style guide field
   .field {
     .field__label:not(.field__label--above) {
       display: inline-block;
-      width: 19%;
+      width: 20%;
       padding: 0.335em 0 0 0;
       vertical-align: top;
 
       & + .field__items {
         display: inline-block;
-        width: 80%;
+        width: 79%;
       }
     }
   }
@@ -84,7 +84,7 @@ Style guide field.aligned
 
     .field__items {
       display: inline-block;
-      width: 80%;
+      width: 79%;
       margin-left: 20.8%;
     }
   }
