@@ -18,22 +18,22 @@ Style guide banner.quote
 $quote_border_offset: 0.556em;
 
 .banner--quote {
-  border-left: $quote_border_offset solid $yellow-light;
-  padding-left: $quote_border_offset;
   @include make-md-column(8);
+  padding-left: $quote_border_offset;
+  border-left: $quote_border_offset solid $yellow-light;
 
   blockquote {
+    max-width: none;
+    margin-bottom: 0;
     padding-left: 0;
     border-left: none;
-    margin-bottom: 0;
-    max-width: none;
   }
 }
 
 .banner__author {
+  padding-bottom: 0.6em;
   font-size: $font-size-xsmall;
   font-weight: $font-weight-bold;
-  padding-bottom: 0.6em;
 
   &::before {
     content: ' - ';
@@ -48,39 +48,24 @@ Markup: html/banner-video.html
 Style guide banner.video
 */
 
+.banner__video {
+  & .file {
+    @extend .embed-responsive;
+    @extend .embed-responsive-16by9;
+    margin-bottom: 0;
+  }
+
+  & iframe {
+    @extend .embed-responsive-item;
+  }
+}
+
 .banner--video {
   @extend .row;
 }
 
-.banner__video {
-  & .file {
-    padding: 0;
-    margin-bottom: 0;
-    max-width: 100%;
-  }
-
-  & .content {
-    @include aspect-ratio(16, 9);
-
-    & iframe {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-.banner__caption {
-  width: 100%;
-  max-width: 100%;
-  padding: 0.725em 1em;
-  background: $grey-lighter;
-  line-height: 1.435em;
-  font-size: $font-size-xsmall;
+.banner__left {
+  @extend .col-md-6;
 }
 
 .banner__paragraph {
@@ -89,8 +74,8 @@ Style guide banner.video
   font-size: $font-size-little;
 }
 
-.banner__left {
-  @extend .col-md-6;
+.banner__caption {
+  @include media-caption();
 }
 
 @include breakpoint(screen-md-min) {

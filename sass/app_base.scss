@@ -1,13 +1,13 @@
-// Bootstrap
+// Bootstrap.
 @import "bootstrap";
 
-// Importing mixins and  variables
+// Importing mixins and variables.
 @import "mixins";
 
-// Importing simple helpers
+// Importing simple helpers.
 @import "helpers";
 
-// Base
+// Base.
 @import "base/helpers";
 @import "base/img";
 @import "base/blockquote";
@@ -28,7 +28,7 @@
 @import "base/text-input";
 @import "base/textarea";
 
-// Layout
+// Layout.
 @import "layout/container-fluid";
 @import "layout/top-bar";
 @import "layout/page-content";
