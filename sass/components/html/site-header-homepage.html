@@ -1,59 +1,42 @@
-<header class="language-en site-header site-header--homepage" role="banner">
+<header class="site-header site-header--homepage" role="banner">
   <div class="container-fluid">
-
     <section class="top-bar" aria-label="Site tools">
-      <div>
-        <div class="top-bar__wrapper">
-          <div class="region region-header">
-            <section class="block block-language-selector-site contextual-links-region lang-select-site lang-select-site clearfix">
-              <div class="block__content">
-                <a href="#node" class="lang-select-site__link">
-                  <span class="lang-select-site__label">English</span>
-                  <span class="lang-select-site__code">
-                    <span class="icon icon--language lang-select-site__icon"></span>
-                    <span class="lang-select-site__code-text">en</span>
-                  </span>
-                </a>
-                <div class="splash-page splash-page--overlay"></div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <a href="#page" class="logo logo--logotypebelow site-header__logo" title="Home - European Commission">
-      <span class="sr-only">Home - European Commission</span>
-    </a>
-  </div>
-
-  <section class="header-search-bar" aria-label="Site tools">
-    <div class="header-search-bar__wrapper container-fluid">
-      <div class="region region-header-search">
-        <section class="block block-nexteuropa-europa-search contextual-links-region clearfix">
+      <div class="top-bar__wrapper">
+        <section class="lang-select-site clearfix">
           <div class="block__content">
-            <form class="search-form" action="#url" method="get"
-                  accept-charset="UTF-8">
-              <div>
-                <div class="input-group input-group-search">
-                  <label class="search-form__textfield-wrapper">
-                    <span class="sr-only">Search this website</span>
-                    <div class="form-type-textfield form-item-QueryText form-item">
-                      <input class="search-form__textfield form-control form-text" title="Search" type="search"
-                             name="QueryText" value="" size="60" maxlength="128">
-                    </div>
-                  </label>
-                  <span class="input-group-btn search-form__btn-wrapper">
-                  <button class="btn-search search-form__btn btn btn-primary form-submit" type="submit"
-                          name="op" value="Search">Search</button>
-                </span>
-                </div>
-
-              </div>
-            </form>
+            <a href="#" class="lang-select-site__link">
+              <span class="lang-select-site__label">English</span>
+              <span class="lang-select-site__code">
+                <span class="icon icon--language lang-select-site__icon"></span>
+                <span class="lang-select-site__code-text">en</span>
+              </span>
+            </a>
+            <div class="splash-page splash-page--overlay"></div>
           </div>
         </section>
       </div>
+    </section>
+    <a href="#" class="logo logo--logotypebelow site-header__logo" title="Home - European Commission">
+      <span class="sr-only">Home - European Commission</span>
+    </a>
+  </div>
+  <section class="header-search-bar" aria-label="Site tools">
+    <div class="header-search-bar__wrapper container-fluid">
+      <section class="block-nexteuropa-europa-search clearfix">
+        <div class="block__content">
+          <form class="search-form">
+            <div class="input-group">
+              <label class="search-form__textfield-wrapper">
+                <span class="sr-only">Search this website</span>
+                <input type="search" class="search-form__textfield form-control" title="Search">
+              </label>
+              <span class="input-group-btn search-form__btn-wrapper">
+              <button type="submit" class="btn btn-primary btn-search search-form__btn" value="Search">Search</button>
+            </span>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
   </section>
 </header>
