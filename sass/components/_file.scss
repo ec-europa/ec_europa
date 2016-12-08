@@ -28,7 +28,7 @@ Style guide file.1
 /*
 File image
 
-Displays the download file available in several languages.
+Displays the file image.
 
 Markup: html/file-image.html
 
@@ -38,12 +38,16 @@ Style guide file.2
 .file-image {
   padding: 0;
   background-color: transparent;
+
+  & img {
+    display: block;
+  }
 }
 
 /*
 File video
 
-Displays the download file available in several languages.
+Displays the file video.
 
 Markup: html/file-video.html
 
@@ -51,14 +55,16 @@ Style guide file.3
 */
 
 .file-video {
-  padding: 1em 0;
+  padding: 0;
   background-color: transparent;
 
-  .iframe {
-    display: block;
-    width: 100%;
-    height: auto;
-    min-height: 260px;
+  & .content > div:first-child {
+    @extend .embed-responsive;
+    @extend .embed-responsive-16by9;
+  }
+
+  & iframe {
+    @extend .embed-responsive-item;
   }
 }
 
@@ -101,10 +107,7 @@ Style guide file.3
 }
 
 .file__caption {
-  padding: 0.725em 1em;
-  line-height: 1.435em;
-  font-size: $font-size-xsmall;
-  background-color: $grey-lighter;
+  @include media-caption();
 }
 
 .file__language {
