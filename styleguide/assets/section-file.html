@@ -415,7 +415,7 @@ is displayed multimedia files (image and video).</p>
 
 
       <div class="kss-description">
-        <p>Displays the download file available in several languages.</p>
+        <p>Displays the file image.</p>
 
       </div>
     </div>
@@ -425,11 +425,13 @@ is displayed multimedia files (image and video).</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="col-md-4"> <!-- only required for the style guide -->
+          <div style="width: 50%;"> <!-- only required for the style guide -->
   <div class="file file-image">
-    <img src="http://placehold.it/300x200" alt="">
+    <img src="http://placehold.it/450x250" alt="">
     <div class="file__caption">
-      <div class="field__items">Image caption</div>
+      <div class="field">
+        <div class="field__items">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+      </div>
     </div>
   </div>
 </div>
@@ -438,11 +440,13 @@ is displayed multimedia files (image and video).</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;col-md-4&quot;&gt; &lt;!-- only required for the style guide --&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div style=&quot;width: 50%;&quot;&gt; &lt;!-- only required for the style guide --&gt;
   &lt;div class=&quot;file file-image&quot;&gt;
-    &lt;img src=&quot;http://placehold.it/300x200&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/450x250&quot; alt=&quot;&quot;&gt;
     &lt;div class=&quot;file__caption&quot;&gt;
-      &lt;div class=&quot;field__items&quot;&gt;Image caption&lt;/div&gt;
+      &lt;div class=&quot;field&quot;&gt;
+        &lt;div class=&quot;field__items&quot;&gt;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...&lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -463,7 +467,7 @@ is displayed multimedia files (image and video).</p>
 
 
       <div class="kss-description">
-        <p>Displays the download file available in several languages.</p>
+        <p>Displays the file video.</p>
 
       </div>
     </div>
@@ -473,14 +477,17 @@ is displayed multimedia files (image and video).</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="col-lg-10"> <!-- only required for the style guide -->
+          <div style="width: 50%;"> <!-- only required for the style guide -->
   <div class="file file-video file-video--with-background">
-    <iframe src="http://ec.europa.eu/avservices/play.cfm?ref=I101631"
-            id="videoplayer-example" width="555" height="325" frameborder="0" scrolling="no"
-            webkitAllowFullScreen="false" mozallowfullscreen="false" allowFullScreen="false">
-    </iframe>
-    <div class="file__caption">
-      <div class="field__items">Video caption</div>
+    <div class="content">
+      <div>
+        <iframe src="http://ec.europa.eu/avservices/play.cfm?ref=I101631" allowfullscreen="allowfullscreen" scrolling="no"></iframe>
+      </div>
+      <div class="file__caption">
+        <div class="field">
+          <div class="field__items">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -489,14 +496,17 @@ is displayed multimedia files (image and video).</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;col-lg-10&quot;&gt; &lt;!-- only required for the style guide --&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div style=&quot;width: 50%;&quot;&gt; &lt;!-- only required for the style guide --&gt;
   &lt;div class=&quot;file file-video file-video--with-background&quot;&gt;
-    &lt;iframe src=&quot;http://ec.europa.eu/avservices/play.cfm?ref=I101631&quot;
-            id=&quot;videoplayer-example&quot; width=&quot;555&quot; height=&quot;325&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;
-            webkitAllowFullScreen=&quot;false&quot; mozallowfullscreen=&quot;false&quot; allowFullScreen=&quot;false&quot;&gt;
-    &lt;/iframe&gt;
-    &lt;div class=&quot;file__caption&quot;&gt;
-      &lt;div class=&quot;field__items&quot;&gt;Video caption&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div&gt;
+        &lt;iframe src=&quot;http://ec.europa.eu/avservices/play.cfm?ref=I101631&quot; allowfullscreen=&quot;allowfullscreen&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;file__caption&quot;&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;div class=&quot;field__items&quot;&gt;Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
