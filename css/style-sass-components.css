@@ -635,7 +635,7 @@ Markup: html/btn.html
 .btn-ctn--border - Button call to action with border
 .btn-menu        - Button menu
 
-Style guide buttons
+Style guide: buttons
 */
 .btn, .inpage-nav__navbar .inpage-nav__toggle {
   min-height: 2.75em;
@@ -735,6 +735,9 @@ Style guide buttons
   .btn-ctn--border::after {
     display: none; }
 
+.btn--margin-top {
+  margin-top: 0.556em; }
+
 .btn--no-margin-bottom {
   margin-bottom: 0 !important; }
   .btn--no-margin-bottom * {
@@ -747,7 +750,7 @@ Button condensed element.
 
 Markup: html/btn-condensed.html
 
-Style guide buttons.btn--condensed
+Style guide: buttons.btn--condensed
 */
 .btn.btn--condensed, .inpage-nav__navbar .btn--condensed.inpage-nav__toggle {
   width: auto;
@@ -760,7 +763,7 @@ Button block component.
 
 Markup: html/btn-block.html
 
-Style guide buttons.btn-block
+Style guide: buttons.btn-block
 */
 .btn-block {
   max-width: 450px;
@@ -783,7 +786,7 @@ Button search component.
 
 Markup: html/btn-search.html
 
-Style guide buttons.btn-search
+Style guide: buttons.btn-search
 */
 .btn.btn-search, .inpage-nav__navbar .btn-search.inpage-nav__toggle {
   background-color: #e2e2e2;
@@ -800,7 +803,7 @@ Button collapse element.
 
 Markup: html/btn-collapse.html
 
-Style guide buttons.btn-collapse
+Style guide: buttons.btn-collapse
 */
 .btn-collapse span.toggling-text::after {
   content: "\00a0"; }
