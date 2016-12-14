@@ -2839,12 +2839,13 @@ Style guide hero-links
       background-color: #f2f2f2; }
 
 .hero-links__text {
-  padding: 20px 0 45px;
+  padding: 20px 15px 45px;
   font-size: 1.067em;
   text-align: center; }
 
 .hero-links__items .hero-links__item {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  text-align: center; }
   .hero-links__items .hero-links__item:last-child {
     margin-bottom: 0; }
 
@@ -2861,7 +2862,8 @@ Style guide hero-links
 
 @media (min-width: 480px) {
   .hero-links__text {
-    padding: 55px 0 80px;
+    padding-top: 55px;
+    padding-bottom: 80px;
     font-size: 1.222em; }
   .hero-links__btn strong {
     margin: 0 0 0.467em 0.67em;
@@ -2869,7 +2871,8 @@ Style guide hero-links
 
 @media (min-width: 768px) {
   .hero-links__items .hero-links__item {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: left; }
   .hero-links__text p {
     margin-left: auto;
     margin-right: auto;

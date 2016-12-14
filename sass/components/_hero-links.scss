@@ -21,7 +21,7 @@ Style guide hero-links
 }
 
 .hero-links__text {
-  padding: 20px 0 45px;
+  padding: 20px 15px 45px;
   font-size: 1.067em;
   text-align: center;
 }
@@ -33,6 +33,7 @@ Style guide hero-links
     @extend .col-sm-6;
     @extend .col-xs-12;
     margin-bottom: 30px;
+    text-align: center;
 
     &:last-child {
       margin-bottom: 0;
@@ -58,9 +59,10 @@ Style guide hero-links
   }
 }
 
-@media (min-width: $screen-xs-min) {
+@include breakpoint(screen-xs-min) {
   .hero-links__text {
-    padding: 55px 0 80px;
+    padding-top: 55px;
+    padding-bottom: 80px;
     font-size: $font-size-mid;
   }
 
@@ -70,9 +72,10 @@ Style guide hero-links
   }
 }
 
-@media (min-width: $screen-sm-min) {
+@include breakpoint(screen-sm-min) {
   .hero-links__items .hero-links__item {
     margin-bottom: 0;
+    text-align: left;
   }
 
   .hero-links__text p {
