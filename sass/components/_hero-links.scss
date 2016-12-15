@@ -52,6 +52,10 @@ Style guide hero-links
     color: $white;
   }
 
+  .img-responsive {
+    width: 100%;
+  }
+
   &:hover {
     strong {
       text-decoration: underline;

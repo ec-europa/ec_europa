@@ -2857,6 +2857,8 @@ Style guide hero-links
     margin: 0 0 1.125em 1.125em;
     font-size: 1.222em;
     color: #ffffff; }
+  .hero-links__btn .img-responsive {
+    width: 100%; }
   .hero-links__btn:hover strong {
     text-decoration: underline; }
 
