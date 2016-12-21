@@ -32,7 +32,7 @@ Displays the file image.
 
 Markup: html/file-image.html
 
-Style guide file.2
+Style guide file.4
 */
 
 .file-image {
@@ -51,7 +51,7 @@ Displays the file video.
 
 Markup: html/file-video.html
 
-Style guide file.3
+Style guide file.5
 */
 
 .file-video {
@@ -167,7 +167,7 @@ Displays the download file available in several languages.
 
 Markup: html/file-translations.html
 
-Style guide file.4
+Style guide file.2
 */
 
 .file__translations {
@@ -249,6 +249,40 @@ Style guide file.4
     @extend .file__translations-item;
     padding-top: 0.5em;
     font-size: $font-size-little;
+  }
+}
+
+/*
+File Link
+
+Displays the link for a download/page.
+
+Markup: html/file--link.html
+
+Style guide file.3
+*/
+.file--link {
+  background-color: transparent;
+
+  .file__metadata--link {
+    @extend .col-md-10;
+    @extend .col-sm-10;
+    @extend .col-xs-10;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 1;
+  }
+
+  .icon--file-link {
+    background: url("../images/svg/icons/link.svg") no-repeat center 10%;
+    width: 2.8em;
+  }
+}
+
+.no-svg {
+  .icon--file-link {
+    background-image: url("../images/png/icons/link.png");
   }
 }
 
