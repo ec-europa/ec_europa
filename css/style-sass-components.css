@@ -2853,7 +2853,6 @@ Markup: html/hero-links.html
 Style guide hero-links
 */
 .hero-links {
-  position: relative;
   margin-bottom: 0.835em; }
   .hero-links .container-fluid {
     margin-top: -2.25em; }
@@ -2873,16 +2872,19 @@ Style guide hero-links
     margin-bottom: 0; }
 
 .hero-links__btn {
+  position: relative;
   display: inline-block; }
-  .hero-links__btn strong {
-    position: absolute;
-    bottom: 0;
-    margin: 0 0 1.125em 1.125em;
-    font-size: 1.222em;
-    color: #ffffff; }
   .hero-links__btn .img-responsive {
     width: 100%; }
-  .hero-links__btn:hover strong {
+  .hero-links__btn .hero-links__caption {
+    position: absolute;
+    bottom: 1.125em;
+    left: 1.125em;
+    line-height: normal;
+    font-size: 1.222em;
+    font-weight: bold;
+    color: #ffffff; }
+  .hero-links__btn:hover .hero-links__caption {
     text-decoration: underline; }
 
 @media (min-width: 480px) {
@@ -2890,8 +2892,9 @@ Style guide hero-links
     padding-top: 55px;
     padding-bottom: 80px;
     font-size: 1.222em; }
-  .hero-links__btn strong {
-    margin: 0 0 0.467em 0.67em;
+  .hero-links__btn .hero-links__caption {
+    bottom: 0.467em;
+    left: 0.667em;
     font-size: 1.667em; } }
 
 @media (min-width: 768px) {
