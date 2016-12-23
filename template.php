@@ -987,7 +987,11 @@ function europa_preprocess_page(&$variables) {
           $node->local_tabs = drupal_render($variables['tabs']);
         }
 
-        $variables['theme_hook_suggestions'][] = 'page__ds_node';
+        // Use page__ds_node.tpl unless it is an exception.
+        $custom_page_templates = ['page__gallery'];
+        if (empty(array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
+          $variables['theme_hook_suggestions'][] = 'page__ds_node';
+        }
       }
     }
   }
