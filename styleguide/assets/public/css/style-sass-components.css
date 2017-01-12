@@ -2422,15 +2422,13 @@ File upload
 
 Markup: html/file-upload.html
 
-Styleguide form.file-upload
+Style guide: form.file-upload
 */
 .file-upload .file-upload__input {
-  position: relative;
   display: table;
   table-layout: fixed;
   margin: 0;
-  white-space: nowrap;
-  z-index: 2; }
+  white-space: nowrap; }
   .file-upload .file-upload__input:focus {
     border-color: #ffd617; }
     .file-upload .file-upload__input:focus:focus {
@@ -2441,12 +2439,17 @@ Styleguide form.file-upload
 .file-upload .file-upload__message {
   display: table-cell;
   overflow: hidden;
-  line-height: 1.9;
+  line-height: 1.8;
   color: #999999;
   text-overflow: ellipsis; }
 
 .file-upload .input-group-btn {
   font-size: inherit; }
+
+.file-upload .input-group {
+  width: 100%; }
+  .file-upload .input-group .file + .input-group-btn {
+    display: block; }
 
 .file-upload .file-upload__label {
   display: inline-block;
@@ -2465,10 +2468,19 @@ Styleguide form.file-upload
   border-color: #da2131;
   background-color: #da2131; }
 
-.file-upload input[type="file"],
-.no-js .file-upload,
-.file-upload button[type="submit"] {
+.file-upload input[type="file"] {
   display: none; }
+
+.no-js .file-upload .file-upload__input,
+.no-js .file-upload .file-upload__label {
+  display: none; }
+
+.no-js .file-upload input[type="file"] {
+  display: block; }
+
+@media (min-width: 480px) {
+  .file-upload .file-upload__message {
+    line-height: 1.9; } }
 
 /*
 Filters

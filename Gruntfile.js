@@ -45,7 +45,7 @@ module.exports = function (grunt) {
           {expand: true, src: ['js/components/**'], dest: 'styleguide/assets/public/'},
           {expand: false, src: ['js/europa.js'], dest: 'styleguide/assets/public/js/europa.js'},
           {expand: false, src: ['js/europa_tabs.js'], dest: 'styleguide/assets/public/js/europa_tabs.js'},
-          {expand: false, src: ['styleguide/public/js/drupal.js'], dest: 'styleguide/assets/public/js/drupal.js'},
+          {expand: false, src: ['styleguide/public/js/drupal.js'], dest: 'styleguide/assets/public/js/drupal.js'}
         ]
       },
       all: {
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
           {expand: true, src: ['bootstrap-sass/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['bootstrap/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'}
         ]
       }
     }

@@ -514,26 +514,25 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <form>
-<div class="file-upload">
-  <label>Attach a file</label>
-  <div class="input-group">
-    <div class="form-control file-upload__input" tabindex="0">
-      <span class="file-upload__message">No file selected.</span>
+          <div class="form-group">
+  <div class="file-upload">
+    <div class="input-group">
+      <div class="form-control file-upload__input" tabindex="0">
+        <span class="file-upload__message">No file selected.</span>
+      </div>
+      <span class="input-group-btn">
+        <label class="btn btn-default file-upload__label" for="field-name-1" tabindex="1">Browse</label>
+        <button class="btn btn-primary" type="button" tabindex="2">Upload</button>
+      </span>
     </div>
-    <span class="input-group-btn">
-      <label class="btn btn-default file-upload__label" for="field-name-1">Browse</label>
-      <button class="btn btn-primary" type="button" tabindex="2">Upload</button>
-    </span>
+    <input type="file" id="field-name-1">
+    <button type="submit" value="upload">Upload</button>
+    <p class="help-block">
+      Files must be less than <strong>120 KB</strong>.<br>
+      Allowed file types: <strong>txt pdf</strong>.
+    </p>
   </div>
-  <input type="file" id="field-name-1">
-  <button type="submit" value="upload">Upload</button>
-  <p class="help-block">
-    Files must be less than <strong>120 KB</strong>.<br>
-    Allowed file types: <strong>txt pdf</strong>.
-  </p>
 </div>
-</form>
 
 <h4>File upload error</h4>
 
@@ -573,26 +572,25 @@
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
-&lt;div class=&quot;file-upload&quot;&gt;
-  &lt;label&gt;Attach a file&lt;/label&gt;
-  &lt;div class=&quot;input-group&quot;&gt;
-    &lt;div class=&quot;form-control file-upload__input&quot; tabindex=&quot;0&quot;&gt;
-      &lt;span class=&quot;file-upload__message&quot;&gt;No file selected.&lt;/span&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
+  &lt;div class=&quot;file-upload&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;div class=&quot;form-control file-upload__input&quot; tabindex=&quot;0&quot;&gt;
+        &lt;span class=&quot;file-upload__message&quot;&gt;No file selected.&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;span class=&quot;input-group-btn&quot;&gt;
+        &lt;label class=&quot;btn btn-default file-upload__label&quot; for=&quot;field-name-1&quot; tabindex=&quot;1&quot;&gt;Browse&lt;/label&gt;
+        &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; tabindex=&quot;2&quot;&gt;Upload&lt;/button&gt;
+      &lt;/span&gt;
     &lt;/div&gt;
-    &lt;span class=&quot;input-group-btn&quot;&gt;
-      &lt;label class=&quot;btn btn-default file-upload__label&quot; for=&quot;field-name-1&quot;&gt;Browse&lt;/label&gt;
-      &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; tabindex=&quot;2&quot;&gt;Upload&lt;/button&gt;
-    &lt;/span&gt;
+    &lt;input type=&quot;file&quot; id=&quot;field-name-1&quot;&gt;
+    &lt;button type=&quot;submit&quot; value=&quot;upload&quot;&gt;Upload&lt;/button&gt;
+    &lt;p class=&quot;help-block&quot;&gt;
+      Files must be less than &lt;strong&gt;120 KB&lt;/strong&gt;.&lt;br&gt;
+      Allowed file types: &lt;strong&gt;txt pdf&lt;/strong&gt;.
+    &lt;/p&gt;
   &lt;/div&gt;
-  &lt;input type=&quot;file&quot; id=&quot;field-name-1&quot;&gt;
-  &lt;button type=&quot;submit&quot; value=&quot;upload&quot;&gt;Upload&lt;/button&gt;
-  &lt;p class=&quot;help-block&quot;&gt;
-    Files must be less than &lt;strong&gt;120 KB&lt;/strong&gt;.&lt;br&gt;
-    Allowed file types: &lt;strong&gt;txt pdf&lt;/strong&gt;.
-  &lt;/p&gt;
 &lt;/div&gt;
-&lt;/form&gt;
 
 &lt;h4&gt;File upload error&lt;/h4&gt;
 
