@@ -49,13 +49,13 @@ Style guide banner.video
 */
 
 .banner__video {
-  & .file {
+  .file {
     @extend .embed-responsive;
     @extend .embed-responsive-16by9;
     margin-bottom: 0;
   }
 
-  & iframe {
+  iframe {
     @extend .embed-responsive-item;
   }
 }

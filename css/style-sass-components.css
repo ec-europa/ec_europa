@@ -578,17 +578,17 @@ a.label:hover, a.label:focus {
   .label-danger[href]:hover, [href].label--danger:hover, .label-danger[href]:focus, [href].label--danger:focus {
     background-color: #c9302c; }
 
-.embed-responsive, .banner__video .file, .file-video .content > div:first-child {
+.embed-responsive, .banner__video .file, .file-video .file__container {
   position: relative;
   display: block;
   height: 0;
   padding: 0;
   overflow: hidden; }
-  .embed-responsive .embed-responsive-item, .banner__video .file .embed-responsive-item, .file-video .content > div:first-child .embed-responsive-item, .embed-responsive .banner__video iframe, .banner__video .embed-responsive iframe, .banner__video .file iframe, .embed-responsive .file-video iframe, .file-video .embed-responsive iframe, .file-video .content > div:first-child iframe,
-  .embed-responsive iframe, .banner__video .file iframe, .file-video .content > div:first-child iframe,
-  .embed-responsive embed, .banner__video .file embed, .file-video .content > div:first-child embed,
-  .embed-responsive object, .banner__video .file object, .file-video .content > div:first-child object,
-  .embed-responsive video, .banner__video .file video, .file-video .content > div:first-child video {
+  .embed-responsive .embed-responsive-item, .banner__video .file .embed-responsive-item, .file-video .file__container .embed-responsive-item, .embed-responsive .banner__video iframe, .banner__video .embed-responsive iframe, .banner__video .file iframe, .embed-responsive .file-video iframe, .file-video .embed-responsive iframe, .file-video .file__container iframe,
+  .embed-responsive iframe, .banner__video .file iframe, .file-video .file__container iframe,
+  .embed-responsive embed, .banner__video .file embed, .file-video .file__container embed,
+  .embed-responsive object, .banner__video .file object, .file-video .file__container object,
+  .embed-responsive video, .banner__video .file video, .file-video .file__container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -596,9 +596,9 @@ a.label:hover, a.label:focus {
     height: 100%;
     width: 100%;
     border: 0; }
-  .embed-responsive.embed-responsive-16by9, .banner__video .file, .file-video .content > div:first-child {
+  .embed-responsive.embed-responsive-16by9, .banner__video .file, .file-video .file__container {
     padding-bottom: 56.25%; }
-  .embed-responsive.embed-responsive-4by3, .banner__video .embed-responsive-4by3.file, .file-video .content > div.embed-responsive-4by3:first-child {
+  .embed-responsive.embed-responsive-4by3, .banner__video .embed-responsive-4by3.file, .file-video .embed-responsive-4by3.file__container {
     padding-bottom: 75%; }
 
 .icon--after, .btn.btn-ctn::after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle::after, .btn.btn-time-line::after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle::after, .btn.btn-menu::after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle::after, .is-external::after, a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .listing__title::after,

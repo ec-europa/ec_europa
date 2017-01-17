@@ -58,12 +58,12 @@ Style guide file.5
   padding: 0;
   background-color: transparent;
 
-  & .content > div:first-child {
+  .file__container {
     @extend .embed-responsive;
     @extend .embed-responsive-16by9;
   }
 
-  & iframe {
+  iframe {
     @extend .embed-responsive-item;
   }
 }
