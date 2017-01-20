@@ -9,7 +9,7 @@ libraries[enquire][download][url] = "https://raw.githubusercontent.com/WickyNill
 libraries[html5shiv][destination] = "themes/europa"
 libraries[html5shiv][directory_name] = "js/libraries"
 libraries[html5shiv][download][type] = "get"
-libraries[html5shiv][download][url] = "https://raw.githubusercontent.com/aFarkas/html5shiv/master/dist/html5shiv.min.js"
+libraries[html5shiv][download][url] = "https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
 
 libraries[matchMedia][destination] = "themes/europa"
 libraries[matchMedia][directory_name] = "js/libraries/matchMedia"
