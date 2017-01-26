@@ -25,6 +25,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
+          'css/europa_styleguide.css': 'sass/styleguide.scss',
           'css/style-sass-base.css': 'sass/app_base.scss',
           'css/style-sass-components.css' : 'sass/app_components.scss'
         }
@@ -32,7 +33,7 @@ module.exports = function (grunt) {
     },
     shell: {
       kss: {
-        command: './node_modules/.bin/kss-node --config kss-config.json'
+        command: './node_modules/.bin/kss --config kss-config.json'
       }
     },
     copy: {
@@ -42,10 +43,9 @@ module.exports = function (grunt) {
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['fonts/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['js/components/**'], dest: 'styleguide/assets/public/'},
-          {expand: false, src: ['js/europa.js'], dest: 'styleguide/assets/public/js/europa.js'},
-          {expand: false, src: ['js/europa_tabs.js'], dest: 'styleguide/assets/public/js/europa_tabs.js'},
-          {expand: false, src: ['styleguide/public/js/drupal.js'], dest: 'styleguide/assets/public/js/drupal.js'}
+          {expand: true, src: ['js/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, cwd: 'styleguide/public/js/', src: 'jquery.once.js', dest: 'styleguide/assets/public/js/'},
+          {expand: true, cwd: 'styleguide/public/js/', src: '**', dest: 'styleguide/assets/public/js/'}
         ]
       },
       all: {
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
           {expand: true, src: ['bootstrap-sass/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['bootstrap/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'}
+          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
         ]
       }
     }
