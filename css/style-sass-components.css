@@ -5934,6 +5934,11 @@ Style guide: page-header.informational
       background-color: #ffffff;
       color: #004494; } }
 
+.node-info-homepage.view-mode-homepage_political .page-header a {
+  color: #004494; }
+  .node-info-homepage.view-mode-homepage_political .page-header a:hover {
+    color: #000; }
+
 /*
 Pager
 

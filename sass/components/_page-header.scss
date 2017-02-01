@@ -201,5 +201,11 @@ Style guide: page-header.informational
 .node-info-homepage.view-mode-homepage_political {
   .page-header {
     @extend .page-header--xlarge-intro;
+    a {
+      color: $blue-dark;
+      &:hover {
+        color: $gray-base;
+      }
+    }
   }
 }
