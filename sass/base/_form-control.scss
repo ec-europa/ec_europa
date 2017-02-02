@@ -1,0 +1,9 @@
+/*
+Form
+
+Style guide form
+*/
+
+.form-control {
+  @include form-control();
+}
