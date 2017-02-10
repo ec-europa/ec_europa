@@ -3,6 +3,6 @@
     "description": "Theme for Drupal 7 developed by the DTT site builder team",
     "git-version": "1.0",
     "require": {
-        "ec-europa/ec-europa-theme-tools": ">=1"
+        "ec-europa/ec-europa-theme-tools": "@dev"
     }
 }
