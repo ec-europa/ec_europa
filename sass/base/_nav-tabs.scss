@@ -16,11 +16,11 @@ ul.nav-tabs,
   margin-bottom: 2em !important;
   border-bottom: 2px solid $grey;
 
-  & > li {
+  > li {
     margin-bottom: -2px;
 
     &.active {
-      & > a {
+      > a {
         color: $grey-base;
         border: 2px solid $grey;
         border-bottom: 2px solid $white;
@@ -44,7 +44,7 @@ ul.nav-tabs,
       }
     }
 
-    & > a {
+    > a {
       border-width: 2px;
       border-radius: 0;
 
@@ -67,24 +67,17 @@ ul.nav-tabs,
 }
 
 .nav-tabs--with-content {
-  display: none;
-
-  & > li {
-    & > a {
-      font-weight: bold;
-      font-size: 30px;
-      padding-left: 1em;
-      padding-right: 1em;
-    }
+  a {
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
-  & + .tab-content {
-    padding: 0;
-
-    & > * {
+  + .tab-content {
+    > * {
       @extend .section__group;
       // Margin bottom should be always there.
-      margin-bottom: 1.667em!important;
+      margin-bottom: 1.667em !important;
     }
   }
 }
@@ -113,22 +106,6 @@ ul.nav-tabs-right {
         border-bottom: inherit;
       }
     }
-  }
-}
-
-@include breakpoint(screen-xs-min) {
-  .nav-tabs--with-content {
-    display: block;
-
-    & + .tab-content {
-      .tab-pane {
-        padding: 0;
-      }
-    }
-  }
-
-  .tab-title {
-    display: none;
   }
 }
 

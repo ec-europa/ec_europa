@@ -4625,17 +4625,13 @@ ul.nav-tabs,
         border-bottom-color: #ffd617;
         outline: none; }
 
-.nav-tabs--with-content {
-  display: none; }
-  .nav-tabs--with-content > li > a {
-    font-weight: bold;
-    font-size: 30px;
-    padding-left: 1em;
-    padding-right: 1em; }
-  .nav-tabs--with-content + .tab-content {
-    padding: 0; }
-    .nav-tabs--with-content + .tab-content > * {
-      margin-bottom: 1.667em !important; }
+.nav-tabs--with-content a {
+  font-weight: bold;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.nav-tabs--with-content + .tab-content > * {
+  margin-bottom: 1.667em !important; }
 
 /*
 Bootstrap: Nav tabs right.
@@ -4655,14 +4651,6 @@ ul.nav-tabs-right {
       font-size: inherit; }
       ul.nav-tabs-right li a:hover {
         border-bottom: inherit; }
-
-@media (min-width: 480px) {
-  .nav-tabs--with-content {
-    display: block; }
-    .nav-tabs--with-content + .tab-content .tab-pane {
-      padding: 0; }
-  .tab-title {
-    display: none; } }
 
 @media print {
   .tab-content .tab-pane,

@@ -14,7 +14,7 @@ Default implementation of the file download component.
 
 Markup: html/file.html
 
-Style guide file.1
+Style guide: file.1
 */
 
 .file {
@@ -22,53 +22,6 @@ Style guide file.1
   @extend .row;
   margin: 0 0 0.944em 0;
   padding: 1.333em;
-  background-color: $grey-lighter;
-}
-
-/*
-File image
-
-Displays the file image.
-
-Markup: html/file-image.html
-
-Style guide file.4
-*/
-
-.file-image {
-  padding: 0;
-  background-color: transparent;
-
-  & img {
-    display: block;
-  }
-}
-
-/*
-File video
-
-Displays the file video.
-
-Markup: html/file-video.html
-
-Style guide file.5
-*/
-
-.file-video {
-  padding: 0;
-  background-color: transparent;
-
-  .file__container {
-    @extend .embed-responsive;
-    @extend .embed-responsive-16by9;
-  }
-
-  iframe {
-    @extend .embed-responsive-item;
-  }
-}
-
-.file-video--with-background {
   background-color: $grey-lighter;
 }
 
@@ -167,7 +120,7 @@ Displays the download file available in several languages.
 
 Markup: html/file-translations.html
 
-Style guide file.2
+Style guide: file.2
 */
 
 .file__translations {
@@ -253,13 +206,13 @@ Style guide file.2
 }
 
 /*
-File Link
+File link
 
 Displays the link for a download/page.
 
 Markup: html/file--link.html
 
-Style guide file.3
+Style guide: file.3
 */
 .file--link {
   background-color: transparent;
@@ -307,5 +260,45 @@ Style guide file.3
       margin-top: 0;
       overflow: hidden;
     }
+  }
+}
+
+/*
+File image
+
+Displays the file image.
+
+Markup: html/file--image.html
+
+Style guide: file.4
+*/
+
+.file--image {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+}
+
+/*
+File video
+
+Displays the file video.
+
+Markup: html/file--video.html
+
+Style guide: file.5
+*/
+
+.file--video {
+  padding: 0;
+  background-color: transparent;
+
+  .file__container {
+    @extend .embed-responsive;
+    @extend .embed-responsive-16by9;
+  }
+
+  iframe {
+    @extend .embed-responsive-item;
   }
 }

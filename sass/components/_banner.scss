@@ -4,7 +4,7 @@ Banner
 The banner itself is not a standalone component, the banner subcomponents should
 always be used.
 
-Style guide banner
+Style guide: banner
 */
 
 /*
@@ -12,10 +12,14 @@ Quote Banner
 
 Markup: html/banner-quote.html
 
-Style guide banner.quote
+Style guide: banner.quote
 */
 
 $quote_border_offset: 0.556em;
+
+.banner {
+  @include clearfix();
+}
 
 .banner--quote {
   @include make-md-column(8);
@@ -45,23 +49,17 @@ Video Banner
 
 Markup: html/banner-video.html
 
-Style guide banner.video
+Style guide: banner.video
 */
-
-.banner__video {
-  .file {
-    @extend .embed-responsive;
-    @extend .embed-responsive-16by9;
-    margin-bottom: 0;
-  }
-
-  iframe {
-    @extend .embed-responsive-item;
-  }
-}
 
 .banner--video {
   @extend .row;
+}
+
+.banner__video {
+  .file {
+    margin-bottom: 0;
+  }
 }
 
 .banner__left {

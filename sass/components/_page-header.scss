@@ -35,7 +35,6 @@ Markup: html/page-header--informational.html
 Style guide: page-header.informational
 */
 
-
 .page-header {
   margin: 0;
   padding: 0 0 1.5em;
@@ -201,10 +200,26 @@ Style guide: page-header.informational
 .node-info-homepage.view-mode-homepage_political {
   .page-header {
     @extend .page-header--xlarge-intro;
-    a {
-      color: $blue-dark;
-      &:hover {
-        color: $gray-base;
+
+    .page-header__hero-title {
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @include breakpoint(screen-msm-min) {
+      .page-header__hero-title {
+        a {
+          color: $blue-dark;
+          
+          &:hover {
+            color: $gray-base;
+          }
+        }
       }
     }
   }

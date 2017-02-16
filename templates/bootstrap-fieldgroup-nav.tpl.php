@@ -49,7 +49,6 @@
         <?php foreach ($panes as $index => $pane) : ?>
           <div id="<?php print $pane['id']; ?>" class="js-tabcontent <?php if ($index === $active) : print 'active';
          endif; ?>">
-            <h2 class="tab-title"><?php print $pane['title']; ?></h2>
             <?php print $pane['content']; ?>
           </div>
         <?php endforeach; ?>

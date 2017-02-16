@@ -578,17 +578,17 @@ a.label:hover, a.label:focus {
   .label-danger[href]:hover, [href].label--danger:hover, .label-danger[href]:focus, [href].label--danger:focus {
     background-color: #c9302c; }
 
-.embed-responsive, .banner__video .file, .file-video .file__container {
+.embed-responsive, .file--video .file__container {
   position: relative;
   display: block;
   height: 0;
   padding: 0;
   overflow: hidden; }
-  .embed-responsive .embed-responsive-item, .banner__video .file .embed-responsive-item, .file-video .file__container .embed-responsive-item, .embed-responsive .banner__video iframe, .banner__video .embed-responsive iframe, .banner__video .file iframe, .embed-responsive .file-video iframe, .file-video .embed-responsive iframe, .file-video .file__container iframe,
-  .embed-responsive iframe, .banner__video .file iframe, .file-video .file__container iframe,
-  .embed-responsive embed, .banner__video .file embed, .file-video .file__container embed,
-  .embed-responsive object, .banner__video .file object, .file-video .file__container object,
-  .embed-responsive video, .banner__video .file video, .file-video .file__container video {
+  .embed-responsive .embed-responsive-item, .file--video .file__container .embed-responsive-item, .embed-responsive .file--video iframe, .file--video .embed-responsive iframe, .file--video .file__container iframe,
+  .embed-responsive iframe, .file--video .file__container iframe,
+  .embed-responsive embed, .file--video .file__container embed,
+  .embed-responsive object, .file--video .file__container object,
+  .embed-responsive video, .file--video .file__container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -596,9 +596,9 @@ a.label:hover, a.label:focus {
     height: 100%;
     width: 100%;
     border: 0; }
-  .embed-responsive.embed-responsive-16by9, .banner__video .file, .file-video .file__container {
+  .embed-responsive.embed-responsive-16by9, .file--video .file__container {
     padding-bottom: 56.25%; }
-  .embed-responsive.embed-responsive-4by3, .banner__video .embed-responsive-4by3.file, .file-video .embed-responsive-4by3.file__container {
+  .embed-responsive.embed-responsive-4by3, .file--video .embed-responsive-4by3.file__container {
     padding-bottom: 75%; }
 
 .icon--after, .btn.btn-ctn::after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle::after, .btn.btn-time-line::after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle::after, .btn.btn-menu::after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle::after, .is-external::after, a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, .listing__item-link[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .listing__title::after,
@@ -617,7 +617,7 @@ a.label:hover, a.label:focus {
   speak: none; }
 
 @media print {
-  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-message, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
+  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .feedback-message, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
   #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
 
@@ -1257,15 +1257,22 @@ Banner
 The banner itself is not a standalone component, the banner subcomponents should
 always be used.
 
-Style guide banner
+Style guide: banner
 */
 /*
 Quote Banner
 
 Markup: html/banner-quote.html
 
-Style guide banner.quote
+Style guide: banner.quote
 */
+.banner:before, .banner:after {
+  content: " ";
+  display: table; }
+
+.banner:after {
+  clear: both; }
+
 .banner--quote {
   position: relative;
   min-height: 1px;
@@ -1295,7 +1302,7 @@ Video Banner
 
 Markup: html/banner-video.html
 
-Style guide banner.video
+Style guide: banner.video
 */
 .banner__video .file {
   margin-bottom: 0; }
@@ -1305,6 +1312,7 @@ Style guide banner.video
   font-size: 0.889em; }
 
 .banner__caption {
+  display: block;
   padding: 0.715em 1em;
   line-height: 1.5715;
   background-color: #ececec;
@@ -2034,25 +2042,6 @@ Style guide featured-item.2
 .featured-item__content {
   clear: left; }
 
-/*
-Feedback message
-
-Markup: html/feedback-message.html
-
-Style guide form.feedback-message
-*/
-.feedback-message {
-  border: none !important;
-  max-width: none; }
-  .feedback-message.is-disabled {
-    color: #b3b4b5; }
-  .feedback-message.is-error {
-    background: #f2f2f2 url("../images/svg/messages-error.svg") 1em 1.1em no-repeat;
-    background-size: 2em; }
-
-.no-svg .feedback-message.is-error {
-  background-image: url("../images/png/messages-error.png"); }
-
 .feedback-form {
   margin: 0; }
 
@@ -2229,42 +2218,11 @@ Default implementation of the file download component.
 
 Markup: html/file.html
 
-Style guide file.1
+Style guide: file.1
 */
 .file {
   margin: 0 0 0.944em 0;
   padding: 1.333em;
-  background-color: #ececec; }
-
-/*
-File image
-
-Displays the file image.
-
-Markup: html/file-image.html
-
-Style guide file.4
-*/
-.file-image {
-  padding: 0;
-  background-color: transparent; }
-  .file-image img {
-    display: block; }
-
-/*
-File video
-
-Displays the file video.
-
-Markup: html/file-video.html
-
-Style guide file.5
-*/
-.file-video {
-  padding: 0;
-  background-color: transparent; }
-
-.file-video--with-background {
   background-color: #ececec; }
 
 .file__icon {
@@ -2289,6 +2247,7 @@ Style guide file.5
   font-weight: bold; }
 
 .file__caption {
+  display: block;
   padding: 0.715em 1em;
   line-height: 1.5715;
   background-color: #ececec;
@@ -2331,7 +2290,7 @@ Displays the download file available in several languages.
 
 Markup: html/file-translations.html
 
-Style guide file.2
+Style guide: file.2
 */
 .file__translations {
   margin-bottom: 1em;
@@ -2381,13 +2340,13 @@ Style guide file.2
     font-size: 0.889em; }
 
 /*
-File Link
+File link
 
 Displays the link for a download/page.
 
 Markup: html/file--link.html
 
-Style guide file.3
+Style guide: file.3
 */
 .file--link {
   background-color: transparent; }
@@ -2416,6 +2375,33 @@ Style guide file.3
     float: right;
     margin-top: 0;
     overflow: hidden; } }
+
+/*
+File image
+
+Displays the file image.
+
+Markup: html/file--image.html
+
+Style guide: file.4
+*/
+.file--image {
+  display: block;
+  padding: 0;
+  background-color: transparent; }
+
+/*
+File video
+
+Displays the file video.
+
+Markup: html/file--video.html
+
+Style guide: file.5
+*/
+.file--video {
+  padding: 0;
+  background-color: transparent; }
 
 /*
 File upload
@@ -5639,22 +5625,22 @@ Messages
 
 Markup: html/messages.html
 
-.messages--icon-center - Centralized icon
-
-Style guide messages
+Style guide: messages
 */
 .messages, .feedback-message {
   position: relative;
+  min-height: 5.375em;
   margin: 0 0 1em;
-  padding: 1em 1em 1em 4em;
+  padding: 1.315em 0 1.315em 5em;
   overflow: hidden;
-  background: url("../images/svg/messages-info.svg") no-repeat 1em 1em;
+  background: transparent no-repeat 1.375em 1.375em;
   font-family: Arial, sans-serif;
   font-size: 0.889em;
   color: #404040;
-  border: 2px solid #006fb4; }
-  .messages.messages--icon-center, .messages--icon-center.feedback-message {
-    background-position: 1em center; }
+  border: 2px solid transparent; }
+  .messages.info, .info.feedback-message {
+    background-image: url("../images/svg/messages-info.svg");
+    border-color: #006fb4; }
   .messages.status, .status.feedback-message {
     background-image: url("../images/svg/messages-success.svg");
     border-color: #467a39; }
@@ -5671,57 +5657,69 @@ Style guide messages
     padding-top: 0;
     font-size: inherit;
     font-weight: bold; }
-  .messages ul, .feedback-message ul,
   .messages p, .feedback-message p {
     max-width: 95%;
     margin-bottom: 0;
     font-size: 0.889em; }
-  .messages li, .feedback-message li {
-    list-style-type: none; }
   .messages > :last-child, .feedback-message > :last-child {
     padding-bottom: 0; }
-
-.messages__list, .messages ul, .feedback-message ul {
-  max-width: auto;
-  margin-bottom: 0;
-  padding-left: 0;
-  font-family: Arial, sans-serif; }
-
-.messages__list-item, .messages ul li, .feedback-message ul li {
-  margin-top: 0.5em; }
-  .messages__list-item:first-child, .messages ul li:first-child, .feedback-message ul li:first-child {
-    margin-top: 0; }
-
-.no-svg .messages, .no-svg .feedback-message {
-  background-image: url("../images/png/messages-info.png"); }
-  .no-svg .messages.status, .no-svg .status.feedback-message {
-    background-image: url("../images/png/messages-info.png"); }
-  .no-svg .messages.warning, .no-svg .warning.feedback-message {
-    background-image: url("../images/png/messages-warning.png"); }
-  .no-svg .messages.error, .no-svg .error.feedback-message {
-    background-image: url("../images/png/messages-error.png"); }
-  .no-svg .messages.live, .no-svg .live.feedback-message {
-    background-image: url("../images/png/live_streaming.png"); }
-
-.no-svg .alert .close {
-  background-image: url("../images/png/close.png"); }
-  .no-svg .alert .close:hover {
-    background-image: url("../images/png/close_hover.png"); }
+  .messages .close, .feedback-message .close {
+    display: none; }
 
 .alert {
   margin: 1.667em 0;
   border-radius: 0; }
   .alert .close {
+    display: block;
     position: absolute;
-    right: 0.715em;
+    top: 0.465em;
+    right: 0.465em;
     padding: 0 0 0 5px;
-    background: url("../images/svg/close.svg") no-repeat right top;
+    background: transparent url("../images/svg/close.svg") no-repeat right top;
+    font-size: 1.625em;
     color: transparent;
     text-shadow: none;
     text-decoration: none;
     opacity: 1; }
     .alert .close:hover {
       background-image: url("../images/svg/close_hover.svg"); }
+
+.no-svg .messages.info, .no-svg .info.feedback-message {
+  background-image: url("../images/png/messages-info.png"); }
+
+.no-svg .messages.status, .no-svg .status.feedback-message {
+  background-image: url("../images/png/messages-info.png"); }
+
+.no-svg .messages.warning, .no-svg .warning.feedback-message {
+  background-image: url("../images/png/messages-warning.png"); }
+
+.no-svg .messages.error, .no-svg .error.feedback-message {
+  background-image: url("../images/png/messages-error.png"); }
+
+.no-svg .messages.live, .no-svg .live.feedback-message {
+  background-image: url("../images/png/live_streaming.png"); }
+
+.no-svg .alert .close {
+  background-image: url("../images/png/close.png"); }
+  .no-svg .alert .close:hover {
+    background-image: url("../images/png/close_hover.png"); }
+
+/*
+Feedback message
+
+Markup: html/feedback-message.html
+
+Style guide: form.feedback-message
+*/
+.feedback-message {
+  border: none; }
+  .feedback-message.is-disabled {
+    color: #b3b4b5; }
+  .feedback-message.is-error {
+    background: #f2f2f2 url("../images/svg/messages-error.svg") no-repeat 1.375em 1.375em; }
+
+.no-svg .feedback-message.is-error {
+  background-image: url("../images/png/messages-error.png"); }
 
 /*
 Notification
@@ -5934,10 +5932,16 @@ Style guide: page-header.informational
       background-color: #ffffff;
       color: #004494; } }
 
-.node-info-homepage.view-mode-homepage_political .page-header a {
-  color: #004494; }
-  .node-info-homepage.view-mode-homepage_political .page-header a:hover {
-    color: #000; }
+.node-info-homepage.view-mode-homepage_political .page-header .page-header__hero-title a {
+  text-decoration: none; }
+  .node-info-homepage.view-mode-homepage_political .page-header .page-header__hero-title a:hover {
+    text-decoration: underline; }
+
+@media (min-width: 622px) {
+  .node-info-homepage.view-mode-homepage_political .page-header .page-header__hero-title a {
+    color: #004494; }
+    .node-info-homepage.view-mode-homepage_political .page-header .page-header__hero-title a:hover {
+      color: #000; } }
 
 /*
 Pager

@@ -48,20 +48,20 @@ function europa_theme($existing, $type, $theme, $path) {
       'template' => 'status_message',
       'path' => $path . '/templates',
       'variables' => [
-        'message_title' => '',
-        'message_body' => '',
-        'message_type' => '',
         'message_classes' => '',
+        'message_title' => '',
+        'message_type' => '',
+        'message_body' => '',
       ],
     ],
   ];
 }
 
 /**
- * Implements hook_preprocess_europa_status_message().
+ * Implements hook_preprocess_HOOK().
  */
 function europa_preprocess_europa_status_message(&$variables) {
-  if (isset($variables['message_classes']) && is_array($variables['message_classes'])) {
+  if (!empty($variables['message_classes']) && is_array($variables['message_classes'])) {
     $variables['message_classes'] = ' ' . implode(' ', $variables['message_classes']);
   }
 }
@@ -145,11 +145,11 @@ function europa_form_element(&$variables) {
 
     if (in_array($element['#type'], ['radio', 'checkbox'])) {
       if ($element['#required']) {
-        $feedback_message = '<p class="feedback-message is-error">' . form_get_error($element) . '</p>';
+        $feedback_message = '<div class="feedback-message is-error"><p>' . form_get_error($element) . '</p></div>';
       }
     }
     else {
-      $feedback_message = '<p class="feedback-message is-error">' . form_get_error($element) . '</p>';
+      $feedback_message = '<div class="feedback-message is-error"><p>' . form_get_error($element) . '</p></div>';
     }
   }
 
@@ -808,7 +808,8 @@ function europa_preprocess_field(&$variables) {
   if ($variables['element']['#field_type'] <> 'ds') {
     // Get more field information.
     $field = field_info_field($variables['element']['#field_name']);
-    // Inintialize parameter.
+
+    // Initialize parameter.
     $allow_attribute = TRUE;
     // If it is not a tranlateable entityreference field we should continue.
     if ($field['type'] == "entityreference" && $field['translatable'] == 0) {
@@ -819,13 +820,17 @@ function europa_preprocess_field(&$variables) {
       // The default language code.
       $content_langcode = $GLOBALS['language_content']->language;
       // When the language is different from content.
-      if (isset($variables['element']['#language']) && $variables['element']['#language'] <> LANGUAGE_NONE && $variables['element']['#language'] <> $content_langcode) {
+      if (isset($variables['element']['#language'])
+        && $variables['element']['#language'] <> LANGUAGE_NONE
+        && $variables['element']['#language'] <> $content_langcode
+      ) {
         $variables['attributes_array']['lang'] = $variables['element']['#language'];
       }
     }
   }
+
   // Set the attributes to the element.
-  $variables['attributes'] = empty($variables['attributes_array']) ? '' : drupal_attributes($variables['attributes_array']);
+  $variables['attributes'] = (empty($variables['attributes_array']) ? '' : drupal_attributes($variables['attributes_array']));
 }
 
 /**
@@ -840,7 +845,8 @@ function europa_preprocess_image(&$variables) {
   // string instead of an array in $variables['attributes']['class'].
   if (theme_get_setting('bootstrap_image_responsive')) {
     if (isset($variables['attributes']['class'])
-        && is_array($variables['attributes']['class'])) {
+        && is_array($variables['attributes']['class'])
+    ) {
       // This avoids having the class .img-responsive repeated in the element.
       if (!in_array('img-responsive', $variables['attributes']['class'])) {
         $variables['attributes']['class'][] = 'img-responsive';
@@ -1387,11 +1393,18 @@ function europa_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
- * Implements hook_status_messages().
+ * Implements theme_status_messages().
  */
 function europa_status_messages($variables) {
   $display = $variables['display'];
   $output = [];
+
+  $status_heading = [
+    'status' => t('Success'),
+    'error' => t('Error'),
+    'warning' => t('Warning'),
+    'info' => t('Information'),
+  ];
 
   foreach (drupal_get_messages($display) as $type => $messages) {
     $body = '';
@@ -1402,11 +1415,10 @@ function europa_status_messages($variables) {
     $output[] = [
       '#theme' => 'europa_status_message',
       '#message_classes' => [
-        'alert',
-        'alert-block',
         $type,
-        count($messages) > 1 ?: 'messages--icon-center',
+        'alert',
       ],
+      '#message_title' => $status_heading[$type],
       '#message_type' => $type . ' message',
       '#message_body' => $body,
     ];
