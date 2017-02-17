@@ -4,4 +4,9 @@ sass/app.css
 
 # Ignore css.map
 css/*css.map
-styleguide/assets/public/css/*css.map
+
+# Ignore js libraries
+js/libraries/
+
+# Ignore styleguide
+styleguide/assets/
