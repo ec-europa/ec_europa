@@ -617,7 +617,8 @@ a.label:hover, a.label:focus {
   speak: none; }
 
 @media print {
-  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-form__wrapper, .file, .footer, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .feedback-message, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
+  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-form__wrapper, .file, .footer,
+  .footer-bottom, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .feedback-message, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
   #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
 
@@ -2595,23 +2596,32 @@ Markup: html/footer.html
 Style guide footer
 */
 .footer {
+  background-color: #3066a6; }
+
+.footer-bottom {
   background-color: #004494;
-  font-size: 0.889em;
-  color: #ffffff;
-  text-align: center; }
-  .footer a {
+  padding: 0.9em 0; }
+
+.footer,
+.footer-bottom {
+  color: #ffffff; }
+  .footer a,
+  .footer-bottom a {
     color: #ffffff;
     text-decoration: underline; }
-    .footer a:hover, .footer a:active, .footer a:focus {
+    .footer a:hover, .footer a:active, .footer a:focus,
+    .footer-bottom a:hover,
+    .footer-bottom a:active,
+    .footer-bottom a:focus {
       text-decoration: none; }
-
-.footer__column-main {
-  padding-bottom: 30px;
-  padding-top: 30px; }
 
 .footer__label {
   display: block;
   margin-right: 20px; }
+
+.footer__title {
+  color: #ffffff;
+  padding-bottom: 0; }
 
 .footer__menu {
   margin: 0;
@@ -2619,11 +2629,12 @@ Style guide footer
   .footer__menu .footer__menu-item, .footer__menu .footer__menu-item-right {
     margin-right: 15px;
     margin-bottom: 0.5em;
-    padding: 0; }
+    padding: 0;
+    font-size: 0.889em; }
     .footer__menu .footer__menu-item:first-child > a, .footer__menu .footer__menu-item-right:first-child > a {
       padding-left: 0; }
     .footer__menu .footer__menu-item a, .footer__menu .footer__menu-item-right a {
-      padding: 0 1.1em 0 0; }
+      padding: 0; }
       .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
         outline: 3px solid #ffd617;
         outline-offset: 5px;
@@ -2637,8 +2648,9 @@ Style guide footer
 .footer__menu--separator {
   width: 100%;
   margin-top: 0.6em;
+  margin-bottom: 1.7em;
   padding-top: 1.2em;
-  border-top: 1px solid #4d7cb4; }
+  border-top: 2px solid #e0eaf2; }
 
 .footer__icon--social::before {
   position: relative;
@@ -2650,31 +2662,20 @@ Style guide footer
   display: none !important; }
 
 .footer__icon--facebook::before {
-  font-size: 22px; }
+  font-size: 20px; }
 
 .footer__icon--twitter::before {
   font-size: 18px; }
 
-@media (min-width: 768px) {
-  .footer {
-    text-align: left; }
-  .footer__column-main {
-    padding-top: 60px;
-    padding-bottom: 60px; }
-  .footer__column-right {
-    float: right;
-    padding-bottom: 0; }
-  .footer__label {
-    display: inline-block; }
-    .footer__label ~ .footer__menu {
-      display: inline-block; } }
+.footer__column-main {
+  padding-top: 2em; }
 
 .footer a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"])::after {
   position: absolute;
   line-height: 2.2; }
 
-.footer .footer__icon--social {
-  padding-right: 0 !important; }
+.footer .list-inline .footer__icon--social {
+  padding-right: 15px; }
 
 .footer a.footer__site-switcher {
   padding-right: 30px !important; }
