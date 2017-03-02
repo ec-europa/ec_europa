@@ -967,8 +967,10 @@ function europa_preprocess_page(&$variables) {
 
   if (isset($node)) {
     // Adding generic introduction field to be later rendered in page template.
-    $variables['field_core_introduction'] = isset($node->field_core_introduction)
-        ? field_view_field('node', $node, 'field_core_introduction', ['label' => 'hidden']) : NULL;
+    $introduction = variable_get('ec_europa_introduction_field', FALSE);
+
+    $variables['ec_europa_introduction'] = isset($node->{$introduction})
+        ? field_view_field('node', $node, $introduction, ['label' => 'hidden']) : NULL;
 
     // Check if Display Suite is handling node.
     if (module_exists('ds')) {
