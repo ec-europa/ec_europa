@@ -4542,7 +4542,7 @@ Style guide text.lists
 ul:not(.listing):not(.social-media-links__list):not(.file__translations-list):not(.site-switcher__list):not(.menu):not(.site-user-menu__list):not(#admin-menu-wrapper ul),
 ol {
   max-width: 32em;
-  padding-left: 18px; }
+  padding-left: 1em; }
 
 .region-content ul:not(.listing):not(.field__items):not(.file__translations-list):not(.wtShareNetworks),
 .region-content ol {
@@ -4559,7 +4559,7 @@ li > ol {
 li > ul {
   list-style-type: disc; }
 
-.field ul:not(.social-media-links__list):not(.file__translations-list):not(.listing--title) {
+.field ul:not(.listing):not(.social-media-links__list):not(.file__translations-list) {
   list-style: disc outside;
   padding-left: 1em; }
 
