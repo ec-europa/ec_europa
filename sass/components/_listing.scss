@@ -71,7 +71,8 @@ Style guide listing.1
 
 .listing {
   @include clearfix();
-  padding: 0 !important;
+
+  @extend .reset-lists;
 }
 
 // .listing--priorities modifier.
