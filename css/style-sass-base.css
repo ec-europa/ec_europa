@@ -4539,7 +4539,7 @@ Markup: html/lists.html
 
 Style guide text.lists
 */
-ul:not(.listing):not(.social-media-links__list):not(.file__translations-list):not(.site-switcher__list):not(.menu):not(.site-user-menu__list):not(#admin-menu-wrapper ul),
+ul:not(.social-media-links__list):not(.file__translations-list):not(.site-switcher__list):not(.menu):not(.site-user-menu__list):not(#admin-menu-wrapper ul),
 ol {
   max-width: 32em;
   padding-left: 1em; }
@@ -4560,8 +4560,7 @@ li > ul {
   list-style-type: disc; }
 
 .field ul:not(.listing):not(.social-media-links__list):not(.file__translations-list) {
-  list-style: disc outside;
-  padding-left: 1em; }
+  list-style: disc outside; }
 
 .navbar-toggle {
   border-radius: 0px;

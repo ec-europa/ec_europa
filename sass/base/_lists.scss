@@ -7,7 +7,7 @@ Style guide text.lists
 */
 
 // @todo: this list component needs a review and a refinement
-ul:not(.listing, .social-media-links__list, .file__translations-list, .site-switcher__list, .menu, .site-user-menu__list, #admin-menu-wrapper ul),
+ul:not(.social-media-links__list, .file__translations-list, .site-switcher__list, .menu, .site-user-menu__list, #admin-menu-wrapper ul),
 ol {
   max-width: 32em;
   padding-left: 1em;
@@ -35,5 +35,4 @@ li > ul {
 
 .field ul:not(.listing, .social-media-links__list, .file__translations-list) {
   list-style: disc outside;
-  padding-left: 1em;
 }
