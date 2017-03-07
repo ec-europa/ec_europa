@@ -379,7 +379,7 @@ Style guide listing.6
 
     // Only listing__section-title.
     .listing__section-title {
-      font-size: (22/18)+em; // 22px
+      font-size: $font-size-mid;
     }
 
     // Only listing__item-link.
@@ -452,7 +452,7 @@ Style guide listing.6
   // @todo: check if we can remove safely position relative that is applied
   // in this class in the file _mixins.scss line 139, and then this can removed.
   .listing__title,
-    .contextual-links-region {
+  .contextual-links-region {
     position: static;
   }
 
