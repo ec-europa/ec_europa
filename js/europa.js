@@ -158,7 +158,6 @@
 
       $this.click(function (event) {
         toggler_text = fillMe.text() == hide_text ? show_text : hide_text;
-
         if (arrow.hasClass('icon--down')) {
           arrow.removeClass('icon--down').addClass('icon--up');
         }
