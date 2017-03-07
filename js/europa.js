@@ -141,8 +141,12 @@
   };
 
   Drupal.europa.collapsing = function (show_text, hide_text) {
-    show_text = show_text ? show_text : Drupal.t('Show');
-    hide_text = hide_text ? hide_text : Drupal.t('Hide');
+    if (!hide_text) {
+      hide_text = Drupal.t('Hide');
+    }
+    if (!show_text) {
+      show_text = Drupal.t('Show');
+    }
 
     $('button[data-toggle=collapse]:not(.c-toggle)').each(function () {
       var $this = $(this),

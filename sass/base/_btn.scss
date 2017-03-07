@@ -287,12 +287,18 @@ Style guide: buttons.btn-collapse
       color: $white;
     }
   }
+
+  .no-js & {
+    display: none;
+  }
 }
 
-.no-js {
-  .btn-collapse {
-    display: none;
-    visibility: hidden;
+#collapse {
+  @extend .collapse;
+
+  .no-js & {
+    display: block;
+    visibility: visible;
   }
 }
 

@@ -578,6 +578,38 @@ a.label:hover, a.label:focus {
   .label-danger[href]:hover, [href].label--danger:hover, .label-danger[href]:focus, [href].label--danger:focus {
     background-color: #c9302c; }
 
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear; }
+  .fade.in {
+    opacity: 1; }
+
+.collapse, #collapse {
+  display: none;
+  visibility: hidden; }
+  .collapse.in, .in#collapse {
+    display: block;
+    visibility: visible; }
+
+tr.collapse.in, tr.in#collapse {
+  display: table-row; }
+
+tbody.collapse.in, tbody.in#collapse {
+  display: table-row-group; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease; }
+
 .embed-responsive, .file--video .file__container {
   position: relative;
   display: block;
@@ -831,8 +863,11 @@ Style guide: buttons.btn-collapse
   color: #ffffff; }
 
 .no-js .btn-collapse {
-  display: none;
-  visibility: hidden; }
+  display: none; }
+
+.no-js #collapse {
+  display: block;
+  visibility: visible; }
 
 a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]), .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 2.2em; }
@@ -6348,7 +6383,7 @@ Style guide: siteheader.searchform
 
 .js .site-menu {
   height: 0; }
-  .js .site-menu.collapse {
+  .js .site-menu.collapse, .js .site-menu#collapse {
     height: inherit; }
 
 @media (min-width: 768px) {
