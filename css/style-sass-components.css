@@ -621,15 +621,6 @@ a.label:hover, a.label:focus {
   #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
 
-/**
-* Single responsibility helper/utility classes.
-* Logic: equal to inline styling.
-* @see: http://davidtheclark.com/on-utility-classes/
-*/
-.clear-bottom-spacing, .clear-page-content-bottom-spacing .page-content {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important; }
-
 .reset-lists, .file__translations .file__translations-list, .listing, .site-switcher__list, .site-user-menu__list, .social-media-links__list {
   max-width: none;
   margin-bottom: 0;
@@ -838,12 +829,6 @@ Style guide: buttons.btn-collapse
 
 .btn-collapse:hover .icon::before, .btn-collapse:hover .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover .date-picker--icon::before, .btn-collapse:hover .search-form__btn::before, .btn-collapse:focus .icon::before, .btn-collapse:focus .date-picker .date-picker--icon::before, .date-picker .btn-collapse:focus .date-picker--icon::before, .btn-collapse:focus .search-form__btn::before {
   color: #ffffff; }
-
-.btn-collapse.collapsed .icon::before, .btn-collapse.collapsed .date-picker .date-picker--icon::before, .date-picker .btn-collapse.collapsed .date-picker--icon::before, .btn-collapse.collapsed .search-form__btn::before {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg); }
 
 .no-js .btn-collapse {
   display: none;

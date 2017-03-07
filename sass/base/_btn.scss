@@ -287,12 +287,6 @@ Style guide: buttons.btn-collapse
       color: $white;
     }
   }
-
-  &.collapsed {
-    .icon::before {
-      @include rotate(180deg);
-    }
-  }
 }
 
 .no-js {
