@@ -141,35 +141,35 @@
   };
 
   Drupal.europa.collapsing = function (show_text, hide_text) {
-    if (!hide_text) {
-      hide_text = Drupal.t('Hide');
-    }
     if (!show_text) {
       show_text = Drupal.t('Show');
+    }
+    if (!hide_text) {
+      hide_text = Drupal.t('Hide');
     }
 
     $('button[data-toggle=collapse]:not(.c-toggle)').each(function () {
       var $this = $(this),
           dependentId = $this.attr('data-target'),
-          initial_state = $(dependentId).hasClass('in');
-          toggler_text = initial_state ? hide_text : show_text,
-          arrow = $('.icon', $this),
-          fillMe = $('.toggling-text', $this),
-          class_add = initial_state ? 'icon--up' : 'icon--down';
+          $arrow = $('.icon', $this),
+          $fillMe = $('.toggling-text', $this),
+          is_shown = $(dependentId).hasClass('in'),
+          toggler_text = is_shown ? hide_text : show_text,
+          icon_class = is_shown ? 'icon--up' : 'icon--down';
 
-      arrow.addClass(class_add);
-      fillMe.text(toggler_text);
+      $arrow.addClass(icon_class);
+      $fillMe.text(toggler_text);
 
       $this.click(function (event) {
-        toggler_text = fillMe.text() == hide_text ? show_text : hide_text;
-        if (arrow.hasClass('icon--down')) {
-          arrow.removeClass('icon--down').addClass('icon--up');
+        toggler_text = $fillMe.text() == hide_text ? show_text : hide_text;
+        if ($arrow.hasClass('icon--down')) {
+          $arrow.removeClass('icon--down').addClass('icon--up');
         }
         else {
-          arrow.removeClass('icon--up').addClass('icon--down');
+          $arrow.removeClass('icon--up').addClass('icon--down');
         }
 
-        fillMe.text(toggler_text);
+        $fillMe.text(toggler_text);
       });
     });
   };
