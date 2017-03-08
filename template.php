@@ -83,17 +83,13 @@ function europa_form_required_marker($variables) {
  * Implements hook_form_BASE_FORM_ID_alter().
  */
 function europa_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'views_exposed_form') {
-    // Button value change on all the views exposed forms is due to a
-    // design/ux requirement which uses the 'Refine results' label for all the
-    // filter forms.
-    $form['submit']['#value'] = t('Refine results');
-    $form['submit']['#attributes']['class'][] = 'btn-primary';
-    $form['submit']['#attributes']['class'][] = 'filters__btn-submit';
-    $form['reset']['#attributes']['class'][] = 'filters__btn-reset';
-    $form['date_before']['value']['#date_format'] = variable_get('date_format_ec_date_j_f_y', "j F Y");
-    $form['date_after']['value']['#date_format'] = variable_get('date_format_ec_date_j_f_y', "j F Y");
-  }
+  // Button value change on all the views exposed forms is due to a
+  // design/ux requirement which uses the 'Refine results' label for all the
+  // filter forms.
+  $form['submit']['#value'] = t('Refine results');
+  $form['submit']['#attributes']['class'][] = 'btn-primary';
+  $form['submit']['#attributes']['class'][] = 'filters__btn-submit';
+  $form['reset']['#attributes']['class'][] = 'filters__btn-reset';
 }
 
 /**
@@ -967,8 +963,10 @@ function europa_preprocess_page(&$variables) {
 
   if (isset($node)) {
     // Adding generic introduction field to be later rendered in page template.
-    $variables['field_core_introduction'] = isset($node->field_core_introduction)
-        ? field_view_field('node', $node, 'field_core_introduction', ['label' => 'hidden']) : NULL;
+    $introduction = variable_get('ec_europa_introduction_field', FALSE);
+
+    $variables['ec_europa_introduction'] = isset($node->{$introduction})
+        ? field_view_field('node', $node, $introduction, ['label' => 'hidden']) : NULL;
 
     // Check if Display Suite is handling node.
     if (module_exists('ds')) {
