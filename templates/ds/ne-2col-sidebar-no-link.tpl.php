@@ -18,14 +18,9 @@
 <?php if (!empty($second)): ?>
   <<?php print $main_wrapper; ?> class="listing__column-main listing__column-main--sidebar-next <?php print $main_classes; ?>">
   <?php if (!isset($prevent_link)): ?>
-    <a href="<?php print $node_url; ?>" class="listing__item-link" title="<?php print "TESTE"; ?>"><?php print "TESTE"; ?></a>
-  <?php //else: ?>
-    <!--<div class="listing__item-nolink">-->
+    <a href="<?php print $node_url; ?>" class="listing__item-link" title="<?php print $title; ?>"><span class="sr-only"><?php print $title; ?></span></a>
   <?php endif; ?>
     <?php print $main; ?>
-  <?php //if (isset($prevent_link)) : ?>
-    <!--</div>-->
-  <?php //endif; ?>
   </<?php print $main_wrapper; ?>>
 
   <<?php print $second_wrapper; ?> class="listing__column-second listing__column-second--no-link <?php print $second_classes; ?>">
@@ -33,18 +28,13 @@
   </<?php print $second_wrapper; ?>>
 <?php else: ?>
   <?php if (!isset($prevent_link)): ?>
-    <a href="<?php print $node_url; ?>" class="listing__item-link" title="<?php print "TESTE"; ?>"><?php print "TESTE"; ?></a>
-  <?php //else: ?>
-    <!--<div class="listing__item-link">-->
+    <a href="<?php print $node_url; ?>" class="listing__item-link" title="<?php print $title; ?>"><span class="sr-only"><?php print $title; ?></span></a>
   <?php endif; ?>
 
   <<?php print $main_wrapper; ?> class="listing__column-main <?php print $main_classes; ?>">
     <?php print $main; ?>
   </<?php print $main_wrapper; ?>>
 
-  <?php //if (isset($prevent_link)): ?>
-    <!--</div>-->
-  <?php //endif; ?>
 <?php endif; ?>
 
 </<?php print $layout_wrapper; ?>>

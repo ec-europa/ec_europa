@@ -8,17 +8,14 @@
 // Add sidebar classes so that we can apply the correct width in css.
 // Second block is needed to activate display suite support on forms.
 ?>
-
 <<?php print $layout_wrapper . $layout_attributes; ?> class="<?php print $classes; ?>">
 
-<?php if (isset($title_suffix['contextual_links'])) : ?>
+<?php if (isset($title_suffix['contextual_links'])): ?>
   <?php print render($title_suffix['contextual_links']); ?>
 <?php endif; ?>
 
-<?php if (!isset($prevent_link)) : ?>
-  <a href="<?php print $node_url; ?>" class="listing__item-link" title="<?php print "TESTE"; ?>"><?php print "TESTE"; ?></a>
-<?php //else: ?>
-  <!--<div class="listing__item-nolink">-->
+<?php if (!isset($prevent_link)): ?>
+  <a href="<?php print $node_url; ?>" class="listing__item-link" title="<?php print $title; ?>"><span class="sr-only"><?php print $title; ?></span></a>
 <?php endif; ?>
 
 <?php if (!empty($second)): ?>
@@ -30,9 +27,6 @@
   <<?php print $main_wrapper; ?> class="listing__column-main <?php print $main_classes; ?>">
     <?php print $main; ?>
   </<?php print $main_wrapper; ?>>
-  <?php //if (isset($prevent_link)) : ?>
-    <!--</div>-->
-  <?php //endif; ?>
 
 </<?php print $layout_wrapper; ?>>
 

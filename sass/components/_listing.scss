@@ -416,8 +416,6 @@ Style guide listing.6
 
 // .listing__wrapper element.
 .listing__wrapper {
-  @include clearfix();
-
   margin-bottom: 1.667em;
 
   .listing {
@@ -436,22 +434,23 @@ Style guide listing.6
 
   // .listing__item-link element
   .listing__item-link {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
+
+    @include _focus_outline_border(3px, $yellow-light, 2px);
   }
 
   &:first-child {
     border-top: 1px solid $grey-lighter;
   }
 
-  // @todo: check if we can remove safely position relative that is applied
-  // in this class in the file _mixins.scss line 139, and then this can removed.
-  .listing__title,
+  // @todo: Apply a solution where we don't need to apply anynmore the property
+  // float to the classes .listing__column-main, .listing__column-second, etc.
+  // and this can be removed.
   .contextual-links-region {
     position: static;
   }
@@ -471,8 +470,7 @@ Style guide listing.6
     font-size: $font-size-little;
   }
 
-  a:not(.listing__item-link) {
-    position: relative;
+  a:not(.listing__item-link, .listing__title) {
     z-index: 2;
   }
 
@@ -499,13 +497,6 @@ Style guide listing.6
       }
     }
   }
-}
-
-.listing__item-nolink {
-  display: block;
-  float: left;
-  width: 100%;
-  color: $grey-base;
 }
 
 // For all the screens.
