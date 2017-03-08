@@ -1516,46 +1516,16 @@ function europa_file_upload_help($variables) {
  * DS templates.
  */
 function europa_ds_pre_render_alter(&$layout_render_array, $context, &$variables) {
-/*
-    if ($vars['elements']['#entity_type'] == 'taxonomy_term') {
-      $object = 'term';
-    }
-
-    // Add an onclick attribute on the wrapper.
-    if (!empty($layout['settings']['layout_link_attribute'])) {
-      $url = '';
-      switch ($layout['settings']['layout_link_attribute']) {
-        case 'content':
-          if ($object == 'user') {
-            $uri = entity_uri($vars['elements']['#entity_type'], $vars['elements']['#account']);
-          }
-          else {
-            $uri = entity_uri($vars['elements']['#entity_type'], $vars[$object]);
-          }
-          if (!empty($uri)) {
-            $url = $uri['path'];
-          }
-          break;
-        case 'custom':
-          $url = $layout['settings']['layout_link_custom'];
-          break;
-        case 'tokens':
-          $url = token_replace($layout['settings']['layout_link_custom'], array($vars['elements']['#entity_type'] => $vars[$object]), array('clear' => TRUE));
-          break;
-      }
-
-      if (!empty($url)) {
-        $vars['layout_attributes'] .= ' onclick="location.href=\'' . url($url) . '\'"';
-      }
-    }
-*/
-  switch ($context['entity_type']) {
+  $object = $variables['elements']['#entity_type'];
+  switch ($object) {
     case 'user':
-      $variables['node_url'] = drupal_get_path_alias('user/' . $variables['id']);
+      $uri = entity_uri($object, $variables['elements']['#account']);
+      $variables['node_url'] = url($uri['path']);
       break;
 
     case 'taxonomy_term':
-      $variables['node_url'] = drupal_get_path_alias('taxonomy/term/' . $variables['tid']);
+      $uri = entity_uri($object, $variables['term']);
+      $variables['node_url'] = url($uri['path']);
       break;
 
   }
