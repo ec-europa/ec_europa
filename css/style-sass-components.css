@@ -617,19 +617,10 @@ a.label:hover, a.label:focus {
   speak: none; }
 
 @media print {
-  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-form__wrapper, .file, .footer,
-  .footer-bottom, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .feedback-message, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
+  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-form__wrapper, .file, .footer__top,
+  .footer__bottom, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .feedback-message, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
   #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
-
-/**
-* Single responsibility helper/utility classes.
-* Logic: equal to inline styling.
-* @see: http://davidtheclark.com/on-utility-classes/
-*/
-.clear-bottom-spacing, .clear-page-content-bottom-spacing .page-content {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important; }
 
 .reset-lists, .file__translations .file__translations-list, .listing, .site-switcher__list, .site-user-menu__list, .social-media-links__list {
   max-width: none;
@@ -2608,25 +2599,32 @@ Markup: html/footer.html
 
 Style guide footer
 */
-.footer {
+.footer__top {
   background-color: #3066a6; }
 
-.footer-bottom {
+.footer__bottom {
   background-color: #004494;
   padding: 0.9em 0; }
+  .footer__bottom .footer__menu {
+    margin-bottom: 0; }
 
-.footer,
-.footer-bottom {
+.footer__top,
+.footer__bottom {
   color: #ffffff; }
-  .footer a,
-  .footer-bottom a {
+  .footer__top a,
+  .footer__bottom a {
     color: #ffffff;
     text-decoration: underline; }
-    .footer a:hover, .footer a:active, .footer a:focus,
-    .footer-bottom a:hover,
-    .footer-bottom a:active,
-    .footer-bottom a:focus {
+    .footer__top a:hover, .footer__top a:active, .footer__top a:focus,
+    .footer__bottom a:hover,
+    .footer__bottom a:active,
+    .footer__bottom a:focus {
       text-decoration: none; }
+  .footer__top .list-inline .footer__menu-item, .footer__top .list-inline .footer__menu .footer__menu-item-right, .footer__menu .footer__top .list-inline .footer__menu-item-right,
+  .footer__bottom .list-inline .footer__menu-item,
+  .footer__bottom .list-inline .footer__menu .footer__menu-item-right, .footer__menu
+  .footer__bottom .list-inline .footer__menu-item-right {
+    padding-right: 15px; }
 
 .footer__label {
   display: block;
@@ -2634,11 +2632,14 @@ Style guide footer
 
 .footer__title {
   color: #ffffff;
-  padding-bottom: 0; }
+  margin-bottom: 1em;
+  border-bottom: 2px solid #e0eaf2; }
 
 .footer__menu {
   margin: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  max-width: 100%;
+  margin-bottom: 2em; }
   .footer__menu .footer__menu-item, .footer__menu .footer__menu-item-right {
     margin-right: 15px;
     margin-bottom: 0.5em;
@@ -2646,6 +2647,8 @@ Style guide footer
     font-size: 0.889em; }
     .footer__menu .footer__menu-item:first-child > a, .footer__menu .footer__menu-item-right:first-child > a {
       padding-left: 0; }
+    .footer__menu .footer__menu-item:last-child, .footer__menu .footer__menu-item-right:last-child {
+      margin-bottom: 0; }
     .footer__menu .footer__menu-item a, .footer__menu .footer__menu-item-right a {
       padding: 0; }
       .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
@@ -2658,13 +2661,6 @@ Style guide footer
   .footer__menu .footer__menu-item-right {
     float: right; }
 
-.footer__menu--separator {
-  width: 100%;
-  margin-top: 0.6em;
-  margin-bottom: 1.7em;
-  padding-top: 1.2em;
-  border-top: 2px solid #e0eaf2; }
-
 .footer__icon--social::before {
   position: relative;
   top: 4px;
@@ -2675,10 +2671,10 @@ Style guide footer
   display: none !important; }
 
 .footer__icon--facebook::before {
-  font-size: 20px; }
+  font-size: 1.222em; }
 
 .footer__icon--twitter::before {
-  font-size: 18px; }
+  font-size: 1em; }
 
 .footer__column-main {
   padding-top: 2em; }
@@ -2686,9 +2682,6 @@ Style guide footer
 .footer a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"])::after {
   position: absolute;
   line-height: 2.2; }
-
-.footer .list-inline .footer__icon--social {
-  padding-right: 15px; }
 
 .footer a.footer__site-switcher {
   padding-right: 30px !important; }

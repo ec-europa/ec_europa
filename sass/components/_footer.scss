@@ -8,17 +8,20 @@ Markup: html/footer.html
 Style guide footer
 */
 
-.footer {
+.footer__top {
   background-color: $blue-medium;
 }
 
-.footer-bottom {
+.footer__bottom {
   background-color: $brand-primary;
   padding: 0.9em 0;
+  .footer__menu {
+    margin-bottom: 0;
+  }
 }
 
-.footer,
-.footer-bottom {
+.footer__top,
+.footer__bottom {
   @extend .hidden-print;
   color: $white;
 
@@ -46,13 +49,16 @@ Style guide footer
 
 .footer__title {
   color: $white;
-  padding-bottom: 0;
+  margin-bottom: 1em;
+  border-bottom: 2px solid $blue-lighter;
 }
 
 // Menus.
 .footer__menu {
   margin: 0;
   padding-left: 0;
+  max-width: 100%;
+  margin-bottom: 2em;
 
   .footer__menu-item {
     margin-right: 15px;
@@ -61,6 +67,9 @@ Style guide footer
     font-size: $font-size-little;
     &:first-child > a {
       padding-left: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
 
     a {
@@ -81,14 +90,6 @@ Style guide footer
   }
 }
 
-.footer__menu--separator {
-  width: 100%;
-  margin-top: 0.6em;
-  margin-bottom: 1.7em;
-  padding-top: 1.2em;
-  border-top: 2px solid $blue-lighter;
-}
-
 // Icons.
 .footer__icon--social {
   &::before {
@@ -104,13 +105,13 @@ Style guide footer
 
 .footer__icon--facebook {
   &::before {
-    font-size: 20px;
+    font-size: $font-size-mid;
   }
 }
 
 .footer__icon--twitter {
   &::before {
-    font-size: 18px;
+    font-size: $font-size-medium;
   }
 }
 
