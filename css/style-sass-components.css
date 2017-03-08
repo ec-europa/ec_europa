@@ -5604,7 +5604,8 @@ Style guide meta
   text-transform: uppercase; }
 
 .meta--header {
-  font-size: 0.889em; }
+  font-size: 0.889em;
+  margin: 0; }
 
 .meta .meta__item p, .meta .label--meta p, .meta .label--meta-medium p {
   font-size: inherit !important;
