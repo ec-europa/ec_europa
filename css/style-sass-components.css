@@ -621,15 +621,6 @@ a.label:hover, a.label:focus {
   #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
 
-/**
-* Single responsibility helper/utility classes.
-* Logic: equal to inline styling.
-* @see: http://davidtheclark.com/on-utility-classes/
-*/
-.clear-bottom-spacing, .clear-page-content-bottom-spacing .page-content {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important; }
-
 .reset-lists, .file__translations .file__translations-list, .listing, .site-switcher__list, .site-user-menu__list, .social-media-links__list {
   max-width: none;
   margin-bottom: 0;
@@ -5593,7 +5584,8 @@ Style guide meta
 .meta {
   line-height: 1.3;
   font-size: 0.778em;
-  letter-spacing: 0.02777778em; }
+  letter-spacing: 0.02777778em;
+  margin-bottom: 0.5em; }
   .meta p {
     margin: 0; }
 
@@ -5612,8 +5604,7 @@ Style guide meta
   text-transform: uppercase; }
 
 .meta--header {
-  font-size: 0.889em;
-  margin: 0 0 1em; }
+  font-size: 0.889em; }
 
 .meta .meta__item p, .meta .label--meta p, .meta .label--meta-medium p {
   font-size: inherit !important;
@@ -5877,8 +5868,6 @@ Style guide: page-header.informational
     font-size: 26px; }
   .page-header .page-header__hero-title {
     padding-top: 2.39em; }
-    .page-header .page-header__hero-title .meta--header {
-      margin-bottom: 0; }
 
 .page-header--large-intro, .node-type-info-homepage .page-header {
   padding-bottom: 2.39em; }
