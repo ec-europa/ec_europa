@@ -93,8 +93,6 @@ Style guide footer
 // Icons.
 .footer__icon--social {
   &::before {
-    position: relative;
-    top: 4px;
     margin-right: 8px !important;
   }
   &::after {
@@ -103,21 +101,10 @@ Style guide footer
   }
 }
 
-.footer__icon--facebook {
-  &::before {
-    font-size: $font-size-mid;
-  }
-}
-
-.footer__icon--twitter {
-  &::before {
-    font-size: $font-size-medium;
-  }
-}
-
-// Columns.
-.footer__column-main {
+// Footer columns.
+.footer__column {
   padding-top: 2em;
+  @extend .col-md-4;
 }
 
 // External link specific adjustments.
