@@ -73,11 +73,3 @@ Style guide featured-item.2
     clear: left;
   }
 }
-
-// Reset featured image and content padding when inside a listing.
-.listing--teaser {
-  .featured-item__image,
-  .featured-item__content {
-    padding: 0;
-  }
-}
