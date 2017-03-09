@@ -854,16 +854,18 @@ Style guide: buttons.btn-collapse
 .btn-collapse .icon, .btn-collapse .date-picker .date-picker--icon, .date-picker .btn-collapse .date-picker--icon, .btn-collapse .search-form__btn {
   margin-left: 0.3em; }
   .btn-collapse .icon::before, .btn-collapse .date-picker .date-picker--icon::before, .date-picker .btn-collapse .date-picker--icon::before, .btn-collapse .search-form__btn::before {
-    vertical-align: bottom;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s; }
+    vertical-align: bottom; }
 
 .btn-collapse:hover .icon::before, .btn-collapse:hover .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover .date-picker--icon::before, .btn-collapse:hover .search-form__btn::before, .btn-collapse:focus .icon::before, .btn-collapse:focus .date-picker .date-picker--icon::before, .date-picker .btn-collapse:focus .date-picker--icon::before, .btn-collapse:focus .search-form__btn::before {
   color: #ffffff; }
 
 .no-js .btn-collapse {
   display: none; }
+
+#collapse.in {
+  -webkit-transition: visibility 0.3s ease 0s;
+  -o-transition: visibility 0.3s ease 0s;
+  transition: visibility 0.3s ease 0s; }
 
 .no-js #collapse {
   display: block;

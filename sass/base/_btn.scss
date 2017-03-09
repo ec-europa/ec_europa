@@ -277,7 +277,6 @@ Style guide: buttons.btn-collapse
 
     &::before {
       vertical-align: bottom;
-      @include transition(all 0.3s ease 0s);
     }
   }
 
@@ -295,6 +294,10 @@ Style guide: buttons.btn-collapse
 
 #collapse {
   @extend .collapse;
+
+  &.in {
+    @include transition(visibility 0.3s ease 0s);
+  }
 
   .no-js & {
     display: block;
