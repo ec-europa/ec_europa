@@ -2632,23 +2632,28 @@ Style guide footer
 
 .footer__title {
   color: #ffffff;
-  margin-bottom: 1em;
-  border-bottom: 2px solid #e0eaf2; }
+  border-bottom: 2px solid #769EC1;
+  margin-bottom: 0.2em; }
+  @media (min-width: 992px) {
+    .footer__title {
+      margin-bottom: 1.1em; } }
 
 .footer__menu {
   margin: 0;
   padding-left: 0;
   max-width: 100%;
-  margin-bottom: 2em; }
+  margin-bottom: 0; }
   .footer__menu .footer__menu-item, .footer__menu .footer__menu-item-right {
     margin-right: 15px;
-    margin-bottom: 0.5em;
     padding: 0;
     font-size: 0.889em; }
     .footer__menu .footer__menu-item:first-child > a, .footer__menu .footer__menu-item-right:first-child > a {
       padding-left: 0; }
     .footer__menu .footer__menu-item:last-child, .footer__menu .footer__menu-item-right:last-child {
       margin-bottom: 0; }
+    @media (min-width: 992px) {
+      .footer__menu .footer__menu-item, .footer__menu .footer__menu-item-right {
+        margin-bottom: 0.5em; } }
     .footer__menu .footer__menu-item a, .footer__menu .footer__menu-item-right a {
       padding: 0; }
       .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
@@ -2669,7 +2674,15 @@ Style guide footer
   display: none !important; }
 
 .footer__column {
-  padding-top: 2em; }
+  padding-top: 1.6em; }
+  .footer__column:last-child {
+    padding-bottom: 1.6em; }
+  @media (min-width: 992px) {
+    .footer__column {
+      padding-top: 2em;
+      padding-bottom: 2em; }
+      .footer__column:last-child {
+        padding-bottom: 2em; } }
 
 .footer a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"])::after {
   position: absolute;
