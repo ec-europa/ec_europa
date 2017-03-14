@@ -621,15 +621,6 @@ a.label:hover, a.label:focus {
   #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
 
-/**
-* Single responsibility helper/utility classes.
-* Logic: equal to inline styling.
-* @see: http://davidtheclark.com/on-utility-classes/
-*/
-.clear-bottom-spacing, .clear-page-content-bottom-spacing .page-content {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important; }
-
 .reset-lists, .file__translations .file__translations-list, .listing, .site-switcher__list, .site-user-menu__list, .social-media-links__list {
   max-width: none;
   margin-bottom: 0;
@@ -4776,9 +4767,7 @@ a.listing__title {
   .listing .listing__status-container--inline {
     display: inline-block;
     margin-bottom: 0;
-    padding-top: 0.4em; }
-  .listing .listing__btn {
-    float: right; } }
+    padding-top: 0.4em; } }
 
 /*
 Listing column left
