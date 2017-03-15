@@ -280,14 +280,14 @@ function europa_form_element(&$variables) {
 /**
  * Europa theme wrapper function for the service tools menu links.
  */
-function europa_menu_tree__menu_dt_service_links(&$variables) {
+function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
   return '<ul class="footer__menu footer__menu--separator menu nav list-inline">' . $variables['tree'] . '</ul>';
 }
 
 /**
  * Europa theme wrapper function for the EC menu links.
  */
-function europa_menu_tree__menu_dt_menu_social_media(&$variables) {
+function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
   return '<ul class="footer__menu menu nav list-inline">' . $variables['tree'] . '</ul>';
 }
 
@@ -317,14 +317,14 @@ function _europa_menu_link__footer(array &$variables) {
 /**
  * Override theme_menu_link().
  */
-function europa_menu_link__menu_dt_service_links(&$variables) {
+function europa_menu_link__menu_nexteuropa_service_links(&$variables) {
   return _europa_menu_link__footer($variables);
 }
 
 /**
  * Override theme_menu_link().
  */
-function europa_menu_link__menu_dt_menu_social_media(&$variables) {
+function europa_menu_link__menu_nexteuropa_social_media(&$variables) {
   return _europa_menu_link__footer($variables);
 }
 
