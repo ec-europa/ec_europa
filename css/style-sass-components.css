@@ -4742,9 +4742,7 @@ Style guide listing.6
   .listing .listing__status-container--inline {
     display: inline-block;
     margin-bottom: 0;
-    padding-top: 0.4em; }
-  .listing .listing__btn {
-    float: right; } }
+    padding-top: 0.4em; } }
 
 /*
 Listing column left
