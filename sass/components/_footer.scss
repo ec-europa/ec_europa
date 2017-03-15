@@ -53,7 +53,16 @@ Style guide footer
   margin-bottom: 0.2em;
   @include breakpoint(screen-md-min) {
     margin-bottom: 1.1em;
+
+    // Make titles same height on mobile breakpoint.
+    min-height: 3.2em;
   }
+
+  // Make titles height auto on large screens.
+  @media (min-width: 1291px) {
+    min-height: auto;
+  }
+
 }
 
 // Menus.

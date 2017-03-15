@@ -2636,7 +2636,11 @@ Style guide footer
   margin-bottom: 0.2em; }
   @media (min-width: 992px) {
     .footer__title {
-      margin-bottom: 1.1em; } }
+      margin-bottom: 1.1em;
+      min-height: 3.2em; } }
+  @media (min-width: 1291px) {
+    .footer__title {
+      min-height: auto; } }
 
 .footer__menu {
   margin: 0;
