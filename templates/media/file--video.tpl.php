@@ -68,7 +68,7 @@
  * @ingroup themeable
  */
 ?>
-<div id="<?php print $id; ?>" class="<?php print $classes ?> file--video"<?php print $attributes; ?>>
+<div id="<?php print $id; ?>" class="<?php print $classes; ?> file--video"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
