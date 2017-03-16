@@ -1042,7 +1042,6 @@ Markup: html/icon.html
 .icon--calendar - Calendar icon
 .icon--location - Location icon
 .icon--livestreaming - Live streaming icon
-.icon--camera - Camera icon
 .icon--book - Book icon
 .icon--data - Data icon
 .icon--copy - Copy icon
@@ -3179,17 +3178,17 @@ Style guide icon.social
 .icon-social--nujij:hover::before {
   background-image: url("../images/svg/icons/social/nujij_hover.svg"); }
 
-.icon-social--pinterest::before {
-  background: url("../images/svg/icons/social/pinterest.svg") no-repeat ; }
-
-.icon-social--pinterest:hover::before {
-  background-image: url("../images/svg/icons/social/pinterest_hover.svg"); }
-
 .icon-social--pocket::before {
   background: url("../images/svg/icons/social/pocket.svg") no-repeat ; }
 
 .icon-social--pocket:hover::before {
   background-image: url("../images/svg/icons/social/pocket_hover.svg"); }
+
+.icon-social--pinterest::before {
+  background: url("../images/svg/icons/social/pinterest.svg") no-repeat ; }
+
+.icon-social--pinterest:hover::before {
+  background-image: url("../images/svg/icons/social/pinterest_hover.svg"); }
 
 .icon-social--reddit::before {
   background: url("../images/svg/icons/social/reddit.svg") no-repeat ; }
@@ -3287,17 +3286,17 @@ Style guide icon.social
 .icon-social--vine:hover::before {
   background-image: url("../images/svg/icons/social/vine_hover.svg"); }
 
-.icon-social--wordpress::before {
-  background: url("../images/svg/icons/social/wordpress.svg") no-repeat ; }
-
-.icon-social--wordpress:hover::before {
-  background-image: url("../images/svg/icons/social/wordpress_hover.svg"); }
-
 .icon-social--wykop::before {
   background: url("../images/svg/icons/social/wykop.svg") no-repeat ; }
 
 .icon-social--wykop:hover::before {
   background-image: url("../images/svg/icons/social/wykop_hover.svg"); }
+
+.icon-social--wordpress::before {
+  background: url("../images/svg/icons/social/wordpress.svg") no-repeat ; }
+
+.icon-social--wordpress:hover::before {
+  background-image: url("../images/svg/icons/social/wordpress_hover.svg"); }
 
 .icon-social--xerpi::before {
   background: url("../images/svg/icons/social/xerpi.svg") no-repeat ; }
@@ -3491,17 +3490,17 @@ Style guide icon.social
 .no-svg .icon-social--nujij:hover::before {
   background-image: url("../images/png/icons/social/nujij_hover.png"); }
 
-.no-svg .icon-social--pinterest::before {
-  background: url("../images/png/icons/social/pinterest.png") no-repeat ; }
-
-.no-svg .icon-social--pinterest:hover::before {
-  background-image: url("../images/png/icons/social/pinterest_hover.png"); }
-
 .no-svg .icon-social--pocket::before {
   background: url("../images/png/icons/social/pocket.png") no-repeat ; }
 
 .no-svg .icon-social--pocket:hover::before {
   background-image: url("../images/png/icons/social/pocket_hover.png"); }
+
+.no-svg .icon-social--pinterest::before {
+  background: url("../images/png/icons/social/pinterest.png") no-repeat ; }
+
+.no-svg .icon-social--pinterest:hover::before {
+  background-image: url("../images/png/icons/social/pinterest_hover.png"); }
 
 .no-svg .icon-social--reddit::before {
   background: url("../images/png/icons/social/reddit.png") no-repeat ; }
@@ -3599,17 +3598,17 @@ Style guide icon.social
 .no-svg .icon-social--vine:hover::before {
   background-image: url("../images/png/icons/social/vine_hover.png"); }
 
-.no-svg .icon-social--wordpress::before {
-  background: url("../images/png/icons/social/wordpress.png") no-repeat ; }
-
-.no-svg .icon-social--wordpress:hover::before {
-  background-image: url("../images/png/icons/social/wordpress_hover.png"); }
-
 .no-svg .icon-social--wykop::before {
   background: url("../images/png/icons/social/wykop.png") no-repeat ; }
 
 .no-svg .icon-social--wykop:hover::before {
   background-image: url("../images/png/icons/social/wykop_hover.png"); }
+
+.no-svg .icon-social--wordpress::before {
+  background: url("../images/png/icons/social/wordpress.png") no-repeat ; }
+
+.no-svg .icon-social--wordpress:hover::before {
+  background-image: url("../images/png/icons/social/wordpress_hover.png"); }
 
 .no-svg .icon-social--xerpi::before {
   background: url("../images/png/icons/social/xerpi.png") no-repeat ; }
@@ -3803,17 +3802,17 @@ Style guide icon.social
 .no-svg .icon-social--smaller .icon-social--nujij:hover::before {
   background-image: url("../images/png/icons/social/small/nujij_hover_small.png"); }
 
-.no-svg .icon-social--smaller .icon-social--pinterest::before {
-  background: url("../images/png/icons/social/small/pinterest_small.png") no-repeat ; }
-
-.no-svg .icon-social--smaller .icon-social--pinterest:hover::before {
-  background-image: url("../images/png/icons/social/small/pinterest_hover_small.png"); }
-
 .no-svg .icon-social--smaller .icon-social--pocket::before {
   background: url("../images/png/icons/social/small/pocket_small.png") no-repeat ; }
 
 .no-svg .icon-social--smaller .icon-social--pocket:hover::before {
   background-image: url("../images/png/icons/social/small/pocket_hover_small.png"); }
+
+.no-svg .icon-social--smaller .icon-social--pinterest::before {
+  background: url("../images/png/icons/social/small/pinterest_small.png") no-repeat ; }
+
+.no-svg .icon-social--smaller .icon-social--pinterest:hover::before {
+  background-image: url("../images/png/icons/social/small/pinterest_hover_small.png"); }
 
 .no-svg .icon-social--smaller .icon-social--reddit::before {
   background: url("../images/png/icons/social/small/reddit_small.png") no-repeat ; }
@@ -3911,17 +3910,17 @@ Style guide icon.social
 .no-svg .icon-social--smaller .icon-social--vine:hover::before {
   background-image: url("../images/png/icons/social/small/vine_hover_small.png"); }
 
-.no-svg .icon-social--smaller .icon-social--wordpress::before {
-  background: url("../images/png/icons/social/small/wordpress_small.png") no-repeat ; }
-
-.no-svg .icon-social--smaller .icon-social--wordpress:hover::before {
-  background-image: url("../images/png/icons/social/small/wordpress_hover_small.png"); }
-
 .no-svg .icon-social--smaller .icon-social--wykop::before {
   background: url("../images/png/icons/social/small/wykop_small.png") no-repeat ; }
 
 .no-svg .icon-social--smaller .icon-social--wykop:hover::before {
   background-image: url("../images/png/icons/social/small/wykop_hover_small.png"); }
+
+.no-svg .icon-social--smaller .icon-social--wordpress::before {
+  background: url("../images/png/icons/social/small/wordpress_small.png") no-repeat ; }
+
+.no-svg .icon-social--smaller .icon-social--wordpress:hover::before {
+  background-image: url("../images/png/icons/social/small/wordpress_hover_small.png"); }
 
 .no-svg .icon-social--smaller .icon-social--xerpi::before {
   background: url("../images/png/icons/social/small/xerpi_small.png") no-repeat ; }
