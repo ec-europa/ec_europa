@@ -1,9 +1,21 @@
+// SUMMARY (Components, elements, modifiers)
+//
+// .Expandable (component)
+//   Elements:
+//    .expandable__content
+//    .expandable__toggle
+//
+//   Component modifiers:
+//    .expandable--no-background
+
 /*
-Expandable
+Expandable default
+
+Default implementation of the expandable component.
 
 Markup: html/expandable.html
 
-Style guide expandable
+Style guide expandable.1
 */
 
 .expandable__content {
@@ -29,7 +41,7 @@ Style guide expandable
   }
 
   .icon {
-    margin-right: 0.833em;
+    margin: 0 0.833em;
   }
 
   h3 {
@@ -46,4 +58,35 @@ Style guide expandable
     outline: none;
     text-decoration: underline;
   }
+}
+
+/*
+Expandable no background
+
+Markup: html/expandable--no-background.html
+
+.expandable--no-background Expandable without background
+
+Style guide expandable.2
+*/
+
+// Modifier for expandable with no icon.
+.expandable--no-background {
+
+  .expandable__content {
+    background: none;
+    & > p {
+      margin: 0;
+    }
+  }
+
+  .expandable__toggle {
+    background: none;
+    background: none;
+
+    &.hover {
+      background: none;
+    }
+  }
+
 }

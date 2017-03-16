@@ -1958,11 +1958,13 @@ Style guide datepicker
     left: 0 !important; } }
 
 /*
-Expandable
+Expandable default
+
+Default implementation of the expandable component.
 
 Markup: html/expandable.html
 
-Style guide expandable
+Style guide expandable.1
 */
 .expandable__content {
   float: left;
@@ -1980,7 +1982,7 @@ Style guide expandable
   .expandable__toggle.collapsed {
     background: none; }
   .expandable__toggle .icon, .expandable__toggle .date-picker .date-picker--icon, .date-picker .expandable__toggle .date-picker--icon, .expandable__toggle .search-form__btn {
-    margin-right: 0.833em; }
+    margin: 0 0.833em; }
   .expandable__toggle h3 {
     font-size: 1.222em; }
   .expandable__toggle:link {
@@ -1989,6 +1991,26 @@ Style guide expandable
     background: #ffd617;
     outline: none;
     text-decoration: underline; }
+
+/*
+Expandable no background
+
+Markup: html/expandable--no-background.html
+
+.expandable--no-background Expandable without background
+
+Style guide expandable.2
+*/
+.expandable--no-background .expandable__content {
+  background: none; }
+  .expandable--no-background .expandable__content > p {
+    margin: 0; }
+
+.expandable--no-background .expandable__toggle {
+  background: none;
+  background: none; }
+  .expandable--no-background .expandable__toggle.hover {
+    background: none; }
 
 .facetapi-facetapi-checkbox-links {
   list-style: none; }
