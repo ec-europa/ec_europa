@@ -281,7 +281,7 @@ function europa_form_element(&$variables) {
  * Europa theme wrapper function for the service tools menu links.
  */
 function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
-  return '<ul class="footer__menu footer__menu--separator menu nav list-inline">' . $variables['tree'] . '</ul>';
+  return '<ul class="footer__menu nav list-inline">' . $variables['tree'] . '</ul>';
 }
 
 /**
@@ -289,6 +289,13 @@ function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
  */
 function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
   return '<ul class="footer__menu menu nav list-inline">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Europa theme wrapper function for the EC menu links.
+ */
+function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
+  return '<ul class="footer__menu menu nav">' . $variables['tree'] . '</ul>';
 }
 
 /**
@@ -325,6 +332,13 @@ function europa_menu_link__menu_nexteuropa_service_links(&$variables) {
  * Override theme_menu_link().
  */
 function europa_menu_link__menu_nexteuropa_social_media(&$variables) {
+  return _europa_menu_link__footer($variables);
+}
+
+/**
+ * Override theme_menu_link().
+ */
+function europa_menu_link__menu_nexteuropa_inst_links(&$variables) {
   return _europa_menu_link__footer($variables);
 }
 
@@ -621,11 +635,7 @@ function europa_preprocess_block(&$variables) {
       $variables['classes_array'][] = 'block--full-width';
       break;
 
-    case 'menu-dt-menu-social-media':
-      $block->subject = t('The European Commission on:');
-      break;
-
-    case 'menu-dt-service-links':
+    case 'menu-nexteuropa-service-links':
       $block->subject = '';
       break;
 
