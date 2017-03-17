@@ -292,19 +292,6 @@ Style guide: buttons.btn-collapse
   }
 }
 
-#collapse {
-  @extend .collapse;
-
-  &.in {
-    @include transition(visibility 0.3s ease 0s);
-  }
-
-  .no-js & {
-    display: block;
-    visibility: visible;
-  }
-}
-
 // External link specific adjustments.
 @mixin _btn_external_link_mixin() {
   padding-right: 2.2em;

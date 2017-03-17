@@ -586,17 +586,17 @@ a.label:hover, a.label:focus {
   .fade.in {
     opacity: 1; }
 
-.collapse, #collapse {
+.collapse {
   display: none;
   visibility: hidden; }
-  .collapse.in, .in#collapse {
+  .collapse.in {
     display: block;
     visibility: visible; }
 
-tr.collapse.in, tr.in#collapse {
+tr.collapse.in {
   display: table-row; }
 
-tbody.collapse.in, tbody.in#collapse {
+tbody.collapse.in {
   display: table-row-group; }
 
 .collapsing {
@@ -861,15 +861,6 @@ Style guide: buttons.btn-collapse
 
 .no-js .btn-collapse {
   display: none; }
-
-#collapse.in {
-  -webkit-transition: visibility 0.3s ease 0s;
-  -o-transition: visibility 0.3s ease 0s;
-  transition: visibility 0.3s ease 0s; }
-
-.no-js #collapse {
-  display: block;
-  visibility: visible; }
 
 a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]), .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 2.2em; }
@@ -6360,7 +6351,7 @@ Style guide: siteheader.searchform
 
 .js .site-menu {
   height: 0; }
-  .js .site-menu.collapse, .js .site-menu#collapse {
+  .js .site-menu.collapse {
     height: inherit; }
 
 @media (min-width: 768px) {
