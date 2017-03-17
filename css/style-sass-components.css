@@ -895,13 +895,7 @@ h6,
 h3,
 h4,
 h5,
-h6,
-.h3,
-.field .label-above,
-.listing__item .listing__title,
-.h4,
-.h5,
-.h6 {
+h6 {
   max-width: 32em; }
 
 h1,
