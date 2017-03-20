@@ -875,37 +875,63 @@ Markup: html/headings.html
 
 Style guide text.headings
 */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .field .label-above, .listing__item .listing__title, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.field .label-above,
+.listing__item .listing__title,
+.h4,
+.h5,
+.h6 {
   margin: 0;
   padding: 0.5em 0; }
 
-h1, .h1 {
+h3,
+h4,
+h5,
+h6 {
+  max-width: 32em; }
+
+h1,
+.h1 {
   font-size: 2.222em;
   font-weight: 600;
-  color: #000000; }
+  color: #000; }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.667em;
   font-weight: 600;
-  color: #000000; }
+  color: #000; }
 
-h3, .h3, .field .label-above, .listing__item .listing__title {
+h3,
+.h3,
+.field .label-above,
+.listing__item .listing__title {
   font-size: 1.222em;
   font-weight: 600;
   color: #404040; }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1em;
   font-weight: 600;
   color: #404040; }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 0.778em;
   color: #404040;
   text-transform: uppercase; }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 0.778em;
   color: #404040;
   text-transform: uppercase; }
