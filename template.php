@@ -278,25 +278,46 @@ function europa_form_element(&$variables) {
 }
 
 /**
+ * Create the needed wrapper for menus in the footer.
+ */
+function _europa_menu_tree_footer($tree, $inline = FALSE) {
+  $classes[] = 'footer__menu nav';
+  
+  if ($inline) {
+    $classes[] = 'list-inline';
+  }
+
+  return '<ul class="' . implode(' ', $classes) . '">' . $tree . '</ul>';
+}
+
+/**
  * Europa theme wrapper function for the service tools menu links.
  */
 function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
-  return '<ul class="footer__menu nav list-inline">' . $variables['tree'] . '</ul>';
+  return _europa_menu_tree_footer($variables['tree'], TRUE);
 }
 
 /**
  * Europa theme wrapper function for the EC menu links.
  */
 function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
-  return '<ul class="footer__menu menu nav list-inline">' . $variables['tree'] . '</ul>';
+   return _europa_menu_tree_footer($variables['tree'], TRUE);
 }
 
 /**
  * Europa theme wrapper function for the EC menu links.
  */
 function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
-  return '<ul class="footer__menu menu nav">' . $variables['tree'] . '</ul>';
+  return _europa_menu_tree_footer($variables['tree']);
 }
+
+/**
+ * Europa theme wrapper function for the EC menu links.
+ */
+function europa_menu_tree__menu_nexteuropa_site_links(&$variables) {
+  return _europa_menu_tree_footer($variables['tree']);
+}
+
 
 /**
  * Helper applying BEM to footer menu item links.
@@ -339,6 +360,13 @@ function europa_menu_link__menu_nexteuropa_social_media(&$variables) {
  * Override theme_menu_link().
  */
 function europa_menu_link__menu_nexteuropa_inst_links(&$variables) {
+  return _europa_menu_link__footer($variables);
+}
+
+/**
+ * Override theme_menu_link().
+ */
+function europa_menu_link__menu_nexteuropa_site_links(&$variables) {
   return _europa_menu_link__footer($variables);
 }
 
