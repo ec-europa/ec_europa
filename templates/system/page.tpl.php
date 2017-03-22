@@ -254,7 +254,7 @@
       <div class="row">
           <div class="footer__column">
           <?php if (!empty($page['footer_left'])): ?>
-            <div class class="footer__column">
+            <div class="footer__column">
               <?php print render($page['footer_left']); ?>
             </div>
           <?php endif; ?>
@@ -262,7 +262,7 @@
 
           <div class="footer__column">
           <?php if (!empty($page['footer_middle'])): ?>
-            <div class class="footer__column">
+            <div class="footer__column">
               <?php print render($page['footer_middle']); ?>
             </div>
           <?php endif; ?>
@@ -270,7 +270,7 @@
 
           <div class="footer__column">
           <?php if (!empty($page['footer_right'])): ?>
-            <div class class="footer__column">
+            <div class="footer__column">
               <?php print render($page['footer_right']); ?>
             </div>
           <?php endif; ?>
