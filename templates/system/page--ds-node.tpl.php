@@ -193,30 +193,23 @@
   <div class="footer__top">
     <div class="container-fluid">
       <div class="row">
-          <div class="footer__column">
-          <?php if (!empty($page['footer_left'])): ?>
-            <div class="footer__column">
-              <?php print render($page['footer_left']); ?>
-            </div>
-          <?php endif; ?>
-          </div>
+      <?php if (!empty($page['footer_left'])): ?>
+        <div class="footer__column">
+          <?php print render($page['footer_left']); ?>
+        </div>
+      <?php endif; ?>
 
-          <div class="footer__column">
-          <?php if (!empty($page['footer_middle'])): ?>
-            <div class="footer__column">
-              <?php print render($page['footer_middle']); ?>
-            </div>
-          <?php endif; ?>
-          </div>
-
-          <div class="footer__column">
-          <?php if (!empty($page['footer_right'])): ?>
-            <div class="footer__column">
-              <?php print render($page['footer_right']); ?>
-            </div>
-          <?php endif; ?>
-          </div>
-
+      <?php if (!empty($page['footer_middle'])): ?>
+        <div class="footer__column">
+          <?php print render($page['footer_middle']); ?>
+        </div>
+      <?php endif; ?>
+    
+      <?php if (!empty($page['footer_right'])): ?>
+        <div class="footer__column">
+          <?php print render($page['footer_right']); ?>
+        </div>
+      <?php endif; ?>
       </div>
     </div>
   </div>
