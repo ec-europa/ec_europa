@@ -181,14 +181,6 @@
   </div>
 </section>
 
-<?php if (!empty($page['footer_top'])): ?>
-  <section class="footer-top">
-    <div class="container-fluid">
-      <?php print render($page['footer_top']); ?>
-    </div>
-  </section>
-<?php endif; ?>
-
 <footer class="footer">
 <?php if (!empty($page['footer_top'])): ?>
   <section class="footer-top">
