@@ -2009,6 +2009,11 @@ Style guide expandable.2
 .expandable--no-background .expandable__toggle {
   background: none;
   background: none; }
+  .expandable--no-background .expandable__toggle.collapsed .icon--up:before {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
   .expandable--no-background .expandable__toggle.hover {
     background: none; }
 

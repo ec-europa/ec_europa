@@ -84,6 +84,14 @@ Style guide expandable.2
     background: none;
     background: none;
 
+    &.collapsed {
+      .icon--up {
+        &:before {
+          @include rotate(180deg);
+        }
+      }
+    }
+
     &.hover {
       background: none;
     }
