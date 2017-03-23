@@ -2019,28 +2019,28 @@ Style guide expandable.1
     text-decoration: underline; }
 
 /*
-Expandable no background
+Expandable link
 
-Markup: html/expandable--no-background.html
+Markup: html/expandable--link.html
 
-.expandable--no-background Expandable without background
+.expandable--link Expandable link
 
 Style guide expandable.2
 */
-.expandable--no-background .expandable__content {
+.expandable--link .expandable__content {
   background: none; }
-  .expandable--no-background .expandable__content > p {
+  .expandable--link .expandable__content > p {
     margin: 0; }
 
-.expandable--no-background .expandable__toggle {
+.expandable--link .expandable__toggle {
   background: none;
   background: none; }
-  .expandable--no-background .expandable__toggle.collapsed .icon--up:before {
+  .expandable--link .expandable__toggle.collapsed .icon--up:before {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg); }
-  .expandable--no-background .expandable__toggle.hover {
+  .expandable--link .expandable__toggle.hover {
     background: none; }
 
 .facetapi-facetapi-checkbox-links {

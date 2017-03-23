@@ -6,7 +6,7 @@
 //    .expandable__toggle
 //
 //   Component modifiers:
-//    .expandable--no-background
+//    .expandable--link
 
 /*
 Expandable default
@@ -61,17 +61,17 @@ Style guide expandable.1
 }
 
 /*
-Expandable no background
+Expandable link
 
-Markup: html/expandable--no-background.html
+Markup: html/expandable--link.html
 
-.expandable--no-background Expandable without background
+.expandable--link Expandable link
 
 Style guide expandable.2
 */
 
-// Modifier for expandable with no icon.
-.expandable--no-background {
+// Modifier for expandable link with icon.
+.expandable--link {
 
   .expandable__content {
     background: none;
