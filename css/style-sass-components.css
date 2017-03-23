@@ -5587,7 +5587,8 @@ Style guide meta
 .meta {
   line-height: 1.3;
   font-size: 0.778em;
-  letter-spacing: 0.02777778em; }
+  letter-spacing: 0.02777778em;
+  margin-bottom: 0.5em; }
   .meta p {
     margin: 0; }
 
@@ -5607,7 +5608,7 @@ Style guide meta
 
 .meta--header {
   font-size: 0.889em;
-  margin: 0 0 1em; }
+  margin: 0; }
 
 .meta .meta__item p, .meta .label--meta p, .meta .label--meta-medium p {
   font-size: inherit !important;
@@ -5871,8 +5872,6 @@ Style guide: page-header.informational
     font-size: 26px; }
   .page-header .page-header__hero-title {
     padding-top: 2.39em; }
-    .page-header .page-header__hero-title .meta--header {
-      margin-bottom: 0; }
 
 .page-header--large-intro, .node-type-info-homepage .page-header {
   padding-bottom: 2.39em; }
