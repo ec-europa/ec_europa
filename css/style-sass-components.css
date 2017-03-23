@@ -6873,7 +6873,8 @@ Style guide table responsive
     table.table-responsive tr:nth-of-type(even) {
       background-color: #f2f2f2; } }
 
-#admin-menu-wrapper ul {
+#admin-menu-wrapper ul,
+.wtShareNetworks {
   max-width: none; }
 
 .wtShareNetworks {
