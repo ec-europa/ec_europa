@@ -4371,7 +4371,8 @@ Style guide link-block
 */
 .link-block {
   background-color: #f2f2f2;
-  padding: 1.111em; }
+  padding: 1.111em;
+  margin: 1.667em 0; }
 
 .link-block__links {
   font-size: 0.889em;
