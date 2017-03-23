@@ -2074,6 +2074,10 @@ Style guide featured-item.2
 .featured-item__content {
   clear: left; }
 
+.listing--teaser .featured-item__image,
+.listing--teaser .featured-item__content {
+  padding: 0; }
+
 .feedback-form {
   margin: 0; }
 
