@@ -72,9 +72,9 @@ Style guide expandable.2
 
 // Modifier for expandable link with icon.
 .expandable--link {
-
   .expandable__content {
     background: none;
+
     & > p {
       margin: 0;
     }
@@ -82,19 +82,17 @@ Style guide expandable.2
 
   .expandable__toggle {
     background: none;
-    background: none;
 
     &.collapsed {
       .icon--up {
-        &:before {
+        &::before {
           @include rotate(180deg);
         }
       }
     }
 
-    &.hover {
+    &::hover {
       background: none;
     }
   }
-
 }
