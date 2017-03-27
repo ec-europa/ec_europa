@@ -1,9 +1,21 @@
+// SUMMARY (Components, elements, modifiers)
+//
+// .Expandable (component)
+//   Elements:
+//    .expandable__content
+//    .expandable__toggle
+//
+//   Component modifiers:
+//    .expandable--link
+
 /*
-Expandable
+Expandable default
+
+Default implementation of the expandable component.
 
 Markup: html/expandable.html
 
-Style guide expandable
+Style guide expandable.1
 */
 
 .expandable__content {
@@ -29,7 +41,7 @@ Style guide expandable
   }
 
   .icon {
-    margin-right: 0.833em;
+    margin: 0 0.833em;
   }
 
   h3 {
@@ -45,5 +57,42 @@ Style guide expandable
     background: $yellow-light;
     outline: none;
     text-decoration: underline;
+  }
+}
+
+/*
+Expandable link
+
+Markup: html/expandable--link.html
+
+.expandable--link Expandable link
+
+Style guide expandable.2
+*/
+
+// Modifier for expandable link with icon.
+.expandable--link {
+  .expandable__content {
+    background: none;
+
+    & > p {
+      margin: 0;
+    }
+  }
+
+  .expandable__toggle {
+    background: none;
+
+    &.collapsed {
+      .icon--up {
+        &::before {
+          @include rotate(180deg);
+        }
+      }
+    }
+
+    &:hover {
+      background: none;
+    }
   }
 }
