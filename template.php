@@ -138,7 +138,6 @@ function europa_form_element(&$variables) {
   // Check for errors and set correct error class.
   if (isset($element['#parents']) && form_get_error($element)) {
     $attributes['class'][] = 'has-error';
-
     if (in_array($element['#type'], ['radio', 'checkbox'])) {
       if ($element['#required']) {
         $feedback_message = '<div class="feedback-message is-error"><p>' . form_get_error($element) . '</p></div>';
@@ -152,6 +151,7 @@ function europa_form_element(&$variables) {
   if (!empty($element['#type'])) {
     $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
   }
+
   if (!empty($element['#name'])) {
     $attributes['class'][] = 'form-item-' . strtr($element['#name'], [
       ' ' => '-',
@@ -160,17 +160,22 @@ function europa_form_element(&$variables) {
       ']' => '',
     ]);
   }
+
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
     $attributes['class'][] = 'form-disabled';
   }
-  if (!empty($element['#autocomplete_path']) && drupal_valid_path($element['#autocomplete_path'])) {
+
+  if (!empty($element['#autocomplete_path'])
+    && drupal_valid_path($element['#autocomplete_path'])
+  ) {
     $attributes['class'][] = 'form-autocomplete';
   }
+
   $attributes['class'][] = 'form-item';
 
   // See https://www.drupal.org/node/154137
-  if ($element['#id'] == 'edit-querytext') {
+  if (!empty($element['#id']) && $element['#id'] == 'edit-querytext') {
     $element['#children'] = str_replace('type="text"', 'type="search"', $element['#children']);
   }
 
@@ -475,7 +480,6 @@ function europa_html_head_alter(&$head_elements) {
         'content' => $europa_theme_png_path . 'mstile-310x310.png',
       ],
     ],
-
   ];
   foreach ($elements as $element) {
     $element['#type'] = 'html_tag';
