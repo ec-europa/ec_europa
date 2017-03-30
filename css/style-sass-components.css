@@ -3270,6 +3270,12 @@ Style guide icon.social
 .icon-social--skype:hover::before {
   background-image: url("../images/svg/icons/social/skype_hover.svg"); }
 
+.icon-social--slideshare::before {
+  background: url("../images/svg/icons/social/slideshare.svg") no-repeat ; }
+
+.icon-social--slideshare:hover::before {
+  background-image: url("../images/svg/icons/social/slideshare_hover.svg"); }
+
 .icon-social--slashdot::before {
   background: url("../images/svg/icons/social/slashdot.svg") no-repeat ; }
 
@@ -3582,6 +3588,12 @@ Style guide icon.social
 .no-svg .icon-social--skype:hover::before {
   background-image: url("../images/png/icons/social/skype_hover.png"); }
 
+.no-svg .icon-social--slideshare::before {
+  background: url("../images/png/icons/social/slideshare.png") no-repeat ; }
+
+.no-svg .icon-social--slideshare:hover::before {
+  background-image: url("../images/png/icons/social/slideshare_hover.png"); }
+
 .no-svg .icon-social--slashdot::before {
   background: url("../images/png/icons/social/slashdot.png") no-repeat ; }
 
@@ -3893,6 +3905,12 @@ Style guide icon.social
 
 .no-svg .icon-social--smaller .icon-social--skype:hover::before {
   background-image: url("../images/png/icons/social/small/skype_hover_small.png"); }
+
+.no-svg .icon-social--smaller .icon-social--slideshare::before {
+  background: url("../images/png/icons/social/small/slideshare_small.png") no-repeat ; }
+
+.no-svg .icon-social--smaller .icon-social--slideshare:hover::before {
+  background-image: url("../images/png/icons/social/small/slideshare_hover_small.png"); }
 
 .no-svg .icon-social--smaller .icon-social--slashdot::before {
   background: url("../images/png/icons/social/small/slashdot_small.png") no-repeat ; }
