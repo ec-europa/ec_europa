@@ -138,7 +138,6 @@ function europa_form_element(&$variables) {
   // Check for errors and set correct error class.
   if (isset($element['#parents']) && form_get_error($element)) {
     $attributes['class'][] = 'has-error';
-
     if (in_array($element['#type'], ['radio', 'checkbox'])) {
       if ($element['#required']) {
         $feedback_message = '<div class="feedback-message is-error"><p>' . form_get_error($element) . '</p></div>';
@@ -152,6 +151,7 @@ function europa_form_element(&$variables) {
   if (!empty($element['#type'])) {
     $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
   }
+
   if (!empty($element['#name'])) {
     $attributes['class'][] = 'form-item-' . strtr($element['#name'], [
       ' ' => '-',
@@ -160,17 +160,22 @@ function europa_form_element(&$variables) {
       ']' => '',
     ]);
   }
+
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
     $attributes['class'][] = 'form-disabled';
   }
-  if (!empty($element['#autocomplete_path']) && drupal_valid_path($element['#autocomplete_path'])) {
+
+  if (!empty($element['#autocomplete_path'])
+    && drupal_valid_path($element['#autocomplete_path'])
+  ) {
     $attributes['class'][] = 'form-autocomplete';
   }
+
   $attributes['class'][] = 'form-item';
 
   // See https://www.drupal.org/node/154137
-  if ($element['#id'] == 'edit-querytext') {
+  if (!empty($element['#id']) && $element['#id'] == 'edit-querytext') {
     $element['#children'] = str_replace('type="text"', 'type="search"', $element['#children']);
   }
 
@@ -237,7 +242,6 @@ function europa_form_element(&$variables) {
   switch ($element['#title_display']) {
     case 'before':
     case 'invisible':
-
       $output .= ' ' . theme('form_element_label', $variables);
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
 
@@ -518,7 +522,6 @@ function europa_html_head_alter(&$head_elements) {
         'content' => $europa_theme_png_path . 'mstile-310x310.png',
       ],
     ],
-
   ];
   foreach ($elements as $element) {
     $element['#type'] = 'html_tag';
@@ -1550,20 +1553,35 @@ function europa_file_upload_help($variables) {
 /**
  * Implements hook_ds_pre_render_alter().
  *
- * Setting node_url variable with the link to non-node entities in the
- * DS templates.
+ * Setting variables for non-node entities in the DS templates.
  */
 function europa_ds_pre_render_alter(&$layout_render_array, $context, &$variables) {
-  $object = $variables['elements']['#entity_type'];
-  switch ($object) {
+  $entity = $variables['elements'];
+  $entity_type = $entity['#entity_type'];
+
+  switch ($entity_type) {
     case 'user':
-      $uri = entity_uri($object, $variables['elements']['#account']);
+      $uri = entity_uri($entity_type, $variables['elements']['#account']);
       $variables['node_url'] = url($uri['path']);
+
+      if (!empty($entity['europa_user_fullname_first'])) { 
+        $title = $entity['europa_user_fullname_first'][0]['#markup'];
+      }
+      elseif (!empty($entity['europa_user_fullname_last'])) {
+        $title = $entity['europa_user_fullname_last'][0]['#markup'];
+      }
+      else {
+        $title = $variables['elements']['#account']->name;
+      }
+
+      // We get the value wrapped in a <p> tag.
+      $variables['title'] = strip_tags($title);
       break;
 
     case 'taxonomy_term':
-      $uri = entity_uri($object, $variables['term']);
+      $uri = entity_uri($entity_type, $variables['term']);
       $variables['node_url'] = url($uri['path']);
+      $variables['title'] = $entity['#term']->name;
       break;
 
   }

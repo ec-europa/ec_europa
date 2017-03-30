@@ -876,37 +876,63 @@ Markup: html/headings.html
 
 Style guide text.headings
 */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .field .label-above, .listing__item .listing__title, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.field .label-above,
+.listing__item .listing__title,
+.h4,
+.h5,
+.h6 {
   margin: 0;
   padding: 0.5em 0; }
 
-h1, .h1 {
+h3,
+h4,
+h5,
+h6 {
+  max-width: 32em; }
+
+h1,
+.h1 {
   font-size: 2.222em;
   font-weight: 600;
-  color: #000000; }
+  color: #000; }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.667em;
   font-weight: 600;
-  color: #000000; }
+  color: #000; }
 
-h3, .h3, .field .label-above, .listing__item .listing__title {
+h3,
+.h3,
+.field .label-above,
+.listing__item .listing__title {
   font-size: 1.222em;
   font-weight: 600;
   color: #404040; }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1em;
   font-weight: 600;
   color: #404040; }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 0.778em;
   color: #404040;
   text-transform: uppercase; }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 0.778em;
   color: #404040;
   text-transform: uppercase; }
@@ -1959,11 +1985,13 @@ Style guide datepicker
     left: 0 !important; } }
 
 /*
-Expandable
+Expandable default
+
+Default implementation of the expandable component.
 
 Markup: html/expandable.html
 
-Style guide expandable
+Style guide expandable.1
 */
 .expandable__content {
   float: left;
@@ -1981,7 +2009,7 @@ Style guide expandable
   .expandable__toggle.collapsed {
     background: none; }
   .expandable__toggle .icon, .expandable__toggle .date-picker .date-picker--icon, .date-picker .expandable__toggle .date-picker--icon, .expandable__toggle .search-form__btn {
-    margin-right: 0.833em; }
+    margin: 0 0.833em; }
   .expandable__toggle h3 {
     font-size: 1.222em; }
   .expandable__toggle:link {
@@ -1990,6 +2018,30 @@ Style guide expandable
     background: #ffd617;
     outline: none;
     text-decoration: underline; }
+
+/*
+Expandable link
+
+Markup: html/expandable--link.html
+
+.expandable--link Expandable link
+
+Style guide expandable.2
+*/
+.expandable--link .expandable__content {
+  background: none; }
+  .expandable--link .expandable__content > p {
+    margin: 0; }
+
+.expandable--link .expandable__toggle {
+  background: none; }
+  .expandable--link .expandable__toggle.collapsed .icon--up::before {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .expandable--link .expandable__toggle:hover {
+    background: none; }
 
 .facetapi-facetapi-checkbox-links {
   list-style: none; }
@@ -2048,6 +2100,10 @@ Style guide featured-item.2
 .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns
 .featured-item__content {
   clear: left; }
+
+.listing--teaser .featured-item__image,
+.listing--teaser .featured-item__content {
+  padding: 0; }
 
 .feedback-form {
   margin: 0; }
@@ -4353,7 +4409,8 @@ Style guide link-block
 */
 .link-block {
   background-color: #f2f2f2;
-  padding: 1.111em; }
+  padding: 1.111em;
+  margin: 1.667em 0; }
 
 .link-block__links {
   font-size: 0.889em;
@@ -5569,7 +5626,8 @@ Style guide meta
 .meta {
   line-height: 1.3;
   font-size: 0.778em;
-  letter-spacing: 0.02777778em; }
+  letter-spacing: 0.02777778em;
+  margin-bottom: 0.5em; }
   .meta p {
     margin: 0; }
 
@@ -5589,7 +5647,7 @@ Style guide meta
 
 .meta--header {
   font-size: 0.889em;
-  margin: 0 0 1em; }
+  margin: 0; }
 
 .meta .meta__item p, .meta .label--meta p, .meta .label--meta-medium p {
   font-size: inherit !important;
@@ -5853,8 +5911,6 @@ Style guide: page-header.informational
     font-size: 26px; }
   .page-header .page-header__hero-title {
     padding-top: 2.39em; }
-    .page-header .page-header__hero-title .meta--header {
-      margin-bottom: 0; }
 
 .page-header--large-intro, .node-type-info-homepage .page-header {
   padding-bottom: 2.39em; }
@@ -6856,7 +6912,8 @@ Style guide table responsive
     table.table-responsive tr:nth-of-type(even) {
       background-color: #f2f2f2; } }
 
-#admin-menu-wrapper ul {
+#admin-menu-wrapper ul,
+.wtShareNetworks {
   max-width: none; }
 
 .wtShareNetworks {
