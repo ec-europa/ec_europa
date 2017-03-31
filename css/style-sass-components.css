@@ -2661,33 +2661,31 @@ Style guide footer
 .footer__bottom {
   background-color: #004494;
   padding: 0.9em 0; }
-  .footer__bottom .footer__menu {
-    margin-bottom: 0; }
 
 .footer__top,
 .footer__bottom {
-  color: #ffffff; }
+  color: #fff; }
   .footer__top a,
   .footer__bottom a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: underline; }
     .footer__top a:hover, .footer__top a:active, .footer__top a:focus,
     .footer__bottom a:hover,
     .footer__bottom a:active,
     .footer__bottom a:focus {
       text-decoration: none; }
-  .footer__top .list-inline .footer__menu-item, .footer__top .list-inline .footer__menu .footer__menu-item-right, .footer__menu .footer__top .list-inline .footer__menu-item-right,
-  .footer__bottom .list-inline .footer__menu-item,
-  .footer__bottom .list-inline .footer__menu .footer__menu-item-right, .footer__menu
-  .footer__bottom .list-inline .footer__menu-item-right {
-    padding-right: 15px; }
+  .footer__top .ul-list-inline .footer__menu-item, .footer__top .ul-list-inline .footer__menu .footer__menu-item-right, .footer__menu .footer__top .ul-list-inline .footer__menu-item-right,
+  .footer__bottom .ul-list-inline .footer__menu-item,
+  .footer__bottom .ul-list-inline .footer__menu .footer__menu-item-right, .footer__menu
+  .footer__bottom .ul-list-inline .footer__menu-item-right {
+    padding-right: 10px; }
 
 .footer__label {
   display: block;
   margin-right: 20px; }
 
 .footer__title {
-  color: #ffffff;
+  color: #fff;
   border-bottom: 2px solid #769EC1;
   margin-bottom: 0.2em; }
   @media (min-width: 992px) {
@@ -2702,10 +2700,9 @@ Style guide footer
   margin: 0;
   padding-left: 0;
   max-width: 100%;
-  margin-bottom: 0; }
+  list-style: none; }
   .footer__menu .footer__menu-item, .footer__menu .footer__menu-item-right {
     margin-right: 15px;
-    padding: 0;
     font-size: 0.889em; }
     .footer__menu .footer__menu-item:first-child > a, .footer__menu .footer__menu-item-right:first-child > a {
       padding-left: 0; }

@@ -15,10 +15,6 @@ Style guide footer
 .footer__bottom {
   background-color: $brand-primary;
   padding: 0.9em 0;
-
-  .footer__menu {
-    margin-bottom: 0;
-  }
 }
 
 .footer__top,
@@ -37,10 +33,10 @@ Style guide footer
       text-decoration: none;
     }
   }
-    // Inline listings need more padding-right on the footer.
-  .list-inline {
+  // Inline listings need more padding-right on the footer.
+  .ul-list-inline {
     .footer__menu-item {
-      padding-right: 15px;
+      padding-right: 10px;
     }
   }
 }
@@ -72,11 +68,10 @@ Style guide footer
   margin: 0;
   padding-left: 0;
   max-width: 100%;
-  margin-bottom: 0;
+  list-style: none;
 
   .footer__menu-item {
     margin-right: 15px;
-    padding: 0;
     font-size: $font-size-little;
 
     &:first-child > a {
