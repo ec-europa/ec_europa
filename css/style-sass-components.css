@@ -1069,7 +1069,13 @@ Markup: html/icon.html
 .icon--calendar - Calendar icon
 .icon--location - Location icon
 .icon--livestreaming - Live streaming icon
-.icon--camera - Camera icon
+.icon--book - Book icon
+.icon--data - Data icon
+.icon--copy - Copy icon
+.icon--spreadsheet - Spreadsheet icon
+.icon--in - In icon
+.icon--presentation - Presentation icon
+.icon--info - Info icon
 
 Style guide: icon
 */
@@ -1095,59 +1101,23 @@ Style guide: icon
 .icon--external, .icon--external::before {
   content: '\e825'; }
 
-.icon--arrow-up, .icon--arrow-up::before {
-  content: '\e821'; }
+.icon--book, .icon--book::before {
+  content: '\0022'; }
 
-.icon--arrow-down, .btn.btn-menu::after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle::after, .icon--arrow-down::before, .lang-select-page--transparent select.lang-select-page__list::after {
-  content: '\e822'; }
-
-.icon--spinner, .icon--spinner::before {
-  content: '\e805'; }
-
-.icon--facebook, .icon--facebook::before {
-  content: '\e809'; }
-
-.icon--livestreaming, .icon--livestreaming::before {
-  content: '\e81c'; }
-
-.icon--location, .icon--location::before {
-  content: '\e81b'; }
-
-.icon--twitter, .icon--twitter::before {
-  content: '\e817'; }
-
-.icon--googleplus, .icon--googleplus::before {
-  content: '\e80c'; }
-
-.icon--linkedin, .icon--linkedin::before {
-  content: '\e810'; }
-
-.icon--rss, .icon--rss::before {
-  content: '\e813'; }
-
-.icon--language, .icon--language::before {
-  content: '\e824'; }
-
-.icon--search, .icon--search::before, .search-form__btn::before {
-  content: '\e823'; }
-
-.icon--up, .icon--up::before {
-  content: '\e827'; }
-
-.icon--right, .btn.btn-ctn::after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle::after, .btn.btn-time-line::after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle::after, .icon--right::before, .listing__title--arrow::after, .listing--cta .listing__title::after, .site-menu .field--field-site-menu-links .listing__item .listing__title::after, .listing__read-more::after, .notification__content .notification__btn::after {
-  content: '\e828'; }
-
-.icon--breadcrumb, .icon--breadcrumb::before, .breadcrumb__link-arrow::before, .no-js .breadcrumb__segment--first::before {
-  content: '\e828'; }
-
-.icon--down, .icon--down::before, .file__translations .file__translations-control::after {
-  content: '\e81F'; }
-
-.icon--left, .icon--left::before {
-  content: '\e826'; }
+.icon--data, .icon--data::before {
+  content: '\24'; }
 
 .icon--file, .icon--file::before {
-  content: '\e80a'; }
+  content: '\26'; }
+
+.icon--copy, .icon--copy::before {
+  content: '\29'; }
+
+.icon--spreadsheet, .icon--spreadsheet::before {
+  content: '\2d'; }
+
+.icon--video, .icon--video::before {
+  content: '\e800'; }
 
 .icon--audio, .icon--audio::before {
   content: '\e801'; }
@@ -1155,53 +1125,104 @@ Style guide: icon
 .icon--brochure, .icon--brochure::before {
   content: '\e802'; }
 
-.icon--edit, .icon--edit::before {
-  content: '\e807'; }
-
-.icon--image, .icon--image::before {
-  content: '\e80d'; }
-
-.icon--download, .icon--download::before, .file__btn::after {
-  content: '\e806'; }
-
-.icon--infographic, .icon--infographic::before {
-  content: '\e80f'; }
-
-.icon--multiple-files, .icon--multiple-files::before {
-  content: '\e820'; }
-
-.icon--organigram, .icon--organigram::before {
-  content: '\e811'; }
-
-.icon--package, .icon--package::before {
-  content: '\e812'; }
-
-.icon--slides, .icon--slides::before {
-  content: '\e814'; }
-
-.icon--video, .icon--video::before {
-  content: '\e800'; }
-
-.icon--error, .icon--error::before {
-  content: '\e82F'; }
-
-.icon--success, .icon--success::before {
-  content: '\e816'; }
+.icon--euro, .icon--euro::before {
+  content: '\e803'; }
 
 .icon--warning, .icon--warning::before {
   content: '\e804'; }
 
-.icon--budget, .icon--budget::before {
-  content: '\e81a'; }
+.icon--spinner, .icon--spinner::before {
+  content: '\e805'; }
+
+.icon--in, .icon--in::before {
+  content: '\e806'; }
+
+.icon--edit, .icon--edit::before {
+  content: '\e807'; }
+
+.icon--facebook, .icon--facebook::before {
+  content: '\e809'; }
 
 .icon--digital, .icon--digital::before {
   content: '\e80b'; }
 
+.icon--googleplus, .icon--googleplus::before {
+  content: '\e80c'; }
+
+.icon--image, .icon--image::before {
+  content: '\e80d'; }
+
+.icon--package, .icon--package::before {
+  content: '\e812'; }
+
+.icon--infographic, .icon--infographic::before {
+  content: '\e80f'; }
+
+.icon--linkedin, .icon--linkedin::before {
+  content: '\e810'; }
+
+.icon--organigram, .icon--organigram::before {
+  content: '\e811'; }
+
+.icon--presentation, .icon--presentation::before {
+  content: '\e80e'; }
+
+.icon--rss, .icon--rss::before {
+  content: '\e813'; }
+
+.icon--success, .icon--success::before {
+  content: '\e814'; }
+
+.icon--info, .icon--info::before {
+  content: '\e815'; }
+
+.icon--check, .icon--check::before {
+  content: '\e816'; }
+
+.icon--twitter, .icon--twitter::before {
+  content: '\e817'; }
+
 .icon--energy, .icon--energy::before {
   content: '\e818'; }
 
-.icon--euro, .icon--euro::before {
-  content: '\e803'; }
+.icon--budget, .icon--budget::before {
+  content: '\e81a'; }
+
+.icon--location, .icon--location::before {
+  content: '\e81b'; }
+
+.icon--livestreaming, .icon--livestreaming::before {
+  content: '\e81c'; }
+
+.icon--calendar, .icon--calendar::before {
+  content: '\e81d'; }
+
+.icon--down, .icon--down::before, .file__translations .file__translations-control::after {
+  content: '\e81f'; }
+
+.icon--multiple-files, .icon--multiple-files::before {
+  content: '\e820'; }
+
+.icon--arrow-up, .icon--arrow-up::before {
+  content: '\e821'; }
+
+.icon--arrow-down, .btn.btn-menu::after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle::after, .icon--arrow-down::before, .lang-select-page--transparent select.lang-select-page__list::after {
+  content: '\e822'; }
+
+.icon--search, .icon--search::before, .search-form__btn::before {
+  content: '\e823'; }
+
+.icon--language, .icon--language::before {
+  content: '\e824'; }
+
+.icon--left, .icon--left::before {
+  content: '\e826'; }
+
+.icon--up, .icon--up::before {
+  content: '\e827'; }
+
+.icon--right, .btn.btn-ctn::after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle::after, .btn.btn-time-line::after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle::after, .icon--right::before, .listing__title--arrow::after, .listing--cta .listing__title::after, .site-menu .field--field-site-menu-links .listing__item .listing__title::after, .listing__read-more::after, .notification__content .notification__btn::after {
+  content: '\e828'; }
 
 .icon--global, .icon--global::before {
   content: '\e829'; }
@@ -1212,23 +1233,35 @@ Style guide: icon
 .icon--regulation, .icon--regulation::before {
   content: '\e82b'; }
 
-.icon--feedback, .icon--feedback::before {
-  content: '\e82e'; }
+.icon--close, .icon--close::before {
+  content: '\e82c'; }
 
-.icon--check, .icon--check::before {
-  content: '\e816'; }
+.icon--close-dark, .icon--close-dark::before {
+  content: '\e82d'; }
+
+.icon--error, .icon--error::before {
+  content: '\e82f'; }
 
 .icon--generic-lang, .icon--generic-lang::before {
   content: '\e81e'; }
 
+.icon--breadcrumb, .icon--breadcrumb::before, .breadcrumb__link-arrow::before, .no-js .breadcrumb__segment--first::before {
+  content: '\e828'; }
+
+.icon--download, .icon--download::before, .file__btn::after {
+  content: '\e806'; }
+
 .icon--tag-close, .icon--tag-close::before, .facet-tag--close .facet-tag__value::after {
   content: '\e82c'; }
 
-.icon--calendar, .icon--calendar::before {
-  content: '\e81d'; }
+.icon--feedback, .icon--feedback::before {
+  content: '\e82e'; }
 
 .icon--camera, .icon--camera::before {
   content: '\e900'; }
+
+.icon--slides, .icon--slides::before {
+  content: '\e80e'; }
 
 .icon--blue-dark, .file__translations .file__translations-control::after {
   color: #004494; }
@@ -3203,17 +3236,17 @@ Style guide icon.social
 .icon-social--nujij:hover::before {
   background-image: url("../images/svg/icons/social/nujij_hover.svg"); }
 
-.icon-social--pinterest::before {
-  background: url("../images/svg/icons/social/pinterest.svg") no-repeat ; }
-
-.icon-social--pinterest:hover::before {
-  background-image: url("../images/svg/icons/social/pinterest_hover.svg"); }
-
 .icon-social--pocket::before {
   background: url("../images/svg/icons/social/pocket.svg") no-repeat ; }
 
 .icon-social--pocket:hover::before {
   background-image: url("../images/svg/icons/social/pocket_hover.svg"); }
+
+.icon-social--pinterest::before {
+  background: url("../images/svg/icons/social/pinterest.svg") no-repeat ; }
+
+.icon-social--pinterest:hover::before {
+  background-image: url("../images/svg/icons/social/pinterest_hover.svg"); }
 
 .icon-social--reddit::before {
   background: url("../images/svg/icons/social/reddit.svg") no-repeat ; }
@@ -3238,6 +3271,12 @@ Style guide icon.social
 
 .icon-social--skype:hover::before {
   background-image: url("../images/svg/icons/social/skype_hover.svg"); }
+
+.icon-social--slideshare::before {
+  background: url("../images/svg/icons/social/slideshare.svg") no-repeat ; }
+
+.icon-social--slideshare:hover::before {
+  background-image: url("../images/svg/icons/social/slideshare_hover.svg"); }
 
 .icon-social--slashdot::before {
   background: url("../images/svg/icons/social/slashdot.svg") no-repeat ; }
@@ -3311,17 +3350,17 @@ Style guide icon.social
 .icon-social--vine:hover::before {
   background-image: url("../images/svg/icons/social/vine_hover.svg"); }
 
-.icon-social--wordpress::before {
-  background: url("../images/svg/icons/social/wordpress.svg") no-repeat ; }
-
-.icon-social--wordpress:hover::before {
-  background-image: url("../images/svg/icons/social/wordpress_hover.svg"); }
-
 .icon-social--wykop::before {
   background: url("../images/svg/icons/social/wykop.svg") no-repeat ; }
 
 .icon-social--wykop:hover::before {
   background-image: url("../images/svg/icons/social/wykop_hover.svg"); }
+
+.icon-social--wordpress::before {
+  background: url("../images/svg/icons/social/wordpress.svg") no-repeat ; }
+
+.icon-social--wordpress:hover::before {
+  background-image: url("../images/svg/icons/social/wordpress_hover.svg"); }
 
 .icon-social--xerpi::before {
   background: url("../images/svg/icons/social/xerpi.svg") no-repeat ; }
@@ -3515,17 +3554,17 @@ Style guide icon.social
 .no-svg .icon-social--nujij:hover::before {
   background-image: url("../images/png/icons/social/nujij_hover.png"); }
 
-.no-svg .icon-social--pinterest::before {
-  background: url("../images/png/icons/social/pinterest.png") no-repeat ; }
-
-.no-svg .icon-social--pinterest:hover::before {
-  background-image: url("../images/png/icons/social/pinterest_hover.png"); }
-
 .no-svg .icon-social--pocket::before {
   background: url("../images/png/icons/social/pocket.png") no-repeat ; }
 
 .no-svg .icon-social--pocket:hover::before {
   background-image: url("../images/png/icons/social/pocket_hover.png"); }
+
+.no-svg .icon-social--pinterest::before {
+  background: url("../images/png/icons/social/pinterest.png") no-repeat ; }
+
+.no-svg .icon-social--pinterest:hover::before {
+  background-image: url("../images/png/icons/social/pinterest_hover.png"); }
 
 .no-svg .icon-social--reddit::before {
   background: url("../images/png/icons/social/reddit.png") no-repeat ; }
@@ -3550,6 +3589,12 @@ Style guide icon.social
 
 .no-svg .icon-social--skype:hover::before {
   background-image: url("../images/png/icons/social/skype_hover.png"); }
+
+.no-svg .icon-social--slideshare::before {
+  background: url("../images/png/icons/social/slideshare.png") no-repeat ; }
+
+.no-svg .icon-social--slideshare:hover::before {
+  background-image: url("../images/png/icons/social/slideshare_hover.png"); }
 
 .no-svg .icon-social--slashdot::before {
   background: url("../images/png/icons/social/slashdot.png") no-repeat ; }
@@ -3623,17 +3668,17 @@ Style guide icon.social
 .no-svg .icon-social--vine:hover::before {
   background-image: url("../images/png/icons/social/vine_hover.png"); }
 
-.no-svg .icon-social--wordpress::before {
-  background: url("../images/png/icons/social/wordpress.png") no-repeat ; }
-
-.no-svg .icon-social--wordpress:hover::before {
-  background-image: url("../images/png/icons/social/wordpress_hover.png"); }
-
 .no-svg .icon-social--wykop::before {
   background: url("../images/png/icons/social/wykop.png") no-repeat ; }
 
 .no-svg .icon-social--wykop:hover::before {
   background-image: url("../images/png/icons/social/wykop_hover.png"); }
+
+.no-svg .icon-social--wordpress::before {
+  background: url("../images/png/icons/social/wordpress.png") no-repeat ; }
+
+.no-svg .icon-social--wordpress:hover::before {
+  background-image: url("../images/png/icons/social/wordpress_hover.png"); }
 
 .no-svg .icon-social--xerpi::before {
   background: url("../images/png/icons/social/xerpi.png") no-repeat ; }
@@ -3827,17 +3872,17 @@ Style guide icon.social
 .no-svg .icon-social--smaller .icon-social--nujij:hover::before {
   background-image: url("../images/png/icons/social/small/nujij_hover_small.png"); }
 
-.no-svg .icon-social--smaller .icon-social--pinterest::before {
-  background: url("../images/png/icons/social/small/pinterest_small.png") no-repeat ; }
-
-.no-svg .icon-social--smaller .icon-social--pinterest:hover::before {
-  background-image: url("../images/png/icons/social/small/pinterest_hover_small.png"); }
-
 .no-svg .icon-social--smaller .icon-social--pocket::before {
   background: url("../images/png/icons/social/small/pocket_small.png") no-repeat ; }
 
 .no-svg .icon-social--smaller .icon-social--pocket:hover::before {
   background-image: url("../images/png/icons/social/small/pocket_hover_small.png"); }
+
+.no-svg .icon-social--smaller .icon-social--pinterest::before {
+  background: url("../images/png/icons/social/small/pinterest_small.png") no-repeat ; }
+
+.no-svg .icon-social--smaller .icon-social--pinterest:hover::before {
+  background-image: url("../images/png/icons/social/small/pinterest_hover_small.png"); }
 
 .no-svg .icon-social--smaller .icon-social--reddit::before {
   background: url("../images/png/icons/social/small/reddit_small.png") no-repeat ; }
@@ -3862,6 +3907,12 @@ Style guide icon.social
 
 .no-svg .icon-social--smaller .icon-social--skype:hover::before {
   background-image: url("../images/png/icons/social/small/skype_hover_small.png"); }
+
+.no-svg .icon-social--smaller .icon-social--slideshare::before {
+  background: url("../images/png/icons/social/small/slideshare_small.png") no-repeat ; }
+
+.no-svg .icon-social--smaller .icon-social--slideshare:hover::before {
+  background-image: url("../images/png/icons/social/small/slideshare_hover_small.png"); }
 
 .no-svg .icon-social--smaller .icon-social--slashdot::before {
   background: url("../images/png/icons/social/small/slashdot_small.png") no-repeat ; }
@@ -3935,17 +3986,17 @@ Style guide icon.social
 .no-svg .icon-social--smaller .icon-social--vine:hover::before {
   background-image: url("../images/png/icons/social/small/vine_hover_small.png"); }
 
-.no-svg .icon-social--smaller .icon-social--wordpress::before {
-  background: url("../images/png/icons/social/small/wordpress_small.png") no-repeat ; }
-
-.no-svg .icon-social--smaller .icon-social--wordpress:hover::before {
-  background-image: url("../images/png/icons/social/small/wordpress_hover_small.png"); }
-
 .no-svg .icon-social--smaller .icon-social--wykop::before {
   background: url("../images/png/icons/social/small/wykop_small.png") no-repeat ; }
 
 .no-svg .icon-social--smaller .icon-social--wykop:hover::before {
   background-image: url("../images/png/icons/social/small/wykop_hover_small.png"); }
+
+.no-svg .icon-social--smaller .icon-social--wordpress::before {
+  background: url("../images/png/icons/social/small/wordpress_small.png") no-repeat ; }
+
+.no-svg .icon-social--smaller .icon-social--wordpress:hover::before {
+  background-image: url("../images/png/icons/social/small/wordpress_hover_small.png"); }
 
 .no-svg .icon-social--smaller .icon-social--xerpi::before {
   background: url("../images/png/icons/social/small/xerpi_small.png") no-repeat ; }
