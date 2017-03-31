@@ -2674,11 +2674,6 @@ Style guide footer
     .footer__bottom a:active,
     .footer__bottom a:focus {
       text-decoration: none; }
-  .footer__top .ul-list-inline .footer__menu-item, .footer__top .ul-list-inline .footer__menu .footer__menu-item-right, .footer__menu .footer__top .ul-list-inline .footer__menu-item-right,
-  .footer__bottom .ul-list-inline .footer__menu-item,
-  .footer__bottom .ul-list-inline .footer__menu .footer__menu-item-right, .footer__menu
-  .footer__bottom .ul-list-inline .footer__menu-item-right {
-    padding-right: 10px; }
 
 .footer__label {
   display: block;
@@ -2699,29 +2694,27 @@ Style guide footer
 .footer__menu {
   margin: 0;
   padding-left: 0;
-  max-width: 100%;
+  max-width: none;
   list-style: none; }
-  .footer__menu .footer__menu-item, .footer__menu .footer__menu-item-right {
+  .footer__menu .footer__menu-item {
     margin-right: 15px;
     font-size: 0.889em; }
-    .footer__menu .footer__menu-item:first-child > a, .footer__menu .footer__menu-item-right:first-child > a {
+    .footer__menu .footer__menu-item:first-child > a {
       padding-left: 0; }
-    .footer__menu .footer__menu-item:last-child, .footer__menu .footer__menu-item-right:last-child {
+    .footer__menu .footer__menu-item:last-child {
       margin-bottom: 0; }
     @media (min-width: 992px) {
-      .footer__menu .footer__menu-item, .footer__menu .footer__menu-item-right {
+      .footer__top .footer__menu .footer__menu-item {
         margin-bottom: 0.5em; } }
-    .footer__menu .footer__menu-item a, .footer__menu .footer__menu-item-right a {
+    .footer__menu .footer__menu-item a {
       padding: 0; }
-      .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
+      .footer__menu .footer__menu-item a:focus {
         outline: 3px solid #ffd617;
         outline-offset: 5px;
         text-decoration: underline; }
-      .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item-right a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item-right a:active, .footer__menu .footer__menu-item a:focus, .footer__menu .footer__menu-item-right a:focus {
+      .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item a:focus {
         background: none;
         text-decoration: none; }
-  .footer__menu .footer__menu-item-right {
-    float: right; }
 
 .footer__icon--social::before {
   margin-right: 8px !important; }

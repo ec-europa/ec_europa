@@ -33,12 +33,6 @@ Style guide footer
       text-decoration: none;
     }
   }
-  // Inline listings need more padding-right on the footer.
-  .ul-list-inline {
-    .footer__menu-item {
-      padding-right: 10px;
-    }
-  }
 }
 
 .footer__label {
@@ -67,7 +61,7 @@ Style guide footer
 .footer__menu {
   margin: 0;
   padding-left: 0;
-  max-width: 100%;
+  max-width: none;
   list-style: none;
 
   .footer__menu-item {
@@ -83,7 +77,9 @@ Style guide footer
     }
 
     @include breakpoint(screen-md-min) {
-      margin-bottom: 0.5em;
+      .footer__top & {
+        margin-bottom: 0.5em;
+      }
     }
 
     a {
@@ -98,12 +94,6 @@ Style guide footer
         text-decoration: none;
       }
     }
-  }
-
-  .footer__menu-item-right {
-    @extend .footer__menu-item;
-
-    float: right;
   }
 }
 
