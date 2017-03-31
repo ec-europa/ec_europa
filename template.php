@@ -296,6 +296,11 @@ function _europa_menu_tree_footer($tree, $inline = FALSE) {
 
 /**
  * Europa theme wrapper function for the service tools menu links.
+ * 
+ * @see theme_menu_tree()
+ *
+ * @return 
+ *  html for the menu
  */
 function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
   return _europa_menu_tree_footer($variables['tree'], TRUE);
@@ -303,6 +308,11 @@ function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
 
 /**
  * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
+ *
+ * @return 
+ *  html for the menu
  */
 function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
    return _europa_menu_tree_footer($variables['tree'], TRUE);
@@ -310,6 +320,11 @@ function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
 
 /**
  * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
+ *
+ * @return 
+ *  html for the menu
  */
 function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
   return _europa_menu_tree_footer($variables['tree']);
@@ -317,11 +332,14 @@ function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
 
 /**
  * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
+ *
+ * @return html for the menu
  */
 function europa_menu_tree__menu_nexteuropa_site_links(&$variables) {
   return _europa_menu_tree_footer($variables['tree']);
 }
-
 
 /**
  * Helper applying BEM to footer menu item links.
