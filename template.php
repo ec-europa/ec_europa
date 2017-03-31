@@ -285,10 +285,10 @@ function europa_form_element(&$variables) {
  * Create the needed wrapper for menus in the footer.
  */
 function _europa_menu_tree_footer($tree, $inline = FALSE) {
-  $classes[] = 'footer__menu nav';
+  $classes[] = 'footer__menu';
   
   if ($inline) {
-    $classes[] = 'list-inline';
+    $classes[] = 'ul-list-inline';
   }
 
   return '<ul class="' . implode(' ', $classes) . '">' . $tree . '</ul>';
