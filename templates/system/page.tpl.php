@@ -281,7 +281,6 @@
           <?php print render($page['footer_bottom']); ?>
         <?php endif; ?>
         </div>
-
       </div>
     </div>
   </div>

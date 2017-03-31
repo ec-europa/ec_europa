@@ -85,7 +85,6 @@
  * @ingroup themeable
  */
 ?>
-
 <?php if (!empty($page['header_top'])): ?>
 <section class="header-top">
   <div class="container-fluid">
@@ -222,9 +221,7 @@
           <?php print render($page['footer_bottom']); ?>
         <?php endif; ?>
         </div>
-
       </div>
     </div>
   </div>
 </footer>
-
