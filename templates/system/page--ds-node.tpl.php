@@ -85,7 +85,6 @@
  * @ingroup themeable
  */
 ?>
-
 <?php if (!empty($page['header_top'])): ?>
 <section class="header-top">
   <div class="container-fluid">
@@ -181,6 +180,7 @@
   </div>
 </section>
 
+<footer class="footer">
 <?php if (!empty($page['footer_top'])): ?>
   <section class="footer-top">
     <div class="container-fluid">
@@ -189,17 +189,39 @@
   </section>
 <?php endif; ?>
 
-<footer class="footer">
-  <div class="container-fluid">
-    <div class="row">
-      <?php if (!empty($page['footer_right'])): ?>
-        <aside class="col-sm-4 footer__column-right">
-          <?php print render($page['footer_right']); ?>
-        </aside>
+  <div class="footer__top">
+    <div class="container-fluid">
+      <div class="row">
+      <?php if (!empty($page['footer_left'])): ?>
+        <div class="footer__column">
+          <?php print render($page['footer_left']); ?>
+        </div>
       <?php endif; ?>
-      <section class="<?php print $footer_column_class; ?> footer__column-main">
-        <?php print render($page['footer']); ?>
-      </section>
+
+      <?php if (!empty($page['footer_middle'])): ?>
+        <div class="footer__column">
+          <?php print render($page['footer_middle']); ?>
+        </div>
+      <?php endif; ?>
+    
+      <?php if (!empty($page['footer_right'])): ?>
+        <div class="footer__column">
+          <?php print render($page['footer_right']); ?>
+        </div>
+      <?php endif; ?>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+        <?php if (!empty($page['footer_bottom'])): ?>
+          <?php print render($page['footer_bottom']); ?>
+        <?php endif; ?>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

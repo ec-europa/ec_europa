@@ -282,17 +282,63 @@ function europa_form_element(&$variables) {
 }
 
 /**
- * Europa theme wrapper function for the service tools menu links.
+ * Create the needed wrapper for menus in the footer.
  */
-function europa_menu_tree__menu_dt_service_links(&$variables) {
-  return '<ul class="footer__menu footer__menu--separator menu nav list-inline">' . $variables['tree'] . '</ul>';
+function _europa_menu_tree_footer($tree, $inline = FALSE) {
+  $classes[] = 'footer__menu';
+  
+  if ($inline) {
+    $classes[] = 'ul-list-inline';
+  }
+
+  return '<ul class="' . implode(' ', $classes) . '">' . $tree . '</ul>';
+}
+
+/**
+ * Europa theme wrapper function for the service tools menu links.
+ * 
+ * @see theme_menu_tree()
+ *
+ * @return 
+ *  html for the menu
+ */
+function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
+  return _europa_menu_tree_footer($variables['tree'], TRUE);
 }
 
 /**
  * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
+ *
+ * @return 
+ *  html for the menu
  */
-function europa_menu_tree__menu_dt_menu_social_media(&$variables) {
-  return '<ul class="footer__menu menu nav list-inline">' . $variables['tree'] . '</ul>';
+function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
+   return _europa_menu_tree_footer($variables['tree'], TRUE);
+}
+
+/**
+ * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
+ *
+ * @return 
+ *  html for the menu
+ */
+function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
+  return _europa_menu_tree_footer($variables['tree']);
+}
+
+/**
+ * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
+ *
+ * @return html for the menu
+ */
+function europa_menu_tree__menu_nexteuropa_site_links(&$variables) {
+  return _europa_menu_tree_footer($variables['tree']);
 }
 
 /**
@@ -321,14 +367,28 @@ function _europa_menu_link__footer(array &$variables) {
 /**
  * Override theme_menu_link().
  */
-function europa_menu_link__menu_dt_service_links(&$variables) {
+function europa_menu_link__menu_nexteuropa_service_links(&$variables) {
   return _europa_menu_link__footer($variables);
 }
 
 /**
  * Override theme_menu_link().
  */
-function europa_menu_link__menu_dt_menu_social_media(&$variables) {
+function europa_menu_link__menu_nexteuropa_social_media(&$variables) {
+  return _europa_menu_link__footer($variables);
+}
+
+/**
+ * Override theme_menu_link().
+ */
+function europa_menu_link__menu_nexteuropa_inst_links(&$variables) {
+  return _europa_menu_link__footer($variables);
+}
+
+/**
+ * Override theme_menu_link().
+ */
+function europa_menu_link__menu_nexteuropa_site_links(&$variables) {
   return _europa_menu_link__footer($variables);
 }
 
@@ -624,11 +684,7 @@ function europa_preprocess_block(&$variables) {
       $variables['classes_array'][] = 'block--full-width';
       break;
 
-    case 'menu-dt-menu-social-media':
-      $block->subject = t('The European Commission on:');
-      break;
-
-    case 'menu-dt-service-links':
+    case 'menu-nexteuropa-service-links':
       $block->subject = '';
       break;
 
