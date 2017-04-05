@@ -286,7 +286,7 @@ function europa_form_element(&$variables) {
  */
 function _europa_menu_tree_footer($tree, $inline = FALSE) {
   $classes[] = 'footer__menu';
-  
+
   if ($inline) {
     $classes[] = 'ul-list-inline';
   }
@@ -296,11 +296,8 @@ function _europa_menu_tree_footer($tree, $inline = FALSE) {
 
 /**
  * Europa theme wrapper function for the service tools menu links.
- * 
- * @see theme_menu_tree()
  *
- * @return 
- *  html for the menu
+ * @see theme_menu_tree()
  */
 function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
   return _europa_menu_tree_footer($variables['tree'], TRUE);
@@ -310,21 +307,15 @@ function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
  * Europa theme wrapper function for the EC menu links.
  *
  * @see theme_menu_tree()
- *
- * @return 
- *  html for the menu
  */
 function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
-   return _europa_menu_tree_footer($variables['tree'], TRUE);
+  return _europa_menu_tree_footer($variables['tree'], TRUE);
 }
 
 /**
  * Europa theme wrapper function for the EC menu links.
  *
  * @see theme_menu_tree()
- *
- * @return 
- *  html for the menu
  */
 function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
   return _europa_menu_tree_footer($variables['tree']);
@@ -334,8 +325,6 @@ function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
  * Europa theme wrapper function for the EC menu links.
  *
  * @see theme_menu_tree()
- *
- * @return html for the menu
  */
 function europa_menu_tree__menu_nexteuropa_site_links(&$variables) {
   return _europa_menu_tree_footer($variables['tree']);
@@ -1582,7 +1571,7 @@ function europa_ds_pre_render_alter(&$layout_render_array, $context, &$variables
       $uri = entity_uri($entity_type, $variables['elements']['#account']);
       $variables['node_url'] = url($uri['path']);
 
-      if (!empty($entity['europa_user_fullname_first'])) { 
+      if (!empty($entity['europa_user_fullname_first'])) {
         $title = $entity['europa_user_fullname_first'][0]['#markup'];
       }
       elseif (!empty($entity['europa_user_fullname_last'])) {
