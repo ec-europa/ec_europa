@@ -67,19 +67,6 @@ function europa_preprocess_europa_status_message(&$variables) {
 }
 
 /**
- * Overrides theme_form_required_marker().
- */
-function europa_form_required_marker($variables) {
-  // This is also used in the installer, pre-database setup.
-  $t = get_t();
-  $attributes = [
-    'class' => 'form-required text-danger',
-    'title' => $t('This field is required.'),
-  ];
-  return '<span' . drupal_attributes($attributes) . '>*</span>';
-}
-
-/**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
 function europa_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
