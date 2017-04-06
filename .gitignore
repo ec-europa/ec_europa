@@ -19,3 +19,5 @@ js/libraries/
 
 # Ignore styleguide
 styleguide/assets/
+vendor/
+composer.lock
