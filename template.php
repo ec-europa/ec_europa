@@ -585,7 +585,8 @@ function europa_easy_breadcrumb(&$variables) {
 
   if ($segments_quantity > 0) {
     $html .= '<nav id="breadcrumb" class="breadcrumb" role="navigation" aria-label="breadcrumbs">';
-    $html .= '<span class="element-invisible">' . t('You are here') . ':</span>';
+    // @todo: Make this translatable.
+    $html .= '<span class="element-invisible">' . 'You are here' . ':</span>';
     $html .= '<ol class="breadcrumb__segments-wrapper">';
 
     for ($i = 0, $s = $segments_quantity; $i < $segments_quantity; ++$i) {
@@ -646,116 +647,6 @@ function europa_file_link($variables) {
     }
 
     return _nexteuropa_formatters_file_markup($file);
-  }
-}
-
-/**
- * Implements hook_preprocess_block().
- */
-function europa_preprocess_block(&$variables) {
-  $block = $variables['block'];
-
-  switch ($block->delta) {
-    case 'nexteuropa_feedback':
-      $variables['classes_array'][] = 'block--full-width';
-      break;
-
-    case 'menu-nexteuropa-service-links':
-      $block->subject = '';
-      break;
-
-    case 'views_related_links':
-      $variables['classes_array'][] = 'link-block';
-      $variables['title_attributes_array']['class'][] = 'link-block__title';
-      break;
-  }
-
-  // Page-level language switcher.
-  if (isset($block->bid) && $block->bid === 'language_selector_page-language_selector_page') {
-    global $language;
-
-    // selectify.js is the library to convert between ul and select.
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/js/selectify.js');
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/lang-switcher.js');
-
-    // Initialize variables.
-    $not_available = '';
-    $served = '';
-    $other = '';
-
-    if (!empty($variables['elements']['not_available']['#markup'])) {
-      $not_available = '<li class="lang-select-page__option lang-select-page__unavailable">' . $variables['elements']['not_available']['#markup']->native . '</li>';
-    }
-
-    if (!empty($variables['elements']['served']['#markup'])) {
-      $served = '<li class="lang-select-page__option is-selected">' . $variables['elements']['served']['#markup']->native . '</li>';
-    }
-
-    if (!empty($variables['elements']['other']['#markup'])) {
-      foreach ($variables['elements']['other']['#markup'] as $code => $lang) {
-        $options = [];
-        $options['query'] = drupal_get_query_parameters();
-        $options['query']['2nd-language'] = $code;
-        $options['attributes']['lang'] = $code;
-        $options['attributes']['hreflang'] = $code;
-        $options['attributes']['rel'] = 'alternate';
-        $options['language'] = $language;
-
-        $other .= '<li class="lang-select-page__option lang-select-page__other">' . l($lang->native, current_path(), $options) . '</li>';
-      }
-    }
-
-    // Add class to block.
-    $variables['classes_array'][] = 'lang-select-page lang-select-page--transparent';
-
-    // Add content to block.
-    $content = "<span class='lang-select-page__icon icon icon--generic-lang'></span>";
-    $content .= "<ul class='lang-select-page__list'>" . $not_available . $served . $other . '</ul>';
-
-    $variables['content'] = $content;
-  }
-
-  // Site-level language switcher.
-  if (isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
-    // Add the js to make it function.
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/lang-select-site.js');
-  }
-
-  // Replace block-title class with block__title in order to keep BEM structure
-  // of classes.
-  $block_title_class = array_search('block-title', $variables['title_attributes_array']['class']);
-  if ($block_title_class !== FALSE) {
-    unset($variables['title_attributes_array']['class'][$block_title_class]);
-  }
-  $variables['title_attributes_array']['class'][] = 'block__title';
-
-  if (isset($block->bid)) {
-    // Check if the block is a exposed form.
-    // This is checked by looking at the $block->bid which in case
-    // of views exposed filters, always contains 'views--exp-' string.
-    if (strpos($block->bid, 'views--exp-') !== FALSE) {
-      if (isset($block->context) && $context = context_load($block->context)) {
-        // If our block is the first, we set the subject. This way, if we expose
-        // a second block for the same view, we will not duplicate the title.
-        if (array_search($block->bid, array_keys($context->reactions['block']['blocks'])) === 0) {
-          $variables['classes_array'][] = 'filters';
-          $variables['title_attributes_array']['class'][] = 'filters__title';
-          $block->subject = t('Refine results');
-
-          // Passing block id to Drupal.settings in order to pass it through
-          // data attribute in the collapsible panel.
-          drupal_add_js(['europa' => ['exposedBlockId' => $variables['block_html_id']]], 'setting');
-
-          // Adding filters.js file.
-          drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/filters.js');
-        }
-      }
-    }
-  }
-
-  if ($block->delta == 'inline_navigation') {
-    $variables['classes_array'][] = 'inpage-nav__wrapper';
-    $variables['title_attributes_array']['class'][] = 'inpage-nav__block-title';
   }
 }
 
@@ -824,7 +715,6 @@ function europa_preprocess_bootstrap_fieldgroup_nav(&$variables) {
   }
 }
 
-
 /**
  * Implements hook_preprocess_image().
  *
@@ -849,159 +739,6 @@ function europa_preprocess_image(&$variables) {
           ? $variables['attributes']['class'] . ' img-responsive' : 'img-responsive';
     }
   }
-}
-
-/**
- * Implements hook_preprocess_html().
- */
-function europa_preprocess_html(&$variables) {
-  $this_theme_path = drupal_get_path('theme', 'europa');
-  $variables['theme_path'] = base_path() . $this_theme_path;
-  $language = $variables['language'];
-
-  if (isset($language->prefix)) {
-    $variables['classes_array'][] = 'language-' . $language->prefix;
-  }
-
-  // Add the ie9 only css.
-  drupal_add_css($this_theme_path . '/css/ie9.css', [
-    'browsers' => [
-      'IE' => 'IE 9',
-      '!IE' => FALSE,
-    ],
-  ]
-  );
-  // Add conditional js.
-  $ie9_js = [
-    '#tag' => 'script',
-    '#attributes' => [
-      'src' => $this_theme_path . '/js/ie9.js',
-    ],
-    '#prefix' => '<!--[if IE 9]>',
-    '#suffix' => '</script><![endif]-->',
-  ];
-  drupal_add_html_head($ie9_js, 'ie9_js');
-
-  // For some reason, the front page handles tokens different.
-  if (drupal_is_front_page()) {
-    $data = ['node' => menu_get_object('node')];
-    $last_modified = [
-      '#tag' => 'meta',
-      '#attributes' => [
-        'name' => 'last-modified',
-        'content' => token_replace('[dt_tokens:dt_update_date]', $data),
-      ],
-    ];
-    drupal_add_html_head($last_modified, 'last_modified');
-  }
-
-  // Override splash screen title.
-  $menu_item = menu_get_item();
-  if (isset($menu_item['path']) && $menu_item['path'] == 'splash' && !variable_get('splash_screen_title_value', FALSE)) {
-    $site_name = variable_get('site_name');
-    $variables['head_title'] = $site_name;
-    drupal_set_title($site_name);
-  }
-}
-
-/**
- * Implements hook_preprocess_node().
- */
-function europa_preprocess_node(&$variables) {
-  $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
-  $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
-  $variables['submitted'] = '';
-  if (theme_get_setting('display_submitted')) {
-    $variables['submitted'] = t('Submitted by !username on !datetime', [
-      '!username' => $variables['name'],
-      '!datetime' => $variables['date'],
-    ]);
-  }
-  $variables['messages'] = theme('status_messages');
-
-  // Override node_url if Legacy Link is set.
-  if (isset($variables['legacy'])) {
-    $variables['node_url'] = $variables['legacy'];
-  }
-
-  // Add the language attribute.
-  $variables['attributes_array']['lang'] = entity_translation_get_existing_language('node', $variables['node']);
-}
-
-/**
- * Implements hook_preprocess_page().
- */
-function europa_preprocess_page(&$variables) {
-  // Small fix to maxe the link to the start page use the alias with language.
-  $variables['front_page'] = url('<front>');
-  // Add information about the number of sidebars.
-  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class'] = 'col-md-6';
-  }
-  elseif (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class'] = 'col-md-9';
-  }
-  else {
-    $variables['content_column_class'] = 'col-md-12';
-  }
-
-  // Set footer region column classes.
-  if (!empty($variables['page']['footer_right'])) {
-    $variables['footer_column_class'] = 'col-sm-8';
-  }
-  else {
-    $variables['footer_column_class'] = 'col-sm-12';
-  }
-
-  $variables['page_logo_title'] = t('Home - @sitename', ['@sitename' => variable_get('site_name', 'European Commission')]);
-
-  $node = &$variables['node'];
-
-  if (isset($node)) {
-    // Adding generic introduction field to be later rendered in page template.
-    $introduction = variable_get('ec_europa_introduction_field', FALSE);
-
-    $variables['ec_europa_introduction'] = isset($node->{$introduction})
-        ? field_view_field('node', $node, $introduction, ['label' => 'hidden']) : NULL;
-
-    // Check if Display Suite is handling node.
-    if (module_exists('ds')) {
-      $layout = ds_get_layout('node', $node->type, 'full');
-      if ($layout && isset($layout['is_nexteuropa']) && $layout['is_nexteuropa'] == TRUE) {
-        // If our display suite layout has a header region.
-        if (isset($layout['regions']['left_header'])) {
-          // Move the header_bottom to the node.
-          $variables['node']->header_bottom = $variables['page']['header_bottom'];
-          unset($variables['page']['header_bottom']);
-        }
-        if (isset($variables['page']['utility'])) {
-          // Move the utility to the node.
-          $variables['node']->utility = $variables['page']['utility'];
-          unset($variables['page']['utility']);
-        }
-        ctools_class_add($layout['layout']);
-
-        if (isset($node->ds_switch) && $node->ds_switch != 'college') {
-          $variables['node']->header_bottom_modifier = 'page-bottom-header--full-grey';
-        }
-
-        // This disables message-printing on ALL page displays.
-        $variables['show_messages'] = FALSE;
-
-        // Add tabs to node object so we can put it in the DS template instead.
-        if (isset($variables['tabs'])) {
-          $node->local_tabs = drupal_render($variables['tabs']);
-        }
-
-        // Use page__ds_node.tpl unless it is an exception.
-        $custom_page_templates = ['page__gallery'];
-        if (empty(array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
-          $variables['theme_hook_suggestions'][] = 'page__ds_node';
-        }
-      }
-    }
-  }
-  $variables['logo_classes'] = 'logo site-header__logo';
 }
 
 /**
