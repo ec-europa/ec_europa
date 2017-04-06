@@ -79,4 +79,5 @@ function europa_preprocess_page(&$variables, $hook) {
     }
   }
   $variables['logo_classes'] = 'logo site-header__logo';
+  $variables['messages'] = $variables['show_messages'] ? array('#theme' => array('status_messages')) : '';
 }
