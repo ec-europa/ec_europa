@@ -17,6 +17,7 @@ function europa_preprocess_block(&$variables) {
       break;
 
     case 'menu-nexteuropa-service-links':
+    case 'cce-basic-config-footer-ipg':
       $block->subject = '';
       break;
 
