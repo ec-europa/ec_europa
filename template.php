@@ -223,33 +223,6 @@ function _europa_menu_tree_footer($tree, $inline = FALSE) {
 }
 
 /**
- * Europa theme wrapper function for the EC menu links.
- *
- * @see theme_menu_tree()
- */
-function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
-  return _europa_menu_tree_footer($variables['tree'], TRUE);
-}
-
-/**
- * Europa theme wrapper function for the EC menu links.
- *
- * @see theme_menu_tree()
- */
-function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
-  return _europa_menu_tree_footer($variables['tree']);
-}
-
-/**
- * Europa theme wrapper function for the EC menu links.
- *
- * @see theme_menu_tree()
- */
-function europa_menu_tree__menu_nexteuropa_site_links(&$variables) {
-  return _europa_menu_tree_footer($variables['tree']);
-}
-
-/**
  * Helper applying BEM to footer menu item links.
  *
  * @param array $variables
@@ -270,27 +243,6 @@ function _europa_menu_link__footer(array &$variables) {
 
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
-}
-
-/**
- * Override theme_menu_link().
- */
-function europa_menu_link__menu_nexteuropa_social_media(&$variables) {
-  return _europa_menu_link__footer($variables);
-}
-
-/**
- * Override theme_menu_link().
- */
-function europa_menu_link__menu_nexteuropa_inst_links(&$variables) {
-  return _europa_menu_link__footer($variables);
-}
-
-/**
- * Override theme_menu_link().
- */
-function europa_menu_link__menu_nexteuropa_site_links(&$variables) {
-  return _europa_menu_link__footer($variables);
 }
 
 /**
