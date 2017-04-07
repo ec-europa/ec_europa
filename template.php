@@ -170,7 +170,7 @@ function europa_form_element(&$variables) {
   switch ($element['#title_display']) {
     case 'before':
     case 'invisible':
-      $output .= ' ' . theme('form_element_label', $variables);
+      $output .= ' ' . theme('form_element_label', array('element' => $variables));
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
 
       if (!empty($description)) {
