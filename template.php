@@ -189,7 +189,7 @@ function europa_form_element(&$variables) {
         $variables['#children'] = ' ' . $prefix . $element['#children'] . $suffix;
       }
 
-      $output .= ' ' . theme('form_element_label', $variables) . "\n";
+      $output .= ' ' . theme('form_element_label', array('element' => $variables)) . "\n";
       $output .= $feedback_message;
       break;
 
