@@ -223,15 +223,6 @@ function _europa_menu_tree_footer($tree, $inline = FALSE) {
 }
 
 /**
- * Europa theme wrapper function for the service tools menu links.
- *
- * @see theme_menu_tree()
- */
-function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
-  return _europa_menu_tree_footer($variables['tree'], TRUE);
-}
-
-/**
  * Europa theme wrapper function for the EC menu links.
  *
  * @see theme_menu_tree()
