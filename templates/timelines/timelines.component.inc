@@ -45,4 +45,3 @@ function europa_atomium_definition_timelines() {
     ),
   );
 }
-

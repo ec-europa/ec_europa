@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_HOOK().
  */
-function atomium_europa_atomium_theme_page_header() {
+function europa_atomium_theme_page_header() {
   return array(
     'page_header' => array(
       'variables' => array(
@@ -22,7 +22,7 @@ function atomium_europa_atomium_theme_page_header() {
 /**
  * Implements hook_atomium_definition_HOOK().
  */
-function atomium_europa_atomium_definition_page_header() {
+function europa_atomium_definition_page_header() {
   return array(
     'label' => 'Page header',
     'description' => 'Page header.',
@@ -35,11 +35,10 @@ function atomium_europa_atomium_definition_page_header() {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function atomium_europa_preprocess_page_header(&$variables, $hook) {
+function europa_preprocess_page_header(&$variables, $hook) {
   $variables[$hook] = array(
     $hook => array(
       '#markup' => $variables['markup'],
     ),
   );
 }
-

@@ -24,8 +24,8 @@ function europa_atomium_theme_site_slogan() {
  */
 function europa_atomium_definition_site_slogan() {
   return array(
-    'label' => 'Page header',
-    'description' => 'Page header.',
+    'label' => 'Site slogan',
+    'description' => 'Site slogan.',
     'preview' => array(
       'markup' => 'European Union because simple is better!',
     ),
@@ -42,4 +42,3 @@ function europa_preprocess_site_slogan(&$variables, $hook) {
     ),
   );
 }
-
