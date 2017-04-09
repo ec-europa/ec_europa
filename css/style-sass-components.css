@@ -2315,7 +2315,9 @@ Style guide: file.1
   line-height: 1; }
 
 .file__title {
-  line-height: initial;
+  display: inline-block;
+  margin: -0.225em 0 0.5em;
+  line-height: 1.225;
   font-weight: bold; }
 
 .file__caption {
@@ -2325,20 +2327,18 @@ Style guide: file.1
   background-color: #ececec;
   font-size: 0.778em; }
 
-.file__language {
-  display: block;
-  margin-top: 0.556em;
-  line-height: initial;
-  font-size: 0.889em;
-  font-weight: bold; }
-
 .file__info {
-  margin-top: 0.778em;
-  line-height: initial;
+  line-height: 1.225;
   font-size: 0.778em; }
 
 .file__content-language {
+  display: inline-block;
+  margin-bottom: 0.5em;
   font-weight: bold; }
+
+.file__properties {
+  display: inline-block;
+  white-space: pre; }
 
 .file__btn {
   margin-top: 0.778em;
