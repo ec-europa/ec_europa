@@ -2338,7 +2338,7 @@ Style guide: file.1
 
 .file__properties {
   display: inline-block;
-  white-space: pre; }
+  white-space: nowrap; }
 
 .file__btn {
   margin-top: 0.778em;
