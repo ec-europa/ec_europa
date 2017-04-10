@@ -17,4 +17,3 @@
       <?php print render($author); ?>
     </span>
 </div>
-

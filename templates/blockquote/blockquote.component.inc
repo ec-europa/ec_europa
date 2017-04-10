@@ -42,4 +42,3 @@ function europa_preprocess_blockquote(&$variables, $hook) {
     ),
   );
 }
-

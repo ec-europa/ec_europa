@@ -10,7 +10,7 @@
  */
 function europa_preprocess_breadcrumb(&$variables, $hook) {
   if (empty($variables[$hook])) {
-   return;
+    return;
   }
 
   $variables['attributes_array']['class'][] = 'breadcrumb__segments-wrapper';
@@ -74,4 +74,3 @@ function europa_preprocess_breadcrumb(&$variables, $hook) {
     ),
   );
 }
-
