@@ -667,6 +667,7 @@ function europa_file_link($variables) {
  */
 function europa_preprocess_block(&$variables) {
   $block = $variables['block'];
+  $variables['theme_hook_suggestions'][] = 'block__' . $block->module . '__' . str_replace('-', '_', $block->delta) . '_' . $block->region;
 
   switch ($block->delta) {
     case 'nexteuropa_feedback':
@@ -680,6 +681,32 @@ function europa_preprocess_block(&$variables) {
     case 'views_related_links':
       $variables['classes_array'][] = 'link-block';
       $variables['title_attributes_array']['class'][] = 'link-block__title';
+      break;
+
+    case 'menu-nexteuropa-site-links':
+      if ($block->region == 'header_top') {
+        $variables['classes_array'][] = 'nexteuropa_site_switcher';
+
+        if ($links = menu_navigation_links('menu-nexteuropa-site-links')) {
+          $i = 0;
+          foreach ($links as $key => $link) {
+            $theone = variable_get('ec_europa_site_switcher' == 'Informational') ? 0 : 1;
+            $links[$key]['attributes'] = [];
+            $links[$key]['attributes']['class'] = ['site-switcher__option'];
+            if ($i == $theone) {
+              $links[$key]['attributes']['class'][] = 'is-selected';
+            }
+            $i++;
+          }
+
+          $content = theme('links', [
+            'links' => $links,
+            'attributes' => ['class' => ['site-switcher__list']],
+          ]);
+
+          $variables['content'] = $content;
+        }
+      }
       break;
   }
 

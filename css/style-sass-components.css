@@ -6314,29 +6314,46 @@ Style guide: siteswitcher
   background-color: #f2f2f2;
   font-size: 0.889em; }
 
-.site-switcher__option {
+.site-switcher__list li {
   display: inline-block;
   float: left;
   width: 50%;
   text-align: center;
   vertical-align: middle; }
-  .site-switcher__option a {
-    text-decoration: none; }
-    .site-switcher__option a:hover, .site-switcher__option a:focus {
-      text-decoration: underline; }
-  .site-switcher__option > a {
-    display: block;
-    width: 100%;
-    padding: 0.5em 1.667em;
-    line-height: 1.3;
-    font-weight: bold; }
-    .site-switcher__option > a::after, .site-switcher__option > a.is-external::after, .site-switcher__option > a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) .site-switcher__option > a.listing__title::after {
-      content: none !important; }
-  .site-switcher__option.is-selected {
+
+li.site-switcher__option a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0.5em 1.667em;
+  line-height: 1.3;
+  font-weight: bold; }
+  li.site-switcher__option a:hover, li.site-switcher__option a:focus {
+    text-decoration: underline; }
+  li.site-switcher__option a::after, li.site-switcher__option a.is-external::after, li.site-switcher__option a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, li.site-switcher__option .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) a.listing__title::after, .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) li.site-switcher__option a.listing__title::after {
+    content: none !important; }
+
+li.site-switcher__option.is-selected {
+  background-color: #004494;
+  border-left: none; }
+  li.site-switcher__option.is-selected > a {
+    color: #ffffff; }
+
+a.site-switcher__option {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0.5em 1.667em;
+  line-height: 1.3;
+  font-weight: bold; }
+  a.site-switcher__option:hover, a.site-switcher__option:focus {
+    text-decoration: underline; }
+  a.site-switcher__option::after, a.site-switcher__option.is-external::after, a.site-switcher__option[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) a.site-switcher__option.listing__title::after {
+    content: none !important; }
+  a.site-switcher__option.is-selected {
     background-color: #004494;
-    border-left: none; }
-    .site-switcher__option.is-selected > a {
-      color: #ffffff; }
+    border-left: none;
+    color: #ffffff; }
 
 .site-switcher--header .site-switcher__list:first-child {
   border-left: 1px solid #b3b4b5; }
@@ -6374,7 +6391,7 @@ Style guide: siteswitcher
       pointer-events: none; }
 
 @media (min-width: 992px) {
-  .site-switcher__option {
+  .site-switcher__list li {
     width: auto; }
   .site-switcher--footer .site-switcher__list {
     float: right; } }
@@ -7021,6 +7038,7 @@ Style guide table responsive
       background-color: #f2f2f2; } }
 
 #admin-menu-wrapper ul,
+ul.krumo-node,
 .wtShareNetworks {
   max-width: none; }
 
