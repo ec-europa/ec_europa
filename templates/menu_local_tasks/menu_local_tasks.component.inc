@@ -14,4 +14,3 @@ function europa_preprocess_menu_local_tasks(&$variables, $hook) {
   $variables['secondary']['#attributes']['class'][] = 'nav';
   $variables['secondary']['#attributes']['class'][] = 'nav-pills';
 }
-

@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_HOOK().
  */
-function atomium_europa_atomium_theme_logo() {
+function europa_atomium_theme_logo() {
   return array(
     'logo' => array(
       'template' => 'logo',
@@ -20,11 +20,10 @@ function atomium_europa_atomium_theme_logo() {
 /**
  * Implements hook_atomium_definition_HOOK().
  */
-function atomium_europa_atomium_definition_logo() {
+function europa_atomium_definition_logo() {
   return array(
     'label' => 'Logo',
     'description' => 'Logo.',
     'preview' => array(),
   );
 }
-

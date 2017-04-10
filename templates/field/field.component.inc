@@ -13,7 +13,7 @@ function europa_preprocess_field(&$variables) {
     $variables['label'] = $variables['element']['#label'];
   }
 
- //@TODO refactor Add the tpl classes here
+  // @TODO refactor Add the tpl classes here
   // Changing label for the field to display stripped out values.
   switch ($variables['element']['#field_name']) {
     case 'field_core_social_network_links':
@@ -46,4 +46,3 @@ function europa_preprocess_field(&$variables) {
   $variables['attributes'] = (empty($variables['attributes_array']) ? '' : drupal_attributes($variables['attributes_array']));
 
 }
-
