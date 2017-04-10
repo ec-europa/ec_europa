@@ -3,6 +3,7 @@ description = NextEuropa base theme, based on Atomium.
 base theme = atomium
 core = 7.x
 php = 5.2.4
+screenshot = assets/images/screenshot.png
 
 ; ========================================
 ; Regions
