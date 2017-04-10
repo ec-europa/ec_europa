@@ -9,7 +9,7 @@
  * Implements hook_preprocess_bootstrap_tabs().
  */
 function europa_preprocess_bootstrap_fieldgroup_nav(&$variables) {
-  drupal_add_js(drupal_get_path('theme', 'europa') . '/js/libraries/jquery-accessible-tabs.js');
+  drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/libraries/jquery-accessible-tabs.js');
   $group = &$variables['group'];
 
   $variables['nav_classes'] = '';

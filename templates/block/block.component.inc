@@ -32,8 +32,8 @@ function europa_preprocess_block(&$variables) {
     global $language;
 
     // selectify.js is the library to convert between ul and select.
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/js/selectify.js');
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/lang-switcher.js');
+    drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/selectify.js');
+    drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/components/lang-switcher.js');
 
     // Initialize variables.
     $not_available = '';
@@ -75,7 +75,7 @@ function europa_preprocess_block(&$variables) {
   // Site-level language switcher.
   if (isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
     // Add the js to make it function.
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/lang-select-site.js');
+    drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/components/lang-select-site.js');
   }
 
   // Replace block-title class with block__title in order to keep BEM structure
@@ -104,7 +104,7 @@ function europa_preprocess_block(&$variables) {
           drupal_add_js(['europa' => ['exposedBlockId' => $variables['block_html_id']]], 'setting');
 
           // Adding filters.js file.
-          drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/filters.js');
+          drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/components/filters.js');
         }
       }
     }
