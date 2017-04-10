@@ -11,7 +11,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       sass: {
-        files: ['**/*.{scss,sass}', 'sass/**/*.html'],
+        files: ['**/*.{scss,sass}', 'assets/sass/**/*.html'],
         tasks: ['clean', 'sass', 'shell', 'copy:main'],
         options: {
           livereload: true
@@ -25,9 +25,9 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'css/europa_styleguide.css': 'sass/styleguide.scss',
-          'css/style-sass-base.css': 'sass/app_base.scss',
-          'css/style-sass-components.css' : 'sass/app_components.scss'
+          'assets/css/europa_styleguide.css': 'assets/sass/styleguide.scss',
+          'assets/css/style-sass-base.css': 'assets/sass/app_base.scss',
+          'assets/css/style-sass-components.css' : 'assets/sass/app_components.scss'
         }
       }
     },
@@ -40,23 +40,23 @@ module.exports = function (grunt) {
       main: {
         files: [
           // Includes files within path and its sub-directories.
-          {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['fonts/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['js/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/images/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/css/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/fonts/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/js/**'], dest: 'styleguide/assets/public/'},
           {expand: true, cwd: 'styleguide/public/js/', src: 'jquery.once.js', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: 'styleguide/public/js/', src: '**', dest: 'styleguide/assets/public/js/'},
-          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'}
+          {expand: true, cwd: 'assets/bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'}
         ]
       },
       all: {
         files: [
           // Includes files within path and its sub-directories.
-          {expand: true, src: ['sass/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['bootstrap-sass/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['bootstrap/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/sass/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/bootstrap-sass/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/bootstrap/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/images/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['assets/css/**'], dest: 'styleguide/assets/public/'},
         ]
       }
     }
