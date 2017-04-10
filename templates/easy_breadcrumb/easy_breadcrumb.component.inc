@@ -57,7 +57,8 @@ function europa_preprocess_easy_breadcrumb(&$variables, $hook) {
   $html = '';
 
   if ($segments_quantity > 0) {
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/breadcrumb.js');
+    drupal_add_js(drupal_get_path('theme',
+        'europa') . '/js/components/breadcrumb.js');
 
     for ($i = 0, $s = $segments_quantity; $i < $segments_quantity; ++$i) {
       $item = $breadcrumb[$i];
@@ -95,10 +96,46 @@ function europa_preprocess_easy_breadcrumb(&$variables, $hook) {
       }
 
       // TODO: Check if the active class actually appears.
-      $element_visibility = in_array('active', $classes) ? ' element-invisible' : '';
+      $element_visibility = in_array('active',
+        $classes) ? ' element-invisible' : '';
       $html .= '<li class="' . $class . $element_visibility . '">' . $full_item . '</li>';
     }
   }
 
   $variables[$hook] = $html;
+}
+
+/**
+ * Generate the first breadcrumb items basing on a custom menu.
+ */
+function _europa_breadcrumb_menu(&$variables) {
+  $menu_links = menu_tree('menu-dt-breadcrumb-menu');
+  $new_items = [];
+  global $language;
+  $front = drupal_is_front_page();
+
+  if (!empty($menu_links)) {
+    $i = 0;
+    foreach ($menu_links as $key => $menu_item) {
+      if (is_numeric($key)) {
+        // We don't want to show the home link in the home page.
+        if (!($front && $menu_item['#href'] == '<front>')) {
+          $options = ['language' => $language];
+          $title = token_replace($menu_item['#title'], $menu_item,
+            $options);
+          $new_items[] = _easy_breadcrumb_build_item($title, [],
+            $menu_item['#href']);
+          $i++;
+        }
+      }
+    }
+
+    if (!empty($new_items)) {
+      // The menu is used as the starting point of the breadcrumb.
+      $variables['breadcrumb'] = array_merge($new_items,
+        $variables['breadcrumb']);
+      // Alter the number of segments in the breadcrumb.
+      $variables['segments_quantity'] += $i;
+    }
+  }
 }
