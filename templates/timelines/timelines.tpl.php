@@ -18,4 +18,3 @@
         <?php print render($footer); ?>
     </div>
 </div>
-
