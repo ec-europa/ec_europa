@@ -20,7 +20,7 @@ regions[content] = Content
 regions[content_bottom] = Content bottom
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
-regions[footer_top] = Footer Top
+regions[footer_top] = Footer top
 regions[footer] = Footer
 regions[footer_right] = Footer right
 regions[footer_middle] = Footer middle
@@ -30,29 +30,29 @@ regions[footer_bottom] = Footer bottom
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = css/style-sass-base.css
-stylesheets[all][] = css/style-sass-components.css
+stylesheets[all][] = assets/css/style-sass-base.css
+stylesheets[all][] = assets/css/style-sass-components.css
 
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = bootstrap-sass/js/bootstrap/affix.js
-scripts[] = bootstrap-sass/js/bootstrap/alert.js
-scripts[] = bootstrap-sass/js/bootstrap/collapse.js
-scripts[] = bootstrap-sass/js/bootstrap/dropdown.js
-scripts[] = bootstrap-sass/js/bootstrap/tooltip.js
-scripts[] = bootstrap-sass/js/bootstrap/popover.js
-scripts[] = bootstrap-sass/js/bootstrap/scrollspy.js
-scripts[] = bootstrap-sass/js/bootstrap/tab.js
-scripts[] = bootstrap-sass/js/bootstrap/transition.js
-scripts[] = js/libraries/modernizr/modernizr.js
-scripts[] = js/libraries/enquire.min.js
-scripts[] = js/libraries/velocity.min.js
-scripts[] = js/libraries/jquery.equalheight.min.js
-scripts[] = js/misc/ajax.js
-scripts[] = js/europa.js
-scripts[] = js/europa_tabs.js
-scripts[] = js/components/table-responsive.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/affix.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/alert.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/collapse.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/dropdown.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/tooltip.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/popover.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/scrollspy.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/tab.js
+scripts[] = assets/bootstrap-sass/js/bootstrap/transition.js
+scripts[] = assets/js/libraries/modernizr/modernizr.js
+scripts[] = assets/js/libraries/enquire.min.js
+scripts[] = assets/js/libraries/velocity.min.js
+scripts[] = assets/js/libraries/jquery.equalheight.min.js
+scripts[] = assets/js/misc/ajax.js
+scripts[] = assets/js/europa.js
+scripts[] = assets/js/europa_tabs.js
+scripts[] = assets/js/components/table-responsive.js
 
 ; ========================================
 ; Settings
