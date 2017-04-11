@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><style>.a{fill:#fbc866;}.b{fill:#bc954c;}.c{fill:#fff;}</style></defs><title>blogger_hover</title><rect class="a" width="40" height="40"/><rect class="b" width="40" height="40"/><path class="c" d="M30.14,18.15V17.95l-0.41-.21c-0.41-.21-2.26,0-2.78-0.51a2.79,2.79,0,0,1-.51-1.85,5.56,5.56,0,0,0-.62-2.16,6.67,6.67,0,0,0-4.94-3.49H16.25A6.45,6.45,0,0,0,9.76,16.2v7.6a6.52,6.52,0,0,0,6.49,6.47h7.51a6.45,6.45,0,0,0,6.49-6.47V18.56l-0.1-.41h0ZM16.45,15.07H20a1.24,1.24,0,1,1,0,2.47h-3.6a1.25,1.25,0,0,1-1.24-1.24,1.19,1.19,0,0,1,1.24-1.24h0Zm7.2,9.86H16.34a1.24,1.24,0,1,1,0-2.47h7.31a1.24,1.24,0,1,1,0,2.47h0Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40"
+	 style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C8A051;}
+	.st1{fill:#FFFFFF;}
+</style>
+<title>blogger_hover</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="blogger_hover" sketch:type="MSLayerGroup">
+		<rect id="bg" sketch:type="MSShapeGroup" class="st0" width="40" height="40">
+		</rect>
+		<path id="icon" sketch:type="MSShapeGroup" class="st1" d="M30.1,18.2v-0.2l-0.4-0.2c-0.4-0.2-2.3,0-2.8-0.5
+			c-0.4-0.4-0.4-0.9-0.5-1.8c-0.2-1.5-0.4-1.6-0.6-2.2c-0.8-2-3.4-3.4-4.9-3.5h-4.6c-3.6,0-6.5,2.9-6.5,6.5v7.6
+			c0,3.5,2.9,6.5,6.5,6.5h7.5c3.6,0,6.5-2.9,6.5-6.5v-5.2L30.1,18.2L30.1,18.2z M16.4,15.1H20c0.7,0,1.2,0.6,1.2,1.2
+			c0,0.7-0.6,1.2-1.2,1.2h-3.6c-0.7,0-1.2-0.6-1.2-1.2C15.1,15.7,15.7,15.1,16.4,15.1L16.4,15.1z M23.7,24.9h-7.3
+			c-0.7,0-1.2-0.6-1.2-1.2c0-0.7,0.6-1.2,1.2-1.2h7.3c0.7,0,1.2,0.6,1.2,1.2C24.9,24.3,24.4,24.9,23.7,24.9L23.7,24.9z"/>
+	</g>
+</g>
+</svg>
