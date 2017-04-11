@@ -203,58 +203,6 @@ function europa_form_element(&$variables) {
 }
 
 /**
- * Create the needed wrapper for menus in the footer.
- */
-function _europa_menu_tree_footer($tree, $inline = FALSE) {
-  $classes[] = 'footer__menu';
-
-  if ($inline) {
-    $classes[] = 'ul-list-inline';
-  }
-
-  return '<ul class="' . implode(' ', $classes) . '">' . $tree . '</ul>';
-}
-
-/**
- * Helper applying BEM to footer menu item links.
- *
- * @param array $variables
- *   Link render array.
- *
- * @return string
- *   HTML markup
- */
-function _europa_menu_link__footer(array &$variables) {
-  $element = $variables['element'];
-  $sub_menu = '';
-
-  if ($element['#below']) {
-    $sub_menu = drupal_render($element['#below']);
-  }
-
-  $element['#attributes']['class'][] = 'footer__menu-item';
-
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
-}
-
-/**
- * A search_form alteration.
- */
-function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_state, $form_id) {
-  $form['search_input_group']['europa_search_submit']['#prefix'] = '<span class="input-group-btn search-form__btn-wrapper">';
-  $form['search_input_group']['europa_search_submit']['#suffix'] = '</span>';
-  $form['search_input_group']['europa_search_submit']['#attributes']['class'][] = 'search-form__btn';
-  $form['search_input_group']['QueryText']['#prefix'] = '<label class="search-form__textfield-wrapper"><span class="sr-only">' . t('Search this website') . '</span>';
-  $form['search_input_group']['QueryText']['#suffix'] = '</label>';
-  $form['search_input_group']['QueryText']['#attributes']['class'][] = 'search-form__textfield';
-  $form['search_input_group']['QueryText']['#attributes']['title'] = t('Search');
-
-  unset($form['search_input_group']['QueryText']['#attributes']['placeholder']);
-  unset($form['search_input_group']['europa_search_submit']['#attributes']['tabindex']);
-}
-
-/**
  * Override theme_file_link().
  */
 function europa_file_link($variables) {
@@ -268,6 +216,9 @@ function europa_file_link($variables) {
     }
 
     return _nexteuropa_formatters_file_markup($file);
+  }
+  else {
+    return theme_file_link($variables);
   }
 }
 

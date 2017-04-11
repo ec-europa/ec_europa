@@ -52,3 +52,16 @@ function europa_menu_tree__menu_nexteuropa_site_links(&$variables) {
 function europa_menu_tree__secondary(&$variables) {
   return '<ul class="menu nav navbar-nav secondary">' . $variables['tree'] . '</ul>';
 }
+
+/**
+ * Create the needed wrapper for menus in the footer.
+ */
+function _europa_menu_tree_footer($tree, $inline = FALSE) {
+  $classes[] = 'footer__menu';
+
+  if ($inline) {
+    $classes[] = 'ul-list-inline';
+  }
+
+  return '<ul class="' . implode(' ', $classes) . '">' . $tree . '</ul>';
+}
