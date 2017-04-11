@@ -2,17 +2,31 @@
 Site user menu
 */
 
+.site-user-menu--header {
+  background: #ececec;
+  text-align: right;
+
+  a { 
+    text-decoration: none;
+  }
+}
+
 .site-user-menu__list {
   @extend .reset-lists;
-
-  float: right;
   font-weight: $font-weight-bold;
+  display: inline-block;
+  padding: 0.5em;
+
+  .site-user-menu--header & {
+    font-size: $font-size-little;
+  }
 }
 
 .site-user-menu__option {
   display: inline-block;
-  padding: 0.685em 1.333em;
+  padding: 0 0.61em;
 
+  @at-root a.site-user-menu__list,
   a {
     text-decoration: none;
 
@@ -25,4 +39,20 @@ Site user menu
   &:last-child {
     padding-right: 0;
   }
+
+  &:first-child {
+    font-weight: normal;
+  }
 }
+
+@include breakpoint(screen-md-min) {
+  .site-user-menu__list {
+    float: right;
+    padding: 0.35em 0;
+
+    .site-user-menu__option {
+      padding: 0 0.95em;
+    }
+  }
+}
+
