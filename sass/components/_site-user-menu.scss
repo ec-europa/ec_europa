@@ -1,9 +1,16 @@
 /*
 Site user menu
+
+User menu in two variants
+
+Markup: html/site-user-menu.html
+
+.site-user-menu--header - Header modifier
+
+Style guide: site-user-menu
 */
 
 .site-user-menu--header {
-  background: #ececec;
   text-align: right;
 
   a { 
@@ -11,13 +18,17 @@ Site user menu
   }
 }
 
+a.site-user-menu__list {
+  display: inline-block;
+}
+
 .site-user-menu__list {
   @extend .reset-lists;
   font-weight: $font-weight-bold;
-  display: inline-block;
   padding: 0.5em;
 
   .site-user-menu--header & {
+    background: #ececec;
     font-size: $font-size-little;
   }
 }
@@ -45,14 +56,17 @@ Site user menu
   }
 }
 
-@include breakpoint(screen-md-min) {
+@include breakpoint(screen-sm-min) {
   .site-user-menu__list {
     float: right;
     padding: 0.35em 0;
+
+    .site-user-menu--header & {
+      background: none;
+    }
 
     .site-user-menu__option {
       padding: 0 0.95em;
     }
   }
 }
-

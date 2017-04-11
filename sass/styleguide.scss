@@ -17,6 +17,12 @@ $large-desktop-width: ($container-lg - $grid-gutter-width) !default;
   cursor: pointer;
 }
 
+@media (max-width: 748px) {
+  .hide-menu {
+    display: none;
+  }
+}
+
 #kss-node .kss-section {
   max-width: none;
 }
@@ -173,4 +179,15 @@ a.kss-nav__menu-link {
       padding: 50px 0;
     }
   }
+}
+
+.kss-state {
+  padding: 8px 20px;
+  margin: 15px 0;
+  border-bottom: 1px solid #ececec;
+  color: #004494; 
+  clear: both;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase; 
 }
