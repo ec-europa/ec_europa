@@ -190,4 +190,10 @@ a.kss-nav__menu-link {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase; 
+
+  &:before {
+    content: "State:";
+    margin-right: 10px;
+    display: inline-block; 
+  }
 }
