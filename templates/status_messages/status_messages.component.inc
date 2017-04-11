@@ -6,6 +6,32 @@
  */
 
 /**
+ * Implements hook_atomium_definition_HOOK().
+ */
+function europa_atomium_definition_status_messages() {
+  return array(
+    'label' => 'Status messages',
+    'description' => 'Status messages.',
+    'preview' => array(
+      'messages' => array(
+        'error' => array(
+          t('Dummy error message'),
+        ),
+        'status' => array(
+          t('Dummy status message'),
+        ),
+        'warning' => array(
+          t('Dummy warning message'),
+        ),
+        'info' => array(
+          t('Dummy info message'),
+        ),
+      ),
+    ),
+  );
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function europa_preprocess_status_messages(&$variables, $hook) {
