@@ -1,8 +1,8 @@
 const path = require('path');
 const copy = require('fs-extra').copy;
 
-const frameworkDir = path.resolve(__dirname, '../node_modules/@ec-europa/europa-component-library/framework');
-const dest = path.resolve(__dirname, '../assets');
+const frameworkDir = path.resolve(__dirname, '../../node_modules/@ec-europa/europa-component-library/framework');
+const dest = path.resolve(__dirname, '../../assets');
 
 // Copy fonts
 copy(path.resolve(frameworkDir, 'fonts'), path.resolve(dest, 'fonts'), (err) => {
