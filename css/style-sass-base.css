@@ -4539,16 +4539,13 @@ Markup: html/lists.html
 
 Style guide text.lists
 */
+ul {
+  list-style-type: disc; }
+
 ul,
 ol {
   max-width: 32em;
-  padding-left: 1em;
-  list-style-type: disc; }
-  ul ul,
-  ul ol,
-  ol ul,
-  ol ol {
-    list-style-type: disc; }
+  padding-left: 1em; }
   ul.ul-list-inline > li,
   ol.ul-list-inline > li {
     display: inline-block;
