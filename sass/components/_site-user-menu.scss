@@ -10,8 +10,9 @@ Markup: html/site-user-menu.html
 Style guide: site-user-menu
 */
 
-.site-user-menu--header {
+.site-user-menu {
   text-align: right;
+  margin: 0 -15px;
 
   a { 
     text-decoration: none;
@@ -47,16 +48,21 @@ a.site-user-menu__list {
     }
   }
 
-  &:last-child {
-    padding-right: 0;
-  }
-
   &:first-child {
     font-weight: normal;
   }
 }
 
-@include breakpoint(screen-sm-min) {
+a.site-user-menu__list {
+  display: block;
+  padding-right: 0.91em;
+}
+
+@include breakpoint(screen-md-min) {
+  .site-user-menu {
+      margin: 0;
+  }
+
   .site-user-menu__list {
     float: right;
     padding: 0.35em 0;
@@ -67,6 +73,10 @@ a.site-user-menu__list {
 
     .site-user-menu__option {
       padding: 0 0.95em;
+
+      &:last-child {
+        padding-right: 0;
+      }
     }
   }
 }

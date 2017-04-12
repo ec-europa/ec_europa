@@ -6312,7 +6312,8 @@ Style guide: siteswitcher
 .site-switcher {
   display: block;
   background-color: #f2f2f2;
-  font-size: 0.889em; }
+  font-size: 0.889em;
+  margin: 0 -15px; }
 
 .site-switcher__list li {
   display: inline-block;
@@ -6391,6 +6392,8 @@ a.site-switcher__option {
       pointer-events: none; }
 
 @media (min-width: 992px) {
+  .site-switcher {
+    margin: 0; }
   .site-switcher__list li {
     width: auto; }
   .site-switcher--footer .site-switcher__list {
@@ -6550,9 +6553,10 @@ Markup: html/site-user-menu.html
 
 Style guide: site-user-menu
 */
-.site-user-menu--header {
-  text-align: right; }
-  .site-user-menu--header a {
+.site-user-menu {
+  text-align: right;
+  margin: 0 -15px; }
+  .site-user-menu a {
     text-decoration: none; }
 
 a.site-user-menu__list {
@@ -6572,19 +6576,25 @@ a.site-user-menu__list {
     text-decoration: none; }
     a.site-user-menu__list:hover, a.site-user-menu__list:focus, a:hover, a:focus {
       text-decoration: underline; }
-  .site-user-menu__option:last-child {
-    padding-right: 0; }
   .site-user-menu__option:first-child {
     font-weight: normal; }
 
-@media (min-width: 768px) {
+a.site-user-menu__list {
+  display: block;
+  padding-right: 0.91em; }
+
+@media (min-width: 992px) {
+  .site-user-menu {
+    margin: 0; }
   .site-user-menu__list {
     float: right;
     padding: 0.35em 0; }
     .site-user-menu--header .site-user-menu__list {
       background: none; }
     .site-user-menu__list .site-user-menu__option {
-      padding: 0 0.95em; } }
+      padding: 0 0.95em; }
+      .site-user-menu__list .site-user-menu__option:last-child {
+        padding-right: 0; } }
 
 .skip-link,
 #skip-link {
