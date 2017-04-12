@@ -1353,10 +1353,8 @@ Style guide: banner.background
   .banner--background p {
     line-height: 1.45; }
 
-.banner__image {
-  height: 370px; }
-  .banner__image img {
-    max-width: none; }
+.banner__image img {
+  max-width: 200%; }
 
 .banner__content {
   padding: 0 24px 6px !important;
@@ -1374,6 +1372,8 @@ Style guide: banner.background
   .banner__image {
     position: absolute;
     z-index: 1; }
+    .banner__image img {
+      max-width: none; }
   .banner__content {
     position: relative;
     min-height: 1px;
