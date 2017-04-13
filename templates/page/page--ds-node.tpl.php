@@ -94,26 +94,8 @@
 <?php endif; ?>
 
 <header class="site-header" role="banner">
-  <div class="container-fluid">
-    <?php print render($logo); ?>
-    <?php if ($is_front && !empty($site_slogan)): ?>
-      <p class="site-slogan"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
-
-    <?php if (!empty($page['header'])): ?>
-      <section class="top-bar" aria-label="Site tools">
-        <div>
-          <div class="top-bar__wrapper">
-            <?php if ($is_front): ?>
-              <h1 class="sr-only"><?php print $site_name; ?></h1>
-              <h2 class="sr-only"><?php print t('Classes'); ?></h2>
-            <?php endif; ?>
-            <?php print render($page['header']); ?>
-          </div>
-        </div>
-      </section>
-    <?php endif; ?>
-  </div>
+  <?php print render($site_header); ?>
+  <?php print render($page['header']); ?>
 </header>
 
 <?php if (!empty($page['header_bottom'])): ?>

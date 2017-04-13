@@ -34,3 +34,12 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
   unset($form['search_input_group']['QueryText']['#attributes']['placeholder']);
   unset($form['search_input_group']['europa_search_submit']['#attributes']['tabindex']);
 }
+
+/**
+ * Implements hook_FORM_ID_alter().
+ */
+function europa_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+  $form['#attributes']['class'][] = 'search-block';
+  $form['search_block_form']['#attributes']['class'][] = 'search-form__textfield form-control';
+  $form['actions']['submit']['#attributes']['class'][] = 'btn-search search-form__btn btn btn-primary';
+}
