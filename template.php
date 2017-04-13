@@ -688,15 +688,12 @@ function europa_preprocess_block(&$variables) {
         $variables['classes_array'][] = 'nexteuropa_site_switcher';
 
         if ($links = menu_navigation_links('menu-nexteuropa-site-links')) {
-          $i = 0;
           foreach ($links as $key => $link) {
-            $theone = variable_get('ec_europa_site_switcher' == 'Informational') ? 0 : 1;
-            $links[$key]['attributes'] = [];
             $links[$key]['attributes']['class'] = ['site-switcher__option'];
-            if ($i == $theone) {
+
+            if (variable_get('ec_europa_site_switcher', 'informational') == $links[$key]['attributes']['name']) {
               $links[$key]['attributes']['class'][] = 'is-selected';
             }
-            $i++;
           }
 
           $content = theme('links', [
