@@ -10,7 +10,7 @@
  */
 function europa_preprocess_html(&$variables, $hook) {
   $this_theme_path = drupal_get_path('theme', 'europa');
-  $variables['theme_path'] = base_path() . $this_theme_path;
+  $variables['theme_path'] = $this_theme_path;
   $language = $variables['language'];
 
   if (isset($language->prefix)) {
@@ -31,10 +31,10 @@ function europa_preprocess_html(&$variables, $hook) {
   $ie9_js = array(
     '#tag' => 'script',
     '#attributes' => array(
-      'src' => $this_theme_path . '/assets/js/ie9.js',
+      'src' => file_create_url($this_theme_path . '/assets/js/ie9.js'),
     ),
     '#prefix' => '<!--[if IE 9]>',
-    '#suffix' => '</script><![endif]-->',
+    '#suffix' => '<![endif]-->',
   );
   drupal_add_html_head($ie9_js, 'ie9_js');
 
