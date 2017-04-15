@@ -682,29 +682,6 @@ function europa_preprocess_block(&$variables) {
       $variables['classes_array'][] = 'link-block';
       $variables['title_attributes_array']['class'][] = 'link-block__title';
       break;
-
-    case 'menu-nexteuropa-site-links':
-      if ($block->region == 'header_top') {
-        $variables['classes_array'][] = 'nexteuropa_site_switcher';
-
-        if ($links = menu_navigation_links('menu-nexteuropa-site-links')) {
-          foreach ($links as $key => $link) {
-            $links[$key]['attributes']['class'] = ['site-switcher__option'];
-
-            if (variable_get('ec_europa_site_switcher', 'informational') == $links[$key]['attributes']['name']) {
-              $links[$key]['attributes']['class'][] = 'is-selected';
-            }
-          }
-
-          $content = theme('links', [
-            'links' => $links,
-            'attributes' => ['class' => ['site-switcher__list']],
-          ]);
-
-          $variables['content'] = $content;
-        }
-      }
-      break;
   }
 
   // Page-level language switcher.
