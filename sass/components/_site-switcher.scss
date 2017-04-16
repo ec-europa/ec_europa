@@ -16,7 +16,6 @@ Style guide: siteswitcher
   display: block;
   background-color: $grey-lightest;
   font-size: $font-size-little;
-  margin: 0 -15px;
 }
 
 .site-switcher__list {
@@ -141,10 +140,6 @@ a.site-switcher__option {
 }
 
 @include breakpoint(screen-md-min) {
-  .site-switcher {
-    margin: 0;
-  }
-
   .site-switcher__list li {
     width: auto;
   }
@@ -153,5 +148,12 @@ a.site-switcher__option {
     .site-switcher__list {
       float: right;
     }
+  }
+}
+
+// Specific fix for the shortest element.
+@media (max-width: 625px) and (min-width: 560px) {
+  .site-switcher--header a[name="political"] {
+    padding: 1.1em 0;
   }
 }

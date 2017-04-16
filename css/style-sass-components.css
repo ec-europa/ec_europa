@@ -6312,8 +6312,7 @@ Style guide: siteswitcher
 .site-switcher {
   display: block;
   background-color: #f2f2f2;
-  font-size: 0.889em;
-  margin: 0 -15px; }
+  font-size: 0.889em; }
 
 .site-switcher__list li {
   display: inline-block;
@@ -6392,12 +6391,14 @@ a.site-switcher__option {
       pointer-events: none; }
 
 @media (min-width: 992px) {
-  .site-switcher {
-    margin: 0; }
   .site-switcher__list li {
     width: auto; }
   .site-switcher--footer .site-switcher__list {
     float: right; } }
+
+@media (max-width: 625px) and (min-width: 560px) {
+  .site-switcher--header a[name="political"] {
+    padding: 1.1em 0; } }
 
 /*
 Search form
@@ -6554,8 +6555,7 @@ Markup: html/site-user-menu.html
 Style guide: site-user-menu
 */
 .site-user-menu {
-  text-align: right;
-  margin: 0 -15px; }
+  text-align: right; }
   .site-user-menu a {
     text-decoration: none; }
 
@@ -6567,7 +6567,8 @@ a.site-user-menu__list {
   padding: 0.5em; }
   .site-user-menu--header .site-user-menu__list {
     background: #ececec;
-    font-size: 0.889em; }
+    font-size: 0.889em;
+    padding: 0.3em; }
 
 .site-user-menu__option {
   display: inline-block;
@@ -6584,8 +6585,6 @@ a.site-user-menu__list {
   padding-right: 0.91em; }
 
 @media (min-width: 992px) {
-  .site-user-menu {
-    margin: 0; }
   .site-user-menu__list {
     float: right;
     padding: 0.35em 0; }
@@ -7082,6 +7081,12 @@ ul.krumo-node,
 .wtShareNetworks {
   max-width: none; }
 
+body.admin-menu {
+  margin-top: 0 !important; }
+
+#admin-menu-wrapper {
+  display: none; }
+
 .wtShareNetworks {
   margin-bottom: 0; }
 
@@ -7092,6 +7097,10 @@ ul.krumo-node,
   html.js .filters__btn-submit.ctools-use-ajax {
     display: none; }
   html.js.ie8 .filters__btn-submit.ctools-use-ajax {
+    display: block; }
+  body.admin-menu {
+    margin-top: 20px !important; }
+  #admin-menu-wrapper {
     display: block; }
   .view-workbench-moderation .views-exposed-widget {
     width: 50%;

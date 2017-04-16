@@ -12,7 +12,6 @@ Style guide: site-user-menu
 
 .site-user-menu {
   text-align: right;
-  margin: 0 -15px;
 
   a { 
     text-decoration: none;
@@ -31,6 +30,7 @@ a.site-user-menu__list {
   .site-user-menu--header & {
     background: #ececec;
     font-size: $font-size-little;
+    padding: 0.3em;
   }
 }
 
@@ -59,10 +59,6 @@ a.site-user-menu__list {
 }
 
 @include breakpoint(screen-md-min) {
-  .site-user-menu {
-      margin: 0;
-  }
-
   .site-user-menu__list {
     float: right;
     padding: 0.35em 0;
