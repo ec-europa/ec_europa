@@ -30,6 +30,8 @@ Style guide: siteswitcher
   vertical-align: middle;
 }
 
+// @todo This selector can be safely removed when the
+// implementation will switch to the new version.
 li.site-switcher__option {
   a {
     text-decoration: none;
@@ -153,6 +155,12 @@ a.site-switcher__option {
 
 // Specific fix for the shortest element.
 @media (max-width: 625px) and (min-width: 560px) {
+  .site-switcher--header a[name="political"] {
+    padding: 1.1em 0;
+  }
+}
+
+@media (max-width: 479px) and (min-width: 462px) {
   .site-switcher--header a[name="political"] {
     padding: 1.1em 0;
   }

@@ -6400,6 +6400,10 @@ a.site-switcher__option {
   .site-switcher--header a[name="political"] {
     padding: 1.1em 0; } }
 
+@media (max-width: 479px) and (min-width: 462px) {
+  .site-switcher--header a[name="political"] {
+    padding: 1.1em 0; } }
+
 /*
 Search form
 
