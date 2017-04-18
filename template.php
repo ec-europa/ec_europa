@@ -1045,14 +1045,23 @@ function europa_preprocess_page(&$variables) {
           $node->local_tabs = drupal_render($variables['tabs']);
         }
 
-        // Use page__ds_node.tpl unless it is an exception.
+        // Use page__ds.tpl.php unless it is an exception.
         $custom_page_templates = ['page__gallery'];
         if (empty(array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
-          $variables['theme_hook_suggestions'][] = 'page__ds_node';
+          $variables['theme_hook_suggestions'][] = 'page__ds';
         }
       }
     }
   }
+  // Default ds template for taxonomy term pages using display suite.
+  if (arg(1) == 'term') {
+    $type = taxonomy_term_load(arg(2))->vocabulary_machine_name;
+
+    if (module_exists('ds') && ds_get_layout('taxonomy_term', $type, 'full')) {
+      $variables['theme_hook_suggestions'][] = 'page__ds';
+    }
+  }
+
   $variables['logo_classes'] = 'logo site-header__logo';
 }
 
