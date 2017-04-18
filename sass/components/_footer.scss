@@ -8,36 +8,120 @@ Markup: html/footer.html
 Style guide footer
 */
 
-.footer__top {
-  background-color: $blue-medium;
-}
-
-.footer__bottom {
-  background-color: $brand-primary;
-  padding: 0.9em 0;
-}
-
+.footer__improved,
 .footer__top,
 .footer__bottom {
   @extend .hidden-print;
+}
 
-  color: #fff;
+// Footer improved.
+.footer__improved {
+  padding: 1em 0;
+  background: $blue-light;
+  color: $blue-darker;
 
+  .footer__improved--label {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .footer__improved--label,
+  .footer__menu {
+    display: inline;
+  }
   a {
-    color: #fff;
-    text-decoration: underline;
+    color: $blue-darker;
+  }
+  .footer__menu-item {
+    font-size: $font-size-little;
+  }
 
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
+  // Footer improved column first.
+  .footer__improved--column-first {
+    @extend .col-md-4;
+    margin-bottom: 1em;
+
+    .footer__menu-item {
+      font-size: $font-size-medium;
+      a {
+        text-decoration: none;
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Footer improved column second.
+  .footer__improved--column-second {
+    @extend .col-md-4;
+  }
+
+  // Footer improved column third and fourth.
+  .footer__improved--column-third,
+  .footer__improved--column-fourth {
+    @extend .col-md-2;
+  }
+
+  // Footer improved desktop styles.
+  @include breakpoint(screen-md-min) {
+    padding: 1.2em 0 0.9em;
+    .footer__menu-item {
+      font-size: $font-size-little;
+    }
+    .footer__improved--column-third,
+    .footer__improved--column-fourth {
+      .footer__menu-item {
+        padding-left: 0;
+        display: block;
+      }
     }
   }
 }
 
-.footer__label {
-  display: block;
-  margin-right: 20px;
+// Footer top.
+.footer__top {
+  background-color: $blue-medium;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  .footer__menu-item {
+    font-size: $font-size-little;
+  }
+
+  // Footer top columns.
+  .footer__top--column {
+    @extend .col-md-4;
+    padding-top: 1.4em;
+
+    &:last-child {
+      padding-bottom: 1.4em;
+    }
+
+    @include breakpoint(screen-md-min) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+
+      &:last-child {
+        padding-bottom: 2em;
+      }
+    }
+  }
+}
+
+// Footer bottom.
+.footer__bottom {
+  background-color: $brand-primary;
+  padding: 0.9em 0;
+  color: #fff;
+  .footer__menu-item {
+    font-size: $font-size-little;
+  }
+  a {
+    color: #fff;
+  }
 }
 
 .footer__title {
@@ -66,8 +150,6 @@ Style guide footer
 
   .footer__menu-item {
     margin-right: 15px;
-    font-size: $font-size-little;
-
     &:first-child > a {
       padding-left: 0;
     }
@@ -77,16 +159,15 @@ Style guide footer
     }
 
     @include breakpoint(screen-md-min) {
-      .footer__top & {
-        margin-bottom: 0.5em;
+      .footer__top &,
+      .footer__improved--column-third &,
+      .footer__improved--column-fourth & {
+        margin-bottom: 0.4em;
       }
     }
 
     a {
       padding: 0;
-
-      @include _focus_outline_border(3px, $yellow-light, 5px);
-
       &:hover,
       &:active,
       &:focus {
@@ -106,26 +187,6 @@ Style guide footer
   &::after {
     content: none !important;
     display: none !important;
-  }
-}
-
-// Footer columns.
-.footer__column {
-  @extend .col-md-4;
-
-  padding-top: 1.6em;
-
-  &:last-child {
-    padding-bottom: 1.6em;
-  }
-
-  @include breakpoint(screen-md-min) {
-    padding-top: 2em;
-    padding-bottom: 2em;
-
-    &:last-child {
-      padding-bottom: 2em;
-    }
   }
 }
 
