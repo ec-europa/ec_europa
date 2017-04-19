@@ -2830,6 +2830,8 @@ Style guide footer.footer-improved
       .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item a:focus {
         background: none;
         text-decoration: none; }
+  .footer__menu.ul-list-inline .footer__menu-item {
+    line-height: 0.75em; }
 
 .footer__icon--social::before {
   margin-right: 8px !important; }

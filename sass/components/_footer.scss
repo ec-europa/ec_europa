@@ -150,6 +150,10 @@ Style guide footer.footer-improved
       }
     }
   }
+
+  &.ul-list-inline .footer__menu-item {
+    line-height: 0.75em;
+  }
 }
 
 // Icons.
