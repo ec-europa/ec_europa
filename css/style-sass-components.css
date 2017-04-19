@@ -2742,6 +2742,13 @@ Markup: html/footer.html
 
 Style guide footer
 */
+/*
+Footer for improved websites
+
+Markup: html/footer-improved.html
+
+Style guide footer.footer-improved
+*/
 .footer__improved {
   background: #b0c5de;
   color: #012b58; }
