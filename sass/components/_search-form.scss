@@ -136,16 +136,11 @@ Style guide: searchform.search-form--improved
     background: $brand-primary;
     color: #fff;
     min-height: 2.78em;
-    border-bottom: 1px solid $brand-primary;
   }
 }
 
 @include breakpoint(screen-sm-min) {
   .search-form--improved .form-control {
     bottom: 3px;
-  }
-
-  button[type="submit"] {
-    border-bottom: none;
   }
 }
