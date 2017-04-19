@@ -618,7 +618,7 @@ a.label:hover, a.label:focus {
 
 @media print {
   .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-form__wrapper, .file, .footer__top,
-  .footer__bottom, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, select.lang-select-page__list, .feedback-message, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
+  .footer__bottom, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, .search-form--improved .lang-select-page__icon.search-form__textfield-wrapper, select.lang-select-page__list, .feedback-message, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
   #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
 
@@ -820,18 +820,18 @@ Style guide: buttons.btn-collapse
 .btn-collapse:focus span.toggling-text::after {
   text-decoration: underline; }
 
-.btn-collapse .icon, .btn-collapse .date-picker .date-picker--icon, .date-picker .btn-collapse .date-picker--icon, .btn-collapse .search-form__btn {
+.btn-collapse .icon, .btn-collapse .date-picker .date-picker--icon, .date-picker .btn-collapse .date-picker--icon, .btn-collapse .search-form__btn, .btn-collapse .search-form--improved .search-form__textfield-wrapper, .search-form--improved .btn-collapse .search-form__textfield-wrapper {
   margin-left: 0.3em; }
-  .btn-collapse .icon::before, .btn-collapse .date-picker .date-picker--icon::before, .date-picker .btn-collapse .date-picker--icon::before, .btn-collapse .search-form__btn::before {
+  .btn-collapse .icon::before, .btn-collapse .date-picker .date-picker--icon::before, .date-picker .btn-collapse .date-picker--icon::before, .btn-collapse .search-form__btn::before, .btn-collapse .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse .search-form__textfield-wrapper::before {
     vertical-align: bottom;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
 
-.btn-collapse:hover .icon::before, .btn-collapse:hover .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover .date-picker--icon::before, .btn-collapse:hover .search-form__btn::before, .btn-collapse:focus .icon::before, .btn-collapse:focus .date-picker .date-picker--icon::before, .date-picker .btn-collapse:focus .date-picker--icon::before, .btn-collapse:focus .search-form__btn::before {
+.btn-collapse:hover .icon::before, .btn-collapse:hover .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover .date-picker--icon::before, .btn-collapse:hover .search-form__btn::before, .btn-collapse:hover .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:hover .search-form__textfield-wrapper::before, .btn-collapse:focus .icon::before, .btn-collapse:focus .date-picker .date-picker--icon::before, .date-picker .btn-collapse:focus .date-picker--icon::before, .btn-collapse:focus .search-form__btn::before, .btn-collapse:focus .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:focus .search-form__textfield-wrapper::before {
   color: #ffffff; }
 
-.btn-collapse.collapsed .icon::before, .btn-collapse.collapsed .date-picker .date-picker--icon::before, .date-picker .btn-collapse.collapsed .date-picker--icon::before, .btn-collapse.collapsed .search-form__btn::before {
+.btn-collapse.collapsed .icon::before, .btn-collapse.collapsed .date-picker .date-picker--icon::before, .date-picker .btn-collapse.collapsed .date-picker--icon::before, .btn-collapse.collapsed .search-form__btn::before, .btn-collapse.collapsed .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse.collapsed .search-form__textfield-wrapper::before {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -1084,7 +1084,7 @@ Style guide: icon
   src: url("../fonts/europa-icons/europa-icons.eot");
   src: url("../fonts/europa-icons/europa-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/europa-icons/europa-icons.woff") format("woff"), url("../fonts/europa-icons/europa-icons.ttf") format("truetype"), url("../fonts/europa-icons/icomoon.svg#icomoon") format("svg"); }
 
-.icon::before, .date-picker .date-picker--icon::before, .search-form__btn::before {
+.icon::before, .date-picker .date-picker--icon::before, .search-form__btn::before, .search-form--improved .search-form__textfield-wrapper::before {
   text-decoration: none;
   display: inline-block;
   font-family: 'EuropaIcons';
@@ -1209,7 +1209,7 @@ Style guide: icon
 .icon--arrow-down, .btn.btn-menu::after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle::after, .icon--arrow-down::before, .lang-select-page--transparent select.lang-select-page__list::after {
   content: '\e822'; }
 
-.icon--search, .icon--search::before, .search-form__btn::before {
+.icon--search, .icon--search::before, .search-form__btn::before, .search-form--improved .search-form__textfield-wrapper:before {
   content: '\e823'; }
 
 .icon--language, .icon--language::before {
@@ -1746,7 +1746,7 @@ Style guide contextnav
       text-decoration: underline; }
   .context-nav__more-button {
     text-decoration: underline; }
-    .context-nav__more-button .icon, .context-nav__more-button .date-picker .date-picker--icon, .date-picker .context-nav__more-button .date-picker--icon, .context-nav__more-button .search-form__btn {
+    .context-nav__more-button .icon, .context-nav__more-button .date-picker .date-picker--icon, .date-picker .context-nav__more-button .date-picker--icon, .context-nav__more-button .search-form__btn, .context-nav__more-button .search-form--improved .search-form__textfield-wrapper, .search-form--improved .context-nav__more-button .search-form__textfield-wrapper {
       padding-left: 2px;
       top: 3px;
       position: relative; }
@@ -2094,7 +2094,7 @@ Style guide expandable.1
   background: #ffd617; }
   .expandable__toggle.collapsed {
     background: none; }
-  .expandable__toggle .icon, .expandable__toggle .date-picker .date-picker--icon, .date-picker .expandable__toggle .date-picker--icon, .expandable__toggle .search-form__btn {
+  .expandable__toggle .icon, .expandable__toggle .date-picker .date-picker--icon, .date-picker .expandable__toggle .date-picker--icon, .expandable__toggle .search-form__btn, .expandable__toggle .search-form--improved .search-form__textfield-wrapper, .search-form--improved .expandable__toggle .search-form__textfield-wrapper {
     margin: 0 0.833em; }
   .expandable__toggle h3 {
     font-size: 1.222em; }
@@ -2223,7 +2223,7 @@ a.feedback-form__trigger {
 .feedback-form__btn {
   width: 12em;
   margin-left: 2.500em; }
-  .feedback-form__btn .icon, .feedback-form__btn .date-picker .date-picker--icon, .date-picker .feedback-form__btn .date-picker--icon, .feedback-form__btn .search-form__btn {
+  .feedback-form__btn .icon, .feedback-form__btn .date-picker .date-picker--icon, .date-picker .feedback-form__btn .date-picker--icon, .feedback-form__btn .search-form__btn, .feedback-form__btn .search-form--improved .search-form__textfield-wrapper, .search-form--improved .feedback-form__btn .search-form__textfield-wrapper {
     font-size: 0.778em; }
 
 #feedback-form__accordion {
@@ -2906,10 +2906,10 @@ Style guide gallery
   overflow: hidden;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical; }
-  .mediagallery__item.has-icon .mediagallery__icon .icon, .mediagallery__item.has-icon .mediagallery__icon .date-picker .date-picker--icon, .date-picker .mediagallery__item.has-icon .mediagallery__icon .date-picker--icon, .mediagallery__item.has-icon .mediagallery__icon .search-form__btn {
+  .mediagallery__item.has-icon .mediagallery__icon .icon, .mediagallery__item.has-icon .mediagallery__icon .date-picker .date-picker--icon, .date-picker .mediagallery__item.has-icon .mediagallery__icon .date-picker--icon, .mediagallery__item.has-icon .mediagallery__icon .search-form__btn, .mediagallery__item.has-icon .mediagallery__icon .search-form--improved .search-form__textfield-wrapper, .search-form--improved .mediagallery__item.has-icon .mediagallery__icon .search-form__textfield-wrapper {
     line-height: 2.667em;
     font-size: 1em; }
-    .mediagallery__item.has-icon .mediagallery__icon .icon::before, .mediagallery__item.has-icon .mediagallery__icon .date-picker .date-picker--icon::before, .date-picker .mediagallery__item.has-icon .mediagallery__icon .date-picker--icon::before, .mediagallery__item.has-icon .mediagallery__icon .search-form__btn::before {
+    .mediagallery__item.has-icon .mediagallery__icon .icon::before, .mediagallery__item.has-icon .mediagallery__icon .date-picker .date-picker--icon::before, .date-picker .mediagallery__item.has-icon .mediagallery__icon .date-picker--icon::before, .mediagallery__item.has-icon .mediagallery__icon .search-form__btn::before, .mediagallery__item.has-icon .mediagallery__icon .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .mediagallery__item.has-icon .mediagallery__icon .search-form__textfield-wrapper::before {
       margin-right: 0; }
   .mediagallery__item.has-icon .mediagallery__icon .icon--camera, .mediagallery__item.has-icon .mediagallery__icon .icon--camera::before {
     line-height: 4.000em;
@@ -4419,12 +4419,12 @@ Style guide: langselect.dropdown
   font-size: 0.778em;
   border-bottom: 1px solid #b3b4b5; }
 
-.icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn {
+.icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, .search-form--improved .lang-select-page__icon.search-form__textfield-wrapper {
   float: left;
   margin: 0;
   padding: 0;
   font-size: 2em; }
-  .icon.lang-select-page__icon::before, .date-picker .lang-select-page__icon.date-picker--icon::before, .lang-select-page__icon.search-form__btn::before {
+  .icon.lang-select-page__icon::before, .date-picker .lang-select-page__icon.date-picker--icon::before, .lang-select-page__icon.search-form__btn::before, .search-form--improved .lang-select-page__icon.search-form__textfield-wrapper::before {
     float: left;
     padding-top: 30%; }
 
@@ -5914,7 +5914,7 @@ Style guide notification
 
 .notification__content__more {
   font-weight: 600; }
-  .notification__content__more .icon, .notification__content__more .date-picker .date-picker--icon, .date-picker .notification__content__more .date-picker--icon, .notification__content__more .search-form__btn {
+  .notification__content__more .icon, .notification__content__more .date-picker .date-picker--icon, .date-picker .notification__content__more .date-picker--icon, .notification__content__more .search-form__btn, .notification__content__more .search-form--improved .search-form__textfield-wrapper, .search-form--improved .notification__content__more .search-form__textfield-wrapper {
     position: relative;
     top: 2px; }
 
@@ -6034,9 +6034,9 @@ Style guide: page-header.informational
   font-size: 0.778em; }
   .page-header__eventinfo .page-header__date--cancelled {
     text-decoration: line-through; }
-  .page-header__eventinfo .icon, .page-header__eventinfo .date-picker .date-picker--icon, .date-picker .page-header__eventinfo .date-picker--icon, .page-header__eventinfo .search-form__btn {
+  .page-header__eventinfo .icon, .page-header__eventinfo .date-picker .date-picker--icon, .date-picker .page-header__eventinfo .date-picker--icon, .page-header__eventinfo .search-form__btn, .page-header__eventinfo .search-form--improved .search-form__textfield-wrapper, .search-form--improved .page-header__eventinfo .search-form__textfield-wrapper {
     margin: 1em 2em 1em 0; }
-    .page-header__eventinfo .icon::before, .page-header__eventinfo .date-picker .date-picker--icon::before, .date-picker .page-header__eventinfo .date-picker--icon::before, .page-header__eventinfo .search-form__btn::before {
+    .page-header__eventinfo .icon::before, .page-header__eventinfo .date-picker .date-picker--icon::before, .date-picker .page-header__eventinfo .date-picker--icon::before, .page-header__eventinfo .search-form__btn::before, .page-header__eventinfo .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .page-header__eventinfo .search-form__textfield-wrapper::before {
       margin-right: 0.5em; }
 
 .page-header--xlarge-intro, .node-info-homepage.view-mode-homepage_political .page-header {
@@ -6384,7 +6384,7 @@ Search form
 
 Markup: html/search-form.html
 
-Style guide: siteheader.searchform
+Style guide: searchform
 */
 .search-form {
   display: inline-block;
@@ -6437,6 +6437,51 @@ Style guide: siteheader.searchform
 @media (min-width: 480px) {
   .search-form__textfield {
     min-height: 2.375em; } }
+
+/*
+Search form for internal search
+
+Markup: html/search-form-improved.html
+
+.search-form--improved
+
+Style guide: searchform.search-form--improved
+*/
+.search-form--improved {
+  background: #f3f3f3;
+  padding: 1.2em 1.5em; }
+  .search-form--improved h5 {
+    font-size: 1em;
+    text-transform: none;
+    padding-bottom: 1.2em; }
+  .search-form--improved .search-form__textfield-wrapper {
+    float: none !important;
+    width: 100%;
+    background: #fff;
+    border: 3px solid #fff;
+    border-bottom: none; }
+    .search-form--improved .search-form__textfield-wrapper:before {
+      position: absolute;
+      top: 25%;
+      left: 1%;
+      z-index: 3;
+      color: #b3b4b5; }
+    .search-form--improved .search-form__textfield-wrapper:hover:before {
+      display: none; }
+  .search-form--improved .form-control {
+    position: relative;
+    bottom: 0; }
+  .search-form--improved button[type="submit"] {
+    background: #004494;
+    color: #fff;
+    min-height: 2.78em;
+    border-bottom: 1px solid #004494; }
+
+@media (min-width: 768px) {
+  .search-form--improved .form-control {
+    bottom: 3px; }
+  button[type="submit"] {
+    border-bottom: none; } }
 
 .site-menu {
   margin-bottom: 0; }
