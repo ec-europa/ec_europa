@@ -94,7 +94,7 @@ Style guide: searchform.search-form--improved
 */
 
 .search-form--improved {
-  background: #f3f3f3;
+  background: $grey-lightest;
   padding: 1.2em 1.5em;
 
   h5 {
@@ -111,7 +111,7 @@ Style guide: searchform.search-form--improved
     border-bottom: none;
     @extend .icon;
 
-    &:before {
+    &::before {
       @extend .icon--search;
       position: absolute;
       top: 25%;
@@ -119,17 +119,11 @@ Style guide: searchform.search-form--improved
       z-index: 3;
       color: $grey;
     }
-
-    &:hover {
-      &:before {
-        display: none;
-      }
-    }
   }
 
-  .form-control {
-    position: relative;
-    bottom: 0;
+  .search-form__textfield {
+    text-indent: 1.4em;
+    bottom: 0; 
   }
 
   button[type="submit"] {
@@ -140,7 +134,7 @@ Style guide: searchform.search-form--improved
 }
 
 @include breakpoint(screen-sm-min) {
-  .search-form--improved .form-control {
+  .search-form--improved .search-form__textfield {
     bottom: 3px;
   }
 }
