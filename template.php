@@ -986,6 +986,10 @@ function europa_preprocess_node(&$variables) {
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
   }
+  // We have our custom element to add comments.
+  if (!empty($variables['content']['links']['comment']['#links'])) {
+    unset($variables['content']['links']['comment']['#links']['comment-add']);
+  }
 
   // Add the language attribute.
   $variables['attributes_array']['lang'] = entity_translation_get_existing_language('node', $variables['node']);
