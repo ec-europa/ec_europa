@@ -617,7 +617,8 @@ a.label:hover, a.label:focus {
   speak: none; }
 
 @media print {
-  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-form__wrapper, .file, .footer__top,
+  .hidden-print, .btn, .inpage-nav__navbar .inpage-nav__toggle, .breadcrumb, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select, .feedback-form__wrapper, .file, .footer__improved,
+  .footer__top,
   .footer__bottom, .help-block, .inpage-nav__wrapper, .lang-select-site, .lang-select-page, .icon.lang-select-page__icon, .date-picker .lang-select-page__icon.date-picker--icon, .lang-select-page__icon.search-form__btn, .search-form--improved .lang-select-page__icon.search-form__textfield-wrapper, select.lang-select-page__list, .feedback-message, .notification, .site-switcher, .search-form, .site-menu, .site-menu__toggle, .skip-link,
   #skip-link, .social-media-links, .social-media-links--field {
     display: none !important; } }
@@ -2741,29 +2742,58 @@ Markup: html/footer.html
 
 Style guide footer
 */
+/*
+Footer for improved websites
+
+Markup: html/footer-improved.html
+
+Style guide footer.footer-improved
+*/
+.footer__improved {
+  background: #b0c5de;
+  color: #012b58; }
+  .footer__improved .footer__column {
+    padding-top: 0.8em; }
+    .footer__improved .footer__column:last-child {
+      padding-top: 0;
+      padding-bottom: 0.8em; }
+  .footer__improved .footer__menu {
+    display: inline; }
+  .footer__improved .footer__menu-item {
+    font-size: 0.889em;
+    display: inline-block; }
+  .footer__improved a {
+    color: #012b58; }
+  .footer__improved h4 {
+    padding: .4em 0; }
+    .footer__improved h4 a {
+      text-decoration: none; }
+  @media (min-width: 992px) {
+    .footer__improved .footer__menu-item {
+      font-size: 0.889em; }
+    .footer__improved .footer__column {
+      padding-bottom: 1em; }
+      .footer__improved .footer__column:last-child {
+        padding-top: 1em; }
+        .footer__improved .footer__column:last-child .footer__menu-item {
+          display: block; } }
+
 .footer__top {
-  background-color: #3066a6; }
+  background-color: #3066a6;
+  color: #fff; }
+  .footer__top a {
+    color: #fff; }
+  .footer__top .footer__menu-item {
+    font-size: 0.889em; }
 
 .footer__bottom {
   background-color: #004494;
-  padding: 0.9em 0; }
-
-.footer__top,
-.footer__bottom {
+  padding: 0.9em 0;
   color: #fff; }
-  .footer__top a,
+  .footer__bottom .footer__menu-item {
+    font-size: 0.889em; }
   .footer__bottom a {
-    color: #fff;
-    text-decoration: underline; }
-    .footer__top a:hover, .footer__top a:active, .footer__top a:focus,
-    .footer__bottom a:hover,
-    .footer__bottom a:active,
-    .footer__bottom a:focus {
-      text-decoration: none; }
-
-.footer__label {
-  display: block;
-  margin-right: 20px; }
+    color: #fff; }
 
 .footer__title {
   color: #fff;
@@ -2777,6 +2807,11 @@ Style guide footer
     .footer__title {
       min-height: auto; } }
 
+.footer__label {
+  display: inline;
+  font-weight: bold;
+  margin-bottom: 0; }
+
 .footer__menu {
   margin: 0;
   padding-left: 0;
@@ -2784,23 +2819,19 @@ Style guide footer
   list-style: none; }
   .footer__menu .footer__menu-item {
     margin-right: 15px;
-    font-size: 0.889em; }
-    .footer__menu .footer__menu-item:first-child > a {
-      padding-left: 0; }
+    padding-left: 0; }
     .footer__menu .footer__menu-item:last-child {
       margin-bottom: 0; }
     @media (min-width: 992px) {
       .footer__top .footer__menu .footer__menu-item {
-        margin-bottom: 0.5em; } }
+        margin-bottom: 0.4em; } }
     .footer__menu .footer__menu-item a {
       padding: 0; }
-      .footer__menu .footer__menu-item a:focus {
-        outline: 3px solid #ffd617;
-        outline-offset: 5px;
-        text-decoration: underline; }
       .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item a:focus {
         background: none;
         text-decoration: none; }
+  .footer__menu.ul-list-inline .footer__menu-item {
+    line-height: 0.75em; }
 
 .footer__icon--social::before {
   margin-right: 8px !important; }
