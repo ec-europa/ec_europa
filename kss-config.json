@@ -20,7 +20,9 @@
     "public/js/components/filters.js",
     "public/js/components/file.js",
     "public/js/components/breadcrumb.js",
-    "public/js/components/collapse.js"
+    "public/js/components/collapse.js",
+    "public/js/components/inpage_nav.js",
+    "public/js/europa.js"
   ],
   "destination": "styleguide/assets",
   "builder": "styleguide/template/europa"

@@ -46,7 +46,8 @@ module.exports = function (grunt) {
           {expand: true, src: ['js/**'], dest: 'styleguide/assets/public/'},
           {expand: true, cwd: 'styleguide/public/js/', src: 'jquery.once.js', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: 'styleguide/public/js/', src: '**', dest: 'styleguide/assets/public/js/'},
-          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'}
+          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'},
+          {expand: true, cwd: '../../modules/ec-europa-theme-tools/nexteuropa_inpage_nav/js/', src: 'inpage_nav.js', dest: 'styleguide/assets/public/js/components/'}
         ]
       },
       all: {
@@ -71,5 +72,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('styleguide', ['clean', 'sass', 'shell', 'copy:main']);
   grunt.registerTask('copyall', ['copy:all']);
+  grunt.registerTask('copytest', ['copy:test']);
   grunt.registerTask('kss', ['shell']);
 };
