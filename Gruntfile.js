@@ -47,6 +47,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'styleguide/public/js/', src: 'jquery.once.js', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: 'styleguide/public/js/', src: '**', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'},
+          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'scrollspy.js', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: '../../modules/ec-europa-theme-tools/nexteuropa_inpage_nav/js/', src: 'inpage_nav.js', dest: 'styleguide/assets/public/js/components/'}
         ]
       },

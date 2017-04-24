@@ -14,6 +14,7 @@
     "public/js/jquery.ui.core.min.js",
     "public/js/modernizr.js",
     "public/js/drupal.js",
+    "public/js/scrollspy.js",
     "public/js/components/table-responsive.js",
     "public/js/components/lang-switcher.js",
     "public/js/components/lang-select-site.js",
