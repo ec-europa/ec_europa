@@ -648,8 +648,10 @@ Style guide: buttons
 .btn, .inpage-nav__navbar .inpage-nav__toggle {
   min-height: 2.75em;
   margin-bottom: 1em;
-  padding: 0.75em 1em;
-  line-height: 1;
+  padding: 0.5em 1em;
+  line-height: 1.5;
+  white-space: normal;
+  text-align: left;
   font-size: 0.889em;
   font-weight: 600;
   border-width: 2px;
@@ -690,10 +692,6 @@ Style guide: buttons
     color: #004494;
     border-color: #ffffff; }
   .btn.btn-ctn, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle, .btn.btn-time-line, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    line-height: 1.667;
-    white-space: normal;
     background-color: #ffd617;
     color: #000000; }
     .btn.btn-ctn:hover, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:hover, .btn.btn-time-line:hover, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:hover, .btn.btn-ctn:active, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:active, .btn.btn-time-line:active, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:active {
@@ -776,12 +774,7 @@ Style guide: buttons.btn-block
 .btn-block {
   max-width: 450px;
   width: 100%;
-  margin-bottom: -2px !important;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  line-height: 1.667;
-  white-space: normal;
-  text-align: left; }
+  margin-bottom: -2px !important; }
   .btn-block:last-child {
     margin-bottom: 10px; }
   .btn-block + .btn-block {
@@ -824,7 +817,6 @@ Style guide: buttons.btn-collapse
 .btn-collapse .icon, .btn-collapse .date-picker .date-picker--icon, .date-picker .btn-collapse .date-picker--icon, .btn-collapse .search-form__btn, .btn-collapse .search-form--improved .search-form__textfield-wrapper, .search-form--improved .btn-collapse .search-form__textfield-wrapper {
   margin-left: 0.3em; }
   .btn-collapse .icon::before, .btn-collapse .date-picker .date-picker--icon::before, .date-picker .btn-collapse .date-picker--icon::before, .btn-collapse .search-form__btn::before, .btn-collapse .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse .search-form__textfield-wrapper::before {
-    vertical-align: bottom;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
@@ -847,7 +839,7 @@ a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]), .inpage-nav__
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"])::after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"])::after {
     position: absolute;
     margin-left: 0.5em;
-    line-height: 1.4 !important; }
+    line-height: 1.9 !important; }
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-block {
     padding-right: 1em; }
     a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block::after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-block::after {
