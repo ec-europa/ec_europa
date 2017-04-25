@@ -682,6 +682,16 @@ function europa_preprocess_block(&$variables) {
       $variables['classes_array'][] = 'link-block';
       $variables['title_attributes_array']['class'][] = 'link-block__title';
       break;
+
+    case 'language_selector_site':
+      $variables['lang_code'] = $lang_code = $variables['elements']['code']['#markup'];
+      $variables['lang_name'] = $variables['elements']['label']['#markup'];
+      // Add class to block.
+      $link = url('splash');
+      $variables['classes_array'][] = 'lang-select-site';
+      $destination = drupal_get_destination()['destination'];
+      $variables['link'] = $link . '_' . $lang_code . '?' . $destination;
+      break;
   }
 
   // Page-level language switcher.
