@@ -1,13 +1,13 @@
-$(function() {
-    $(document).ready(function() {
-        var $datepicker = $("#datepicker");
+jQuery(function() {
+    jQuery(document).ready(function() {
+        var $datepicker = jQuery("#datepicker");
 
         $datepicker.datepicker({
             changeMonth: true,
             changeYear: true
         });
 
-        $(window).resize(function() {
+        jQuery(window).resize(function() {
           $datepicker.datepicker('hide');
         });
     });

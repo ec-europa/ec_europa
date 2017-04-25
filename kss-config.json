@@ -6,12 +6,16 @@
   "css": [
     "public/css/style-sass-base.css",
     "public/css/style-sass-components.css",
-    "public/css/europa_styleguide.css"
+    "public/css/europa_styleguide.css",
+    "public/css/jquery.ui.core.min.css",
+    "public/css/jquery.ui.datepicker.min.css"
   ],
   "js": [
     "public/js/jquery-1.9.1.min.js",
     "public/js/jquery.once.js",
     "public/js/jquery.ui.core.min.js",
+    "public/js/datepicker/jquery.ui.datepicker.min.js",
+    "public/js/datepicker/datepicker.js",
     "public/js/modernizr.js",
     "public/js/drupal.js",
     "public/js/scrollspy.js",

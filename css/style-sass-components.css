@@ -2056,7 +2056,7 @@ Style guide datepicker
   position: relative; }
   .date-picker .date-picker--icon {
     position: absolute;
-    top: 2.35em;
+    top: .35em;
     right: .5em;
     pointer-events: none;
     color: #b3b4b5; }
