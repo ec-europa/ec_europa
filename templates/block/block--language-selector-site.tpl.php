@@ -54,4 +54,5 @@
       <span class="lang-select-site__code-text"><?php print $lang_code; ?></span>
     </span>
   </a>
+  <div class="splash-page splash-page--overlay"></div>
 </section>
