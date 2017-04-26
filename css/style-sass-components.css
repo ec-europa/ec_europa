@@ -714,11 +714,6 @@ Style guide: buttons
       text-decoration: underline; }
     .btn.btn-menu::after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle::after {
       margin-left: 10px; }
-    .btn.btn-menu.is-collapsed::after, .inpage-nav__navbar .btn-menu.is-collapsed.inpage-nav__toggle::after {
-      -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-      transform: rotate(180deg); }
 
 .btn-ctn--border {
   background-color: #ffd617;
@@ -797,23 +792,20 @@ Markup: html/btn-collapse.html
 
 Style guide: buttons.btn-collapse
 */
-.btn-collapse span.toggling-text::after {
-  content: "\00a0"; }
-
-.btn-collapse:hover span.toggling-text,
-.btn-collapse:hover span.toggling-text::after, .btn-collapse:focus span.toggling-text,
-.btn-collapse:focus span.toggling-text::after {
-  text-decoration: underline; }
-
 .btn-collapse .icon, .btn-collapse .date-picker .date-picker--icon, .date-picker .btn-collapse .date-picker--icon, .btn-collapse .search-form__btn, .btn-collapse .search-form--improved .search-form__textfield-wrapper, .search-form--improved .btn-collapse .search-form__textfield-wrapper {
   margin-left: 0.3em; }
   .btn-collapse .icon::before, .btn-collapse .date-picker .date-picker--icon::before, .date-picker .btn-collapse .date-picker--icon::before, .btn-collapse .search-form__btn::before, .btn-collapse .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse .search-form__textfield-wrapper::before {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s; }
+    transition: all 0.3s ease 0s;
+    text-decoration: none; }
 
 .btn-collapse:hover .icon::before, .btn-collapse:hover .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover .date-picker--icon::before, .btn-collapse:hover .search-form__btn::before, .btn-collapse:hover .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:hover .search-form__textfield-wrapper::before, .btn-collapse:focus .icon::before, .btn-collapse:focus .date-picker .date-picker--icon::before, .date-picker .btn-collapse:focus .date-picker--icon::before, .btn-collapse:focus .search-form__btn::before, .btn-collapse:focus .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:focus .search-form__textfield-wrapper::before {
-  color: #ffffff; }
+  color: #ffffff;
+  text-decoration: underline; }
+
+.btn-collapse:hover .icon::before, .btn-collapse:hover .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover .date-picker--icon::before, .btn-collapse:hover .search-form__btn::before, .btn-collapse:hover .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:hover .search-form__textfield-wrapper::before, .btn-collapse:focus .icon::before, .btn-collapse:focus .date-picker .date-picker--icon::before, .date-picker .btn-collapse:focus .date-picker--icon::before, .btn-collapse:focus .search-form__btn::before, .btn-collapse:focus .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:focus .search-form__textfield-wrapper::before {
+  text-decoration: none; }
 
 .btn-collapse.collapsed .icon::before, .btn-collapse.collapsed .date-picker .date-picker--icon::before, .date-picker .btn-collapse.collapsed .date-picker--icon::before, .btn-collapse.collapsed .search-form__btn::before, .btn-collapse.collapsed .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse.collapsed .search-form__textfield-wrapper::before {
   -webkit-transform: rotate(180deg);

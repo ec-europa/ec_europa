@@ -122,12 +122,6 @@ Style guide: buttons
       @extend .icon--arrow-down;
       margin-left: 10px;
     }
-
-    &.is-collapsed {
-      &::after {
-        @include rotate(180deg);
-      }
-    }
   }
 }
 
@@ -239,30 +233,26 @@ Style guide: buttons.btn-collapse
 .btn-collapse {
   @extend .btn-default;
 
-  span.toggling-text::after {
-    content: "\00a0";
-  }
-
-  &:hover,
-  &:focus {
-    span.toggling-text,
-    span.toggling-text::after {
-      text-decoration: underline;
-    }
-  }
-
   .icon {
     margin-left: 0.3em;
 
     &::before {
       @include transition(all 0.3s ease 0s);
+      text-decoration: none;
     }
   }
 
   &:hover,
   &:focus {
-    .icon::before {
-      color: $white;
+    .icon {
+      &::before {
+        color: $white;
+        text-decoration: underline; // IE hack to remove underline on pseudo-element.
+
+      }
+      &::before {
+        text-decoration: none; // IE hack to remove underline on pseudo-element.
+      }
     }
   }
 
