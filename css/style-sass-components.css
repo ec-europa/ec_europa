@@ -4661,7 +4661,6 @@ In this section we collect many modifiers, in the example the listing--teaser ve
 Markup: html/listing--teaser.html
 
 .listing--cta - Listing CTA
-.listing--no-padding - Listing no padding
 .listing--short-spaced - Listing short spaced
 .listing--line-left - Listing line left
 .listing--no-border - Listing with no border
@@ -4727,9 +4726,6 @@ Style guide listing.3
   .listing--cta .listing__title {
     position: relative;
     padding-right: 1.3em; }
-
-.listing--no-padding ul {
-  padding-left: 0 !important; }
 
 .listing--no-border .listing__item {
   border: none !important; }
