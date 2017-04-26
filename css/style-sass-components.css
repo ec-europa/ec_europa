@@ -2127,6 +2127,8 @@ Style guide Expandable.2
 
 .expandable--link .expandable__toggle {
   background: none; }
+  .expandable--link .expandable__toggle .icon, .expandable--link .expandable__toggle .date-picker .date-picker--icon, .date-picker .expandable--link .expandable__toggle .date-picker--icon, .expandable--link .expandable__toggle .search-form__btn, .expandable--link .expandable__toggle .search-form--improved .search-form__textfield-wrapper, .search-form--improved .expandable--link .expandable__toggle .search-form__textfield-wrapper {
+    position: static; }
   .expandable--link .expandable__toggle.collapsed .icon--up::before {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);

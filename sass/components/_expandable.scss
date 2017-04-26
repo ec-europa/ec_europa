@@ -88,6 +88,10 @@ Style guide Expandable.2
   .expandable__toggle {
     background: none;
 
+    .icon {
+      position: static;
+    }
+
     &.collapsed {
       .icon--up {
         &::before {
