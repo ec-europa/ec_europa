@@ -960,6 +960,17 @@ function europa_preprocess_html(&$variables) {
  * Implements hook_preprocess_node().
  */
 function europa_preprocess_node(&$variables) {
+  // Add information about the number of sidebars.
+  if (!empty($variables['left']) && !empty($variables['right'])) {
+    $variables['content_column_class'] = 'col-md-6';
+  }
+  elseif (!empty($variables['left']) || !empty($variables['right'])) {
+    $variables['content_column_class'] = 'col-md-9';
+  }
+  else {
+    $variables['content_column_class'] = 'col-md-12';
+  }
+
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
   $variables['submitted'] = '';
@@ -974,6 +985,10 @@ function europa_preprocess_node(&$variables) {
   // Override node_url if Legacy Link is set.
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
+  }
+  // We have our custom element to add comments.
+  if (!empty($variables['content']['links']['comment']['#links'])) {
+    unset($variables['content']['links']['comment']['#links']['comment-add']);
   }
 
   // Add the language attribute.
