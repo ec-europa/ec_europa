@@ -980,6 +980,7 @@ function europa_preprocess_node(&$variables) {
     $variables['content_column_class'] = 'col-md-12';
   }
 
+  $variables['site_name'] = variable_get('site_name');
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
   $variables['submitted'] = '';
