@@ -1086,6 +1086,7 @@ Markup: html/icon.html
 .icon--in - In icon
 .icon--presentation - Presentation icon
 .icon--info - Info icon
+.icon--faq - Faq icon
 
 Style guide: icon
 */
@@ -1272,6 +1273,9 @@ Style guide: icon
 
 .icon--slides, .icon--slides::before {
   content: '\e80e'; }
+
+.icon--faq, .icon--faq::before {
+  content: '\21'; }
 
 .icon--blue-dark, .file__translations .file__translations-control::after {
   color: #004494; }
