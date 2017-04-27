@@ -46,7 +46,10 @@
   .listing__wrapper--row-two .listing:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .file__btn, .col-md-4, .file__btn, .footer__column, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .file__metadata, .file__translations .file__metadata, .hero-links__items .hero-links__item, .listing__wrapper--two-columns .listing, .col-md-6, .banner__left, .banner__paragraph, .comment__form-wrapper, .file__metadata, .file__translations .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .file--link .file__metadata--link, .col-sm-10, .file--link .file__metadata--link, .col-md-10, .file--link .file__metadata--link, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .file__translations .file__metadata, .hero-links__items .hero-links__item, .col-sm-12, .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content, .col-lg-12 {
+.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .file__btn, .col-md-4, .file__btn, .footer__column, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .file__metadata, .file__translations .file__metadata, .hero-links__items .hero-links__item, .listing__wrapper--two-columns .listing, .col-md-6, .banner__left, .banner__paragraph, .comment__form-wrapper, .file__metadata, .file__translations .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .file--link .file__metadata--link, .col-sm-10, .file--link .file__metadata--link, .col-md-10, .file--link .file__metadata--link, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .file__translations .file__metadata, .hero-links__items .hero-links__item, .col-sm-12, .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image,
+.listing__wrapper--three-columns .featured-item__content,
+.section--row-three .featured-item__image,
+.section--row-three .featured-item__content, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -315,7 +318,10 @@
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .footer__column, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__left, .banner__paragraph, .comment__form-wrapper, .file__metadata, .file__translations .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .file--link .file__metadata--link, .col-md-11, .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content {
+  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .footer__column, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__left, .banner__paragraph, .comment__form-wrapper, .file__metadata, .file__translations .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .file--link .file__metadata--link, .col-md-11, .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image,
+  .listing__wrapper--three-columns .featured-item__content,
+  .section--row-three .featured-item__image,
+  .section--row-three .featured-item__content {
     float: left; }
   .col-md-1, .file__icon {
     width: 8.3333333333%; }
@@ -339,7 +345,10 @@
     width: 83.3333333333%; }
   .col-md-11 {
     width: 91.6666666667%; }
-  .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content {
+  .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image,
+  .listing__wrapper--three-columns .featured-item__content,
+  .section--row-three .featured-item__image,
+  .section--row-three .featured-item__content {
     width: 100%; }
   .col-md-pull-0 {
     right: auto; }
@@ -875,7 +884,7 @@ Markup: html/headings.html
 .h5 - Heading 5
 .h6 - Heading 6
 
-Style guide text.headings
+Style guide Typography.headings
 */
 h1,
 h2,
@@ -943,7 +952,7 @@ Link
 
 Markup: html/link.html
 
-Style guide text.link
+Style guide Typography.link
 */
 a:focus {
   outline: 3px solid #ffd617;
@@ -1077,6 +1086,7 @@ Markup: html/icon.html
 .icon--in - In icon
 .icon--presentation - Presentation icon
 .icon--info - Info icon
+.icon--faq - Faq icon
 
 Style guide: icon
 */
@@ -1264,6 +1274,9 @@ Style guide: icon
 .icon--slides, .icon--slides::before {
   content: '\e80e'; }
 
+.icon--faq, .icon--faq::before {
+  content: '\21'; }
+
 .icon--blue-dark, .file__translations .file__translations-control::after {
   color: #004494; }
 
@@ -1405,10 +1418,8 @@ Style guide: banner.background
   .banner--background p {
     line-height: 1.45; }
 
-.banner__image {
-  height: 370px; }
-  .banner__image img {
-    max-width: none; }
+.banner__image img {
+  max-width: 200%; }
 
 .banner__content {
   padding: 0 24px 6px !important;
@@ -1426,6 +1437,8 @@ Style guide: banner.background
   .banner__image {
     position: absolute;
     z-index: 1; }
+    .banner__image img {
+      max-width: none; }
   .banner__content {
     position: relative;
     min-height: 1px;
@@ -1853,12 +1866,12 @@ Date components
 
 Markup: html/date-block-event.html
 
-.live-streaming - Live-streaming event date block
+.ongoing - Ongoing live-streaming event date block
 .cancelled      - cancelled Event date block
 
 Style guide date-block.event
 */
-.date-block.event.live-streaming {
+.date-block.event.ongoing {
   background-color: #FED437; }
 
 .date-block.event.cancelled {
@@ -2078,7 +2091,7 @@ Default implementation of the expandable component.
 
 Markup: html/expandable.html
 
-Style guide expandable.1
+Style guide Expandable.1
 */
 .expandable__content {
   float: left;
@@ -2086,7 +2099,7 @@ Style guide expandable.1
   background-color: #f2f2f2; }
   @media (min-width: 480px) {
     .expandable__content > p {
-      margin: 0.8em 0.8em 0.8em 3.2em;
+      margin: 0.8em 0.8em 0.8em 4em;
       font-size: 0.889em; } }
 
 .expandable__toggle {
@@ -2096,9 +2109,15 @@ Style guide expandable.1
   .expandable__toggle.collapsed {
     background: none; }
   .expandable__toggle .icon, .expandable__toggle .date-picker .date-picker--icon, .date-picker .expandable__toggle .date-picker--icon, .expandable__toggle .search-form__btn, .expandable__toggle .search-form--improved .search-form__textfield-wrapper, .search-form--improved .expandable__toggle .search-form__textfield-wrapper {
-    margin: 0 0.833em; }
+    margin: 0 0.833em;
+    position: absolute;
+    left: 0;
+    top: 17%; }
   .expandable__toggle h3 {
-    font-size: 1.222em; }
+    max-width: 100%;
+    font-size: 1.222em;
+    position: relative;
+    padding: .8em 0 .8em 3em; }
   .expandable__toggle:link {
     text-decoration: none; }
   .expandable__toggle:hover, .expandable__toggle:focus {
@@ -2113,7 +2132,7 @@ Markup: html/expandable--link.html
 
 .expandable--link Expandable link
 
-Style guide expandable.2
+Style guide Expandable.2
 */
 .expandable--link .expandable__content {
   background: none; }
@@ -2122,6 +2141,8 @@ Style guide expandable.2
 
 .expandable--link .expandable__toggle {
   background: none; }
+  .expandable--link .expandable__toggle .icon, .expandable--link .expandable__toggle .date-picker .date-picker--icon, .date-picker .expandable--link .expandable__toggle .date-picker--icon, .expandable--link .expandable__toggle .search-form__btn, .expandable--link .expandable__toggle .search-form--improved .search-form__textfield-wrapper, .search-form--improved .expandable--link .expandable__toggle .search-form__textfield-wrapper {
+    position: static; }
   .expandable--link .expandable__toggle.collapsed .icon--up::before {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -2157,6 +2178,8 @@ Style guide featured-item.1
   padding: 30px 0 0; }
   .listing__wrapper--three-columns .featured-item {
     padding-top: 15px; }
+  .section--row-three .featured-item {
+    padding-top: 0; }
 
 /*
 Featured item extended
@@ -2184,8 +2207,10 @@ Style guide featured-item.2
 .featured-item__content h3 a {
   color: #404040; }
 
-.listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns
-.featured-item__content {
+.listing__wrapper--three-columns .featured-item__image,
+.listing__wrapper--three-columns .featured-item__content,
+.section--row-three .featured-item__image,
+.section--row-three .featured-item__content {
   clear: left; }
 
 .listing--teaser .featured-item__image,
@@ -2393,7 +2418,9 @@ Style guide: file.1
   line-height: 1; }
 
 .file__title {
-  line-height: initial;
+  display: inline-block;
+  margin: -0.225em 0 0.5em;
+  line-height: 1.225;
   font-weight: bold; }
 
 .file__caption {
@@ -2403,20 +2430,18 @@ Style guide: file.1
   background-color: #ececec;
   font-size: 0.778em; }
 
-.file__language {
-  display: block;
-  margin-top: 0.556em;
-  line-height: initial;
-  font-size: 0.889em;
-  font-weight: bold; }
-
 .file__info {
-  margin-top: 0.778em;
-  line-height: initial;
+  line-height: 1.225;
   font-size: 0.778em; }
 
 .file__content-language {
+  display: inline-block;
+  margin-bottom: 0.5em;
   font-weight: bold; }
+
+.file__properties {
+  display: inline-block;
+  white-space: nowrap; }
 
 .file__btn {
   margin-top: 0.778em;
@@ -4661,7 +4686,6 @@ In this section we collect many modifiers, in the example the listing--teaser ve
 Markup: html/listing--teaser.html
 
 .listing--cta - Listing CTA
-.listing--no-padding - Listing no padding
 .listing--short-spaced - Listing short spaced
 .listing--line-left - Listing line left
 .listing--no-border - Listing with no border
@@ -4727,9 +4751,6 @@ Style guide listing.3
   .listing--cta .listing__title {
     position: relative;
     padding-right: 1.3em; }
-
-.listing--no-padding ul {
-  padding-left: 0 !important; }
 
 .listing--no-border .listing__item {
   border: none !important; }

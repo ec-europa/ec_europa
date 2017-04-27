@@ -170,6 +170,7 @@ $modifiers: (
   feedback: \e82e,
   camera: \e900,
   slides: \e80e,
+  faq: \21,
 );
 
 @mixin icon($modifier, $char: map-get($modifiers, $modifier)) {
