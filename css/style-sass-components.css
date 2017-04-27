@@ -2101,6 +2101,7 @@ Style guide Expandable.1
     left: 0;
     top: 17%; }
   .expandable__toggle h3 {
+    max-width: 100%;
     font-size: 1.222em;
     position: relative;
     padding: .8em 0 .8em 3em; }
