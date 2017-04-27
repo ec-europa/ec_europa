@@ -45,7 +45,8 @@ module.exports = function (grunt) {
           {expand: true, src: ['fonts/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['js/**'], dest: 'styleguide/assets/public/'},
           {expand: true, cwd: 'styleguide/public/js/', src: 'jquery.once.js', dest: 'styleguide/assets/public/js/'},
-          {expand: true, cwd: 'styleguide/public/js/', src: '**', dest: 'styleguide/assets/public/js/'}
+          {expand: true, cwd: 'styleguide/public/js/', src: '**', dest: 'styleguide/assets/public/js/'},
+          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'}
         ]
       },
       all: {
