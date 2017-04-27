@@ -35,7 +35,6 @@
 //    .listing--nostripe
 //    .listing--cta
 //    .listing--no-border
-//    .listing--no-padding
 //    .listing--agenda
 //    .listing--column-left
 //    .listing--meta
@@ -172,7 +171,6 @@ In this section we collect many modifiers, in the example the listing--teaser ve
 Markup: html/listing--teaser.html
 
 .listing--cta - Listing CTA
-.listing--no-padding - Listing no padding
 .listing--short-spaced - Listing short spaced
 .listing--line-left - Listing line left
 .listing--no-border - Listing with no border
@@ -278,13 +276,6 @@ Style guide listing.3
       @extend .listing__title--arrow;
     }
   }
-}
-
-// .listing--no-padding modifier.
-//
-// @todo Check if this it still valid.
-.listing--no-padding ul {
-  padding-left: 0 !important;
 }
 
 // .listing--no-border modifier.
