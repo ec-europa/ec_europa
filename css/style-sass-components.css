@@ -1274,6 +1274,9 @@ Style guide: icon
 .icon--slides, .icon--slides::before {
   content: '\e80e'; }
 
+.icon--faq, .icon--faq::before {
+  content: '\3f'; }
+
 .icon--blue-dark, .file__translations .file__translations-control::after {
   color: #004494; }
 
