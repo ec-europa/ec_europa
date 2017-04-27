@@ -1275,7 +1275,7 @@ Style guide: icon
   content: '\e80e'; }
 
 .icon--faq, .icon--faq::before {
-  content: '\3f'; }
+  content: '\21'; }
 
 .icon--blue-dark, .file__translations .file__translations-control::after {
   color: #004494; }
