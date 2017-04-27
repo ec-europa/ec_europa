@@ -11,7 +11,7 @@
 function europa_css_alter(&$css) {
   $path_fancybox = libraries_get_path('fancybox');
   // Prevent our css from being aggregate (ie9 requirement).
-  $path_base = drupal_get_path('theme', 'europa') . '/assets/css/style-sass-base.css';
+  $path_base = drupal_get_path('theme', 'europa') . '/css/style-sass-base.css';
   $css[$path_base]['preprocess'] = FALSE;
 
   unset(
