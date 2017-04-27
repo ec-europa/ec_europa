@@ -84,6 +84,11 @@ settings[bootstrap_breadcrumb_title] = 1
 ; --------------
 settings[bootstrap_cdn] = ""
 
+; Europa
+; --------------
+settings[ec_europa_improved_website] = 0
+
+
 ; Breakpoints
 ; --------------
 breakpoints[wide] = only screen and (min-width: 992px)

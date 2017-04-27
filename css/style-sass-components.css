@@ -6003,7 +6003,7 @@ Page header component with xlarger intro text.
 
 Markup: html/page-header--xlarge-intro.html
 
-Style guide: page-header.xlarge-intro
+Style guide: page-header.3
 */
 /*
 Political page header
@@ -6024,14 +6024,14 @@ Improved websites site page header (basic)
 
 Markup: html/page-header-basic.html
 
-Style guide: page-header.3
+Style guide: page-header.4
 */
 /*
 Improved websites site page header (complete)
 
 Markup: html/page-header-complete.html
 
-Style guide: page-header.4
+Style guide: page-header.5
 */
 .page-header {
   margin: 0;
