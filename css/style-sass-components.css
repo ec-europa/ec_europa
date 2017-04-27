@@ -46,7 +46,10 @@
   .listing__wrapper--row-two .listing:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .file__btn, .col-md-4, .file__btn, .footer__column, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .file__metadata, .file__translations .file__metadata, .hero-links__items .hero-links__item, .listing__wrapper--two-columns .listing, .col-md-6, .banner__left, .banner__paragraph, .comment__form-wrapper, .file__metadata, .file__translations .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .file--link .file__metadata--link, .col-sm-10, .file--link .file__metadata--link, .col-md-10, .file--link .file__metadata--link, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .file__translations .file__metadata, .hero-links__items .hero-links__item, .col-sm-12, .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content, .col-lg-12 {
+.col-xs-1, .col-sm-1, .file__icon, .col-md-1, .file__icon, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .context-nav__label, .col-lg-3, .col-xs-4, .col-sm-4, .file__btn, .col-md-4, .file__btn, .footer__column, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .featured-item__image, .col-lg-5, .col-xs-6, .col-sm-6, .file__metadata, .file__translations .file__metadata, .hero-links__items .hero-links__item, .listing__wrapper--two-columns .listing, .col-md-6, .banner__left, .banner__paragraph, .comment__form-wrapper, .file__metadata, .file__translations .file__metadata, .listing__wrapper--row-two .listing__item, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .featured-item__content, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .listing__wrapper--maxwidth .listing, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .context-nav__items, .col-lg-9, .col-xs-10, .file__metadata, .file--link .file__metadata--link, .col-sm-10, .file--link .file__metadata--link, .col-md-10, .file--link .file__metadata--link, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .context-nav__label, .context-nav__items, .file__btn, .file__translations .file__metadata, .hero-links__items .hero-links__item, .col-sm-12, .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image,
+.listing__wrapper--three-columns .featured-item__content,
+.section--row-three .featured-item__image,
+.section--row-three .featured-item__content, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -315,7 +318,10 @@
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .footer__column, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__left, .banner__paragraph, .comment__form-wrapper, .file__metadata, .file__translations .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .file--link .file__metadata--link, .col-md-11, .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content {
+  .col-md-1, .file__icon, .col-md-2, .col-md-3, .context-nav__label, .col-md-4, .file__btn, .footer__column, .listing__wrapper--three-columns .listing, .listing__wrapper--row-three .listing__item, .col-md-5, .featured-item__image, .col-md-6, .banner__left, .banner__paragraph, .comment__form-wrapper, .file__metadata, .file__translations .file__metadata, .listing__wrapper--row-two .listing__item, .col-md-7, .featured-item__content, .col-md-8, .listing__wrapper--maxwidth .listing, .col-md-9, .context-nav__items, .col-md-10, .file--link .file__metadata--link, .col-md-11, .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image,
+  .listing__wrapper--three-columns .featured-item__content,
+  .section--row-three .featured-item__image,
+  .section--row-three .featured-item__content {
     float: left; }
   .col-md-1, .file__icon {
     width: 8.3333333333%; }
@@ -339,7 +345,10 @@
     width: 83.3333333333%; }
   .col-md-11 {
     width: 91.6666666667%; }
-  .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns .featured-item__content {
+  .col-md-12, .banner__content, .listing__wrapper--three-columns .featured-item__image,
+  .listing__wrapper--three-columns .featured-item__content,
+  .section--row-three .featured-item__image,
+  .section--row-three .featured-item__content {
     width: 100%; }
   .col-md-pull-0 {
     right: auto; }
@@ -1405,10 +1414,8 @@ Style guide: banner.background
   .banner--background p {
     line-height: 1.45; }
 
-.banner__image {
-  height: 370px; }
-  .banner__image img {
-    max-width: none; }
+.banner__image img {
+  max-width: 200%; }
 
 .banner__content {
   padding: 0 24px 6px !important;
@@ -1426,6 +1433,8 @@ Style guide: banner.background
   .banner__image {
     position: absolute;
     z-index: 1; }
+    .banner__image img {
+      max-width: none; }
   .banner__content {
     position: relative;
     min-height: 1px;
@@ -2165,6 +2174,8 @@ Style guide featured-item.1
   padding: 30px 0 0; }
   .listing__wrapper--three-columns .featured-item {
     padding-top: 15px; }
+  .section--row-three .featured-item {
+    padding-top: 0; }
 
 /*
 Featured item extended
@@ -2192,8 +2203,10 @@ Style guide featured-item.2
 .featured-item__content h3 a {
   color: #404040; }
 
-.listing__wrapper--three-columns .featured-item__image, .listing__wrapper--three-columns
-.featured-item__content {
+.listing__wrapper--three-columns .featured-item__image,
+.listing__wrapper--three-columns .featured-item__content,
+.section--row-three .featured-item__image,
+.section--row-three .featured-item__content {
   clear: left; }
 
 .listing--teaser .featured-item__image,
@@ -2401,7 +2414,9 @@ Style guide: file.1
   line-height: 1; }
 
 .file__title {
-  line-height: initial;
+  display: inline-block;
+  margin: -0.225em 0 0.5em;
+  line-height: 1.225;
   font-weight: bold; }
 
 .file__caption {
@@ -2411,20 +2426,18 @@ Style guide: file.1
   background-color: #ececec;
   font-size: 0.778em; }
 
-.file__language {
-  display: block;
-  margin-top: 0.556em;
-  line-height: initial;
-  font-size: 0.889em;
-  font-weight: bold; }
-
 .file__info {
-  margin-top: 0.778em;
-  line-height: initial;
+  line-height: 1.225;
   font-size: 0.778em; }
 
 .file__content-language {
+  display: inline-block;
+  margin-bottom: 0.5em;
   font-weight: bold; }
+
+.file__properties {
+  display: inline-block;
+  white-space: nowrap; }
 
 .file__btn {
   margin-top: 0.778em;
