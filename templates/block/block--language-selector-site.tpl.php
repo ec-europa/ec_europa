@@ -47,7 +47,7 @@
  */
 ?>
 <section class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <a href="<?php print $link ?>" class="lang-select-site__link">
+  <a href="<?php print $link; ?>" class="lang-select-site__link">
     <span class="lang-select-site__label"><?php print $lang_name; ?></span>
     <span class="lang-select-site__code">
       <span class="icon icon--language lang-select-site__icon"></span>
