@@ -681,6 +681,14 @@ function europa_preprocess_block(&$variables) {
       $variables['classes_array'][] = 'link-block';
       $variables['title_attributes_array']['class'][] = 'link-block__title';
       break;
+
+    case 'language_selector_site':
+      $variables['lang_code'] = $variables['elements']['code']['#markup'];
+      $variables['lang_name'] = $variables['elements']['label']['#markup'];
+      // Add class to block.
+      $variables['classes_array'][] = 'lang-select-site';
+      $variables['link'] = url('splash') . '?' . drupal_get_destination()['destination'];
+      break;
   }
 
   // Page-level language switcher.
