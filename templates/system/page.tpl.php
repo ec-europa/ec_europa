@@ -158,6 +158,13 @@
         </div>
       </nav>
     <?php endif; ?>
+    
+    <?php if (theme_get_setting('ec_europa_improved_website', 'europa')): ?>
+    <div class="container-fluid page-header__site-identification">
+      <h3><?php print $site_name; ?></h3>
+    </div>
+    <?php endif; ?>
+    
     <div class="container-fluid page-header__hero-title">
       <div class="row padding-reset">
         <div class="col-lg-9">
