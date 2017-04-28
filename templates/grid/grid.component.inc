@@ -12,6 +12,7 @@ function europa_atomium_theme_grid() {
   return array(
     'grid' => array(
       'variables' => array(
+        'title' => NULL,
         'rows' => NULL,
       ),
       'template' => 'grid',
@@ -25,11 +26,22 @@ function europa_atomium_theme_grid() {
 function europa_atomium_definition_grid() {
   return array(
     'label' => 'Grid',
-    'description' => 'Banner.',
+    'description' => 'Grid layout.',
     'preview' => array(
+      'title' => 'A grid template',
       'rows' => array(
-        '0' => 'Nullam eget gravida sapien. Curabitur nec ligula varius tellus blandit auctor in non felis.',
-        '1' => 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in volutpat eros, ut fringilla tortor.'
+        array(
+          'Entry first line 1',
+          'Entry first Line 2'
+        ),
+        array(
+          'Entry line 1.',
+          'Entry line 2.'
+        ),
+        array(
+          'Entry last line 1.',
+          'Entry last line 2.'
+        ),
       ),
     ),
   );
