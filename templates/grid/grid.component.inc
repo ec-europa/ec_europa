@@ -30,6 +30,7 @@ function europa_atomium_definition_grid() {
       'rows' => array(
         '0' => 'Nullam eget gravida sapien. Curabitur nec ligula varius tellus blandit auctor in non felis.',
         '1' => 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque in volutpat eros, ut fringilla tortor.'
+      ),
     ),
   );
 }
