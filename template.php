@@ -667,6 +667,7 @@ function europa_file_link($variables) {
  */
 function europa_preprocess_block(&$variables) {
   $block = $variables['block'];
+  $variables['theme_hook_suggestions'][] = 'block__' . $block->module . '__' . str_replace('-', '_', $block->delta) . '_' . $block->region;
 
   switch ($block->delta) {
     case 'nexteuropa_feedback':
