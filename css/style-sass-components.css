@@ -6690,7 +6690,7 @@ a.site-user-menu__list {
 
 .site-user-menu__option {
   display: inline-block;
-  padding: 0 0.61em; }
+  padding: 0.375em 0.61em; }
   a.site-user-menu__list, a {
     text-decoration: none; }
     a.site-user-menu__list:hover, a.site-user-menu__list:focus, a:hover, a:focus {
@@ -6712,6 +6712,10 @@ a.site-user-menu__list {
       padding: 0 0.95em; }
       .site-user-menu__list .site-user-menu__option:last-child {
         padding-right: 0; } }
+
+@media (min-width: 480px) {
+  .site-user-menu__option {
+    padding: 0.15em 0.61em; } }
 
 .skip-link,
 #skip-link {
