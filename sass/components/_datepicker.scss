@@ -176,7 +176,7 @@ $datepicker-color-background: #eaeaea;
   .date-picker--icon {
     @extend .icon;
     position: absolute;
-    top: 2.35em;
+    top: .35em;
     right: .5em;
     // For the icon does not interfere with the clickable area.
     pointer-events: none;
