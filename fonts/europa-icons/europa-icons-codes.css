@@ -148,3 +148,6 @@
 .icon-error:before {
   content: '\e82f';
 } /* '' */
+.icon-faq:before {
+  content: '\21';
+} /* '?' */

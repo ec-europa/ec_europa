@@ -19,7 +19,7 @@ regions[content] = Content
 regions[content_bottom] = Content bottom
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
-regions[footer_top] = Footer Top
+regions[footer_improved] = Footer Improved
 regions[footer] = Footer
 regions[footer_right] = Footer right
 regions[footer_middle] = Footer middle
@@ -91,10 +91,13 @@ settings[bootstrap_cdn] = ""
 
 ; Europa
 ; --------------
+
 settings[ec_europa_introduction_field] = 0
 settings[ec_europa_site_switcher] = informational
 settings[ec_europa_user_menu] = 0
 settings[ec_europa_user_login] = 0
+settings[ec_europa_improved_website] = 0
+
 
 ; Breakpoints
 ; --------------
