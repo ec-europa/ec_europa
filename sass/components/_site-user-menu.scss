@@ -36,7 +36,7 @@ a.site-user-menu__list {
 
 .site-user-menu__option {
   display: inline-block;
-  padding: 0 0.61em;
+  padding: 0.375em 0.61em;
 
   @at-root a.site-user-menu__list,
   a {
@@ -74,5 +74,11 @@ a.site-user-menu__list {
         padding-right: 0;
       }
     }
+  }
+}
+
+@include breakpoint(screen-xs-min) {
+  .site-user-menu__option {
+    padding: 0.15em 0.61em;
   }
 }

@@ -47,6 +47,7 @@ module.exports = function (grunt) {
           {expand: true, cwd: 'styleguide/public/js/', src: 'jquery.once.js', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: 'styleguide/public/js/', src: '**', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'},
+          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'transition.js', dest: 'styleguide/assets/public/js/components/'},
           {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'scrollspy.js', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: 'styleguide/public/css/', src: 'jquery.ui.core.min.css', dest: 'styleguide/assets/public/css/'},
           {expand: true, cwd: 'styleguide/public/css/', src: 'jquery.ui.datepicker.min.css', dest: 'styleguide/assets/public/css/'},
@@ -60,7 +61,7 @@ module.exports = function (grunt) {
           {expand: true, src: ['bootstrap-sass/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['bootstrap/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'}
         ]
       }
     }
