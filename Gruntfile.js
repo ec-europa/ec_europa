@@ -46,7 +46,12 @@ module.exports = function (grunt) {
           {expand: true, src: ['js/**'], dest: 'styleguide/assets/public/'},
           {expand: true, cwd: 'styleguide/public/js/', src: 'jquery.once.js', dest: 'styleguide/assets/public/js/'},
           {expand: true, cwd: 'styleguide/public/js/', src: '**', dest: 'styleguide/assets/public/js/'},
-          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'}
+          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'collapse.js', dest: 'styleguide/assets/public/js/components/'},
+          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'transition.js', dest: 'styleguide/assets/public/js/components/'},
+          {expand: true, cwd: 'bootstrap-sass/js/bootstrap/', src: 'scrollspy.js', dest: 'styleguide/assets/public/js/'},
+          {expand: true, cwd: 'styleguide/public/css/', src: 'jquery.ui.core.min.css', dest: 'styleguide/assets/public/css/'},
+          {expand: true, cwd: 'styleguide/public/css/', src: 'jquery.ui.datepicker.min.css', dest: 'styleguide/assets/public/css/'},
+          {expand: true, cwd: '../../modules/ec-europa-theme-tools/nexteuropa_inpage_nav/js/', src: 'inpage_nav.js', dest: 'styleguide/assets/public/js/components/'}
         ]
       },
       all: {
@@ -56,7 +61,7 @@ module.exports = function (grunt) {
           {expand: true, src: ['bootstrap-sass/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['bootstrap/**'], dest: 'styleguide/assets/public/'},
           {expand: true, src: ['images/**'], dest: 'styleguide/assets/public/'},
-          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'},
+          {expand: true, src: ['css/**'], dest: 'styleguide/assets/public/'}
         ]
       }
     }
@@ -71,5 +76,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('styleguide', ['clean', 'sass', 'shell', 'copy:main']);
   grunt.registerTask('copyall', ['copy:all']);
+  grunt.registerTask('copytest', ['copy:test']);
   grunt.registerTask('kss', ['shell']);
 };
