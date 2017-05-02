@@ -559,9 +559,11 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
  * Generate the first breadcrumb items basing on a custom menu.
  */
 function _europa_breadcrumb_menu(&$variables) {
-  $menu_links = menu_tree('menu-dt-breadcrumb-menu');
-  $new_items = [];
   global $language;
+
+  $menu = theme_get_setting('ec-europa-breadcrumb-menu');
+  $menu_links = menu_tree($menu);
+  $new_items = [];
   $front = drupal_is_front_page();
 
   if (!empty($menu_links)) {
