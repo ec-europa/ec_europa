@@ -88,12 +88,12 @@ Style guide: page-header.5
       padding-top: 1em;
 
       .col-lg-9 {
-
         h1 {
           padding-top: 0;
         }
 
         > .meta {
+          + h1,
           + * h1 {
             padding-top: 0.5em;
           }
