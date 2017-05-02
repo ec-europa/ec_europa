@@ -277,7 +277,6 @@ Style guide: buttons.btn-collapse
 
     &::before {
       vertical-align: bottom;
-      @include transition(all 0.3s ease 0s);
     }
   }
 
@@ -288,17 +287,8 @@ Style guide: buttons.btn-collapse
     }
   }
 
-  &.collapsed {
-    .icon::before {
-      @include rotate(180deg);
-    }
-  }
-}
-
-.no-js {
-  .btn-collapse {
+  .no-js & {
     display: none;
-    visibility: hidden;
   }
 }
 
