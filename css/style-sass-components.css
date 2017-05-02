@@ -6033,6 +6033,11 @@ Style guide: page-header.5
       font-weight: normal; }
     .page-header .page-header__site-identification + .page-header__hero-title {
       padding-top: 1em; }
+      .page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 h1 {
+        padding-top: 0; }
+      .page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 > .meta + h1,
+      .page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 > .meta + * h1 {
+        padding-top: 0.5em; }
   .page-header p {
     max-width: 40em;
     margin: 0;
