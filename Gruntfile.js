@@ -25,9 +25,9 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-            'css/europa_styleguide.css': 'assets/sass/styleguide.scss',
-            'css/style-sass-base.css': 'assets/sass/app_base.scss',
-            'css/style-sass-components.css': 'assets/sass/app_components.scss'
+          'css/europa_styleguide.css': 'assets/sass/styleguide.scss',
+          'css/style-sass-base.css': 'assets/sass/app_base.scss',
+          'css/style-sass-components.css': 'assets/sass/app_components.scss'
         }
       }
     },
@@ -111,6 +111,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('styleguide', ['clean', 'sass', 'shell', 'copy:main']);
   grunt.registerTask('copyall', ['copy:all']);
-    grunt.registerTask('copytest', ['copy:test']);
+  grunt.registerTask('copytest', ['copy:test']);
   grunt.registerTask('kss', ['shell']);
 };
