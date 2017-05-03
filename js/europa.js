@@ -126,19 +126,19 @@
           toggler_text = is_shown ? hide_text : show_text,
           icon_class = is_shown ? 'icon--up' : 'icon--down';
 
-      $arrow.addClass(icon_class);
-      $fillMe.text(toggler_text);
+        $arrow.addClass(icon_class);
+        $fillMe.text(toggler_text);
 
       $this.click(function (event) {
-        toggler_text = $fillMe.text() == hide_text ? show_text : hide_text;
-        if ($arrow.hasClass('icon--down')) {
+          toggler_text = $fillMe.text() == hide_text ? show_text : hide_text;
+          if ($arrow.hasClass('icon--down')) {
           $arrow.removeClass('icon--down').addClass('icon--up');
         }
-        else {
-          $arrow.removeClass('icon--up').addClass('icon--down');
-        }
+          else {
+              $arrow.removeClass('icon--up').addClass('icon--down');
+          }
 
-        $fillMe.text(toggler_text);
+          $fillMe.text(toggler_text);
       });
     });
   };

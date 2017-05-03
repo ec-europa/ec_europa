@@ -588,36 +588,45 @@ a.label:hover, a.label:focus {
     background-color: #c9302c; }
 
 .fade {
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear; }
-  .fade.in {
-    opacity: 1; }
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+}
+
+.fade.in {
+    opacity: 1;
+}
 
 .collapse {
-  display: none;
-  visibility: hidden; }
-  .collapse.in {
+    display: none;
+    visibility: hidden;
+}
+
+.collapse.in {
     display: block;
-    visibility: visible; }
+    visibility: visible;
+}
 
 tr.collapse.in {
-  display: table-row; }
+    display: table-row;
+}
 
 tbody.collapse.in {
-  display: table-row-group; }
+    display: table-row-group;
+}
 
 .collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition-property: height, visibility;
-  transition-property: height, visibility;
-  -webkit-transition-duration: 0.35s;
-  transition-duration: 0.35s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease; }
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-property: height, visibility;
+    transition-property: height, visibility;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
 
 .embed-responsive, .file--video .file__container {
   position: relative;
@@ -688,10 +697,10 @@ Style guide: buttons
 .btn, .inpage-nav__navbar .inpage-nav__toggle {
   min-height: 2.75em;
   margin-bottom: 1em;
-  padding: 0.5em 1em;
-  line-height: 1.5;
-  white-space: normal;
-  text-align: left;
+    padding: 0.5em 1em;
+    line-height: 1.5;
+    white-space: normal;
+    text-align: left;
   font-size: 0.889em;
   font-weight: 600;
   border-width: 2px;
@@ -718,22 +727,26 @@ Style guide: buttons
     border-color: #004494; }
     .btn.btn-default:hover, .btn.btn-collapse:hover, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:hover, .inpage-nav__navbar .btn-default.inpage-nav__toggle:hover, .btn.btn-default:focus, .btn.btn-collapse:focus, .inpage-nav__navbar .btn-collapse.inpage-nav__toggle:focus, .inpage-nav__navbar .btn-default.inpage-nav__toggle:focus {
       background-color: #004494;
-      color: #fff; }
+        color: #fff;
+    }
   .btn.btn-primary, .inpage-nav__navbar .btn-primary.inpage-nav__toggle {
     border-color: #004494; }
     .btn.btn-primary:hover, .inpage-nav__navbar .btn-primary.inpage-nav__toggle:hover, .btn.btn-primary:active, .inpage-nav__navbar .btn-primary.inpage-nav__toggle:active {
-      background-color: #fff;
+        background-color: #fff;
       color: #004494; }
     .btn.btn-primary:focus, .inpage-nav__navbar .btn-primary.inpage-nav__toggle:focus {
       background-color: #004494;
-      color: #fff; }
+        color: #fff;
+    }
   .btn.btn-secondary, .inpage-nav__navbar .btn-secondary.inpage-nav__toggle {
-    background-color: #fff;
+      background-color: #fff;
     color: #004494;
-    border-color: #fff; }
+      border-color: #fff;
+  }
   .btn.btn-ctn, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle, .btn.btn-time-line, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle {
     background-color: #ffd617;
-    color: #000; }
+      color: #000;
+  }
     .btn.btn-ctn:hover, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:hover, .btn.btn-time-line:hover, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:hover, .btn.btn-ctn:active, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle:active, .btn.btn-time-line:active, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle:active {
       background-color: #ffd617;
       border-color: #404040; }
@@ -741,19 +754,23 @@ Style guide: buttons
       border-color: #404040;
       outline-color: #404040; }
     .btn.btn-ctn::after, .inpage-nav__navbar .btn-ctn.inpage-nav__toggle::after, .btn.btn-time-line::after, .inpage-nav__navbar .btn-time-line.inpage-nav__toggle::after {
-      margin-left: 10px; }
+        margin-left: 10px;
+    }
   .btn.btn-menu, .inpage-nav__navbar .btn-menu.inpage-nav__toggle {
     background-color: #004494;
-    color: #fff;
+      color: #fff;
     border-color: #004494; }
     .btn.btn-menu:hover, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:hover, .btn.btn-menu:active, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:active, .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
-      color: #fff; }
+        color: #fff;
+    }
     .btn.btn-menu:focus, .inpage-nav__navbar .btn-menu.inpage-nav__toggle:focus {
-      outline: 3px solid #ffd617;
-      outline-offset: -3px;
-      text-decoration: underline; }
+        outline: 3px solid #ffd617;
+        outline-offset: -3px;
+        text-decoration: underline;
+    }
     .btn.btn-menu::after, .inpage-nav__navbar .btn-menu.inpage-nav__toggle::after {
-      margin-left: 10px; }
+        margin-left: 10px;
+    }
 
 .btn--margin-top {
   margin-top: 0.556em; }
@@ -788,7 +805,8 @@ Style guide: buttons.btn-block
 .btn-block {
   max-width: 450px;
   width: 100%;
-  margin-bottom: -2px !important; }
+    margin-bottom: -2px !important;
+}
   .btn-block:last-child {
     margin-bottom: 10px; }
   .btn-block + .btn-block {
@@ -806,7 +824,8 @@ Style guide: buttons.btn-search
 .btn.btn-search, .inpage-nav__navbar .btn-search.inpage-nav__toggle {
   background-color: #e2e2e2;
   color: #004494;
-  border-color: #fff; }
+    border-color: #fff;
+}
   .btn.btn-search:hover, .inpage-nav__navbar .btn-search.inpage-nav__toggle:hover {
     background-color: #e2e2e2;
     color: #404040; }
@@ -823,32 +842,37 @@ Style guide: buttons.btn-collapse
 .btn-collapse .icon, .btn-collapse .date-picker .date-picker--icon, .date-picker .btn-collapse .date-picker--icon, .btn-collapse .search-form__btn, .btn-collapse .search-form--improved .search-form__textfield-wrapper, .search-form--improved .btn-collapse .search-form__textfield-wrapper {
   margin-left: 0.3em; }
   .btn-collapse .icon::before, .btn-collapse .date-picker .date-picker--icon::before, .date-picker .btn-collapse .date-picker--icon::before, .btn-collapse .search-form__btn::before, .btn-collapse .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse .search-form__textfield-wrapper::before {
-    text-decoration: none;
+      text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s; }
 
 .btn-collapse:hover .icon::before, .btn-collapse:hover .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover .date-picker--icon::before, .btn-collapse:hover .search-form__btn::before, .btn-collapse:hover .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:hover .search-form__textfield-wrapper::before, .btn-collapse:focus .icon::before, .btn-collapse:focus .date-picker .date-picker--icon::before, .date-picker .btn-collapse:focus .date-picker--icon::before, .btn-collapse:focus .search-form__btn::before, .btn-collapse:focus .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:focus .search-form__textfield-wrapper::before {
-  color: #fff;
-  text-decoration: underline; }
+    color: #fff;
+    text-decoration: underline;
+}
 
 .btn-collapse:hover .icon::before, .btn-collapse:hover .date-picker .date-picker--icon::before, .date-picker .btn-collapse:hover .date-picker--icon::before, .btn-collapse:hover .search-form__btn::before, .btn-collapse:hover .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:hover .search-form__textfield-wrapper::before, .btn-collapse:focus .icon::before, .btn-collapse:focus .date-picker .date-picker--icon::before, .date-picker .btn-collapse:focus .date-picker--icon::before, .btn-collapse:focus .search-form__btn::before, .btn-collapse:focus .search-form--improved .search-form__textfield-wrapper::before, .search-form--improved .btn-collapse:focus .search-form__textfield-wrapper::before {
-  text-decoration: none; }
+    text-decoration: none;
+}
 
 .no-js .btn-collapse {
-  display: none; }
+    display: none;
+}
 
 a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]), .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]) {
   padding-right: 2.2em; }
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"])::after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"])::after {
     position: absolute;
-    line-height: 1.9 !important; }
+      line-height: 1.9 !important;
+  }
   a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-block {
     padding-right: 1em; }
     a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-block::after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-block::after {
       position: static;
       line-height: inherit; }
-  a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn::after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn::after, a.btn[href^="http"].btn-time-line:not(.is-internal):not([href*="ec.europa.eu"])::after, .inpage-nav__navbar a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"])::after, a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu::after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu::after {
+
+a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn::after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-ctn::after, a.btn[href^="http"].btn-time-line:not(.is-internal):not([href*="ec.europa.eu"])::after, .inpage-nav__navbar a[href^="http"].btn-time-line.inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"])::after, a.btn[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu::after, .inpage-nav__navbar a[href^="http"].inpage-nav__toggle:not(.is-internal):not([href*="ec.europa.eu"]).btn-menu::after {
     line-height: 2.0 !important; }
 
 /*
@@ -2051,7 +2075,7 @@ Style guide datepicker
   position: relative; }
   .date-picker .date-picker--icon {
     position: absolute;
-    top: .35em;
+      top: .35em;
     right: .5em;
     pointer-events: none;
     color: #b3b4b5; }
@@ -2096,8 +2120,8 @@ Style guide Expandable.1
     left: 0;
     top: 17%; }
   .expandable__toggle h3 {
-    max-width: none;
-    margin-right: 1em;
+      max-width: none;
+      margin-right: 1em;
     font-size: 1.222em;
     position: relative;
     padding: .8em 0 .8em 3em; }
@@ -4764,7 +4788,7 @@ Style guide listing.6
 .listing--navigation .listing__section-title {
   padding: 0.75em 0 1.5em 0;
   line-height: 1.2728em;
-  font-size: 1em;
+    font-size: 1em;
   color: #004494; }
 
 .listing--navigation .listing__description {
@@ -4782,8 +4806,8 @@ Style guide listing.6
   float: left;
   max-width: 32em;
   width: 100%;
-  margin: 0.611em 0 0 0;
-  padding-top: 1.111em;
+    margin: 0.611em 0 0 0;
+    padding-top: 1.111em;
   border-top: 1px solid #e2e2e2; }
 
 @media (min-width: 480px) {
@@ -4792,7 +4816,9 @@ Style guide listing.6
     .listing--navigation .listing__section-title {
       font-size: 1.222em; }
     .listing--navigation .listing__description {
-      font-size: 1em; } }
+        font-size: 1em;
+    }
+}
 
 .listing__date {
   float: left; }
@@ -6034,11 +6060,15 @@ Style guide: page-header.5
       font-weight: normal; }
     .page-header .page-header__site-identification + .page-header__hero-title {
       padding-top: 1em; }
-      .page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 h1 {
-        padding-top: 0; }
-      .page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 > .meta + h1,
-      .page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 > .meta + * h1 {
-        padding-top: 0.5em; }
+
+.page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 h1 {
+    padding-top: 0;
+}
+
+.page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 > .meta + h1,
+.page-header .page-header__site-identification + .page-header__hero-title .col-lg-9 > .meta + * h1 {
+    padding-top: 0.5em;
+}
   .page-header p {
     max-width: 40em;
     margin: 0;
@@ -6377,38 +6407,53 @@ Style guide: siteswitcher
   vertical-align: middle; }
 
 li.site-switcher__option a {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  padding: 0.5em 1.667em;
-  line-height: 1.3;
-  font-weight: bold; }
-  li.site-switcher__option a:hover, li.site-switcher__option a:focus {
-    text-decoration: underline; }
-  li.site-switcher__option a::after, li.site-switcher__option a.is-external::after, li.site-switcher__option a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, li.site-switcher__option .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) a.listing__title::after, .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) li.site-switcher__option a.listing__title::after {
-    content: none !important; }
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 0.5em 1.667em;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+li.site-switcher__option a:hover, li.site-switcher__option a:focus {
+    text-decoration: underline;
+}
+
+li.site-switcher__option a::after, li.site-switcher__option a.is-external::after, li.site-switcher__option a[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, li.site-switcher__option .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) a.listing__title::after, .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) li.site-switcher__option a.listing__title::after {
+    content: none !important;
+}
 
 li.site-switcher__option.is-selected {
-  background-color: #004494;
-  border-left: none; }
-  li.site-switcher__option.is-selected > a {
-    color: #ffffff; }
-
-a.site-switcher__option {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  padding: 0.5em 1.667em;
-  line-height: 1.3;
-  font-weight: bold; }
-  a.site-switcher__option:hover, a.site-switcher__option:focus {
-    text-decoration: underline; }
-  a.site-switcher__option::after, a.site-switcher__option.is-external::after, a.site-switcher__option[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) a.site-switcher__option.listing__title::after {
-    content: none !important; }
-  a.site-switcher__option.is-selected {
     background-color: #004494;
     border-left: none;
-    color: #ffffff; }
+}
+
+li.site-switcher__option.is-selected > a {
+    color: #ffffff;
+}
+
+a.site-switcher__option {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 0.5em 1.667em;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+a.site-switcher__option:hover, a.site-switcher__option:focus {
+    text-decoration: underline;
+}
+
+a.site-switcher__option::after, a.site-switcher__option.is-external::after, a.site-switcher__option[href^="http"]:not([href*="ec.europa.eu"]):not(.is-internal)::after, .listing__item .listing__title a[href^="http"]:not(.is-internal):not([href*="ec.europa.eu"]) a.site-switcher__option.listing__title::after {
+    content: none !important;
+}
+
+a.site-switcher__option.is-selected {
+    background-color: #004494;
+    border-left: none;
+    color: #ffffff;
+}
 
 .site-switcher--header .site-switcher__list:first-child {
   border-left: 1px solid #b3b4b5; }
@@ -6446,18 +6491,22 @@ a.site-switcher__option {
       pointer-events: none; }
 
 @media (min-width: 992px) {
-  .site-switcher__list li {
+    .site-switcher__list li {
     width: auto; }
   .site-switcher--footer .site-switcher__list {
     float: right; } }
 
 @media (max-width: 625px) and (min-width: 560px) {
-  .site-switcher--header a[name="political"] {
-    padding: 1.1em 0; } }
+    .site-switcher--header a[name="political"] {
+        padding: 1.1em 0;
+    }
+}
 
 @media (max-width: 479px) and (min-width: 462px) {
-  .site-switcher--header a[name="political"] {
-    padding: 1.1em 0; } }
+    .site-switcher--header a[name="political"] {
+        padding: 1.1em 0;
+    }
+}
 
 /*
 Search form
@@ -6654,49 +6703,72 @@ Markup: html/site-user-menu.html
 Style guide: site-user-menu
 */
 .site-user-menu {
-  text-align: right; }
-  .site-user-menu a {
-    text-decoration: none; }
+    text-align: right;
+}
+
+.site-user-menu a {
+    text-decoration: none;
+}
 
 a.site-user-menu__list {
-  display: inline-block; }
+    display: inline-block;
+}
 
 .site-user-menu__list {
-  font-weight: 600;
-  padding: 0.5em; }
-  .site-user-menu--header .site-user-menu__list {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.site-user-menu--header .site-user-menu__list {
     background: #ececec;
     font-size: 0.889em;
-    padding: 0.3em; }
+    padding: 0.3em;
+}
 
 .site-user-menu__option {
   display: inline-block;
-  padding: 0.375em 0.61em; }
-  a.site-user-menu__list, a {
+    padding: 0.375em 0.61em;
+}
+
+a.site-user-menu__list, a {
     text-decoration: none; }
-    a.site-user-menu__list:hover, a.site-user-menu__list:focus, a:hover, a:focus {
+
+a.site-user-menu__list:hover, a.site-user-menu__list:focus, a:hover, a:focus {
       text-decoration: underline; }
-  .site-user-menu__option:first-child {
-    font-weight: normal; }
+
+.site-user-menu__option:first-child {
+    font-weight: normal;
+}
 
 a.site-user-menu__list {
-  display: block;
-  padding-right: 0.91em; }
+    display: block;
+    padding-right: 0.91em;
+}
 
 @media (min-width: 992px) {
-  .site-user-menu__list {
-    float: right;
-    padding: 0.35em 0; }
+    .site-user-menu__list {
+        float: right;
+        padding: 0.35em 0;
+    }
+
     .site-user-menu--header .site-user-menu__list {
-      background: none; }
+        background: none;
+    }
+
     .site-user-menu__list .site-user-menu__option {
-      padding: 0 0.95em; }
-      .site-user-menu__list .site-user-menu__option:last-child {
-        padding-right: 0; } }
+        padding: 0 0.95em;
+    }
+
+    .site-user-menu__list .site-user-menu__option:last-child {
+        padding-right: 0;
+    }
+}
 
 @media (min-width: 480px) {
-  .site-user-menu__option {
-    padding: 0.15em 0.61em; } }
+    .site-user-menu__option {
+        padding: 0.15em 0.61em;
+    }
+}
 
 .skip-link,
 #skip-link {
@@ -7185,10 +7257,12 @@ ul.krumo-node,
   max-width: none; }
 
 body.admin-menu {
-  margin-top: 0 !important; }
+    margin-top: 0 !important;
+}
 
 #admin-menu-wrapper {
-  display: none; }
+    display: none;
+}
 
 .wtShareNetworks {
   margin-bottom: 0; }
@@ -7200,10 +7274,14 @@ body.admin-menu {
   html.js .filters__btn-submit.ctools-use-ajax {
     display: none; }
   html.js.ie8 .filters__btn-submit.ctools-use-ajax {
-    display: block; }
-  body.admin-menu {
-    margin-top: 20px !important; }
-  #admin-menu-wrapper {
+      display: block;
+  }
+
+    body.admin-menu {
+        margin-top: 20px !important;
+    }
+
+    #admin-menu-wrapper {
     display: block; }
   .view-workbench-moderation .views-exposed-widget {
     width: 50%;
