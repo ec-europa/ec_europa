@@ -1,9 +1,8 @@
 name = Europa
-description = NextEuropa base theme, based on Atomium.
-base theme = atomium
+description = NextEuropa base theme, based on Bootstrap 3.
+base theme = bootstrap
 core = 7.x
 php = 5.2.4
-screenshot = assets/images/screenshot.png
 
 ; ========================================
 ; Regions
@@ -30,34 +29,64 @@ regions[footer_bottom] = Footer bottom
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = assets/css/style-sass-base.css
-stylesheets[all][] = assets/css/style-sass-components.css
-stylesheets[all][] = assets/css/europa.css
+stylesheets[all][] = css/style-sass-base.css
+stylesheets[all][] = css/style-sass-components.css
+
 ; ========================================
 ; Scripts
 ; ========================================
-;scripts[] = assets/bootstrap-sass/js/bootstrap/affix.js
-;scripts[] = assets/bootstrap-sass/js/bootstrap/alert.js
-;scripts[] = assets/bootstrap-sass/js/bootstrap/collapse.js
-;scripts[] = assets/bootstrap-sass/js/bootstrap/dropdown.js
-;scripts[] = assets/bootstrap-sass/js/bootstrap/tooltip.js
-;scripts[] = assets/bootstrap-sass/js/bootstrap/popover.js
-;scripts[] = assets/bootstrap-sass/js/bootstrap/scrollspy.js
-;scripts[] = assets/bootstrap-sass/js/bootstrap/tab.js
-;scripts[] = assets/bootstrap-sass/js/bootstrap/transition.js
-scripts[] = assets/js/libraries/modernizr/modernizr.js
-scripts[] = assets/js/libraries/enquire.min.js
-scripts[] = assets/js/libraries/velocity.min.js
-scripts[] = assets/js/libraries/jquery.equalheight.min.js
-scripts[] = assets/js/misc/ajax.js
-scripts[] = assets/js/europa.js
-scripts[] = assets/js/europa_tabs.js
-scripts[] = assets/js/components/table-responsive.js
-scripts[] = assets/js/components/lang-select-site.js
+scripts[] = bootstrap-sass/js/bootstrap/affix.js
+scripts[] = bootstrap-sass/js/bootstrap/alert.js
+scripts[] = bootstrap-sass/js/bootstrap/collapse.js
+scripts[] = bootstrap-sass/js/bootstrap/dropdown.js
+scripts[] = bootstrap-sass/js/bootstrap/tooltip.js
+scripts[] = bootstrap-sass/js/bootstrap/popover.js
+scripts[] = bootstrap-sass/js/bootstrap/scrollspy.js
+scripts[] = bootstrap-sass/js/bootstrap/tab.js
+scripts[] = bootstrap-sass/js/bootstrap/transition.js
+scripts[] = js/libraries/modernizr/modernizr.js
+scripts[] = js/libraries/enquire.min.js
+scripts[] = js/libraries/velocity.min.js
+scripts[] = js/libraries/jquery.equalheight.min.js
+scripts[] = js/misc/ajax.js
+scripts[] = js/europa.js
+scripts[] = js/europa_tabs.js
+scripts[] = js/components/table-responsive.js
 
 ; ========================================
 ; Settings
 ; ========================================
+
+; Region Wells
+; --------------
+settings[bootstrap_region_well-sidebar_first] = ''
+
+; Tooltips
+; --------------
+settings[bootstrap_tooltip_enabled] = 0
+
+; Anchors
+; --------------
+settings[bootstrap_anchors_fix] = 0
+settings[bootstrap_anchors_smooth_scrolling] = 0
+
+; Popover
+; --------------
+settings[bootstrap_popover_enabled] = 1
+
+; Breadcrumbs
+; --------------
+settings[bootstrap_breadcrumb] = 0
+settings[bootstrap_breadcrumb_home] = 1
+settings[bootstrap_breadcrumb_title] = 1
+
+; Advanced
+; --------------
+settings[bootstrap_cdn] = ""
+
+; Europa
+; --------------
+settings[ec_europa_improved_website] = 0
 
 ; Breakpoints
 ; --------------
@@ -72,46 +101,3 @@ multipliers[medium][] = 2x
 multipliers[narrow][] = 2x
 multipliers[mobile][] = 2x
 multisite_version = 2.2
-
-; CSS
-; --------------
-; Necessary module CSS.
-
-;exclude[css][] = 'modules/block/block.css'
-;exclude[css][] = 'modules/node/node.css'
-;exclude[css][] = 'modules/system/admin.css'
-;exclude[css][] = 'modules/system/system.css'
-;exclude[css][] = 'modules/system/system.admin.css'
-;exclude[css][] = 'modules/system/system.base.css'
-;exclude[css][] = 'misc/vertical-tabs.css'
-;exclude[css][] = 'modules/filter/filter.css'
-
-exclude[css][] = 'modules/aggregator/aggregator.css'
-exclude[css][] = 'modules/book/book.css'
-exclude[css][] = 'modules/block/block.css'
-exclude[css][] = 'modules/comment/comment.css'
-exclude[css][] = 'modules/dblog/dblog.css'
-exclude[css][] = 'modules/field/theme/field.css'
-exclude[css][] = 'modules/file/file.css'
-exclude[css][] = 'modules/forum/forum.css'
-exclude[css][] = 'modules/help/help.css'
-exclude[css][] = 'modules/menu/menu.css'
-exclude[css][] = 'modules/node/node.css'
-exclude[css][] = 'modules/openid/openid.css'
-exclude[css][] = 'modules/poll/poll.css'
-exclude[css][] = 'modules/profile/profile.css'
-exclude[css][] = 'modules/search/search.css'
-exclude[css][] = 'modules/statistics/statistics.css'
-exclude[css][] = 'modules/syslog/syslog.css'
-exclude[css][] = 'modules/system/admin.css'
-exclude[css][] = 'modules/system/maintenance.css'
-exclude[css][] = 'modules/system/system.css'
-exclude[css][] = 'modules/system/system.admin.css'
-exclude[css][] = 'modules/system/system.maintenance.css'
-exclude[css][] = 'modules/system/system.menus.css'
-exclude[css][] = 'modules/system/system.messages.css'
-exclude[css][] = 'modules/system/system.theme.css'
-exclude[css][] = 'modules/taxonomy/taxonomy.css'
-exclude[css][] = 'modules/tracker/tracker.css'
-exclude[css][] = 'modules/update/update.css'
-exclude[css][] = 'modules/user/user.css'
