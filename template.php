@@ -1008,6 +1008,13 @@ function europa_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_taxonomy_term().
+ */
+function europa_preprocess_taxonomy_term(&$variables) {
+  $variables['site_name'] = variable_get('site_name');
+}
+
+/**
  * Implements hook_preprocess_page().
  */
 function europa_preprocess_page(&$variables) {
