@@ -690,7 +690,7 @@ function europa_preprocess_block(&$variables) {
       $variables['lang_name'] = $variables['elements']['label']['#markup'];
       // Add class to block.
       $variables['classes_array'][] = 'lang-select-site';
-      $variables['link'] = url('splash') . '?' . drupal_get_destination()['destination'];
+      $variables['link'] = url('splash') . '?destination=' . drupal_get_destination()['destination'];
       break;
   }
 
