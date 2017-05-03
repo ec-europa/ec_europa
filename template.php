@@ -1011,6 +1011,17 @@ function europa_preprocess_node(&$variables) {
  * Implements hook_preprocess_taxonomy_term().
  */
 function europa_preprocess_taxonomy_term(&$variables) {
+  // Add information about the number of sidebars.
+  if (!empty($variables['left']) && !empty($variables['right'])) {
+    $variables['content_column_class'] = 'col-md-6';
+  }
+  elseif (!empty($variables['left']) || !empty($variables['right'])) {
+    $variables['content_column_class'] = 'col-md-9';
+  }
+  else {
+    $variables['content_column_class'] = 'col-md-12';
+  }
+
   $variables['site_name'] = variable_get('site_name');
 }
 
