@@ -1081,7 +1081,7 @@ function europa_preprocess_page(&$variables) {
     }
   }
   // Default ds template for taxonomy term pages using display suite.
-  if (arg(1) == 'term') {
+  if (arg(1) == 'term' && is_numeric(arg(2))) {
     $type = taxonomy_term_load(arg(2))->vocabulary_machine_name;
 
     if (module_exists('ds') && ds_get_layout('taxonomy_term', $type, 'full')) {
