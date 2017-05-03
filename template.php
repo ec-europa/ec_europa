@@ -559,9 +559,11 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
  * Generate the first breadcrumb items basing on a custom menu.
  */
 function _europa_breadcrumb_menu(&$variables) {
-  $menu_links = menu_tree('menu-dt-breadcrumb-menu');
-  $new_items = [];
   global $language;
+
+  $menu = theme_get_setting('ec-europa-breadcrumb-menu');
+  $menu_links = menu_tree($menu);
+  $new_items = [];
   $front = drupal_is_front_page();
 
   if (!empty($menu_links)) {
@@ -667,6 +669,7 @@ function europa_file_link($variables) {
  */
 function europa_preprocess_block(&$variables) {
   $block = $variables['block'];
+  $variables['theme_hook_suggestions'][] = 'block__' . $block->module . '__' . str_replace('-', '_', $block->delta) . '_' . $block->region;
 
   switch ($block->delta) {
     case 'nexteuropa_feedback':
@@ -1069,14 +1072,23 @@ function europa_preprocess_page(&$variables) {
           $node->local_tabs = drupal_render($variables['tabs']);
         }
 
-        // Use page__ds_node.tpl unless it is an exception.
+        // Use page__ds.tpl.php unless it is an exception.
         $custom_page_templates = ['page__gallery'];
         if (empty(array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
-          $variables['theme_hook_suggestions'][] = 'page__ds_node';
+          $variables['theme_hook_suggestions'][] = 'page__ds';
         }
       }
     }
   }
+  // Default ds template for taxonomy term pages using display suite.
+  if (arg(1) == 'term') {
+    $type = taxonomy_term_load(arg(2))->vocabulary_machine_name;
+
+    if (module_exists('ds') && ds_get_layout('taxonomy_term', $type, 'full')) {
+      $variables['theme_hook_suggestions'][] = 'page__ds';
+    }
+  }
+
   $variables['logo_classes'] = 'logo site-header__logo';
 }
 

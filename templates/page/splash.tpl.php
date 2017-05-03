@@ -38,8 +38,5 @@
 
     </div>
   <?php endif; ?>
-
-  <?php if (isset($close_button)): ?>
-    <?php print $close_button; ?>
-  <?php endif; ?>
+  <?php print l(t('Close'), '#', ['attributes' => ['class' => ['splash-page__btn-close']]]); ?>
 </nav>

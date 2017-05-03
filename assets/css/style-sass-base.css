@@ -5072,16 +5072,10 @@ Style guide sections.3
 .header-top {
   background: #f2f2f2; }
   .header-top .container-fluid, .header-top .section__group--full-width > * {
-    margin-right: 0;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0; }
-  @media (min-width: 510px) {
+    padding: 0; }
+  @media (min-width: 992px) {
     .header-top .container-fluid, .header-top .section__group--full-width > * {
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 15px;
-      padding-right: 15px; } }
+      padding: 0 15px; } }
 
 .field-group {
   overflow: hidden;
