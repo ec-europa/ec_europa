@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_HOOK().
  */
-function europa_atomium_theme_easy_breadcrumb(&$variables, $hook) {
+function europa_atomium_theme_easy_breadcrumb() {
   return array(
     'easy_breadcrumb' => array(
       'variables' => array(

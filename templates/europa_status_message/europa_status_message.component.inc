@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_HOOK().
  */
-function europa_atomium_theme_europa_status_message(&$variables, $hook) {
+function europa_atomium_theme_europa_status_message() {
   return array(
     'europa_status_message' => array(
       'template' => 'europa-status-message',
