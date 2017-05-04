@@ -1083,13 +1083,37 @@ function europa_preprocess_page(&$variables) {
   // Default ds template for taxonomy term pages using display suite.
   if (arg(1) == 'term' && is_numeric(arg(2))) {
     $type = taxonomy_term_load(arg(2))->vocabulary_machine_name;
+    $ds_layout = ds_get_layout('taxonomy_term', $type, 'full');
 
-    if (module_exists('ds') && ds_get_layout('taxonomy_term', $type, 'full')) {
+    if (module_exists('ds') && $ds_layout) {
       $variables['theme_hook_suggestions'][] = 'page__ds';
+      $main = !empty($ds_layout['settings']['regions']['left']) ? 'col-md-9 col-md-offset-3' : 'col-md-12';
+      // Deafult drupal taxonomy page outputs this message
+      // when no nodes are associated with the current term.
+      if (!empty($variables['page']['content']['system_main']['no_content'])) {
+        $variables['page']['content']['system_main']['no_content']['#prefix'] = '<div class="container-fluid"><p>';
+        $variables['page']['content']['system_main']['no_content']['#suffix'] = '</p></div>';
+      }
+
+      if (!empty($variables['page']['content']['system_main']['term_heading'])) {
+        if (!empty($variables['page']['content']['system_main']['nodes'])) {
+          $variables['page']['content']['system_main']['nodes']['main'] = $main;
+          $variables['page']['content']['system_main']['nodes']['#pre_render'] = ['_europa_term_heading'];
+        }
+      }
     }
   }
 
   $variables['logo_classes'] = 'logo site-header__logo';
+}
+
+/**
+ * Pre-render function for taxonomy pages.
+ */
+function _europa_term_heading($element) {
+  $element['#prefix'] = '<div class="container-fluid"><div class="' . $element['main'] . '">';
+  $element['#suffix'] = '</div></div>';
+  return $element;
 }
 
 /**
