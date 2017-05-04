@@ -1088,7 +1088,7 @@ function europa_preprocess_page(&$variables) {
     if (module_exists('ds') && $ds_layout) {
       $variables['theme_hook_suggestions'][] = 'page__ds';
       $main = !empty($ds_layout['settings']['regions']['left']) ? 'col-md-9 col-md-offset-3' : 'col-md-12';
-      // Deafult drupal taxonomy page outputs this message
+      // Default drupal taxonomy page outputs this message
       // when no nodes are associated with the current term.
       if (!empty($variables['page']['content']['system_main']['no_content'])) {
         $variables['page']['content']['system_main']['no_content']['#prefix'] = '<div class="container-fluid"><p>';
