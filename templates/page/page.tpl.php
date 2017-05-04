@@ -202,7 +202,7 @@
       <a id="main-content" tabindex="-1"></a>
       <div class="row">
         <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="ec-col-md-3" role="complementary">
+          <aside class="ecl-col-md-3" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside> <!-- /#sidebar-first -->
         <?php endif; ?>
