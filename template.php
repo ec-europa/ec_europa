@@ -242,7 +242,6 @@ function europa_form_element(&$variables) {
   switch ($element['#title_display']) {
     case 'before':
     case 'invisible':
-
       $output .= ' ' . theme('form_element_label', $variables);
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
 
@@ -283,17 +282,52 @@ function europa_form_element(&$variables) {
 }
 
 /**
- * Europa theme wrapper function for the service tools menu links.
+ * Create the needed wrapper for menus in the footer.
  */
-function europa_menu_tree__menu_dt_service_links(&$variables) {
-  return '<ul class="footer__menu footer__menu--separator menu nav list-inline">' . $variables['tree'] . '</ul>';
+function _europa_menu_tree_footer($tree, $inline = FALSE) {
+  $classes[] = 'footer__menu';
+
+  if ($inline) {
+    $classes[] = 'ul-list-inline';
+  }
+
+  return '<ul class="' . implode(' ', $classes) . '">' . $tree . '</ul>';
+}
+
+/**
+ * Europa theme wrapper function for the service tools menu links.
+ *
+ * @see theme_menu_tree()
+ */
+function europa_menu_tree__menu_nexteuropa_service_links(&$variables) {
+  return _europa_menu_tree_footer($variables['tree'], TRUE);
 }
 
 /**
  * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
  */
-function europa_menu_tree__menu_dt_menu_social_media(&$variables) {
-  return '<ul class="footer__menu menu nav list-inline">' . $variables['tree'] . '</ul>';
+function europa_menu_tree__menu_nexteuropa_social_media(&$variables) {
+  return _europa_menu_tree_footer($variables['tree'], TRUE);
+}
+
+/**
+ * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
+ */
+function europa_menu_tree__menu_nexteuropa_inst_links(&$variables) {
+  return _europa_menu_tree_footer($variables['tree']);
+}
+
+/**
+ * Europa theme wrapper function for the EC menu links.
+ *
+ * @see theme_menu_tree()
+ */
+function europa_menu_tree__menu_nexteuropa_site_links(&$variables) {
+  return _europa_menu_tree_footer($variables['tree']);
 }
 
 /**
@@ -322,14 +356,28 @@ function _europa_menu_link__footer(array &$variables) {
 /**
  * Override theme_menu_link().
  */
-function europa_menu_link__menu_dt_service_links(&$variables) {
+function europa_menu_link__menu_nexteuropa_service_links(&$variables) {
   return _europa_menu_link__footer($variables);
 }
 
 /**
  * Override theme_menu_link().
  */
-function europa_menu_link__menu_dt_menu_social_media(&$variables) {
+function europa_menu_link__menu_nexteuropa_social_media(&$variables) {
+  return _europa_menu_link__footer($variables);
+}
+
+/**
+ * Override theme_menu_link().
+ */
+function europa_menu_link__menu_nexteuropa_inst_links(&$variables) {
+  return _europa_menu_link__footer($variables);
+}
+
+/**
+ * Override theme_menu_link().
+ */
+function europa_menu_link__menu_nexteuropa_site_links(&$variables) {
   return _europa_menu_link__footer($variables);
 }
 
@@ -511,9 +559,11 @@ function europa_form_nexteuropa_europa_search_search_form_alter(&$form, &$form_s
  * Generate the first breadcrumb items basing on a custom menu.
  */
 function _europa_breadcrumb_menu(&$variables) {
-  $menu_links = menu_tree('menu-dt-breadcrumb-menu');
-  $new_items = [];
   global $language;
+
+  $menu = theme_get_setting('ec-europa-breadcrumb-menu');
+  $menu_links = menu_tree($menu);
+  $new_items = [];
   $front = drupal_is_front_page();
 
   if (!empty($menu_links)) {
@@ -619,23 +669,28 @@ function europa_file_link($variables) {
  */
 function europa_preprocess_block(&$variables) {
   $block = $variables['block'];
+  $variables['theme_hook_suggestions'][] = 'block__' . $block->module . '__' . str_replace('-', '_', $block->delta) . '_' . $block->region;
 
   switch ($block->delta) {
     case 'nexteuropa_feedback':
       $variables['classes_array'][] = 'block--full-width';
       break;
 
-    case 'menu-dt-menu-social-media':
-      $block->subject = t('The European Commission on:');
-      break;
-
-    case 'menu-dt-service-links':
+    case 'menu-nexteuropa-service-links':
       $block->subject = '';
       break;
 
     case 'views_related_links':
       $variables['classes_array'][] = 'link-block';
       $variables['title_attributes_array']['class'][] = 'link-block__title';
+      break;
+
+    case 'language_selector_site':
+      $variables['lang_code'] = $variables['elements']['code']['#markup'];
+      $variables['lang_name'] = $variables['elements']['label']['#markup'];
+      // Add class to block.
+      $variables['classes_array'][] = 'lang-select-site';
+      $variables['link'] = url('splash') . '?destination=' . drupal_get_destination()['destination'];
       break;
   }
 
@@ -916,6 +971,18 @@ function europa_preprocess_html(&$variables) {
  * Implements hook_preprocess_node().
  */
 function europa_preprocess_node(&$variables) {
+  // Add information about the number of sidebars.
+  if (!empty($variables['left']) && !empty($variables['right'])) {
+    $variables['content_column_class'] = 'col-md-6';
+  }
+  elseif (!empty($variables['left']) || !empty($variables['right'])) {
+    $variables['content_column_class'] = 'col-md-9';
+  }
+  else {
+    $variables['content_column_class'] = 'col-md-12';
+  }
+
+  $variables['site_name'] = variable_get('site_name');
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
   $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
   $variables['submitted'] = '';
@@ -931,9 +998,31 @@ function europa_preprocess_node(&$variables) {
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
   }
+  // We have our custom element to add comments.
+  if (!empty($variables['content']['links']['comment']['#links'])) {
+    unset($variables['content']['links']['comment']['#links']['comment-add']);
+  }
 
   // Add the language attribute.
   $variables['attributes_array']['lang'] = entity_translation_get_existing_language('node', $variables['node']);
+}
+
+/**
+ * Implements hook_preprocess_taxonomy_term().
+ */
+function europa_preprocess_taxonomy_term(&$variables) {
+  // Add information about the number of sidebars.
+  if (!empty($variables['left']) && !empty($variables['right'])) {
+    $variables['content_column_class'] = 'col-md-6';
+  }
+  elseif (!empty($variables['left']) || !empty($variables['right'])) {
+    $variables['content_column_class'] = 'col-md-9';
+  }
+  else {
+    $variables['content_column_class'] = 'col-md-12';
+  }
+
+  $variables['site_name'] = variable_get('site_name');
 }
 
 /**
@@ -1001,15 +1090,48 @@ function europa_preprocess_page(&$variables) {
           $node->local_tabs = drupal_render($variables['tabs']);
         }
 
-        // Use page__ds_node.tpl unless it is an exception.
+        // Use page__ds.tpl.php unless it is an exception.
         $custom_page_templates = ['page__gallery'];
         if (empty(array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
-          $variables['theme_hook_suggestions'][] = 'page__ds_node';
+          $variables['theme_hook_suggestions'][] = 'page__ds';
         }
       }
     }
   }
+  // Default ds template for taxonomy term pages using display suite.
+  if (arg(1) == 'term' && is_numeric(arg(2))) {
+    $type = taxonomy_term_load(arg(2))->vocabulary_machine_name;
+    $ds_layout = ds_get_layout('taxonomy_term', $type, 'full');
+
+    if (module_exists('ds') && $ds_layout) {
+      $variables['theme_hook_suggestions'][] = 'page__ds';
+      $main = !empty($ds_layout['settings']['regions']['left']) ? 'col-md-9 col-md-offset-3' : 'col-md-12';
+      // Default drupal taxonomy page outputs this message
+      // when no nodes are associated with the current term.
+      if (!empty($variables['page']['content']['system_main']['no_content'])) {
+        $variables['page']['content']['system_main']['no_content']['#prefix'] = '<div class="container-fluid"><p>';
+        $variables['page']['content']['system_main']['no_content']['#suffix'] = '</p></div>';
+      }
+
+      if (!empty($variables['page']['content']['system_main']['term_heading'])) {
+        if (!empty($variables['page']['content']['system_main']['nodes'])) {
+          $variables['page']['content']['system_main']['nodes']['main'] = $main;
+          $variables['page']['content']['system_main']['nodes']['#pre_render'] = ['_europa_term_heading'];
+        }
+      }
+    }
+  }
+
   $variables['logo_classes'] = 'logo site-header__logo';
+}
+
+/**
+ * Pre-render function for taxonomy pages.
+ */
+function _europa_term_heading($element) {
+  $element['#prefix'] = '<div class="container-fluid"><div class="' . $element['main'] . '">';
+  $element['#suffix'] = '</div></div>';
+  return $element;
 }
 
 /**
@@ -1514,6 +1636,43 @@ function europa_file_upload_help($variables) {
 }
 
 /**
+ * Implements hook_ds_pre_render_alter().
+ *
+ * Setting variables for non-node entities in the DS templates.
+ */
+function europa_ds_pre_render_alter(&$layout_render_array, $context, &$variables) {
+  $entity = $variables['elements'];
+  $entity_type = $entity['#entity_type'];
+
+  switch ($entity_type) {
+    case 'user':
+      $uri = entity_uri($entity_type, $variables['elements']['#account']);
+      $variables['node_url'] = url($uri['path']);
+
+      if (!empty($entity['europa_user_fullname_first'])) {
+        $title = $entity['europa_user_fullname_first'][0]['#markup'];
+      }
+      elseif (!empty($entity['europa_user_fullname_last'])) {
+        $title = $entity['europa_user_fullname_last'][0]['#markup'];
+      }
+      else {
+        $title = $variables['elements']['#account']->name;
+      }
+
+      // We get the value wrapped in a <p> tag.
+      $variables['title'] = strip_tags($title);
+      break;
+
+    case 'taxonomy_term':
+      $uri = entity_uri($entity_type, $variables['term']);
+      $variables['node_url'] = url($uri['path']);
+      $variables['title'] = $entity['#term']->name;
+      break;
+
+  }
+}
+
+/**
  * Implements template_preprocess_comment_wrapper().
  */
 function europa_preprocess_comment_wrapper(&$variables) {
@@ -1530,7 +1689,7 @@ function europa_preprocess_comment(&$variables) {
   $comment = $variables['elements']['#comment'];
   $variables['created'] = format_date($comment->created, 'ec_date');
   $variables['submitted'] = t('!username', ['!username' => $variables['author']]) . '<span class="submitted-date">' . $variables['created'] . '</span>';
-  $variables['title']     = check_plain($comment->subject);
+  $variables['title'] = check_plain($comment->subject);
   $variables['permalink'] = t('Permalink');
   $variables['title_attributes_array']['class'] = 'comment__title';
 }

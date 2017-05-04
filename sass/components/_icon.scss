@@ -50,7 +50,14 @@ Markup: html/icon.html
 .icon--calendar - Calendar icon
 .icon--location - Location icon
 .icon--livestreaming - Live streaming icon
-.icon--camera - Camera icon
+.icon--book - Book icon
+.icon--data - Data icon
+.icon--copy - Copy icon
+.icon--spreadsheet - Spreadsheet icon
+.icon--in - In icon
+.icon--presentation - Presentation icon
+.icon--info - Info icon
+.icon--faq - Faq icon
 
 Style guide: icon
 */
@@ -90,7 +97,7 @@ Style guide: icon
 }
 
 .icon--blue-dark {
-  color: #004494; 
+  color: $blue-dark;
 }
 
 .icon--tag-close-hover {

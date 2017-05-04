@@ -19,9 +19,12 @@ regions[content] = Content
 regions[content_bottom] = Content bottom
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
-regions[footer_top] = Footer Top
+regions[footer_improved] = Footer Improved
 regions[footer] = Footer
 regions[footer_right] = Footer right
+regions[footer_middle] = Footer middle
+regions[footer_left] = Footer left
+regions[footer_bottom] = Footer bottom
 
 ; ========================================
 ; Stylesheets
@@ -44,8 +47,8 @@ scripts[] = bootstrap-sass/js/bootstrap/transition.js
 scripts[] = js/libraries/modernizr/modernizr.js
 scripts[] = js/libraries/enquire.min.js
 scripts[] = js/libraries/velocity.min.js
-scripts[] = js/misc/ajax.js
 scripts[] = js/libraries/jquery.equalheight.min.js
+scripts[] = js/misc/ajax.js
 scripts[] = js/europa.js
 scripts[] = js/europa_tabs.js
 scripts[] = js/components/table-responsive.js
@@ -57,6 +60,11 @@ scripts[] = js/components/table-responsive.js
 ; Region Wells
 ; --------------
 settings[bootstrap_region_well-sidebar_first] = ''
+
+; Visibility
+; -------------
+settings[toggle_main_menu] = 0
+settings[toggle_secondary_menu] = 0
 
 ; Tooltips
 ; --------------
@@ -80,6 +88,16 @@ settings[bootstrap_breadcrumb_title] = 1
 ; Advanced
 ; --------------
 settings[bootstrap_cdn] = ""
+
+; Europa
+; --------------
+settings[ec_europa_introduction_field] = 0
+settings[ec_europa_site_switcher] = informational
+settings[ec_europa_user_menu] = 0
+settings[ec_europa_user_login] = 0
+settings[ec_europa_improved_website] = 0
+settings[ec_europa_breadcrumb_menu] = menu-breadcrumb-menu
+settings[ec_europa_improved_website_home] = 1
 
 ; Breakpoints
 ; --------------

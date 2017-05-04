@@ -1,9 +1,21 @@
+// SUMMARY (Components, elements, modifiers)
+//
+// .Expandable (component)
+//   Elements:
+//    .expandable__content
+//    .expandable__toggle
+//
+//   Component modifiers:
+//    .expandable--link
+
 /*
-Expandable
+Expandable default
+
+Default implementation of the expandable component.
 
 Markup: html/expandable.html
 
-Style guide expandable
+Style guide Expandable.1
 */
 
 .expandable__content {
@@ -13,7 +25,7 @@ Style guide expandable
 
   @include breakpoint(screen-xs-min) {
     & > p {
-      margin: 0.8em 0.8em 0.8em 3.2em;
+      margin: 0.8em 0.8em 0.8em 4em;
       font-size: $font-size-little;
     }
   }
@@ -29,11 +41,17 @@ Style guide expandable
   }
 
   .icon {
-    margin-right: 0.833em;
+    margin: 0 0.833em;
+    position: absolute;
+    left: 0;
+    top: 17%;
   }
 
   h3 {
+    max-width: 100%;
     font-size: $font-size-mid;
+    position: relative;
+    padding: .8em 0 .8em 3em;
   }
 
   &:link {
@@ -45,5 +63,46 @@ Style guide expandable
     background: $yellow-light;
     outline: none;
     text-decoration: underline;
+  }
+}
+
+/*
+Expandable link
+
+Markup: html/expandable--link.html
+
+.expandable--link Expandable link
+
+Style guide Expandable.2
+*/
+
+// Modifier for expandable link with icon.
+.expandable--link {
+  .expandable__content {
+    background: none;
+
+    & > p {
+      margin: 0;
+    }
+  }
+
+  .expandable__toggle {
+    background: none;
+
+    .icon {
+      position: static;
+    }
+
+    &.collapsed {
+      .icon--up {
+        &::before {
+          @include rotate(180deg);
+        }
+      }
+    }
+
+    &:hover {
+      background: none;
+    }
   }
 }

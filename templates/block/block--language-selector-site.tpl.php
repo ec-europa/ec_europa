@@ -46,14 +46,13 @@
  * @ingroup themeable
  */
 ?>
-<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
-    <span class="footer__label" <?php print $title_attributes; ?>><?php print $title; ?></span>
-  <?php endif;?>
-  <?php print render($title_suffix); ?>
-
-  <?php print $content; ?>
-
+<section class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+  <a href="<?php print $link; ?>" class="lang-select-site__link">
+    <span class="lang-select-site__label"><?php print $lang_name; ?></span>
+    <span class="lang-select-site__code">
+      <span class="icon icon--language lang-select-site__icon"></span>
+      <span class="lang-select-site__code-text"><?php print $lang_code; ?></span>
+    </span>
+  </a>
+  <div class="splash-page splash-page--overlay"></div>
 </section>
