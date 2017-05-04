@@ -218,7 +218,7 @@
   <div class="footer__bottom">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="ecl-col-sm-12">
         <?php if (!empty($page['footer_bottom'])): ?>
           <?php print render($page['footer_bottom']); ?>
         <?php endif; ?>
