@@ -13,21 +13,21 @@ function europa_preprocess_page(&$variables, $hook) {
   $variables['front_page'] = url('<front>');
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class'] = 'col-md-6';
+    $variables['content_column_class'] = 'ecl-col-6';
   }
   elseif (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class'] = 'col-md-9';
+    $variables['content_column_class'] = 'ecl-col-9';
   }
   else {
-    $variables['content_column_class'] = 'col-md-12';
+    $variables['content_column_class'] = 'ecl-col-12';
   }
 
   // Set footer region column classes.
   if (!empty($variables['page']['footer_right'])) {
-    $variables['footer_column_class'] = 'col-sm-8';
+    $variables['footer_column_class'] = 'ecl-col-8';
   }
   else {
-    $variables['footer_column_class'] = 'col-sm-12';
+    $variables['footer_column_class'] = 'ecl-col-12';
   }
 
   $variables['page_logo_title'] = t('Home - @sitename', ['@sitename' => variable_get('site_name', 'European Commission')]);

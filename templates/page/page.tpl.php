@@ -151,7 +151,7 @@
     
     <div class="container-fluid page-header__hero-title">
       <div class="row padding-reset">
-        <div class="col-lg-9">
+        <div class="ecl-col-lg-9">
           <?php print render($title_prefix); ?>
           <?php if (!empty($page['custom_title'])): ?>
             <?php print render($page['custom_title']); ?>
@@ -202,7 +202,7 @@
       <a id="main-content" tabindex="-1"></a>
       <div class="row">
         <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="col-md-3" role="complementary">
+          <aside class="ec-col-md-3" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside> <!-- /#sidebar-first -->
         <?php endif; ?>
@@ -222,7 +222,7 @@
         </section>
 
         <?php if (!empty($page['sidebar_second'])): ?>
-          <aside class="col-md-3" role="complementary">
+          <aside class="ecl-col-md-3" role="complementary">
             <?php print render($page['sidebar_second']); ?>
           </aside>  <!-- /#sidebar-second -->
         <?php endif; ?>
@@ -267,7 +267,7 @@
   <div class="footer__bottom">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="ecl-col-sm-12">
         <?php if (!empty($page['footer_bottom'])): ?>
           <?php print render($page['footer_bottom']); ?>
         <?php endif; ?>
