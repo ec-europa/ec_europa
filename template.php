@@ -5,6 +5,9 @@
  * template.php
  */
 
+atomium_include('atomium', 'includes/alter');
+atomium_include('europa', 'includes/alter');
+
 /**
  * Implements hook_js_alter().
  */
@@ -661,6 +664,9 @@ function europa_file_link($variables) {
     }
 
     return _nexteuropa_formatters_file_markup($file);
+  }
+  else {
+    return theme_file_link($variables);
   }
 }
 
