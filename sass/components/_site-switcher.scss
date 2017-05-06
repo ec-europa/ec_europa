@@ -101,7 +101,7 @@ a.site-switcher__option {
     position: relative;
 
     &.is-selected::after {
-      content: " " !important;
+      content: ' ' !important;
       position: absolute;
       top: 95%;
       left: 50%;
@@ -128,7 +128,7 @@ a.site-switcher__option {
     position: relative;
 
     &.is-selected::after {
-      content: " " !important;
+      content: ' ' !important;
       position: absolute;
       left: 50%;
       bottom: 95%;

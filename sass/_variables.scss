@@ -1,5 +1,21 @@
 // Bootstrap overrides and new variables.
 
+// @todo replace this invalid colors with the correct ones.
+$datepicker-color-header: #393939;
+$datepicker-color-select: #4f4f4f;
+$datepicker-color-select-separator: #686868;
+$datepicker-color-background: #eaeaea;
+$agenda-yellow: #fed437;
+//.file-upload .file-upload__message in color: #999999
+//.page-header .page-header__site-identification h3 in color: #b0c5de
+//.site-menu .listing__item in border-color: #dcb812
+//.ui-datepicker .ui-state-highlight in background-color: #fed500
+//.site-user-menu__list .site-user-menu--header background: #ececec
+//.splash-page &__helper-text tbody in border-bottom: 1px solid #245898
+//.splash-page &__helper-text tbody tr in border-top: 1px solid #245898
+
+// Check properties that uses rgba values.
+
 // Colors.
 $ec-blue:           #004494;
 $ec-blue-25:        #bfd0e4;

@@ -15,8 +15,6 @@ Markup: html/banner--quote.html
 Style guide: banner.quote
 */
 
-$quote-border-offset: 0.556em;
-
 .banner {
   @include clearfix();
 }
@@ -24,8 +22,8 @@ $quote-border-offset: 0.556em;
 .banner--quote {
   @include make-md-column(8);
 
-  padding-left: $quote-border-offset;
-  border-left: $quote-border-offset solid $ec-yellow;
+  padding-left: 0.556em;
+  border-left: 0.556em solid $ec-yellow;
 
   blockquote {
     max-width: none;

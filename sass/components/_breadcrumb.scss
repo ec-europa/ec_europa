@@ -6,8 +6,6 @@ Markup: html/breadcrumb.html
 Style guide breadcrumb
 */
 
-$breadcrumb-heigth: 2.778em;
-
 .breadcrumb {
   position: relative;
   margin: 0;
@@ -147,7 +145,7 @@ Style guide breadcrumb.collapsible
   .breadcrumb__btn-separator {
     display: inline-block;
     padding: 0 10px;
-    line-height: $breadcrumb-heigth;
+    line-height: 2.778em;
     background-color: $ec-blue-120;
     color: #fff;
     cursor: pointer;

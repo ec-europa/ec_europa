@@ -8,6 +8,7 @@ Style guide: form.feedback-message
 
 .feedback-message {
   @extend .messages;
+
   border: none;
 
   @extend .hidden-print;

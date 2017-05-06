@@ -207,7 +207,7 @@ $modifiers: (
     @include box-shadow(none);
   }
 
-  @include _focus_outline_border(3px, $ec-yellow, 0px, none);
+  @include _focus_outline_border(3px, $ec-yellow, 0, none);
 
   // Disabled modifier.
   &.is-disabled {

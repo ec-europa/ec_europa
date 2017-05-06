@@ -4405,7 +4405,7 @@ Style guide form.checkbox
       position: absolute;
       left: 0;
       display: inline-block;
-      content: "";
+      content: '';
       width: 1.5em;
       height: 1.5em;
       margin-left: -20px;
@@ -4465,7 +4465,7 @@ Style guide form
     box-shadow: none; }
   .form-control:focus {
     outline: 3px solid #ffd617;
-    outline-offset: 0px;
+    outline-offset: 0;
     text-decoration: none; }
   .form-control.is-disabled {
     color: #9f9f9f;
@@ -4567,7 +4567,7 @@ li > ol {
   font-size: 0.889em; }
 
 .navbar-toggle {
-  border-radius: 0px;
+  border-radius: 0;
   border: none; }
 
 .navbar-collapse, .navbar-fixed-top, .navbar {
@@ -4737,7 +4737,7 @@ Style guide form.radio
       position: absolute;
       left: 0;
       display: inline-block;
-      content: "";
+      content: '';
       width: 1.5em;
       height: 1.5em;
       margin-left: -20px;
@@ -4888,10 +4888,10 @@ textarea.error {
   margin: 0; }
 
 .page-navigation {
-  background: #004494; }
+  background-color: #004494; }
 
 .page-header .page-navigation {
-  background: transparent; }
+  background-color: transparent; }
 
 .sidebar-field-group h2 {
   float: left;

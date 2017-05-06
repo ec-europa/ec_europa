@@ -57,9 +57,9 @@ Style guide timeline
 
 .btn {
   &.btn-time-line {
-    margin-bottom: 0;
-
     @extend .btn-ctn;
+
+    margin-bottom: 0;
 
     &::after {
       content: '\e81f';

@@ -18,12 +18,13 @@ Style guide: file.1
 */
 
 .file {
-  @extend .hidden-print;
   @extend .row;
 
   margin: 0 0 0.944em 0;
   padding: 1.333em;
   background-color: $ec-grey10;
+
+  @extend .hidden-print;
 }
 
 .file__icon {

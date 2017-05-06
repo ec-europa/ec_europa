@@ -148,9 +148,10 @@ $section-spacing: 1.667em;
   margin-right: -$grid-gutter-width / 2;
 
   & > * {
+    @extend .container-fluid;
+
     margin-left: auto !important;
     margin-right: auto !important;
-    @extend .container-fluid;
   }
 }
 
@@ -161,6 +162,7 @@ $section-spacing: 1.667em;
 
 .section__group--highlight-grey-lightest {
   @extend .section__group--highlight-grey;
+
   background-color: $ec-grey5;
 }
 
@@ -185,8 +187,9 @@ $section-spacing: 1.667em;
 
 .section--row-two {
   .section__item {
-    margin-top: 15px;
     @extend .col-md-6;
+
+    margin-top: 15px;
 
     &:nth-child(odd) {
       clear: left;
@@ -197,6 +200,7 @@ $section-spacing: 1.667em;
 .section--row-three {
   .section__item {
     @extend .col-md-4;
+
     margin-top: 15px;
 
     &:nth-child(3n+4) {

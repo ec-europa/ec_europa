@@ -62,6 +62,7 @@ Style guide social
   & > a {
     width: 100%;
     display: block;
+
     @include _focus_outline_border(3px, $ec-yellow, -1px);
 
     &::before {

@@ -9,13 +9,15 @@ Style guide notification
 */
 
 .notification {
-  @extend .hidden-print;
   padding: 10px 0 6px;
   background-color: $ec-yellow;
-  font-size: 14px;
+  font-size: $font-size-xsmall;
+
+  @extend .hidden-print;
 
   a {
     color: #000;
+
     @include _focus_outline_border(3px, #000, 2px);
 
     &:hover,
