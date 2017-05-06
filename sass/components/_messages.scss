@@ -6,7 +6,7 @@ Markup: html/messages.html
 Style guide: messages
 */
 
-$messages-text-color: $grey-base;
+$messages-text-color: $ec-grey;
 $messages-heading-size: $font-size-little;
 $messages-text-size: $font-size-little;
 
@@ -23,28 +23,28 @@ $messages-text-size: $font-size-little;
   border: 2px solid transparent;
 
   &.info {
-    background-image: url("../images/svg/messages-info.svg");
-    border-color: $blue;
+    background-image: url('../images/svg/messages-info.svg');
+    border-color: $ec-blue-n;
   }
 
   &.status {
-    background-image: url("../images/svg/messages-success.svg");
-    border-color: $green;
+    background-image: url('../images/svg/messages-success.svg');
+    border-color: $ec-green-n;
   }
 
   &.warning {
-    background-image: url("../images/svg/messages-warning.svg");
-    border-color: $yellow;
+    background-image: url('../images/svg/messages-warning.svg');
+    border-color: $ec-orange-n ;
   }
 
   &.error {
-    background-image: url("../images/svg/messages-error.svg");
-    border-color: $red;
+    background-image: url('../images/svg/messages-error.svg');
+    border-color: $ec-red-n;
   }
 
   &.live {
-    background-image: url("../images/svg/live_streaming.svg");
-    border-color: $yellow;
+    background-image: url('../images/svg/live_streaming.svg');
+    border-color: $ec-orange-n ;
   }
 
   h3 {
@@ -79,7 +79,7 @@ $messages-text-size: $font-size-little;
     top: 0.465em;
     right: 0.465em;
     padding: 0 0 0 5px;
-    background: transparent url("../images/svg/close.svg") no-repeat right top;
+    background: transparent url('../images/svg/close.svg') no-repeat right top;
     font-size: 1.625em;
     color: transparent;
     text-shadow: none;
@@ -87,7 +87,7 @@ $messages-text-size: $font-size-little;
     opacity: 1;
 
     &:hover {
-      background-image: url("../images/svg/close_hover.svg");
+      background-image: url('../images/svg/close_hover.svg');
     }
   }
 }
@@ -95,32 +95,32 @@ $messages-text-size: $font-size-little;
 .no-svg {
   .messages {
     &.info {
-      background-image: url("../images/png/messages-info.png");
+      background-image: url('../images/png/messages-info.png');
     }
 
     &.status {
-      background-image: url("../images/png/messages-info.png");
+      background-image: url('../images/png/messages-info.png');
     }
 
     &.warning {
-      background-image: url("../images/png/messages-warning.png");
+      background-image: url('../images/png/messages-warning.png');
     }
 
     &.error {
-      background-image: url("../images/png/messages-error.png");
+      background-image: url('../images/png/messages-error.png');
     }
 
     &.live {
-      background-image: url("../images/png/live_streaming.png");
+      background-image: url('../images/png/live_streaming.png');
     }
   }
 
   .alert {
     .close {
-      background-image: url("../images/png/close.png");
+      background-image: url('../images/png/close.png');
 
       &:hover {
-        background-image: url("../images/png/close_hover.png");
+        background-image: url('../images/png/close_hover.png');
       }
     }
   }

@@ -25,7 +25,7 @@ $quote-border-offset: 0.556em;
   @include make-md-column(8);
 
   padding-left: $quote-border-offset;
-  border-left: $quote-border-offset solid $yellow-light;
+  border-left: $quote-border-offset solid $ec-yellow;
 
   blockquote {
     max-width: none;
@@ -98,7 +98,7 @@ Style guide: banner.background
 
   h3 {
     padding-top: 1.365em;
-    color: $blue-dark;
+    color: $ec-blue;
   }
 
   p {
@@ -117,7 +117,7 @@ Style guide: banner.background
 
   padding: 0 24px 6px !important;
   background-color: #fff;
-  border-top: 3px solid $blue-dark;
+  border-top: 3px solid $ec-blue;
 }
 
 @media (max-width: $screen-md-min) {
