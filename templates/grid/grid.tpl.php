@@ -16,7 +16,7 @@
     <?php foreach ($rows as $row_number => $columns): ?>
         <div class="ecl-row <?php print $row_classes[$row_number];?> ">
           <?php foreach ($columns as $column_number => $item): ?>
-              <div class="ecl-col <?php print $column_classes[$row_number];?> ">
+              <div class="ecl-col <?php print $column_classes[$row_number][$column_number];?> ">
                 <?php print $item; ?>
               </div>
           <?php endforeach; ?>
