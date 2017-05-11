@@ -592,6 +592,10 @@ function _europa_breadcrumb_menu(&$variables) {
  * Override theme_easy_breadcrumb().
  */
 function europa_easy_breadcrumb(&$variables) {
+  if (drupal_is_front_page() && !theme_get_setting('ec_europa_breadcrumb_home')) {
+    return;
+  }
+
   _europa_breadcrumb_menu($variables);
   $breadcrumb = $variables['breadcrumb'];
   $segments_quantity = $variables['segments_quantity'];
@@ -970,6 +974,9 @@ function europa_preprocess_html(&$variables) {
  * Implements hook_preprocess_node().
  */
 function europa_preprocess_node(&$variables) {
+  // Add default section component to the entity regions.
+  $variables['left_classes'] = $variables['right_classes'] = $variables['central_classes'] = 'section';
+
   // Add information about the number of sidebars.
   if (!empty($variables['left']) && !empty($variables['right'])) {
     $variables['content_column_class'] = 'col-md-6';
