@@ -97,7 +97,7 @@ select.lang-select-page__list {
   color: #fff;
 
   select.lang-select-page__list {
-    background-color: $ec-blue-120;
+    background-color: $ec-blue120;
     color: #fff;
     // firefox hide arrow
     -moz-appearance: none;
@@ -110,7 +110,7 @@ select.lang-select-page__list {
     }
 
     & > option {
-      background-color: $ec-blue-120;
+      background-color: $ec-blue120;
     }
 
     &::after {

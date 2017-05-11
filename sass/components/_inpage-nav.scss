@@ -113,13 +113,13 @@ Style guide inpagenav
 
     margin: 0;
     padding: 1em;
-    background-color: $ec-blue-120;
-    border-color: $ec-blue-120;
+    background-color: $ec-blue120;
+    border-color: $ec-blue120;
 
     &:hover,
     &:active,
     &:focus {
-      background-color: $ec-blue-120;
+      background-color: $ec-blue120;
       color: #fff;
       text-decoration: none;
     }
@@ -173,7 +173,7 @@ Style guide inpagenav
         padding: 0.8em 0 0.8em 1em;
         font-size: $font-size-little;
         color: #fff;
-        border-top: 1px solid $ec-blue-120;
+        border-top: 1px solid $ec-blue120;
 
         &:hover,
         &:focus {

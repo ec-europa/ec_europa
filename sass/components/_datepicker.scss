@@ -24,7 +24,7 @@ Style guide datepicker
 
   // Datepicker header.
   .ui-datepicker-header {
-    background-color: $datepicker-color-header;
+    background-color: $ec-grey;
     border: none;
     border-radius: 0;
     padding: 0 !important;
@@ -37,7 +37,7 @@ Style guide datepicker
       height: 100%;
       width: 50px;
       top: 0;
-      background: none;
+      background-color: transparent;
       border: none;
 
       &:hover {
@@ -87,7 +87,7 @@ Style guide datepicker
         @include form-control();
 
         position: relative;
-        background-color: $datepicker-color-select;
+        background-color: $ec-grey75;
         color: #fff;
         border: none;
         height: 100%;
@@ -101,7 +101,7 @@ Style guide datepicker
         @include _focus_outline_border(3px, $ec-yellow, -3px, none);
 
         &:first-child {
-          border-right: 2px solid $datepicker-color-select-separator;
+          border-right: 2px solid $ec-grey50;
         }
 
         &:focus {
@@ -119,13 +119,13 @@ Style guide datepicker
   }
 
   table.ui-datepicker-calendar {
-    background: $datepicker-color-background;
+    background-color: $ec-grey15;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
     border-bottom: 10px solid transparent;
 
     th {
-      font-size: 16px;
+      font-size: $font-size-little;
       font-weight: normal;
       background: none;
     }
@@ -141,12 +141,12 @@ Style guide datepicker
   }
 
   .ui-state-active {
-    border: 2px solid #0b64b2;
+    border: 2px solid $ec-blue;
     padding: 3px 10px;
   }
 
   .ui-state-highlight {
-    background-color: #fed500;
+    background-color: $ec-yellow;
     color: #000;
   }
 }

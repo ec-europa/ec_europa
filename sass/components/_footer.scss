@@ -24,8 +24,8 @@ Style guide footer.footer-improved
 
 // Footer improved.
 .footer__improved {
-  background-color: $ec-blue-25;
-  color: $ec-blue-120;
+  background-color: $ec-blue25;
+  color: $ec-blue120;
 
   .footer__column {
     padding-top: 0.8em;
@@ -46,7 +46,7 @@ Style guide footer.footer-improved
   }
 
   a {
-    color: $ec-blue-120;
+    color: $ec-blue120;
   }
 
   h4 {
@@ -79,7 +79,7 @@ Style guide footer.footer-improved
 
 // Footer top.
 .footer__top {
-  background-color: $ec-blue-75;
+  background-color: $ec-blue75;
   color: #fff;
 
   a {
@@ -108,7 +108,7 @@ Style guide footer.footer-improved
 
 .footer__title {
   color: #fff;
-  border-bottom: 2px solid $ec-blue-50;
+  border-bottom: 2px solid $ec-blue50;
   margin-bottom: 0.2em;
 
   @include breakpoint(screen-md-min) {
