@@ -743,7 +743,7 @@ function europa_preprocess_block(&$variables) {
   }
 
   // Site-level language switcher.
-  if (isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
+  if (theme_get_setting('ec_europa_multilingual', 'europa') && isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
     // Add the js to make it function.
     drupal_add_js(drupal_get_path('theme', 'europa') . '/js/components/lang-select-site.js');
   }
