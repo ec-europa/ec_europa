@@ -47,6 +47,7 @@ function europa_date_popup_process_alter(&$element, &$form_state, $context) {
   unset($element['date']['#description']);
   unset($element['time']['#description']);
 }
+
 /**
  * Override theme_file_link().
  */
@@ -68,39 +69,10 @@ function europa_file_link($variables) {
 }
 
 /**
- * Implements hook_ds_pre_render_alter().
- *
- * Setting variables for non-node entities in the DS templates.
+ * Pre-render function for taxonomy pages.
  */
-function europa_ds_pre_render_alter(&$layout_render_array, $context, &$variables) {
-  $entity = $variables['elements'];
-  $entity_type = $entity['#entity_type'];
-
-  switch ($entity_type) {
-    case 'user':
-      $uri = entity_uri($entity_type, $variables['elements']['#account']);
-      $variables['node_url'] = url($uri['path']);
-
-      if (!empty($entity['europa_user_fullname_first'])) {
-        $title = $entity['europa_user_fullname_first'][0]['#markup'];
-      }
-      elseif (!empty($entity['europa_user_fullname_last'])) {
-        $title = $entity['europa_user_fullname_last'][0]['#markup'];
-      }
-      else {
-        $title = $variables['elements']['#account']->name;
-      }
-
-      // We get the value wrapped in a <p> tag.
-      $variables['title'] = strip_tags($title);
-      break;
-
-    case 'taxonomy_term':
-      $uri = entity_uri($entity_type, $variables['term']);
-      $variables['node_url'] = url($uri['path']);
-      $variables['title'] = $entity['#term']->name;
-      break;
-
-  }
+function _europa_term_heading($element) {
+  $element['#prefix'] = '<div class="container-fluid"><div class="' . $element['main'] . '">';
+  $element['#suffix'] = '</div></div>';
+  return $element;
 }
-
