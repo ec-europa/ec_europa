@@ -1020,7 +1020,10 @@ function europa_preprocess_taxonomy_term(&$variables) {
   }
 
   // Add default section component to the entity regions.
-  $variables['left_classes'] = $variables['right_classes'] = $variables['central_classes'] = 'section';
+  $variables['left_classes'] = 'section';
+  $variables['right_classes'] = 'section';
+  $variables['central_classes'] = 'section';
+
   // Add information about the number of sidebars.
   if (!empty($variables['left']) && !empty($variables['right'])) {
     $variables['content_column_class'] = 'col-md-6';
