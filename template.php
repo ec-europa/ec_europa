@@ -763,7 +763,7 @@ function europa_preprocess_block(&$variables) {
         if (array_search($block->bid, array_keys($context->reactions['block']['blocks'])) === 0) {
           $variables['classes_array'][] = 'filters';
           $variables['title_attributes_array']['class'][] = 'filters__title';
-          $block->subject = t('Refine results');
+          $block->subject = t('Filter by');
 
           // Passing block id to Drupal.settings in order to pass it through
           // data attribute in the collapsible panel.
