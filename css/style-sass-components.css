@@ -4401,8 +4401,8 @@ Style guide: siteheader.langselect
       outline: none; }
   .lang-select-site .lang-select-site__label {
     margin-right: 0.556em; }
-    .lang-select-site .lang-select-site__label:hover {
-      text-decoration: underline; }
+  .lang-select-site .lang-select-site__link .lang-select-site__label:hover {
+    text-decoration: underline; }
   .lang-select-site .lang-select-site__code {
     display: inline-block;
     position: relative;
