@@ -1015,7 +1015,7 @@ function europa_preprocess_taxonomy_term(&$variables) {
 
   if (!empty($tasks)) {
     $tasks['#prefix'] = '<div class="tabs--primary nav nav-tabs">';
-    $tasks['#suffix'] = '<div>';
+    $tasks['#suffix'] = '</div>';
     $variables['local_tabs'] = drupal_render($tasks);
   }
 
