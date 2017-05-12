@@ -1010,6 +1010,15 @@ function europa_preprocess_node(&$variables) {
  * Implements hook_preprocess_taxonomy_term().
  */
 function europa_preprocess_taxonomy_term(&$variables) {
+  // Add tabs to node object so we can put it in the DS template instead.
+  $tasks = menu_local_tasks();
+
+  if (!empty($tasks)) {
+    $tasks['#prefix'] = '<div class="tabs--primary nav nav-tabs">';
+    $tasks['#suffix'] = '<div>';
+    $variables['local_tabs'] = drupal_render($tasks);
+  }
+
   // Add default section component to the entity regions.
   $variables['left_classes'] = $variables['right_classes'] = $variables['central_classes'] = 'section';
   // Add information about the number of sidebars.
