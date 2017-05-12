@@ -1,28 +1,12 @@
 // Bootstrap overrides and new variables.
 
-// @todo replace this invalid colors with the correct ones.
-$datepicker-color-header: #393939;
-$datepicker-color-select: #4f4f4f;
-$datepicker-color-select-separator: #686868;
-$datepicker-color-background: #eaeaea;
-$agenda-yellow: #fed437;
-//.file-upload .file-upload__message in color: #999999
-//.page-header .page-header__site-identification h3 in color: #b0c5de
-//.site-menu .listing__item in border-color: #dcb812
-//.ui-datepicker .ui-state-highlight in background-color: #fed500
-//.site-user-menu__list .site-user-menu--header background: #ececec
-//.splash-page &__helper-text tbody in border-bottom: 1px solid #245898
-//.splash-page &__helper-text tbody tr in border-top: 1px solid #245898
-
-// Check properties that uses rgba values.
-
 // Colors.
 $ec-blue:           #004494;
-$ec-blue-25:        #bfd0e4;
-$ec-blue-50:        #7fa1c9;
-$ec-blue-75:        #4073af;
-$ec-blue-110:       #003d84;
-$ec-blue-120:       #003776;
+$ec-blue25:         #bfd0e4;
+$ec-blue50:         #7fa1c9;
+$ec-blue75:         #4073af;
+$ec-blue110:        #003d84;
+$ec-blue120:        #003776;
 
 $ec-grey:           #404040;
 $ec-grey5:          #f5f5f5;
@@ -46,7 +30,7 @@ $ec-green-n:        #467a39;
 $ec-red-n:          #da2131;
 
 $brand-primary:     $ec-blue;
-$brand-political:   $ec-blue-120;
+$brand-political:   $ec-blue120;
 $brand-success:     $ec-green-n;
 $brand-info:        $ec-grey75;
 $brand-warning:     $ec-yellow110 ;
@@ -139,7 +123,7 @@ $form-checkbox-border-color-checked-hover:        $ec-yellow;
 $form-checkbox-background-color-checked-hover:    $brand-primary;
 
 // Navigation block color settings.
-$navigation-title-color:        $ec-blue-120;
+$navigation-title-color:        $ec-blue120;
 $navigation-title-hover-color:  #000;
 $navigation-top-border-color:   $ec-yellow;
 

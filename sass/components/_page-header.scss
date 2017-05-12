@@ -80,7 +80,7 @@ Style guide: page-header.5
     
     h3 {
       font-size: $font-size-mid;
-      color: #b0c5de;
+      color: $ec-blue25;
       font-weight: normal;
     }
 
@@ -192,7 +192,7 @@ Style guide: page-header.5
     min-height: 75px;
     margin: 75px 0 0;
     padding: 16px;
-    background-color: $ec-blue-120;
+    background-color: $ec-blue120;
   }
 
   .field__label--above {
@@ -223,7 +223,7 @@ Style guide: page-header.5
       height: 34px;
       margin: 0;
       line-height: 34px;
-      background-color: $ec-blue-120;
+      background-color: $ec-blue120;
       text-align: center;
     }
 
