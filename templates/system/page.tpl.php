@@ -112,10 +112,10 @@
     <section class="top-bar" aria-label="Site tools">
       <div>
         <div class="top-bar__wrapper">
-          <?php if ($is_front): ?>
-            <h1 class="sr-only"><?php print $site_name; ?></h1>
-            <h2 class="sr-only"><?php print t('Classes'); ?></h2>
-          <?php endif; ?>
+        <?php if ($is_front): ?>
+          <h1 class="sr-only"><?php print $site_name; ?></h1>
+          <h2 class="sr-only"><?php print t('Classes'); ?></h2>
+        <?php endif; ?>
           <?php print render($page['header']); ?>
         </div>
       </div>
@@ -139,15 +139,15 @@
 
       <div class="navbar-collapse collapse">
         <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
+        <?php if (!empty($primary_nav)): ?>
+          <?php print render($primary_nav); ?>
+        <?php endif; ?>
+        <?php if (!empty($secondary_nav)): ?>
+          <?php print render($secondary_nav); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['navigation'])): ?>
+          <?php print render($page['navigation']); ?>
+        <?php endif; ?>
         </nav>
       </div>
     </div>
