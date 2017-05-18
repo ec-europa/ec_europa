@@ -3,6 +3,8 @@
 /**
  * @file
  * Display Suite 1 column template.
+ *
+ * @TODO update once new grid style is defined.
  */
 ?>
 

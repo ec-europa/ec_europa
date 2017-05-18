@@ -3,6 +3,8 @@
 /**
  * @file
  * Display Suite 3 column equal width template.
+ *
+ * @TODO update once new grid style is defined.
  */
 ?>
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="ecl-container <?php print $classes;?>">

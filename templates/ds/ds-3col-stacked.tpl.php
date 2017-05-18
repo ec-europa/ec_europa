@@ -3,6 +3,8 @@
 /**
  * @file
  * Display Suite 3 column 25/50/25 stacked template.
+ *
+ * @TODO update once new grid style is defined.
  */
 ?>
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="ecl-container <?php print $classes;?>">
