@@ -1,26 +1,37 @@
 # Ec-Europa theme
 Repository containing the drupal theme for the NextEuropa platform.
 
-The Ec-Europa theme is a Drupal 7 theme, the one currently used by the info website (ec.europa.eu/info).
-This theme is responsive (3 different breakpoints), it uses B.E.M naming convention, in integrates a procedure to generate a styleguide and it is based on a component driven design. 
+The Ec-Europa theme is a Drupal 7 theme, implementing the styling defined for 
+the Digital Transformation of the European Commission.
+This theme is based on a component driven design. 
 
 ### 1. Installation
 
 Place the content of this repository into a folder in sites/all/themes and enable the theme going to admin/appearance.
-Install the needed libraries by running the included drush make file (drush make --no-core europa.make) 
-The Ec-Europa-theme uses bootstrap as the base theme, so you need to have also this theme, you can get it here: https://www.drupal.org/project/bootstrap
+The Ec-Europa-theme uses atomium as the base theme, so you need to have also 
+this theme, you can get it here: https://www.drupal.org/project/atomium .
 
+### 2. Styleguide
 
-### 2. Development
+The styleguide called [Europa component library](https://ec-europa.github.io/europa-component-library)
+ is to be used as a reference when building your website.
 
-There is a gruntfile in the root of this project, if you run npm install you will get grunt and if you run it a watcher will take care of compiling your sass files into the final css and to re-generate the styleguide.
+### 3. Helper tools
 
+All the templates are provided inside the theme:
+ - component templates
+ - views templates
+ - display suite templates
 
-### 3. Styleguide
+The platform provides two modules to facilitate building your site and integrate
+with views and display suite. 
+More information about their usage can be found in their respective README files.
 
-This repository contains all the source files needed to generate the Ec-Europa styleguide, but it doesn't contain the generated styleguide.
-In your local environment, in order to generate the styleguide you will need npm (package manager for JavaScript) to be installed on your system, once you have npm you can run npm install from the root of the Ec-Europa theme and you will get Kss which is the library we are using to generate the styleguide.
-There is a phing task named gen-styleguide which can be used to facilitate the styleguide generation
-./bin/phing gen-styleguide
-The generated files are excluded in .gitignore, so you should never notice them doing a git diff, in any case do not add those files to the repository, please.
+#### nexteuropa_core_views
 
+The module allows to set a component layout of your choice to a views row.
+
+###nexteuropa_fields_formatters
+
+The module allows to set a component layout to a field of your choice, in views 
+or in the content type 'Manage fields' screen of display suite.
