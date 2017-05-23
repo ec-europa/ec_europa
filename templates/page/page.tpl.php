@@ -96,12 +96,37 @@
 <?php endif; ?>
 
 <header class="site-header" role="banner">
- <?php print render($site_header); ?>
- <?php print render($page['header']); ?>
+  <div class="container-fluid">
+
+  <?php if (!($is_front) || theme_get_setting('ec_europa_site_header_home', 'europa')): ?>
+    <a href="<?php print $front_page; ?>" class="<?php print $logo_classes; ?>" title="<?php print $page_logo_title; ?>">
+      <span class="sr-only"><?php print $page_logo_title; ?></span>
+    </a>
+  <?php endif; ?>
+
+  <?php if ($is_front && !empty($site_slogan) && theme_get_setting('ec_europa_site_header_home', 'europa')): ?>
+    <p class="site-slogan"><?php print $site_slogan; ?></p>
+  <?php endif; ?>
+
+  <?php if (!empty($page['header'])): ?>
+    <section class="top-bar" aria-label="Site tools">
+      <div>
+        <div class="top-bar__wrapper">
+        <?php if ($is_front): ?>
+          <h1 class="sr-only"><?php print $site_name; ?></h1>
+          <h2 class="sr-only"><?php print t('Classes'); ?></h2>
+        <?php endif; ?>
+          <?php print render($page['header']); ?>
+        </div>
+      </div>
+    </section>
+  <?php endif; ?>
+
+  </div>
 </header>
 
 <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-  <section id="navbar" role="banner" class="<?php print render($navbar_classes); ?>">
+  <section id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -114,15 +139,15 @@
 
       <div class="navbar-collapse collapse">
         <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
+        <?php if (!empty($primary_nav)): ?>
+          <?php print render($primary_nav); ?>
+        <?php endif; ?>
+        <?php if (!empty($secondary_nav)): ?>
+          <?php print render($secondary_nav); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['navigation'])): ?>
+          <?php print render($page['navigation']); ?>
+        <?php endif; ?>
         </nav>
       </div>
     </div>
@@ -133,30 +158,30 @@
   <!-- Page Header -->
   <div class="page-header <?php if (isset($header_back)) : print ' page-header--image';
  endif; ?>">
-    <?php if (!empty($page['header_bottom'])): ?>
-      <nav class="page-navigation" role="navigation">
-        <div class="container-fluid">
-          <?php print render($page['header_bottom']); ?>
-        </div>
-      </nav>
-    <?php endif; ?>
-
-    <?php if (theme_get_setting('ec_europa_improved_website', 'europa')): ?>
-      <?php if (!$is_front || $is_front && theme_get_setting('ec_europa_improved_website_home', 'europa')): ?>
+  <?php if (!empty($page['header_bottom'])): ?>
+    <nav class="page-navigation" role="navigation">
+      <div class="container-fluid">
+        <?php print render($page['header_bottom']); ?>
+      </div>
+    </nav>
+  <?php endif; ?>
+    
+  <?php if (theme_get_setting('ec_europa_improved_website', 'europa')): ?>
+    <?php if (!$is_front || $is_front && theme_get_setting('ec_europa_improved_website_home', 'europa')): ?>
     <div class="container-fluid page-header__site-identification">
       <h3><?php print $site_name; ?></h3>
     </div>
-      <?php endif; ?>
     <?php endif; ?>
+  <?php endif; ?>
     
     <div class="container-fluid page-header__hero-title">
       <div class="row padding-reset">
-        <div class="ecl-col-lg-9">
+        <div class="col-lg-9">
           <?php print render($title_prefix); ?>
           <?php if (!empty($page['custom_title'])): ?>
             <?php print render($page['custom_title']); ?>
           <?php else: ?>
-            <h1><?php print render($title); ?></h1>
+            <h1><?php print $title; ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
 
@@ -202,7 +227,7 @@
       <a id="main-content" tabindex="-1"></a>
       <div class="row">
         <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="ecl-col-md-3" role="complementary">
+          <aside class="col-md-3" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside> <!-- /#sidebar-first -->
         <?php endif; ?>
@@ -213,7 +238,7 @@
           <?php endif; ?>
 
           <?php if (!empty($messages)): ?>
-            <?php print render($messages); ?>
+            <?php print $messages; ?>
           <?php endif; ?>
 
           <?php print render($page['content']); ?>
@@ -222,7 +247,7 @@
         </section>
 
         <?php if (!empty($page['sidebar_second'])): ?>
-          <aside class="ecl-col-md-3" role="complementary">
+          <aside class="col-md-3" role="complementary">
             <?php print render($page['sidebar_second']); ?>
           </aside>  <!-- /#sidebar-second -->
         <?php endif; ?>
@@ -267,7 +292,7 @@
   <div class="footer__bottom">
     <div class="container-fluid">
       <div class="row">
-        <div class="ecl-col-sm-12">
+        <div class="col-sm-12">
         <?php if (!empty($page['footer_bottom'])): ?>
           <?php print render($page['footer_bottom']); ?>
         <?php endif; ?>
