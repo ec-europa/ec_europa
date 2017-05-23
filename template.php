@@ -27,15 +27,6 @@ function europa_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_preprocess_HOOK().
- */
-function europa_preprocess_europa_status_message(&$variables) {
-  if (!empty($variables['message_classes']) && is_array($variables['message_classes'])) {
-    $variables['message_classes'] = ' ' . implode(' ', $variables['message_classes']);
-  }
-}
-
-/**
  * Overrides theme_form_required_marker().
  */
 function europa_form_required_marker($variables) {
@@ -46,19 +37,6 @@ function europa_form_required_marker($variables) {
     'title' => $t('This field is required.'),
   ];
   return '<span' . drupal_attributes($attributes) . '>*</span>';
-}
-
-/**
- * Implements hook_form_BASE_FORM_ID_alter().
- */
-function europa_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
-  // Button value change on all the views exposed forms is due to a
-  // design/ux requirement which uses the 'Refine results' label for all the
-  // filter forms.
-  $form['submit']['#value'] = t('Refine results');
-  $form['submit']['#attributes']['class'][] = 'btn-primary';
-  $form['submit']['#attributes']['class'][] = 'filters__btn-submit';
-  $form['reset']['#attributes']['class'][] = 'filters__btn-reset';
 }
 
 /**
