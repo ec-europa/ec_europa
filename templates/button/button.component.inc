@@ -135,4 +135,7 @@ function europa_atomium_definition_button() {
  */
 function europa_preprocess_button(&$variables) {
   $variables['attributes_array']['class'][] = 'ecl-button';
+  if (empty(array_search('ecl-button--', $variables['attributes_array']['class']))) {
+    $variables['attributes_array']['class'][] = 'ecl-button--default';
+  }
 }
