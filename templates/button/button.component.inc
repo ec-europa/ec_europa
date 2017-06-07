@@ -18,9 +18,7 @@ function europa_atomium_definition_button() {
         'value' => 'Default',
         'attributes' => array(
           'class' => array(
-            'ecl-button--primary',
-            'ecl-button--block',
-            'ecl-button--arrow-down',
+            'ecl-button--default',
           ),
         ),
       ),
