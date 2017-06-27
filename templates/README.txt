@@ -4,3 +4,6 @@ various folders inside of sites/*/themes/atomium/templates. For example, the
 page.tpl.php template file is located at
 sites/*/themes/atomium/templates/page/page.tpl.php. To override any of these
 files, copy them from the Atomium base theme and place them in here.
+
+For more information about the template management, please read the README file
+of Atomium theme.
