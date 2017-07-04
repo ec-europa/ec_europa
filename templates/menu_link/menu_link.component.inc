@@ -49,21 +49,21 @@ function europa_menu_link__user_menu(&$variables) {
  * Override theme_menu_link().
  */
 function europa_menu_link__menu_nexteuropa_service_links(&$variables) {
-  return _europa_menu_link__footer($variables);
+  return _europa_menu_link__footer($variables, TRUE);
 }
 
 /**
  * Override theme_menu_link().
  */
 function europa_menu_link__menu_service_tools(&$variables) {
-  return _europa_menu_link__footer($variables);
+  return _europa_menu_link__footer($variables, TRUE);
 }
 
 /**
  * Override theme_menu_link().
  */
 function europa_menu_link__menu_nexteuropa_social_media(&$variables) {
-  return _europa_menu_link__footer($variables);
+  return _europa_menu_link__footer($variables, TRUE);
 }
 
 /**
@@ -89,7 +89,7 @@ function europa_menu_link__menu_nexteuropa_site_links(&$variables) {
  * @return string
  *   HTML markup
  */
-function _europa_menu_link__footer(array &$variables) {
+function _europa_menu_link__footer(array &$variables, $inline = FALSE) {
   $element = $variables['element'];
   $sub_menu = '';
 
@@ -97,8 +97,10 @@ function _europa_menu_link__footer(array &$variables) {
     $sub_menu = drupal_render($element['#below']);
   }
 
-  $element['#attributes']['class'][] = 'footer__menu-item';
-
+  $element['#attributes']['class'][] = 'ecl-footer__menu-item';
+  if ($inline) {
+    $element['#attributes']['class'][] = 'ecl-list-inline__item';
+  }
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
