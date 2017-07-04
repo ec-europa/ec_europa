@@ -98,10 +98,10 @@ function europa_menu_tree__secondary(&$variables) {
  * Create the needed wrapper for menus in the footer.
  */
 function _europa_menu_tree_footer($tree, $inline = FALSE) {
-  $classes[] = 'footer__menu';
+  $classes[] = 'ecl-footer__menu';
 
   if ($inline) {
-    $classes[] = 'ul-list-inline';
+    $classes[] = 'ecl-list-inline';
   }
 
   return '<ul class="' . implode(' ', $classes) . '">' . $tree . '</ul>';
