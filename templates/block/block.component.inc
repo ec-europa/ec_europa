@@ -9,15 +9,18 @@
  * Implements hook_preprocess_HOOK().
  */
 function europa_preprocess_block(&$variables) {
-  $block = $variables['block'];
 
+  $block = $variables['block'];
   switch ($block->delta) {
     case 'nexteuropa_feedback':
       $variables['classes_array'][] = 'block--full-width';
       break;
 
     case 'menu-nexteuropa-service-links':
-    case 'cce-basic-config-footer-ipg':
+    case 'menu-nexteuropa-site-links':
+    case 'menu-nexteuropa-social-media':
+    case 'menu-nexteuropa-inst-links':
+      $variables['title'] = $block->subject;
       $block->subject = '';
       break;
 
