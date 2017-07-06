@@ -9,8 +9,8 @@
  * Implements hook_preprocess_HOOK().
  */
 function europa_preprocess_block(&$variables) {
-
   $block = $variables['block'];
+
   switch ($block->delta) {
     case 'nexteuropa_feedback':
       $variables['classes_array'][] = 'block--full-width';
