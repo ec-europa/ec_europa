@@ -17,7 +17,11 @@ function europa_preprocess_block(&$variables) {
       break;
 
     case 'menu-nexteuropa-service-links':
-    case 'cce-basic-config-footer-ipg':
+    case 'menu-nexteuropa-site-links':
+    case 'menu-nexteuropa-social-media':
+    case 'menu-nexteuropa-inst-links':
+      $variables['title'] = $block->subject;
+      $variables['title_attributes_array']['class'][] = array('ecl-h4', 'ecl-footer__title');
       $block->subject = '';
       break;
 
