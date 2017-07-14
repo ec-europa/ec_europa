@@ -28,12 +28,6 @@ function europa_preprocess_page(&$variables, $hook) {
   $node = &$variables['node'];
 
   if (isset($node)) {
-    // Adding generic introduction field to be later rendered in page template.
-    $introduction = variable_get('ec_europa_introduction_field', FALSE);
-
-    $variables['ec_europa_introduction'] = isset($node->{$introduction})
-      ? field_view_field('node', $node, $introduction, ['label' => 'hidden']) : NULL;
-
     // Check if Display Suite is handling node.
     if (module_exists('ds')) {
       $layout = ds_get_layout('node', $node->type, 'full');
@@ -73,6 +67,22 @@ function europa_preprocess_page(&$variables, $hook) {
   }
   $variables['site_header'] = array('#theme' => array('site_header'));
   $variables['messages'] = $variables['show_messages'] ? array('#theme' => array('status_messages')) : '';
+
+  $variables['page_header'] = array(
+    '#theme' => array('page_header'),
+    '#identity' =>  $variables['site_name'],
+    '#title_prefix' => $variables['title_prefix'],
+    '#title_suffix' => $variables['title_suffix'],
+    '#title' => drupal_get_title(),
+  );
+
+  if (isset($node)) {
+    // Adding generic introduction field to be later rendered in page template.
+    $introduction = variable_get('ec_europa_introduction_field', FALSE);
+    $variables['page_header']['#introduction'] = isset($node->{$introduction})
+      ? field_view_field('node', $node, $introduction, ['label' => 'hidden']) : NULL;
+  }
+
   $variables['footer'] = array(
     '#theme' => array('footer'),
     '#footer_left' => $variables['page']['footer_left'],

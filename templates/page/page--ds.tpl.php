@@ -92,20 +92,7 @@
 <?php endif; ?>
 
 <?php print render($site_header); ?>
-
-<?php if (!empty($page['header'])): ?>
-    <section class="top-bar" aria-label="Site tools">
-        <div>
-            <div class="top-bar__wrapper">
-              <?php if ($is_front): ?>
-                  <h1 class="sr-only"><?php print $site_name; ?></h1>
-                  <h2 class="sr-only"><?php print t('Classes'); ?></h2>
-              <?php endif; ?>
-              <?php print render($page['header']); ?>
-            </div>
-        </div>
-    </section>
-<?php endif; ?>
+<?php print render($page['header']); ?>
 
 <?php if (!empty($page['header_bottom'])): ?>
   <nav class="page-navigation" role="navigation">
@@ -128,6 +115,8 @@
 <?php endif; ?>
 
 <section class="main-content">
+  <?php print render($page_header); ?>
+
   <!-- Generic sections -->
   <div class="container-fluid">
     <?php if (!empty($page['help'])): ?>
