@@ -46,3 +46,10 @@ function europa_atomium_definition_footer() {
     ),
   );
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function europa_preprocess_footer(&$variables, $hook) {
+  $variables['#atomium_recursive'] = TRUE;
+}
