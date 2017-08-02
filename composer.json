@@ -1,7 +1,7 @@
 {
-    "name": "ec-europa/ec-europa-theme",
-    "description": "Theme for Drupal 7 developed by the DTT site builder team",
-    "git-version": "1.0",
+    "name": "ec-europa/ec_europa",
+    "description": "OpenEuropa base theme.",
+    "git-version": "0.0.1",
     "type": "drupal-theme",
     "require-dev": {
         "drupal/coder": "^8.2",

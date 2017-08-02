@@ -1,6 +1,6 @@
 # EC Europa Theme
 
-[![Build Status](https://travis-ci.org/ec-europa/ec-europa-theme.svg?branch=europa-atomium)](https://travis-ci.org/ec-europa/ec-europa-theme)
+[![Build Status](https://travis-ci.org/ec-europa/ec_europa.svg?branch=master)](https://travis-ci.org/ec-europa/ec_europa)
 
 Repository containing the drupal theme for the NextEuropa platform.
 

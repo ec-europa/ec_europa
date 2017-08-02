@@ -1,5 +1,5 @@
 {
-  "name": "ec-europa-theme/test-site",
+  "name": "ec_europa/test-site",
   "repositories": {
     "drupal": {
       "type": "composer",
