@@ -1,11 +1,6 @@
 api = 2
 core = 7.x
 
-libraries[enquire][destination] = "themes/europa"
-libraries[enquire][directory_name] = "assets/js/libraries"
-libraries[enquire][download][type] = "get"
-libraries[enquire][download][url] = "https://raw.githubusercontent.com/WickyNilliams/enquire.js/master/dist/enquire.min.js"
-
 libraries[html5shiv][destination] = "themes/europa"
 libraries[html5shiv][directory_name] = "assets/js/libraries"
 libraries[html5shiv][download][type] = "get"
@@ -20,21 +15,6 @@ libraries[respond][destination] = "themes/europa"
 libraries[respond][directory_name] = "assets/js/libraries"
 libraries[respond][download][type] = "get"
 libraries[respond][download][url] = "https://raw.githubusercontent.com/scottjehl/Respond/master/dest/respond.min.js"
-
-libraries[equalheight][destination] = "themes/europa"
-libraries[equalheight][directory_name] = "assets/js/libraries"
-libraries[equalheight][download][type] = "get"
-libraries[equalheight][download][url] = "https://raw.githubusercontent.com/jorenvanhee/EqualHeight.js/master/dist/jquery.equalheight.min.js"
-
-libraries[velocity][destination] = "themes/europa"
-libraries[velocity][directory_name] = "assets/js/libraries"
-libraries[velocity][download][type] = "get"
-libraries[velocity][download][url] = "https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.min.js"
-
-libraries[modernizr][destination] = "themes/europa"
-libraries[modernizr][directory_name] = "assets/js/libraries/modernizr"
-libraries[modernizr][download][type] = "get"
-libraries[modernizr][download][url] = "https://github.com/Modernizr/Modernizr/archive/v2.8.3.zip"
 
 libraries[accessibleTabs][destination] = "themes/europa"
 libraries[accessibleTabs][directory_name] = "assets/js/libraries"
