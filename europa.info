@@ -35,7 +35,6 @@ stylesheets[all][] = assets/css/europa.css
 
 ; ========================================
 ; Scripts
-; ========================================
 scripts[] = assets/js/misc/ajax.js
 scripts[] = assets/js/ecl.js
 scripts[] = assets/js/europa_tabs.js
