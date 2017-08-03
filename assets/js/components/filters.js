@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-  Drupal.behaviors.europa_filters = {
+  Drupal.behaviors.ec_europa_filters = {
 
     attach: function (context, settings) {
       var $filters        = $('.filters'),
@@ -39,7 +39,7 @@
             <button class="btn btn-default filters__btn-reset--small hidden js-showonsubmit">' + clearAll + '\
             </button> \
               <button class="btn btn-primary filters__btn-collapse" type="button"  \
-                data-toggle="collapse" data-target="#' + Drupal.settings.europa.exposedBlockId + '"  \
+                data-toggle="collapse" data-target="#' + Drupal.settings.ec_europa.exposedBlockId + '"  \
                 aria-expanded="false" aria-controls="collapseFilters">  \
                 ' + refineText + '  \
               </button> \
@@ -128,7 +128,7 @@
 
               $filters.on('show.bs.collapse', function () {
                 $(this).prepend('<a class="close filters__close" data-toggle="collapse" ' +
-                ' data-target="#' + Drupal.settings.europa.exposedBlockId + '"' +
+                ' data-target="#' + Drupal.settings.ec_europa.exposedBlockId + '"' +
                 ' aria-expanded="true" aria-controls="collapseFilters">' + hideText + '</a>');
                 hideFilterButtons();
               });

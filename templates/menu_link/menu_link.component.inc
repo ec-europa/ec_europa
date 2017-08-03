@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link(&$variables, $hook) {
+function ec_europa_preprocess_menu_link(&$variables, $hook) {
   $variables['output']['#options']['attributes']['class'][] = 'ecl-link';
   $variables['output']['#options']['attributes']['class'][] = 'ecl-link--standalone';
 }
@@ -16,7 +16,7 @@ function europa_preprocess_menu_link(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__main_menu(&$variables, $hook) {
+function ec_europa_preprocess_menu_link__main_menu(&$variables, $hook) {
   $link = $variables['element']['#original_link'];
   $variables['attributes_array']['class'][] = 'ecl-navigation-menu__item';
   $variables['output']['#options']['attributes']['class'][] = 'ecl-navigation-menu__link';
@@ -47,39 +47,21 @@ function europa_preprocess_menu_link__main_menu(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__user_menu(&$variables, $hook) {
+function ec_europa_preprocess_menu_link__user_menu(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'site-user-menu__option';
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__menu_service_tools(&$variables, $hook) {
+function ec_europa_preprocess_menu_link__menu_service_tools(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-list-inline__item';
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__menu_nexteuropa_service_links(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-list-inline__item';
-  $variables['output']['#options']['attributes']['class'] = array_diff(
-    $variables['output']['#options']['attributes']['class'],
-    array('ecl-link--standalone')
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function europa_preprocess_menu_link__menu_nexteuropa_service_links__footer(&$variables, $hook) {
-  $variables = _europa_menu_link_footer_alter($variables);
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function europa_preprocess_menu_link__menu_nexteuropa_social_media(&$variables, $hook) {
+function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-list-inline__item';
   $variables['output']['#options']['attributes']['class'] = array_diff(
     $variables['output']['#options']['attributes']['class'],
@@ -90,14 +72,15 @@ function europa_preprocess_menu_link__menu_nexteuropa_social_media(&$variables, 
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__menu_nexteuropa_social_media__footer(&$variables, $hook) {
-  $variables = _europa_menu_link_footer_alter($variables);
+function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links__footer(&$variables, $hook) {
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__menu_nexteuropa_inst_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = 'ecl-list-inline__item';
   $variables['output']['#options']['attributes']['class'] = array_diff(
     $variables['output']['#options']['attributes']['class'],
     array('ecl-link--standalone')
@@ -107,14 +90,14 @@ function europa_preprocess_menu_link__menu_nexteuropa_inst_links(&$variables, $h
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__menu_nexteuropa_inst_links__footer(&$variables, $hook) {
-  $variables = _europa_menu_link_footer_alter($variables);
+function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media__footer(&$variables, $hook) {
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__menu_nexteuropa_site_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links(&$variables, $hook) {
   $variables['output']['#options']['attributes']['class'] = array_diff(
     $variables['output']['#options']['attributes']['class'],
     array('ecl-link--standalone')
@@ -124,8 +107,25 @@ function europa_preprocess_menu_link__menu_nexteuropa_site_links(&$variables, $h
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(&$variables, $hook) {
-  $variables = _europa_menu_link_footer_alter($variables);
+function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links__footer(&$variables, $hook) {
+  $variables = _ec_europa_menu_link_footer_alter($variables);
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(&$variables, $hook) {
+  $variables['output']['#options']['attributes']['class'] = array_diff(
+    $variables['output']['#options']['attributes']['class'],
+    array('ecl-link--standalone')
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(&$variables, $hook) {
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
@@ -137,7 +137,7 @@ function europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(&$varia
  * @return array
  *   The array of variables.
  */
-function _europa_menu_link_footer_alter(array $variables) {
+function _ec_europa_menu_link_footer_alter(array $variables) {
   $variables['attributes_array']['class'][] = 'ecl-footer__menu-item';
   $variables['output']['#options']['attributes']['class'][] = 'ecl-footer__link';
 

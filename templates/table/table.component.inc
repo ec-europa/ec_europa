@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_table() {
+function ec_europa_atomium_definition_table() {
   return array(
     'label' => 'Tables',
     'description' => 'Tables.',
@@ -33,6 +33,6 @@ function europa_atomium_definition_table() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_table(&$variables, $hook) {
+function ec_europa_preprocess_table(&$variables, $hook) {
   $variables['attributes']['class'][] = 'ecl-table';
 }

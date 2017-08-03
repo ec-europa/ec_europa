@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-  Drupal.behaviors.europa_table = {
+  Drupal.behaviors.ec_europa_table = {
     attach: function (context) {
       $('.table-responsive').each(function () {
         var headerText = [],

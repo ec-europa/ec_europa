@@ -8,7 +8,7 @@
 /**
  * Implements hook_js_alter().
  */
-function europa_js_alter(&$js) {
+function ec_europa_js_alter(&$js) {
   $path_fancybox = libraries_get_path('fancybox');
 
   unset(

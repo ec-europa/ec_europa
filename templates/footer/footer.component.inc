@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_footer() {
+function ec_europa_atomium_theme_footer() {
   return array(
     'footer' => array(
       'variables' => array(
@@ -26,7 +26,7 @@ function europa_atomium_theme_footer() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_footer() {
+function ec_europa_atomium_definition_footer() {
 
   $footer_improved = '<div class="ecl-col-sm ecl-footer__column"><h4 class="ecl-h4"><a href="#">Digital single market</a></h4></div><div class="ecl-col-sm ecl-footer__column"><p class="ecl-footer__label">Follow us:</p><ul class="ecl-footer__menu ecl-list-inline"><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="" href="#"><span class="ecl-icon ecl-icon--facebook ecl-footer__social-icon"></span>Facebook</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="" href="#"><span class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link--external" href="#"><span class=""></span>Other social media</a></li></ul></div><div class="ecl-col-sm ecl-footer__column"><ul class="ecl-footer__menu ecl-list-inline"><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="" href="#"><span class=""></span>Contact</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="" href="#"><span class=""></span>Site map</a></li></ul></div>';
   $footer_left = '<h4 class="ecl-h4 ecl-footer__title">European Commission</h4><ul class="ecl-footer__menu"><li class="ecl-footer__menu-item"><a class="" href="https://ec.europa.eu/commission/index_en">Commission and its priorities</a></li><li class="ecl-footer__menu-item"><a class="" href="https://ec.europa.eu/info/index_en"><span class=""></span>Policies information and services</a></li></ul>';
@@ -50,6 +50,6 @@ function europa_atomium_definition_footer() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_footer(&$variables, $hook) {
+function ec_europa_preprocess_footer(&$variables, $hook) {
   $variables['#atomium_recursive'] = TRUE;
 }

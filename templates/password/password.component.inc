@@ -8,9 +8,9 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_password(&$variables, $hook) {
+function ec_europa_preprocess_password(&$variables, $hook) {
   $element = &$variables['element'];
-  _europa_form_set_css_class($element, array('ecl-text-input'));
+  _ec_europa_form_set_css_class($element, array('ecl-text-input'));
 
   $variables['attributes_array'] = drupal_array_merge_deep($variables['attributes_array'], $element['#attributes']);
 }

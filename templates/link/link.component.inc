@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_HOOK().
  */
-function europa_atomium_theme_link() {
+function ec_europa_atomium_theme_link() {
   return array(
     'link' => array(
       'template' => 'link',
@@ -25,15 +25,15 @@ function europa_atomium_theme_link() {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function europa_preprocess_link(&$variables, $hook) {
+function ec_europa_preprocess_link(&$variables, $hook) {
   $classes = &$variables['attributes_array']['class'];
 
-  if (_europa_array_find('ecl-', $classes)) {
+  if (_ec_europa_array_find('ecl-', $classes)) {
     $classes[] = 'ecl-link';
   }
 
   // Add the class for the external links.
-  if (_europa_url_is_external($variables['path']) && (!in_array('ecl-icon', $classes))) {
+  if (_ec_europa_url_is_external($variables['path']) && (!in_array('ecl-icon', $classes))) {
     $classes[] = 'ecl-link--external';
   }
 
@@ -60,7 +60,7 @@ function europa_preprocess_link(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__default(&$variables, $hook) {
+function ec_europa_preprocess_link__default(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--default',
@@ -70,7 +70,7 @@ function europa_preprocess_link__default(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__primary(&$variables, $hook) {
+function ec_europa_preprocess_link__primary(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--primary',
@@ -80,7 +80,7 @@ function europa_preprocess_link__primary(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__secondary(&$variables, $hook) {
+function ec_europa_preprocess_link__secondary(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--secondary',
@@ -90,7 +90,7 @@ function europa_preprocess_link__secondary(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__call(&$variables, $hook) {
+function ec_europa_preprocess_link__call(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--call',
@@ -101,7 +101,7 @@ function europa_preprocess_link__call(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__timeline(&$variables, $hook) {
+function ec_europa_preprocess_link__timeline(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--call',
@@ -112,7 +112,7 @@ function europa_preprocess_link__timeline(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__caret_up(&$variables, $hook) {
+function ec_europa_preprocess_link__caret_up(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--default',
@@ -123,7 +123,7 @@ function europa_preprocess_link__caret_up(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__caret_right(&$variables, $hook) {
+function ec_europa_preprocess_link__caret_right(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--default',
@@ -134,7 +134,7 @@ function europa_preprocess_link__caret_right(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__caret_down(&$variables, $hook) {
+function ec_europa_preprocess_link__caret_down(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--default',
@@ -145,7 +145,7 @@ function europa_preprocess_link__caret_down(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__caret_left(&$variables, $hook) {
+function ec_europa_preprocess_link__caret_left(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--default',
@@ -156,7 +156,7 @@ function europa_preprocess_link__caret_left(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_link__primary_block(&$variables, $hook) {
+function ec_europa_preprocess_link__primary_block(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
     'ecl-button',
     'ecl-button--primary',
