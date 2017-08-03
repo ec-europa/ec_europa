@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-  Drupal.behaviors.europa_tabs = {
+  Drupal.behaviors.ec_europa_tabs = {
     attach: function (context) {
       $('.nav-tabs--with-content').once('nav-tabs', function () {
         $this = $(this);

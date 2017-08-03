@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_site_slogan() {
+function ec_europa_atomium_theme_site_slogan() {
   return array(
     'site_slogan' => array(
       'variables' => array(
@@ -22,7 +22,7 @@ function europa_atomium_theme_site_slogan() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_site_slogan() {
+function ec_europa_atomium_definition_site_slogan() {
   return array(
     'label' => 'Site slogan',
     'description' => 'Site slogan.',
@@ -35,7 +35,7 @@ function europa_atomium_definition_site_slogan() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_site_slogan(&$variables, $hook) {
+function ec_europa_preprocess_site_slogan(&$variables, $hook) {
   $variables[$hook] = array(
     $hook => array(
       '#markup' => $variables['markup'],

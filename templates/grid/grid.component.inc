@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_grid() {
+function ec_europa_atomium_theme_grid() {
   return array(
     'grid' => array(
       'variables' => array(
@@ -22,7 +22,7 @@ function europa_atomium_theme_grid() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_grid() {
+function ec_europa_atomium_definition_grid() {
   return array(
     'label' => 'Grid',
     'description' => 'Grid layout.',
@@ -45,6 +45,6 @@ function europa_atomium_definition_grid() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_grid(&$variables, $hook) {
+function ec_europa_preprocess_grid(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-container';
 }

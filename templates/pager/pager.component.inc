@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_pager() {
+function ec_europa_atomium_definition_pager() {
   return array(
     'label' => 'Pager',
     'description' => 'Nexteuropa Pager',
@@ -26,7 +26,7 @@ function europa_atomium_definition_pager() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_pager(&$variables, $hook) {
+function ec_europa_preprocess_pager(&$variables, $hook) {
   global $pager_page_array, $pager_total;
 
   if (empty($variables[$hook])) {

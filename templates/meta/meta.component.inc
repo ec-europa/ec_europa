@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_meta() {
+function ec_europa_atomium_theme_meta() {
   return array(
     'meta' => array(
       'variables' => array(
@@ -25,7 +25,7 @@ function europa_atomium_theme_meta() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_meta() {
+function ec_europa_atomium_definition_meta() {
   return array(
     'label' => 'Meta',
     'description' => 'Meta.',
@@ -41,6 +41,6 @@ function europa_atomium_definition_meta() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_meta(&$variables, $hook) {
+function ec_europa_preprocess_meta(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-meta';
 }
