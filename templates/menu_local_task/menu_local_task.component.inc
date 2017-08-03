@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_local_task(&$variables, $hook) {
+function ec_europa_preprocess_menu_local_task(&$variables, $hook) {
   // Add the css class to the "li".
   $variables['attributes_array']['class'][] = 'ecl-navigation-list__item';
 

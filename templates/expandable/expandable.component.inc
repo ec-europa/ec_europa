@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_expandable() {
+function ec_europa_atomium_theme_expandable() {
   return array(
     'expandable' => array(
       'variables' => array(
@@ -25,7 +25,7 @@ function europa_atomium_theme_expandable() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_expandable() {
+function ec_europa_atomium_definition_expandable() {
   return array(
     'label' => 'Expandable',
     'description' => 'Expandable layout.',

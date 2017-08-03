@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_search_bar() {
+function ec_europa_atomium_theme_search_bar() {
   return array(
     'search_bar' => array(
       'template' => 'search-bar',
@@ -22,7 +22,7 @@ function europa_atomium_theme_search_bar() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_search_bar() {
+function ec_europa_atomium_definition_search_bar() {
   return array(
     'label' => 'Search bar',
     'description' => 'Search bar.',
@@ -35,10 +35,10 @@ function europa_atomium_definition_search_bar() {
  * The final display of search bar is managed by this component and a variant
  * of the form_element component.
  *
- * @see _europa_preprocess_form_element__QueryText()
- * @see _europa_preprocess_textfield__QueryText()
+ * @see _ec_europa_preprocess_form_element__QueryText()
+ * @see _ec_europa_preprocess_textfield__QueryText()
  */
-function europa_preprocess_search_bar(&$variables, $hook) {
+function ec_europa_preprocess_search_bar(&$variables, $hook) {
   // If "nexteuropa_europa_search" module is disabled,
   // no need to continue the hook process.
   if (!module_exists('nexteuropa_europa_search')) {

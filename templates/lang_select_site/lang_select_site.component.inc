@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_lang_select_site() {
+function ec_europa_atomium_theme_lang_select_site() {
   return array(
     'lang_select_site' => array(
       'template' => 'lang-select-site',
@@ -24,7 +24,7 @@ function europa_atomium_theme_lang_select_site() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_lang_select_site() {
+function ec_europa_atomium_definition_lang_select_site() {
   global $language;
   return array(
     'label' => 'Site language selector',
@@ -40,7 +40,7 @@ function europa_atomium_definition_lang_select_site() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_lang_select_site(&$variables, $hook) {
+function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
   $lang_select = module_invoke('language_selector_site', 'block_view', 'language_selector_site');
   $variables['code'] = $lang_select['content']['code'];
   $variables['label'] = $lang_select['content']['label'];

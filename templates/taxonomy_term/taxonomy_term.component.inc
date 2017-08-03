@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_taxonomy_term(&$variables, $hook) {
+function ec_europa_preprocess_taxonomy_term(&$variables, $hook) {
   // Add default section component to the entity regions.
   $variables['left_classes'] = $variables['right_classes'] = $variables['central_classes'] = 'section';
   // Add information about the number of sidebars.

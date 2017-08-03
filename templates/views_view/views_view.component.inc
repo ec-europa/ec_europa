@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_views_view_grid(&$variables, $hook) {
+function ec_europa_preprocess_views_view_grid(&$variables, $hook) {
   $view = $variables['view'];
   $result = $view->result;
   $options = $view->style_plugin->options;

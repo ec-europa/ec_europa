@@ -8,7 +8,7 @@
 /**
  * Implements hook_css_alter().
  */
-function europa_css_alter(&$css) {
+function ec_europa_css_alter(&$css) {
   $path_fancybox = libraries_get_path('fancybox');
 
   unset(

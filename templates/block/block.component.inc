@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_block(&$variables, $hook) {
+function ec_europa_preprocess_block(&$variables, $hook) {
   $block = $variables['block'];
 
   switch ($block->delta) {
@@ -56,8 +56,8 @@ function europa_preprocess_block(&$variables, $hook) {
     global $language;
 
     // selectify.js is the library to convert between ul and select.
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/selectify.js');
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/components/lang-switcher.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/selectify.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/components/lang-switcher.js');
 
     // Initialize variables.
     $not_available = '';
@@ -99,7 +99,7 @@ function europa_preprocess_block(&$variables, $hook) {
   // Site-level language switcher.
   if (isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
     // Add the js to make it function.
-    drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/components/lang-select-site.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/components/lang-select-site.js');
   }
 
   // Replace block-title class with block__title in order to keep BEM structure
@@ -124,10 +124,10 @@ function europa_preprocess_block(&$variables, $hook) {
 
           // Passing block id to Drupal.settings in order to pass it through
           // data attribute in the collapsible panel.
-          drupal_add_js(array('europa' => array('exposedBlockId' => $variables['block_html_id'])), 'setting');
+          drupal_add_js(array('ec_europa' => array('exposedBlockId' => $variables['block_html_id'])), 'setting');
 
           // Adding filters.js file.
-          drupal_add_js(drupal_get_path('theme', 'europa') . '/assets/js/components/filters.js');
+          drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/components/filters.js');
         }
       }
     }
