@@ -90,22 +90,19 @@
       </div>
     </div>
   </div>
-
-  <main>
-    <section class="section <?php print $content_column_class; ?>">
-      <h1>This website is currently under maintenance</h1>
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
-      <p>We should be back shortly. Thank you for your patience.</p>
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
-      <p>&nbsp;&nbsp;</p>
-    </section>
-  </main>
+  <div class="page-content">
+    <div class="ecl-container">
+      <a id="main-content" tabindex="-1"></a>
+      <div class="row">
+        <section class="section <?php print $content_column_class; ?>">
+          <h2>This website is currently under maintenance</h2>
+          <hr/>
+          <p>We should be back shortly. Thank you for your patience.</p>
+          <p><br><br><br><br><br><br><br><br><br></p>
+        </section>
+      </div>
+    </div>
+  </div>
 </section>
 <footer class="ecl-footer">
   <div class="ecl-footer__site-corporate">
