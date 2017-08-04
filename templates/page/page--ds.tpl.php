@@ -85,7 +85,7 @@
 ?>
 <?php if (!empty($page['header_top'])): ?>
 <section class="header-top">
-  <div class="container-fluid">
+  <div class="ecl-container">
     <?php print render($page['header_top']); ?>
   </div>
 </section>
@@ -96,7 +96,7 @@
 
 <?php if (!empty($page['header_bottom'])): ?>
   <nav class="page-navigation" role="navigation">
-    <div class="container-fluid">
+    <div class="ecl-container">
       <?php print render($page['header_bottom']); ?>
     </div>
   </nav>
@@ -108,7 +108,7 @@
 
 <?php if (!empty($page['utility'])): ?>
   <div class="utility">
-    <div class="container-fluid">
+    <div class="ecl-container">
       <?php print render($page['utility']); ?>
     </div>
   </div>
@@ -118,7 +118,7 @@
   <?php print render($page_header); ?>
 
   <!-- Generic sections -->
-  <div class="container-fluid">
+  <div class="ecl-container">
     <?php if (!empty($page['help'])): ?>
       <?php print render($page['help']); ?>
     <?php endif; ?>
@@ -130,7 +130,7 @@
 
   <?php print render($page['content']); ?>
 
-  <div class="container-fluid">
+  <div class="ecl-container">
     <?php print render($page['content_bottom']); ?>
   </div>
 </section>
