@@ -19,7 +19,7 @@
  *
  * In a multisite set up, these variables should be set for the
  * tpl to be used/
- * $conf['install_profile'] = "multisite_drupal_XXX";
+ * $conf['install_profile'] = 'multisite_drupal_XXX';
  * $conf['maintenance_theme'] = 'ec_europa';
  *
  * @ingroup themeable
