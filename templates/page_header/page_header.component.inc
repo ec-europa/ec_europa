@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_page_header() {
+function ec_europa_atomium_theme_page_header() {
   return array(
     'page_header' => array(
       'variables' => array(
@@ -26,7 +26,7 @@ function europa_atomium_theme_page_header() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_page_header() {
+function ec_europa_atomium_definition_page_header() {
   return array(
     'label' => 'Page header',
     'description' => 'Page header.',
@@ -53,7 +53,7 @@ function europa_atomium_definition_page_header() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_page_header(&$variables, $hook) {
+function ec_europa_preprocess_page_header(&$variables, $hook) {
   if (module_exists('easy_breadcrumb')) {
     // @TODO: The file includes/easy_breadcrumb.blocks.inc
     // @TODO: only exists in easy_breadcrumb <= 7.x-2.12

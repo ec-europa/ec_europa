@@ -78,8 +78,8 @@ This theme includes a particular mechanism in order to format contents that invo
 * "Long text" and "Text with summary" fields;
 * Custom blocks containing a markup ("body").
 
-This mechanism is based on a namespacing CSS class put on the field value container (see "europa_preprocess_block()"
-and "europa_preprocess_field()").
+This mechanism is based on a namespacing CSS class put on the field value container (see "ec_europa_preprocess_block()"
+and "ec_europa_preprocess_field()").
 This css class is "ecl-editor".
 
 If you need to implement some specific content formats in the rich texts in your sub-theme and you want to reflect them in the WYSIWYG widget,

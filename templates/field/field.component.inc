@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_field(&$variables, $hook) {
+function ec_europa_preprocess_field(&$variables, $hook) {
   $element = &$variables['element'];
   if (isset($element['#label'])) {
     $variables['label'] = $element['#label'];

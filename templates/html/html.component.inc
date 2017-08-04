@@ -8,8 +8,8 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_html(&$variables, $hook) {
-  $this_theme_path = drupal_get_path('theme', 'europa');
+function ec_europa_preprocess_html(&$variables, $hook) {
+  $this_theme_path = drupal_get_path('theme', 'ec_europa');
   $variables['theme_path'] = $this_theme_path;
   $language = $variables['language'];
 
