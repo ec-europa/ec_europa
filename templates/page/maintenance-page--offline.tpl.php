@@ -64,6 +64,15 @@
         <span class="ecl-sr-only">Home - European Commission</span>
       </a>
       <section class="ecl-site-header__top-bar" aria-label="Site tools">
+        <div class="ecl-lang-select-sites">
+          <a href="#" class="ecl-lang-select-sites__link">
+            <span class="ecl-lang-select-sites__label">English</span>
+            <span class="ecl-lang-select-sites__code">
+              <span class="ecl-icon ecl-icon--language ecl-lang-select-sites__icon"></span>
+              <span class="ecl-lang-select-sites__code-text">en</span>
+            </span>
+          </a>
+        </div>
         <form accept-charset="UTF-8" action="http://ec.europa.eu/geninfo/query/resultaction.jsp" class="ecl-search-form search-form" id="nexteuropa-europa-search-search-form" method="get">
           <label class="ecl-search-form__textfield-wrapper">
             <span class="ecl-sr-only">Search this website</span>
