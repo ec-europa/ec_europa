@@ -5,7 +5,7 @@
  * Contains component file.
  */
 ?>
-<div class="ecl-lang-select-sites">
+<div class="ecl-lang-select-sites ecl-site-header__lang-select-sites">
   <a href="<?php print $url; ?>" class="ecl-lang-select-sites__link">
     <span class="ecl-lang-select-sites__label"><?php print render($label); ?></span>
     <span class="ecl-lang-select-sites__code">

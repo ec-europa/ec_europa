@@ -44,9 +44,9 @@ function ec_europa_atomium_definition_site_header() {
 function ec_europa_preprocess_site_header(&$variables, $hook) {
   $variables['logo'] = array(
     '#theme' => 'logo',
-    '#title' => 'Home - European Commission',
+    '#title' => t('Home - European Commission'),
     '#attributes_array' => array(
-      'class' => array('ecl-site-header__logo'),
-    ),
+      'class' => array('ecl-site-header__logo', 'ecl-logo--logotype', 'ecl-logo'),
+   ),
   );
 }

@@ -68,9 +68,15 @@
   <?php print $scripts; ?>
 </head>
 <body<?php print $attributes;?>>
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+  <div class="ecl-skip-link__wrapper" id="skip-link">
+    <a href="#main-content" class="ecl-skip-link"><?php print t('Skip to main content'); ?></a>
   </div>
+  <div class="ecl-site-switcher ecl-site-switcher--header">
+  <ul class="ecl-site-switcher__list ecl-container">
+    <li class="ecl-site-switcher__option"><a class="ecl-link ecl-site-switcher__link" href="https://ec.europa.eu/commission/index_<?php print $language->language; ?>"><?php print t('Commission and its priorities');?></a></li>
+    <li class="ecl-site-switcher__option ecl-site-switcher__option--is-selected"><a class="ecl-link ecl-site-switcher__link" href="https://ec.europa.eu/info/index_<?php print $language->language; ?>"><?php print t('Policies, information and services');?></a></li>
+  </ul>
+</div>
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
