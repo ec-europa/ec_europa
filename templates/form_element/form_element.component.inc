@@ -9,15 +9,6 @@
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_form_element(&$variables, $hook) {
-  $element = &$variables['element'];
-  if (!empty($element['#name'])) {
-    $variables['theme_hook_suggestions'][] = 'form_element__' . $element['#name'];
-  }
-
-  if (!empty($element['#id'])) {
-    $variables['theme_hook_suggestions'][] = 'form_element__' . $element['#id'];
-  }
-
   // Each function below proceeds specific pre-process related to the type of
   // form element or to the form element itself that is currently treated.
   // We proceed as it instead of implement a hook mechanism to weighing the
