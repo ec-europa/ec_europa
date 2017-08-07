@@ -9,7 +9,7 @@
  * Implements hook_css_alter().
  */
 function ec_europa_css_alter(&$css) {
-  if (function_exists('libraries_get_path') && ($path_fancybox = libraries_get_path('fancybox'))) {
+  if (module_exists('libraries') && ($path_fancybox = libraries_get_path('fancybox'))) {
     unset(
       $css[$path_fancybox . '/helpers/jquery.fancybox-buttons.css'],
       $css[$path_fancybox . '/helpers/jquery.fancybox-thumbs.css'],
