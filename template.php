@@ -54,23 +54,26 @@ function _ec_europa_term_heading($element) {
  *
  * Adds the 'ecl-text-input--has-error' class as needed.
  *
- * @param array $element
- *   The form element.
+ * @param array $variables
+ *   The $variables related to the form element theme.
  * @param array $classes
  *   The basic classes that are specific to the form element.
  */
-function _ec_europa_form_set_css_class(array &$element, array $classes = array()) {
-  if (!empty($classes)) {
-    if (!isset($element['#attributes']['class'])) {
-      $element['#attributes']['class'] = array();
+function _ec_europa_form_set_css_class(array &$variables, array $classes = array()) {
+  $element = $variables['element'];
+  if (!empty($classes['default'])) {
+    if (!isset($variables['attributes_array']['class'])) {
+      $variables['attributes_array']['class'] = array();
     }
-    $element['#attributes']['class'] = array_merge($element['#attributes']['class'], $classes);
+    $variables['attributes_array']['class'] = array_merge($variables['attributes_array']['class'], $classes['default']);
   }
 
   // Determines if the error class must added.
   // The logic comes from the Drupal function: "_form_set_class".
-  if (isset($element['#parents']) && form_get_error($element) !== NULL && !empty($element['#validated'])) {
-    $element['#attributes']['class'][] = 'ecl-text-input--has-error';
+  if (!empty($classes['error'])) {
+    if (isset($element['#parents']) && form_get_error($element) !== NULL && !empty($element['#validated'])) {
+      $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $classes['error']);
+    }
   }
 }
 
