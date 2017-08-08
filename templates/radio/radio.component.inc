@@ -6,6 +6,51 @@
  */
 
 /**
+ * Implements hook_atomium_definition_hook().
+ */
+function ec_europa_atomium_definition_radio() {
+  $options = array(
+    'item1' => 'Item 1',
+  );
+  return array(
+    'label' => 'Radio button',
+    'description' => 'Radio component.',
+    'preview' => array(
+      'element1' => array(
+        'title' => 'Radio button',
+        'description' => 'Description',
+        'options' => $options,
+      ),
+      'element2' => array(
+        'title' => 'Radio button checked',
+        'description' => 'Description',
+        'default_value' => 'item1',
+        'options' => $options,
+      ),
+      'element3' => array(
+        'title' => 'Radio button with error',
+        'description' => 'Description',
+        'attributes' => array(
+          'class' => array(
+            'error',
+          ),
+        ),
+        'options' => $options,
+      ),
+      'element4' => array(
+        'title' => 'Radio button disabled',
+        'description' => 'Description',
+        'disabled' => TRUE,
+        'attributes' => array(
+          'disabled',
+        ),
+        'options' => $options,
+      ),
+    ),
+  );
+}
+
+/**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_radio(&$variables, $hook) {
@@ -22,7 +67,12 @@ function ec_europa_preprocess_radio(&$variables, $hook) {
   // Unlike text field and textarea, the "error" class is put on the label;
   // not on the element itself.
   $element = $variables['element'];
-  if (isset($element['#parents']) && form_get_error($element) !== NULL && !empty($element['#validated'])) {
+  // $error_css_exists allows the compatibility with the component overview
+  // page but in a normal runtime process, we should rely on a it as nothing
+  // prevents a module another process to change it, we secure the test with
+  // private function.
+  $error_css_exists = in_array('error', $variables['attributes_array']['class']);
+  if ($error_css_exists || (_ec_europa_has_form_element_errors($element))) {
     $label_tag_attributes['class'][] = 'ecl-radio--has-error';
   }
   // Add the class to put with a radio button when it is disabled.

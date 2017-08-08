@@ -52,12 +52,15 @@ function _ec_europa_term_heading($element) {
 /**
  * Sets a form element's class attribute.
  *
- * Adds the 'ecl-text-input--has-error' class as needed.
+ * Adds the css classes as needed.
  *
  * @param array $variables
  *   The $variables related to the form element theme.
  * @param array $classes
- *   The basic classes that are specific to the form element.
+ *   The classes that are specific to the form element:
+ *   - 'default': array of class names to display with the element by default;
+ *   - 'error': array of class names to display with the element in case of
+ *     validation errors.
  */
 function _ec_europa_form_set_css_class(array &$variables, array $classes = array()) {
   $element = $variables['element'];
@@ -71,10 +74,26 @@ function _ec_europa_form_set_css_class(array &$variables, array $classes = array
   // Determines if the error class must added.
   // The logic comes from the Drupal function: "_form_set_class".
   if (!empty($classes['error'])) {
-    if (isset($element['#parents']) && form_get_error($element) !== NULL && !empty($element['#validated'])) {
+    if (_ec_europa_has_form_element_errors($element)) {
       $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $classes['error']);
     }
   }
+}
+
+/**
+ * Determines if validation errors exists on a form element.
+ *
+ * This method works only with elements processed by the theme mechanism.
+ *
+ * @param array $form_element
+ *   The form element to test as defined in the $variable parameter of a
+ *   preprocess function.
+ *
+ * @return bool
+ *   True if validation errors exist; otherwise FALSE.
+ */
+function _ec_europa_has_form_element_errors(array $form_element) {
+  return isset($form_element['#parents']) && form_get_error($form_element) !== NULL && !empty($form_element['#validated']);
 }
 
 /**
