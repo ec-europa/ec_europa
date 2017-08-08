@@ -68,8 +68,8 @@ function ec_europa_preprocess_radio(&$variables, $hook) {
   // not on the element itself.
   $element = $variables['element'];
   // $error_css_exists allows the compatibility with the component overview
-  // page but in a normal runtime process, we should rely on a it as nothing
-  // prevents a module another process to change it, we secure the test with
+  // page but in a normal runtime process, we should not rely on it as nothing
+  // prevents a module or another process to change it, we secure the test with
   // private function.
   $error_css_exists = in_array('error', $variables['attributes_array']['class']);
   if ($error_css_exists || (_ec_europa_has_form_element_errors($element))) {

@@ -44,7 +44,9 @@ function ec_europa_preprocess_radios(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-radio-group';
   $variables['attributes_array']['role'][] = 'radiogroup';
   if (!empty($element['#title'])) {
-    $variables['attributes_array']['aria-labelledby'][] = $element['#title'];
+    $title = $element['#title'];
+    $variables['attributes_array']['aria-labelledby'][] = $title;
+    $variables['small_description'] = t('List of options for @title', array('@title' => $title));
   }
 
   if (!empty($element['#description'])) {
