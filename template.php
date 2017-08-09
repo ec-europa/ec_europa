@@ -44,7 +44,7 @@ function ec_europa_file_link($variables) {
  * TODO: This function doesn't seems to be used in this theme.
  */
 function _ec_europa_term_heading($element) {
-  $element['#prefix'] = '<div class="container-fluid"><div class="' . $element['main'] . '">';
+  $element['#prefix'] = '<div class="ecl-container"><div class="' . $element['main'] . '">';
   $element['#suffix'] = '</div></div>';
   return $element;
 }

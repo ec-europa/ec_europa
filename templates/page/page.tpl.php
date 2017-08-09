@@ -86,7 +86,7 @@
 ?>
 <?php if (!empty($page['header_top'])): ?>
 <section class="header-top">
-  <div class="container-fluid">
+  <div class="ecl-container">
     <?php print render($page['header_top']); ?>
   </div>
 </section>
@@ -105,14 +105,14 @@
   <!-- Utility sections -->
   <?php if (!empty($page['utility'])): ?>
     <div class="utility">
-      <div class="container-fluid">
+      <div class="ecl-container">
         <?php print render($page['utility']); ?>
       </div>
     </div>
   <?php endif; ?>
 
   <!-- Generic sections -->
-  <div class="container-fluid">
+  <div class="ecl-container">
     <?php if (!empty($tabs)): ?>
       <?php print render($tabs); ?>
     <?php endif; ?>
@@ -127,7 +127,7 @@
   </div>
 
   <div class="page-content">
-    <div class="container-fluid">
+    <div class="ecl-container">
       <?php if (!empty($page['content_top'])): ?>
         <a id="top-content" tabindex="-2"></a>
         <div class="row">
