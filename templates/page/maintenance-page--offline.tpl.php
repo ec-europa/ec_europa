@@ -108,9 +108,9 @@
       <a id="main-content" tabindex="-1"></a>
       <div class="row">
         <section class="section <?php print $content_column_class; ?>">
-          <h2><?php print t('This website is currently under maintenance'); ?></h2>
+          <h2>This website is currently under maintenance</h2>
           <hr/>
-          <p><?php print t('We should be back shortly. Thank you for your patience.'); ?></p>
+          <p>We should be back shortly. Thank you for your patience.</p>
           <p><br><br><br><br><br><br><br><br><br></p>
         </section>
       </div>
