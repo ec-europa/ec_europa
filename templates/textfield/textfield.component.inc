@@ -10,7 +10,11 @@
  */
 function ec_europa_preprocess_textfield(&$variables, $hook) {
   $element = &$variables['element'];
+
+  // Add necessary CSS classes like "error" class on validation error.
   _ec_europa_form_set_css_class($element, array('ecl-text-input'));
+
+  $variables['attributes_array'] = drupal_array_merge_deep($variables['attributes_array'], $element['#attributes']);
 }
 
 /**
