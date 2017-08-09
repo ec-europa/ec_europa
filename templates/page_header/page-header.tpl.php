@@ -7,7 +7,7 @@
 ?>
 <div class="ecl-page-header">
   <?php print render($breadcrumb); ?>
-  <div class="ecl-page-header__body">
+  <div class="ecl-page-header__body ecl-container">
       <?php if (!empty($identity)): ?>
         <div class="ecl-page-header__identity">
           <?php print render($identity); ?>
