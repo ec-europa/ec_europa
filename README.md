@@ -27,6 +27,15 @@ this theme, you can get it here: https://www.drupal.org/project/atomium .
 The style guide called [Europa component library](https://ec-europa.github.io/europa-component-library)
  is to be used as a reference when building your website.
 
+## Settings
+
+### Option "Improved website"
+
+On the settings page, the option 'Is this an "improved website"?' allows to
+active some customization - in the home page, the switcher-page and other 
+blocks.
+By default, this option is checked.
+
 ## Helper tools
 
 All the templates are provided inside the theme:
