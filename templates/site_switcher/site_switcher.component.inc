@@ -13,16 +13,7 @@ function ec_europa_atomium_theme_site_switcher() {
     'site_switcher' => array(
       'template' => 'site-switcher',
       'variables' => array(
-        'link_1' => array(
-          'title' => NULL,
-          'url' => NULL,
-          'selected' => NULL,
-        ),
-        'link_2' => array(
-          'title' => NULL,
-          'url' => NULL,
-          'selected' => NULL,
-        ),
+        'links' => NULL,
       ),
     ),
   );
@@ -47,13 +38,44 @@ function ec_europa_preprocess_site_switcher(&$variables, $hook) {
 
   $variables['attributes_array']['class'][] = 'ecl-site-switcher';
 
-  $is_improved_website = (bool) theme_get_setting('ec_europa_improved_website', 'ec_europa');
+  $classes = array_pad(array(), 2, array('ecl-site-switcher__option'));
+  $index = (int) theme_get_setting('ec_europa_improved_website', 'ec_europa');
+  $classes[$index][] = 'ecl-site-switcher__option--is-selected';
 
-  $variables['link_1']['title'] = t('Commission and its priorities');
-  $variables['link_1']['url'] = 'https://ec.europa.eu/commission/index_' . $language->language;
-  $variables['link_1']['selected'] = !$is_improved_website;
+  $links = array(
+    array(
+      '#text' => t('Commission and its priorities'),
+      '#path' => 'https://ec.europa.eu/commission/index_' . $language->language,
+    ),
+    array(
+      '#text' => t('Policies, information and services'),
+      '#path' => 'https://ec.europa.eu/info/index_' . $language->language,
+    ),
+  );
 
-  $variables['link_2']['title'] = t('Policies, information and services');
-  $variables['link_2']['url'] = 'https://ec.europa.eu/info/index_' . $language->language;
-  $variables['link_2']['selected'] = $is_improved_website;
+  $variables['links'] = array(
+    '#theme' => 'item_list',
+    '#type' => 'ul',
+    '#wrapper' => FALSE,
+    '#attributes' => array(
+      'class' => array('ecl-site-switcher__list', 'ecl-container'),
+    ),
+    '#items' => array(),
+  );
+
+  foreach ($links as $key => $link) {
+    $variables['links']['#items'][] = array(
+      'class' => $classes[$key],
+      'data' => array(
+        '#theme' => 'link',
+        '#options' => array(
+          'attributes' => array(
+            'class' => array('ecl-link ecl-site-switcher__link'),
+          ),
+          'html' => FALSE,
+        ),
+      ) + $link,
+    );
+  }
+
 }
