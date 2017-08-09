@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_easy_breadcrumb() {
+function ec_europa_atomium_theme_easy_breadcrumb() {
   return array(
     'easy_breadcrumb' => array(
       'variables' => array(
@@ -23,7 +23,7 @@ function europa_atomium_theme_easy_breadcrumb() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_easy_breadcrumb() {
+function ec_europa_atomium_definition_easy_breadcrumb() {
   return array(
     'label' => 'Easy breadcrumb',
     'description' => 'Easy breadcrumb.',
@@ -51,11 +51,13 @@ function europa_atomium_definition_easy_breadcrumb() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_easy_breadcrumb(&$variables, $hook) {
+function ec_europa_preprocess_easy_breadcrumb(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-breadcrumbs';
+  $variables['attributes_array']['class'][] = 'ecl-container';
+
   $variables['here'] = t('You are here');
 
-  _europa_breadcrumb_menu($variables);
+  _ec_europa_breadcrumb_menu($variables);
   $breadcrumb = $variables['breadcrumb'];
   $segments_quantity = $variables['segments_quantity'];
   $html = '';
@@ -106,7 +108,7 @@ function europa_preprocess_easy_breadcrumb(&$variables, $hook) {
 /**
  * Generate the first breadcrumb items basing on a custom menu.
  */
-function _europa_breadcrumb_menu(&$variables) {
+function _ec_europa_breadcrumb_menu(&$variables) {
   module_load_include('inc', 'easy_breadcrumb', 'includes/easy_breadcrumb.blocks');
 
   $menu_links = menu_tree('menu-breadcrumb-menu');

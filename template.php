@@ -5,12 +5,12 @@
  * template.php
  */
 
-atomium_include('europa', 'includes/alter');
+atomium_include('ec_europa', 'includes/alter');
 
 /**
  * Implements hook_date_popup_process_alter().
  */
-function europa_date_popup_process_alter(&$element, &$form_state, $context) {
+function ec_europa_date_popup_process_alter(&$element, &$form_state, $context) {
   // Removing the description from the datepicker.
   unset($element['date']['#description']);
   unset($element['time']['#description']);
@@ -21,7 +21,7 @@ function europa_date_popup_process_alter(&$element, &$form_state, $context) {
  *
  * TODO: Convert this into a preprocess function.
  */
-function europa_file_link($variables) {
+function ec_europa_file_link($variables) {
   if (function_exists('_nexteuropa_formatters_file_markup')) {
     $file = $variables['file'];
 
@@ -43,8 +43,8 @@ function europa_file_link($variables) {
  *
  * TODO: This function doesn't seems to be used in this theme.
  */
-function _europa_term_heading($element) {
-  $element['#prefix'] = '<div class="container-fluid"><div class="' . $element['main'] . '">';
+function _ec_europa_term_heading($element) {
+  $element['#prefix'] = '<div class="ecl-container"><div class="' . $element['main'] . '">';
   $element['#suffix'] = '</div></div>';
   return $element;
 }
@@ -59,7 +59,7 @@ function _europa_term_heading($element) {
  * @param array $classes
  *   The basic classes that are specific to the form element.
  */
-function _europa_form_set_css_class(array &$element, array $classes = array()) {
+function _ec_europa_form_set_css_class(array &$element, array $classes = array()) {
   if (!empty($classes)) {
     if (!isset($element['#attributes']['class'])) {
       $element['#attributes']['class'] = array();
@@ -77,7 +77,7 @@ function _europa_form_set_css_class(array &$element, array $classes = array()) {
 /**
  * Returns HTML for a dropdown.
  */
-function europa_dropdown(array $variables) {
+function ec_europa_dropdown(array $variables) {
   $items = $variables['items'];
   $links = array();
 
@@ -110,7 +110,7 @@ function europa_dropdown(array $variables) {
  *
  * @author Bran van der Meer <branmovic@gmail.com>
  */
-function _europa_array_find($needle, array $haystack) {
+function _ec_europa_array_find($needle, array $haystack) {
   foreach ($haystack as $key => $value) {
     if (is_string($value) && FALSE !== stripos($value, $needle)) {
       return $key;
@@ -129,6 +129,6 @@ function _europa_array_find($needle, array $haystack) {
  * @return bool
  *   Boolean TRUE or FALSE, where TRUE indicates an external path.
  */
-function _europa_url_is_external($path) {
+function _ec_europa_url_is_external($path) {
   return url_is_external($path) && !stripos(parse_url($path, PHP_URL_HOST), 'europa.eu');
 }

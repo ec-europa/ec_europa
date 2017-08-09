@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_HOOK().
  */
-function europa_preprocess_links(&$variables, $hook) {
+function ec_europa_preprocess_links(&$variables, $hook) {
   // Links can be empty.
   if (empty($variables['links'])) {
     return;

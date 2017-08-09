@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_form_element(&$variables, $hook) {
+function ec_europa_preprocess_form_element(&$variables, $hook) {
   $element = &$variables['element'];
   if (!empty($element['#name'])) {
     $variables['theme_hook_suggestions'][] = 'form_element__' . $element['#name'];
@@ -23,7 +23,7 @@ function europa_preprocess_form_element(&$variables, $hook) {
   // We proceed as it instead of implement a hook mechanism to weighing the
   // script execution and because in the Drupal theming system, it is not
   // possible to declare a "pre-process" function on a theme suggestion.
-  _europa_preprocess_form_element__query_text($variables);
+  _ec_europa_preprocess_form_element__query_text($variables);
 }
 
 /**
@@ -31,9 +31,9 @@ function europa_preprocess_form_element(&$variables, $hook) {
  *
  * It is related to the "search_bar" component.
  *
- * @see europa_preprocess_form_element()
+ * @see ec_europa_preprocess_form_element()
  */
-function _europa_preprocess_form_element__query_text(&$variables) {
+function _ec_europa_preprocess_form_element__query_text(&$variables) {
   $element = $variables['element'];
   if (empty($element['#name']) || $element['#name'] != 'QueryText') {
     return;

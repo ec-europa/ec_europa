@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_logo() {
+function ec_europa_atomium_theme_logo() {
   return array(
     'logo' => array(
       'template' => 'logo',
@@ -23,7 +23,7 @@ function europa_atomium_theme_logo() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_logo() {
+function ec_europa_atomium_definition_logo() {
   return array(
     'label' => 'Logo',
     'description' => 'Logo.',
@@ -36,7 +36,7 @@ function europa_atomium_definition_logo() {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_logo(&$variables, $hook) {
+function ec_europa_preprocess_logo(&$variables, $hook) {
   $variables['attributes_array'] += array(
     'class' => array(),
     'href' => 'https://ec.europa.eu/info/index',

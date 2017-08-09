@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_tree__main_menu(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__main_menu(&$variables, $hook) {
   if (isset($variables['#tree'])) {
     $children = element_children($variables['#tree']);
     if (isset($children[0])) {
@@ -36,7 +36,7 @@ function europa_preprocess_menu_tree__main_menu(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_tree__user_menu(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__user_menu(&$variables, $hook) {
   global $user;
   $variables['logged_in_user'] = '';
   if (!user_is_anonymous()) {
@@ -48,7 +48,7 @@ function europa_preprocess_menu_tree__user_menu(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_tree__menu_nexteuropa_service_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_nexteuropa_service_links(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-footer__menu';
   $variables['attributes_array']['class'][] = 'ecl-list-inline';
 }
@@ -56,7 +56,7 @@ function europa_preprocess_menu_tree__menu_nexteuropa_service_links(&$variables,
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_tree__menu_service_tools(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_service_tools(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-footer__menu';
   $variables['attributes_array']['class'][] = 'ecl-list-inline';
 }
@@ -64,7 +64,7 @@ function europa_preprocess_menu_tree__menu_service_tools(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_tree__menu_nexteuropa_social_media(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_nexteuropa_social_media(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-footer__menu';
   $variables['attributes_array']['class'][] = 'ecl-list-inline';
 }
@@ -72,21 +72,21 @@ function europa_preprocess_menu_tree__menu_nexteuropa_social_media(&$variables, 
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_tree__menu_nexteuropa_inst_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_nexteuropa_inst_links(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-footer__menu';
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_tree__menu_nexteuropa_site_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_nexteuropa_site_links(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-footer__menu';
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function europa_preprocess_menu_tree__secondary(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__secondary(&$variables, $hook) {
   // TODO: is this still necessary ?
   $variables['attributes_array']['class'][] = 'menu';
   $variables['attributes_array']['class'][] = 'nav';

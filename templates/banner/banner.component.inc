@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function europa_atomium_theme_banner() {
+function ec_europa_atomium_theme_banner() {
   return array(
     'banner' => array(
       'variables' => array(
@@ -23,7 +23,7 @@ function europa_atomium_theme_banner() {
 /**
  * Implements hook_atomium_definition_hook().
  */
-function europa_atomium_definition_banner() {
+function ec_europa_atomium_definition_banner() {
   return array(
     'label' => 'Banner',
     'description' => 'Banner.',
