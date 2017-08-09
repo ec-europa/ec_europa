@@ -44,7 +44,7 @@ function ec_europa_file_link($variables) {
  * TODO: This function doesn't seems to be used in this theme.
  */
 function _ec_europa_term_heading($element) {
-  $element['#prefix'] = '<div class="ecl-container"><div class="' . $element['main'] . '">';
+  $element['#prefix'] = '<div class="container-fluid"><div class="' . $element['main'] . '">';
   $element['#suffix'] = '</div></div>';
   return $element;
 }
@@ -53,8 +53,6 @@ function _ec_europa_term_heading($element) {
  * Sets a form element's class attribute.
  *
  * Adds the css classes as needed.
- * The logic in use to detect if the form element has an error is
- * from @see _form_set_class().
  *
  * @param array $variables
  *   The $variables related to the form element theme.
@@ -65,16 +63,20 @@ function _ec_europa_term_heading($element) {
  *     validation errors.
  */
 function _ec_europa_form_set_css_class(array &$variables, array $classes = array()) {
-  $element = $variables['element'];
-
   if (!empty($classes['default'])) {
-    $variables['attributes_array'] += array('class' => array());
+    if (!isset($variables['attributes_array']['class'])) {
+      $variables['attributes_array']['class'] = array();
+    }
     $variables['attributes_array']['class'] = array_merge($variables['attributes_array']['class'], $classes['default']);
   }
 
   // Determines if the error class must added.
-  if (!empty($classes['error']) &&_ec_europa_has_form_element_errors($element)) {
-    $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $classes['error']);
+  // The logic comes from the Drupal function, see _form_set_class().
+  $element = $variables['element'];
+  if (!empty($classes['error'])) {
+    if (_ec_europa_has_form_element_errors($element)) {
+      $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $classes['error']);
+    }
   }
 }
 
