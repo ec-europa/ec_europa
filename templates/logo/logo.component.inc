@@ -37,8 +37,8 @@ function ec_europa_atomium_definition_logo() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_logo(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = 'ecl-logo';
   $variables['attributes_array'] += array(
-    'class' => array(),
     'href' => 'https://ec.europa.eu/info/index',
   );
   $variables['attributes_array']['title'] = $variables['title'];

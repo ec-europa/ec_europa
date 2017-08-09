@@ -42,12 +42,14 @@
  *
  * @ingroup themeable
  */
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <!--[if IE 8 ]>
-  <html class="no-js ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
+<html class="no-js ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
 <![endif]-->
 <!--[if (gt IE 8)|!(IE)]><!-->
-  <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
+<html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
 <!--<![endif]-->
 <head profile="<?php print $grddl_profile; ?>">
   <meta charset="utf-8">
@@ -58,27 +60,21 @@
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lte IE 9]>
-    <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.js'; ?>"></script>
-    <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.addListener.js'; ?>"></script>
+  <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.js'; ?>"></script>
+  <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.addListener.js'; ?>"></script>
   <![endif]-->
   <!--[if lt IE 9]>
-    <script src="<?php print $theme_path . '/js/libraries/html5shiv.min.js'; ?>"></script>
-    <script src="<?php print $theme_path . '/js/libraries/respond.min.js'; ?>"></script>
+  <script src="<?php print $theme_path . '/js/libraries/html5shiv.min.js'; ?>"></script>
+  <script src="<?php print $theme_path . '/js/libraries/respond.min.js'; ?>"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>
 <body<?php print $attributes;?>>
-  <div class="ecl-skip-link__wrapper" id="skip-link">
-    <a href="#main-content" class="ecl-skip-link"><?php print t('Skip to main content'); ?></a>
-  </div>
-  <div class="ecl-site-switcher ecl-site-switcher--header">
-  <ul class="ecl-site-switcher__list ecl-container">
-    <li class="ecl-site-switcher__option"><a class="ecl-link ecl-site-switcher__link" href="https://ec.europa.eu/commission/index_<?php print $language->language; ?>"><?php print t('Commission and its priorities');?></a></li>
-    <li class="ecl-site-switcher__option ecl-site-switcher__option--is-selected"><a class="ecl-link ecl-site-switcher__link" href="https://ec.europa.eu/info/index_<?php print $language->language; ?>"><?php print t('Policies, information and services');?></a></li>
-  </ul>
+<div class="ecl-skip-link__wrapper" id="skip-link">
+  <a href="#main-content" class="ecl-skip-link"><?php print t('Skip to main content'); ?></a>
 </div>
-  <?php print $page_top; ?>
-  <?php print $page; ?>
-  <?php print $page_bottom; ?>
+<?php print $page_top; ?>
+<?php print $page; ?>
+<?php print $page_bottom; ?>
 </body>
 </html>

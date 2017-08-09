@@ -46,7 +46,7 @@ function ec_europa_preprocess_site_header(&$variables, $hook) {
     '#theme' => 'logo',
     '#title' => t('Home - European Commission'),
     '#attributes_array' => array(
-      'class' => array('ecl-site-header__logo', 'ecl-logo--logotype', 'ecl-logo'),
-   ),
+      'class' => array('ecl-site-header__logo', 'ecl-logo--logotype'),
+    ),
   );
 }
