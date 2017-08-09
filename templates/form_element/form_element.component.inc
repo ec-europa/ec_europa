@@ -15,13 +15,13 @@ function ec_europa_preprocess_form_element__radio(&$variables, $hook) {
 
   // Define the variable specific to the radio label tag.
   // Sets the attributes of the label tag that surrounds the radio button.
-  $label_tag_attributes_array = array();
+  $label_tag_attributes_array = [];
 
   if (isset($element['#label_tag_attributes'])) {
     $label_tag_attributes_array = $element['#label_tag_attributes'];
   }
 
-  $label_tag_attributes_array += array('class' => array());
+  $label_tag_attributes_array += ['class' => []];
   $label_tag_attributes_array['class'][] = 'ecl-form-label';
   $label_tag_attributes_array['class'][] = 'ecl-radio';
 
@@ -36,3 +36,10 @@ function ec_europa_preprocess_form_element__radio(&$variables, $hook) {
   }
   $variables['label_tag_attributes_array'] = $label_tag_attributes_array;
 }
+
+/**
+ * Implements hook_preprocess_hook().
+   */
+  function ec_europa_preprocess_form_element__checkbox(&$variables, $hook) {
+    $variables['attributes_array']['class'][] = 'ecl-form-label ecl-checkbox';
+  }
