@@ -53,6 +53,8 @@ function ec_europa_atomium_definition_easy_breadcrumb() {
  */
 function ec_europa_preprocess_easy_breadcrumb(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-breadcrumbs';
+  $variables['attributes_array']['class'][] = 'ecl-container';
+
   $variables['here'] = t('You are here');
 
   _ec_europa_breadcrumb_menu($variables);

@@ -105,6 +105,15 @@ template {
   display: none; }
 [hidden] {
   display: none; }
+/*
+ * Aliases
+ */
+/*
+ * Background colors
+ *
+ * Note: in some cases, components can have other background colors (header-top, file, footer...)
+ * These are the main background colors.
+ */
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -428,19 +437,17 @@ img {
 
 .ecl-editor a {
   color: #004494;
-  line-height: 1.66;
+  margin: 0;
   text-decoration: underline; }
   .ecl-editor a:hover, .ecl-editor a:focus {
     color: #404040; }
 
 /* stylelint-disable-next-line */
-.ecl-editor a[href^='http'] {
-  position: relative; }
-  .ecl-editor a[href^='http']::after {
-    content: '\e825';
-    font-size: 75%;
-    margin-left: 0.4em;
-    margin-right: 0.2em; }
+.ecl-editor a[href^='http']::after {
+  content: '\e825';
+  font-size: 75%;
+  margin-left: 0.4em;
+  margin-right: 0.2em; }
 
 .ecl-editor table {
   border-collapse: collapse;
@@ -500,4 +507,3 @@ img {
       /* stylelint-disable-next-line max-nesting-depth */ }
       .ecl-editor table tbody tr:hover {
         background-color: #ebebeb; } }
-/*# sourceMappingURL=editor.css.map */
