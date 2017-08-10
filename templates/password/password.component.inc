@@ -11,35 +11,38 @@
 function ec_europa_atomium_definition_password() {
   return array(
     'label' => 'Password field',
-    'description' => 'Default password field.',
-    'preview' => array(
-      'element1' => array(
-        'title' => 'Password field',
-        'description' => 'Description',
-        'attributes' => array(
-          'size' => 30,
-        ),
-      ),
-      'element2' => array(
-        'title' => 'Password field with error.',
-        'description' => 'Description',
-        'attributes' => array(
-          'size' => 30,
-          'class' => array(
-            'ecl-text-input--has-error',
-          ),
-        ),
-      ),
-      'element3' => array(
-        'title' => 'Disabled password field.',
-        'description' => 'Description',
-        'attributes' => array(
-          0 => 'disabled',
-          'size' => 30,
-        ),
+  );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_password($form, &$form_state) {
+  $form['element1'] = array(
+    '#title' => 'Password field.',
+    '#type' => 'password',
+    '#description' => 'Description',
+  );
+
+  $form['element2'] = array(
+    '#title' => 'Password field with error.',
+    '#type' => 'password',
+    '#description' => 'Description',
+    '#attributes' => array(
+      'class' => array(
+        'ecl-text-input--has-error',
       ),
     ),
   );
+
+  $form['element3'] = array(
+    '#title' => 'Disabled password.',
+    '#type' => 'password',
+    '#description' => 'Description',
+    '#disabled' => TRUE,
+  );
+
+  return $form;
 }
 
 /**

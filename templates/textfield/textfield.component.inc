@@ -11,35 +11,38 @@
 function ec_europa_atomium_definition_textfield() {
   return array(
     'label' => 'Text field',
-    'description' => 'Default text field.',
-    'preview' => array(
-      'element1' => array(
-        'title' => 'Text field',
-        'description' => 'Description',
-        'attributes' => array(
-          'size' => 30,
-        ),
-      ),
-      'element2' => array(
-        'title' => 'Text field with error.',
-        'description' => 'Description',
-        'attributes' => array(
-          'size' => 30,
-          'class' => array(
-            'ecl-text-input--has-error',
-          ),
-        ),
-      ),
-      'element3' => array(
-        'title' => 'Disabled text field.',
-        'description' => 'Description',
-        'attributes' => array(
-          0 => 'disabled',
-          'size' => 30,
-        ),
+  );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_textfield($form, &$form_state) {
+  $form['element1'] = array(
+    '#title' => 'Text field.',
+    '#type' => 'textfield',
+    '#description' => 'Description',
+  );
+
+  $form['element2'] = array(
+    '#title' => 'Text field with error.',
+    '#type' => 'textfield',
+    '#description' => 'Description',
+    '#attributes' => array(
+      'class' => array(
+        'ecl-text-input--has-error',
       ),
     ),
   );
+
+  $form['element3'] = array(
+    '#title' => 'Disabled radio button.',
+    '#type' => 'textfield',
+    '#description' => 'Description',
+    '#disabled' => TRUE,
+  );
+
+  return $form;
 }
 
 /**
