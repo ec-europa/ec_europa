@@ -10,26 +10,33 @@
  */
 function ec_europa_atomium_definition_checkbox() {
   return array(
-    'label' => 'Checkboxes',
-    'description' => 'Default checkboxes.',
-    'preview' => array(
-      'element1' => array(
-        'title' => 'Normal checkbox',
-      ),
-      'element2' => array(
-        'title' => 'Disabled checkbox',
-        'attributes' => array(
-          'disabled',
-        ),
-      ),
-      'element3' => array(
-        'title' => 'Checkbox with error',
-      ),
-      'element4' => array(
-        'title' => 'Checkbox by default',
-      ),
-    ),
+    'label' => 'Checkbox',
   );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_checkbox($form, &$form_state) {
+  $form['element1'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Normal checkbox',
+  );
+  $form['element2'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Disabled checkbox',
+    '#disabled' => TRUE,
+  );
+  $form['element3'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Checkbox with error',
+  );
+  $form['element4'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Checkbox by default',
+  );
+
+  return $form;
 }
 
 /**
