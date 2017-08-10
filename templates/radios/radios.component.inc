@@ -6,42 +6,6 @@
  */
 
 /**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_radios() {
-  return array(
-    'label' => 'Radio group',
-    'description' => 'Radio group component.',
-    'preview' => array(
-      'element1' => array(
-        'title' => 'Radio group title',
-        'title_display' => 'before',
-        'description' => 'Radio group description',
-        'default_value' => 'item1',
-        array(
-          array(
-            '#type' => 'radio',
-            '#title' => 'N/A',
-          ),
-        ),
-        array(
-          array(
-            '#type' => 'radio',
-            '#title' => 'Red',
-          ),
-        ),
-        array(
-          array(
-            '#type' => 'radio',
-            '#title' => 'Green',
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-/**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_radios(&$variables, $hook) {
