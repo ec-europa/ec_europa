@@ -27,11 +27,10 @@
  * @see template_process()
  */
 ?>
-
 <?php if ($element['#field_prefix']): ?>
   <span class="field-prefix"><?php render($element['#field_prefix']); ?></span>
 <?php endif; ?>
-<?php print $element['#children']; ?>
+<label<?php print $label_tag_attributes; ?>><?php print $element['#children']; ?><?php print render($label); ?></label>
 <?php if ($element['#field_suffix']): ?>
   <span class="field-suffix"><?php render($element['#field_suffix']); ?></span>
 <?php endif; ?>

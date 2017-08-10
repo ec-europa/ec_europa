@@ -57,27 +57,28 @@ function _ec_europa_term_heading($element) {
  * @param array $variables
  *   The $variables related to the form element theme.
  * @param array $classes
- *   The classes that are specific to the form element:
- *   - 'default': array of class names to display with the element by default;
- *   - 'error': array of class names to display with the element in case of
- *     validation errors.
+ *   The array of class names to add to the element by default.
+ * @param array $error_classes
+ *   The array of class names to add to the element in case of
+ *   validation errors.
+ *
+ * @return array
+ *   The modified $variables array.
  */
-function _ec_europa_form_set_css_class(array &$variables, array $classes = array()) {
-  if (!empty($classes['default'])) {
-    if (!isset($variables['attributes_array']['class'])) {
-      $variables['attributes_array']['class'] = array();
-    }
-    $variables['attributes_array']['class'] = array_merge($variables['attributes_array']['class'], $classes['default']);
+function _ec_europa_form_set_css_class(array &$variables, array $classes = array(), array $error_classes = array()) {
+  $variables['attributes_array'] += array('class' => array());
+  if (!empty($classes)) {
+    $variables['attributes_array']['class'] = array_merge($variables['attributes_array']['class'], $classes);
   }
 
   // Determines if the error class must added.
   // The logic comes from the Drupal function, see _form_set_class().
   $element = $variables['element'];
-  if (!empty($classes['error'])) {
-    if (_ec_europa_has_form_element_errors($element)) {
-      $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $classes['error']);
-    }
+  if (!empty($error_classes) && _ec_europa_has_form_element_errors($element)) {
+    $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $error_classes);
   }
+
+  return $variables;
 }
 
 /**

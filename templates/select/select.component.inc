@@ -55,8 +55,5 @@ function ec_europa_atomium_definition_select() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_select(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-select';
-  if (in_array('error', $variables['attributes_array']['class'])) {
-    $variables['attributes_array']['class'][] = 'ecl-select--has-error';
-  }
+  _ec_europa_form_set_css_class($variables, array('ecl-select'), array('ecl-select--has-error'));
 }
