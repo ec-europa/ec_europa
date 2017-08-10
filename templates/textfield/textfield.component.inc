@@ -31,7 +31,7 @@ function ec_europa_atomium_definition_textfield() {
         ),
       ),
       'element3' => array(
-        'title' => 'Disabled Text field.',
+        'title' => 'Disabled text field.',
         'description' => 'Description',
         'attributes' => array(
           0 => 'disabled',
