@@ -66,6 +66,7 @@ function _ec_europa_term_heading($element) {
  *   The modified $variables array.
  */
 function _ec_europa_form_set_css_class(array &$variables, array $classes = array(), array $error_classes = array()) {
+  $variables += array('attributes_array' => array());
   $variables['attributes_array'] += array('class' => array());
   if (!empty($classes)) {
     $variables['attributes_array']['class'] = array_merge($variables['attributes_array']['class'], $classes);
@@ -73,9 +74,11 @@ function _ec_europa_form_set_css_class(array &$variables, array $classes = array
 
   // Determines if the error class must added.
   // The logic comes from the Drupal function, see _form_set_class().
-  $element = $variables['element'];
-  if (!empty($error_classes) && _ec_europa_has_form_element_errors($element)) {
-    $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $error_classes);
+  if (isset($variables['element'])) {
+    $element = $variables['element'];
+    if (!empty($error_classes) && _ec_europa_has_form_element_errors($element)) {
+      $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $error_classes);
+    }
   }
 
   return $variables;
