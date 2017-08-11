@@ -11,7 +11,6 @@
 function ec_europa_atomium_definition_radio() {
   return array(
     'label' => 'Radio',
-    'description' => 'Radio.',
   );
 }
 
@@ -20,12 +19,12 @@ function ec_europa_atomium_definition_radio() {
  */
 function ec_europa_atomium_definition_form_radio($form, &$form_state) {
   $form['element1'] = array(
-    '#title' => 'Default',
+    '#title' => 'Radio button.',
     '#type' => 'radio',
   );
 
   $form['element2'] = array(
-    '#title' => 'Checked option',
+    '#title' => 'Checked radio button.',
     '#type' => 'radio',
     '#attributes' => array(
       'checked',
@@ -33,9 +32,17 @@ function ec_europa_atomium_definition_form_radio($form, &$form_state) {
   );
 
   $form['element3'] = array(
-    '#title' => 'Disabled option',
+    '#title' => 'Disabled radio button.',
     '#type' => 'radio',
     '#disabled' => TRUE,
+  );
+
+  $form['element4'] = array(
+    '#title' => 'Radio button with error.',
+    '#type' => 'radio',
+    '#label_tag_attributes' => array(
+      'class' => array('ecl-radio--has-error'),
+    ),
   );
 
   return $form;
