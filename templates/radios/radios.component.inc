@@ -10,8 +10,7 @@
  */
 function ec_europa_atomium_definition_radios() {
   return array(
-    'label' => 'Radio groups',
-    'description' => 'Radio groups.',
+    'label' => 'Radio group',
   );
 }
 
@@ -20,6 +19,17 @@ function ec_europa_atomium_definition_radios() {
  */
 function ec_europa_atomium_definition_form_radios($form, &$form_state) {
   $form['element1'] = array(
+    '#title' => 'Radios component',
+    '#type' => 'radios',
+    '#options' => array(
+      'item1' => 'Item 1',
+      'item2' => 'Item 2',
+      'item3' => 'Item 3',
+    ),
+  );
+
+  $form['element2'] = array(
+    '#title' => 'Radios component with one checked',
     '#type' => 'radios',
     '#options' => array(
       'item1' => 'Item 1',
@@ -27,6 +37,17 @@ function ec_europa_atomium_definition_form_radios($form, &$form_state) {
       'item3' => 'Item 3',
     ),
     '#default_value' => 'item2',
+  );
+
+  $form['element3'] = array(
+    '#title' => 'Disabled radios component',
+    '#type' => 'radios',
+    '#options' => array(
+      'item1' => 'Item 1',
+      'item2' => 'Item 2',
+      'item3' => 'Item 3',
+    ),
+    '#disabled' => TRUE,
   );
 
   return $form;
@@ -43,13 +64,13 @@ function ec_europa_preprocess_radios(&$variables, $hook) {
 
   if (!empty($element['#title'])) {
     $title = $element['#title'];
-    $variables['attributes_array']['aria-labelledby'][] = $title;
+    $variables['attributes_array']['aria-labelledby'] = $title;
 
     $variables['small_description'] = t('List of options for @title', array('@title' => $title));
 
     $descr_attributes_array['class'] = array('ecl-sr-only');
-    if (isset($descr_attributes_array['id'])) {
-      $descr_attributes_array['id'] = array($element['#id'] . "-description");
+    if (isset($element['#id'])) {
+      $descr_attributes_array['id'] = $element['#id'] . "-description";
     }
     $variables['descr_attributes_array'] = $descr_attributes_array;
   }
