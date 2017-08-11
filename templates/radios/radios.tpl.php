@@ -12,6 +12,7 @@
  *   - '#children': The rendered child elements of an element;
  */
 ?>
+
 <div<?php print $attributes; ?>>
   <?php if (!empty($small_description)): ?>
     <p<?php print $descr_attributes; ?>><?php print render($small_description); ?></p>

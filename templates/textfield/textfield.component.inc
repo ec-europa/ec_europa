@@ -11,6 +11,7 @@
 function ec_europa_atomium_definition_textfield() {
   return array(
     'label' => 'Text field',
+    'description' => 'Text field.',
   );
 }
 
@@ -19,13 +20,20 @@ function ec_europa_atomium_definition_textfield() {
  */
 function ec_europa_atomium_definition_form_textfield($form, &$form_state) {
   $form['element1'] = array(
-    '#title' => 'Text field.',
+    '#title' => 'Normal input',
     '#type' => 'textfield',
     '#description' => 'Description',
   );
 
   $form['element2'] = array(
-    '#title' => 'Text field with error.',
+    '#title' => 'Disabled input',
+    '#type' => 'textfield',
+    '#description' => 'Description',
+    '#disabled' => TRUE,
+  );
+
+  $form['element3'] = array(
+    '#title' => 'Input with error',
     '#type' => 'textfield',
     '#description' => 'Description',
     '#attributes' => array(
@@ -33,13 +41,6 @@ function ec_europa_atomium_definition_form_textfield($form, &$form_state) {
         'ecl-text-input--has-error',
       ),
     ),
-  );
-
-  $form['element3'] = array(
-    '#title' => 'Disabled radio button.',
-    '#type' => 'textfield',
-    '#description' => 'Description',
-    '#disabled' => TRUE,
   );
 
   return $form;

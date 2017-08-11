@@ -10,7 +10,8 @@
  */
 function ec_europa_atomium_definition_radios() {
   return array(
-    'label' => 'Radio group',
+    'label' => 'Radio groups',
+    'description' => 'Radio groups.',
   );
 }
 
@@ -19,7 +20,6 @@ function ec_europa_atomium_definition_radios() {
  */
 function ec_europa_atomium_definition_form_radios($form, &$form_state) {
   $form['element1'] = array(
-    '#title' => 'Radios component',
     '#type' => 'radios',
     '#options' => array(
       'item1' => 'Item 1',

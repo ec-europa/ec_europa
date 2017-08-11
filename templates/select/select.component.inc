@@ -12,6 +12,7 @@ function ec_europa_atomium_definition_select() {
 
   return array(
     'label' => 'Select',
+    'description' => 'Select.',
   );
 }
 
@@ -31,14 +32,22 @@ function ec_europa_atomium_definition_form_select($form, &$form_state) {
   );
 
   $form['element1'] = array(
-    '#title' => 'Select.',
+    '#title' => 'Default select list',
     '#type' => 'select',
     '#description' => 'Description',
     '#options' => $options,
   );
 
   $form['element2'] = array(
-    '#title' => 'Select with error.',
+    '#title' => 'Disabled select list',
+    '#type' => 'select',
+    '#description' => 'Description',
+    '#disabled' => TRUE,
+    '#options' => $options,
+  );
+
+  $form['element3'] = array(
+    '#title' => 'Select list with error',
     '#type' => 'select',
     '#description' => 'Description',
     '#attributes' => array(
@@ -46,14 +55,6 @@ function ec_europa_atomium_definition_form_select($form, &$form_state) {
         'ecl-text-input--has-error',
       ),
     ),
-    '#options' => $options,
-  );
-
-  $form['element3'] = array(
-    '#title' => 'Disabled select.',
-    '#type' => 'select',
-    '#description' => 'Description',
-    '#disabled' => TRUE,
     '#options' => $options,
   );
 

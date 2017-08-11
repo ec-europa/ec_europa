@@ -11,6 +11,7 @@
 function ec_europa_atomium_definition_password() {
   return array(
     'label' => 'Password field',
+    'description' => 'Password field.',
   );
 }
 
@@ -19,13 +20,20 @@ function ec_europa_atomium_definition_password() {
  */
 function ec_europa_atomium_definition_form_password($form, &$form_state) {
   $form['element1'] = array(
-    '#title' => 'Password field.',
+    '#title' => 'Normal password.',
     '#type' => 'password',
     '#description' => 'Description',
   );
 
   $form['element2'] = array(
-    '#title' => 'Password field with error.',
+    '#title' => 'Disabled password.',
+    '#type' => 'password',
+    '#description' => 'Description',
+    '#disabled' => TRUE,
+  );
+
+  $form['element3'] = array(
+    '#title' => 'Password with error.',
     '#type' => 'password',
     '#description' => 'Description',
     '#attributes' => array(
@@ -33,13 +41,6 @@ function ec_europa_atomium_definition_form_password($form, &$form_state) {
         'ecl-text-input--has-error',
       ),
     ),
-  );
-
-  $form['element3'] = array(
-    '#title' => 'Disabled password.',
-    '#type' => 'password',
-    '#description' => 'Description',
-    '#disabled' => TRUE,
   );
 
   return $form;
