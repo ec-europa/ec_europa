@@ -44,6 +44,7 @@ function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
   $lang_select = module_invoke('language_selector_site', 'block_view', 'language_selector_site');
   $variables['code'] = $lang_select['content']['code'];
   $variables['label'] = $lang_select['content']['label'];
+
   $variables['url'] = url(
     'language-selector/site-language', array(
       'html' => TRUE,
@@ -52,4 +53,7 @@ function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
       ),
     )
   );
+
+  $variables['attributes_array'] += array('class' => array());
+  $variables['attributes_array']['class'][] = 'ecl-lang-select-sites';
 }
