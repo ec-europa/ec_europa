@@ -13,6 +13,7 @@ function ec_europa_atomium_definition_table() {
     'label' => 'Tables',
     'description' => 'Tables.',
     'preview' => array(
+      'caption' => 'Table caption',
       'colgroups' => array(
         array('data' => '', 'style' => 'background-color: #fafafa'),
         '',
