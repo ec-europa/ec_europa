@@ -20,18 +20,18 @@ function ec_europa_atomium_definition_table() {
         '',
       ),
       'header' => array(
-        array('header 1.1', 'header 1.2', 'header cell 1.3'),
-        array('header 2.1', 'header 2.2', 'header cell 2.3'),
+        array('header cell 1.1', 'header cell 1.2', 'header cell 1.3'),
+        array('header cell 2.1', 'header cell 2.2', 'header cell 2.3'),
       ),
       'rows' => array(
-        array('body 1.1', 'body 1.2', 'body cell 1.3'),
-        array('body 2.1', 'body 2.2', 'body cell 2.3'),
-        array('body 3.1', 'body 3.2', 'body cell 3.3'),
-        array('body 4.1', 'body 4.2', 'body cell 4.3'),
+        array('body cell 1.1', 'body cell 1.2', 'body cell 1.3'),
+        array('body cell 2.1', 'body cell 2.2', 'body cell 2.3'),
+        array('body cell 3.1', 'body cell 3.2', 'body cell 3.3'),
+        array('body cell 4.1', 'body cell 4.2', 'body cell 4.3'),
       ),
       'footer' => array(
-        array('footer 1.1', 'footer 1.2', 'footer cell 1.3'),
-        array('footer 2.1', 'footer 2.2', 'footer cell 2.3'),
+        array('footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3'),
+        array('footer cell 2.1', 'footer cell 2.2', 'footer cell 2.3'),
       ),
     ),
   );
