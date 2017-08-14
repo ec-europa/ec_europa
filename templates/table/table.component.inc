@@ -13,6 +13,11 @@ function ec_europa_atomium_definition_table() {
     'label' => 'Tables',
     'description' => 'Tables.',
     'preview' => array(
+      'colgroups' => array(
+        array('data' => '', 'style' => 'background-color: #fafafa'),
+        '',
+        '',
+      ),
       'header' => array(
         array('header 1.1', 'header 1.2', 'header cell 1.3'),
         array('header 2.1', 'header 2.2', 'header cell 2.3'),
