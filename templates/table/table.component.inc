@@ -14,17 +14,18 @@ function ec_europa_atomium_definition_table() {
     'description' => 'Tables.',
     'preview' => array(
       'header' => array(
-        'Title 1',
-        'Title 2',
-        'Title 3',
+        array('header 1.1', 'header 1.2', 'header cell 1.3'),
+        array('header 2.1', 'header 2.2', 'header cell 2.3'),
       ),
       'rows' => array(
-        array('body cell 1', 'body cell 2', 'body cell 3'),
-        array('body cell 4', 'body cell 5', 'body cell 6'),
+        array('body 1.1', 'body 1.2', 'body cell 1.3'),
+        array('body 2.1', 'body 2.2', 'body cell 2.3'),
+        array('body 3.1', 'body 3.2', 'body cell 3.3'),
+        array('body 4.1', 'body 4.2', 'body cell 4.3'),
       ),
       'footer' => array(
-        array('footer cell 1', 'footer cell 2', 'footer cell 3'),
-        array('footer cell 4', 'footer cell 5', 'footer cell 6'),
+        array('footer 1.1', 'footer 1.2', 'footer cell 1.3'),
+        array('footer 2.1', 'footer 2.2', 'footer cell 2.3'),
       ),
     ),
   );
@@ -34,5 +35,5 @@ function ec_europa_atomium_definition_table() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_table(&$variables, $hook) {
-  $variables['attributes']['class'][] = 'ecl-table';
+  $variables['attributes_array']['class'][] = 'ecl-table';
 }
