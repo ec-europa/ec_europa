@@ -15,7 +15,7 @@ function ec_europa_atomium_theme_expandable() {
         'title' => NULL,
         'body' => NULL,
         'id' => NULL,
-        'icon' => NULL,
+        'link' => array(),
       ),
       'template' => 'expandable',
     ),
@@ -28,12 +28,31 @@ function ec_europa_atomium_theme_expandable() {
 function ec_europa_atomium_definition_expandable() {
   return array(
     'label' => 'Expandable',
-    'description' => 'Expandable layout.',
+    'description' => 'Expandable.',
     'preview' => array(
-      'title' => 'Title line 1',
-      'body' => 'Text block first Line 1',
-      'id' => 'test1',
-      'icon' => 'icon icon--yellowbg icon--growth',
+      'title' => 'Expandable link',
+      'body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
+      'id' => 'example-expandable',
+    ),
+  );
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ec_europa_preprocess_expandable(&$variables, $hook) {
+  $variables['link'] = array(
+    '#theme' => array('link'),
+    '#text' => $variables['title'],
+    '#path' => '#',
+    '#attributes_array' => array(
+      'id' => $variables['id'] . '-button',
+      'class' => array(
+        'ecl-expandable__button',
+        'ecl-link',
+      ),
+      'aria-controls' => $variables['id'],
+      'aria-expanded' => 'false',
     ),
   );
 }

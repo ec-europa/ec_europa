@@ -5,14 +5,10 @@
  * Contains template file.
  */
 ?>
-  <div class="expandable__group">
-    <a href="#<?php print $id; ?>" class="collapsed expandable__toggle" data-toggle="collapse" data-target="#<?php print $id; ?>" aria-expanded="false">
-      <h3>
-        <span class="<?php print $icon; ?>"></span>
-          <?php print $title; ?>
-      </h3>
-    </a>
-    <div id="<?php print $id; ?>" class="expandable__content collapse">
-      <?php print $body; ?>
-    </div>
+
+<div>
+  <?php print render($link); ?>
+  <div id="<?php print $id; ?>" aria-labelledby="<?php print $id; ?>-button" aria-hidden="true">
+    <?php print $body; ?>
   </div>
+</div>
