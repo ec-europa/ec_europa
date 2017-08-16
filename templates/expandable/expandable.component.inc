@@ -50,7 +50,7 @@ function ec_europa_atomium_definition_expandable() {
   return array(
     'label' => 'Expandable',
     'description' => 'Expandable.',
-    // @TODO: Fix the atomium_overview component when the preview key doesn't exists.
+    'disable' => TRUE,
   );
 }
 
