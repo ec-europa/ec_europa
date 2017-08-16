@@ -1,15 +1,12 @@
 /**
-
-  document.addEventListener('DOMContentLoaded', function () { ECL.initExpandables(); });
  * @file
  * JS file for Europa theme.
  */
 
 (function ($) {
-  Drupal.behaviors.status_messages = {
-    attach: function (context) {
+  Drupal.behaviors.expandable = {
+    attach: function (context, settings) {
       ECL.initExpandables();
     }
   };
-})(jQuery);
-
+}(jQuery));

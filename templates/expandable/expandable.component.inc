@@ -14,12 +14,33 @@ function ec_europa_atomium_theme_expandable() {
       'variables' => array(
         'title' => NULL,
         'body' => NULL,
-        'id' => NULL,
+        'id' => 'expandable',
         'link' => array(),
+        'button' => FALSE,
       ),
       'template' => 'expandable',
     ),
   );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_expandable($form, &$form_state) {
+  $form['element1'] = array(
+    '#theme' => 'expandable',
+    '#title' => 'Expandable with a link',
+    '#body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
+  );
+
+  $form['element2'] = array(
+    '#theme' => 'expandable',
+    '#title' => 'Expandable with a button',
+    '#body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
+    '#button' => TRUE,
+  );
+
+  return $form;
 }
 
 /**
@@ -29,30 +50,52 @@ function ec_europa_atomium_definition_expandable() {
   return array(
     'label' => 'Expandable',
     'description' => 'Expandable.',
-    'preview' => array(
-      'title' => 'Expandable link',
-      'body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
-      'id' => 'example-expandable',
-    ),
+    // @TODO: Fix the atomium_overview component when the preview key doesn't exists.
   );
 }
 
 /**
- * Implements hook_preprocess_HOOK().
+ * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_expandable(&$variables, $hook) {
+  $id = drupal_html_id($variables['id']);
+
+  $variables['content_attributes_array'] = array(
+    'class' => array(),
+    'id' => $id,
+    'aria-hidden' => 'true',
+    'aria-labelledby' => $id . '-button',
+  );
+
   $variables['link'] = array(
-    '#theme' => array('link'),
+    '#theme' => array('link__' . $variables['theme_hook_original']),
     '#text' => $variables['title'],
-    '#path' => '#',
+    '#path' => 'javascript:;',
     '#attributes_array' => array(
-      'id' => $variables['id'] . '-button',
+      'id' => $id . '-button',
       'class' => array(
         'ecl-expandable__button',
         'ecl-link',
       ),
-      'aria-controls' => $variables['id'],
+      'aria-controls' => $id,
       'aria-expanded' => 'false',
     ),
   );
+
+  if (isset($variables['button']) && TRUE == $variables['button']) {
+    $variables['link'] = array(
+      '#theme' => array('button__' . $variables['theme_hook_original']),
+      '#button_type' => 'button',
+      '#value' => $variables['title'],
+      '#attributes' => array(
+        'id' => $id . '-button',
+        'class' => array(
+          'ecl-expandable__button',
+          'ecl-button',
+        ),
+        'aria-controls' => $id,
+        'aria-expanded' => 'false',
+      ),
+    );
+  }
 }

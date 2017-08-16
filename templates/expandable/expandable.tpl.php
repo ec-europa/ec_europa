@@ -8,7 +8,7 @@
 
 <div>
   <?php print render($link); ?>
-  <div id="<?php print $id; ?>" aria-labelledby="<?php print $id; ?>-button" aria-hidden="true">
-    <?php print $body; ?>
+  <div<?php print $content_attributes; ?>>
+    <?php print render($body); ?>
   </div>
 </div>
