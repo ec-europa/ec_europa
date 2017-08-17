@@ -54,12 +54,12 @@ function ec_europa_atomium_definition_qt_accordion() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_qt_accordion(&$variables, $hook) {
+
   $variables['attributes_array'] = drupal_array_merge_deep($variables['element']['#options']['attributes']);
   $variables['attributes_array']['class'] = array('ecl-container');
 
   // Create all expandable item.
   $variables['element']['expandables'] = array();
-
   foreach ($variables['element']['divs'] as $div) {
     if (isset($div['#prefix']) && isset($div['content'])) {
       $variables['element']['expandables'][] = array(
@@ -69,6 +69,5 @@ function ec_europa_preprocess_qt_accordion(&$variables, $hook) {
       );
     }
   }
-
   unset($variables['element']['divs']);
 }
