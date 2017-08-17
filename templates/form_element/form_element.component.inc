@@ -45,7 +45,15 @@ function ec_europa_preprocess_form_element__checkbox(&$variables, $hook) {
 
   // Define the variable specific to the checkbox label tag.
   // Sets the attributes of the label tag that surrounds the checkbox button.
-  $label_tag_attributes_array = array('class' => array('ecl-form-label ecl-checkbox'));
+  $label_tag_attributes_array = array();
+
+  if (isset($element['#label_tag_attributes'])) {
+    $label_tag_attributes_array = $element['#label_tag_attributes'];
+  }
+
+  $label_tag_attributes_array += array('class' => array());
+  $label_tag_attributes_array['class'][] = 'ecl-form-label';
+  $label_tag_attributes_array['class'][] = 'ecl-checkbox';
 
   // Unlike text field and textarea, the "error" class is added on the label;
   // not on the element itself.

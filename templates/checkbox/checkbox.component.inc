@@ -30,10 +30,13 @@ function ec_europa_atomium_definition_form_checkbox($form, &$form_state) {
   $form['element3'] = array(
     '#type' => 'checkbox',
     '#title' => 'Checkbox with error',
+    '#label_tag_attributes' => array(
+      'class' => array('ecl-checkbox--has-error'),
+    ),
   );
   $form['element4'] = array(
     '#type' => 'checkbox',
-    '#title' => 'Checkbox by default',
+    '#title' => 'Checked by default',
     '#attributes' => array(
       'checked',
     ),
@@ -43,7 +46,7 @@ function ec_europa_atomium_definition_form_checkbox($form, &$form_state) {
 }
 
 /**
- * Implements hook_preprocess_HOOK().
+ * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_checkbox(&$variables, $hook) {
   $classes = array('ecl-checkbox__input', 'ecl-sr-only');
