@@ -20,7 +20,7 @@ function ec_europa_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['ec_europa']['ec_europa_improved_website'] = [
     '#type' => 'checkbox',
     '#title' => t('Is this an "improved website"?'),
-    '#description' => t('If this website is an "improved" one, we are going to show a site identification element in the page header.'),
+    '#description' => t('If this website is an "improved" one, we are going to implement customizations.'),
     '#default_value' => theme_get_setting('ec_europa_improved_website', 'ec_europa'),
   ];
 

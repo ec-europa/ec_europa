@@ -42,11 +42,14 @@ function ec_europa_atomium_definition_site_header() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_site_header(&$variables, $hook) {
-  $variables['logo'] = array(
-    '#theme' => 'logo',
-    '#title' => 'Home - European Commission',
+  $variables['logo'] += array(
+    '#title' => t('Home - European Commission'),
     '#attributes_array' => array(
-      'class' => array('ecl-site-header__logo'),
+      'class' => array('ecl-site-header__logo', 'ecl-logo--logotype'),
     ),
   );
+
+  $variables['lang_select_site'] += array('#attributes_array' => array());
+  $variables['lang_select_site']['#attributes_array'] += array('class' => array());
+  $variables['lang_select_site']['#attributes_array']['class'][] = 'ecl-site-header__lang-select-sites';
 }

@@ -37,24 +37,9 @@ function ec_europa_atomium_definition_logo() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_logo(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = 'ecl-logo';
   $variables['attributes_array'] += array(
-    'class' => array(),
     'href' => 'https://ec.europa.eu/info/index',
   );
   $variables['attributes_array']['title'] = $variables['title'];
-  $variables['attributes_array']['class'][] = 'ecl-logo';
-
-  if (!empty($variables['type'])) {
-    switch ($variables['type']) {
-      case 'below':
-        $variables['attributes_array']['class'][] = 'ecl-logo--logotypebelow';
-        break;
-
-      case 'right':
-        // TODO: Check if this is valid.
-        $variables['attributes_array']['class'][] = 'ecl-logo--logotype';
-        break;
-
-    }
-  }
 }

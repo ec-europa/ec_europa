@@ -84,6 +84,9 @@
  * @ingroup themeable
  */
 ?>
+
+<?php print render($site_switcher); ?>
+
 <?php if (!empty($page['header_top'])): ?>
 <section class="header-top">
   <div class="ecl-container">

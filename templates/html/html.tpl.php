@@ -42,12 +42,14 @@
  *
  * @ingroup themeable
  */
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <!--[if IE 8 ]>
-  <html class="no-js ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
+<html class="no-js ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
 <![endif]-->
 <!--[if (gt IE 8)|!(IE)]><!-->
-  <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
+<html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
 <!--<![endif]-->
 <head profile="<?php print $grddl_profile; ?>">
   <meta charset="utf-8">
@@ -58,21 +60,21 @@
   <?php print $styles; ?>
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lte IE 9]>
-    <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.js'; ?>"></script>
-    <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.addListener.js'; ?>"></script>
+  <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.js'; ?>"></script>
+  <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.addListener.js'; ?>"></script>
   <![endif]-->
   <!--[if lt IE 9]>
-    <script src="<?php print $theme_path . '/js/libraries/html5shiv.min.js'; ?>"></script>
-    <script src="<?php print $theme_path . '/js/libraries/respond.min.js'; ?>"></script>
+  <script src="<?php print $theme_path . '/js/libraries/html5shiv.min.js'; ?>"></script>
+  <script src="<?php print $theme_path . '/js/libraries/respond.min.js'; ?>"></script>
   <![endif]-->
   <?php print $scripts; ?>
 </head>
 <body<?php print $attributes;?>>
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-  </div>
-  <?php print $page_top; ?>
-  <?php print $page; ?>
-  <?php print $page_bottom; ?>
+<div class="ecl-skip-link__wrapper" id="skip-link">
+  <a href="#main-content" class="ecl-skip-link"><?php print t('Skip to main content'); ?></a>
+</div>
+<?php print $page_top; ?>
+<?php print $page; ?>
+<?php print $page_bottom; ?>
 </body>
 </html>

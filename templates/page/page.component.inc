@@ -65,7 +65,16 @@ function ec_europa_preprocess_page(&$variables, $hook) {
       }
     }
   }
+
+  $variables['site_switcher'] = array(
+    '#theme' => array('site_switcher'),
+    '#attributes_array' => array(
+      'class' => array('ecl-site-switcher--header'),
+    ),
+  );
+
   $variables['site_header'] = array('#theme' => array('site_header'));
+
   $variables['messages'] = $variables['show_messages'] ? array('#theme' => array('status_messages')) : '';
 
   $variables['page_header'] = array(
