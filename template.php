@@ -69,7 +69,7 @@ function _ec_europa_form_set_css_class(array &$variables, array $classes = array
   $variables += array('attributes_array' => array());
   $variables['attributes_array'] += array('class' => array());
   if (!empty($classes)) {
-    $variables['attributes_array']['class'] = array_merge($variables['attributes_array']['class'], $classes);
+    $variables['attributes_array']['class'] = drupal_array_merge_deep($variables['attributes_array']['class'], $classes);
   }
 
   // Determines if the error class must added.
@@ -77,7 +77,7 @@ function _ec_europa_form_set_css_class(array &$variables, array $classes = array
   if (isset($variables['element'])) {
     $element = $variables['element'];
     if (!empty($error_classes) && _ec_europa_has_form_element_errors($element)) {
-      $variables['attributes_array']['class'][] = array_merge($variables['attributes_array']['class'], $error_classes);
+      $variables['attributes_array']['class'][] = drupal_array_merge_deep($variables['attributes_array']['class'], $error_classes);
     }
   }
 
@@ -117,7 +117,7 @@ function ec_europa_dropdown(array $variables) {
   foreach ($items as $key => $value) {
     $links[$value] = $key;
   }
-  $select['#options'] = array_merge($select['#options'], array_map('t', $links));
+  $select['#options'] = drupal_array_merge_deep($select['#options'], array_map('t', $links));
 
   return form_select_options($select);
 }
