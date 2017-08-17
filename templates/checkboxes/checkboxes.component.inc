@@ -45,13 +45,17 @@ function ec_europa_preprocess_checkboxes(&$variables, $hook) {
     $title = $element['#title'];
     $variables['attributes_array']['aria-labelledby'][] = $title;
 
-    $variables['small_description'] = t('List of options for @title', array('@title' => $title));
-
     $descr_attributes_array['class'] = array('ecl-sr-only');
-    if (isset($descr_attributes_array['id'])) {
+    if (isset($element['#id'])) {
       $descr_attributes_array['id'] = array($element['#id'] . "-description");
     }
-    $variables['descr_attributes_array'] = $descr_attributes_array;
+
+    $variables['small_description'] = array(
+      '#markup' => t('List of options for @title', array('@title' => $title)),
+      '#theme_wrappers' => array('html_tag'),
+      '#tag' => 'p',
+      '#attributes' => $descr_attributes_array,
+    );
   }
 
   if (!empty($element['#description'])) {
