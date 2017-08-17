@@ -47,7 +47,7 @@ function ec_europa_preprocess_field(&$variables, $hook) {
  * Implements hook_preprocess_field__taxonomy_term_reference().
  */
 function ec_europa_preprocess_field__taxonomy_term_reference(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array('ecl-tag');
+  $variables['attributes_array']['class'][] = 'ecl-tag';
   foreach ($variables['items'] as &$item) {
     $item['#options']['attributes']['class'][] = 'ecl-tag__item';
   }
