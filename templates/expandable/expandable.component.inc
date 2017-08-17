@@ -15,7 +15,6 @@ function ec_europa_atomium_theme_expandable() {
         'title' => NULL,
         'body' => NULL,
         'id' => 'expandable',
-        'link' => array(),
         'button' => FALSE,
       ),
       'template' => 'expandable',
@@ -29,15 +28,15 @@ function ec_europa_atomium_theme_expandable() {
 function ec_europa_atomium_definition_form_expandable($form, &$form_state) {
   $form['element1'] = array(
     '#theme' => 'expandable',
-    '#title' => 'Expandable with a link',
+    '#title' => 'Expandable with a button',
     '#body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
+    '#button' => TRUE,
   );
 
   $form['element2'] = array(
     '#theme' => 'expandable',
-    '#title' => 'Expandable with a button',
+    '#title' => 'Expandable with a link',
     '#body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
-    '#button' => TRUE,
   );
 
   return $form;
@@ -70,7 +69,7 @@ function ec_europa_preprocess_expandable(&$variables, $hook) {
   $variables['link'] = array(
     '#theme' => array('link__' . $variables['theme_hook_original']),
     '#text' => $variables['title'],
-    '#path' => 'javascript:;',
+    '#path' => '#',
     '#attributes_array' => array(
       'id' => $id . '-button',
       'class' => array(
@@ -79,6 +78,7 @@ function ec_europa_preprocess_expandable(&$variables, $hook) {
       ),
       'aria-controls' => $id,
       'aria-expanded' => 'false',
+      'onClick' => 'return false;',
     ),
   );
 
