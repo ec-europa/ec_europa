@@ -13,15 +13,6 @@ function ec_europa_preprocess_field(&$variables, $hook) {
   if (isset($element['#label'])) {
     $variables['label'] = $element['#label'];
   }
-
-  // @TODO refactor Add the tpl classes here
-  // Changing label for the field to display stripped out values.
-  switch ($variables['element']['#field_name']) {
-    case 'field_core_social_network_links':
-      $element['before'] = t('Follow the latest progress and get involved.');
-      $element['after'] = l(t('Other social networks'), variable_get('dt_core_other_social_networks_link', 'http://europa.eu/contact/social-networks/index_en.htm'));
-      break;
-  }
   if ($element['#field_type'] <> 'ds') {
     // Initialize parameter.
     $allow_attribute = TRUE;
@@ -49,5 +40,17 @@ function ec_europa_preprocess_field(&$variables, $hook) {
         $attributes_item[$delta]['class'][] = 'ecl-editor';
       }
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field__taxonomy_term_reference().
+ */
+function ec_europa_preprocess_field__taxonomy_term_reference(&$variables, $hook) {
+  $element = &$variables['element'];
+  $variables['attributes_array']['class'] = array('ecl-tag');
+  $items = &$variables['items'];
+  foreach ($items as $delta => $item) {
+    $items[$delta]['#options']['attributes']['class'][] = 'ecl-tag__item';
   }
 }
