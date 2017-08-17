@@ -11,6 +11,7 @@
 function ec_europa_atomium_definition_checkbox() {
   return array(
     'label' => 'Checkbox',
+    'description' => 'Checkbox.',
   );
 }
 

@@ -11,6 +11,7 @@
 function ec_europa_atomium_definition_checkboxes() {
   return array(
     'label' => 'Checkbox group',
+    'description' => 'Checkbox group.',
   );
 }
 
@@ -19,7 +20,7 @@ function ec_europa_atomium_definition_checkboxes() {
  */
 function ec_europa_atomium_definition_form_checkboxes($form, &$form_state) {
   $form['element1'] = array(
-    '#title' => 'Checkboxes component',
+    '#title' => 'Simple example',
     '#type' => 'checkboxes',
     '#options' => array(
       'item1' => 'Item 1',
