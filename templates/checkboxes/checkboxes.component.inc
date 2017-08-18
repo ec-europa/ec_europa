@@ -58,8 +58,4 @@ function ec_europa_preprocess_checkboxes(&$variables, $hook) {
       '#attributes' => $descr_attributes_array,
     );
   }
-
-  if (!empty($element['#description'])) {
-    $variables['description'] = $element['#description'];
-  }
 }
