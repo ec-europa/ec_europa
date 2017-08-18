@@ -9,7 +9,6 @@
  * Implements hook_atomium_definition_hook().
  */
 function ec_europa_atomium_definition_select() {
-
   return array(
     'label' => 'Select',
     'description' => 'Select.',
