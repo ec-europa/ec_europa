@@ -123,6 +123,19 @@ function ec_europa_dropdown(array $variables) {
 }
 
 /**
+ * Custom implementation of tableselect.
+ */
+function ec_europa_tableselect($variables) {
+  // Add a custom JS file that overrides a specific JS function.
+  drupal_add_js(path_to_theme() . '/templates/table/tableselect.js', array('group' => JS_THEME));
+
+  // Use the default implementation to render the table.
+  // We cannot use theme('tableselect',...) or else we will end up in a loop.
+  // Better solutions are welcome.
+  return theme_tableselect($variables);
+}
+
+/**
  * Case array_search() with partial matches.
  *
  * @param string $needle
