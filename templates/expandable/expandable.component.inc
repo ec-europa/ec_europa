@@ -6,23 +6,6 @@
  */
 
 /**
- * Implements hook_atomium_theme_hook().
- */
-function ec_europa_atomium_theme_expandable() {
-  return array(
-    'expandable' => array(
-      'variables' => array(
-        'title' => NULL,
-        'body' => NULL,
-        'id' => 'expandable',
-        'button' => FALSE,
-      ),
-      'template' => 'expandable',
-    ),
-  );
-}
-
-/**
  * Implements hook_atomium_definition_form_hook().
  */
 function ec_europa_atomium_definition_form_expandable($form, &$form_state) {
@@ -66,7 +49,7 @@ function ec_europa_preprocess_expandable(&$variables, $hook) {
     'aria-labelledby' => $id . '-button',
   );
 
-  $variables['link'] = array(
+  $variables['title'] = array(
     '#theme' => array('link__' . $variables['theme_hook_original']),
     '#text' => $variables['title'],
     '#path' => '#',
@@ -83,10 +66,10 @@ function ec_europa_preprocess_expandable(&$variables, $hook) {
   );
 
   if (isset($variables['button']) && TRUE == $variables['button']) {
-    $variables['link'] = array(
+    $variables['title'] = array(
       '#theme' => array('button__' . $variables['theme_hook_original']),
       '#button_type' => 'button',
-      '#value' => $variables['title'],
+      '#value' => $variables['title']['#text'],
       '#attributes' => array(
         'id' => $id . '-button',
         'class' => array(
