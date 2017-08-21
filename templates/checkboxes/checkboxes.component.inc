@@ -42,6 +42,8 @@ function ec_europa_preprocess_checkboxes(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-checkbox-group';
   $variables['attributes_array']['role'][] = 'checkboxgroup';
 
+  $variables['small_description'] = '';
+
   if (!empty($element['#title'])) {
     $title = $element['#title'];
     $variables['attributes_array']['aria-labelledby'][] = $title;
