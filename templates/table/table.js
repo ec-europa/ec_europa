@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-  Drupal.behaviors.ec_table = {
+  Drupal.behaviors.ecEuropaTable = {
     attach: function (context) {
       ECL.eclTables();
     }
