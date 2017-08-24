@@ -4,9 +4,9 @@
  */
 
 (function ($) {
-  Drupal.behaviors.ec_status_messages = {
+  Drupal.behaviors.ec_table = {
     attach: function (context) {
-      ECL.initMessages();
+      ECL.eclTables();
     }
   };
 })(jQuery);

@@ -33,6 +33,7 @@ function ec_europa_atomium_definition_table() {
         array('footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3'),
         array('footer cell 2.1', 'footer cell 2.2', 'footer cell 2.3'),
       ),
+      'sticky' => FALSE,
     ),
   );
 }
