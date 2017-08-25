@@ -41,20 +41,22 @@ function ec_europa_preprocess_radios(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-radio-group';
   $variables['attributes_array']['role'][] = 'radiogroup';
 
+  $variables['small_description'] = '';
+
   if (!empty($element['#title'])) {
     $title = $element['#title'];
-    $variables['attributes_array']['aria-labelledby'] = $title;
-
-    $variables['small_description'] = t('List of options for @title', array('@title' => $title));
+    $variables['attributes_array']['aria-labelledby'][] = $title;
 
     $descr_attributes_array['class'] = array('ecl-sr-only');
     if (isset($element['#id'])) {
-      $descr_attributes_array['id'] = $element['#id'] . "-description";
+      $descr_attributes_array['id'] = array($element['#id'] . "-description");
     }
-    $variables['descr_attributes_array'] = $descr_attributes_array;
-  }
 
-  if (!empty($element['#description'])) {
-    $variables['description'] = $element['#description'];
+    $variables['small_description'] = array(
+      '#markup' => t('List of options for @title', array('@title' => $title)),
+      '#theme_wrappers' => array('html_tag'),
+      '#tag' => 'p',
+      '#attributes' => $descr_attributes_array,
+    );
   }
 }
