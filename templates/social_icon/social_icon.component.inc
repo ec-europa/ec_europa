@@ -6,21 +6,6 @@
  */
 
 /**
- * Implements hook_atomium_theme_hook().
- */
-function ec_europa_atomium_theme_social_icon() {
-  return array(
-    'social_icon' => array(
-      'template' => 'social-icon',
-      'variables' => array(
-        'text' => NULL,
-        'type' => NULL,
-      ),
-    ),
-  );
-}
-
-/**
  * Implements hook_atomium_definition_hook().
  */
 function ec_europa_atomium_definition_social_icon() {
