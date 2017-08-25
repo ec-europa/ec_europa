@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-  Drupal.behaviors.expandable = {
+  Drupal.behaviors.ecEuropaExpandable = {
     attach: function (context, settings) {
       ECL.initExpandables();
     }

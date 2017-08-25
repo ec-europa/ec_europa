@@ -23,6 +23,86 @@ function ec_europa_atomium_theme_link() {
 }
 
 /**
+ * Implements hook_atomium_definition_hook().
+ */
+function ec_europa_atomium_definition_link() {
+  return array(
+    'label' => 'Link',
+    'description' => 'Link.',
+  );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_link($form, &$form_state) {
+  $type = array(
+    array(
+      'text' => 'in-line link',
+      'class' => array('ecl-link'),
+    ),
+    array(
+      'text' => 'external link',
+      'class' => array(
+        'ecl-link',
+        'ecl-link--external',
+      ),
+    ),
+    array(
+      'text' => 'standalone link',
+      'class' => array(
+        'ecl-link',
+        'ecl-link--standalone',
+      ),
+    ),
+    array(
+      'text' => 'inverted link',
+      'class' => array(
+        'ecl-link',
+        'ecl-link--inverted',
+        'ecl-u-bg-shade',
+      ),
+    ),
+    array(
+      'text' => 'all link',
+      'class' => array(
+        'ecl-link',
+        'ecl-link--all',
+      ),
+    ),
+    array(
+      'text' => 'more link',
+      'class' => array(
+        'ecl-link',
+        'ecl-link--more',
+      ),
+    ),
+    array(
+      'text' => 'social link',
+      'class' => array(
+        'ecl-link',
+        'ecl-icon-social',
+        'ecl-icon-social--facebook',
+      ),
+    ),
+  );
+
+  foreach ($type as $item) {
+    $form['element'][] = array(
+      '#theme' => 'link',
+      '#title' => 'Link for ' . $item['text'],
+      '#text' => $item['text'],
+      '#attributes_array' => array(
+        'class' => $item['class'],
+      ),
+      '#theme_wrappers' => array('form_element'),
+    );
+  }
+
+  return $form;
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function ec_europa_preprocess_link(&$variables, $hook) {
