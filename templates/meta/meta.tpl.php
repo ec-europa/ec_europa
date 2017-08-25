@@ -6,7 +6,7 @@
  */
 ?>
 
-<div<?php print render($attributes); ?>>
+<div<?php print $attributes; ?>>
   <?php if (!empty($type)): ?>
     <span class="ecl-meta__item ecl-u-f-up"><?php print render($type); ?></span>
   <?php endif; ?>
