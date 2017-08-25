@@ -12,107 +12,41 @@ function ec_europa_atomium_definition_button() {
   return array(
     'label' => 'Button',
     'description' => 'Button template.',
-    'preview' => array(
-      array(
-        'type' => 'submit',
-        'value' => 'Default',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--default',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Primary',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--primary',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Secondary',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--secondary',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Call to action',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--call',
-            'ecl-button--caret-right',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Timeline',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--default',
-            'ecl-button--caret-down',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Icon: Caret up',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--default',
-            'ecl-button--caret-up',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Icon: Caret right',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--default',
-            'ecl-button--caret-right',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Icon: Caret down',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--default',
-            'ecl-button--caret-down',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Icon: Caret left',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--default',
-            'ecl-button--caret-left',
-          ),
-        ),
-      ),
-      array(
-        'type' => 'submit',
-        'value' => 'Primary button, block-wide, with caret-down',
-        'attributes' => array(
-          'class' => array(
-            'ecl-button--primary',
-            'ecl-button--block',
-            'ecl-button--caret-down',
-          ),
-        ),
-      ),
-    ),
   );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_button($form, &$form_state) {
+  $variants = array(
+    'Default' => 'ecl-button--default',
+    'Primary' => 'ecl-button--primary',
+    'Secondary' => 'ecl-button--secondary',
+    'Call to action' => 'ecl-button--call ecl-button--caret-right',
+    'Icon: Caret down' => 'ecl-button--default ecl-button--caret-down',
+    'Icon: Caret up' => 'ecl-button--default ecl-button--caret-up',
+    'Icon: Caret right' => 'ecl-button--default ecl-button--caret-right',
+    'Icon: Caret left' => 'ecl-button--default ecl-button--caret-left',
+    'Primary button, block-wide, with caret-down' => 'ecl-button--primary ecl-button--block ecl-button--caret-down',
+  );
+
+  foreach ($variants as $value => $classes) {
+    $form['buttons'][] = array(
+      '#theme' => 'button',
+      '#button_type' => 'button',
+      '#title' => $value,
+      '#value' => $value,
+      '#attributes' => array(
+        'class' => array(
+          $classes,
+        ),
+      ),
+      '#theme_wrappers' => array('form_element'),
+    );
+  }
+
+  return $form;
 }
 
 /**
