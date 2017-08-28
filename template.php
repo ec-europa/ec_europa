@@ -101,28 +101,6 @@ function _ec_europa_has_form_element_errors(array $form_element) {
 }
 
 /**
- * Returns HTML for a dropdown.
- */
-function ec_europa_dropdown(array $variables) {
-  $items = $variables['items'];
-  $links = array();
-
-  $select = array(
-    '#title' => t('Create content'),
-    '#type' => 'select',
-    '#description' => t('Create content'),
-    '#options' => array('#' => t('Create content')),
-  );
-
-  foreach ($items as $key => $value) {
-    $links[$value] = $key;
-  }
-  $select['#options'] = drupal_array_merge_deep($select['#options'], array_map('t', $links));
-
-  return form_select_options($select);
-}
-
-/**
  * Custom implementation of tableselect.
  */
 function ec_europa_tableselect($variables) {
