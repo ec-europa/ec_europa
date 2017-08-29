@@ -79,12 +79,24 @@ function ec_europa_atomium_definition_form_table($form, &$form_state) {
       array('header cell 2.1', 'header cell 2.2', 'header cell 2.3'),
     ),
     '#rows' => array(
-      array('body cell 1.1', 'body cell 1.2', 'body cell 1.3', 'body cell 1.4', 'body cell 1.5'),
-      array('body cell 2.1', 'body cell 2.2', 'body cell 2.3', 'body cell 2.4', 'body cell 2.5'),
-      array('body cell 3.1', 'body cell 3.2', 'body cell 3.3', 'body cell 3.4', 'body cell 3.5'),
+      array(
+        'body cell 1.1', 'body cell 1.2', 'body cell 1.3', 'body cell 1.4',
+        'body cell 1.5',
+      ),
+      array(
+        'body cell 2.1', 'body cell 2.2', 'body cell 2.3', 'body cell 2.4',
+        'body cell 2.5',
+      ),
+      array(
+        'body cell 3.1', 'body cell 3.2', 'body cell 3.3', 'body cell 3.4',
+        'body cell 3.5',
+      ),
     ),
     '#footer' => array(
-      array('footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3', 'footer cell 1.4', 'footer cell 1.5'),
+      array(
+        'footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3',
+        'footer cell 1.4', 'footer cell 1.5',
+      ),
     ),
     '#sticky' => FALSE,
   );
@@ -119,12 +131,24 @@ function ec_europa_atomium_definition_form_table($form, &$form_state) {
       array('header cell 2.1', 'header cell 2.2'),
     ),
     '#rows' => array(
-      array('body cell 1.1', 'body cell 1.2', 'body cell 1.3', 'body cell 1.4', 'body cell 1.5'),
-      array('body cell 2.1', 'body cell 2.2', 'body cell 2.3', 'body cell 2.4', 'body cell 2.5'),
-      array('body cell 3.1', 'body cell 3.2', 'body cell 3.3', 'body cell 3.4', 'body cell 3.5'),
+      array(
+        'body cell 1.1', 'body cell 1.2', 'body cell 1.3', 'body cell 1.4',
+        'body cell 1.5',
+      ),
+      array(
+        'body cell 2.1', 'body cell 2.2', 'body cell 2.3', 'body cell 2.4',
+        'body cell 2.5',
+      ),
+      array(
+        'body cell 3.1', 'body cell 3.2', 'body cell 3.3', 'body cell 3.4',
+        'body cell 3.5',
+      ),
     ),
     '#footer' => array(
-      array('footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3', 'footer cell 1.4', 'footer cell 1.5'),
+      array(
+        'footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3',
+        'footer cell 1.4', 'footer cell 1.5',
+      ),
     ),
     '#sticky' => FALSE,
   );
@@ -159,12 +183,24 @@ function ec_europa_atomium_definition_form_table($form, &$form_state) {
       array('header cell 2.1', 'header cell 2.2'),
     ),
     '#rows' => array(
-      array('body cell 1.1', 'body cell 1.2', 'body cell 1.3', 'body cell 1.4', 'body cell 1.5'),
-      array('body cell 2.1', 'body cell 2.2', 'body cell 2.3', 'body cell 2.4', 'body cell 2.5'),
-      array('body cell 3.1', 'body cell 3.2', 'body cell 3.3', 'body cell 3.4', 'body cell 3.5'),
+      array(
+        'body cell 1.1', 'body cell 1.2', 'body cell 1.3', 'body cell 1.4',
+        'body cell 1.5',
+      ),
+      array(
+        'body cell 2.1', 'body cell 2.2', 'body cell 2.3', 'body cell 2.4',
+        'body cell 2.5',
+      ),
+      array(
+        'body cell 3.1', 'body cell 3.2', 'body cell 3.3', 'body cell 3.4',
+        'body cell 3.5',
+      ),
     ),
     '#footer' => array(
-      array('footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3', 'footer cell 1.4', 'footer cell 1.5'),
+      array(
+        'footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3',
+        'footer cell 1.4', 'footer cell 1.5',
+      ),
     ),
     '#sticky' => FALSE,
   );
@@ -195,12 +231,24 @@ function ec_europa_atomium_definition_form_table($form, &$form_state) {
       array('header cell 2.1', 'header cell 2.2', 'header cell 2.3'),
     ),
     '#rows' => array(
-      array('body cell 1.1', 'body cell 1.2', 'body cell 1.3', 'body cell 1.4', 'body cell 1.5'),
-      array('body cell 2.1', 'body cell 2.2', 'body cell 2.3', 'body cell 2.4', 'body cell 2.5'),
-      array('body cell 3.1', 'body cell 3.2', 'body cell 3.3', 'body cell 3.4', 'body cell 3.5'),
+      array(
+        'body cell 1.1', 'body cell 1.2', 'body cell 1.3', 'body cell 1.4',
+        'body cell 1.5',
+      ),
+      array(
+        'body cell 2.1', 'body cell 2.2', 'body cell 2.3', 'body cell 2.4',
+        'body cell 2.5',
+      ),
+      array(
+        'body cell 3.1', 'body cell 3.2', 'body cell 3.3', 'body cell 3.4',
+        'body cell 3.5',
+      ),
     ),
     '#footer' => array(
-      array('footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3', 'footer cell 1.4', 'footer cell 1.5'),
+      array(
+        'footer cell 1.1', 'footer cell 1.2', 'footer cell 1.3',
+        'footer cell 1.4', 'footer cell 1.5',
+      ),
     ),
     '#sticky' => FALSE,
   );
@@ -238,6 +286,7 @@ function ec_europa_atomium_definition_table() {
   return array(
     'label' => 'Tables',
     'description' => 'Tables.',
+    'disable' => TRUE,
   );
 }
 
