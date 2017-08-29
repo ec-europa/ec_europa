@@ -13,4 +13,8 @@
  * @see template_process()
  */
 ?>
-<span class="ecl-radio__label"><?php print render($form_element_label['title']); ?><?php print render($form_element_label['required']); ?></span>
+
+<span<?php print $attributes; ?>>
+  <?php print render($form_element_label['title']); ?>
+  <?php print render($form_element_label['required']); ?>
+</span>

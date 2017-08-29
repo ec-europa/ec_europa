@@ -24,3 +24,17 @@ function ec_europa_preprocess_form_element_label(&$variables, $hook) {
 function ec_europa_preprocess_form_element_label__form_element__textarea(&$variables, $hook) {
   $variables['attributes_array']['class'] = array_diff($variables['attributes_array']['class'], array('ecl-form-label'));
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_form_element_label__form_element__checkbox(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = 'ecl-checkbox__label';
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_form_element_label__form_element__radio(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = 'ecl-radio__label';
+}
