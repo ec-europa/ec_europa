@@ -41,6 +41,7 @@ function ec_europa_preprocess_form_element_label__form_element__checkbox(&$varia
       'required' => NULL,
     );
   }
+  unset($variables['attributes_array']['for']);
 }
 
 /**
@@ -59,4 +60,5 @@ function ec_europa_preprocess_form_element_label__form_element__radio(&$variable
       'required' => NULL,
     );
   }
+  unset($variables['attributes_array']['for']);
 }
