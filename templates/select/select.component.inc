@@ -30,7 +30,7 @@ function ec_europa_atomium_definition_select() {
         'options' => $options,
       ),
       'element2' => array(
-        'title' => 'Select list with error.',
+        'title' => 'Disabled select list.',
         'description' => 'Description',
         'attributes' => array(
           'disabled',
@@ -38,7 +38,7 @@ function ec_europa_atomium_definition_select() {
         'options' => $options,
       ),
       'element3' => array(
-        'title' => 'Disabled select list.',
+        'title' => 'Select list with error.',
         'description' => 'Description',
         'attributes' => array(
           'class' => array(
