@@ -4,9 +4,9 @@
  */
 
 (function ($) {
-  Drupal.behaviors.ecEuropaStatusMessages = {
+  Drupal.behaviors.ecEuropaTable = {
     attach: function (context) {
-      ECL.initMessages();
+      ECL.eclTables();
     }
   };
 })(jQuery);
