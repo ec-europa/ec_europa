@@ -34,12 +34,12 @@ function ec_europa_atomium_definition_tags() {
           '#theme' => 'link__tag',
           '#text' => 'sport',
           '#path' => '#',
-         ),
+        ),
         array(
           '#theme' => 'link__tag',
           '#text' => 'economics',
           '#path' => '#',
-         ),
+        ),
       ),
     ),
   );
@@ -49,8 +49,6 @@ function ec_europa_atomium_definition_tags() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_tags(&$variables, $hook) {
+  // @todo: For consistency, shouldn't it be: ecl-tags ?
   $variables['attributes_array']['class'][] = 'ecl-tag';
-  foreach ($variables['items'] as &$item) {
-    $item['#options']['attributes']['class'][] = 'ecl-tag__item';
-  }
 }
