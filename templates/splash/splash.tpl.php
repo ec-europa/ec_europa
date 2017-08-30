@@ -16,4 +16,4 @@
  */
 ?>
 
-<div class="ecl-row"><?php print render($languages_list); ?></div>
+<div<?php print $attributes;?>><?php print render($languages_list); ?></div>

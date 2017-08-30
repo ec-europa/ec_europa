@@ -12,9 +12,6 @@ function ec_europa_atomium_definition_splash() {
   return array(
     'label' => 'Splash',
     'description' => 'Splash.',
-    'preview' => array(
-      'path' => '',
-    ),
   );
 }
 
@@ -29,7 +26,7 @@ function ec_europa_preprocess_splash(&$variables, $hook) {
   $variables['languages_list'] = array();
   foreach ($variables['languages_list_array'] as $language) {
     $variables['languages_list'][] = array(
-      '#theme' => 'link',
+      '#theme' => array('link__' . $variables['theme_hook_original']),
       '#text' => $language->name,
       '#path' => $variables['path'],
       '#options' => array(
@@ -54,11 +51,16 @@ function ec_europa_preprocess_splash(&$variables, $hook) {
     round(count($variables['languages_list']) / 2)
   );
 
-  foreach ($variables['languages_list'] as &$language) {
-    $language['#theme'] = array('html_tag');
+  foreach ($variables['languages_list'] as $index => &$language) {
+    $language['#theme'] = array('html_tag__' . $variables['theme_hook_original']);
     $language['#tag'] = 'div';
     $language['#attributes'] = array(
-      'class' => 'ecl-col-md-6',
+      'class' => array(
+        'column-' . $index,
+        'ecl-col-md-6',
+      ),
     );
   }
+
+  $variables['attributes_array']['class'][] = 'ecl-row';
 }

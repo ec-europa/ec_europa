@@ -111,7 +111,7 @@ function ec_europa_preprocess_page(&$variables, $hook) {
     );
 
     $variables['splash'] = array(
-      '#theme' => array('splash'),
+      '#theme' => array('splash__' . $variables['theme_hook_original']),
     );
   }
 }
