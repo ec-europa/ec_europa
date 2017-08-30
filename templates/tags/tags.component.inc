@@ -51,4 +51,5 @@ function ec_europa_atomium_definition_tags() {
 function ec_europa_preprocess_tags(&$variables, $hook) {
   // @todo: For consistency, shouldn't it be: ecl-tags ?
   $variables['attributes_array']['class'][] = 'ecl-tag';
+  $variables['title_attributes_array']['class'][] = 'ecl-tag__label';
 }
