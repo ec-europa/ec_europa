@@ -246,8 +246,9 @@ var initExpandables = function initExpandables() {
   var nodesArray = Array.prototype.slice.call(context.querySelectorAll(selector));
 
   nodesArray.forEach(function (node) {
-    return node.addEventListener('click', function () {
-      return toggleExpandable(node, { context: context });
+    return node.addEventListener('click', function (e) {
+      toggleExpandable(node, { context: context });
+      e.preventDefault();
     });
   });
 };
@@ -274,20 +275,93 @@ function initMessages() {
   });
 }
 
-var megamenu = function megamenu(selector) {
-  var megamenusArray = Array.prototype.slice.call(document.querySelectorAll(selector));
+var onClick = function onClick(node, menu) {
+  return function (e) {
+    if (node && node.hasAttribute('aria-haspopup')) {
+      var hasPopup = node.getAttribute('aria-haspopup');
+      if (hasPopup === '' || hasPopup === 'true') {
+        e.preventDefault();
 
-  megamenusArray.forEach(function (menu) {
-    // Get expandables within the menu
-    var nodesArray = Array.prototype.slice.call(menu.querySelectorAll('[aria-controls][aria-expanded]'));
-
-    nodesArray.forEach(function (node) {
-      return node.addEventListener('click', function () {
         toggleExpandable(node, {
           context: menu,
           closeSiblings: true
         });
+      }
+    }
+  };
+};
+
+var onKeydown = function onKeydown(node, menu) {
+  return function (e) {
+    var currentTab = node.parentElement;
+    var previousTabItem = currentTab.previousElementSibling || currentTab.parentElement.lastElementChild;
+    var nextTabItem = currentTab.nextElementSibling || currentTab.parentElement.firstElementChild;
+
+    // don't catch key events when ⌘ or Alt modifier is present
+    if (e.metaKey || e.altKey) return;
+
+    // catch left/right and up/down arrow key events
+    // if new next/prev tab available, show it by passing tab anchor to showTab method
+    switch (e.keyCode) {
+      // ENTER or SPACE
+      case 13:
+      case 32:
+        onClick(e.currentTarget, menu)(e);
+        /* e.preventDefault();
+        toggleExpandable(e.currentTarget, {
+          context: menu,
+          closeSiblings: true,
+        }); */
+        break;
+      // ARROWS LEFT and UP
+      case 37:
+      case 38:
+        e.preventDefault();
+        previousTabItem.querySelector('a').focus();
+        break;
+      // ARROWS RIGHT and DOWN
+      case 39:
+      case 40:
+        e.preventDefault();
+        nextTabItem.querySelector('a').focus();
+        break;
+      default:
+        break;
+    }
+  };
+};
+
+var megamenu = function megamenu() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      _ref$selector = _ref.selector,
+      selector = _ref$selector === undefined ? '.ecl-navigation-menu' : _ref$selector,
+      _ref$toggleSelector = _ref.toggleSelector,
+      toggleSelector = _ref$toggleSelector === undefined ? '.ecl-navigation-menu__toggle' : _ref$toggleSelector,
+      _ref$listSelector = _ref.listSelector,
+      listSelector = _ref$listSelector === undefined ? '.ecl-navigation-menu__root' : _ref$listSelector,
+      _ref$linkSelector = _ref.linkSelector,
+      linkSelector = _ref$linkSelector === undefined ? '.ecl-navigation-menu__link' : _ref$linkSelector;
+
+  var megamenusArray = queryAll(selector);
+
+  megamenusArray.forEach(function (menu) {
+    // Make the toggle expandable
+    var toggle = menu.querySelector(toggleSelector);
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        return toggleExpandable(toggle, { context: menu });
       });
+    }
+
+    // Get the list of links
+    var list = menu.querySelector(listSelector);
+
+    // Get expandables within the list
+    var nodesArray = queryAll(linkSelector, list);
+
+    nodesArray.forEach(function (node) {
+      node.addEventListener('click', onClick(node, list));
+      node.addEventListener('keydown', onKeydown(node, list));
     });
   });
 };

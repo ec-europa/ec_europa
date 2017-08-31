@@ -11,8 +11,8 @@
     "build": "npm-run-all --parallel build:*"
   },
   "dependencies": {
-    "@ec-europa/ecl-builder": "^0.10.0",
-    "@ec-europa/ecl-components-preset-base": "^0.10.0",
+    "@ec-europa/ecl-builder": "<1.0.0",
+    "@ec-europa/ecl-components-preset-base": "<1.0.0",
     "npm-run-all": "4.0.2"
   },
   "engines": {

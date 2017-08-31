@@ -47,7 +47,7 @@ function ec_europa_preprocess_radios(&$variables, $hook) {
 
     $variables['small_description'] = t('List of options for @title', array('@title' => $title));
 
-    $descr_attributes_array['class'] = array('ecl-sr-only');
+    $descr_attributes_array['class'] = array('ecl-u-sr-only');
     if (isset($element['#id'])) {
       $descr_attributes_array['id'] = $element['#id'] . "-description";
     }
