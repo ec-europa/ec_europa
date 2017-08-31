@@ -113,7 +113,10 @@ function ec_europa_preprocess_link(&$variables, $hook) {
   }
 
   // Add the class for the external links.
-  if (_ec_europa_url_is_external($variables['path']) && (!in_array('ecl-icon', $classes))) {
+  if (_ec_europa_url_is_external($variables['path'])
+      && (!in_array('ecl-icon', $classes))
+      && (!in_array('ecl-icon-social', $classes))
+  ) {
     $classes[] = 'ecl-link--external';
   }
 
