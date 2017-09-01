@@ -68,3 +68,12 @@ function ec_europa_preprocess_form_element__checkbox(&$variables, $hook) {
 
   $variables['label_tag_attributes_array'] = $label_tag_attributes_array;
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_form_element__textarea(&$variables, $hook) {
+  $variables['label']['#attributes'] = array(
+    'id' => array($variables['element']['#id'] . '_label'),
+  );
+}
