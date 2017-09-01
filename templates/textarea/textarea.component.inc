@@ -52,4 +52,6 @@ function ec_europa_preprocess_textarea(&$variables, $hook) {
   $variables['attributes_array']['role'] = 'textbox';
   $variables['attributes_array']['aria-multiline'] = 'true';
   $variables['attributes_array']['aria-labelledby'] = $variables['attributes_array']['id'] . '_label';
+
+  $variables['element']['#value'] = check_plain($variables['element']['#value']);
 }
