@@ -25,7 +25,7 @@ function ec_europa_atomium_theme_labels() {
 function ec_europa_atomium_definition_labels() {
   return array(
     'label' => 'Labels',
-    'description' => 'Labels.',
+    'description' => 'Labels for Call status in community profile.',
     'disable' => TRUE,
   );
 }
