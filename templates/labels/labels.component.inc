@@ -36,19 +36,16 @@ function ec_europa_atomium_definition_labels() {
 function ec_europa_atomium_definition_form_labels($form, &$form_state) {
   $form['element1'] = [
     '#theme' => 'labels',
-    '#title' => 'Upcoming',
     '#status' => 'upcoming',
   ];
 
   $form['element2'] = [
     '#theme' => 'labels',
-    '#title' => 'Open',
     '#status' => 'open',
   ];
 
   $form['element3'] = [
     '#theme' => 'labels',
-    '#title' => 'Close',
     '#status' => 'close',
   ];
   return $form;
