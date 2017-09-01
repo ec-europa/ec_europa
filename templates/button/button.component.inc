@@ -20,28 +20,23 @@ function ec_europa_atomium_definition_button() {
  */
 function ec_europa_atomium_definition_form_button($form, &$form_state) {
   $variants = array(
-    'Default' => 'ecl-button--default',
-    'Primary' => 'ecl-button--primary',
-    'Secondary' => 'ecl-button--secondary',
-    'Call to action' => 'ecl-button--call ecl-button--caret-right',
-    'Icon: Caret down' => 'ecl-button--default ecl-button--caret-down',
-    'Icon: Caret up' => 'ecl-button--default ecl-button--caret-up',
-    'Icon: Caret right' => 'ecl-button--default ecl-button--caret-right',
-    'Icon: Caret left' => 'ecl-button--default ecl-button--caret-left',
-    'Primary button, block-wide, with caret-down' => 'ecl-button--primary ecl-button--block ecl-button--caret-down',
+    'Default' => 'default',
+    'Primary' => 'primary',
+    'Secondary' => 'secondary',
+    'Call to action' => 'call',
+    'Icon: Caret down' => 'caret_down',
+    'Icon: Caret up' => 'caret_up',
+    'Icon: Caret right' => 'caret_right',
+    'Icon: Caret left' => 'caret_left',
+    'Primary button, block-wide, with caret-down' => 'primary_block',
   );
 
-  foreach ($variants as $value => $classes) {
+  foreach ($variants as $value => $variant) {
     $form['buttons'][] = array(
-      '#theme' => 'button',
+      '#theme' => array('button__' . $variant),
       '#button_type' => 'button',
       '#title' => $value,
       '#value' => $value,
-      '#attributes' => array(
-        'class' => array(
-          $classes,
-        ),
-      ),
       '#theme_wrappers' => array('form_element'),
     );
   }
@@ -58,6 +53,8 @@ function ec_europa_preprocess_button(&$variables, $hook) {
   }
   array_unshift($variables['attributes_array']['class'], 'ecl-button');
 
+  $variables['attributes_array']['class'][] = 'ecl-button';
+
   if (_ec_europa_array_find('ecl-button--', $variables['attributes_array']['class']) === FALSE) {
     $variables['attributes_array']['class'][] = 'ecl-button--default';
   }
@@ -67,25 +64,21 @@ function ec_europa_preprocess_button(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__primary(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
-    'ecl-button--primary',
-  );
+  $variables['attributes_array']['class'][] = 'ecl-button--primary';
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__secondary(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
-    'ecl-button--secondary',
-  );
+  $variables['attributes_array']['class'][] = 'ecl-button--secondary';
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__call(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['attributes_array']['class'][] = array(
     'ecl-button--call',
     'ecl-button--caret-right',
   );
@@ -95,7 +88,7 @@ function ec_europa_preprocess_button__call(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__timeline(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['attributes_array']['class'][] = array(
     'ecl-button--call',
     'ecl-button--caret-down',
   );
@@ -105,7 +98,7 @@ function ec_europa_preprocess_button__timeline(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__caret_up(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['attributes_array']['class'][] = array(
     'ecl-button--default',
     'ecl-button--caret-up',
   );
@@ -115,7 +108,7 @@ function ec_europa_preprocess_button__caret_up(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__caret_right(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['attributes_array']['class'][] = array(
     'ecl-button--default',
     'ecl-button--caret-right',
   );
@@ -125,7 +118,7 @@ function ec_europa_preprocess_button__caret_right(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__caret_down(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['attributes_array']['class'][] = array(
     'ecl-button--default',
     'ecl-button--caret-down',
   );
@@ -135,7 +128,7 @@ function ec_europa_preprocess_button__caret_down(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__caret_left(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['attributes_array']['class'][] = array(
     'ecl-button--default',
     'ecl-button--caret_left',
   );
@@ -145,7 +138,7 @@ function ec_europa_preprocess_button__caret_left(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__primary_block(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['attributes_array']['class'][] = array(
     'ecl-button--primary',
     'ecl-button--block',
     'ecl-button--caret-down',
