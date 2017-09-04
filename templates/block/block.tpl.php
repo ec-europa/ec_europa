@@ -44,7 +44,7 @@
  * @ingroup themeable
  */
 ?>
-<section<?php print render($attributes); ?>>
+<section<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
   <?php if (!empty($title)): ?>
     <h3<?php print $title_attributes; ?>><?php print render($title); ?></h3>
