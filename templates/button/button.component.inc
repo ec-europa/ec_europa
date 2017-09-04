@@ -24,11 +24,6 @@ function ec_europa_atomium_definition_form_button($form, &$form_state) {
     'Primary' => 'primary',
     'Secondary' => 'secondary',
     'Call to action' => 'call',
-    'Icon: Caret down' => 'caret_down',
-    'Icon: Caret up' => 'caret_up',
-    'Icon: Caret right' => 'caret_right',
-    'Icon: Caret left' => 'caret_left',
-    'Primary button, block-wide, with caret-down' => 'primary_block',
   );
 
   foreach ($variants as $value => $variant) {
@@ -81,66 +76,5 @@ function ec_europa_preprocess_button__call(&$variables, $hook) {
   $variables['attributes_array']['class'][] = array(
     'ecl-button--call',
     'ecl-button--caret-right',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__timeline(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-button--call',
-    'ecl-button--caret-down',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__caret_up(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-button--default',
-    'ecl-button--caret-up',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__caret_right(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-button--default',
-    'ecl-button--caret-right',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__caret_down(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-button--default',
-    'ecl-button--caret-down',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__caret_left(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-button--default',
-    'ecl-button--caret_left',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__primary_block(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-button--primary',
-    'ecl-button--block',
-    'ecl-button--caret-down',
   );
 }
