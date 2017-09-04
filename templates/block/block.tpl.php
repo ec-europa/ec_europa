@@ -52,7 +52,7 @@
   <?php print render($title_suffix); ?>
 
   <?php if (!empty($content)): ?>
-  <div class="block__content">
+  <div<?php print $content_attributes; ?>>
     <?php print render($content); ?>
   </div>
   <?php endif; ?>

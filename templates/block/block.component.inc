@@ -141,6 +141,7 @@ function ec_europa_preprocess_block(&$variables, $hook) {
     $variables['content']['#attributes']['class'][] = 'ecl-editor';
     $variables['content_attributes_array']['class'][] = 'ecl-editor';
   }
+  $variables['content_attributes_array']['class'][] = 'block__content';
 
   $variables['attributes_array']['class'] = drupal_array_merge_deep($variables['attributes_array']['class'], $variables['classes_array']);
   $variables['attributes_array']['class'][] = 'ecl-clearfix';
