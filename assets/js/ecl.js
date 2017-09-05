@@ -1,14 +1,17 @@
+/**
+ * @file
+ */
+
 var ECL = (function (exports) {
 'use strict';
 
-// Query helper
+// Query helper.
 var queryAll = function queryAll(selector) {
   var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
   return [].slice.call(context.querySelectorAll(selector));
 };
 
 // Heavily inspired by the accordion component from https://github.com/frend/frend.co
-
 /**
  * @param {object} options Object containing configuration overrides
  */
@@ -19,38 +22,40 @@ var accordions = function accordions() {
       _ref$headerSelector = _ref.headerSelector,
       headerSelector = _ref$headerSelector === undefined ? '.ecl-accordion__header' : _ref$headerSelector;
 
-  // SUPPORTS
-  if (!('querySelector' in document) || !('addEventListener' in window) || !document.documentElement.classList) return null;
+  // SUPPORTS.
+  if (!('querySelector' in document) || !('addEventListener' in window) || !document.documentElement.classList) {
+return null;
+  }
 
   // SETUP
-  // set accordion element NodeLists
+  // set accordion element NodeLists.
   var accordionContainers = queryAll(selector);
 
-  // ACTIONS
+  // ACTIONS.
   function hidePanel(target) {
-    // get panel
+    // Get panel.
     var activePanel = document.getElementById(target.getAttribute('aria-controls'));
 
     target.setAttribute('aria-expanded', 'false');
 
-    // toggle aria-hidden
+    // Toggle aria-hidden.
     activePanel.setAttribute('aria-hidden', 'true');
   }
 
   function showPanel(target) {
-    // get panel
+    // Get panel.
     var activePanel = document.getElementById(target.getAttribute('aria-controls'));
 
-    // set attributes on header
+    // Set attributes on header.
     target.setAttribute('tabindex', 0);
     target.setAttribute('aria-expanded', 'true');
 
-    // toggle aria-hidden and set height on panel
+    // Toggle aria-hidden and set height on panel.
     activePanel.setAttribute('aria-hidden', 'false');
   }
 
   function togglePanel(target) {
-    // close target panel if already active
+    // Close target panel if already active.
     if (target.getAttribute('aria-expanded') === 'true') {
       hidePanel(target);
       return;
@@ -60,35 +65,38 @@ var accordions = function accordions() {
   }
 
   function giveHeaderFocus(headerSet, i) {
-    // set active focus
+    // Set active focus.
     headerSet[i].focus();
   }
 
-  // EVENTS
+  // EVENTS.
   function eventHeaderClick(e) {
     togglePanel(e.currentTarget);
   }
 
   function eventHeaderKeydown(e) {
-    // collect header targets, and their prev/next
+    // Collect header targets, and their prev/next.
     var currentHeader = e.currentTarget;
     var isModifierKey = e.metaKey || e.altKey;
-    // get context of accordion container and its children
+    // Get context of accordion container and its children.
     var thisContainer = currentHeader.parentNode.parentNode;
     var theseHeaders = queryAll(headerSelector, thisContainer);
     var currentHeaderIndex = [].indexOf.call(theseHeaders, currentHeader);
 
-    // don't catch key events when ⌘ or Alt modifier is present
-    if (isModifierKey) return;
+    // don't catch key events when ⌘ or Alt modifier is present.
+    if (isModifierKey) {
+return;
+    }
 
-    // catch enter/space, left/right and up/down arrow key events
-    // if new panel show it, if next/prev move focus
+    // Catch enter/space, left/right and up/down arrow key events
+    // if new panel show it, if next/prev move focus.
     switch (e.keyCode) {
       case 13:
       case 32:
         togglePanel(currentHeader);
         e.preventDefault();
         break;
+
       case 37:
       case 38:
         {
@@ -96,6 +104,7 @@ var accordions = function accordions() {
           giveHeaderFocus(theseHeaders, previousHeaderIndex);
           e.preventDefault();
           break;
+
         }
       case 39:
       case 40:
@@ -104,40 +113,41 @@ var accordions = function accordions() {
           giveHeaderFocus(theseHeaders, nextHeaderIndex);
           e.preventDefault();
           break;
+
         }
       default:
         break;
     }
   }
 
-  // BIND EVENTS
+  // BIND EVENTS.
   function bindAccordionEvents(accordionContainer) {
     var accordionHeaders = queryAll(headerSelector, accordionContainer);
-    // bind all accordion header click and keydown events
+    // Bind all accordion header click and keydown events.
     accordionHeaders.forEach(function (accordionHeader) {
       accordionHeader.addEventListener('click', eventHeaderClick);
       accordionHeader.addEventListener('keydown', eventHeaderKeydown);
     });
   }
 
-  // UNBIND EVENTS
+  // UNBIND EVENTS.
   function unbindAccordionEvents(accordionContainer) {
     var accordionHeaders = queryAll(headerSelector, accordionContainer);
-    // unbind all accordion header click and keydown events
+    // Unbind all accordion header click and keydown events.
     accordionHeaders.forEach(function (accordionHeader) {
       accordionHeader.removeEventListener('click', eventHeaderClick);
       accordionHeader.removeEventListener('keydown', eventHeaderKeydown);
     });
   }
 
-  // DESTROY
+  // DESTROY.
   function destroy() {
     accordionContainers.forEach(function (accordionContainer) {
       unbindAccordionEvents(accordionContainer);
     });
   }
 
-  // INIT
+  // INIT.
   function init() {
     if (accordionContainers.length) {
       accordionContainers.forEach(function (accordionContainer) {
@@ -148,28 +158,29 @@ var accordions = function accordions() {
 
   init();
 
-  // REVEAL API
+  // REVEAL API.
   return {
     init: init,
     destroy: destroy
   };
 };
 
-// module exports
-
+// Module exports.
 /**
- * `Node#contains()` polyfill.
+ * The `Node#contains()` polyfill.
  *
  * See: http://compatibility.shwups-cms.ch/en/polyfills/?&id=1
  *
  * @param {Node} node
  * @param {Node} other
+ *
  * @return {Boolean}
+ *
  * @public
  */
 
 function contains(node, other) {
-  // eslint-disable-next-line no-bitwise
+  // eslint-disable-next-line no-bitwise.
   return node === other || !!(node.compareDocumentPosition(other) & 16);
 }
 
@@ -208,22 +219,22 @@ var toggleExpandable = function toggleExpandable(toggleElement) {
     return;
   }
 
-  // Get target element
+  // Get target element.
   var target = document.getElementById(toggleElement.getAttribute('aria-controls'));
 
-  // Exit if no target found
+  // Exit if no target found.
   if (!target) {
     return;
   }
 
-  // Get current status
+  // Get current status.
   var isExpanded = forceClose === true || toggleElement.getAttribute('aria-expanded') === 'true';
 
-  // Toggle the expandable/collapsible
+  // Toggle the expandable/collapsible.
   toggleElement.setAttribute('aria-expanded', !isExpanded);
   target.setAttribute('aria-hidden', isExpanded);
 
-  // Close siblings if requested
+  // Close siblings if requested.
   if (closeSiblings === true) {
     var siblingsArray = Array.prototype.slice.call(context.querySelectorAll(siblingsSelector)).filter(function (sibling) {
       return sibling !== toggleElement;
@@ -238,7 +249,7 @@ var toggleExpandable = function toggleExpandable(toggleElement) {
   }
 };
 
-// Helper method to automatically attach the event listener to all the expandables on page load
+// Helper method to automatically attach the event listener to all the expandables on page load.
 var initExpandables = function initExpandables() {
   var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '[aria-controls][aria-expanded]';
   var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
@@ -261,7 +272,7 @@ function dismissMessage(message) {
   message.setAttribute('aria-hidden', true);
 }
 
-// Helper method to automatically attach the event listener to all the messages on page load
+// Helper method to automatically attach the event listener to all the messages on page load.
 function initMessages() {
   var selectorClass = 'ecl-message__dismiss';
 
@@ -278,7 +289,7 @@ var megamenu = function megamenu(selector) {
   var megamenusArray = Array.prototype.slice.call(document.querySelectorAll(selector));
 
   megamenusArray.forEach(function (menu) {
-    // Get expandables within the menu
+    // Get expandables within the menu.
     var nodesArray = Array.prototype.slice.call(menu.querySelectorAll('[aria-controls][aria-expanded]'));
 
     nodesArray.forEach(function (node) {
@@ -322,7 +333,7 @@ function eclTables() {
     var colspanIndex = -1;
 
     // Build the array with all the "labels"
-    // Also get position of the eventual colspan element
+    // Also get position of the eventual colspan element.
     for (var i = 0; i < headers.length; i += 1) {
       if (headers[i].getAttribute('colspan')) {
         colspanIndex = i;
@@ -349,7 +360,8 @@ function eclTables() {
       for (var j = 0; j < cellPerRow; j += 1) {
         if (headerText[j] === '' || headerText[j] === '\xA0') {
           row.querySelectorAll('td')[j].setAttribute('class', 'ecl-table__heading');
-        } else {
+        }
+else {
           row.querySelectorAll('td')[j].setAttribute('data-th', headerText[j]);
         }
 
@@ -368,7 +380,6 @@ function eclTables() {
 }
 
 // Heavily inspired by the tab component from https://github.com/frend/frend.co
-
 /**
  * @param {object} options Object containing configuration overrides
  */
@@ -383,21 +394,23 @@ var tabs = function tabs() {
       _ref$tabelementsSelec = _ref.tabelementsSelector,
       tabelementsSelector = _ref$tabelementsSelec === undefined ? tablistSelector + ' li' : _ref$tabelementsSelec;
 
-  // SUPPORTS
-  if (!('querySelector' in document) || !('addEventListener' in window) || !document.documentElement.classList) return null;
+  // SUPPORTS.
+  if (!('querySelector' in document) || !('addEventListener' in window) || !document.documentElement.classList) {
+return null;
+  }
 
   // SETUP
-  // set tab element NodeList
+  // set tab element NodeList.
   var tabContainers = queryAll(selector);
 
-  // ACTIONS
+  // ACTIONS.
   function showTab(target) {
     var giveFocus = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
     var siblingTabs = queryAll(tablistSelector + ' li', target.parentElement.parentElement);
     var siblingTabpanels = queryAll(tabpanelSelector, target.parentElement.parentElement);
 
-    // set inactives
+    // Set inactives.
     siblingTabs.forEach(function (tab) {
       tab.setAttribute('tabindex', -1);
       tab.removeAttribute('aria-selected');
@@ -407,50 +420,56 @@ var tabs = function tabs() {
       tabpanel.setAttribute('aria-hidden', 'true');
     });
 
-    // set actives and focus
+    // Set actives and focus.
     target.setAttribute('tabindex', 0);
     target.setAttribute('aria-selected', 'true');
-    if (giveFocus) target.focus();
+    if (giveFocus) {
+target.focus();
+    }
     document.getElementById(target.getAttribute('aria-controls')).removeAttribute('aria-hidden');
   }
 
-  // EVENTS
+  // EVENTS.
   function eventTabClick(e) {
     showTab(e.currentTarget);
-    e.preventDefault(); // look into remove id/settimeout/reinstate id as an alternative to preventDefault
+    e.preventDefault(); // Look into remove id/settimeout/reinstate id as an alternative to preventDefault.
   }
 
   function eventTabKeydown(e) {
-    // collect tab targets, and their parents' prev/next (or first/last)
+    // Collect tab targets, and their parents' prev/next (or first/last)
     var currentTab = e.currentTarget;
     var previousTabItem = currentTab.previousElementSibling || currentTab.parentElement.lastElementChild;
     var nextTabItem = currentTab.nextElementSibling || currentTab.parentElement.firstElementChild;
 
-    // don't catch key events when ⌘ or Alt modifier is present
-    if (e.metaKey || e.altKey) return;
+    // don't catch key events when ⌘ or Alt modifier is present.
+    if (e.metaKey || e.altKey) {
+return;
+    }
 
-    // catch left/right and up/down arrow key events
-    // if new next/prev tab available, show it by passing tab anchor to showTab method
+    // Catch left/right and up/down arrow key events
+    // if new next/prev tab available, show it by passing tab anchor to showTab method.
     switch (e.keyCode) {
       case 37:
       case 38:
         showTab(previousTabItem);
         e.preventDefault();
         break;
+
       case 39:
       case 40:
         showTab(nextTabItem);
         e.preventDefault();
         break;
+
       default:
         break;
     }
   }
 
-  // BINDINGS
+  // BINDINGS.
   function bindTabsEvents(tabContainer) {
     var tabsElements = queryAll(tabelementsSelector, tabContainer);
-    // bind all tab click and keydown events
+    // Bind all tab click and keydown events.
     tabsElements.forEach(function (tab) {
       tab.addEventListener('click', eventTabClick);
       tab.addEventListener('keydown', eventTabKeydown);
@@ -459,37 +478,35 @@ var tabs = function tabs() {
 
   function unbindTabsEvents(tabContainer) {
     var tabsElements = queryAll(tabelementsSelector, tabContainer);
-    // unbind all tab click and keydown events
+    // Unbind all tab click and keydown events.
     tabsElements.forEach(function (tab) {
       tab.removeEventListener('click', eventTabClick);
       tab.removeEventListener('keydown', eventTabKeydown);
     });
   }
 
-  // DESTROY
+  // DESTROY.
   function destroy() {
     tabContainers.forEach(unbindTabsEvents);
   }
 
-  // INIT
+  // INIT.
   function init() {
     tabContainers.forEach(bindTabsEvents);
   }
 
-  // Automatically init
+  // Automatically init.
   init();
 
-  // REVEAL API
+  // REVEAL API.
   return {
     init: init,
     destroy: destroy
   };
 };
 
-// module exports
-
+// Module exports
 // Taking modules from ECL.
-
 exports.accordions = accordions;
 exports.dropdown = dropdown;
 exports.toggleExpandable = toggleExpandable;

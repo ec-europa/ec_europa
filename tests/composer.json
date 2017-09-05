@@ -48,5 +48,10 @@
       "web/sites/default/settings.php",
       "web/sites/default/files"
     ]
+  },
+  "autoload": {
+    "PSR-0": {
+      "EcEuropa\\ec_europa\\": "features/bootstrap/"
+    }
   }
 }

@@ -10,7 +10,6 @@
  */
 function ec_europa_preprocess_views_view_grid(&$variables, $hook) {
   $view = $variables['view'];
-  $result = $view->result;
   $options = $view->style_plugin->options;
   $handler = $view->style_plugin;
   $default_row_class = isset($options['default_row_class']) ? $options['default_row_class'] : TRUE;
@@ -91,7 +90,7 @@ function ec_europa_preprocess_views_view_grid(&$variables, $hook) {
         $row_classes[] = 'row-last';
       }
     }
-    $vars['row_classes'][$row_number] = implode(' ', $row_classes);
+    $variables['row_classes'][$row_number] = implode(' ', $row_classes);
     foreach ($rows[$row_number] as $column_number => $item) {
       $column_classes = array('');
       if ($default_row_class) {
@@ -108,22 +107,22 @@ function ec_europa_preprocess_views_view_grid(&$variables, $hook) {
       if (isset($row_indexes[$row_number][$column_number]) && $column_class = $view->style_plugin->get_row_class($row_indexes[$row_number][$column_number])) {
         $column_classes[] = $column_class;
       }
-      $vars['column_classes'][$row_number][$column_number] = implode(' ', $column_classes);
+      $variables['column_classes'][$row_number][$column_number] = implode(' ', $column_classes);
     }
   }
-  $vars['rows'] = $rows;
-  $vars['class'] = 'views-view-grid cols-' . $columns;
+  $variables['rows'] = $rows;
+  $variables['class'] = 'views-view-grid cols-' . $columns;
 
   // Add the summary to the list if set.
   if (!empty($handler->options['summary'])) {
-    $vars['attributes_array'] = array('summary' => filter_xss_admin($handler->options['summary']));
+    $variables['attributes_array'] = array('summary' => filter_xss_admin($handler->options['summary']));
   }
 
   // Add the caption to the list if set.
   if (!empty($handler->options['caption'])) {
-    $vars['caption'] = filter_xss_admin($handler->options['caption']);
+    $variables['caption'] = filter_xss_admin($handler->options['caption']);
   }
   else {
-    $vars['caption'] = '';
+    $variables['caption'] = '';
   }
 }

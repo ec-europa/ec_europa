@@ -1,5 +1,7 @@
 <?php
 
+namespace EcEuropa\ec_europa;
+
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 
 /**

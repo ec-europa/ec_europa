@@ -1,3 +1,7 @@
+/**
+ * @file
+ */
+
 const path = require("path");
 const source_folder = __dirname + "/node_modules/@ec-europa";
 
