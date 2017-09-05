@@ -52,8 +52,10 @@ function ec_europa_atomium_definition_easy_breadcrumb() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_easy_breadcrumb(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-breadcrumbs';
-  $variables['attributes_array']['class'][] = 'ecl-container';
+  $variables['atomium']['attributes']['wrapper']->append('class', array(
+    'ecl-breadcrumbs',
+    'ecl-container',
+  ));
 
   $variables['here'] = t('You are here');
 

@@ -6,9 +6,9 @@
  */
 ?>
 
-<div<?php print $attributes; ?>>
+<div<?php print $atomium['attributes']['wrapper']; ?>>
   <?php print render($title); ?>
-  <div<?php print $content_attributes; ?>>
+  <div<?php print $atomium['attributes']['content']; ?>>
     <?php print render($body); ?>
   </div>
 </div>

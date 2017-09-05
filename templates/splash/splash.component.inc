@@ -62,5 +62,5 @@ function ec_europa_preprocess_splash(&$variables, $hook) {
     );
   }
 
-  $variables['attributes_array']['class'][] = 'ecl-row';
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-row');
 }

@@ -16,6 +16,7 @@ function ec_europa_atomium_theme_lang_select_site() {
         'url' => NULL,
         'code' => NULL,
         'label' => NULL,
+        'attributes' => array(),
       ),
     ),
   );
@@ -33,6 +34,7 @@ function ec_europa_atomium_definition_lang_select_site() {
       'url' => '#',
       'code' => isset($language->prefix) ? $language->prefix : $language->language,
       'label' => $language->native,
+      'attributes' => array(),
     ),
   );
 }
@@ -54,6 +56,6 @@ function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
     )
   );
 
-  $variables['attributes_array'] += array('class' => array());
-  $variables['attributes_array']['class'][] = 'ecl-lang-select-sites';
+  $variables['atomium']['attributes']['wrapper']->merge($variables['attributes']);
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-lang-select-sites');
 }

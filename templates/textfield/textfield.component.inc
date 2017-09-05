@@ -63,8 +63,8 @@ function ec_europa_preprocess_textfield(&$variables, $hook) {
  *
  * @see ec_europa_preprocess_textfield();
  */
-function ec_europa_preprocess_textfield__nexteuropa_europa_search_search_form__querytext(&$variables, $hook) {
+function ec_europa_preprocess_textfield__form__nexteuropa_europa_search_search_form__querytext(&$variables, $hook) {
   $classes = array('ecl-search-form__textfield');
   _ec_europa_form_set_css_class($variables, $classes);
-  $variables['attributes_array']['size'] = 30;
+  $variables['atomium']['attributes']['element']->setAttribute('size', 30);
 }

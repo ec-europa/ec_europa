@@ -6,7 +6,7 @@
  */
 ?>
 
-<div<?php print $attributes; ?>>
-  <?php print render($small_description); ?>
+<div<?php print $atomium['attributes']['wrapper']; ?>>
+  <p<?php print $atomium['attributes']['description']; ?>><?php print render($small_description); ?></p>
   <?php print render($element['#children']); ?>
 </div>

@@ -294,5 +294,5 @@ function ec_europa_atomium_definition_table() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_table(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-table';
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-table');
 }

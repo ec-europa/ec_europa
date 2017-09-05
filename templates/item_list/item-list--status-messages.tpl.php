@@ -11,7 +11,7 @@
 
 <?php if (!empty($variables['items'])): ?>
   <?php if ($type): ?>
-    <<?php print $type; ?><?php print $attributes; ?>>
+    <<?php print $type; ?><?php print $atomium['attributes']['list']; ?>>
   <?php endif; ?>
   <?php foreach ($variables['items'] as $item): ?>
     <?php print render($item); ?>

@@ -92,8 +92,10 @@ function ec_europa_atomium_definition_form_link($form, &$form_state) {
       '#theme' => 'link',
       '#title' => 'Link for ' . $item['text'],
       '#text' => $item['text'],
-      '#attributes_array' => array(
-        'class' => $item['class'],
+      '#options' => array(
+        'attributes' => array(
+          'class' => $item['class']
+        ),
       ),
       '#theme_wrappers' => array('form_element'),
     );
@@ -106,22 +108,30 @@ function ec_europa_atomium_definition_form_link($form, &$form_state) {
  * Implements hook_preprocess_HOOK().
  */
 function ec_europa_preprocess_link(&$variables, $hook) {
-  $classes = &$variables['attributes_array']['class'];
+  $variables['atomium']['attributes']['a'];
 
-  if (_ec_europa_array_find('ecl-', $classes)) {
-    $classes[] = 'ecl-link';
+  if ($variables['atomium']['attributes']['a']->contains('class', 'ecl-')) {
+    $variables['atomium']['attributes']['a']->append('class', 'ecl-link');
   }
 
   // Add the class for the external links.
   if (_ec_europa_url_is_external($variables['path'])
-      && (!in_array('ecl-icon', $classes))
-      && (!in_array('ecl-icon-social', $classes))
+      && (!$variables['atomium']['attributes']['a']->exists('class', 'ecl-icon'))
+      && (!$variables['atomium']['attributes']['a']->exists('class', 'ecl-icon-social'))
   ) {
-    $classes[] = 'ecl-link--external';
+    $variables['atomium']['attributes']['a']->append('class', 'ecl-link--external');
   }
 
+  if (isset($variables['options']['attributes'])) {
+    $variables['atomium']['attributes']['a']->merge($variables['options']['attributes']);
+  }
+
+  $variables['atomium']['attributes']['a']->append('href', url($variables['path'], $variables['options']));
+
   // Add the span tag for the icon.
-  if (in_array('ecl-icon', $classes)) {
+  /*
+   * @todo: do this.
+  if ($variables['atomium']['attributes']['a']->exists('class', 'ecl-icon')) {
     $icon_classes = array_filter($classes, function ($class, $key) use (&$classes) {
       if (FALSE !== stripos($class, 'ecl-icon') || FALSE !== stripos($class, '__social-icon')) {
         unset($classes[$key]);
@@ -138,112 +148,113 @@ function ec_europa_preprocess_link(&$variables, $hook) {
       ),
     );
   }
+  */
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__default(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--default',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__primary(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--primary',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__secondary(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--secondary',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__call(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--call',
     'ecl-button--caret-right',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__timeline(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--call',
     'ecl-button--caret-down',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__caret_up(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--default',
     'ecl-button--caret-up',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__caret_right(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--default',
     'ecl-button--caret-right',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__caret_down(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--default',
     'ecl-button--caret-down',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__caret_left(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--default',
     'ecl-button--caret_left',
-  );
+  ));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__primary_block(&$variables, $hook) {
-  $variables['attributes_array']['class'] = array(
+  $variables['atomium']['attributes']['a']->append('class', array(
     'ecl-button',
     'ecl-button--primary',
     'ecl-button--block',
     'ecl-button--caret-down',
-  );
+  ));
 }

@@ -9,6 +9,8 @@
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_page(&$variables, $hook) {
+  unset($variables['page']['content']['system_main']['#theme_wrappers']);
+
   // Small fix to maxe the link to the start page use the alias with language.
   $variables['front_page'] = url('<front>');
 
@@ -68,7 +70,7 @@ function ec_europa_preprocess_page(&$variables, $hook) {
 
   $variables['site_switcher'] = array(
     '#theme' => array('site_switcher'),
-    '#attributes_array' => array(
+    '#attributes' => array(
       'class' => array('ecl-site-switcher--header'),
     ),
   );
@@ -105,7 +107,7 @@ function ec_europa_preprocess_page(&$variables, $hook) {
     $variables['logo'] = array(
       '#theme' => array('logo'),
       '#title' => t('Home - European Commission'),
-      '#attributes_array' => array(
+      '#attributes' => array(
         'class' => array('ecl-logo--big', 'ecl-u-mh-auto'),
       ),
     );

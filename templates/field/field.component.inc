@@ -37,7 +37,7 @@ function ec_europa_preprocess_field(&$variables, $hook) {
         && $element['#language'] <> LANGUAGE_NONE
         && $element['#language'] <> $content_langcode
       ) {
-        $variables['attributes_array']['lang'] = $element['#language'];
+        $variables['attributes']['lang'] = $element['#language'];
       }
     }
 

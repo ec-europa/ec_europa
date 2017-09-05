@@ -44,4 +44,6 @@
  * @ingroup themeable
  */
 ?>
-<?php print render($content); ?>
+<select class="ecl-select <?php print $classes; ?>" id="<?php print $block_html_id; ?>" name="<?php print $block_html_id; ?>"<?php print $attributes; ?> onchange="location = this.options[this.selectedIndex].value;">
+  <?php print $content; ?>
+</select>

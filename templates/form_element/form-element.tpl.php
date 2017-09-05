@@ -6,7 +6,7 @@
  */
 ?>
 
-<div<?php print $attributes; ?>>
+<div<?php print $atomium['attributes']['wrapper']; ?>>
 
   <?php if ('before' == $element['#title_display'] || 'invisible' == $element['#title_display']): ?>
     <?php print render($label); ?>

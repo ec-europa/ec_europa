@@ -42,8 +42,7 @@ function ec_europa_atomium_definition_form_expandable($form, &$form_state) {
 function ec_europa_preprocess_expandable(&$variables, $hook) {
   $id = drupal_html_id($variables['id']);
 
-  $variables['content_attributes_array'] = array(
-    'class' => array(),
+  $variables['atomium']['attributes']['content'] = array(
     'id' => $id,
     'aria-hidden' => 'true',
     'aria-labelledby' => $id . '-button',
@@ -53,15 +52,17 @@ function ec_europa_preprocess_expandable(&$variables, $hook) {
     '#theme' => array('link__' . $variables['theme_hook_original']),
     '#text' => $variables['title'],
     '#path' => '#',
-    '#attributes_array' => array(
-      'id' => $id . '-button',
-      'class' => array(
-        'ecl-expandable__button',
-        'ecl-link',
-      ),
-      'aria-controls' => $id,
-      'aria-expanded' => 'false',
-      'onClick' => 'return false;',
+    '#options' => array(
+      'attributes' => array(
+        'id' => $id . '-button',
+        'class' => array(
+          'ecl-expandable__button',
+          'ecl-link',
+        ),
+        'aria-controls' => $id,
+        'aria-expanded' => 'false',
+        'onClick' => 'return false;',
+      )
     ),
   );
 

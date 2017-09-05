@@ -6,7 +6,7 @@
  */
 ?>
 
-<div<?php print $attributes; ?>>
+<div<?php print $atomium['attributes']['wrapper']; ?>>
   <?php if (!empty($type)): ?>
     <span class="ecl-meta__item ecl-u-f-up"><?php print render($type); ?></span>
   <?php endif; ?>

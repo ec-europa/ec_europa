@@ -48,10 +48,10 @@ function ec_europa_atomium_definition_form_textarea($form, &$form_state) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_textarea(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-textarea';
-  $variables['attributes_array']['role'] = 'textbox';
-  $variables['attributes_array']['aria-multiline'] = 'true';
-  $variables['attributes_array']['aria-labelledby'] = $variables['attributes_array']['id'] . '_label';
-
+  $variables['atomium']['attributes']['element']->merge($variables['element']['#attributes']);
+  $variables['atomium']['attributes']['element']->append('class', 'ecl-textarea');
+  $variables['atomium']['attributes']['element']->setAttribute('role', 'textbox');
+  $variables['atomium']['attributes']['element']->setAttribute('aria-multiline', 'true');
+  $variables['atomium']['attributes']['element']->setAttribute('aria-labelledby', $variables['element']['#id'] . '_label');
   $variables['element']['#value'] = check_plain($variables['element']['#value']);
 }
