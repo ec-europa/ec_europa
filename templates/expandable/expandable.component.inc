@@ -6,26 +6,6 @@
  */
 
 /**
- * Implements hook_atomium_definition_form_hook().
- */
-function ec_europa_atomium_definition_form_expandable($form, &$form_state) {
-  $form['element1'] = array(
-    '#theme' => 'expandable',
-    '#title' => 'Expandable with a button',
-    '#body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
-    '#button' => TRUE,
-  );
-
-  $form['element2'] = array(
-    '#theme' => 'expandable',
-    '#title' => 'Expandable with a link',
-    '#body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
-  );
-
-  return $form;
-}
-
-/**
  * Implements hook_atomium_definition_hook().
  */
 function ec_europa_atomium_definition_expandable() {
@@ -34,6 +14,26 @@ function ec_europa_atomium_definition_expandable() {
     'description' => 'Expandable.',
     'disable' => TRUE,
   );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_expandable($form, &$form_state) {
+  $form['element'][] = array(
+    '#theme' => 'expandable',
+    '#title' => 'Expandable with a button',
+    '#body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
+    '#button' => TRUE,
+  );
+
+  $form['element'][] = array(
+    '#theme' => 'expandable',
+    '#title' => 'Expandable with a link',
+    '#body' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>',
+  );
+
+  return $form;
 }
 
 /**
