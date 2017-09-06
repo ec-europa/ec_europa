@@ -23,42 +23,6 @@ function ec_europa_atomium_theme_link() {
 }
 
 /**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_link() {
-  return array(
-    'label' => 'Link',
-    'description' => 'Link template.',
-  );
-}
-
-/**
- * Implements hook_atomium_definition_form_hook().
- */
-function ec_europa_atomium_definition_form_link($form, &$form_state) {
-  $variants = array(
-    'Default' => 'default',
-    'External' => 'external',
-    'Standalone' => 'standalone',
-    'Inverted' => 'inverted',
-    'All' => 'all',
-    'More' => 'more',
-  );
-
-  foreach ($variants as $value => $variant) {
-    $form['links'][] = array(
-      '#theme' => array('link__' . $variant),
-      '#title' => t('Link type: @type', array('@type' => $value)),
-      '#text' => $value,
-      '#path' => current_path(),
-      '#theme_wrappers' => array('form_element'),
-    );
-  }
-
-  return $form;
-}
-
-/**
  * Implements hook_preprocess_HOOK().
  */
 function ec_europa_preprocess_link(&$variables, $hook) {
@@ -96,45 +60,107 @@ function ec_europa_preprocess_link(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_link__external(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-link--external',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_link__standalone(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-link--standalone',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_link__inverted(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
-    'ecl-link--inverted',
-    'ecl-u-bg-shade',
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_link__all(&$variables, $hook) {
+function ec_europa_preprocess_link__default(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
-    'ecl-link--all',
+    'ecl-button',
+    'ecl-button--default',
   );
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_link__more(&$variables, $hook) {
+function ec_europa_preprocess_link__primary(&$variables, $hook) {
   $variables['attributes_array']['class'] = array(
-    'ecl-link--more',
+    'ecl-button',
+    'ecl-button--primary',
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__secondary(&$variables, $hook) {
+  $variables['attributes_array']['class'] = array(
+    'ecl-button',
+    'ecl-button--secondary',
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__call(&$variables, $hook) {
+  $variables['attributes_array']['class'] = array(
+    'ecl-button',
+    'ecl-button--call',
+    'ecl-button--caret-right',
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__timeline(&$variables, $hook) {
+  $variables['attributes_array']['class'] = array(
+    'ecl-button',
+    'ecl-button--call',
+    'ecl-button--caret-down',
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__caret_up(&$variables, $hook) {
+  $variables['attributes_array']['class'] = array(
+    'ecl-button',
+    'ecl-button--default',
+    'ecl-button--caret-up',
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__caret_right(&$variables, $hook) {
+  $variables['attributes_array']['class'] = array(
+    'ecl-button',
+    'ecl-button--default',
+    'ecl-button--caret-right',
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__caret_down(&$variables, $hook) {
+  $variables['attributes_array']['class'] = array(
+    'ecl-button',
+    'ecl-button--default',
+    'ecl-button--caret-down',
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__caret_left(&$variables, $hook) {
+  $variables['attributes_array']['class'] = array(
+    'ecl-button',
+    'ecl-button--default',
+    'ecl-button--caret_left',
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__primary_block(&$variables, $hook) {
+  $variables['attributes_array']['class'] = array(
+    'ecl-button',
+    'ecl-button--primary',
+    'ecl-button--block',
+    'ecl-button--caret-down',
   );
 }
