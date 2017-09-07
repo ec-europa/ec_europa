@@ -103,6 +103,7 @@ function ec_europa_preprocess_easy_breadcrumb(&$variables, $hook) {
   }
 
   $variables[$hook] = $html;
+  $variables['attributes_array']['aria-label'] = 'breadcrumbs';
 }
 
 /**

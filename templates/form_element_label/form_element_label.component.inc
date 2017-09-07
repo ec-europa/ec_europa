@@ -24,3 +24,41 @@ function ec_europa_preprocess_form_element_label(&$variables, $hook) {
 function ec_europa_preprocess_form_element_label__form_element__textarea(&$variables, $hook) {
   $variables['attributes_array']['class'] = array_diff($variables['attributes_array']['class'], array('ecl-form-label'));
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_form_element_label__form_element__checkbox(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = 'ecl-checkbox__label';
+
+  if (isset($variables['element']['element']) && 'invisible' == $variables['element']['element']['#title_display']) {
+    $variables['attributes_array']['class'] = array_diff(
+      $variables['attributes_array']['class'],
+      array('element-invisible')
+    );
+    $variables['form_element_label'] = array(
+      'title' => NULL,
+      'required' => NULL,
+    );
+  }
+  unset($variables['attributes_array']['for']);
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_form_element_label__form_element__radio(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = 'ecl-radio__label';
+
+  if (isset($variables['element']['element']) && 'invisible' == $variables['element']['element']['#title_display']) {
+    $variables['attributes_array']['class'] = array_diff(
+      $variables['attributes_array']['class'],
+      array('element-invisible')
+    );
+    $variables['form_element_label'] = array(
+      'title' => NULL,
+      'required' => NULL,
+    );
+  }
+  unset($variables['attributes_array']['for']);
+}

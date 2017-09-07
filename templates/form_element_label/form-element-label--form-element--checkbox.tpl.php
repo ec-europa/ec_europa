@@ -6,7 +6,7 @@
  */
 ?>
 
-<span class="ecl-checkbox__label">
+<span<?php print $attributes; ?>>
   <?php print render($form_element_label['title']); ?>
   <?php print render($form_element_label['required']); ?>
 </span>

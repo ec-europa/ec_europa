@@ -44,7 +44,7 @@
  * @ingroup themeable
  */
 ?>
-<section<?php print render($attributes); ?>>
+<section<?php print $attributes; ?>>
   <?php if (!empty($content)): ?>
   <div class="block__content">
     <?php print render($content); ?>

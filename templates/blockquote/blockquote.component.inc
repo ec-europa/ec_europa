@@ -6,35 +6,6 @@
  */
 
 /**
- * Implements hook_atomium_theme_hook().
- */
-function ec_europa_atomium_theme_blockquote() {
-  return array(
-    'blockquote' => array(
-      'variables' => array(
-        'body' => NULL,
-        'author' => NULL,
-      ),
-      'template' => 'blockquote',
-    ),
-  );
-}
-
-/**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_blockquote() {
-  return array(
-    'label' => 'Blockquote',
-    'description' => 'Blockquote.',
-    'preview' => array(
-      'body' => 'Blockquote body.',
-      'author' => 'Blockquote author.',
-    ),
-  );
-}
-
-/**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_blockquote(&$variables, $hook) {

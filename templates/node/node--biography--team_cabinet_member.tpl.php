@@ -9,7 +9,7 @@
 <div class="listing__top">
   <?php print render($content['field_biography_tagline']); ?>
   <?php print render($title_prefix); ?>
-  <h3> <?php print render($title); ?> </h3>
+  <h3><?php print render($title); ?></h3>
   <?php print render($title_suffix); ?>
   <?php print render($content['field_biography_portrait']); ?>
   <div class="listing__top-footer">

@@ -24,6 +24,9 @@ function ec_europa_preprocess_form_element__radio(&$variables, $hook) {
   $label_tag_attributes_array += ['class' => []];
   $label_tag_attributes_array['class'][] = 'ecl-form-label';
   $label_tag_attributes_array['class'][] = 'ecl-radio';
+  if (isset($element['#id'])) {
+    $label_tag_attributes_array['for'] = $element['#id'];
+  }
 
   // Unlike text field and textarea, the "error" class is added on the label;
   // not on the element itself.
@@ -54,6 +57,9 @@ function ec_europa_preprocess_form_element__checkbox(&$variables, $hook) {
   $label_tag_attributes_array += array('class' => array());
   $label_tag_attributes_array['class'][] = 'ecl-form-label';
   $label_tag_attributes_array['class'][] = 'ecl-checkbox';
+  if (isset($element['#id'])) {
+    $label_tag_attributes_array['for'] = $element['#id'];
+  }
 
   // Unlike text field and textarea, the "error" class is added on the label;
   // not on the element itself.
