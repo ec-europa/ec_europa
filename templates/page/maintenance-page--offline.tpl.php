@@ -65,7 +65,7 @@
   <header class="ecl-site-header" role="banner">
     <div class="ecl-container ecl-site-header__container">
       <a class="ecl-logo ecl-site-header__logo" href="https://ec.europa.eu/info/index" title="Home - European Commission">
-        <span class="ecl-sr-only">Home - European Commission</span>
+        <span class="ecl-u-sr-only">Home - European Commission</span>
       </a>
       <section class="ecl-site-header__top-bar" aria-label="Site tools">
         <div class="ecl-lang-select-sites">
@@ -79,7 +79,7 @@
         </div>
         <form accept-charset="UTF-8" action="http://ec.europa.eu/geninfo/query/resultaction.jsp" class="ecl-search-form search-form" id="nexteuropa-europa-search-search-form" method="get">
           <label class="ecl-search-form__textfield-wrapper">
-            <span class="ecl-sr-only">Search this website</span>
+            <span class="ecl-u-sr-only">Search this website</span>
             <input class="ecl-search-form__textfield ecl-text-input form-text" id="edit-querytext" maxlength="128" name="QueryText" placeholder="Search this website" size="30" type="text"/></label>
           <button class="btn-search ecl-button ecl-button--form ecl-search-form__button form-submit" id="edit-europa-search-submit" name="op" tabindex="-1" type="submit" value="Search">Search</button>
           <input name="swlang" type="hidden" value="en"/>
@@ -90,7 +90,7 @@
   </header>
   <div class="ecl-page-header">
     <nav class="ecl-breadcrumbs ecl-container" aria-label="breadcrumbs">
-      <span class="ecl-sr-only">You are here:</span>
+      <span class="ecl-u-sr-only">You are here:</span>
       <ol class="ecl-breadcrumbs__segments-wrapper">
         <li class="ecl-breadcrumbs__segment ecl-breadcrumbs__segment--first">
           <a href="http://ec.europa.eu/" class="ecl-breadcrumbs__link">European Commission</a>

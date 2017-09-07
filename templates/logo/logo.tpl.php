@@ -6,5 +6,5 @@
  */
 ?>
 <a<?php print $attributes; ?>>
-    <span class="ecl-sr-only"><?php print $title; ?></span>
+    <span class="ecl-u-sr-only"><?php print $title; ?></span>
 </a>

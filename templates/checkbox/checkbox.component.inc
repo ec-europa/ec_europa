@@ -50,6 +50,6 @@ function ec_europa_atomium_definition_form_checkbox($form, &$form_state) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_checkbox(&$variables, $hook) {
-  $classes = array('ecl-checkbox__input', 'ecl-sr-only');
+  $classes = array('ecl-checkbox__input', 'ecl-u-sr-only');
   _ec_europa_form_set_css_class($variables, $classes);
 }
