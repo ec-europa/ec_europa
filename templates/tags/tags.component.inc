@@ -12,8 +12,9 @@ function ec_europa_atomium_theme_tags() {
   return array(
     'tags' => array(
       'variables' => array(
-        'label' => NULL,
-        'items' => NULL,
+        'modifier' => '',
+        'label' => '',
+        'tags' => array(),
       ),
       'template' => 'tags',
     ),
@@ -28,17 +29,23 @@ function ec_europa_atomium_definition_tags() {
     'label' => 'Tags',
     'description' => 'Tags template.',
     'preview' => array(
-      'label' => 'My term references',
-      'items' => array(
+      'label' => 'Default tags',
+      'tags' => array(
         array(
-          '#theme' => 'link__tag',
-          '#text' => 'sport',
-          '#path' => '#',
+          'value' => 'apple',
+          'href' => '#',
         ),
         array(
-          '#theme' => 'link__tag',
-          '#text' => 'economics',
-          '#path' => '#',
+          'value' => 'orange',
+          'href' => '#',
+        ),
+        array(
+          'value' => 'lime',
+          'href' => '#',
+        ),
+        array(
+          'value' => 'strawberry',
+          'href' => '#',
         ),
       ),
     ),
@@ -49,7 +56,35 @@ function ec_europa_atomium_definition_tags() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_tags(&$variables, $hook) {
-  // @todo: For consistency, shouldn't it be: ecl-tags ?
   $variables['attributes_array']['class'][] = 'ecl-tag';
+  if (!empty($variables['modifier'])) {
+    $variables['attributes_array']['class'][] = 'ecl-tag--' . $variables['modifier'];
+    switch ($variables['modifier']) {
+      case 'facet-close':
+        foreach ($variables['tags'] as $key => $tag) {
+          $variables['tags'][$key] = array(
+            '#theme' => 'button__' . $hook,
+            '#value' => $tag['value'],
+          );
+        }
+      case 'facet':
+        foreach ($variables['tags'] as $key => $tag) {
+          $variables['tags'][$key] = array(
+            '#theme' => 'html_tag',
+            '#tag' => 'span',
+            '#value' => $tag['value'],
+          );
+        }
+    }
+  }
+  else {
+    foreach ($variables['tags'] as $key => $tag) {
+      $variables['tags'][$key] = array(
+        '#theme' => 'link__' . $hook,
+        '#text' => $tag['value'],
+        '#path' => $tag['href'],
+      );
+    };
+  }
   $variables['title_attributes_array']['class'][] = 'ecl-tag__label';
 }
