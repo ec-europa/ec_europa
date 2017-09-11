@@ -4,10 +4,9 @@
  */
 
 (function ($) {
-  Drupal.behaviors.status_messages = {
+  Drupal.behaviors.ecEuropaStatusMessages = {
     attach: function (context) {
       ECL.initMessages();
     }
   };
 })(jQuery);
-

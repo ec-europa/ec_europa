@@ -52,48 +52,65 @@ function _ec_europa_term_heading($element) {
 /**
  * Sets a form element's class attribute.
  *
- * Adds the 'ecl-text-input--has-error' class as needed.
+ * Adds the css classes as needed.
  *
- * @param array $element
- *   The form element.
+ * @param array $variables
+ *   The $variables related to the form element theme.
  * @param array $classes
- *   The basic classes that are specific to the form element.
+ *   The array of class names to add to the element by default.
+ * @param array $error_classes
+ *   The array of class names to add to the element in case of
+ *   validation errors.
+ *
+ * @return array
+ *   The modified $variables array.
  */
-function _ec_europa_form_set_css_class(array &$element, array $classes = array()) {
+function _ec_europa_form_set_css_class(array &$variables, array $classes = array(), array $error_classes = array()) {
+  $variables += array('attributes_array' => array());
+  $variables['attributes_array'] += array('class' => array());
   if (!empty($classes)) {
-    if (!isset($element['#attributes']['class'])) {
-      $element['#attributes']['class'] = array();
-    }
-    $element['#attributes']['class'] = array_merge($element['#attributes']['class'], $classes);
+    $variables['attributes_array']['class'] = drupal_array_merge_deep($variables['attributes_array']['class'], $classes);
   }
 
   // Determines if the error class must added.
-  // The logic comes from the Drupal function: "_form_set_class".
-  if (isset($element['#parents']) && form_get_error($element) !== NULL && !empty($element['#validated'])) {
-    $element['#attributes']['class'][] = 'ecl-text-input--has-error';
+  // The logic comes from the Drupal function, see _form_set_class().
+  if (isset($variables['element'])) {
+    $element = $variables['element'];
+    if (!empty($error_classes) && _ec_europa_has_form_element_errors($element)) {
+      $variables['attributes_array']['class'][] = drupal_array_merge_deep($variables['attributes_array']['class'], $error_classes);
+    }
   }
+
+  return $variables;
 }
 
 /**
- * Returns HTML for a dropdown.
+ * Determines if validation errors exists on a form element.
+ *
+ * This method works only with elements processed by the theme mechanism.
+ *
+ * @param array $form_element
+ *   The form element to test as defined in the $variable parameter of a
+ *   preprocess function.
+ *
+ * @return bool
+ *   True if validation errors exist; otherwise FALSE.
  */
-function ec_europa_dropdown(array $variables) {
-  $items = $variables['items'];
-  $links = array();
+function _ec_europa_has_form_element_errors(array $form_element) {
+  return isset($form_element['#parents']) && form_get_error($form_element) !== NULL && !empty($form_element['#validated']);
+}
 
-  $select = array(
-    '#title' => t('Create content'),
-    '#type' => 'select',
-    '#description' => t('Create content'),
-    '#options' => array('#' => t('Create content')),
-  );
+/**
+ * Custom implementation of tableselect.
+ */
+function ec_europa_tableselect($variables) {
+  // Add a custom JS file that overrides a specific JS function.
+  drupal_add_js(path_to_theme() . '/templates/table/tableselect.js', array('group' => JS_THEME));
 
-  foreach ($items as $key => $value) {
-    $links[$value] = $key;
-  }
-  $select['#options'] = array_merge($select['#options'], array_map('t', $links));
-
-  return form_select_options($select);
+  // Use the default implementation to render the table.
+  // We cannot use theme('tableselect',...) or else we will end up in a loop.
+  // Better solutions are welcome.
+  return theme_tableselect($variables);
 }
 
 /**

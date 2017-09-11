@@ -9,6 +9,16 @@
  * Implements hook_atomium_definition_hook().
  */
 function ec_europa_atomium_definition_select() {
+  return array(
+    'label' => 'Select',
+    'description' => 'Select.',
+  );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_select($form, &$form_state) {
   $options = array(
     'item1' => 'Item 1',
     'item2' => 'Item 2',
@@ -20,43 +30,39 @@ function ec_europa_atomium_definition_select() {
     ),
   );
 
-  return array(
-    'label' => 'Select',
-    'description' => 'Default select list.',
-    'preview' => array(
-      'element1' => array(
-        'title' => 'Select',
-        'description' => 'Description',
-        'options' => $options,
-      ),
-      'element2' => array(
-        'title' => 'Disabled select list.',
-        'description' => 'Description',
-        'attributes' => array(
-          'disabled',
-        ),
-        'options' => $options,
-      ),
-      'element3' => array(
-        'title' => 'Select list with error.',
-        'description' => 'Description',
-        'attributes' => array(
-          'class' => array(
-            'ecl-select--has-error',
-          ),
-        ),
-        'options' => $options,
+  $form['element1'] = array(
+    '#title' => 'Default select list',
+    '#type' => 'select',
+    '#description' => 'Description',
+    '#options' => $options,
+  );
+
+  $form['element2'] = array(
+    '#title' => 'Disabled select list',
+    '#type' => 'select',
+    '#description' => 'Description',
+    '#disabled' => TRUE,
+    '#options' => $options,
+  );
+
+  $form['element3'] = array(
+    '#title' => 'Select list with error',
+    '#type' => 'select',
+    '#description' => 'Description',
+    '#attributes' => array(
+      'class' => array(
+        'ecl-text-input--has-error',
       ),
     ),
+    '#options' => $options,
   );
+
+  return $form;
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_select(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-select';
-  if (in_array('error', $variables['attributes_array']['class'])) {
-    $variables['attributes_array']['class'][] = 'ecl-select--has-error';
-  }
+  _ec_europa_form_set_css_class($variables, array('ecl-select'), array('ecl-select--has-error'));
 }

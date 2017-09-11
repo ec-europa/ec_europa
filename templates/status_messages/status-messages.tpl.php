@@ -12,7 +12,7 @@
   }
   ?>" role="alert">
     <?php if (!empty($status_message['status_heading'])): ?>
-      <span class="ecl-sr-only"><?php  print render($status_message['status_heading']) ?></span>
+      <span class="ecl-u-sr-only"><?php  print render($status_message['status_heading']) ?></span>
     <?php endif; ?>
     <button type="button" class="ecl-message__dismiss" aria-label="Dismiss this alert">&times;</button>
     <?php print render($status_message['messages']); ?>

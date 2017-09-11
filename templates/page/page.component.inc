@@ -100,4 +100,18 @@ function ec_europa_preprocess_page(&$variables, $hook) {
     '#footer_bottom' => $variables['page']['footer_bottom'],
     '#footer_improved' => $variables['page']['footer_improved'],
   );
+
+  if (in_array("page__splash", $variables['theme_hook_suggestions'])) {
+    $variables['logo'] = array(
+      '#theme' => array('logo'),
+      '#title' => t('Home - European Commission'),
+      '#attributes_array' => array(
+        'class' => array('ecl-logo--big', 'ecl-u-mh-auto'),
+      ),
+    );
+
+    $variables['splash'] = array(
+      '#theme' => array('splash__' . $variables['theme_hook_original']),
+    );
+  }
 }

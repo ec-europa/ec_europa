@@ -39,6 +39,10 @@ module.exports = {
     {
       from: path.resolve(source_folder, "ecl-logos/images"),
       to: path.resolve(__dirname, "assets/images")
+    },
+    {
+      from: path.resolve(source_folder, "ecl-social-icons/images"),
+      to: path.resolve(__dirname, "assets/images")
     }
   ]
 };

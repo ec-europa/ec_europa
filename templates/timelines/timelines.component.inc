@@ -6,22 +6,6 @@
  */
 
 /**
- * Implements hook_atomium_theme_hook().
- */
-function ec_europa_atomium_theme_timelines() {
-  return array(
-    'timelines' => array(
-      'variables' => array(
-        'title' => NULL,
-        'text' => NULL,
-        'footer' => NULL,
-      ),
-      'template' => 'timelines',
-    ),
-  );
-}
-
-/**
  * Implements hook_atomium_definition_hook().
  */
 function ec_europa_atomium_definition_timelines() {
