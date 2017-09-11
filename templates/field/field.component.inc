@@ -42,3 +42,14 @@ function ec_europa_preprocess_field(&$variables, $hook) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_field__taxonomy_term_reference__ne_tags(&$variables, $hook) {
+  $variables['tags'] = array(
+    '#theme' => 'tags',
+    '#label' => $variables['label'],
+    '#items' => $variables['items'],
+  );
+}

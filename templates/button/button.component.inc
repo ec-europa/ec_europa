@@ -78,3 +78,13 @@ function ec_europa_preprocess_button__call(&$variables, $hook) {
     'ecl-button--caret-right',
   );
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_button__tags(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = array(
+    'ecl-button--facet-close',
+    'ecl-tag__item',
+  );
+}
