@@ -28,28 +28,59 @@ function ec_europa_atomium_definition_tags() {
   return array(
     'label' => 'Tags',
     'description' => 'Tags template.',
-    'preview' => array(
-      'label' => 'Default tags',
-      'tags' => array(
-        array(
-          'value' => 'apple',
-          'href' => '#',
-        ),
-        array(
-          'value' => 'orange',
-          'href' => '#',
-        ),
-        array(
-          'value' => 'lime',
-          'href' => '#',
-        ),
-        array(
-          'value' => 'strawberry',
-          'href' => '#',
-        ),
+    'disable' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_tags($form, &$form_state) {
+  $form['element1'] = array(
+    '#theme' => 'tags',
+    '#label' => 'Default tags',
+    '#tags' => array(
+      array(
+        'value' => 'apple',
+        'href' => '#',
+      ),
+      array(
+        'value' => 'orange',
+        'href' => '#',
+      ),
+      array(
+        'value' => 'lime',
+        'href' => '#',
+      ),
+      array(
+        'value' => 'strawberry',
+        'href' => '#',
       ),
     ),
   );
+
+  $form['element2'] = array(
+    '#theme' => 'tags',
+    '#label' => 'containing',
+    '#modifier' => 'facet',
+    '#tags' => array(
+      array(
+        'value' => 'Words that the facet is containing',
+      ),
+    ),
+  );
+
+  $form['element3'] = array(
+    '#theme' => 'tags',
+    '#modifier' => 'facet-close',
+    '#label' => 'type',
+    '#tags' => array(
+      array(
+        'value' => 'atom',
+      ),
+    ),
+  );
+  return $form;
 }
 
 /**
@@ -67,14 +98,21 @@ function ec_europa_preprocess_tags(&$variables, $hook) {
             '#value' => $tag['value'],
           );
         }
+        break;
+
       case 'facet':
         foreach ($variables['tags'] as $key => $tag) {
           $variables['tags'][$key] = array(
-            '#theme' => 'html_tag',
+            '#type' => 'html_tag',
             '#tag' => 'span',
+            '#attributes' => array(
+              'class' => 'ecl-tag__item',
+            ),
             '#value' => $tag['value'],
           );
         }
+        break;
+
     }
   }
   else {
