@@ -48,7 +48,7 @@ function ec_europa_preprocess_field(&$variables, $hook) {
  */
 function ec_europa_preprocess_field__taxonomy_term_reference__ne_tags(&$variables, $hook) {
   $variables['tags'] = array(
-    '#theme' => 'tags',
+    '#theme' => array('tags__' . $variables['theme_hook_original']),
     '#label' => $variables['label'],
     '#items' => $variables['items'],
   );
