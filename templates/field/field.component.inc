@@ -57,8 +57,7 @@ function ec_europa_preprocess_field(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_field__list_boolean__node__full__community(&$variables, $hook) {
-
-  if ( $variables['element']['#field_name'] == 'group_access') {
+  if ($variables['element']['#field_name'] == 'group_access') {
     $node = (isset($variables['element']['#object'])) ? $variables['element']['#object'] : '';
     if (is_object($node)) {
       $variables['attributes_array']['class'][] = 'ecl-label';
