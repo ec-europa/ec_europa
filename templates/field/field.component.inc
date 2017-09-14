@@ -52,7 +52,6 @@ function ec_europa_preprocess_field(&$variables, $hook) {
   }
 }
 
-
 /**
  * Implements hook_preprocess_hook().
  */
