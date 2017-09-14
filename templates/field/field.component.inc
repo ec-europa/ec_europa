@@ -57,8 +57,7 @@ function ec_europa_preprocess_field(&$variables, $hook) {
  */
 function ec_europa_preprocess_field__list_boolean__node__full__community(&$variables, $hook) {
   if ($variables['element']['#field_name'] == 'group_access') {
-    $node = (isset($variables['element']['#object'])) ? $variables['element']['#object'] : '';
-    if (is_object($node)) {
+    if ($node = $variables['element']['#object']) {
       $variables['attributes_array']['class'][] = 'ecl-label';
       $variables['label_value'] = ($variables['items'][0]['#markup']) ? $variables['items'][0]['#markup'] : '';
       $variables['attributes_array']['class'][] = ($variables['element']['#items'][0]['value']) ? 'ecl-label--close' : 'ecl-label--open';
