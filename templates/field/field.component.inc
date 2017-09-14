@@ -66,5 +66,4 @@ function ec_europa_preprocess_field__list_boolean__node__full__community(&$varia
       $variables['attributes_array']['class'][] = ($variables['element']['#items'][0]['value']) ? 'ecl-label--close' : 'ecl-label--open';
     }
   }
-  dpm($variables);
 }
