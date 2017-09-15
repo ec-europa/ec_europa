@@ -50,13 +50,13 @@ function ec_europa_atomium_definition_form_labels($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_labels__open(&$variables, $hook){
+function ec_europa_preprocess_labels__open(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-label--open';
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_labels__closed(&$variables, $hook){
+function ec_europa_preprocess_labels__closed(&$variables, $hook) {
   $variables['attributes_array']['class'][] = 'ecl-label--close';
 }
