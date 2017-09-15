@@ -55,12 +55,20 @@ function ec_europa_preprocess_field(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_field__list_boolean__node__full__community(&$variables, $hook) {
-  if ($variables['element']['#field_name'] == 'group_access') {
-    if ($node = $variables['element']['#object']) {
-      $variables['attributes_array']['class'][] = 'ecl-label';
-      $variables['label_value'] = ($variables['items'][0]['#markup']) ? $variables['items'][0]['#markup'] : '';
-      $variables['attributes_array']['class'][] = ($variables['element']['#items'][0]['value']) ? 'ecl-label--close' : 'ecl-label--open';
+function ec_europa_preprocess_field__list_boolean__group_access__list_default__node__full__community(&$variables, $hook) {
+  if ($object = $variables['element']['#object']) {
+    $wrapper = entity_metadata_wrapper('node', $object);
+
+    $theme = 'labels__open';
+    if (0 == $wrapper->group_access->value()) {
+      $theme = 'labels__closed';
+    }
+
+    foreach ($variables['items'] as $delta => &$item) {
+      $item = array(
+        '#theme' => $theme,
+        '#content' => $item['#markup'],
+      );
     }
   }
 }
