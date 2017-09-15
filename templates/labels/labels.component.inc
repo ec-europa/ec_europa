@@ -11,9 +11,10 @@
 function ec_europa_atomium_theme_labels() {
   return array(
     'labels' => array(
-      'template' => 'field__list_boolean__node__full__community',
+      'template' => 'labels',
       'variables' => array(
-        'markup' => NULL,
+        'content' => NULL,
+        'attributes_array' => array('class' => array('ecl-label')),
       ),
     ),
   );
@@ -35,8 +36,27 @@ function ec_europa_atomium_definition_labels() {
  */
 function ec_europa_atomium_definition_form_labels($form, &$form_state) {
   $form['element1'] = array(
-    '#markup' => 'Example Open Status',
+    '#theme' => 'labels__open',
+    '#content' => 'Label component: Open',
   );
-  $form['#attributes']['class'][] = array('ecl-label', 'ecl-label--open');
+  $form['element2'] = array(
+    '#theme' => 'labels__closed',
+    '#content' => 'Label component: Closed',
+  );
+
   return $form;
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_labels__open(&$variables, $hook){
+  $variables['attributes_array']['class'][] = 'ecl-label--open';
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_labels__closed(&$variables, $hook){
+  $variables['attributes_array']['class'][] = 'ecl-label--close';
 }
