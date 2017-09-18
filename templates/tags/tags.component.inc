@@ -12,7 +12,6 @@ function ec_europa_atomium_theme_tags() {
   return array(
     'tags' => array(
       'variables' => array(
-        'modifier' => '',
         'label' => '',
         'items' => array(),
       ),
@@ -61,7 +60,6 @@ function ec_europa_atomium_definition_form_tags($form, &$form_state) {
 
   $form['element2'] = array(
     '#theme' => 'tags__facet',
-    '#label' => 'containing',
     '#modifier' => 'facet',
     '#items' => array(
       array(
@@ -73,7 +71,6 @@ function ec_europa_atomium_definition_form_tags($form, &$form_state) {
 
   $form['element3'] = array(
     '#theme' => 'tags__facet_close',
-    '#modifier' => 'facet-close',
     '#label' => 'type',
     '#items' => array(
       array(
