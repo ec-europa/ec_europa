@@ -55,7 +55,7 @@ function ec_europa_preprocess_field(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_field__list_boolean__group_access__list_default__node__full__community(&$variables, $hook) {
+function ec_europa_preprocess_field__list_boolean__list_default__node__full__community(&$variables, $hook) {
   if ($object = $variables['element']['#object']) {
     $wrapper = entity_metadata_wrapper('node', $object);
 
