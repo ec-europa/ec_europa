@@ -36,15 +36,26 @@ function ec_europa_atomium_definition_labels() {
  */
 function ec_europa_atomium_definition_form_labels($form, &$form_state) {
   $form['element1'] = array(
+    '#theme' => 'labels__upcoming',
+    '#content' => 'Label component: Upcoming',
+  );
+  $form['element2'] = array(
     '#theme' => 'labels__open',
     '#content' => 'Label component: Open',
   );
-  $form['element2'] = array(
+  $form['element3'] = array(
     '#theme' => 'labels__closed',
     '#content' => 'Label component: Closed',
   );
 
   return $form;
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_labels__upcoming(&$variables, $hook) {
+  $variables['attributes_array']['class'][] = 'ecl-label--upcoming';
 }
 
 /**
