@@ -51,3 +51,24 @@ function ec_europa_preprocess_field(&$variables, $hook) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_field__list_boolean__group_access__node__full__community(&$variables, $hook) {
+  if ($object = $variables['element']['#object']) {
+    $wrapper = entity_metadata_wrapper('node', $object);
+
+    $theme = 'labels__open';
+    if (0 == $wrapper->group_access->value()) {
+      $theme = 'labels__closed';
+    }
+
+    foreach ($variables['items'] as $delta => &$item) {
+      $item = array(
+        '#theme' => $theme,
+        '#content' => $item['#markup'],
+      );
+    }
+  }
+}
