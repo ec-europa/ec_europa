@@ -13,7 +13,7 @@
  */
 ?>
 
-<div<?php print $atomium['attributes']; ?>>
+<div<?php print $atomium['attributes']['wrapper']; ?>>
   <?php print render($small_description); ?>
   <?php print $element['#children']; ?>
 </div>

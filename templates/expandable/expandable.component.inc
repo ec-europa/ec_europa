@@ -62,7 +62,7 @@ function ec_europa_preprocess_expandable(&$variables, $hook) {
         'aria-controls' => $id,
         'aria-expanded' => 'false',
         'onClick' => 'return false;',
-      )
+      ),
     ),
   );
 

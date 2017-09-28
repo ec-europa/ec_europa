@@ -25,8 +25,8 @@ function ec_europa_atomium_theme_site_header() {
           '#attributes' => array(
             'class' => array(
               'ecl-site-header__lang-select-sites',
-            )
-          )
+            ),
+          ),
         ),
         'search_bar' => array(
           '#theme' => array('search_bar'),

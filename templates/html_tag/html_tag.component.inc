@@ -15,7 +15,7 @@ function ec_europa_preprocess_html_tag(&$variables, $hook) {
     $variables['atomium']['attributes']['element']
       ->append(
         'class',
-        array('ecl-heading', 'ecl-heading--' . $variables['element']['#tag']
+        array('ecl-heading', 'ecl-heading--' . $variables['element']['#tag'],
         )
       );
   }

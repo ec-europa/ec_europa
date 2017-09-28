@@ -14,7 +14,13 @@ function ec_europa_atomium_theme_labels() {
       'template' => 'labels',
       'variables' => array(
         'content' => NULL,
-        'attributes_array' => array('class' => array('ecl-label')),
+        'atomium' => array(
+          'attributes' => array(
+            'wrapper' => array(
+              'class' => array('ecl-label'),
+            ),
+          ),
+        ),
       ),
     ),
   );
@@ -35,17 +41,17 @@ function ec_europa_atomium_definition_labels() {
  * Implements hook_atomium_definition_form_hook().
  */
 function ec_europa_atomium_definition_form_labels($form, &$form_state) {
-  $form['element1'] = array(
+  $form['elements'][] = array(
     '#theme' => 'labels__upcoming',
     '#content' => 'Label component: Upcoming',
   );
-  $form['element2'] = array(
+  $form['elements'][] = array(
     '#theme' => 'labels__open',
     '#content' => 'Label component: Open',
   );
-  $form['element3'] = array(
-    '#theme' => 'labels__closed',
-    '#content' => 'Label component: Closed',
+  $form['elements'][] = array(
+    '#theme' => 'labels__close',
+    '#content' => 'Label component: Close',
   );
 
   return $form;
@@ -55,19 +61,28 @@ function ec_europa_atomium_definition_form_labels($form, &$form_state) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_labels__upcoming(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-label--upcoming';
+  $variables['atomium']['attributes']['wrapper']->append(
+    'class',
+    'ecl-label--upcoming'
+  );
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_labels__open(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-label--open';
+  $variables['atomium']['attributes']['wrapper']->append(
+    'class',
+    'ecl-label--open'
+  );
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_labels__closed(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-label--close';
+function ec_europa_preprocess_labels__close(&$variables, $hook) {
+  $variables['atomium']['attributes']['wrapper']->append(
+    'class',
+    'ecl-label--close'
+  );
 }
