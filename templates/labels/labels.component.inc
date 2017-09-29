@@ -56,33 +56,3 @@ function ec_europa_atomium_definition_form_labels($form, &$form_state) {
 
   return $form;
 }
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_labels__upcoming(&$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append(
-    'class',
-    'ecl-label--upcoming'
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_labels__open(&$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append(
-    'class',
-    'ecl-label--open'
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_labels__close(&$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append(
-    'class',
-    'ecl-label--close'
-  );
-}
