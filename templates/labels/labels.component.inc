@@ -14,13 +14,6 @@ function ec_europa_atomium_theme_labels() {
       'template' => 'labels',
       'variables' => array(
         'content' => NULL,
-        'atomium' => array(
-          'attributes' => array(
-            'wrapper' => array(
-              'class' => array('ecl-label'),
-            ),
-          ),
-        ),
       ),
     ),
   );
@@ -55,4 +48,11 @@ function ec_europa_atomium_definition_form_labels($form, &$form_state) {
   );
 
   return $form;
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_labels(&$variables, $hook) {
+  $variables['atomium']['attributes']['wrapper']['class'][] = 'ecl-label';
 }

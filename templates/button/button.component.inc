@@ -43,44 +43,5 @@ function ec_europa_atomium_definition_form_button($form, &$form_state) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button(&$variables, $hook) {
-  $variables['atomium']['attributes']['element']->append(
-    'class',
-    array('ecl-button', 'ecl-button--default')
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__primary(&$variables, $hook) {
-  $variables['atomium']['attributes']['element']->replace(
-    'class',
-    'ecl-button--default',
-    'ecl-button--primary'
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__secondary(&$variables, $hook) {
-  $variables['atomium']['attributes']['element']->replace(
-    'class',
-    'ecl-button--default',
-    'ecl-button--secondary'
-  );
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_button__call(&$variables, $hook) {
-  $variables['atomium']['attributes']['element']->remove(
-    'class',
-    'ecl-button--default'
-  );
-  $variables['atomium']['attributes']['element']->append(
-    'class',
-    array('ecl-button--call', 'ecl-button--caret-right')
-  );
+  $variables['atomium']['attributes']['element']['class'][] = 'ecl-button';
 }
