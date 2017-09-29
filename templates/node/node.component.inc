@@ -38,6 +38,9 @@ function ec_europa_preprocess_node(&$variables, $hook) {
   if (!empty($variables['content']['links']['comment']['#links'])) {
     unset($variables['content']['links']['comment']['#links']['comment-add']);
   }
+
   // Add the language attribute.
-  $variables['attributes_array']['lang'] = entity_translation_get_existing_language('node', $variables['node']);
+  if (module_exists('entity_translation')) {
+    $variables['attributes_array']['lang'] = entity_translation_get_existing_language('node', $variables['node']);
+  }
 }
