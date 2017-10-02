@@ -45,6 +45,9 @@ function ec_europa_atomium_definition_easy_breadcrumb() {
         ),
       ),
     ),
+    'dependencies' => array(
+      'easy_breadcrumb',
+    ),
   );
 }
 
