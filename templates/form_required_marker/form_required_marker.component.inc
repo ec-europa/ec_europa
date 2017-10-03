@@ -10,5 +10,4 @@
  */
 function ec_europa_preprocess_form_required_marker(&$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'text-danger');
-  $variables[$hook] = '*';
 }
