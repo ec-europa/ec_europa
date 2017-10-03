@@ -11,6 +11,7 @@
 function ec_europa_atomium_definition_radios() {
   return array(
     'label' => 'Radio group',
+    'description' => 'Radio group.',
   );
 }
 

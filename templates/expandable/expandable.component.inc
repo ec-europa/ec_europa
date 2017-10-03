@@ -12,6 +12,7 @@ function ec_europa_atomium_definition_expandable() {
   return array(
     'label' => 'Expandable',
     'description' => 'Expandable.',
+    'dependencies' => array('nexteuropa_formatters_views'),
     'disable' => TRUE,
   );
 }

@@ -6,6 +6,24 @@
  */
 
 /**
+ * Implements hook_atomium_definition_hook().
+ */
+function ec_europa_atomium_definition_lang_select_site() {
+  global $language;
+  return array(
+    'label' => 'Site language selector',
+    'description' => 'Site language selector.',
+    'dependencies' => array('nexteuropa_multilingual'),
+    'preview' => array(
+      'url' => '#',
+      'code' => isset($language->prefix) ? $language->prefix : $language->language,
+      'label' => $language->native,
+      'attributes' => array(),
+    ),
+  );
+}
+
+/**
  * Implements hook_atomium_theme_hook().
  */
 function ec_europa_atomium_theme_lang_select_site() {
@@ -18,23 +36,6 @@ function ec_europa_atomium_theme_lang_select_site() {
         'label' => NULL,
         'attributes' => array(),
       ),
-    ),
-  );
-}
-
-/**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_lang_select_site() {
-  global $language;
-  return array(
-    'label' => 'Site language selector',
-    'description' => 'Site language selector.',
-    'preview' => array(
-      'url' => '#',
-      'code' => isset($language->prefix) ? $language->prefix : $language->language,
-      'label' => $language->native,
-      'attributes' => array(),
     ),
   );
 }

@@ -12,6 +12,7 @@ function ec_europa_atomium_definition_splash() {
   return array(
     'label' => 'Splash',
     'description' => 'Splash.',
+    'dependencies' => array('splash_screen'),
   );
 }
 

@@ -6,6 +6,16 @@
  */
 
 /**
+ * Implements hook_atomium_definition_hook().
+ */
+function ec_europa_atomium_definition_search_bar() {
+  return array(
+    'label' => 'Search bar',
+    'description' => 'Search bar.',
+  );
+}
+
+/**
  * Implements hook_atomium_theme_hook().
  */
 function ec_europa_atomium_theme_search_bar() {
@@ -16,16 +26,6 @@ function ec_europa_atomium_theme_search_bar() {
         'search_form' => NULL,
       ),
     ),
-  );
-}
-
-/**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_search_bar() {
-  return array(
-    'label' => 'Search bar',
-    'description' => 'Search bar.',
   );
 }
 
