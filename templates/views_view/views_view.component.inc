@@ -10,7 +10,6 @@
  */
 function ec_europa_preprocess_views_view_grid(&$variables, $hook) {
   $view = $variables['view'];
-  $result = $view->result;
   $options = $view->style_plugin->options;
   $handler = $view->style_plugin;
   $default_row_class = isset($options['default_row_class']) ? $options['default_row_class'] : TRUE;
@@ -115,6 +114,7 @@ function ec_europa_preprocess_views_view_grid(&$variables, $hook) {
   $vars['class'] = 'views-view-grid cols-' . $columns;
 
   // Add the summary to the list if set.
+  // @todo: Check if $variables['attributes_array'] is used in the tpl.
   if (!empty($handler->options['summary'])) {
     $vars['attributes_array'] = array('summary' => filter_xss_admin($handler->options['summary']));
   }

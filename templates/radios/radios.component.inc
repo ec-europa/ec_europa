@@ -37,27 +37,18 @@ function ec_europa_atomium_definition_form_radios($form, &$form_state) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_radios(&$variables, $hook) {
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-radio-group');
+  $variables['atomium']['attributes']['wrapper']->append('role', 'radiogroup');
+
   $element = $variables['element'];
-
-  $variables['attributes_array']['class'][] = 'ecl-radio-group';
-  $variables['attributes_array']['role'][] = 'radiogroup';
-
-  $variables['small_description'] = '';
-
   if (!empty($element['#title'])) {
     $title = $element['#title'];
-    $variables['attributes_array']['aria-labelledby'][] = $title;
+    $variables['atomium']['attributes']['wrapper']->append('aria-labelledby', $title);
 
-    $descr_attributes_array['class'] = array('ecl-u-sr-only');
+    $variables['description'] = t('List of options for @title', array('@title' => $title));
+    $variables['atomium']['attributes']['description']->append('class', 'ecl-u-sr-only');
     if (isset($element['#id'])) {
-      $descr_attributes_array['id'] = array($element['#id'] . "-description");
+      $variables['atomium']['attributes']['description']->append('id', $element['#id'] . '-description');
     }
-
-    $variables['small_description'] = array(
-      '#markup' => t('List of options for @title', array('@title' => $title)),
-      '#theme_wrappers' => array('html_tag'),
-      '#tag' => 'p',
-      '#attributes' => $descr_attributes_array,
-    );
   }
 }

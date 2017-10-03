@@ -78,7 +78,7 @@
         </div>
 
         <?php print render($title_prefix); ?>
-        <h3<?php print $title_attributes; ?>><?php print $title ?></h3>
+        <h3<?php print $atomium['attributes']['title']; ?>><?php print $title ?></h3>
         <?php print render($title_suffix); ?>
 
         <div class="content"<?php print $content_attributes; ?>>

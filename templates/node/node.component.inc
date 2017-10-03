@@ -41,6 +41,6 @@ function ec_europa_preprocess_node(&$variables, $hook) {
 
   // Add the language attribute.
   if (module_exists('entity_translation')) {
-    $variables['attributes_array']['lang'] = entity_translation_get_existing_language('node', $variables['node']);
+    $variables['atomium']['attributes']['wrapper']->append('lang', entity_translation_get_existing_language('node', $variables['node']));
   }
 }
