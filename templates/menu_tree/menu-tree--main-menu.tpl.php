@@ -16,7 +16,7 @@
           <span class="ecl-navigation-menu__hamburger-label"><?php print $title; ?></span>
         </button>
 <?php endif; ?>
-        <ul<?php print $attributes; ?>><?php print render($tree); ?></ul>
+  <ul<?php print $atomium['attributes']['wrapper']; ?>><?php print render($tree); ?></ul>
 <?php if ($depth == 1): ?>
       </div>
     </div>

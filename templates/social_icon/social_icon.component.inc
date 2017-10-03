@@ -12,6 +12,7 @@ function ec_europa_atomium_definition_social_icon() {
   return array(
     'label' => 'Social Icon',
     'description' => 'Social Icon.',
+    'dependencies' => array('nexteuropa_formatters_fields'),
   );
 }
 

@@ -6,4 +6,4 @@
  */
 ?>
 <?php print render($logged_in_user); ?>
-<ul<?php print $attributes; ?>><?php print render($tree); ?></ul>
+<ul<?php print $atomium['attributes']['wrapper']; ?>><?php print render($tree); ?></ul>
