@@ -99,15 +99,14 @@ function ec_europa_atomium_definition_form_tags($form, &$form_state) {
  */
 function ec_europa_preprocess_tags(&$variables, $hook) {
   // Store initial items.
-  $variables['tags'] = $variables['items'];
   $variables['attributes_array']['class'][] = 'ecl-tag';
   $variables['title_attributes_array']['class'][] = 'ecl-tag__label';
 
-  foreach ($variables['tags'] as $key => $tag) {
+  foreach ($variables['items'] as $key => $item) {
     $variables['items'][$key] = array(
       '#theme' => array('link__' . $variables['theme_hook_original']),
-      '#text' => $tag['value'],
-      '#path' => $tag['href'],
+      '#text' => $item['value'],
+      '#path' => $item['href'],
     );
   };
 }

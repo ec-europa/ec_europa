@@ -37,45 +37,11 @@ function ec_europa_preprocess_field(&$variables, $hook) {
   }
 }
 
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_field__taxonomy_term_reference__taxonomy_term_reference_link(&$variables, $hook) {
-  _ec_europa_preprocess_taxonomy_term_reference_link($variables, $hook);
-}
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_field__taxonomy_term_reference__i18n_taxonomy_term_reference_link(&$variables, $hook) {
-  _ec_europa_preprocess_taxonomy_term_reference_link($variables, $hook);
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_field__taxonomy_term_reference__taxonomy_term_reference_plain(&$variables, $hook) {
-  _ec_europa_preprocess_taxonomy_term_reference_plain($variables, $hook);
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_field__taxonomy_term_reference__i18n_taxonomy_term_reference_plain(&$variables, $hook) {
-  _ec_europa_preprocess_taxonomy_term_reference_plain($variables, $hook);
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_field__entityreference__ne_tags(&$variables, $hook) {
-  _ec_europa_preprocess_ne_tags($variables, $hook);
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_field__link_field__ne_tags(&$variables, $hook) {
+function ec_europa_preprocess_field__taxonomy_term_reference__ne_tags(&$variables, $hook) {
   _ec_europa_preprocess_ne_tags($variables, $hook);
 }
 
@@ -89,42 +55,6 @@ function _ec_europa_preprocess_ne_tags(&$variables, $hook) {
     '#theme' => array('tags__' . $variables['theme_hook_original']),
     '#label' => $variables['label'],
     '#items' => $variables['items'],
-  );
-}
-
-/**
- * Helper function to theme taxonomy term link formatters.
- */
-function _ec_europa_preprocess_taxonomy_term_reference_link(&$variables, $hook) {
-  $items = array();
-  foreach ($variables['items'] as $item) {
-    $items[] = array(
-      'href' => $item['#href'],
-      'value' => $item['#title'],
-    );
-  }
-  $variables['tags'] = array(
-    '#theme' => array('tags__' . $variables['theme_hook_original']),
-    '#label' => $variables['label'],
-    '#items' => $items,
-  );
-}
-
-/**
- * Helper function to theme taxonomy term plain formatters.
- */
-function _ec_europa_preprocess_taxonomy_term_reference_plain(&$variables, $hook) {
-  $items = array();
-  foreach ($variables['items'] as $item) {
-    $items[] = array(
-      'href' => '',
-      'value' => $item['#markup'],
-    );
-  }
-  $variables['tags'] = array(
-    '#theme' => array('tags__facet__' . $variables['theme_hook_original']),
-    '#label' => $variables['label'],
-    '#items' => $items,
   );
 }
 
