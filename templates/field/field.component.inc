@@ -79,6 +79,14 @@ function ec_europa_preprocess_field__link_field__ne_tags(&$variables, $hook) {
   _ec_europa_preprocess_ne_tags($variables, $hook);
 }
 
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_field__taxonomy_term_reference__ne_tags(&$variables, $hook) {
+  _ec_europa_preprocess_ne_tags($variables, $hook);
+}
+
 /**
  * Helper function to theme ne_tags formatters.
  *
