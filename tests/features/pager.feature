@@ -1,6 +1,6 @@
 @api
 Feature: Pager
-  @yama
+
   Scenario: Pager behaves correctly with a high number of pages.
     Given "50" nodes of type "article"
 
