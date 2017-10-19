@@ -30,6 +30,7 @@ before_script:
   # Test latest commit on current branch.
   - git clone --branch=$TRAVIS_BRANCH https://github.com/$TRAVIS_REPO_SLUG.git sites/all/themes/contrib/ec_europa
   # And ec_europa theme should be based on the good branch of atomium.
+  - rm -fr sites/all/themes/contrib/atomium
   - git clone --branch=attributes-as-objects  https://github.com/ec-europa/atomium.git sites/all/themes/contrib/atomium
   - ../vendor/bin/drush en atomium ec_europa views views_ui libraries entity_translation date date_views date_popup date_api -y
   - ../vendor/bin/drush vset theme_default ec_europa
