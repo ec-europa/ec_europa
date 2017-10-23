@@ -13,41 +13,38 @@ function ec_europa_preprocess_block(&$variables, $hook) {
 
   switch ($block->delta) {
     case 'nexteuropa_feedback':
-      $variables['classes_array'][] = 'block--full-width';
+      $variables['atomium']['attributes']['wrapper']->append('class', 'block--full-width');
       break;
 
     case 'menu-nexteuropa-site-links':
     case 'menu-nexteuropa-social-media':
     case 'menu-nexteuropa-inst-links':
       $variables['title'] = $block->subject;
-      $variables['title_attributes_array']['class'][] = 'ecl-h4';
-      $variables['title_attributes_array']['class'][] = 'ecl-footer__title';
+      $variables['atomium']['attributes']['title']->append('class', array('ecl-h4', 'ecl-footer__title'));
       $block->subject = '';
       break;
 
     case 'menu-nexteuropa-service-links':
       $variables['title'] = '';
-      $variables['title_attributes_array']['class'][] = 'ecl-h4';
-      $variables['title_attributes_array']['class'][] = 'ecl-footer__title';
+      $variables['atomium']['attributes']['title']->append('class', array('ecl-h4', 'ecl-footer__title'));
       $block->subject = '';
       break;
 
     case 'views_related_links':
-      $variables['classes_array'][] = 'link-block';
-      $variables['title_attributes_array']['class'][] = 'link-block__title';
+      $variables['atomium']['attributes']['wrapper']->append('class', 'link-block');
+      $variables['atomium']['attributes']['title']->append('class', 'link-block__title');
       break;
 
     case 'language_selector_site':
       $variables['lang_code'] = $variables['elements']['code']['#markup'];
       $variables['lang_name'] = $variables['elements']['label']['#markup'];
-      // Add class to block.
-      $variables['classes_array'][] = 'ecl-lang-select-sites';
       $variables['link'] = url('splash') . '?' . drupal_get_destination()['destination'];
+      $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-lang-select-sites');
       break;
 
     case 'inline_navigation':
-      $variables['classes_array'][] = 'inpage-nav__wrapper';
-      $variables['title_attributes_array']['class'][] = 'inpage-nav__block-title';
+      $variables['atomium']['attributes']['wrapper']->append('class', 'inpage-nav__wrapper');
+      $variables['atomium']['attributes']['title']->append('class', 'inpage-nav__block-title');
       break;
   }
 
@@ -87,7 +84,7 @@ function ec_europa_preprocess_block(&$variables, $hook) {
     }
 
     // Add class to block.
-    $variables['classes_array'][] = 'lang-select-page lang-select-page--transparent';
+    $variables['atomium']['attributes']['wrapper']->append('class', array('lang-select-page', 'lang-select-page--transparent'));
 
     // Add content to block.
     $content = "<span class='lang-select-page__icon icon icon--generic-lang'></span>";
@@ -102,12 +99,7 @@ function ec_europa_preprocess_block(&$variables, $hook) {
     drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/components/lang-select-site.js');
   }
 
-  // Replace block-title class with block__title in order to keep BEM structure
-  // of classes.
-  if ($block_title_class = array_search('block-title', $variables['title_attributes_array']['class'])) {
-    unset($variables['title_attributes_array']['class'][$block_title_class]);
-  }
-  $variables['title_attributes_array']['class'][] = 'block__title';
+  $variables['atomium']['attributes']['title']->append('class', 'block__title');
 
   if (isset($block->bid)) {
     // Check if the block is a exposed form.
@@ -118,8 +110,9 @@ function ec_europa_preprocess_block(&$variables, $hook) {
         // If our block is the first, we set the subject. This way, if we expose
         // a second block for the same view, we will not duplicate the title.
         if (array_search($block->bid, array_keys($context->reactions['block']['blocks'])) === 0) {
-          $variables['classes_array'][] = 'filters';
-          $variables['title_attributes_array']['class'][] = 'filters__title';
+          $variables['atomium']['attributes']['wrapper']->append('class', 'filters');
+          $variables['atomium']['attributes']['title']->append('class', 'filters__title');
+
           $block->subject = t('Refine results');
 
           // Passing block id to Drupal.settings in order to pass it through
@@ -138,12 +131,11 @@ function ec_europa_preprocess_block(&$variables, $hook) {
     // with "body field" that can contain simple HTML tags without "ecl"
     // classes.
     // Then the namespace CSS class must be added.
-    $variables['content']['#attributes']['class'][] = 'ecl-editor';
-    $variables['content_attributes_array']['class'][] = 'ecl-editor';
+    $variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
   }
-  $variables['content_attributes_array']['class'][] = 'block__content';
 
-  $variables['attributes_array']['class'] = drupal_array_merge_deep($variables['attributes_array']['class'], $variables['classes_array']);
-  $variables['attributes_array']['class'][] = 'ecl-clearfix';
-  $variables['attributes_array']['id'] = $variables['block_html_id'];
+  $variables['atomium']['attributes']['content']->append('class', 'block__content');
+  $variables['atomium']['attributes']['wrapper']
+    ->append('class', 'ecl-clearfix')
+    ->append('id', $variables['block_html_id']);
 }

@@ -37,16 +37,15 @@ function ec_europa_preprocess_field(&$variables, $hook) {
         && $element['#language'] <> LANGUAGE_NONE
         && $element['#language'] <> $content_langcode
       ) {
-        $variables['attributes_array']['lang'] = $element['#language'];
+        $variables['attributes']['lang'] = $element['#language'];
       }
     }
 
     // In case of "Long text" or "Long text and summary" field, inject the
     // namespace class in the item class.
     if (in_array($element['#field_type'], array('text_with_summary', 'text_long'))) {
-      $attributes_item = &$variables['attributes_item'];
       foreach ($variables['items'] as $delta => $item) {
-        $attributes_item[$delta]['class'][] = 'ecl-editor';
+        $variables['atomium']['attributes'][$delta]->append('class', 'ecl-editor');
       }
     }
   }

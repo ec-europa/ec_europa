@@ -44,7 +44,7 @@
  * @ingroup themeable
  */
 ?>
-<section<?php print $attributes; ?>>
+<section<?php print $atomium['attributes']['wrapper']; ?>>
   <?php if (!empty($content)): ?>
   <div class="block__content">
     <?php print render($content); ?>

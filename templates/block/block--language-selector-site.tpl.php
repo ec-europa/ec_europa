@@ -45,7 +45,7 @@
  * @ingroup themeable
  */
 ?>
-<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div<?php print $atomium['attributes']['wrapper']; ?>>
   <a href="<?php print $link; ?>" class="ecl-lang-select-sites__link">
     <span class="ecl-lang-select-sites__label"><?php print $lang_name; ?></span>
     <span class="ecl-lang-select-sites__code">

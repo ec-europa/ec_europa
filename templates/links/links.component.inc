@@ -15,7 +15,7 @@ function ec_europa_preprocess_links(&$variables, $hook) {
   }
 
   foreach ($variables['links']['links']['#items'] as &$link) {
-    $link['link']['#options']['attributes_array']['class'][] = 'ecl-link';
-    $link['link']['#options']['attributes_array']['class'][] = 'ecl-link--standalone';
+    $link['link']['#options']['attributes']['class'][] = 'ecl-link';
+    $link['link']['#options']['attributes']['class'][] = 'ecl-link--standalone';
   }
 }

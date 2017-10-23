@@ -5,4 +5,4 @@
  * Contains template file.
  */
 ?>
-<span<?php print $attributes; ?>><?php print $content; ?></span>
+<span<?php print $atomium['attributes']['wrapper']; ?>><?php print $content; ?></span>

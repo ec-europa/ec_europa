@@ -14,6 +14,7 @@ function ec_europa_atomium_theme_site_switcher() {
       'template' => 'site-switcher',
       'variables' => array(
         'links' => NULL,
+        'attributes' => array(),
       ),
     ),
   );
@@ -36,7 +37,12 @@ function ec_europa_atomium_definition_site_switcher() {
 function ec_europa_preprocess_site_switcher(&$variables, $hook) {
   global $language;
 
-  $variables['attributes_array']['class'][] = 'ecl-site-switcher';
+  $variables['atomium']['attributes']['wrapper']->merge($variables['attributes']);
+  $variables['atomium']['attributes']['wrapper']->append('class', array(
+    'ecl-site-switcher',
+  ))->append(
+    'aria-label', 'breadcrumbs'
+  );
 
   $classes = array_pad(array(), 2, array('ecl-site-switcher__option'));
   $index = (int) theme_get_setting('ec_europa_improved_website', 'ec_europa');

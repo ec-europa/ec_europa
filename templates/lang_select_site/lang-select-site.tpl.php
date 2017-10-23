@@ -5,7 +5,7 @@
  * Contains component file.
  */
 ?>
-<div<?php print $attributes; ?>>
+<div<?php print $atomium['attributes']['wrapper']; ?>>
   <a href="<?php print $url; ?>" class="ecl-lang-select-sites__link">
     <span class="ecl-lang-select-sites__label"><?php print render($label); ?></span>
     <span class="ecl-lang-select-sites__code">

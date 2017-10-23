@@ -12,6 +12,7 @@ function ec_europa_atomium_definition_social_icon() {
   return array(
     'label' => 'Social Icon',
     'description' => 'Social Icon.',
+    'dependencies' => array('nexteuropa_formatters_fields'),
   );
 }
 
@@ -29,10 +30,11 @@ function ec_europa_atomium_definition_form_social_icon($form, &$form_state) {
   );
 
   foreach ($type as $item) {
+    $variant = strtolower($item);
     $form['element'][] = array(
-      '#theme' => 'social_icon',
-      '#title' => 'Social Icon for ' . $item,
-      '#type' => strtolower($item),
+      '#theme' => array('social_icon__' . $variant),
+      '#title' => 'Social icon for ' . $item,
+      '#type' => $variant,
       '#text' => $item,
       '#theme_wrappers' => array('form_element'),
     );
@@ -45,7 +47,8 @@ function ec_europa_atomium_definition_form_social_icon($form, &$form_state) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_social_icon(&$variables, $hook) {
-  $variables['attributes_array'] += array('class' => array());
-  $variables['attributes_array']['class'][] = 'ecl-icon-social';
-  $variables['attributes_array']['class'][] = 'ecl-icon-social--' . $variables['type'];
+  $variables['atomium']['attributes']['wrapper']->append('class', array(
+    'ecl-icon-social',
+    'ecl-icon-social--' . $variables['type'],
+  ));
 }

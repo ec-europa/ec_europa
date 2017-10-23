@@ -14,7 +14,7 @@ function ec_europa_preprocess_html(&$variables, $hook) {
   $language = $variables['language'];
 
   if (isset($language->prefix)) {
-    $variables['classes_array'][] = 'language-' . $language->prefix;
+    $variables['atomium']['attributes']['body']->append('class', 'language-' . $language->prefix);
   }
 
   // Add the ie9 only css.
