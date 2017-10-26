@@ -49,7 +49,10 @@ function ec_europa_preprocess_menu_link__main_menu(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__user_menu(&$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', 'site-user-menu__option');
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-navigation-list__item');
+
+  $variables['output']['#options']['attributes']['class'][] = 'ecl-navigation-list__link';
+  $variables['output']['#options']['attributes']['class'][] = 'ecl-link';
 }
 
 /**
