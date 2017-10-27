@@ -1,7 +1,7 @@
 {
   "name": "ec_europa",
   "license": "EUPL-1.1",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "EC Europa base theme.",
   "private": true,
   "scripts": {
