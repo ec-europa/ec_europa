@@ -6,6 +6,9 @@
  */
 ?>
 <header class="ecl-site-header" role="banner">
+  <div class="ecl-container">
+    <?php print render($menu); ?>
+  </div>
   <div class="ecl-container ecl-site-header__container">
     <?php print render($logo); ?>
     <section class="ecl-site-header__top-bar" aria-label="Site tools">

@@ -5,7 +5,6 @@
  * Contains template file.
  */
 ?>
-
 <?php if ($element['#field_prefix']): ?>
     <span class="field-prefix"><?php render($element['#field_prefix']); ?></span>
 <?php endif; ?>

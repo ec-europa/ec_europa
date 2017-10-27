@@ -46,3 +46,10 @@ function ec_europa_atomium_definition_site_header() {
     'preview' => array(),
   );
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_site_header(&$variables, $hook) {
+  $variables['menu'] = menu_tree('user-menu');
+}
