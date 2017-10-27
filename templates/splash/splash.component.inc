@@ -12,6 +12,7 @@ function ec_europa_atomium_definition_splash() {
   return array(
     'label' => 'Splash',
     'description' => 'Splash.',
+    'dependencies' => array('splash_screen'),
   );
 }
 
@@ -62,5 +63,5 @@ function ec_europa_preprocess_splash(&$variables, $hook) {
     );
   }
 
-  $variables['attributes_array']['class'][] = 'ecl-row';
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-row');
 }

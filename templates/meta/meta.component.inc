@@ -12,10 +12,10 @@ function ec_europa_atomium_theme_meta() {
   return array(
     'meta' => array(
       'variables' => array(
-        'type' => '',
-        'timestamp' => '',
-        'date' => '',
-        'location'  => '',
+        'type' => NULL,
+        'timestamp' => NULL,
+        'date' => NULL,
+        'location'  => NULL,
       ),
       'template' => 'meta',
     ),
@@ -42,5 +42,5 @@ function ec_europa_atomium_definition_meta() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_meta(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-meta';
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-meta');
 }

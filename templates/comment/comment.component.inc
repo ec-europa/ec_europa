@@ -14,5 +14,5 @@ function ec_europa_preprocess_comment(&$variables, $hook) {
   $variables['submitted'] = t('!username', ['!username' => $variables['author']]) . '<span class="submitted-date">' . $variables['created'] . '</span>';
   $variables['title'] = check_plain($comment->subject);
   $variables['permalink'] = t('Permalink');
-  $variables['title_attributes_array']['class'] = 'comment__title';
+  $variables['atomium']['attributes']['title']->append('class', 'comment__title');
 }

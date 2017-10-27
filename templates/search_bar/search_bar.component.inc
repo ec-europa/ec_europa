@@ -6,6 +6,16 @@
  */
 
 /**
+ * Implements hook_atomium_definition_hook().
+ */
+function ec_europa_atomium_definition_search_bar() {
+  return array(
+    'label' => 'Search bar',
+    'description' => 'Search bar.',
+  );
+}
+
+/**
  * Implements hook_atomium_theme_hook().
  */
 function ec_europa_atomium_theme_search_bar() {
@@ -16,16 +26,6 @@ function ec_europa_atomium_theme_search_bar() {
         'search_form' => NULL,
       ),
     ),
-  );
-}
-
-/**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_search_bar() {
-  return array(
-    'label' => 'Search bar',
-    'description' => 'Search bar.',
   );
 }
 
@@ -49,7 +49,7 @@ function ec_europa_preprocess_search_bar(&$variables, $hook) {
   $variables['search_form'] = drupal_get_form('nexteuropa_europa_search_search_form');
 
   // Add CSS to the form tag.
-  $variables['search_form']['#attributes']['class'][] = 'ecl-search-form';
+  $variables['search_form']['#attributes']['class'][] = 'ecl-search-form ecl-site-header__search';
 
   // Shortcut.
   $block_search_input = &$variables['search_form']['search_input_group'];

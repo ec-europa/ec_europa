@@ -5,6 +5,6 @@
  * Contains template file.
  */
 ?>
-<a<?php print $attributes; ?>>
+<a<?php print $atomium['attributes']['a']; ?>>
     <span class="ecl-u-sr-only"><?php print $title; ?></span>
 </a>

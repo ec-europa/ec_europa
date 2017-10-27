@@ -19,23 +19,23 @@ function ec_europa_atomium_definition_checkbox() {
  * Implements hook_atomium_definition_form_hook().
  */
 function ec_europa_atomium_definition_form_checkbox($form, &$form_state) {
-  $form['element1'] = array(
+  $form['elements'][] = array(
     '#type' => 'checkbox',
     '#title' => 'Normal checkbox',
   );
-  $form['element2'] = array(
+  $form['elements'][] = array(
     '#type' => 'checkbox',
     '#title' => 'Disabled checkbox',
     '#disabled' => TRUE,
   );
-  $form['element3'] = array(
+  $form['elements'][] = array(
     '#type' => 'checkbox',
     '#title' => 'Checkbox with error',
     '#label_tag_attributes' => array(
       'class' => array('ecl-checkbox--has-error'),
     ),
   );
-  $form['element4'] = array(
+  $form['elements'][] = array(
     '#type' => 'checkbox',
     '#title' => 'Checked by default',
     '#attributes' => array(

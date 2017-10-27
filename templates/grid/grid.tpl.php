@@ -5,7 +5,7 @@
  * Contains template file.
  */
 ?>
-<div<?php print $attributes; ?>>
+<div<?php print $atomium['attributes']['wrapper']; ?>>
     <?php foreach ($rows as $columns): ?>
         <div class="ecl-row">
           <?php foreach ($columns as $item): ?>

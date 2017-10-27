@@ -6,6 +6,24 @@
  */
 
 /**
+ * Implements hook_atomium_definition_hook().
+ */
+function ec_europa_atomium_definition_lang_select_site() {
+  global $language;
+  return array(
+    'label' => 'Site language selector',
+    'description' => 'Site language selector.',
+    'dependencies' => array('nexteuropa_multilingual'),
+    'preview' => array(
+      'url' => '#',
+      'code' => isset($language->prefix) ? $language->prefix : $language->language,
+      'label' => $language->native,
+      'attributes' => array(),
+    ),
+  );
+}
+
+/**
  * Implements hook_atomium_theme_hook().
  */
 function ec_europa_atomium_theme_lang_select_site() {
@@ -16,23 +34,8 @@ function ec_europa_atomium_theme_lang_select_site() {
         'url' => NULL,
         'code' => NULL,
         'label' => NULL,
+        'attributes' => array(),
       ),
-    ),
-  );
-}
-
-/**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_lang_select_site() {
-  global $language;
-  return array(
-    'label' => 'Site language selector',
-    'description' => 'Site language selector.',
-    'preview' => array(
-      'url' => '#',
-      'code' => isset($language->prefix) ? $language->prefix : $language->language,
-      'label' => $language->native,
     ),
   );
 }
@@ -54,6 +57,6 @@ function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
     )
   );
 
-  $variables['attributes_array'] += array('class' => array());
-  $variables['attributes_array']['class'][] = 'ecl-lang-select-sites';
+  $variables['atomium']['attributes']['wrapper']->merge($variables['attributes']);
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-lang-select-sites');
 }

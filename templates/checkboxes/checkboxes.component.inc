@@ -39,25 +39,23 @@ function ec_europa_atomium_definition_form_checkboxes($form, &$form_state) {
 function ec_europa_preprocess_checkboxes(&$variables, $hook) {
   $element = $variables['element'];
 
-  $variables['attributes_array']['class'][] = 'ecl-checkbox-group';
-  $variables['attributes_array']['role'][] = 'checkboxgroup';
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-checkbox-group');
+  $variables['atomium']['attributes']['wrapper']->setAttribute('role', 'checkboxgroup');
 
   $variables['small_description'] = '';
 
   if (!empty($element['#title'])) {
     $title = $element['#title'];
-    $variables['attributes_array']['aria-labelledby'][] = $title;
+    $variables['atomium']['attributes']['wrapper']->setAttribute('aria-labelledby', $title);
 
-    $descr_attributes_array['class'] = array('ecl-u-sr-only');
+    $variables['atomium']['attributes']['description']->append('class', 'ecl-u-sr-only');
+
     if (isset($element['#id'])) {
-      $descr_attributes_array['id'] = array($element['#id'] . "-description");
+      $variables['atomium']['attributes']['description']->setAttribute('id', $element['#id'] . '-description');
     }
 
     $variables['small_description'] = array(
       '#markup' => t('List of options for @title', array('@title' => $title)),
-      '#theme_wrappers' => array('html_tag'),
-      '#tag' => 'p',
-      '#attributes' => $descr_attributes_array,
     );
   }
 }
