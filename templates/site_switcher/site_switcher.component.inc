@@ -70,8 +70,6 @@ function ec_europa_preprocess_site_switcher(&$variables, $hook) {
     '#items' => array(),
   );
 
-  $variables['menu'] = menu_tree('user-menu');
-
   foreach ($links as $key => $link) {
     $variables['links']['#items'][] = array(
       'class' => $classes[$key],
