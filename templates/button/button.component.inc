@@ -44,15 +44,16 @@ function ec_europa_atomium_definition_form_button($form, &$form_state) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button(&$variables, $hook) {
-  $variables['atomium']['attributes']['element']['class'][] = 'ecl-button';
+  $variables['atomium']['attributes']['element']->append('class', 'ecl-button');
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_button__tags(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = array(
+  $variables['atomium']['attributes']['element']->append('class', array(
     'ecl-button--facet-close',
     'ecl-tag__item',
+  )
   );
 }

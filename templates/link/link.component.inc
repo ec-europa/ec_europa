@@ -204,7 +204,7 @@ function ec_europa_preprocess_link__call(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_link__tags(&$variables, $hook) {
-  $variables['attributes_array']['class'][] = 'ecl-tag__item';
+  $variables['atomium']['attributes']['element']->append('class', 'ecl-tag__item');
 }
 
 /**
