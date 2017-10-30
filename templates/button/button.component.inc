@@ -24,6 +24,7 @@ function ec_europa_atomium_definition_form_button($form, &$form_state) {
     'Primary' => 'primary',
     'Secondary' => 'secondary',
     'Call to action' => 'call',
+    'Form' => 'submit',
   );
 
   foreach ($variants as $value => $variant) {

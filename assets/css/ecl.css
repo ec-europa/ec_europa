@@ -4910,9 +4910,11 @@ img {
  * File
  * @define file
  */
-@media print {
-  .ecl-file {
-    display: none !important; } }
+.ecl-file {
+  margin: 0; }
+  @media print {
+    .ecl-file {
+      display: none !important; } }
 
 .ecl-file__body {
   background-color: #ebebeb;
@@ -5752,6 +5754,47 @@ img {
     position: static;
     white-space: normal;
     width: auto; }
+
+/**
+ * Social media
+ * @define social-media-link
+ */
+.ecl-social-media-link {
+  background-color: #ebebeb;
+  display: block;
+  margin: 0;
+  padding: 1.66rem;
+  width: 100%; }
+  @media print {
+    .ecl-social-media-link {
+      display: none !important; } }
+
+.ecl-social-media-link__item {
+  margin-bottom: 0.66rem;
+  vertical-align: top; }
+  .ecl-social-media-link__item:last-child {
+    margin-bottom: 0; }
+
+.ecl-social-media-link__link {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 2rem; }
+
+.ecl-social-media-link--horizontal .ecl-social-media-link__list {
+  max-width: 100%; }
+
+.ecl-social-media-link--horizontal .ecl-social-media-link__item {
+  margin-left: 0;
+  margin-right: 1.66rem; }
+
+.ecl-social-media-link--horizontal .ecl-social-media-link__item:last-child {
+  margin-right: 0; }
 
 /**
  * Timeline

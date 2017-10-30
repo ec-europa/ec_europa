@@ -13,6 +13,12 @@ function ec_europa_atomium_theme_site_header() {
     'site_header' => array(
       'template' => 'site-header',
       'variables' => array(
+        'site_switcher' => array(
+          '#theme' => array('site_switcher'),
+          '#attributes' => array(
+            'class' => array('ecl-site-switcher--header'),
+          ),
+        ),
         'logo' => array(
           '#theme' => array('logo'),
           '#title' => t('Home - European Commission'),
@@ -30,6 +36,11 @@ function ec_europa_atomium_theme_site_header() {
         ),
         'search_bar' => array(
           '#theme' => array('search_bar'),
+          '#attributes' => array(
+            'class' => array(
+              'ecl-site-header__search',
+            ),
+          ),
         ),
       ),
     ),
@@ -45,4 +56,11 @@ function ec_europa_atomium_definition_site_header() {
     'description' => 'Site header.',
     'preview' => array(),
   );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_site_header(&$variables, $hook) {
+  $variables['menu'] = menu_tree('user-menu');
 }

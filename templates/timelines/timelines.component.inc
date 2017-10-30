@@ -17,11 +17,11 @@ function ec_europa_atomium_definition_timelines() {
       'title' => 'By late 2015',
       'text' => 'The Commission will convene the first energy infrastructure forum to discuss and find solutions to issues that are common to all regions across Europe.',
       'footer' => array(
-        '#type' => 'button',
+        '#theme' => array('button__call'),
+        '#button_type' => 'button',
         '#value' => 'Show all timeline',
         '#attributes' => array(
           'class' => array(
-            'ecl-button--call',
             'ecl-button--caret-down',
           ),
         ),

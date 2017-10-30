@@ -44,7 +44,7 @@ function ec_europa_preprocess_menu_tree__user_menu(&$variables, $hook) {
   if (!user_is_anonymous()) {
     $variables['logged_in_user'] = t('Logged in as %username', array('%username' => format_username($user)));
   }
-  $variables['atomium']['attributes']['wrapper']->append('class', 'site-user-menu__list');
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-navigation-list ecl-navigation-list--small');
 }
 
 /**
