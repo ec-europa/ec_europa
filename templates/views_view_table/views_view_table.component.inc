@@ -26,7 +26,7 @@ function ec_europa_preprocess_views_view_table(&$variables, $hook) {
   }
 
   $variables['table'] = array(
-    '#theme' => 'table',
+    '#theme' => 'table__' . $variables['theme_hook_original'],
     '#rows' => $variables['rows'],
     '#header' => $variables['header'],
     '#caption' => $variables['caption'],
