@@ -14,7 +14,6 @@ function ec_europa_atomium_theme_site_switcher() {
       'template' => 'site-switcher',
       'variables' => array(
         'links' => NULL,
-        'menu' => NULL,
         'attributes' => array(),
       ),
     ),
