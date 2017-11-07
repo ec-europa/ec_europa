@@ -60,6 +60,7 @@ function ec_europa_atomium_definition_form_tags($form, &$form_state) {
 
   $form['element2'] = array(
     '#theme' => 'tags__facet',
+    '#label' => 'containing',
     '#items' => array(
       array(
         'value' => 'Words that the facet is containing',
@@ -117,6 +118,7 @@ function ec_europa_preprocess_tags(&$variables, $hook) {
  */
 function ec_europa_preprocess_tags__facet(&$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-tag--facet');
+
   foreach ($variables['tags'] as $key => $tag) {
     $variables['items'][$key] = array(
       '#type' => 'html_tag',
@@ -134,6 +136,7 @@ function ec_europa_preprocess_tags__facet(&$variables, $hook) {
  */
 function ec_europa_preprocess_tags__facet_close(&$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-tag--facet-close');
+
   foreach ($variables['tags'] as $key => $tag) {
     $variables['items'][$key] = array(
       '#theme' => array('button__' . $variables['theme_hook_original']),
