@@ -203,6 +203,13 @@ function ec_europa_preprocess_link__call(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
+function ec_europa_preprocess_link__tags(&$variables, $hook) {
+  $variables['atomium']['attributes']['element']->append('class', 'ecl-tag__item');
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
 function ec_europa_preprocess_link__timeline(&$variables, $hook) {
   $variables['atomium']['attributes']['element']->append('class', array(
     'ecl-button',
