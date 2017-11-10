@@ -96,12 +96,12 @@
 <?php print render($site_header); ?>
 <?php print render($page['header']); ?>
 
-<?php if (!empty($page['navigation'])): ?>
-  <?php print render($page['navigation']); ?>
-<?php endif; ?>
-
 <section class="main-content">
   <?php print render($page_header); ?>
+
+  <?php if (!empty($page['navigation'])): ?>
+    <?php print render($page['navigation']); ?>
+  <?php endif; ?>
 
   <!-- Utility sections -->
   <?php if (!empty($page['utility'])): ?>

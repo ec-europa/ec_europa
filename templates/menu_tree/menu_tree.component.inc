@@ -51,21 +51,21 @@ function ec_europa_preprocess_menu_tree__user_menu(&$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_tree__menu_nexteuropa_service_links(&$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list-inline'));
+  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--inline'));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_tree__menu_service_tools(&$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list-inline'));
+  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--inline'));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_tree__menu_nexteuropa_social_media(&$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list-inline'));
+  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--inline'));
 }
 
 /**
