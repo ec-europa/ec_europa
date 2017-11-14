@@ -26,7 +26,7 @@ function ec_europa_file_widget($variables) {
     }
 
     // Added the JS file to the element upload to be rendered.
-    $element['upload']['#attached']['js'][] = drupal_get_path('theme', 'ec_europa') . '/assets/js/components/file-upload.js';
+    $element['upload']['#attached']['js'][] = drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/file-upload.js';
 
     // Immediately render hidden elements before the rest of the output.
     // The uploadprogress extension requires that the hidden identifier input

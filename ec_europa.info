@@ -30,16 +30,15 @@ regions[footer_bottom] = Footer bottom
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = assets/css/ecl.css
-stylesheets[all][] = assets/css/europa.css
+stylesheets[all][] = assets/styles/ecl.css
 
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = assets/js/misc/ajax.js
-scripts[] = assets/js/ecl.js
-scripts[] = assets/js/europa_tabs.js
-scripts[] = assets/js/components/table-responsive.js
+scripts[] = assets/scripts/misc/ajax.js
+scripts[] = assets/scripts/ecl.js
+scripts[] = assets/scripts/europa_tabs.js
+scripts[] = assets/scripts/components/table-responsive.js
 
 ; ========================================
 ; Settings

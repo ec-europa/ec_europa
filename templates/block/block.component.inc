@@ -53,8 +53,8 @@ function ec_europa_preprocess_block(&$variables, $hook) {
     global $language;
 
     // selectify.js is the library to convert between ul and select.
-    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/selectify.js');
-    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/components/lang-switcher.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/selectify.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/lang-switcher.js');
 
     // Initialize variables.
     $not_available = '';
@@ -96,7 +96,7 @@ function ec_europa_preprocess_block(&$variables, $hook) {
   // Site-level language switcher.
   if (isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
     // Add the js to make it function.
-    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/components/lang-select-site.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/lang-select-site.js');
   }
 
   $variables['atomium']['attributes']['title']->append('class', 'block__title');
@@ -120,7 +120,7 @@ function ec_europa_preprocess_block(&$variables, $hook) {
           drupal_add_js(array('ec_europa' => array('exposedBlockId' => $variables['block_html_id'])), 'setting');
 
           // Adding filters.js file.
-          drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/js/components/filters.js');
+          drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/filters.js');
         }
       }
     }
