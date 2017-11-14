@@ -19,7 +19,7 @@ function ec_europa_preprocess_html(&$variables, $hook) {
 
   // Add the ie9 only css.
   drupal_add_css(
-    $this_theme_path . '/assets/css/ie9.css',
+    $this_theme_path . '/assets/styles/ie9.css',
     array(
       'browsers' => array(
         'IE' => 'IE 9',
@@ -31,7 +31,7 @@ function ec_europa_preprocess_html(&$variables, $hook) {
   $ie9_js = array(
     '#tag' => 'script',
     '#attributes' => array(
-      'src' => file_create_url($this_theme_path . '/assets/js/ie9.js'),
+      'src' => file_create_url($this_theme_path . '/assets/scripts/ie9.js'),
     ),
     '#prefix' => '<!--[if IE 9]>',
     '#suffix' => '<![endif]-->',

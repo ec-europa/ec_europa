@@ -4,8 +4,8 @@ const source_folder = __dirname + "/node_modules/@ec-europa";
 module.exports = {
   scripts: [
     {
-      entry: path.resolve(__dirname, "assets/js/entry.js"),
-      dest: path.resolve(__dirname, "assets/js/ecl.js"),
+      entry: path.resolve(__dirname, "assets/scripts/entry.js"),
+      dest: path.resolve(__dirname, "assets/scripts/europa.js"),
       options: {
         sourceMap: false,
         moduleName: "ECL"
@@ -18,14 +18,14 @@ module.exports = {
         source_folder,
         "ecl-components-preset-base/index.scss"
       ),
-      dest: path.resolve(__dirname, "assets/css/ecl.css"),
+      dest: path.resolve(__dirname, "assets/styles/europa.css"),
       options: {
         sourceMap: false
       }
     },
     {
       entry: path.resolve(__dirname, "assets/src/scss/editor-index.scss"),
-      dest: path.resolve(__dirname, "wysiwyg/editor.css"),
+      dest: path.resolve(__dirname, "assets/styles/wysiwyg/editor.css"),
       options: {
         sourceMap: false
       }
