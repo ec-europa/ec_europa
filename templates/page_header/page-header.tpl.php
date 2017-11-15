@@ -7,10 +7,12 @@
 ?>
 <div class="ecl-page-header">
   <?php print render($breadcrumb); ?>
-  <div class="ecl-page-header__body ecl-container">
+  <div class="ecl-page-header__body">
       <?php if (!empty($identity)): ?>
-        <div class="ecl-page-header__identity">
-          <?php print render($identity); ?>
+        <div class="ecl-container">
+            <div class="ecl-page-header__identity">
+              <?php print render($identity); ?>
+            </div>
         </div>
       <?php endif; ?>
       <?php if (!empty($meta)): ?>
@@ -19,11 +21,13 @@
         </div>
       <?php endif; ?>
       <?php if (!empty($title)): ?>
-        <div class="ecl-page-header__title">
-          <?php print render($title_prefix); ?>
-          <h1 class="ecl-heading ecl-heading--h1 ecl-u-color-white"><?php print render($title); ?></h1>
-          <?php print render($title_suffix); ?>
-        </div>
+      <div class="ecl-container">
+          <div class="ecl-page-header__title">
+              <?php print render($title_prefix); ?>
+              <h1 class="ecl-heading ecl-heading--h1 ecl-u-color-white"><?php print render($title); ?></h1>
+              <?php print render($title_suffix); ?>
+          </div>
+      </div>
       <?php endif; ?>
       <?php if (!empty($introduction)): ?>
         <div class="ecl-page-header__intro">

@@ -116,8 +116,8 @@ $ npm run build
 
 This will:
 
-1. Compile ECL SASS to `./assets/css/ecl.css`
-2. Transpile ECL JavaScript dependencies from `./assets/js/entry.js` to `./assets/js/ecl.js`
+1. Compile ECL SASS to `./assets/styles/europa.css`
+2. Transpile ECL JavaScript dependencies from `./assets/scripts/entry.js` to `./assets/scripts/europa.js`
 3. Copy ECL fonts to `./assets/fonts/`
 4. Copy ECL images to `./assets/images/`
 
