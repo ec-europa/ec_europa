@@ -10,17 +10,11 @@
  */
 function ec_europa_preprocess_menu_tree__main_menu(&$variables, $hook) {
   if (isset($variables['#tree'])) {
-    $children = element_children($variables['#tree']);
-    if (isset($children[0])) {
-      $item = $variables['#tree'][$children[0]];
-      if ($item) {
-        $original_link = $item['#original_link'];
-        $menu = menu_load($original_link['menu_name']);
+    if ($children = element_children($variables['#tree'])) {
+      if ($item = $variables['#tree'][$children[0]]) {
+        $menu = menu_load($item['#original_link']['menu_name']);
         $variables['title'] = $menu['title'];
-        if ($variables['depth'] > 1) {
-          $variables['atomium']['attributes']['wrapper']
-            ->append('id', 'nav-menu-expandable-group-' . $original_link['plid']);
-        }
+
         if ($variables['depth'] == 1) {
           $variables['atomium']['attributes']['wrapper']
             ->append('class', 'ecl-navigation-menu__root')
@@ -28,11 +22,18 @@ function ec_europa_preprocess_menu_tree__main_menu(&$variables, $hook) {
         }
         else {
           $variables['atomium']['attributes']['wrapper']
+            ->append('id', 'nav-menu-expandable-group-' . $item['#original_link']['plid']);
+          $variables['atomium']['attributes']['wrapper']
             ->append('class', 'ecl-navigation-menu__group');
         }
       }
     }
   }
+
+  if (1 == $variables['depth']) {
+    $variables['atomium']['attributes']['wrapper']->append('aria-hidden', 'true');
+  }
+
 }
 
 /**
