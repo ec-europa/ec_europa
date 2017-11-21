@@ -44,4 +44,8 @@
  * @ingroup themeable
  */
 ?>
-<?php print render($content); ?>
+<section<?php print $atomium['attributes']['wrapper']; ?>>
+  <?php print render($title_prefix); ?>
+  <?php print render($title_suffix); ?>
+  <?php print render($content); ?>
+</section>

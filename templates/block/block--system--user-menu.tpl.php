@@ -45,6 +45,8 @@
  */
 ?>
 <section<?php print $atomium['attributes']['wrapper']; ?>>
+  <?php print render($title_prefix); ?>
+  <?php print render($title_suffix); ?>
   <?php if (!empty($content)): ?>
   <div class="block__content">
     <?php print render($content); ?>

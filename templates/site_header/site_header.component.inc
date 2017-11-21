@@ -62,5 +62,6 @@ function ec_europa_atomium_definition_site_header() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_site_header(&$variables, $hook) {
-  $variables['menu'] = menu_tree('user-menu');
+  $blockObject = block_load('system', 'user-menu');
+  $variables['menu'] = _block_get_renderable_array(_block_render_blocks(array($blockObject)));
 }
