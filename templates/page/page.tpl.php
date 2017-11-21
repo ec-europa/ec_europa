@@ -131,21 +131,21 @@
     <div class="ecl-container">
       <?php if (!empty($page['content_top'])): ?>
         <a id="top-content" tabindex="-2"></a>
-        <div class="row">
+        <div class="content_top">
           <?php print render($page['content_top']); ?>
         </div>
       <?php endif; ?>
       <a id="main-content" tabindex="-1"></a>
-      <div class="row">
+      <div class="ecl-row">
         <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="col-md-3" role="complementary">
+          <aside class="ecl-col-sm-3" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside> <!-- /#sidebar-first -->
         <?php endif; ?>
 
         <section class="section <?php print $content_column_class; ?>">
           <?php if (!empty($page['highlighted'])): ?>
-            <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+            <div class="highlighted"><?php print render($page['highlighted']); ?></div>
           <?php endif; ?>
 
           <?php if (!empty($messages)): ?>
@@ -158,7 +158,7 @@
         </section>
 
         <?php if (!empty($page['sidebar_second'])): ?>
-          <aside class="col-md-3" role="complementary">
+          <aside class="ecl-col-sm-3" role="complementary">
             <?php print render($page['sidebar_second']); ?>
           </aside>  <!-- /#sidebar-second -->
         <?php endif; ?>
