@@ -62,6 +62,21 @@ function ec_europa_atomium_definition_site_header() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_site_header(&$variables, $hook) {
-  $blockObject = block_load('system', 'user-menu');
-  $variables['menu'] = _block_get_renderable_array(_block_render_blocks(array($blockObject)));
+  $variables['#atomium_recursive'] = TRUE;
+  $block = block_load('system', 'user-menu');
+
+  $variables['menu'] = _block_get_renderable_array(_block_render_blocks(array($block)));
+
+  $variables['menu']['system_user-menu']['#theme_wrappers'] = array_map(function ($item) use ($variables, $block) {
+    return str_replace(
+      '-',
+      '_',
+      sprintf(
+        '%s__%s__%s',
+        $item,
+        $block->module,
+        $block->delta
+      )
+    );
+  }, $variables['menu']['system_user-menu']['#theme_wrappers']);
 }

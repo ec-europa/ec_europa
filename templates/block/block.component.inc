@@ -139,3 +139,10 @@ function ec_europa_preprocess_block(&$variables, $hook) {
     ->append('class', 'ecl-clearfix')
     ->append('id', $variables['block_html_id']);
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_block__system__user_menu(&$variables, $hook) {
+  $variables['title']['#attributes']['class'][] = 'ecl-u-sr-only';
+}
