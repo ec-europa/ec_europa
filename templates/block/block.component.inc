@@ -126,14 +126,6 @@ function ec_europa_preprocess_block(&$variables, $hook) {
     }
   }
 
-  if (isset($variables['elements']['#markup'])) {
-    // If "#markup" is set, that means it is the case of custom block
-    // with "body field" that can contain simple HTML tags without "ecl"
-    // classes.
-    // Then the namespace CSS class must be added.
-    $variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
-  }
-
   $variables['atomium']['attributes']['content']->append('class', 'block__content');
   $variables['atomium']['attributes']['wrapper']
     ->append('class', 'ecl-clearfix')
@@ -143,6 +135,6 @@ function ec_europa_preprocess_block(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_block__system__user_menu(&$variables, $hook) {
-  $variables['title']['#attributes']['class'][] = 'ecl-u-sr-only';
+function ec_europa_preprocess_block__content(&$variables, $hook) {
+  $variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
 }
