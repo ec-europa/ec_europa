@@ -138,3 +138,10 @@ function ec_europa_preprocess_block(&$variables, $hook) {
 function ec_europa_preprocess_block__content(&$variables, $hook) {
   $variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_block__system__user_menu(&$variables, $hook) {
+  $variables['title']['#attributes']['class'][] = 'ecl-u-sr-only';
+}
