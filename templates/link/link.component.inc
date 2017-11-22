@@ -108,9 +108,7 @@ function ec_europa_atomium_definition_form_link($form, &$form_state) {
  * Implements hook_preprocess_HOOK().
  */
 function ec_europa_preprocess_link(&$variables, $hook) {
-  if ($variables['atomium']['attributes']['element']->contains('class', 'ecl-')) {
-    $variables['atomium']['attributes']['element']->append('class', 'ecl-link');
-  }
+  $variables['atomium']['attributes']['element']->append('class', 'ecl-link');
 
   // Add the class for the external links.
   if (_ec_europa_url_is_external($variables['path'])
