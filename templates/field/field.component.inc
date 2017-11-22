@@ -34,10 +34,9 @@ function ec_europa_preprocess_field(&$variables, $hook) {
       }
     }
 
-    // In case of "Long text" or "Long text and summary" field, inject the
-    // namespace class in the item class.
+    // Inject a specific class when a field might use the WYSIWIG editor.
     if (in_array($element['#field_type'], array('text_with_summary', 'text_long'))) {
-      foreach ($variables['items'] as $delta => $item) {
+      foreach (array_keys($variables['items']) as $delta) {
         $variables['atomium']['attributes'][$delta]->append('class', 'ecl-editor');
       }
     }
