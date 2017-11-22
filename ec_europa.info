@@ -20,12 +20,8 @@ regions[content] = Content
 regions[content_bottom] = Content bottom
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
-regions[footer_improved] = Footer Improved
-regions[footer] = Footer
-regions[footer_right] = Footer right
 regions[footer_middle] = Footer middle
-regions[footer_left] = Footer left
-regions[footer_bottom] = Footer bottom
+regions[footer_right] = Footer right
 
 ; ========================================
 ; Stylesheets
