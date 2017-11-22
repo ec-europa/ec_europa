@@ -44,7 +44,7 @@
  * @ingroup themeable
  */
 ?>
-<section<?php print $atomium['attributes']['wrapper']->append('class', 'ecl-footer__social-links'); ?>>
+<section<?php print $atomium['attributes']['wrapper']; ?>>
   <?php print render($title_prefix); ?>
   <?php if (!empty($title)): ?>
     <h4<?php print $atomium['attributes']['title']; ?>><?php print render($title); ?></h4>
