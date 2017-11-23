@@ -6,6 +6,52 @@
  */
 
 /**
+ * Implements hook_atomium_definition_hook().
+ */
+function ec_europa_atomium_definition_block() {
+  return array(
+    'label' => 'Block',
+    'description' => 'Blocks.',
+    'dependencies' => array('block'),
+    'disable' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_block($form, &$form_state) {
+  global $theme_key;
+
+  // List of blocks we want to preview. Format: [module]:[delta].
+  $block_whitelist = array(
+    'system:main-menu',
+    'system:user-menu',
+  );
+
+  module_load_include('inc', 'block', 'block.admin');
+  $blocks = block_admin_display_prepare_blocks($theme_key);
+
+  foreach ($blocks as $block) {
+    $block_id = $block['module'] . ':' . $block['delta'];
+
+    if (!in_array($block_id, $block_whitelist)) {
+      continue;
+    }
+
+    $form['blocks'][] = array(
+      '#type' => 'fieldset',
+      '#title' => sprintf('Block ([module]:[delta]) (%s)', $block_id),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      'content' => _atomium_block_get_render_array($block['module'], $block['delta']),
+    );
+  }
+
+  return $form;
+}
+
+/**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_block(&$variables, $hook) {
