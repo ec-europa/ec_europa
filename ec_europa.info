@@ -20,7 +20,6 @@ regions[content] = Content
 regions[content_bottom] = Content bottom
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
-regions[footer_left] = Footer left
 regions[footer_middle] = Footer middle
 regions[footer_right] = Footer right
 

@@ -87,7 +87,6 @@ function ec_europa_preprocess_page(&$variables, $hook) {
 
   $variables['footer'] = array(
     '#theme' => array('footer'),
-    '#footer_left' => $variables['page']['footer_left'],
     '#footer_right' => $variables['page']['footer_right'],
     '#footer_middle' => $variables['page']['footer_middle'],
   );

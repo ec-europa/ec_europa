@@ -66,4 +66,26 @@ function ec_europa_preprocess_footer(&$variables, $hook) {
       )
     );
   }
+
+  $variables['footer_left'] = array(
+    '#theme' => array('html_tag'),
+    '#tag' => 'h4',
+    '#attributes' => array(
+      'class' => array(
+        'ecl-h4',
+      ),
+    ),
+    array(
+      '#theme' => 'link',
+      '#path' => '<front>',
+      '#text' => variable_get('site_name', ''),
+      '#options' => array(
+        'attributes' => array(
+          'class' => array(
+            'ecl-footer__link',
+          ),
+        ),
+      ),
+    ),
+  );
 }
