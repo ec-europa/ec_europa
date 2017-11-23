@@ -12,7 +12,7 @@ function ec_europa_atomium_definition_language_selector_site_language_list() {
   return array(
     'label' => 'Language selector site language list',
     'description' => 'language_selector_site_language_list.',
-    'dependencies' => array('language_selector_site_language_list', 'splash_screen'),
+    'dependencies' => array('language_selector_site', 'splash_screen'),
   );
 }
 
