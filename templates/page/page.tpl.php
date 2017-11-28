@@ -103,6 +103,16 @@
     <?php print render($page['navigation']); ?>
   <?php endif; ?>
 
+  <div class="ecl-container ecl-u-mv-l">
+    <?php if (!empty($page['highlighted'])): ?>
+      <div class="highlighted"><?php print render($page['highlighted']); ?></div>
+    <?php endif; ?>
+
+    <?php if (!empty($messages)): ?>
+      <?php print render($messages); ?>
+    <?php endif; ?>
+  </div>
+
   <!-- Utility sections -->
   <?php if (!empty($page['utility'])): ?>
     <div class="utility">
@@ -112,23 +122,8 @@
     </div>
   <?php endif; ?>
 
-  <!-- Generic sections -->
-  <div class="ecl-container">
-    <?php if (!empty($tabs)): ?>
-      <?php print render($tabs); ?>
-    <?php endif; ?>
-
-    <?php if (!empty($page['help'])): ?>
-      <?php print render($page['help']); ?>
-    <?php endif; ?>
-
-    <?php if (!empty($action_links)): ?>
-      <ul class="action-links"><?php print render($action_links); ?></ul>
-    <?php endif; ?>
-  </div>
-
   <div class="page-content">
-    <div class="ecl-container">
+    <div class="ecl-container ecl-u-mv-l">
       <?php if (!empty($page['content_top'])): ?>
         <a id="top-content" tabindex="-2"></a>
         <div class="content_top">
@@ -136,6 +131,25 @@
         </div>
       <?php endif; ?>
       <a id="main-content" tabindex="-1"></a>
+      <h1 class="ecl-heading ecl-heading--h1"><?php print render($title); ?></h1>
+
+      <!-- Generic sections -->
+      <div class="ecl-container">
+        <div class="ecl-row">
+          <?php if (!empty($tabs)): ?>
+            <?php print render($tabs); ?>
+          <?php endif; ?>
+
+          <?php if (!empty($page['help'])): ?>
+            <?php print render($page['help']); ?>
+          <?php endif; ?>
+
+          <?php if (!empty($action_links)): ?>
+            <ul class="action-links"><?php print render($action_links); ?></ul>
+          <?php endif; ?>
+        </div>
+      </div>
+
       <div class="ecl-row">
         <?php if (!empty($page['sidebar_first'])): ?>
           <aside class="ecl-col-sm-3" role="complementary">
@@ -144,14 +158,6 @@
         <?php endif; ?>
 
         <section class="section <?php print $content_column_class; ?>">
-          <?php if (!empty($page['highlighted'])): ?>
-            <div class="highlighted"><?php print render($page['highlighted']); ?></div>
-          <?php endif; ?>
-
-          <?php if (!empty($messages)): ?>
-            <?php print render($messages); ?>
-          <?php endif; ?>
-
           <?php print render($page['content']); ?>
 
           <?php print render($page['content_bottom']); ?>
