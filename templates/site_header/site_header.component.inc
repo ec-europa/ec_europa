@@ -23,7 +23,7 @@ function ec_europa_atomium_theme_site_header() {
           '#theme' => array('logo'),
           '#title' => t('Home - European Commission'),
           '#attributes' => array(
-            'class' => array('ecl-site-header__logo', 'ecl-logo--logotype'),
+            'class' => array('ecl-site-header__logo', 'ecl-logo'),
           ),
         ),
         'lang_select_site' => array(
@@ -64,4 +64,14 @@ function ec_europa_atomium_definition_site_header() {
 function ec_europa_preprocess_site_header(&$variables, $hook) {
   $variables['#atomium_recursive'] = TRUE;
   $variables['menu'] = _atomium_block_get_render_array('system', 'user-menu');
+
+  // There is a bigger probability that visited pages would not be the homepage.
+  // So, instead of using a negative condition (!drupal_is_front_page()), I check
+  // Only when we are on frontpage. We'll gain a bit of performance here.
+  if (drupal_is_front_page()) {
+    $variables['logo']['#attributes'] = $variables['atomium']['attributes']['logo']
+      ->attributes($variables['logo']['#attributes'])
+      ->replace('class', 'ecl-logo', 'ecl-logo--logotype')
+      ->toArray();
+  }
 }
