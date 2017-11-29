@@ -104,4 +104,9 @@ function ec_europa_preprocess_page(&$variables, $hook) {
       '#theme' => array('splash__' . $variables['theme_hook_original']),
     );
   }
+
+  // Remove member "action_links" if there is no items to render.
+  if (empty($variables['action_links']['#items'])) {
+    unset($variables['action_links']);
+  }
 }
