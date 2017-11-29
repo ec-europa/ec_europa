@@ -3,8 +3,59 @@
     "description": "EC Europa base theme.",
     "git-version": "0.0.4",
     "type": "drupal-theme",
+    "license": "EUPL-1.1",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require-dev": {
-        "drupal/coder": "^8.2",
-        "phpro/grumphp": "^0.11"
+        "ec-europa/oe-code-review": "^0.0.2",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/preserve-paths": "^0.1",
+        "drupal/drupal": "~7.0",
+        "drupal/composer_autoloader": "^1.0",
+        "drush/drush": "~8.0",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "mikey179/vfsstream": "~1.2",
+        "nuvoleweb/robo-config": "~0.1",
+        "drupal/drupal-extension": "~3.3",
+        "drupal/atomium": "2.x-dev",
+        "drupal/date": "*",
+        "drupal/views": "*",
+        "drupal/views_ui": "*",
+        "drupal/libraries": "*",
+        "drupal/entity_translation": "*",
+        "drupal/date_views": "*",
+        "drupal/date_popup": "*",
+        "drupal/date_api": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        }
+    ],
+    "scripts": {
+        "post-update-cmd": "./vendor/bin/robo project:setup",
+        "post-install-cmd": "./vendor/bin/robo project:setup",
+        "grumphp": "./vendor/bin/grumphp run",
+        "behat": "./vendor/bin/behat"
+    },
+    "extra": {
+        "patches": {
+            "drupal/drupal": {
+                "https://www.drupal.org/node/2482549": "https://www.drupal.org/files/issues/ignore_node_module-2482549-27_0.patch"
+            }
+        },
+        "installer-paths": {
+            "build/": ["type:drupal-core"],
+            "build/profiles/{$name}/": ["type:drupal-profile"],
+            "build/sites/all/drush/{$name}/": ["type:drupal-drush"],
+            "build/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
+            "build/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"]
+        },
+        "preserve-paths": [
+            "build/sites/default"
+        ]
     }
 }
