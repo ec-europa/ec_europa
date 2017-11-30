@@ -15,8 +15,10 @@ function ec_europa_atomium_theme_footer() {
         'footer_left' => NULL,
         'footer_right' => NULL,
         'footer_middle' => NULL,
-        'footer_bottom' => NULL,
-        'footer_improved' => NULL,
+        'footer_corporate_left' => NULL,
+        'footer_corporate_middle' => NULL,
+        'footer_corporate_right' => NULL,
+        'footer_ec' => NULL,
       ),
       'template' => 'footer',
     ),
@@ -27,22 +29,33 @@ function ec_europa_atomium_theme_footer() {
  * Implements hook_atomium_definition_hook().
  */
 function ec_europa_atomium_definition_footer() {
-
-  $footer_improved = '<div class="ecl-col-sm ecl-footer__column"><h4 class="ecl-h4"><a class="ecl-link ecl-footer__link" href="#">Digital single market</a></h4></div><div class="ecl-col-sm ecl-footer__column"><p class="ecl-footer__label">Follow us:</p><ul class="ecl-footer__menu ecl-list-inline"><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--facebook ecl-footer__social-icon"></span>Facebook</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link ecl-link--external" href="#">Other social media</a></li></ul></div><div class="ecl-col-sm ecl-footer__column"><ul class="ecl-footer__menu ecl-list-inline"><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link" href="#">Contact</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link" href="#">Site map</a></li></ul></div>';
-  $footer_left = '<h4 class="ecl-h4 ecl-footer__title">European Commission</h4><ul class="ecl-footer__menu"><li class="ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="https://ec.europa.eu/commission/index_en">Commission and its priorities</a></li><li class="ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="https://ec.europa.eu/info/index_en">Policies information and services</a></li></ul>';
-  $footer_middle = '<h4 class="ecl-h4 ecl-footer__title">Follow the European Commission</h4><ul class="ecl-footer__menu ecl-list-inline"><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--facebook ecl-footer__social-icon"></span>Facebook</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link ecl-link--external" href="#">Other social media</a></li></ul>';
-  $footer_right = '<h4 class="ecl-h4 ecl-footer__title">European Union</h4><ul class="ecl-footer__menu"><li class="ecl-footer__menu-item"><a class="ecl-link ecl-footer__link ecl-link--external" href="#">EU institutions</a></li><li class="ecl-footer__menu-item"><a class="ecl-link ecl-footer__link ecl-link--external" href="#">European Union</a></li></ul>';
-  $footer_bottom = '<ul class="ecl-list-inline ecl-footer__menu"><li class="ecl-list-inline__item ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="http://ec.europa.eu/info/about-commissions-new-web-presence_en">About the Commission\'s new web presence</a></li><li class="ecl-list-inline__item ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="http://ec.europa.eu/info/resources-partners_en">Resources for partners</a></li><li class="ecl-list-inline__item ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="http://ec.europa.eu/info/cookies_en">Cookies</a></li><li class="ecl-list-inline__item ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="http://ec.europa.eu/info/legal-notice_en">Legal notice</a></li><li class="ecl-list-inline__item ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="http://ec.europa.eu/info/contact_en">Contact</a></li></ul>';
+  $footer_middle = '<p class="ecl-footer__label">Follow us:</p>
+          <ul class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--facebook ecl-footer__social-icon"></span>Facebook</a>
+            </li>
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a>
+            </li>
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link ecl-link--external" href="#">Other social media</a>
+            </li>
+          </ul>';
+  $footer_right = '<ul class="ecl-footer__menu ecl-list--unstyled">
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link" href="#">Contact</a>
+            </li>
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link" href="#">Site map</a>
+            </li>
+          </ul>';
 
   return array(
     'label' => 'Footer',
     'description' => 'Footer.',
     'preview' => array(
-      'footer_left' => $footer_left,
-      'footer_right' => $footer_right,
       'footer_middle' => $footer_middle,
-      'footer_bottom' => $footer_bottom,
-      'footer_improved' => $footer_improved,
+      'footer_right' => $footer_right,
     ),
   );
 }
@@ -52,4 +65,37 @@ function ec_europa_atomium_definition_footer() {
  */
 function ec_europa_preprocess_footer(&$variables, $hook) {
   $variables['#atomium_recursive'] = TRUE;
+
+  $variables_block_mapping = array(
+    'footer_corporate_left' => array('menu', 'menu-nexteuropa-site-links'),
+    'footer_corporate_middle' => array('menu', 'menu-nexteuropa-social-media'),
+    'footer_corporate_right' => array('menu', 'menu-nexteuropa-inst-links'),
+    'footer_ec' => array('menu', 'menu-nexteuropa-service-links'),
+  );
+
+  foreach ($variables_block_mapping as $name => $data) {
+    $variables[$name] = _atomium_block_get_render_array($data[0], $data[1]);
+  }
+
+  $variables['footer_left'] = array(
+    '#theme' => array('html_tag'),
+    '#tag' => 'h4',
+    '#attributes' => array(
+      'class' => array(
+        'ecl-h4',
+      ),
+    ),
+    array(
+      '#theme' => 'link',
+      '#path' => '<front>',
+      '#text' => variable_get('site_name', ''),
+      '#options' => array(
+        'attributes' => array(
+          'class' => array(
+            'ecl-footer__link',
+          ),
+        ),
+      ),
+    ),
+  );
 }
