@@ -49,7 +49,7 @@
   <?php print render($title_suffix); ?>
   <?php if (!empty($content)): ?>
     <nav<?php print $atomium['attributes']['nav']->append('class', 'ecl-navigation-list-wrapper'); ?>>
-      <?php print render($title); ?>
+      <h2 class="ecl-u-sr-only"><?php print render($title); ?></h2>
       <?php print render($content); ?>
     </nav>
   <?php endif; ?>

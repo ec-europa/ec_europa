@@ -123,6 +123,20 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(&$variables,
 /**
  * Implements hook_preprocess_hook().
  */
+function ec_europa_preprocess_menu_link__nexteuropa_site_social_media(&$variables, $hook) {
+  $variables = _ec_europa_menu_link_footer_alter($variables);
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_menu_link__nexteuropa_site_custom_links(&$variables, $hook) {
+  $variables = _ec_europa_menu_link_footer_alter($variables);
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(&$variables, $hook) {
   $variables = _ec_europa_menu_link_footer_alter($variables);
 }

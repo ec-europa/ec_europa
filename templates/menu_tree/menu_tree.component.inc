@@ -8,6 +8,15 @@
 /**
  * Implements hook_preprocess_hook().
  */
+function ec_europa_preprocess_menu_tree__secondary(&$variables, $hook) {
+  // TODO: is this still necessary ?
+  $variables['atomium']['attributes']['wrapper']
+    ->append('class', array('menu', 'nav', 'navbar-nav', 'secondary'));
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
 function ec_europa_preprocess_menu_tree__main_menu(&$variables, $hook) {
   if (isset($variables['#tree'])) {
     if ($children = element_children($variables['#tree'])) {
@@ -86,8 +95,20 @@ function ec_europa_preprocess_menu_tree__menu_nexteuropa_site_links(&$variables,
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__secondary(&$variables, $hook) {
-  // TODO: is this still necessary ?
-  $variables['atomium']['attributes']['wrapper']
-    ->append('class', array('menu', 'nav', 'navbar-nav', 'secondary'));
+function ec_europa_preprocess_menu_tree__nexteuropa_site_social_media(&$variables, $hook) {
+  $variables['atomium']['attributes']['wrapper']->append(
+    'class',
+    array(
+      'ecl-footer__menu',
+      'ecl-list--inline',
+      'ecl-footer__social-links',
+    )
+  );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_menu_tree__nexteuropa_site_custom_links(&$variables, $hook) {
+  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--unstyled'));
 }
