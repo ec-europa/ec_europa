@@ -29,17 +29,33 @@ function ec_europa_atomium_theme_footer() {
  * Implements hook_atomium_definition_hook().
  */
 function ec_europa_atomium_definition_footer() {
-  $footer_left = '<h4 class="ecl-h4 ecl-footer__title">European Commission</h4><ul class="ecl-footer__menu"><li class="ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="https://ec.europa.eu/commission/index_en">Commission and its priorities</a></li><li class="ecl-footer__menu-item"><a class="ecl-link ecl-footer__link" href="https://ec.europa.eu/info/index_en">Policies information and services</a></li></ul>';
-  $footer_middle = '<h4 class="ecl-h4 ecl-footer__title">Follow the European Commission</h4><ul class="ecl-footer__menu ecl-list-inline"><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--facebook ecl-footer__social-icon"></span>Facebook</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a></li><li class="ecl-footer__menu-item ecl-list-inline__item"><a class="ecl-link ecl-footer__link ecl-link--external" href="#">Other social media</a></li></ul>';
-  $footer_right = '<h4 class="ecl-h4 ecl-footer__title">European Union</h4><ul class="ecl-footer__menu"><li class="ecl-footer__menu-item"><a class="ecl-link ecl-footer__link ecl-link--external" href="#">EU institutions</a></li><li class="ecl-footer__menu-item"><a class="ecl-link ecl-footer__link ecl-link--external" href="#">European Union</a></li></ul>';
+  $footer_middle = '<p class="ecl-footer__label">Follow us:</p>
+          <ul class="ecl-footer__menu ecl-list--inline ecl-footer__social-links">
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--facebook ecl-footer__social-icon"></span>Facebook</a>
+            </li>
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link" href="#"><span class="ecl-icon ecl-icon--twitter ecl-footer__social-icon"></span>Twitter</a>
+            </li>
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link ecl-link--external" href="#">Other social media</a>
+            </li>
+          </ul>';
+  $footer_right = '<ul class="ecl-footer__menu ecl-list--unstyled">
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link" href="#">Contact</a>
+            </li>
+            <li class="ecl-footer__menu-item">
+              <a class="ecl-link ecl-footer__link" href="#">Site map</a>
+            </li>
+          </ul>';
 
   return array(
     'label' => 'Footer',
     'description' => 'Footer.',
     'preview' => array(
-      'footer_left' => $footer_left,
-      'footer_right' => $footer_right,
       'footer_middle' => $footer_middle,
+      'footer_right' => $footer_right,
     ),
   );
 }
