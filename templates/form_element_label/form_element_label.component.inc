@@ -29,13 +29,6 @@ function ec_europa_preprocess_form_element_label(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_form_element_label__form_element__textarea(&$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->remove('class', 'ecl-form-label');
-}
-
-/**
- * Implements hook_preprocess_hook().
- */
 function ec_europa_preprocess_form_element_label__form_element__checkbox(&$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-checkbox__label');
 
