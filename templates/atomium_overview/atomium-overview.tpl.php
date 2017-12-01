@@ -7,11 +7,15 @@
 ?>
 <h2 class="ecl-heading ecl-heading--h2"><?php print t('Components selector (&plusmn;@count)', array('@count' => count($definitions))) ?></h2>
 
-<select class="ecl-select" onchange="location = this.options[this.selectedIndex].value;">
-  <?php foreach ($definitions as $name => $definition): ?>
-    <option value="#<?php print $name ?>"><?php print $definition['label'] ?></option>
-  <?php endforeach; ?>
-</select>
+<div>
+    <select class="ecl-select" onchange="location = this.options[this.selectedIndex].value;">
+        <option value=""><?php print t('Choose a component'); ?></option>
+        <?php foreach ($definitions as $name => $definition): ?>
+          <option value="#<?php print $name ?>"><?php print $definition['label'] ?></option>
+        <?php endforeach; ?>
+    </select>
+    <p class="ecl-help-block">Choose a component.</p>
+</div>
 
 <h2 class="ecl-heading ecl-heading--h2"><?php print t('EC Europa components') ?></h2>
 
