@@ -136,38 +136,42 @@
       <!-- Generic sections -->
       <div class="ecl-container">
         <div class="ecl-row">
-          <?php if (!empty($tabs)): ?>
-            <?php print render($tabs); ?>
-          <?php endif; ?>
+            <div class="ecl-col">
+              <?php if (!empty($tabs)): ?>
+                <?php print render($tabs); ?>
+              <?php endif; ?>
 
-          <?php if (!empty($page['help'])): ?>
-            <?php print render($page['help']); ?>
-          <?php endif; ?>
+              <?php if (!empty($page['help'])): ?>
+                <?php print render($page['help']); ?>
+              <?php endif; ?>
 
-          <?php if (!empty($action_links)): ?>
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
+              <?php if (!empty($action_links)): ?>
+                  <ul class="action-links"><?php print render($action_links); ?></ul>
+              <?php endif; ?>
+            </div>
         </div>
       </div>
 
       <div class="ecl-row">
-        <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="ecl-col-sm-3" role="complementary">
-            <?php print render($page['sidebar_first']); ?>
-          </aside> <!-- /#sidebar-first -->
-        <?php endif; ?>
+          <div class="ecl-col">
+            <?php if (!empty($page['sidebar_first'])): ?>
+                <aside class="ecl-col-sm-3" role="complementary">
+                  <?php print render($page['sidebar_first']); ?>
+                </aside> <!-- /#sidebar-first -->
+            <?php endif; ?>
 
-        <section class="section <?php print $content_column_class; ?>">
-          <?php print render($page['content']); ?>
+              <section class="section <?php print $content_column_class; ?>">
+                <?php print render($page['content']); ?>
 
-          <?php print render($page['content_bottom']); ?>
-        </section>
+                <?php print render($page['content_bottom']); ?>
+              </section>
 
-        <?php if (!empty($page['sidebar_second'])): ?>
-          <aside class="ecl-col-sm-3" role="complementary">
-            <?php print render($page['sidebar_second']); ?>
-          </aside>  <!-- /#sidebar-second -->
-        <?php endif; ?>
+            <?php if (!empty($page['sidebar_second'])): ?>
+                <aside class="ecl-col-sm-3" role="complementary">
+                  <?php print render($page['sidebar_second']); ?>
+                </aside>  <!-- /#sidebar-second -->
+            <?php endif; ?>
+          </div>
       </div>
     </div>
   </div>
