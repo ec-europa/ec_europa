@@ -27,7 +27,6 @@ regions[footer_right] = Footer right
 ; Stylesheets
 ; ========================================
 stylesheets[all][] = assets/styles/europa.css
-stylesheets[all][] = assets/styles/override.css
 
 ; ========================================
 ; Scripts
