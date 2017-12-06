@@ -17,27 +17,6 @@ function ec_europa_preprocess_html(&$variables, $hook) {
     $variables['atomium']['attributes']['body']->append('class', 'language-' . $language->prefix);
   }
 
-  // Add the ie9 only css.
-  drupal_add_css(
-    $this_theme_path . '/assets/styles/ie9.css',
-    array(
-      'browsers' => array(
-        'IE' => 'IE 9',
-        '!IE' => FALSE,
-      ),
-    )
-  );
-  // Add conditional js.
-  $ie9_js = array(
-    '#tag' => 'script',
-    '#attributes' => array(
-      'src' => file_create_url($this_theme_path . '/assets/scripts/ie9.js'),
-    ),
-    '#prefix' => '<!--[if IE 9]>',
-    '#suffix' => '<![endif]-->',
-  );
-  drupal_add_html_head($ie9_js, 'ie9_js');
-
   // For some reason, the front page handles tokens different.
   if (drupal_is_front_page()) {
     $data = ['node' => menu_get_object('node')];

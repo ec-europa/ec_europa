@@ -29,19 +29,14 @@ function ec_europa_preprocess_menu_link__main_menu(&$variables, $hook) {
       $variables['output']['#options']['attributes']['class'][] = 'ecl-navigation-menu__link--active';
     }
   }
+
   // If the menu item has a submenu and has a depth of 1,
   // render it as a button.
-  if (!empty($variables['sub_menu']) && $link['depth'] == 1) {
+  if (!empty($variables['sub_menu'])) {
     $variables['output']['#options']['attributes']['id'][] = 'nav-menu-expandable-label-' . $link['mlid'];
     $variables['output']['#options']['attributes']['aria-controls'][] = 'nav-menu-expandable-group-' . $link['mlid'];
     $variables['output']['#options']['attributes']['aria-expanded'][] = 'false';
     $variables['output']['#options']['attributes']['aria-haspopup'][] = 'true';
-    $variables['output'] = array(
-      '#type' => 'html_tag',
-      '#tag' => 'button',
-      '#attributes' => $variables['output']['#options']['attributes'],
-      '#value' => $variables['output']['#text'],
-    );
   }
 }
 
@@ -123,6 +118,20 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(&$variables,
     $variables['output']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_menu_link__nexteuropa_site_social_media(&$variables, $hook) {
+  $variables = _ec_europa_menu_link_footer_alter($variables);
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_menu_link__nexteuropa_site_custom_links(&$variables, $hook) {
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**

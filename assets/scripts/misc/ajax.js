@@ -4,6 +4,8 @@
  */
 
 (function ($) {
+  Drupal.ajax = Drupal.ajax || {};
+  Drupal.ajax.prototype = Drupal.ajax.prototype || {};
 
   /**
    * Override Drupal's AJAX prototype beforeSend to append the throbber to pager.

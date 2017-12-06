@@ -82,16 +82,13 @@ function ec_europa_preprocess_page(&$variables, $hook) {
     // Adding generic introduction field to be later rendered in page template.
     $introduction = variable_get('ec_europa_introduction_field', FALSE);
     $variables['page_header']['#introduction'] = isset($node->{$introduction})
-      ? field_view_field('node', $node, $introduction, ['label' => 'hidden']) : NULL;
+      ? field_view_field('node', $node, $introduction, array('label' => 'hidden')) : NULL;
   }
 
   $variables['footer'] = array(
     '#theme' => array('footer'),
-    '#footer_left' => $variables['page']['footer_left'],
     '#footer_right' => $variables['page']['footer_right'],
     '#footer_middle' => $variables['page']['footer_middle'],
-    '#footer_bottom' => $variables['page']['footer_bottom'],
-    '#footer_improved' => $variables['page']['footer_improved'],
   );
 
   if (in_array("page__splash", $variables['theme_hook_suggestions'])) {
@@ -106,5 +103,10 @@ function ec_europa_preprocess_page(&$variables, $hook) {
     $variables['splash'] = array(
       '#theme' => array('splash__' . $variables['theme_hook_original']),
     );
+  }
+
+  // Remove member "action_links" if there is no items to render.
+  if (empty($variables['action_links']['#items'])) {
+    unset($variables['action_links']);
   }
 }

@@ -6,6 +6,52 @@
  */
 
 /**
+ * Implements hook_atomium_definition_hook().
+ */
+function ec_europa_atomium_definition_block() {
+  return array(
+    'label' => 'Block',
+    'description' => 'Blocks.',
+    'dependencies' => array('block'),
+    'disable' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_atomium_definition_form_hook().
+ */
+function ec_europa_atomium_definition_form_block($form, &$form_state) {
+  global $theme_key;
+
+  // List of blocks we want to preview. Format: [module]:[delta].
+  $block_whitelist = array(
+    'system:main-menu',
+    'system:user-menu',
+  );
+
+  module_load_include('inc', 'block', 'block.admin');
+  $blocks = block_admin_display_prepare_blocks($theme_key);
+
+  foreach ($blocks as $block) {
+    $block_id = $block['module'] . ':' . $block['delta'];
+
+    if (!in_array($block_id, $block_whitelist)) {
+      continue;
+    }
+
+    $form['blocks'][] = array(
+      '#type' => 'fieldset',
+      '#title' => sprintf('Block ([module]:[delta]) (%s)', $block_id),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      'content' => _atomium_block_get_render_array($block['module'], $block['delta']),
+    );
+  }
+
+  return $form;
+}
+
+/**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_block(&$variables, $hook) {
@@ -126,16 +172,15 @@ function ec_europa_preprocess_block(&$variables, $hook) {
     }
   }
 
-  if (isset($variables['elements']['#markup'])) {
-    // If "#markup" is set, that means it is the case of custom block
-    // with "body field" that can contain simple HTML tags without "ecl"
-    // classes.
-    // Then the namespace CSS class must be added.
-    $variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
-  }
-
   $variables['atomium']['attributes']['content']->append('class', 'block__content');
   $variables['atomium']['attributes']['wrapper']
     ->append('class', 'ecl-clearfix')
     ->append('id', $variables['block_html_id']);
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_block__content(&$variables, $hook) {
+  $variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
 }
