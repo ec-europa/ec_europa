@@ -27,7 +27,8 @@ pipeline:
   install-project:
     image: fpfis/php56-dev
     commands:
-      - "./vendor/bin/robo project:install -o 'database.host: mysql' -o 'site.base_url: http://web:8080'"
+      - "./vendor/bin/robo project:setup-behat -o 'site.base_url: http://web:8080'"
+      - "./vendor/bin/robo project:install -o 'database.host: mysql'"
     volumes:
       - /cache:/cache
 
