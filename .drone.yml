@@ -1,17 +1,32 @@
+# Define current workspace
+workspace:
+  base: /test
+  path: ec_europa
+
+# Define running services
 services:
   mysql:
     image: fpfis/mysql56
+  web:
+    image: fpfis/php56-dev
+    environment:
+     - DOCUMENT_ROOT=/test/ec_europa/build
 
+# Define the pipeline
 pipeline:
+
   install:
     image: fpfis/php56-dev
     commands:
       - composer self-update
       - composer install
+
+  install-project:
+    image: fpfis/php56-dev
+    commands:
+      - "./vendor/bin/robo project:install -o 'database.host: mysql' -o 'site.base_url: http://web:8080'"
+
   test:
     image: fpfis/php56-dev
     commands:
-      - './vendor/bin/robo project:install -o "database.host: mysql"'
-      - ./vendor/bin/drush --root=$PWD/build --debug runserver :8888 > ~/debug.txt 2>&1 &
-      - sleep 4s
       - ./vendor/bin/grumphp run
