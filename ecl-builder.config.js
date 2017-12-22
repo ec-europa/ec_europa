@@ -16,7 +16,7 @@ module.exports = {
     {
       entry: path.resolve(
         source_folder,
-        "ecl-components-preset-base/index.scss"
+        "ecl-preset-full/index.scss"
       ),
       dest: path.resolve(__dirname, "assets/styles/europa.css"),
       options: {
