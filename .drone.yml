@@ -18,8 +18,8 @@ pipeline:
   install:
     image: fpfis/php56-dev
     commands:
-      - composer self-update
-      - composer install
+      - composer self-update --ansi
+      - composer install --ansi
 
   install-project:
     image: fpfis/php56-dev
