@@ -27,15 +27,15 @@ pipeline:
   install-project:
     image: fpfis/php56-dev
     commands:
-      - "./vendor/bin/robo project:setup-behat -o 'site.base_url: http://web:8080'"
-      - "./vendor/bin/robo project:install -o 'database.host: mysql'"
+      - "./vendor/bin/robo project:setup-behat --ansi -o 'site.base_url: http://web:8080'"
+      - "./vendor/bin/robo project:install --ansi -o 'database.host: mysql'"
     volumes:
       - /cache:/cache
 
   test:
     image: fpfis/php56-dev
     commands:
-      - ./vendor/bin/grumphp run
+      - ./vendor/bin/grumphp --ansi run
 
 
 ###
