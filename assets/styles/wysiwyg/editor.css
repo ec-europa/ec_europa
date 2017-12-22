@@ -454,6 +454,13 @@ img {
   .ecl-editor blockquote::after {
     content: close-quote; }
 
+.ecl-editor a {
+  color: #004494;
+  margin: 0;
+  text-decoration: underline; }
+  .ecl-editor a:hover, .ecl-editor a:focus {
+    color: #404040; }
+
 .ecl-editor table {
   border-collapse: collapse;
   border-width: 0;

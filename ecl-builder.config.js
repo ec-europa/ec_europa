@@ -14,8 +14,18 @@ module.exports = {
   ],
   styles: [
     {
+      entry: path.resolve(
+        source_folder,
+        "ecl-preset-full/index.scss"
+      ),
+      dest: path.resolve(__dirname, "assets/styles/europa.css"),
+      options: {
+        sourceMap: false
+      }
+    },
+    {
       entry: path.resolve(__dirname, "assets/src/scss/editor-index.scss"),
-      dest: path.resolve(__dirname, "assets/styles/editor.css"),
+      dest: path.resolve(__dirname, "assets/styles/wysiwyg/editor.css"),
       options: {
         sourceMap: false
       }
