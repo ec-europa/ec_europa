@@ -18,6 +18,6 @@ styleguide/assets/
 vendor/
 composer.lock
 
-/robo.yml
+/runner.yml
 /behat.yml
 /build/
