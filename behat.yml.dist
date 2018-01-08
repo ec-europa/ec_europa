@@ -16,12 +16,12 @@ default:
     Behat\MinkExtension:
       goutte: ~
       selenium2: ~
-      base_url: !site.base_url
+      base_url: "${drupal.base_url}"
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
       drupal:
-        drupal_root: !site.root
+        drupal_root: "${drupal.root}"
       region_map:
         footer: "#footer"
         pager: ".ecl-pager__wrapper"

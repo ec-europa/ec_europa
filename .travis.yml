@@ -21,7 +21,7 @@ install:
 before_script:
   # Set sendmail so drush doesn't throw an error during site install.
   - echo "sendmail_path=`which true`" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
-  - robo project:install
+  - run drupal:site-install
   - drush --root=$PWD/build --debug runserver :8888 > ~/debug.txt 2>&1 &
   - sleep 4s
 
