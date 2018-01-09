@@ -24,14 +24,14 @@ module.exports = {
     "scenarios": [
         {
             "label": "EC Europa Theme test",
-            "url": "http://localhost:8881/atomium-overview",
-            "referenceUrl": "http://localhost:8882/atomium-overview",
+            "url": "http://localhost:8888/atomium-overview",
+            "referenceUrl": "http://localhost:8889/atomium-overview",
             "hideSelectors": [],
             "removeSelectors": [],
             "selectors": [
                 ".ecl-page-header",
-                "main-content",
-                "ecl-footer"
+                ".page-content",
+                ".ecl-footer"
             ],
             "readyEvent": null,
             "delay": 500,
