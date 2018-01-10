@@ -40,48 +40,41 @@ class VisualRegressionCommands extends BaseCommands {
     return $this->taskExec('./vendor/bin/run dsi --root=tests/reference/build --database-name=reference');
   }
 
-    /**
-     * Run BackStop tests.
-     *
-     * @command ec_europa:backstopjs
-     *
-     * @option command The backstop command.
-     *
-     * @param array $options
-     * @return $this $task
-     */
+  /**
+   * Run BackStop tests.
+   *
+   * @command ec_europa:backstopjs
+   */
   public function runBackstop(array $options = [
-        'command' => InputOption::VALUE_REQUIRED,
-    ])
-    {
-//        $projectName = $this->getComposer()->getName();
-        $exec = "{$options['command']}";
+    'command' => InputOption::VALUE_REQUIRED,
+  ]) {
+    $exec = "{$options['command']}";
 
-        $task = $this->taskDockerRun('backstopjs/backstopjs')
-            ->exec($exec);
-        return $task;
-    }
+    $task = $this->taskDockerRun('backstopjs/backstopjs')
+      ->exec($exec);
+    return $task;
+  }
 
-    /**
-     * Install reference site.
-     *
-     * @command ec_europa:run-test
-     */
-    public function runTestSite() {
-        return $this->taskServer(8888)
-            ->host('0.0.0.0')
-            ->dir('build');
-    }
+  /**
+   * Run server with test site.
+   *
+   * @command ec_europa:run-test
+   */
+  public function runTestSite() {
+    return $this->taskServer(8888)
+      ->host('0.0.0.0')
+      ->dir('build');
+  }
 
+  /**
+   * Run server with reference site.
+   *
+   * @command ec_europa:run-reference
+   */
+  public function runReferenceSite() {
+    return $this->taskServer(8889)
+      ->host('0.0.0.0')
+      ->dir('tests/reference/build');
+  }
 
-    /**
-     * Install reference site.
-     *
-     * @command ec_europa:run-reference
-     */
-    public function runReferenceSite() {
-        return $this->taskServer(8889)
-            ->host('0.0.0.0')
-            ->dir('tests/reference/build');
-    }
 }
