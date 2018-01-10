@@ -60,42 +60,23 @@
  * @ingroup themeable
  */
 ?>
-<div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <div class="comment__image">
-    <?php print $picture ?>
+<div<?php print $atomium['attributes']['wrapper']->append('class', 'ecl-row ecl-comment'); ?>>
+  <div class="ecl-comment__image-wrapper">
+    <?php print $picture; ?>
   </div>
-
-  <div class="comment__body">
-    <div class="comment-content-wrapper">
-      <div class="comment-content">
-        <?php if ($new): ?>
-          <span class="new"><?php print $new ?></span>
-        <?php endif; ?>
-        <div class="submitted comment__meta">
-          <span class="comment__author"><?php echo $author; ?></span>
-          <span class="comment__meta-separator"> | </span>
-          <span class="comment__date"><?php echo $created; ?></span>
-        </div>
-
-        <?php print render($title_prefix); ?>
-        <h3<?php print $atomium['attributes']['title']; ?>><?php print $title ?></h3>
-        <?php print render($title_suffix); ?>
-
-        <div class="content"<?php print $content_attributes; ?>>
-          <?php
-          // Hide the comments and links now so that we can render them later.
-          hide($content['links']);
-          print render($content);
-          ?>
-          <?php if ($signature): ?>
-            <div class="user-signature clearfix">
-              <?php print $signature ?>
-            </div>
-          <?php endif; ?>
-        </div>
-
-        <?php print render($content['links']) ?>
-      </div>
+  <div class="ecl-comment__body">
+    <div class="ecl-comment__meta">
+      <span class="ecl-comment__author"><?php print $author; ?></span> |
+      <span class="ecl-comment__date"><?php print $created; ?></span>
+    </div>
+    <?php print render($title_prefix); ?>
+    <a class="ecl-link ecl-heading ecl-heading--h3 ecl-comment__title" href="<?php print $path; ?>"><?php print $title ?></a>
+    <?php print render($title_suffix); ?>
+    <div class="ecl-comment__text">
+      <p class="ecl-paragraph"><?php hide($content['links']); print render($content);?></p>
+    </div>
+    <div class="ecl-comment__operations">
+      <?php print render($content['links']) ?>
     </div>
   </div>
 </div>

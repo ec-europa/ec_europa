@@ -19,3 +19,16 @@ function ec_europa_preprocess_links(&$variables, $hook) {
     $link['link']['#options']['attributes']['class'][] = 'ecl-link--standalone';
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ec_europa_preprocess_item_list__links__comment(&$variables, $hook) {
+  foreach ($variables['items'] as &$link) {
+    $link = $link['link'];
+    $link['#options']['attributes']['class'] = array_diff(
+      $link['#options']['attributes']['class'],
+      array('ecl-link--standalone')
+    );
+  }
+}
