@@ -37,20 +37,11 @@
  * @ingroup themeable
  */
 ?>
-<div id="comments" class="<?php print $classes; ?> comments__wrapper"<?php print $attributes; ?>>
-  <?php if ($content['comments'] && $node->type != 'forum'): ?>
-    <?php print render($title_prefix); ?>
-    <h2 class="title comments__count"><?php print ($comment_count . ' ' . t('Comments')); ?></h2>
-    <?php print render($title_suffix); ?>
-  <?php endif; ?>
-
+<div<?php print $atomium['attributes']['wrapper']; ?>>
   <?php print render($content['comments']); ?>
 
   <?php if ($content['comment_form']): ?>
-    <div class="comment__btn-add-wrap">
-      <button class="btn btn-primary comment__btn-add" data-toggle="collapse" data-target="#comment-form-wrapper"><?php print t('Add a comment'); ?></button>
-    </div>
-    <div id="comment-form-wrapper" class="collapse comment__form-wrapper">
+    <div id="comment-form-wrapper" class="comment__form-wrapper">
       <h3 class="title comment-form"><?php print t('Add new comment'); ?></h3>
       <?php print render($content['comment_form']); ?>
     </div>
