@@ -16,6 +16,7 @@ services:
 env:
   global:
     - PATH=$PATH:/home/travis/.composer/vendor/bin:$TRAVIS_BUILD_DIR/vendor/bin
+    - DOCKER_COMPOSE_VERSION=1.17.1
 
 before_install:
   # - sudo rm /usr/local/bin/docker-compose
