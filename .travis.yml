@@ -9,6 +9,8 @@ php:
   - 5.6
   - 7.1
 
+sudo: required
+
 services:
   - docker
   - docker-compose
