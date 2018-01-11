@@ -1,68 +1,39 @@
-matrix:
-  include:
+language: ruby
 
-    dist: precise
+  sudo: required
 
-    - language: php
+  services:
+    - docker
+    - docker-compose
 
-    git:
-      depth: 1
+  env:
+    global:
+      - DOCKER_COMPOSE_VERSION=1.17.1
 
-    php:
-      - 5.6
-      - 7.1
+  before_install:
+    # - sudo rm /usr/local/bin/docker-compose
+    - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+    - chmod +x docker-compose
+    - sudo mv docker-compose /usr/local/bin
+    - docker-compose --version
+    - docker-compose up -d
+    - docker ps
 
-    env:
-      global:
-        - PATH=$PATH:/home/travis/.composer/vendor/bin:$TRAVIS_BUILD_DIR/vendor/bin
+  install:
+    - composer self-update
+    - composer install
+    - phantomjs --webdriver=4444 > /dev/null &
+    - docker-compose exec web composer install
 
-    install:
-      - composer self-update
-      - composer install
+  before_script:
+    - docker-compose exec web ./vendor/bin/run drupal:site-install
+    - docker-compose exec web ./vendor/bin/run ec_europa:build-reference
+    - docker-compose exec web ./vendor/bin/run ec_europa:install-reference
+    - docker-compose exec web ./vendor/bin/run ec_europa:run-test
+    - docker-compose exec web ./vendor/bin/run ec_europa:run-reference
 
-    before_script:
-      # Set sendmail so drush doesn't throw an error during site install.
-      - echo "sendmail_path=`which true`" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
-      - run drupal:site-install
-      - drush --root=$PWD/build --debug runserver :8888 > ~/debug.txt 2>&1 &
-      - sleep 4s
-
-    - language: ruby
-
-      sudo: required
-
-      services:
-        - docker
-        - docker-compose
-
-      env:
-        global:
-          - DOCKER_COMPOSE_VERSION=1.17.1
-
-      before_install:
-        # - sudo rm /usr/local/bin/docker-compose
-        - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-        - chmod +x docker-compose
-        - sudo mv docker-compose /usr/local/bin
-        - docker-compose --version
-        - docker-compose up -d
-        - docker ps
-
-      install:
-        - composer self-update
-        - composer install
-        - phantomjs --webdriver=4444 > /dev/null &
-        - docker-compose exec web composer install
-
-      before_script:
-        - docker-compose exec web ./vendor/bin/run drupal:site-install
-        - docker-compose exec web ./vendor/bin/run ec_europa:build-reference
-        - docker-compose exec web ./vendor/bin/run ec_europa:install-reference
-        - docker-compose exec web ./vendor/bin/run ec_europa:run-test
-        - docker-compose exec web ./vendor/bin/run ec_europa:run-reference
-
-      script:
-        - composer grumphp
+  script:
+    - composer grumphp
 
 notifications:
-      email: false
+  email: false
