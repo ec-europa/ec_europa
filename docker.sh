@@ -9,6 +9,9 @@ elif [ $1 = "down" ]; then
 fi
 
 if [ $1 = "all" ]; then
+   #sudo rm -r build/*
+   #sudo rm -r tests/reference/build/*
+   docker-compose exec web composer install
    docker-compose exec web ./vendor/bin/run drupal:site-install
    docker-compose exec web ./vendor/bin/run ec_europa:build-reference
    docker-compose exec web ./vendor/bin/run ec_europa:install-reference

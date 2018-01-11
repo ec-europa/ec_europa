@@ -9,18 +9,16 @@ php:
   - 5.6
   - 7.1
 
+services:
+  - docker
+  - docker-compose
+
 env:
   global:
     - PATH=$PATH:/home/travis/.composer/vendor/bin:$TRAVIS_BUILD_DIR/vendor/bin
 
 before_install:
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-  - docker-compose --version
   - docker-compose up -d
-  - docker ps
 
 install:
   - composer self-update
@@ -39,6 +37,7 @@ before_script:
   - docker-compose exec web ./vendor/bin/run ec_europa:install-reference
   - docker-compose exec web ./vendor/bin/run ec_europa:run-test
   - docker-compose exec web ./vendor/bin/run ec_europa:run-reference
+  - docker run --network=host -t --rm -v $(pwd):/src backstopjs/backstopjs reference --configPath=backstop-config.js
 
 
 
