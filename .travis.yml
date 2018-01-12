@@ -1,13 +1,4 @@
-dist: precise
-
 language: ruby
-
-git:
-  depth: 1
-
-php:
-  - 5.6
-  - 7.1
 
 sudo: required
 
@@ -17,7 +8,6 @@ services:
 
 env:
   global:
-    - PATH=$PATH:/home/travis/.composer/vendor/bin:$TRAVIS_BUILD_DIR/vendor/bin
     - DOCKER_COMPOSE_VERSION=1.17.1
 
 before_install:
@@ -36,18 +26,12 @@ install:
   - docker-compose exec web composer install
 
 before_script:
-  # Set sendmail so drush doesn't throw an error during site install.
-  - echo "sendmail_path=`which true`" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
-  - run drupal:site-install
-  - drush --root=$PWD/build --debug runserver :8888 > ~/debug.txt 2>&1 &
-  - sleep 4s
   - docker-compose exec web ./vendor/bin/run drupal:site-install
   - docker-compose exec web ./vendor/bin/run ec_europa:build-reference
   - docker-compose exec web ./vendor/bin/run ec_europa:install-reference
-  - docker-compose exec web ./vendor/bin/run ec_europa:run-test
-  - docker-compose exec web ./vendor/bin/run ec_europa:run-reference
-
-
+  - docker-compose exec web ./vendor/bin/run ec_europa:run-test &
+  - docker-compose exec web ./vendor/bin/run ec_europa:run-reference &
+  - docker run --network=host --rm -v $(pwd):/src backstopjs/backstopjs reference --configPath=backstop-config.js
 
 script:
   - composer grumphp
