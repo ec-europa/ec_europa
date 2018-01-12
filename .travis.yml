@@ -1,6 +1,6 @@
 language: ruby
 
-dist: precise
+# dist: precise
 
 # php:
 #   - 5.6
