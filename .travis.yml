@@ -25,7 +25,7 @@ install:
   - docker-compose exec web composer install
 
 before_script:
-  - docker-compose exec web ./vendor/bin/run drupal:site-install
+  - docker-compose exec web ./vendor/bin/run drupal:site-install --site-name="Test Site"
   - docker-compose exec web ./vendor/bin/run ec_europa:build-reference
   - docker-compose exec web ./vendor/bin/run ec_europa:install-reference
   - docker-compose exec web ./vendor/bin/run ec_europa:run-test &
@@ -35,6 +35,9 @@ before_script:
 
 script:
   - docker-compose exec web composer grumphp
+
+after_failure:
+  - .travis/push.sh
 
 notifications:
   email: false
