@@ -1,5 +1,11 @@
 language: ruby
 
+dist: precise
+
+php:
+  - 5.6
+  - 7.1
+
 sudo: required
 
 services:
@@ -34,7 +40,7 @@ before_script:
   - docker run --network=host --rm -v $(pwd):/src backstopjs/backstopjs reference --configPath=backstop-config.js
   - docker run --network=host --rm -v $(pwd):/src backstopjs/backstopjs test --configPath=backstop-config.js
 
-script:
+# script:
   # - composer grumphp
 
 notifications:
