@@ -1,11 +1,5 @@
 language: ruby
 
-# dist: precise
-
-# php:
-#   - 5.6
-#   - 7.1
-
 sudo: required
 
 services:
@@ -26,8 +20,6 @@ before_install:
   - docker ps
 
 install:
-  - composer self-update
-  - composer install
   - phantomjs --webdriver=4444 > /dev/null &
   - docker-compose exec web composer install
 
@@ -40,8 +32,8 @@ before_script:
   - docker run --network=host --rm -v $(pwd):/src backstopjs/backstopjs reference --configPath=backstop-config.js
   - docker run --network=host --rm -v $(pwd):/src backstopjs/backstopjs test --configPath=backstop-config.js
 
-# script:
-  # - composer grumphp
+ script:
+   - docker-compose exec web composer grumphp
 
 notifications:
   email: false
