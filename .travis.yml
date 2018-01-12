@@ -37,7 +37,8 @@ script:
   - docker-compose exec web composer grumphp
 
 after_failure:
-  - .travis/push.sh
+  - echo "Your test failed"
+  - bash push.sh
 
 notifications:
   email: false
