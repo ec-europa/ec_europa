@@ -49,6 +49,6 @@ module.exports = {
     },
     "casperFlags": [],
     "engine": "phantomjs",
-    "report": ["CLI", "browser"],
+    "report": ["CI"],
     "debug": true
 }
