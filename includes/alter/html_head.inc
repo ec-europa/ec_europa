@@ -7,6 +7,8 @@
 
 /**
  * Implements hook_html_head_alter().
+ *
+ * @SuppressWarnings(PHPMD)
  */
 function ec_europa_html_head_alter(&$head_elements) {
   // Creating favicons links and meta tags for the html header.

@@ -1,21 +1,12 @@
+imports:
+  - { resource: vendor/ec-europa/oe-code-review/dist/drupal-conventions.yml }
 parameters:
-  git_dir: .
-  bin_dir: vendor/bin
-  tasks:
-    phpcs:
-      standard: vendor/drupal/coder/coder_sniffer/Drupal/
-      ignore_patterns:
-        - build/
-        - vendor/
-      triggered_by:
-        - php
-        - module
-        - inc
-    git_commit_message:
-      matchers:
-        - '/^(#\d+|EUTHEME-\d+|NEPT-\d+): [A-Z].+\./'
-      case_insensitive: false
-      multiline: false
-    behat:
-      config: ~
-      format: ~
+  tasks.phpcs.ignore_patterns:
+    - build/
+    - vendor/
+  tasks.phpmd.exclude:
+    - build/
+    - vendor/
+    - templates/
+  tasks.git_commit_message.matchers:
+    - '/^(Issue #\d+|#\d+|EUTHEME-\d+|NEPT-\d+): [A-Z].+\./'

@@ -27,6 +27,7 @@ before_script:
 
 script:
   - composer grumphp
+  - composer behat
 
 notifications:
   email: false
