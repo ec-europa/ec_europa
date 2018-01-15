@@ -14,4 +14,5 @@ pipeline:
       - ./vendor/bin/run drupal:site-install --database-host=mysql
       - ./vendor/bin/drush --root=$PWD/build --debug runserver :8888 > ~/debug.txt 2>&1 &
       - sleep 4s
-      - ./vendor/bin/grumphp run
+      - composer grumphp
+      - composer behat
