@@ -33,17 +33,13 @@ before_script:
   - docker run --network=host --rm -t -v $(pwd):/src backstopjs/backstopjs reference --configPath=backstop-config.js
 
 script:
-<<<<<<< HEAD
-  - docker run --network=host --rm -t -v $(pwd):/src backstopjs/backstopjs test --configPath=backstop-config.js
+  - 'docker run --network=host --rm -t -v $(pwd):/src backstopjs/backstopjs test --configPath=backstop-config.js'
   - docker-compose exec web composer grumphp
+  - docker-compose exec web composer behat
 
 after_failure:
   - echo "Your test failed"
   - bash push.sh
-=======
-  - composer grumphp
-  - composer behat
->>>>>>> master
 
 notifications:
   email: false
