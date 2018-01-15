@@ -31,9 +31,9 @@ before_script:
   - docker-compose exec web ./vendor/bin/run ec_europa:run-test &
   - docker-compose exec web ./vendor/bin/run ec_europa:run-reference &
   - docker run --network=host --rm -t -v $(pwd):/src backstopjs/backstopjs reference --configPath=backstop-config.js
-  - docker run --network=host --rm -t -v $(pwd):/src backstopjs/backstopjs test --configPath=backstop-config.js
 
 script:
+  - docker run --network=host --rm -t -v $(pwd):/src backstopjs/backstopjs test --configPath=backstop-config.js
   - docker-compose exec web composer grumphp
 
 after_failure:
