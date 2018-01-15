@@ -2,7 +2,7 @@
 
 namespace Drupal\ec_europa\TaskRunner\Commands;
 
-use EC\OpenEuropa\TaskRunner\Commands\BaseCommands;
+use EC\OpenEuropa\TaskRunner\Commands\AbstractCommands;
 use Symfony\Component\Console\Input\InputOption;
 
 /**
@@ -10,7 +10,7 @@ use Symfony\Component\Console\Input\InputOption;
  *
  * @package My\Custom\TaskRunner\Commands
  */
-class VisualRegressionCommands extends BaseCommands {
+class VisualRegressionCommands extends AbstractCommands {
 
   /**
    * Build reference site.
