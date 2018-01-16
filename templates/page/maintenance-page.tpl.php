@@ -62,7 +62,6 @@
   </ul>
 </div>
 <section class="main-content">
-
   <header class="ecl-site-header" role="banner">
     <div class="ecl-container ecl-site-header__container">
       <a class="ecl-logo ecl-site-header__logo" href="https://ec.europa.eu/info/index" title="Home - European Commission">
