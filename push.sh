@@ -13,7 +13,8 @@ commit_website_files() {
 
 upload_files() {
   git remote add origin-pages https://github.com/richardcanoe/visregtest.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages gh-pages 
+  git push --quiet --set-upstream origin-pages gh-pages
+  Password: $(travis token)
 }
 
 setup_git
