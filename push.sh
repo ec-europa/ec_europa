@@ -7,8 +7,9 @@ setup_git() {
 
 commit_website_files() {
   echo "Travis build: $TRAVIS_BUILD_NUMBER"
+  cd backstop_data
   git checkout -b gh-pages-$TRAVIS_BUILD_NUMBER
-  git add . backstop_data/*
+  git add .
   git commit -n --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
