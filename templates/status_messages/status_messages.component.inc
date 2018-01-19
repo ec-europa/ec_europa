@@ -86,5 +86,11 @@ function ec_europa_preprocess_status_messages(&$variables, $hook) {
     }
     $messages['messages']['#attributes']['class'][] = "ecl-message__body";
     $messages['messages']['#attributes']['class'][] = "ecl-list";
+
+    $variables['atomium']['attributes']['status-' .$type]->append('role', 'alert');
+    $variables['atomium']['attributes']['status-' .$type]->append(
+      'class',
+      array('ecl-message--' . $messages['modifier'], 'ecl-message')
+    );
   }
 }
