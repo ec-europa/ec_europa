@@ -44,8 +44,10 @@ function ec_europa_atomium_theme_lang_select_site() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
-  $language_current = $GLOBALS['language'];
+  $language_current = $GLOBALS['language_content'];
   $languages_list = language_list('enabled');
+  $variables['code'] = $language_current->language;
+  $variables['label'] = $language_current->name;
 
   $variables['url'] = url(
     'language-selector/site-language', array(
@@ -55,9 +57,6 @@ function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
       ),
     )
   );
-
-  $variables['code'] = $language_current->language;
-  $variables['label'] = $language_current->name;
 
   // Build the list of links.
   $languages = array_map(function ($language) use ($variables) {
