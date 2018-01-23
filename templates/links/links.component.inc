@@ -29,7 +29,7 @@ function ec_europa_preprocess_item_list__links__comment(&$variables, $hook) {
 
     $link['link']['#options']['attributes']['class'] = array_diff(
       $link['link']['#options']['attributes']['class'],
-      ['ecl-link--standalone']
+      array('ecl-link--standalone')
     );
   });
 }
