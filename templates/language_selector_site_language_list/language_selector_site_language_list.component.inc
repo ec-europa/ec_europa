@@ -1,21 +1,26 @@
 <?php
 
 /**
+ * @file
+ * Contains component file.
+ */
+
+/**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_language_selector_site_language_list(&$variables, $hook) {
   $language_current = $GLOBALS['language'];
   $languages_list = language_list('enabled');
-  $languages = array();
 
-  $path = isset($_GET['destination']) ? $_GET['destination'] : '<front>';
+  $destination = isset($_GET['destination']) ? $_GET['destination'] : '<front>';
+  $path_components = drupal_parse_url(url($destination));
 
   // Build the list of links.
-  foreach ($languages_list[1] as $language) {
-    $languages[] = array(
+  $languages = array_map(function ($language) use ($variables, $path_components) {
+    return array(
       '#theme' => array('link__' . $variables['theme_hook_original']),
       '#text' => $language->name,
-      '#path' => $path,
+      '#path' => $path_components['path'],
       '#options' => array(
         'attributes' => array(
           'class' => array(
@@ -32,10 +37,10 @@ function ec_europa_preprocess_language_selector_site_language_list(&$variables, 
       ),
       '#language' => $language,
     );
-  }
+  }, $languages_list[1]);
 
   // Update current language's link only.
-  $languages = array_map(function($language) use($language_current, $variables) {
+  $languages = array_map(function ($language) use ($language_current, $variables) {
     if ($language_current->language == $language['#language']->language) {
       $language['#options']['attributes']['class'] = array(
         'ecl-button',
@@ -44,7 +49,7 @@ function ec_europa_preprocess_language_selector_site_language_list(&$variables, 
         'ecl-language-list__button',
         'ecl-language-list__button--active',
         'ecl-icon',
-        'ecl-icon--icon-check'
+        'ecl-icon--icon-check',
       );
 
       $language['#options']['html'] = TRUE;
@@ -76,7 +81,7 @@ function ec_europa_preprocess_language_selector_site_language_list(&$variables, 
   );
 
   // Wrap each column with a container.
-  foreach ($languages as $index => &$language) {
+  array_walk($languages, function (&$language, $index) use ($variables) {
     $language['#theme'] = array('html_tag__' . $variables['theme_hook_original']);
     $language['#tag'] = 'div';
     $language['#attributes'] = array(
@@ -85,7 +90,7 @@ function ec_europa_preprocess_language_selector_site_language_list(&$variables, 
         'ecl-col-md-6',
       ),
     );
-  }
+  });
 
   $variables[$hook] = array(
     $hook => $languages,
