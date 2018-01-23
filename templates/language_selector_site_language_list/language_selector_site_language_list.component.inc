@@ -42,14 +42,13 @@ function ec_europa_preprocess_language_selector_site_language_list(&$variables, 
   // Update current language's link only.
   $languages = array_map(function ($language) use ($language_current, $variables) {
     if ($language_current->language == $language['#language']->language) {
-      $language['#options']['attributes']['class'] = array(
-        'ecl-button',
-        'ecl-button--default',
-        'ecl-button--block',
-        'ecl-language-list__button',
-        'ecl-language-list__button--active',
-        'ecl-icon',
-        'ecl-icon--icon-check',
+      $language['#options']['attributes']['class'] = array_merge(
+        $language['#options']['attributes']['class'],
+        array(
+          'ecl-language-list__button--active',
+          'ecl-icon',
+          'ecl-icon--icon-check',
+        )
       );
 
       $language['#options']['html'] = TRUE;
