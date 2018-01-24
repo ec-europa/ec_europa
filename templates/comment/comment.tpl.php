@@ -62,7 +62,7 @@
 ?>
 <div<?php print $atomium['attributes']['wrapper']->append('class', 'ecl-row ecl-comment'); ?>>
   <div class="ecl-comment__image-wrapper">
-    <?php print $picture; ?>
+    <?php print render($picture); ?>
   </div>
   <div class="ecl-comment__body">
     <div class="ecl-comment__meta">
