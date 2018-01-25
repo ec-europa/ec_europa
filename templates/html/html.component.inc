@@ -28,8 +28,7 @@ function ec_europa_preprocess_html(&$variables, $hook) {
     ->append('class', 'no-js')
     ->append('lang', $language->language)
     ->append('dir', $language->dir)
-    // Replace this with proper method when NEPT-1745 has landed.
-    ->offsetUnset('prefix');
+    ->delete('prefix');
 
   $variables['atomium']['attributes']['head']
     ->append('profile', $variables['grddl_profile']);
