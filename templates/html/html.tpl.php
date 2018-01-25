@@ -43,30 +43,15 @@
  * @ingroup themeable
  */
 ?>
-
 <!DOCTYPE html>
-<!--[if IE 8 ]>
-<html class="no-js ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
-<![endif]-->
-<!--[if (gt IE 8)|!(IE)]><!-->
-<html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
-<!--<![endif]-->
-<head profile="<?php print $grddl_profile; ?>">
-  <meta charset="utf-8">
+<html<?php print $atomium['attributes']['html'];?>>
+<head<?php print $atomium['attributes']['head'];?>>
+  <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
-  <!-- HTML5 element support for IE6-8 -->
-  <!--[if lte IE 9]>
-  <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.js'; ?>"></script>
-  <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.addListener.js'; ?>"></script>
-  <![endif]-->
-  <!--[if lt IE 9]>
-  <script src="<?php print $theme_path . '/js/libraries/html5shiv.min.js'; ?>"></script>
-  <script src="<?php print $theme_path . '/js/libraries/respond.min.js'; ?>"></script>
-  <![endif]-->
   <?php print $scripts; ?>
 </head>
 <body<?php print $atomium['attributes']['body'];?>>

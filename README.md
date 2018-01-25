@@ -4,9 +4,18 @@
 
 Repository containing the drupal theme for the NextEuropa platform.
 
-The Ec-Europa theme is a Drupal 7 theme, implementing the styling defined for
+The EC-Europa theme is a Drupal 7 theme, implementing the styling defined for
 the Digital Transformation of the European Commission.
 This theme is based on a component driven design.
+
+This theme is bundled with the version 0.21 of [ECL](https://github.com/ec-europa/europa-component-library).
+
+Current supported browsers:
+
+- Chrome >= 60
+- Internet Explorer >= 11
+- Safari >= 11
+- Firefox >= 54
 
 Table of content:
 =================
@@ -19,8 +28,7 @@ Table of content:
 ## Installation
 
 Place the content of this repository into a folder in sites/all/themes and enable the theme going to admin/appearance.
-The EC Europa Theme uses atomium as the base theme, so you need to have also 
-this theme, you can get it here: https://www.drupal.org/project/atomium .
+The EC Europa Theme uses [Atomium](https://www.drupal.org/project/atomium) as the base theme.
 
 ## Style guide
 

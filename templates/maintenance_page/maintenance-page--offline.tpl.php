@@ -2,56 +2,26 @@
 
 /**
  * @file
- * Default theme implementation to display a single Drupal page.
+ * Default theme implementation to display a single Drupal page while offline.
  *
- * General utility variables:
- * - $base_path: The base URL path of the Drupal installation. At the very
- *   least, this will always default to /.
- * - $directory: The directory the template is located in, e.g. modules/system
- *   or themes/bartik.
- *
- * Site identity:
- * - $logo: The path to the logo image, as defined in theme configuration.
- * - $site_name: The name of the site, empty when display has been disabled
- *   in theme settings.
- * - $site_slogan: The slogan of the site, empty when display has been disabled
- *   in theme settings.
- *
- * In a multisite set up, these variables should be set for the
- * tpl to be used/
- * $conf['install_profile'] = 'multisite_drupal_XXX';
- * $conf['maintenance_theme'] = 'ec_europa';
- *
- * @ingroup themeable
+ * All the available variables are mirrored in html.tpl.php and page.tpl.php.
+ * Some may be blank but they are provided for consistency.
  *
  * @see template_preprocess()
  * @see template_preprocess_maintenance_page()
- * @see ec_resp_process_maintenance_page()
+ *
+ * @ingroup themeable
  */
 ?>
 <!DOCTYPE html>
-<!--[if IE 8 ]>
-<html class="no-js ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
-<![endif]-->
-<!--[if (gt IE 8)|!(IE)]><!-->
-<html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" prefix="<?php print $rdf_namespaces;?>">
-<!--<![endif]-->
-<head profile="<?php print $grddl_profile; ?>">
+<html<?php print $atomium['attributes']['html'];?>>
+<head<?php print $atomium['attributes']['head'];?>>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
-  <!-- HTML5 element support for IE6-8 -->
-  <!--[if lte IE 9]>
-  <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.js'; ?>"></script>
-  <script src="<?php print $theme_path . '/js/libraries/matchMedia/matchMedia.addListener.js'; ?>"></script>
-  <![endif]-->
-  <!--[if lt IE 9]>
-  <script src="<?php print $theme_path . '/js/libraries/html5shiv.min.js'; ?>"></script>
-  <script src="<?php print $theme_path . '/js/libraries/respond.min.js'; ?>"></script>
-  <![endif]-->
   <?php print $scripts; ?>
 </head>
 <body<?php print $attributes;?>>

@@ -6,6 +6,21 @@
  */
 
 /**
+ * Implements hook_atomium_theme_hook().
+ */
+function ec_europa_atomium_theme_splash() {
+  return array(
+    'splash' => array(
+      'template' => 'splash',
+      'variables' => array(
+        'path' => NULL,
+        'languages_list_array' => array(),
+      ),
+    ),
+  );
+}
+
+/**
  * Implements hook_atomium_definition_hook().
  */
 function ec_europa_atomium_definition_splash() {
