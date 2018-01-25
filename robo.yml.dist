@@ -1,0 +1,61 @@
+# Site information.
+site:
+  name: Site name
+  mail: info@example.org
+  profile: standard
+  update: false
+  locale: en
+  base_url: http://127.0.0.1:8888
+  root: build
+
+modules:
+  enable:
+    - atomium
+    - ec_europa
+    - views
+    - views_ui
+    - libraries
+    - entity_translation
+    - date
+    - date_views
+    - date_popup
+    - date_api
+    - composer_autoloader
+  disable:
+    - overlay
+    - update
+
+# Administrator account.
+account:
+  name: admin
+  password: admin
+  mail: admin@example.org
+
+# Database parameters.
+database:
+  host: 127.0.0.1
+  port: 3306
+  name: drupal
+  user: root
+  password: ''
+  prefix: ''
+
+# Drush configuration
+drush:
+  options:
+    exclude: build
+    ignored-directories: build,vendor
+
+# Drupal configuration
+settings:
+  conf:
+    theme_default: ec_europa
+    file_scan_ignore_directories:
+      - node_modules
+      - bower_components
+      - build
+      - vendor
+
+# Binary location.
+bin:
+  drush: ./vendor/bin/drush
