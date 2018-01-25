@@ -123,8 +123,6 @@ function ec_europa_preprocess_link(&$variables, $hook) {
     $variables['atomium']['attributes']['element']->merge($variables['options']['attributes']);
   }
 
-  $variables['atomium']['attributes']['element']->append('href', url($variables['path'], $variables['options']));
-
   // Add the span tag for the icon.
   /*
    * @TODO: Do this.
