@@ -66,12 +66,12 @@ function ec_europa_preprocess_page(&$variables, $hook) {
     }
   }
 
-  $variables['site_header'] = array('#theme' => array('site_header'));
-
-  $variables['messages'] = $variables['show_messages'] ? array('#theme' => array('status_messages')) : '';
+  $variables['site_header'] = array(
+    '#theme' => _atomium_extend_theme_hook('site_header', $variables['theme_hook_original']),
+  );
 
   $variables['page_header'] = array(
-    '#theme' => array('page_header'),
+    '#theme' => _atomium_extend_theme_hook('page_header', $variables['theme_hook_original']),
     '#identity' => $variables['site_name'],
     '#title_prefix' => $variables['title_prefix'],
     '#title_suffix' => $variables['title_suffix'],
@@ -86,14 +86,14 @@ function ec_europa_preprocess_page(&$variables, $hook) {
   }
 
   $variables['footer'] = array(
-    '#theme' => array('footer'),
+    '#theme' => _atomium_extend_theme_hook('footer', $variables['theme_hook_original']),
     '#footer_right' => $variables['page']['footer_right'],
     '#footer_middle' => $variables['page']['footer_middle'],
   );
 
-  if (in_array("page__splash", $variables['theme_hook_suggestions'])) {
+  if (in_array('page__splash', $variables['theme_hook_suggestions'])) {
     $variables['logo'] = array(
-      '#theme' => array('logo'),
+      '#theme' => _atomium_extend_theme_hook('logo', $variables['theme_hook_original']),
       '#title' => t('Home - European Commission'),
       '#attributes' => array(
         'class' => array('ecl-logo--big', 'ecl-u-mh-auto'),
@@ -101,7 +101,7 @@ function ec_europa_preprocess_page(&$variables, $hook) {
     );
 
     $variables['splash'] = array(
-      '#theme' => array('splash__' . $variables['theme_hook_original']),
+      '#theme' => _atomium_extend_theme_hook('splash', $variables['theme_hook_original']),
     );
   }
 

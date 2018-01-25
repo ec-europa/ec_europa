@@ -29,6 +29,6 @@ function ec_europa_atomium_theme_views_mini_pager() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_views_mini_pager(&$variables, $hook) {
-  $variables[$hook]['#theme'] = 'pager';
+  $variables[$hook]['#theme'] = _atomium_extend_theme_hook('pager', $variables['theme_hook_original']);
   $variables[$hook]['#quantity'] = 1;
 }

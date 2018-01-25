@@ -99,7 +99,7 @@ function ec_europa_preprocess_field__taxonomy_term_reference__ne_tags(&$variable
  */
 function _ec_europa_preprocess_ne_tags(&$variables, $hook) {
   $variables['tags'] = array(
-    '#theme' => array('tags__' . $variables['theme_hook_original']),
+    '#theme' => _atomium_extend_theme_hook('tags', $variables['theme_hook_original']),
     '#label' => $variables['label'],
     '#items' => $variables['items'],
   );
@@ -117,7 +117,7 @@ function _ec_europa_preprocess_taxonomy_term_reference_link(&$variables, $hook) 
     );
   }
   $variables['tags'] = array(
-    '#theme' => array('tags__' . $variables['theme_hook_original']),
+    '#theme' => _atomium_extend_theme_hook('tags', $variables['theme_hook_original']),
     '#label' => $variables['label'],
     '#items' => $items,
   );
@@ -127,17 +127,15 @@ function _ec_europa_preprocess_taxonomy_term_reference_link(&$variables, $hook) 
  * Helper function to theme taxonomy term plain formatters.
  */
 function _ec_europa_preprocess_taxonomy_term_reference_plain(&$variables, $hook) {
-  $items = array();
-  foreach ($variables['items'] as $item) {
-    $items[] = array(
-      'href' => '',
-      'value' => $item['#markup'],
-    );
-  }
   $variables['tags'] = array(
-    '#theme' => array('tags__facet__' . $variables['theme_hook_original']),
+    '#theme' => _atomium_extend_theme_hook('tags', array('facet', $variables['theme_hook_original'])),
     '#label' => $variables['label'],
-    '#items' => $items,
+    '#items' => array_map(function ($item) {
+      return array(
+        'href' => '',
+        'value' => $item['#markup'],
+      );
+    }, $variables['items']),
   );
 }
 
@@ -148,11 +146,13 @@ function ec_europa_preprocess_field__list_boolean__list_default__group_access__n
   if ($object = $variables['element']['#object']) {
     $wrapper = entity_metadata_wrapper('node', $object);
 
-    foreach ($variables['items'] as $delta => &$item) {
+    array_walk($variables['items'], function (&$item) use ($wrapper) {
       $item = array(
-        '#theme' => (0 == $wrapper->group_access->value()) ? 'labels__closed' : 'labels__open',
         '#content' => $item['#markup'],
       );
-    }
+      // @todo: Should we compute the value from $wrapper for each items ?
+      $variant = (0 == $wrapper->group_access->value()) ? 'closed' : 'open';
+      $item['#theme'] = _atomium_extend_theme_hook('labels', $variant);
+    });
   }
 }

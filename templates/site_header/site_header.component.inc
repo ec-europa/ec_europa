@@ -14,20 +14,20 @@ function ec_europa_atomium_theme_site_header() {
       'template' => 'site-header',
       'variables' => array(
         'site_switcher' => array(
-          '#theme' => array('site_switcher'),
+          '#theme' => _atomium_extend_theme_hook('site_switcher'),
           '#attributes' => array(
             'class' => array('ecl-site-switcher--header'),
           ),
         ),
         'logo' => array(
-          '#theme' => array('logo'),
+          '#theme' => _atomium_extend_theme_hook('logo'),
           '#title' => t('Home - European Commission'),
           '#attributes' => array(
             'class' => array('ecl-site-header__logo', 'ecl-logo'),
           ),
         ),
         'lang_select_site' => array(
-          '#theme' => array('lang_select_site'),
+          '#theme' => _atomium_extend_theme_hook('lang_select_site'),
           '#attributes' => array(
             'class' => array(
               'ecl-site-header__lang-select-sites',
@@ -35,7 +35,7 @@ function ec_europa_atomium_theme_site_header() {
           ),
         ),
         'search_bar' => array(
-          '#theme' => array('search_bar'),
+          '#theme' => _atomium_extend_theme_hook('search_bar'),
           '#attributes' => array(
             'class' => array(
               'ecl-site-header__search',
