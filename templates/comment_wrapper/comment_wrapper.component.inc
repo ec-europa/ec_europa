@@ -21,7 +21,7 @@ function ec_europa_preprocess_comment_wrapper(&$variables, $hook) {
   }, ARRAY_FILTER_USE_KEY);
 
   $variables['content']['comments']['comments'] = array(
-    '#theme' => 'item_list',
+    '#theme' => _atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
     '#wrapper' => FALSE,
     '#attributes' => array(
       'class' => array(
