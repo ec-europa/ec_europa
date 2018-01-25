@@ -71,7 +71,7 @@ function ec_europa_preprocess_site_header(&$variables, $hook) {
   // We'll gain a bit of performance here.
   if (drupal_is_front_page()) {
     $variables['logo']['#attributes'] = $variables['atomium']['attributes']['logo']
-      ->attributes($variables['logo']['#attributes'])
+      ->setAttributes($variables['logo']['#attributes'])
       ->replace('class', 'ecl-logo', 'ecl-logo--logotype')
       ->toArray();
   }
