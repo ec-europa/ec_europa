@@ -6,64 +6,21 @@
  */
 
 /**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_lang_select_site() {
-  global $language;
-  return array(
-    'label' => 'Site language selector',
-    'description' => 'Site language selector.',
-    'dependencies' => array('nexteuropa_multilingual'),
-    'preview' => array(
-      'url' => '#',
-      'code' => isset($language->prefix) ? $language->prefix : $language->language,
-      'label' => $language->native,
-      'attributes' => array(),
-    ),
-  );
-}
-
-/**
- * Implements hook_atomium_theme_hook().
- */
-function ec_europa_atomium_theme_lang_select_site() {
-  return array(
-    'lang_select_site' => array(
-      'template' => 'lang-select-site',
-      'variables' => array(
-        'url' => NULL,
-        'code' => NULL,
-        'label' => NULL,
-        'attributes' => array(),
-      ),
-    ),
-  );
-}
-
-/**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
-  $language_current = $GLOBALS['language_content'];
+function ec_europa_preprocess_language_selector_site_language_list(&$variables, $hook) {
+  $language_current = $GLOBALS['language'];
   $languages_list = language_list('enabled');
-  $variables['code'] = $language_current->language;
-  $variables['label'] = $language_current->name;
 
-  $variables['url'] = url(
-    'language-selector/site-language', array(
-      'html' => TRUE,
-      'query' => array(
-        drupal_get_destination(),
-      ),
-    )
-  );
+  $destination = isset($_GET['destination']) ? $_GET['destination'] : '<front>';
+  $path_components = drupal_parse_url(url($destination));
 
   // Build the list of links.
-  $languages = array_map(function ($language) use ($variables) {
+  $languages = array_map(function ($language) use ($variables, $path_components) {
     return array(
       '#theme' => array('link__' . $variables['theme_hook_original']),
       '#text' => $language->name,
-      '#path' => current_path(),
+      '#path' => $path_components['path'],
       '#options' => array(
         'attributes' => array(
           'class' => array(
@@ -134,5 +91,7 @@ function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
     );
   });
 
-  $variables['languages'] = $languages;
+  $variables[$hook] = array(
+    $hook => $languages,
+  );
 }
