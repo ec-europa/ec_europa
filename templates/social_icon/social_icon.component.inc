@@ -32,7 +32,7 @@ function ec_europa_atomium_definition_form_social_icon($form, &$form_state) {
   foreach ($type as $item) {
     $variant = strtolower($item);
     $form['element'][] = array(
-      '#theme' => array('social_icon__' . $variant),
+      '#theme' => _atomium_extend_theme_hook('social_icon', $variant),
       '#title' => 'Social icon for ' . $item,
       '#type' => $variant,
       '#text' => $item,

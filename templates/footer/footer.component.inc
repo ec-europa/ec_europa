@@ -78,7 +78,7 @@ function ec_europa_preprocess_footer(&$variables, $hook) {
   }
 
   $variables['footer_left'] = array(
-    '#theme' => array('html_tag'),
+    '#theme' => _atomium_extend_theme_hook('html_tag'),
     '#tag' => 'h4',
     '#attributes' => array(
       'class' => array(
@@ -86,7 +86,7 @@ function ec_europa_preprocess_footer(&$variables, $hook) {
       ),
     ),
     array(
-      '#theme' => 'link',
+      '#theme' => _atomium_extend_theme_hook('link', array('footer_left', $variables['theme_hook_original'])),
       '#path' => '<front>',
       '#text' => variable_get('site_name', ''),
       '#options' => array(

@@ -50,7 +50,7 @@ function ec_europa_preprocess_expandable(&$variables, $hook) {
   );
 
   $variables['title'] = array(
-    '#theme' => array('link__' . $variables['theme_hook_original']),
+    '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
     '#text' => $variables['title'],
     '#path' => '#',
     '#options' => array(
@@ -69,7 +69,7 @@ function ec_europa_preprocess_expandable(&$variables, $hook) {
 
   if (isset($variables['button']) && TRUE == $variables['button']) {
     $variables['title'] = array(
-      '#theme' => array('button__' . $variables['theme_hook_original']),
+      '#theme' => _atomium_extend_theme_hook('button', $variables['theme_hook_original']),
       '#button_type' => 'button',
       '#value' => $variables['title']['#text'],
       '#attributes' => array(

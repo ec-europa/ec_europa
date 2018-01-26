@@ -60,7 +60,7 @@ function ec_europa_preprocess_site_switcher(&$variables, $hook) {
   );
 
   $variables['links'] = array(
-    '#theme' => 'item_list',
+    '#theme' => _atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
     '#type' => 'ul',
     '#wrapper' => FALSE,
     '#attributes' => array(
@@ -73,7 +73,7 @@ function ec_europa_preprocess_site_switcher(&$variables, $hook) {
     $variables['links']['#items'][] = array(
       'class' => $classes[$key],
       'data' => array(
-        '#theme' => 'link',
+        '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
         '#options' => array(
           'attributes' => array(
             'class' => array('ecl-link ecl-site-switcher__link'),

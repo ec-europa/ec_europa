@@ -29,7 +29,7 @@ function ec_europa_preprocess_node(&$variables, $hook) {
       '!datetime' => $variables['date'],
     ]);
   }
-  $variables['messages'] = theme('status_messages');
+
   // Override node_url if Legacy Link is set.
   if (isset($variables['legacy'])) {
     $variables['node_url'] = $variables['legacy'];
