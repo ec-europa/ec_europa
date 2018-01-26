@@ -15,11 +15,9 @@ function ec_europa_preprocess_comment(&$variables, $hook) {
 
   $variables['content']['links']['#attributes']['class'][] = 'ecl-list--inline ecl-comment__operations';
 
-  $links = &$variables['content']['links'];
-  foreach ($links['comment']['#links'] as &$link) {
-    $class = 'ecl-comment__' . $link['title'];
-    $link['attributes']['class'] = array($class);
-  }
+  array_walk($variables['content']['links']['comment']['#links'], function (&$link) {
+    $link['attributes']['class'] = array('ecl-comment__' . $link['title']);
+  });
 
   $variables['path'] = url(
     current_path(),
