@@ -9,8 +9,33 @@
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_comment_wrapper(&$variables, $hook) {
-  $variables['comment_count'] = '';
-  if ($variables['node']->comment_count > 0) {
-    $variables['comment_count'] = $variables['node']->comment_count;
-  }
+  $form = &$variables['content']['comment_form'];
+  $form['actions']['submit']['#value'] = t('Send');
+  unset($form['author']);
+
+  $comments = array_filter($variables['content']['comments'], function ($index) use (&$variables) {
+    if (is_numeric($index)) {
+      unset($variables['content']['comments'][$index]);
+      return TRUE;
+    }
+  }, ARRAY_FILTER_USE_KEY);
+
+  $variables['content']['comments']['comments'] = array(
+    '#theme' => _atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
+    '#wrapper' => FALSE,
+    '#attributes' => array(
+      'class' => array(
+        'ecl-listing',
+      ),
+    ),
+    '#items' => array_map(function ($comment) {
+      return array(
+        'class' => array(
+          'ecl-list-item',
+          'ecl-u-pv-s',
+        ),
+        'data' => $comment,
+      );
+    }, $comments),
+  );
 }

@@ -11,8 +11,19 @@
 function ec_europa_preprocess_comment(&$variables, $hook) {
   $comment = $variables['elements']['#comment'];
   $variables['created'] = format_date($comment->created, 'ec_date');
-  $variables['submitted'] = t('!username', ['!username' => $variables['author']]) . '<span class="submitted-date">' . $variables['created'] . '</span>';
   $variables['title'] = check_plain($comment->subject);
-  $variables['permalink'] = t('Permalink');
-  $variables['atomium']['attributes']['title']->append('class', 'comment__title');
+
+  $variables['content']['links']['#attributes']['class'][] = 'ecl-list--inline ecl-comment__operations';
+
+  array_walk($variables['content']['links']['comment']['#links'], function (&$link) {
+    $link['attributes']['class'] = array('ecl-comment__' . $link['title']);
+  });
+
+  $variables['path'] = url(
+    current_path(),
+    array(
+      'fragment' => 'comment-' . $comment->cid,
+      'options' => array('absolute' => TRUE),
+    )
+  );
 }
