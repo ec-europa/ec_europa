@@ -21,3 +21,6 @@ composer.lock
 /runner.yml
 /behat.yml
 /build/
+
+# Ignore reference site build
+/tests/reference

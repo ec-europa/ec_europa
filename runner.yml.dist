@@ -1,8 +1,8 @@
 drupal:
   core: "7"
-  base_url: "http://web:8888"
+  base_url: "http://127.0.0.1:8888"
   database:
-    host: "mysql"
+    host: "127.0.0.1"
     port: "3306"
     name: "drupal"
     user: "root"
@@ -13,12 +13,6 @@ drupal:
   post_install:
     - "./vendor/bin/drush --root=$(pwd)/${drupal.root} en -y atomium ec_europa views views_ui libraries entity_translation date date_views date_popup date_api composer_autoloader"
     - "./vendor/bin/drush --root=$(pwd)/${drupal.root} dis -y overlay update"
-
-ec_europa:
-  repository: "https://github.com/ec-europa/ec_europa.git"
-  reference:
-    root: "tests/reference"
-    tag: "0.0.7"
 
 commands:
   drupal:site-setup:

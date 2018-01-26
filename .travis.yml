@@ -1,40 +1,33 @@
-language: ruby
-sudo: required
-services:
-- docker
-- docker-compose
+dist: precise
+
+language: php
+
+git:
+  depth: 1
+
+php:
+  - 5.6
+  - 7.1
+
 env:
   global:
-  - DOCKER_COMPOSE_VERSION=1.17.1
-  - secure: baIBYz46Wvgd0N2opYpAsULlYzp2FH7UhaWBQYRH8+gBG0g//onquZZI1p7MLIqArZf5uWz/mZjZZSAL74BYZC/YJEOIgQZZXFMQILRqdhlkHk2R/nqRw+GeXNDjPc7fkE2eKLdW+BwiSMt9wXoFPxQ7Lu0SG2Dhkibn5itSDMoV/ETfchi3ZNhR8iFlJ2NCMkIoJWZje3pxIQLYy22UQgtkUQRD0AxaVj+tGtJrNkXDEam4+zvHTlZLcKklgzkVM14jCqKu5dhDyHHgI1X6OWPYN6kBHZmJwIJMaDXrGfH1PBBJB3v3S4jFnoPzEmLSuh0J0Ku3RxJ+SfUUFbKMDNbvfat26s4lC/1kdjdNi2Y8IAUnFgRy5YFJwzQkFts/bhYosfvGij+dB1no4sucCVs6nqGgFZ08EgW1gh0nAWZgB5+/83kKaa8J4h9V3V1HJh4T5+dvleQNnwMqb8/AEavYu9L/lzZZN40fqNhgAmQd4b48KIqf5SKh00TO3e2/Jw5RXIk3JA41svwcbdtfXl7NCt8jymzbflu6iPU+a+8usxF3OPtRqXhkarMvpC4XKKdSZ7MZYbtY/HRQqYExS5gfqqRZVNI/ClM5CiE5Ylska+no01cNbkcxeyOfSy8XdeiXBZp6583KhfaUrjaYVEmZ1Ny1PG1tq5s4YkhojsM=
+    - PATH=$PATH:/home/travis/.composer/vendor/bin:$TRAVIS_BUILD_DIR/vendor/bin
 
-before_install:
-- curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname
-  -s`-`uname -m` > docker-compose
-- chmod +x docker-compose
-- sudo mv docker-compose /usr/local/bin
-- docker-compose --version
-- docker-compose up -d
-- docker ps
 install:
-- composer self-update
-- composer install
-- phantomjs --webdriver=4444 > /dev/null &
-- docker-compose exec web composer install
+  - composer self-update
+  - composer install
+  - phantomjs --webdriver=4444 > /dev/null &
+
 before_script:
-- docker-compose exec web ./vendor/bin/run drupal:site-install --site-name="Test Site"
-- docker-compose exec web ./vendor/bin/run ec_europa:build-reference
-- docker-compose exec web ./vendor/bin/run ec_europa:install-reference
-- docker-compose exec web ./vendor/bin/run ec_europa:run-test &
-- docker-compose exec web ./vendor/bin/run ec_europa:run-reference &
-- docker run --network=host --rm -t -v $(pwd):/src backstopjs/backstopjs reference
-  --configPath=backstop-config.js
+  # Set sendmail so drush doesn't throw an error during site install.
+  - echo "sendmail_path=`which true`" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
+  - run drupal:site-install
+  - drush --root=$PWD/build --debug runserver :8888 > ~/debug.txt 2>&1 &
+  - sleep 4s
+
 script:
-- docker run --network=host --rm -t -v $(pwd):/src backstopjs/backstopjs test --configPath=backstop-config.js
-- docker-compose exec web composer grumphp
-- docker-compose exec web composer behat
-after_failure:
-- echo "Your test failed"
-- bash push.sh
+  - composer grumphp
+  - composer behat
+
 notifications:
   email: false
