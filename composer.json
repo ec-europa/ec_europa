@@ -30,6 +30,11 @@
         "drupal/date_popup": "*",
         "drupal/date_api": "*"
     },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\ec_europa\\": "./src/"
+        }
+    },
     "repositories": [
         {
             "type": "composer",

@@ -24,3 +24,6 @@ composer.lock
 
 # Ignore reference site build
 /tests/reference
+
+# Ignore test images
+/backstop_data/bitmaps_test

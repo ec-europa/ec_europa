@@ -23,3 +23,10 @@ commands:
     - { task: "run", command: "setup:behat" }
   setup:behat:
     - { task: "process", source: "behat.yml.dist", destination: "behat.yml" }
+
+ec_europa:
+   repository: "https://github.com/ec-europa/ec_europa.git"
+   reference:
+     root: "tests/reference"
+     tag: "0.0.7"
+ 
