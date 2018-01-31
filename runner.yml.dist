@@ -1,8 +1,8 @@
 drupal:
   core: "7"
-  base_url: "http://127.0.0.1:8888"
+  base_url: "http://web:8888"
   database:
-    host: "127.0.0.1"
+    host: "web"
     port: "3306"
     name: "drupal"
     user: "root"
