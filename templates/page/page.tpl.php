@@ -84,7 +84,6 @@
  * @ingroup themeable
  */
 ?>
-
 <?php if (!empty($page['header_top'])): ?>
   <section class="header-top">
     <div class="ecl-container">
@@ -96,13 +95,14 @@
 <?php print render($site_header); ?>
 <?php print render($page['header']); ?>
 
-<section class="main-content">
-  <?php print render($page_header); ?>
+<?php print render($page_header); ?>
 
-  <?php if (!empty($page['navigation'])): ?>
-    <?php print render($page['navigation']); ?>
-  <?php endif; ?>
+<?php if (!empty($page['navigation'])): ?>
+  <?php print render($page['navigation']); ?>
+<?php endif; ?>
 
+<main>
+  <a id="main-content" tabindex="-1"></a>
   <div class="ecl-container ecl-u-mv-l">
     <?php if (!empty($page['highlighted'])): ?>
       <div class="highlighted"><?php print render($page['highlighted']); ?></div>
@@ -159,7 +159,6 @@
 
         <section class="section <?php print $content_column_class; ?>">
           <?php print render($page['content']); ?>
-
           <?php print render($page['content_bottom']); ?>
         </section>
 
@@ -171,6 +170,6 @@
       </div>
     </div>
   </div>
-</section>
+</main>
 
 <?php print render($footer); ?>
