@@ -2,7 +2,7 @@ drupal:
   core: "7"
   base_url: "http://web:8888"
   database:
-    host: "web"
+    host: "mysql"
     port: "3306"
     name: "drupal"
     user: "root"
