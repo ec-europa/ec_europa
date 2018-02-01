@@ -57,4 +57,3 @@
   </div>
   <?php endif; ?>
 </div>
-<div class="splash-page splash-page--overlay"></div>
