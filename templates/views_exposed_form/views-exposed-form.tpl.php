@@ -41,10 +41,12 @@
         </div>
       <?php endif; ?>
       <div class="ecl-form-group">
+      <?php if (!empty($widget->label)): ?>
         <label<?php print $atomium['attributes']['label']->append('class', 'ecl-form-label')->setAttribute('for', $widget->id); ?>>
           <?php print $widget->label; ?>
         </label>
-        <?php print $widget->widget; ?>
+      <?php endif; ?>
+      <?php print $widget->widget; ?>
       </div>
       <?php if (!empty($widget->description)): ?>
         <div class="description">
@@ -61,7 +63,9 @@
       </div>
     <?php endif; ?>
     <?php if (!empty($items_per_page)): ?>
-      <?php print $items_per_page; ?>
+      <div class="ecl-form-group">
+        <?php print $items_per_page; ?>
+      </div>
     <?php endif; ?>
     <?php if (!empty($offset)): ?>
       <div class="views-exposed-widget views-widget-offset">
