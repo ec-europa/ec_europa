@@ -15,17 +15,19 @@
             </div>
         </div>
       <?php endif; ?>
-      <?php if (!empty($meta)): ?>
-        <div class="ecl-page-header__meta">
-          <?php print render($meta); ?>
-        </div>
-      <?php endif; ?>
-      <?php if (!empty($introduction)): ?>
-        <div class="ecl-page-header__intro">
-          <p class="ecl-paragraph ecl-paragraph--l">
-            <?php print render($introduction); ?>
-          </p>
-        </div>
+      <?php if(!$ec_europa_basic_header): ?>
+        <?php if (!empty($meta)): ?>
+          <div class="ecl-page-header__meta">
+            <?php print render($meta); ?>
+          </div>
+        <?php endif; ?>
+        <?php if (!empty($introduction)): ?>
+          <div class="ecl-page-header__intro">
+            <p class="ecl-paragraph ecl-paragraph--l">
+              <?php print render($introduction); ?>
+            </p>
+          </div>
+        <?php endif; ?>
       <?php endif; ?>
   </div>
 </div>
