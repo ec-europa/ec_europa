@@ -21,7 +21,9 @@
             </div>
           <?php endif; ?>
           <div class="ecl-page-header__title">
-            <h1 class="ecl-heading ecl-heading--h1 ecl-u-color-white">Business, Economy, Euro</h1>
+            <h1 class="ecl-heading ecl-heading--h1 ecl-u-color-white">
+                <?php print render($title); ?>
+            </h1>
           </div>
           <?php if (!empty($introduction)): ?>
             <div class="ecl-page-header__intro">
