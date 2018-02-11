@@ -107,7 +107,7 @@ function ec_europa_preprocess_easy_breadcrumb(&$variables, $hook) {
     }
   }
 
-  $variables[$hook] = $html;
+  $variables['easy_breadcrumb'] = $html;
   $variables['atomium']['attributes']['wrapper']->setAttribute('aria-label', 'breadcrumbs');
 }
 

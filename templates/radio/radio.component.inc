@@ -28,7 +28,7 @@ function ec_europa_atomium_definition_form_radio($form, &$form_state) {
     '#title' => 'Checked radio button.',
     '#type' => 'radio',
     '#attributes' => array(
-      'checked',
+      'checked' => TRUE,
     ),
   );
 

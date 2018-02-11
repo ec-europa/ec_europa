@@ -39,7 +39,7 @@ function ec_europa_atomium_definition_form_checkbox($form, &$form_state) {
     '#type' => 'checkbox',
     '#title' => 'Checked by default',
     '#attributes' => array(
-      'checked',
+      'checked' => TRUE,
     ),
   );
 
