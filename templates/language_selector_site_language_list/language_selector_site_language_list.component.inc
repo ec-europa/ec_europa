@@ -91,7 +91,7 @@ function ec_europa_preprocess_language_selector_site_language_list(&$variables, 
     );
   });
 
-  $variables['language_selector_site_language_list'] = array(
-    'language_selector_site_language_list' => $languages,
+  $variables[$variables['base_hook']] = array(
+    $variables['base_hook'] => $languages,
   );
 }
