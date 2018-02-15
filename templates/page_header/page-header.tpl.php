@@ -14,12 +14,12 @@
               <?php print render($identity); ?>
             </div>
         <?php endif; ?>
+        <?php if (!empty($meta)): ?>
+          <div class="ecl-page-header__meta">
+            <?php print render($meta); ?>
+          </div>
+        <?php endif; ?>
         <?php if(!$ec_europa_basic_header): ?>
-          <?php if (!empty($meta)): ?>
-            <div class="ecl-page-header__meta">
-              <?php print render($meta); ?>
-            </div>
-          <?php endif; ?>
           <div class="ecl-page-header__title">
             <h1 class="ecl-heading ecl-heading--h1 ecl-u-color-white">
                 <?php print render($title); ?>
