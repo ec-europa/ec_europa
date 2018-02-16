@@ -29,7 +29,7 @@ function ec_europa_atomium_definition_pager() {
 function ec_europa_preprocess_pager(&$variables, $hook) {
   global $pager_page_array, $pager_total;
 
-  if (empty($variables[$hook])) {
+  if (empty($variables[$variables['base_hook']])) {
     return;
   }
 
