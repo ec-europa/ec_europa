@@ -161,6 +161,7 @@
           <?php print render($page['content']); ?>
           <?php print render($page['content_bottom']); ?>
         </section>
+        <?php print $feed_icons; ?>
 
         <?php if (!empty($page['sidebar_second'])): ?>
           <aside class="ecl-col-sm-3" role="complementary">
@@ -171,5 +172,4 @@
     </div>
   </div>
 </main>
-
 <?php print render($footer); ?>

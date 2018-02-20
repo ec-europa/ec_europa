@@ -270,3 +270,14 @@ function ec_europa_preprocess_link__primary_block(&$variables, $hook) {
     'ecl-button--caret-down',
   ));
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__feed_icon(&$variables, $hook) {
+  $variables['atomium']['attributes']['element']->append('class', array(
+    'ecl-link',
+    'ecl-icon-social',
+    'ecl-icon-social--rss',
+  ));
+}
