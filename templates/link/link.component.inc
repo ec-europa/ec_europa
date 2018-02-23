@@ -270,3 +270,23 @@ function ec_europa_preprocess_link__primary_block(&$variables, $hook) {
     'ecl-button--caret-down',
   ));
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__menu_link(&$variables, $hook) {
+  $variables['atomium']['attributes']['element']->remove('class', array(
+    'ecl-link',
+    'ecl-link--standalone',
+  ));
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function ec_europa_preprocess_link__menu_link__user_menu(&$variables, $hook) {
+  $variables['atomium']['attributes']['element']->append('class', array(
+    'ecl-link',
+    'ecl-link--small',
+  ));
+}
