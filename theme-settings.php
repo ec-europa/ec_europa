@@ -41,7 +41,7 @@ function ec_europa_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['ec_europa']['ec_europa_basic_header'] = [
     '#type' => 'checkbox',
     '#title' => t('Use basic header?'),
-    '#description' => t('If this option is selected, the meta and intro sections will be removed from the header.'),
+    '#description' => t('If this option is selected, the title and introduction sections will be removed from the header.'),
     '#default_value' => theme_get_setting('ec_europa_basic_header', 'ec_europa'),
   ];
 }
