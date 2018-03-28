@@ -40,6 +40,7 @@ function ec_europa_preprocess_link_blocks(&$variables, $hook) {
   if (!empty($variables['items'])) {
     $num_items = count($variables['items']);
     $i = 0;
+
     foreach ($variables['items'] as $key => $item) {
       $variables['atomium']['attributes'][$key]->append('class', 'ecl-link-block__item');
       $i++;
@@ -53,7 +54,6 @@ function ec_europa_preprocess_link_blocks(&$variables, $hook) {
       if (is_array($item) && isset($item['data'])) {
         $item += array('class' => array());
         $variables['atomium']['attributes'][$key]->append('class', $item['class']);
-
         $item['data'] += array(
           '#theme' => 'link',
           '#options' => array(
@@ -66,7 +66,6 @@ function ec_europa_preprocess_link_blocks(&$variables, $hook) {
             ),
           ),
         );
-
         $variables['items'][$key] = array(
           '#theme' => 'html_tag__' . $variables['theme_hook_original'],
           '#tag' => 'li',
@@ -95,8 +94,6 @@ function ec_europa_preprocess_link_blocks(&$variables, $hook) {
     }
   }
 
-  dpm($variables, 'variables');
-
   // @Todo: Remove this, it shouldn't be used anymore but it's too early now.
   $variables['atomium']['attributes']['list']->merge($variables['attributes']);
   $variables['atomium']['attributes']['wrapper']->merge($variables['wrapper_attributes']);
@@ -112,25 +109,25 @@ function ec_europa_atomium_definition_link_blocks() {
     'preview' => array(
       'title' => 'Title link blocks',
       'items' => array(
-          array(
-            'data' => array(
-              '#theme' => 'link',
-              '#text' => 'Home',
-              '#path' => '/',
-            ),
-            'attributes' => array(
-              '#class' => array(
-                'miclsess',
-              ),
+        array(
+          'data' => array(
+            '#theme' => 'link',
+            '#text' => 'Home',
+            '#path' => '/',
+          ),
+          'attributes' => array(
+            '#class' => array(
+              'miclsess',
             ),
           ),
-          array(
-            'data' => array(
-              '#theme' => 'link',
-              '#text' => 'News',
-              '#path' => '/',
-            ),
+        ),
+        array(
+          'data' => array(
+            '#theme' => 'link',
+            '#text' => 'News',
+            '#path' => '/',
           ),
+        ),
       )
     )
   );
