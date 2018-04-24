@@ -20,7 +20,7 @@
         "mikey179/vfsstream": "~1.2",
         "nuvoleweb/robo-config": "~0.1",
         "drupal/drupal-extension": "~3.3",
-        "ec-europa/atomium": "dev-nept-1889 as 3.0.0",
+        "drupal/atomium": "dev-nept-1889 as 3.0.0",
         "drupal/date": "*",
         "drupal/views": "*",
         "drupal/views_ui": "*",
