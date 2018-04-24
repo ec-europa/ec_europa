@@ -105,11 +105,17 @@ function ec_europa_preprocess_tags(array &$variables, $hook) {
   $variables['atomium']['attributes']['title']->append('class', 'ecl-tag__label');
 
   foreach ($variables['items'] as $key => $item) {
-    $variables['items'][$key] = array(
-      '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+    $item = array(
+      '#theme' => 'link',
       '#text' => $item['value'],
       '#path' => $item['href'],
     );
+
+    _atomium_extend_theme_property(
+      $item,
+      array($variables['theme_hook_original']));
+
+    $variables['items'][$key] = $item;
   };
 }
 
@@ -138,9 +144,15 @@ function ec_europa_preprocess_tags__facet_close(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-tag--facet-close');
 
   foreach ($variables['tags'] as $key => $tag) {
-    $variables['items'][$key] = array(
-      '#theme' => _atomium_extend_theme_hook('button', $variables['theme_hook_original']),
+    $tag = array(
+      '#theme' => 'button',
       '#value' => $tag['value'],
     );
+
+    _atomium_extend_theme_property(
+      $tag,
+      array($variables['theme_hook_original']));
+
+    $variables['items'][$key] = $tag;
   }
 }
