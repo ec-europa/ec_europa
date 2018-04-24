@@ -60,8 +60,8 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
 
   // Build the list of links.
   $languages = array_map(function ($language) use ($variables) {
-    return array(
-      '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+    $language_link = array(
+      '#theme' => 'link',
       '#text' => $language->name,
       '#path' => current_path(),
       '#options' => array(
@@ -80,6 +80,12 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
       ),
       '#language' => $language,
     );
+
+    _atomium_extend_theme_property(
+      $language_link,
+      array($variables['theme_hook_original']));
+
+    return $language_link;
   }, $languages_list[1]);
 
   // Update current language's link only.
@@ -96,8 +102,8 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
 
       $language['#options']['html'] = TRUE;
       $language['#text'] = array(
-        array(
-          '#theme' => _atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']),
+        'icon' => array(
+          '#theme' => 'html_tag',
           '#tag' => 'span',
           '#attributes' => array(
             'class' => array(
@@ -107,10 +113,14 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
             ),
           ),
         ),
-        array(
+        'text' => array(
           '#markup' => $language['#text'],
         ),
       );
+
+      _atomium_extend_theme_property(
+        $language['#text']['icon'],
+        array($language['#text']['icon']['#tag'], $variables['theme_hook_original']));
     }
 
     return $language;
@@ -124,7 +134,7 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
 
   // Wrap each column with a container.
   array_walk($languages, function (&$language, $index) use ($variables) {
-    $language['#theme'] = _atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']);
+    $language['#theme'] = 'html_tag';
     $language['#tag'] = 'div';
     $language['#attributes'] = array(
       'class' => array(
@@ -132,6 +142,10 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
         'ecl-col-md-6',
       ),
     );
+
+    _atomium_extend_theme_property(
+      $language,
+      array($language['#tag'], $variables['theme_hook_original']));
   });
 
   $variables['languages'] = $languages;

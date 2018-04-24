@@ -18,9 +18,9 @@ function ec_europa_atomium_theme_link_blocks() {
 
         'type' => 'ul',
         'attributes' => array(
-            'class' => array(
-              'ecl-link-block__list',
-            ),
+          'class' => array(
+            'ecl-link-block__list',
+          ),
         ),
         'wrapper' => TRUE,
         'wrapper_attributes' => array(
@@ -128,7 +128,7 @@ function ec_europa_atomium_definition_link_blocks() {
             '#path' => '/',
           ),
         ),
-      )
-    )
+      ),
+    ),
   );
 }

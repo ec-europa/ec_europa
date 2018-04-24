@@ -5,10 +5,9 @@
  * Contains component file.
  */
 ?>
-<div class="ecl-language-list ecl-language-list--overlay ecl-site-header__language-list">
+<div class="ecl-lang-select-sites ecl-site-header__lang-select-sites">
 
   <div id="ecl-overlay-language-list" class="ecl-dialog__overlay ecl-dialog__overlay--blue" aria-hidden="true"></div>
-
 
   <div class="ecl-lang-select-sites ecl-link" data-ecl-dialog="ecl-dialog" id="ecl-lang-select-sites__overlay">
     <a href="<?php print $url; ?>" class="ecl-lang-select-sites__link">

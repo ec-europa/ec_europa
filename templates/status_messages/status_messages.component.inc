@@ -92,5 +92,6 @@ function ec_europa_preprocess_status_messages(array &$variables, $hook) {
       'class',
       array('ecl-message--' . $messages['modifier'], 'ecl-message')
     );
+    $messages['messages']['#wrapper'] = FALSE;
   }
 }

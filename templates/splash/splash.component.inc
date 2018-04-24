@@ -41,8 +41,8 @@ function ec_europa_preprocess_splash(array &$variables, $hook) {
 
   $variables['languages_list'] = array();
   foreach ($variables['languages_list_array'] as $language) {
-    $variables['languages_list'][] = array(
-      '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+    $language = array(
+      '#theme' => 'link',
       '#text' => $language->name,
       '#path' => $variables['path'],
       '#options' => array(
@@ -60,6 +60,13 @@ function ec_europa_preprocess_splash(array &$variables, $hook) {
         'html' => FALSE,
       ),
     );
+
+    _atomium_extend_theme_property(
+      $language,
+      array($variables['theme_hook_original'])
+    );
+
+    $variables['languages_list'][] = $language;
   }
 
   $variables['languages_list'] = array_chunk(
@@ -68,13 +75,18 @@ function ec_europa_preprocess_splash(array &$variables, $hook) {
   );
 
   foreach ($variables['languages_list'] as $index => &$language) {
-    $language['#theme'] = _atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']);
+    $language['#theme'] = 'html_tag';
     $language['#tag'] = 'div';
     $language['#attributes'] = array(
       'class' => array(
         'column-' . $index,
         'ecl-col-md-6',
       ),
+    );
+
+    _atomium_extend_theme_property(
+      $language,
+      array($language['#tag'], $variables['theme_hook_original'])
     );
   }
 

@@ -31,13 +31,20 @@ function ec_europa_atomium_definition_form_social_icon(array $form, array &$form
 
   foreach ($type as $item) {
     $variant = strtolower($item);
-    $form['element'][] = array(
-      '#theme' => _atomium_extend_theme_hook('social_icon', $variant),
+    $social_icon = array(
+      '#theme' => 'social_icon',
       '#title' => 'Social icon for ' . $item,
       '#type' => $variant,
       '#text' => $item,
       '#theme_wrappers' => array('form_element'),
     );
+    _atomium_extend_theme_property(
+      $social_icon,
+      array($variant));
+    _atomium_extend_theme_wrappers_property(
+      $social_icon,
+      array($social_icon['#theme']));
+    $form['element'][] = $social_icon;
   }
 
   return $form;
