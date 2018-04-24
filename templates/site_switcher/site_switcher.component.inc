@@ -60,7 +60,7 @@ function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
   );
 
   $variables['links'] = array(
-    '#theme' => _atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
+    '#theme' => 'item_list',
     '#type' => 'ul',
     '#wrapper' => FALSE,
     '#attributes' => array(
@@ -70,17 +70,27 @@ function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
   );
 
   foreach ($links as $key => $link) {
+    $link = array(
+      '#theme' => 'link',
+      '#options' => array(
+        'attributes' => array(
+          'class' => array('ecl-link ecl-site-switcher__link'),
+        ),
+        'html' => FALSE,
+      ),
+    ) + $link;
+
+    _atomium_extend_theme_property(
+      $link,
+      array($variables['theme_hook_original']));
+
     $variables['links']['#items'][] = array(
       'class' => $classes[$key],
-      'data' => array(
-        '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
-        '#options' => array(
-          'attributes' => array(
-            'class' => array('ecl-link ecl-site-switcher__link'),
-          ),
-          'html' => FALSE,
-        ),
-      ) + $link,
+      'data' => $link,
     );
   }
+
+  _atomium_extend_theme_property(
+    $variables['links'],
+    array($variables['theme_hook_original']));
 }

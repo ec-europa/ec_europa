@@ -123,14 +123,14 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(array &$vari
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_link__nexteuropa_site_social_media(array &$variables, $hook) {
+function ec_europa_preprocess_menu_link__nexteuropa_site_social_media__footer(array &$variables, $hook) {
   $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_link__nexteuropa_site_custom_links(array &$variables, $hook) {
+function ec_europa_preprocess_menu_link__nexteuropa_site_custom_links__footer(array &$variables, $hook) {
   $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 

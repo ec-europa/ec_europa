@@ -40,6 +40,6 @@ function ec_europa_atomium_definition_logo() {
 function ec_europa_preprocess_logo(array &$variables, $hook) {
   $variables['atomium']['attributes']['a']->merge($variables['attributes']);
   $variables['atomium']['attributes']['a']->append('class', 'ecl-logo');
-  $variables['atomium']['attributes']['a']->setAttribute('href', 'https://ec.europa.eu/info/index');
-  $variables['atomium']['attributes']['a']->setAttribute('title', $variables['title']);
+  $variables['atomium']['attributes']['a']->set('href', 'https://ec.europa.eu/info/index');
+  $variables['atomium']['attributes']['a']->set('title', $variables['title']);
 }

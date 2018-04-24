@@ -40,18 +40,18 @@ function ec_europa_preprocess_checkboxes(array &$variables, $hook) {
   $element = $variables['element'];
 
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-checkbox-group');
-  $variables['atomium']['attributes']['wrapper']->setAttribute('role', 'checkboxgroup');
+  $variables['atomium']['attributes']['wrapper']->set('role', 'checkboxgroup');
 
   $variables['small_description'] = '';
 
   if (!empty($element['#title'])) {
     $title = $element['#title'];
-    $variables['atomium']['attributes']['wrapper']->setAttribute('aria-labelledby', $title);
+    $variables['atomium']['attributes']['wrapper']->set('aria-labelledby', $title);
 
     $variables['atomium']['attributes']['description']->append('class', 'ecl-u-sr-only');
 
     if (isset($element['#id'])) {
-      $variables['atomium']['attributes']['description']->setAttribute('id', $element['#id'] . '-description');
+      $variables['atomium']['attributes']['description']->set('id', $element['#id'] . '-description');
     }
 
     $variables['small_description'] = array(

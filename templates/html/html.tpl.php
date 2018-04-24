@@ -49,17 +49,17 @@
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <?php print $head; ?>
+  <?php print render($head); ?>
   <title><?php print $head_title; ?></title>
-  <?php print $styles; ?>
-  <?php print $scripts; ?>
+  <?php print render($styles); ?>
+  <?php print render($scripts); ?>
 </head>
 <body<?php print $atomium['attributes']['body']->append('class', 'ecl-typography'); ?>>
 <div class="ecl-skip-link__wrapper" id="skip-link">
   <a href="#main-content" class="ecl-skip-link"><?php print t('Skip to main content'); ?></a>
 </div>
-<?php print $page_top; ?>
-<?php print $page; ?>
-<?php print $page_bottom; ?>
+<?php print render($page_top); ?>
+<?php print render($page); ?>
+<?php print render($page_bottom); ?>
 </body>
 </html>

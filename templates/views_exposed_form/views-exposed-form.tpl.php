@@ -42,7 +42,7 @@
       <?php endif; ?>
       <div class="ecl-form-group">
       <?php if (!empty($widget->label)): ?>
-        <label<?php print $atomium['attributes']['label']->append('class', 'ecl-form-label')->setAttribute('for', $widget->id); ?>>
+        <label<?php print $atomium['attributes']['label']->append('class', 'ecl-form-label')->set('for', $widget->id); ?>>
           <?php print $widget->label; ?>
         </label>
       <?php endif; ?>

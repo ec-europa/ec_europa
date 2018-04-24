@@ -54,10 +54,20 @@ function ec_europa_preprocess_search_bar(array &$variables, $hook) {
   $variables['atomium']['attributes']['form']->merge($variables['attributes']);
 
   $variables['search_form']['#attributes'] = $variables['atomium']['attributes']['form']->toArray();
+  $variables['atomium']['attributes']['search_form']->import($variables['attributes']);
+  $variables['atomium']['attributes']['search_form']->append('class', 'ecl-search-form');
+
+  // Add CSS to the form tag.
+  $variables['search_form']['#attributes']['class'][] = 'ecl-search-form';
 
   // Remove incompatible container from the form.
   unset(
     $variables['search_form']['search_input_group']['#prefix'],
     $variables['search_form']['search_input_group']['#suffix']
   );
+
+  // Add CSS in search button.
+  $variables['search_form']['europa_search_submit']['#attributes']['class'][] = 'ecl-search-form__button';
+
+  $variables['atomium']['attributes']['element']->merge($variables['attributes']);
 }

@@ -12,14 +12,14 @@ function ec_europa_preprocess_form_element_label(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-form-label');
 
   if (isset($variables['attributes']['for'])) {
-    $variables['atomium']['attributes']['wrapper']->setAttribute(
+    $variables['atomium']['attributes']['wrapper']->set(
       'aria-label',
       $variables['attributes']['for']
     );
   }
 
   if (isset($variables['attributes']['element']['#id'])) {
-    $variables['atomium']['attributes']['wrapper']->setAttribute(
+    $variables['atomium']['attributes']['wrapper']->set(
       'id',
       $variables['element']['element']['#id'] . '_label'
     );

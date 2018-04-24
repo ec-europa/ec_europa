@@ -22,7 +22,7 @@ function ec_europa_preprocess_comment_wrapper(array &$variables, $hook) {
   }, ARRAY_FILTER_USE_KEY);
 
   $variables['content']['comments']['comments'] = array(
-    '#theme' => _atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
+    '#theme' => 'item_list',
     '#wrapper' => FALSE,
     '#attributes' => array(
       'class' => array(
@@ -38,5 +38,10 @@ function ec_europa_preprocess_comment_wrapper(array &$variables, $hook) {
         'data' => $comment,
       );
     }, $comments),
+  );
+
+  _atomium_extend_theme_property(
+    $variables['content']['comments']['comments'],
+    array($variables['theme_hook_original'])
   );
 }

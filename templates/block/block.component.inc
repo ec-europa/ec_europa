@@ -44,7 +44,7 @@ function ec_europa_atomium_definition_form_block(array $form, array &$form_state
       '#title' => \sprintf('Block ([module]:[delta]) (%s)', $block_id),
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
-      'content' => _atomium_block_get_render_array($block['module'], $block['delta']),
+      'content' => _ec_europa_block_get_render_array($block['module'], $block['delta']),
     );
   }
 

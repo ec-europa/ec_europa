@@ -44,7 +44,7 @@ function ec_europa_atomium_definition_status_messages() {
           'Live Stream message',
         ),
         'status' => array(
-          'Status message 1',
+          'Status message',
         ),
       ),
     ),
