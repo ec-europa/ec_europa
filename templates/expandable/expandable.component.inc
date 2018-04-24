@@ -50,7 +50,7 @@ function ec_europa_preprocess_expandable(array &$variables, $hook) {
   );
 
   $variables['title'] = array(
-    '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+    '#theme' => 'link',
     '#text' => $variables['title'],
     '#path' => '#',
     '#options' => array(
@@ -67,9 +67,14 @@ function ec_europa_preprocess_expandable(array &$variables, $hook) {
     ),
   );
 
+  _atomium_extend_theme_property(
+    $variables['title'],
+    array($variables['theme_hook_original'])
+  );
+
   if (isset($variables['button']) && TRUE == $variables['button']) {
     $variables['title'] = array(
-      '#theme' => _atomium_extend_theme_hook('button', $variables['theme_hook_original']),
+      '#theme' => 'button',
       '#button_type' => 'button',
       '#value' => $variables['title']['#text'],
       '#attributes' => array(
@@ -81,6 +86,11 @@ function ec_europa_preprocess_expandable(array &$variables, $hook) {
         'aria-controls' => $id,
         'aria-expanded' => 'false',
       ),
+    );
+
+    _atomium_extend_theme_property(
+      $variables['title'],
+      array($variables['theme_hook_original'])
     );
   }
 }
