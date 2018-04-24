@@ -8,15 +8,17 @@ drupal:
     user: "root"
     password: ""
   post_install:
-    - "./vendor/bin/drush --root=$(pwd)/${drupal.root} en -y atomium ec_europa views views_ui libraries entity_translation date date_views date_popup date_api composer_autoloader"
+    - "./vendor/bin/drush --root=$(pwd)/${drupal.root} en -y atomium ec_europa views views_ui libraries entity_translation date date_views date_popup date_api xautoload composer_autoloader"
+    - "./vendor/bin/drush --root=$(pwd)/${drupal.root} en -y registryonsteroids registryonsteroids_alter"
     - "./vendor/bin/drush --root=$(pwd)/${drupal.root} dis -y overlay update"
+    - "./vendor/bin/drush --root=$(pwd)/build vset theme_default ec_europa"
+    - "./vendor/bin/drush --root=$(pwd)/build cc all"
   drush:
     options:
       ignored-directories: "${drupal.root}"
       uri: "${drupal.base_url}"
   settings:
     conf:
-      theme_default: "ec_europa"
       file_scan_ignore_directories:
         - "node_modules"
         - "bower_components"
