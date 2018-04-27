@@ -2,7 +2,7 @@ name = EC Europa
 description = OpenEuropa base theme.
 base theme = atomium
 core = 7.x
-php = 5.2.4
+php = 5.6
 screenshot = assets/images/screenshot.png
 
 ; ========================================
