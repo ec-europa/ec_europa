@@ -32,3 +32,17 @@ commands:
     - { task: "run", command: "setup:behat" }
   setup:behat:
     - { task: "process", source: "behat.yml.dist", destination: "behat.yml" }
+
+release:
+  tasks:
+    - { task: "remove", file: "ec_europa/.drone.yml" }
+    - { task: "remove", file: "ec_europa/.editorconfig" }
+    - { task: "remove", file: "ec_europa/.gitignore" }
+    - { task: "remove", file: "ec_europa/.travis.yml" }
+    - { task: "remove", file: "ec_europa/behat.yml.dist" }
+    - { task: "remove", file: "ec_europa/composer.json" }
+    - { task: "remove", file: "ec_europa/ecl-builder.config.js" }
+    - { task: "remove", file: "ec_europa/grumphp.yml.dist" }
+    - { task: "remove", file: "ec_europa/package.json" }
+    - { task: "remove", file: "ec_europa/runner.yml.dist" }
+    - { task: "remove", file: "ec_europa/tests" }
