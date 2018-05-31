@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__secondary(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__secondary(array &$variables, $hook) {
   // TODO: is this still necessary ?
   $variables['atomium']['attributes']['wrapper']
     ->append('class', array('menu', 'nav', 'navbar-nav', 'secondary'));
@@ -17,7 +17,7 @@ function ec_europa_preprocess_menu_tree__secondary(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__main_menu(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__main_menu(array &$variables, $hook) {
   if (isset($variables['#tree'])) {
     if ($children = element_children($variables['#tree'])) {
       if ($item = $variables['#tree'][$children[0]]) {
@@ -48,7 +48,7 @@ function ec_europa_preprocess_menu_tree__main_menu(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__user_menu(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__user_menu(array &$variables, $hook) {
   global $user;
   $variables['logged_in_user'] = '';
   if (!user_is_anonymous()) {
@@ -60,42 +60,42 @@ function ec_europa_preprocess_menu_tree__user_menu(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__menu_nexteuropa_service_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_nexteuropa_service_links(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--inline'));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__menu_service_tools(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_service_tools(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--inline'));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__menu_nexteuropa_social_media(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_nexteuropa_social_media(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--inline'));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__menu_nexteuropa_inst_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_nexteuropa_inst_links(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__menu');
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__menu_nexteuropa_site_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__menu_nexteuropa_site_links(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__menu');
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__nexteuropa_site_social_media(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__nexteuropa_site_social_media(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append(
     'class',
     array(
@@ -109,6 +109,6 @@ function ec_europa_preprocess_menu_tree__nexteuropa_site_social_media(&$variable
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_tree__nexteuropa_site_custom_links(&$variables, $hook) {
+function ec_europa_preprocess_menu_tree__nexteuropa_site_custom_links(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--unstyled'));
 }

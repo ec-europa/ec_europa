@@ -63,7 +63,7 @@ function ec_europa_atomium_definition_footer() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_footer(&$variables, $hook) {
+function ec_europa_preprocess_footer(array &$variables, $hook) {
   $variables['#atomium_recursive'] = TRUE;
 
   $variables_block_mapping = array(

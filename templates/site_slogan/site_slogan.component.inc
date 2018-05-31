@@ -35,7 +35,7 @@ function ec_europa_atomium_definition_site_slogan() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_site_slogan(&$variables, $hook) {
+function ec_europa_preprocess_site_slogan(array &$variables, $hook) {
   $variables[$variables['base_hook']] = array(
     $variables['base_hook'] => array(
       '#markup' => $variables['markup'],

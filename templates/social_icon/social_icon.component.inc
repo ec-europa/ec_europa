@@ -19,7 +19,7 @@ function ec_europa_atomium_definition_social_icon() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_social_icon($form, &$form_state) {
+function ec_europa_atomium_definition_form_social_icon(array $form, array &$form_state) {
   $type = array(
     'Arto', 'Facebook', 'Bebo', 'Bitly', 'Blinklist', 'Blog', 'Blogger', 'Delicious', 'Digg', 'Diigo',
     'Dzone', 'Email', 'Flickr', 'Foursquare', 'Generic', 'Google', 'Gplus', 'Instagram', 'Linkarena', 'Linkedin',
@@ -46,7 +46,7 @@ function ec_europa_atomium_definition_form_social_icon($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_social_icon(&$variables, $hook) {
+function ec_europa_preprocess_social_icon(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', array(
     'ecl-icon-social',
     'ecl-icon-social--' . $variables['type'],

@@ -43,7 +43,7 @@ function ec_europa_atomium_theme_lang_select_site() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_lang_select_site(&$variables, $hook) {
+function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
   $language_current = $GLOBALS['language_content'];
   $languages_list = language_list('enabled');
   $variables['code'] = $language_current->language;

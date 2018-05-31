@@ -34,7 +34,7 @@ function ec_europa_atomium_definition_tags() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_tags($form, &$form_state) {
+function ec_europa_atomium_definition_form_tags(array $form, array &$form_state) {
   $form['element1'] = array(
     '#theme' => 'tags',
     '#label' => 'Default tags',
@@ -98,7 +98,7 @@ function ec_europa_atomium_definition_form_tags($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_tags(&$variables, $hook) {
+function ec_europa_preprocess_tags(array &$variables, $hook) {
   // Store initial items.
   $variables['tags'] = $variables['items'];
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-tag');
@@ -116,7 +116,7 @@ function ec_europa_preprocess_tags(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_tags__facet(&$variables, $hook) {
+function ec_europa_preprocess_tags__facet(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-tag--facet');
 
   foreach ($variables['tags'] as $key => $tag) {
@@ -134,7 +134,7 @@ function ec_europa_preprocess_tags__facet(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_tags__facet_close(&$variables, $hook) {
+function ec_europa_preprocess_tags__facet_close(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-tag--facet-close');
 
   foreach ($variables['tags'] as $key => $tag) {

@@ -34,7 +34,7 @@ function ec_europa_atomium_definition_site_switcher() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_site_switcher(&$variables, $hook) {
+function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
   global $language;
 
   $variables['atomium']['attributes']['wrapper']->merge($variables['attributes']);

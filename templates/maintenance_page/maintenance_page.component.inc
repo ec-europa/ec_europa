@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_maintenance_page(&$variables, $hook) {
+function ec_europa_preprocess_maintenance_page(array &$variables, $hook) {
   $variables['theme_path'] = drupal_get_path('theme', 'ec_europa');
   $variables['front_page'] = url('<front>');
   $variables['content_column_class'] = 'ecl-col-12';

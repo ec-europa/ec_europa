@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_comment(&$variables, $hook) {
+function ec_europa_preprocess_comment(array &$variables, $hook) {
   $comment = $variables['elements']['#comment'];
   $variables['created'] = format_date($comment->created, 'ec_date');
   $variables['title'] = check_plain($comment->subject);

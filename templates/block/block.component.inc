@@ -20,7 +20,7 @@ function ec_europa_atomium_definition_block() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_block($form, &$form_state) {
+function ec_europa_atomium_definition_form_block(array $form, array &$form_state) {
   global $theme_key;
 
   // List of blocks we want to preview. Format: [module]:[delta].
@@ -54,7 +54,7 @@ function ec_europa_atomium_definition_form_block($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_block(&$variables, $hook) {
+function ec_europa_preprocess_block(array &$variables, $hook) {
   $block = $variables['block'];
 
   switch ($block->delta) {
@@ -181,6 +181,6 @@ function ec_europa_preprocess_block(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_block__content(&$variables, $hook) {
+function ec_europa_preprocess_block__content(array &$variables, $hook) {
   $variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
 }

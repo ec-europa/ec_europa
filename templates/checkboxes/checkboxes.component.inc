@@ -18,7 +18,7 @@ function ec_europa_atomium_definition_checkboxes() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_checkboxes($form, &$form_state) {
+function ec_europa_atomium_definition_form_checkboxes(array $form, array &$form_state) {
   $form['element1'] = array(
     '#title' => 'Simple example',
     '#type' => 'checkboxes',
@@ -36,7 +36,7 @@ function ec_europa_atomium_definition_form_checkboxes($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_checkboxes(&$variables, $hook) {
+function ec_europa_preprocess_checkboxes(array &$variables, $hook) {
   $element = $variables['element'];
 
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-checkbox-group');

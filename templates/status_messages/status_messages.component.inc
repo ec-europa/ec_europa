@@ -55,7 +55,7 @@ function ec_europa_atomium_definition_status_messages() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_status_messages(&$variables, $hook) {
+function ec_europa_preprocess_status_messages(array &$variables, $hook) {
   $status_heading = array(
     'success' => t('Success message'),
     'informative' => t('Informative message'),

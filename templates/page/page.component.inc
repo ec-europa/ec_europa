@@ -8,7 +8,11 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_page(&$variables, $hook) {
+function ec_europa_preprocess_page(array &$variables, $hook) {
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+  }
+
   // Small fix to maxe the link to the start page use the alias with language.
   $variables['front_page'] = url('<front>');
 
@@ -25,43 +29,39 @@ function ec_europa_preprocess_page(&$variables, $hook) {
 
   $variables['page_logo_title'] = t('Home - @sitename', ['@sitename' => variable_get('site_name', 'European Commission')]);
 
-  $node = &$variables['node'];
+  // Check if Display Suite is handling node.
+  if (module_exists('ds')) {
+    $layout = ds_get_layout('node', $node->type, 'full');
+    if ($layout && isset($layout['is_nexteuropa']) && $layout['is_nexteuropa'] == TRUE) {
+      // If our display suite layout has a header region.
+      if (isset($layout['regions']['left_header'])) {
+        // Move the header_bottom to the node.
+        $variables['node']->header_bottom = $variables['page']['header_bottom'];
+        unset($variables['page']['header_bottom']);
+      }
+      if (isset($variables['page']['utility'])) {
+        // Move the utility to the node.
+        $variables['node']->utility = $variables['page']['utility'];
+        unset($variables['page']['utility']);
+      }
+      ctools_class_add($layout['layout']);
 
-  if (isset($node)) {
-    // Check if Display Suite is handling node.
-    if (module_exists('ds')) {
-      $layout = ds_get_layout('node', $node->type, 'full');
-      if ($layout && isset($layout['is_nexteuropa']) && $layout['is_nexteuropa'] == TRUE) {
-        // If our display suite layout has a header region.
-        if (isset($layout['regions']['left_header'])) {
-          // Move the header_bottom to the node.
-          $variables['node']->header_bottom = $variables['page']['header_bottom'];
-          unset($variables['page']['header_bottom']);
-        }
-        if (isset($variables['page']['utility'])) {
-          // Move the utility to the node.
-          $variables['node']->utility = $variables['page']['utility'];
-          unset($variables['page']['utility']);
-        }
-        ctools_class_add($layout['layout']);
+      if (isset($node->ds_switch) && $node->ds_switch != 'college') {
+        $variables['node']->header_bottom_modifier = 'page-bottom-header--full-grey';
+      }
 
-        if (isset($node->ds_switch) && $node->ds_switch != 'college') {
-          $variables['node']->header_bottom_modifier = 'page-bottom-header--full-grey';
-        }
+      // This disables message-printing on ALL page displays.
+      $variables['show_messages'] = FALSE;
 
-        // This disables message-printing on ALL page displays.
-        $variables['show_messages'] = FALSE;
+      // Add tabs to node object so we can put it in the DS template instead.
+      if (isset($variables['tabs'])) {
+        $node->local_tabs = drupal_render($variables['tabs']);
+      }
 
-        // Add tabs to node object so we can put it in the DS template instead.
-        if (isset($variables['tabs'])) {
-          $node->local_tabs = drupal_render($variables['tabs']);
-        }
-
-        // Use page__ds_node.tpl unless it is an exception.
-        $custom_page_templates = ['page__gallery'];
-        if (empty(array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
-          $variables['theme_hook_suggestions'][] = 'page__ds_node';
-        }
+      // Use page__ds_node.tpl unless it is an exception.
+      $custom_page_templates = ['page__gallery'];
+      if (empty(array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
+        $variables['theme_hook_suggestions'][] = 'page__ds_node';
       }
     }
   }

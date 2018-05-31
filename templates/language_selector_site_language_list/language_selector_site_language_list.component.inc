@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_language_selector_site_language_list(&$variables, $hook) {
+function ec_europa_preprocess_language_selector_site_language_list(array &$variables, $hook) {
   $language_current = $GLOBALS['language'];
   $languages_list = language_list('enabled');
 

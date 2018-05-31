@@ -61,7 +61,7 @@ function ec_europa_atomium_definition_site_header() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_site_header(&$variables, $hook) {
+function ec_europa_preprocess_site_header(array &$variables, $hook) {
   $variables['#atomium_recursive'] = TRUE;
   $variables['menu'] = _atomium_block_get_render_array('system', 'user-menu');
 

@@ -36,7 +36,7 @@ function ec_europa_atomium_theme_link_blocks() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_link_blocks(&$variables, $hook) {
+function ec_europa_preprocess_link_blocks(array &$variables, $hook) {
   if (!empty($variables['items'])) {
     $num_items = count($variables['items']);
     $i = 0;

@@ -34,7 +34,7 @@ function ec_europa_atomium_definition_splash() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_splash(&$variables, $hook) {
+function ec_europa_preprocess_splash(array &$variables, $hook) {
   if (empty($variables['path'])) {
     $variables['path'] = '/node';
   }

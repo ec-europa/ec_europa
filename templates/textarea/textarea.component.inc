@@ -18,7 +18,7 @@ function ec_europa_atomium_definition_textarea() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_textarea($form, &$form_state) {
+function ec_europa_atomium_definition_form_textarea(array $form, array &$form_state) {
   $form['element1'] = array(
     '#title' => 'Normal textarea',
     '#type' => 'textarea',
@@ -47,7 +47,7 @@ function ec_europa_atomium_definition_form_textarea($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_textarea(&$variables, $hook) {
+function ec_europa_preprocess_textarea(array &$variables, $hook) {
   $variables['atomium']['attributes']['element']->merge($variables['element']['#attributes']);
   $variables['atomium']['attributes']['element']->append('class', 'ecl-textarea');
   $variables['atomium']['attributes']['element']->setAttribute('role', 'textbox');

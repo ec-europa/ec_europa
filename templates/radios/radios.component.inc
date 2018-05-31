@@ -18,7 +18,7 @@ function ec_europa_atomium_definition_radios() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_radios($form, &$form_state) {
+function ec_europa_atomium_definition_form_radios(array $form, array &$form_state) {
   $form['element1'] = array(
     '#title' => 'Radios component',
     '#type' => 'radios',
@@ -36,7 +36,7 @@ function ec_europa_atomium_definition_form_radios($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_radios(&$variables, $hook) {
+function ec_europa_preprocess_radios(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-radio-group');
   $variables['atomium']['attributes']['wrapper']->append('role', 'radiogroup');
 
