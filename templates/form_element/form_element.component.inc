@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_form_element__radio(&$variables, $hook) {
+function ec_europa_preprocess_form_element__radio(array &$variables, $hook) {
   $element = $variables['element'];
 
   if (isset($element['#label_tag_attributes'])) {
@@ -49,7 +49,7 @@ function ec_europa_preprocess_form_element__radio(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_form_element__checkbox(&$variables, $hook) {
+function ec_europa_preprocess_form_element__checkbox(array &$variables, $hook) {
   $element = $variables['element'];
 
   if (isset($element['#label_tag_attributes'])) {
@@ -91,7 +91,7 @@ function ec_europa_preprocess_form_element__checkbox(&$variables, $hook) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_form_element__textarea(&$variables, $hook) {
+function ec_europa_preprocess_form_element__textarea(array &$variables, $hook) {
   $variables['label']['#attributes'] = array(
     'id' => array($variables['element']['#id'] . '_label'),
   );

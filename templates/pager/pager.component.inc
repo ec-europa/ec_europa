@@ -26,7 +26,7 @@ function ec_europa_atomium_definition_pager() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_pager(&$variables, $hook) {
+function ec_europa_preprocess_pager(array &$variables, $hook) {
   global $pager_page_array, $pager_total;
 
   if (empty($variables[$variables['base_hook']])) {

@@ -16,5 +16,7 @@ function ec_europa_css_alter(&$css) {
       $css[$path_fancybox . '/jquery.fancybox.css']
     );
   }
-  unset($css[drupal_get_path('module', 'date') . '/date_api/date.css']);
+  if (module_exists('date')) {
+    unset($css[drupal_get_path('module', 'date') . '/date_api/date.css']);
+  }
 }

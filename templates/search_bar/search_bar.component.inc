@@ -40,7 +40,7 @@ function ec_europa_atomium_theme_search_bar() {
  * @see _ec_europa_preprocess_form_element__QueryText()
  * @see _ec_europa_preprocess_textfield__QueryText()
  */
-function ec_europa_preprocess_search_bar(&$variables, $hook) {
+function ec_europa_preprocess_search_bar(array &$variables, $hook) {
   if (!module_exists('nexteuropa_europa_search')) {
     return;
   }

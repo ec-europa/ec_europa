@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_comment_wrapper(&$variables, $hook) {
+function ec_europa_preprocess_comment_wrapper(array &$variables, $hook) {
   $form = &$variables['content']['comment_form'];
   $form['actions']['submit']['#value'] = t('Send');
   unset($form['author']);

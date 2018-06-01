@@ -41,6 +41,6 @@ function ec_europa_atomium_definition_meta() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_meta(&$variables, $hook) {
+function ec_europa_preprocess_meta(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-meta');
 }

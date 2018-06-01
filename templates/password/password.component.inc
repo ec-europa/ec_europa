@@ -18,7 +18,7 @@ function ec_europa_atomium_definition_password() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_password($form, &$form_state) {
+function ec_europa_atomium_definition_form_password(array $form, array &$form_state) {
   $form['element1'] = array(
     '#title' => 'Normal password.',
     '#type' => 'password',
@@ -49,7 +49,7 @@ function ec_europa_atomium_definition_form_password($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_password(&$variables, $hook) {
+function ec_europa_preprocess_password(array &$variables, $hook) {
   $classes = array('ecl-text-input');
   $error_classes = array('ecl-text-input--has-error');
   _ec_europa_form_set_css_class($variables, $classes, $error_classes);

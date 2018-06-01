@@ -53,7 +53,7 @@ function ec_europa_atomium_definition_page_header() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_page_header(&$variables, $hook) {
+function ec_europa_preprocess_page_header(array &$variables, $hook) {
   $variables['ec_europa_basic_header'] = theme_get_setting('ec_europa_basic_header', 'ec_europa');
   if (module_exists('easy_breadcrumb')) {
     // @TODO: The file includes/easy_breadcrumb.blocks.inc

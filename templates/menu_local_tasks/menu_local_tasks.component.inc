@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_menu_local_tasks(&$variables, $hook) {
+function ec_europa_preprocess_menu_local_tasks(array &$variables, $hook) {
   // Primary menu tabs preprocess.
   if (isset($variables['primary']) && !empty($variables['primary'])) {
     // Quite the theme implementation set in Atomium in order to

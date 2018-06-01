@@ -20,7 +20,7 @@ function ec_europa_atomium_definition_expandable() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_expandable($form, &$form_state) {
+function ec_europa_atomium_definition_form_expandable(array $form, array &$form_state) {
   $form['element'][] = array(
     '#theme' => 'expandable',
     '#title' => 'Expandable with a button',
@@ -40,7 +40,7 @@ function ec_europa_atomium_definition_form_expandable($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_expandable(&$variables, $hook) {
+function ec_europa_preprocess_expandable(array &$variables, $hook) {
   $id = drupal_html_id($variables['id']);
 
   $variables['atomium']['attributes']['content'] = array(

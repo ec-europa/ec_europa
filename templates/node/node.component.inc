@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_node(&$variables, $hook) {
+function ec_europa_preprocess_node(array &$variables, $hook) {
   // Add information about the number of sidebars.
   if (!empty($variables['left']) && !empty($variables['right'])) {
     $variables['content_column_class'] = 'ecl-col-md-6';
@@ -20,8 +20,6 @@ function ec_europa_preprocess_node(&$variables, $hook) {
     $variables['content_column_class'] = 'ecl-col-md-12';
   }
   $variables['site_name'] = variable_get('site_name');
-  $variables['theme_hook_suggestions'][] = 'node__' . $variables['view_mode'];
-  $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
   $variables['submitted'] = '';
   if (theme_get_setting('display_submitted')) {
     $variables['submitted'] = t('Submitted by !username on !datetime', [

@@ -33,7 +33,7 @@ function ec_europa_atomium_definition_labels() {
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_labels($form, &$form_state) {
+function ec_europa_atomium_definition_form_labels(array $form, array &$form_state) {
   $form['elements'][] = array(
     '#theme' => 'labels__upcoming',
     '#content' => 'Label component: Upcoming',
@@ -53,6 +53,6 @@ function ec_europa_atomium_definition_form_labels($form, &$form_state) {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_labels(&$variables, $hook) {
+function ec_europa_preprocess_labels(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-label');
 }

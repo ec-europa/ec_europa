@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_definition_form_hook().
  */
-function ec_europa_atomium_definition_form_table($form, &$form_state) {
+function ec_europa_atomium_definition_form_table(array $form, array &$form_state) {
   $form['element1'] = array(
     '#theme' => 'table',
     '#caption' => 'Default table.',
@@ -293,6 +293,6 @@ function ec_europa_atomium_definition_table() {
 /**
  * Implements hook_preprocess_hook().
  */
-function ec_europa_preprocess_table(&$variables, $hook) {
+function ec_europa_preprocess_table(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-table');
 }
