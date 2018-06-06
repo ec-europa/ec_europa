@@ -152,7 +152,8 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(arra
  *   The array of variables.
  */
 function _ec_europa_menu_link_footer_alter(array $variables) {
-  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__menu-item');
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__list-item');
+  $variables['menu_link']['menu_link']['#options']['attributes']['class'][] = 'ecl-link--inverted';
   $variables['menu_link']['menu_link']['#options']['attributes']['class'][] = 'ecl-footer__link';
 
   $classes = &$variables['output']['#options']['attributes']['class'];
