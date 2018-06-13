@@ -6,7 +6,10 @@
 (function ($) {
   Drupal.behaviors.ecEuropaMenuTree = {
     attach: function (context) {
-      ECL.megamenu('.ecl-navigation-menu__root');
+      if(!Drupal.behaviors.ecEuropaMenuTree.megamenu) {
+        ECL.megamenu('.ecl-navigation-menu__root');
+        Drupal.behaviors.ecEuropaMenuTree.megamenu = true;
+      }
     }
   };
 })(jQuery);
