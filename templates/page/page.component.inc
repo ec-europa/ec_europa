@@ -9,6 +9,7 @@
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_page(array &$variables, $hook) {
+  $node = NULL;
   if (isset($variables['node'])) {
     $node = $variables['node'];
   }
@@ -30,7 +31,7 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
   $variables['page_logo_title'] = t('Home - @sitename', ['@sitename' => variable_get('site_name', 'European Commission')]);
 
   // Check if Display Suite is handling node.
-  if (module_exists('ds')) {
+  if (NULL !== $node && module_exists('ds')) {
     $layout = ds_get_layout('node', $node->type, 'full');
     if ($layout && isset($layout['is_nexteuropa']) && $layout['is_nexteuropa'] == TRUE) {
       // If our display suite layout has a header region.
