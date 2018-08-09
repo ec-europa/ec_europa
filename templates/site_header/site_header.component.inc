@@ -63,5 +63,5 @@ function ec_europa_atomium_definition_site_header() {
  */
 function ec_europa_preprocess_site_header(array &$variables, $hook) {
   $variables['#atomium_recursive'] = TRUE;
-  $variables['menu'] = _atomium_block_get_render_array('system', 'user-menu');
+  $variables['menu'] = _ec_europa_block_get_render_array('system', 'user-menu');
 }
