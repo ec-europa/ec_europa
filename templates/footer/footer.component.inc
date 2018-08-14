@@ -74,7 +74,15 @@ function ec_europa_preprocess_footer(array &$variables, $hook) {
   );
 
   foreach ($variables_block_mapping as $name => $data) {
-    $variables[$name] = _ec_europa_block_get_render_array($data[0], $data[1]);
+    $variables[$name] = _ec_europa_block_get_render_array(
+      $data[0],
+      $data[1],
+      array(
+        'suggestions parts' => array(
+          'footer',
+        ),
+      )
+    );
   }
 
   $variables['footer_left'] = array(
