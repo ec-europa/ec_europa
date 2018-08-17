@@ -11,4 +11,4 @@
  */
 ?>
 
-<?php print render($element['#children']); ?>
+<?php print render($container); ?>
