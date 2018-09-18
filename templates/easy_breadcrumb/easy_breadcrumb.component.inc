@@ -70,7 +70,6 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
   if ($segments_quantity > 0) {
     for ($i = 0, $s = $segments_quantity; $i < $segments_quantity; ++$i) {
       $item = $breadcrumb[$i];
-
       // Removing classes from $item['class'] array and adding BEM classes.
       $classes = array();
       if (isset($item['class'])) {
@@ -115,8 +114,7 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
  * Generate the first breadcrumb items basing on a custom menu.
  */
 function _ec_europa_breadcrumb_menu(&$variables) {
-  module_load_include('inc', 'easy_breadcrumb', 'includes/easy_breadcrumb.blocks');
-
+  $variables['breadcrumb'] = _easy_breadcrumb_build_items();
   $menu_links = menu_tree('menu-breadcrumb-menu');
   $new_items = array();
   global $language;

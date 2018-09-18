@@ -56,10 +56,7 @@ function ec_europa_atomium_definition_page_header() {
 function ec_europa_preprocess_page_header(array &$variables, $hook) {
   $variables['ec_europa_basic_header'] = theme_get_setting('ec_europa_basic_header', 'ec_europa');
   if (module_exists('easy_breadcrumb')) {
-    // @TODO: The file includes/easy_breadcrumb.blocks.inc
-    // @TODO: only exists in easy_breadcrumb <= 7.x-2.12
-    // @TODO: Please refactor when upgrading easy_breadcrumb.
-    module_load_include('inc', 'easy_breadcrumb', 'includes/easy_breadcrumb.blocks');
-    $variables['breadcrumb'] = _easy_breadcrumb_block();
+    $block = module_invoke('easy_breadcrumb', 'block_view', 'easy_breadcrumb');
+    $variables['breadcrumb'] = $block['content'];
   }
 }
