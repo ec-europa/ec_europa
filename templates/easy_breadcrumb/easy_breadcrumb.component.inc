@@ -70,6 +70,7 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
   if ($segments_quantity > 0) {
     for ($i = 0, $s = $segments_quantity; $i < $segments_quantity; ++$i) {
       $item = $breadcrumb[$i];
+
       // Removing classes from $item['class'] array and adding BEM classes.
       $classes = array();
       if (isset($item['class'])) {
