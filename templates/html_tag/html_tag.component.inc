@@ -11,7 +11,7 @@
 function ec_europa_preprocess_html_tag(array &$variables, $hook) {
   $headers = array('h1', 'h2', 'h3', 'h4', 'h5');
   // TODO: Should we keep this ? Can't we just provide this by default ?
-  if (in_array($variables['element']['#tag'], $headers)) {
+  if (\in_array($variables['element']['#tag'], $headers, TRUE)) {
     $variables['atomium']['attributes']['element']
       ->append(
         'class',

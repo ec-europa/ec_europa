@@ -33,14 +33,14 @@ function ec_europa_file_widget($variables) {
     // element appears before the file input element. They must also be siblings
     // inside the same parent element.
     // @see https://www.drupal.org/node/2155419
-    $hidden_elements = [];
-    $upload_button = [];
+    $hidden_elements = array();
+    $upload_button = array();
     foreach (element_children($element) as $child) {
-      if ($element[$child]['#type'] === 'hidden') {
+      if ('hidden' === $element[$child]['#type']) {
         $hidden_elements[$child] = $element[$child];
         unset($element[$child]);
       }
-      elseif ($element[$child]['#type'] === 'submit') {
+      elseif ('submit' === $element[$child]['#type']) {
         $upload_button[$child] = $element[$child];
         $upload_button[$child]['#attributes']['class'][] = 'ecl-button--primary';
         unset($element[$child]);

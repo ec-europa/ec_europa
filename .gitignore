@@ -21,3 +21,5 @@ composer.lock
 /runner.yml
 /behat.yml
 /build/
+/.php_cs.cache
+/phpunit.xml

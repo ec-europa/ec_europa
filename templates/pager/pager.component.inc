@@ -14,7 +14,7 @@ function ec_europa_atomium_definition_pager() {
     'description' => 'Nexteuropa Pager',
     'preview' => array(
       'pager_page_array' => array(
-        0 => rand(0, 30),
+        0 => \rand(0, 30),
       ),
       'pager_total' => array(
         0 => 30,
@@ -37,7 +37,7 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
   $element = $variables['element'];
   $quantity = $variables['quantity'];
   $pager_max = $pager_total[$element];
-  $pager_middle = ceil($quantity / 2);
+  $pager_middle = \ceil($quantity / 2);
   $pager_current = $pager_page_array[$element] + 1;
   $pager_first = $pager_current - $pager_middle + 1;
 

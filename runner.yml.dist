@@ -1,48 +1,45 @@
 drupal:
-  core: "7"
-  base_url: "http://127.0.0.1:8888"
+  core: 7
+  base_url: "http://web:8080/build"
+  site:
+    profile: minimal
   database:
-    host: "127.0.0.1"
+    host: "mysql"
     port: "3306"
-    name: "drupal"
+    name: "atomium"
     user: "root"
     password: ""
+  settings:
+    conf:
+      file_scan_ignore_directories:
+        - vendor
+        - ${drupal.root}
+        - node_modules
+        - bower_components
+        - build
+        - sites/all/themes/ec_europa/build
+        - build/sites/all/themes/ec_europa/build
+      drupal_http_request_fails: false
   post_install:
-    - "./vendor/bin/drush --root=$(pwd)/${drupal.root} en -y atomium ec_europa views views_ui libraries entity_translation date date_views date_popup date_api composer_autoloader"
-    - "./vendor/bin/drush --root=$(pwd)/${drupal.root} dis -y overlay update"
+      - ./vendor/bin/drush --root=$(pwd)/build dis help overlay update search color dashboard dblog shortcut path toolbar -y
+      - ./vendor/bin/drush --root=$(pwd)/build pmu help overlay update search color dashboard dblog shortcut path toolbar -y
+      - ./vendor/bin/drush --root=$(pwd)/build en -y atomium admin_menu admin_menu_toolbar admin_devel devel realistic_dummy_content composer_autoloader
+      - ./vendor/bin/drush --root=$(pwd)/build vset theme_default ec_europa
+      - ./vendor/bin/drush --root=$(pwd)/build cc all
   drush:
     options:
       ignored-directories: "${drupal.root}"
       uri: "${drupal.base_url}"
-  settings:
-    conf:
-      theme_default: "ec_europa"
-      file_scan_ignore_directories:
-        - "node_modules"
-        - "bower_components"
-        - "vendor"
-        - "${drupal.root}"
 
 commands:
   drupal:site-setup:
-    - { task: "chmod", file: "${drupal.root}/sites", permissions: 0774, recursive: true }
+    - { task: "chmod", file: "${drupal.root}/sites", permissions: 0777, recursive: true }
     - { task: "symlink", from: "../../../../..", to: "${drupal.root}/sites/all/themes/custom/ec_europa" }
     - { task: "run", command: "drupal:drush-setup" }
     - { task: "run", command: "drupal:settings-setup" }
+    - { task: "run", command: "setup:phpunit" }
     - { task: "run", command: "setup:behat" }
+  setup:phpunit:
+    - { task: "process", source: "phpunit.xml.dist", destination: "phpunit.xml" }
   setup:behat:
     - { task: "process", source: "behat.yml.dist", destination: "behat.yml" }
-
-release:
-  tasks:
-    - { task: "remove", file: "ec_europa/.drone.yml" }
-    - { task: "remove", file: "ec_europa/.editorconfig" }
-    - { task: "remove", file: "ec_europa/.gitignore" }
-    - { task: "remove", file: "ec_europa/.travis.yml" }
-    - { task: "remove", file: "ec_europa/behat.yml.dist" }
-    - { task: "remove", file: "ec_europa/composer.json" }
-    - { task: "remove", file: "ec_europa/ecl-builder.config.js" }
-    - { task: "remove", file: "ec_europa/grumphp.yml.dist" }
-    - { task: "remove", file: "ec_europa/package.json" }
-    - { task: "remove", file: "ec_europa/runner.yml.dist" }
-    - { task: "remove", file: "ec_europa/tests" }

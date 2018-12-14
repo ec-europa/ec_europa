@@ -22,7 +22,7 @@ function ec_europa_preprocess_menu_link__main_menu(array &$variables, $hook) {
 
   $link = $variables['element']['#original_link'];
   if ($link['in_active_trail']) {
-    if ($link['depth'] == 1) {
+    if (1 == $link['depth']) {
       $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-navigation-menu__item--active');
     }
     else {
@@ -62,7 +62,7 @@ function ec_europa_preprocess_menu_link__menu_service_tools(array &$variables, $
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-list-inline__item');
-  $variables['output']['#options']['attributes']['class'] = array_diff(
+  $variables['output']['#options']['attributes']['class'] = \array_diff(
     $variables['output']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
@@ -80,7 +80,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links__footer(a
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-list-inline__item');
-  $variables['output']['#options']['attributes']['class'] = array_diff(
+  $variables['output']['#options']['attributes']['class'] = \array_diff(
     $variables['output']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
@@ -97,7 +97,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media__footer(ar
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links(array &$variables, $hook) {
-  $variables['output']['#options']['attributes']['class'] = array_diff(
+  $variables['output']['#options']['attributes']['class'] = \array_diff(
     $variables['output']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
@@ -114,7 +114,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links__footer(arra
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(array &$variables, $hook) {
-  $variables['output']['#options']['attributes']['class'] = array_diff(
+  $variables['output']['#options']['attributes']['class'] = \array_diff(
     $variables['output']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
@@ -155,7 +155,7 @@ function _ec_europa_menu_link_footer_alter(array $variables) {
   $variables['output']['#options']['attributes']['class'][] = 'ecl-footer__link';
 
   $classes = &$variables['output']['#options']['attributes']['class'];
-  if (!empty($classes) && in_array('ecl-icon', $classes)) {
+  if (!empty($classes) && \in_array('ecl-icon', $classes, TRUE)) {
     $classes[] = 'ecl-footer__social-icon';
   }
 

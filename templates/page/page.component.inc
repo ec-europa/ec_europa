@@ -7,6 +7,9 @@
 
 /**
  * Implements hook_preprocess_hook().
+ *
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.NPathComplexity)
  */
 function ec_europa_preprocess_page(array &$variables, $hook) {
   $node = NULL;
@@ -28,12 +31,12 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
     $variables['content_column_class'] = 'ecl-col-12';
   }
 
-  $variables['page_logo_title'] = t('Home - @sitename', ['@sitename' => variable_get('site_name', 'European Commission')]);
+  $variables['page_logo_title'] = t('Home - @sitename', array('@sitename' => variable_get('site_name', 'European Commission')));
 
   // Check if Display Suite is handling node.
   if (NULL !== $node && module_exists('ds')) {
     $layout = ds_get_layout('node', $node->type, 'full');
-    if ($layout && isset($layout['is_nexteuropa']) && $layout['is_nexteuropa'] == TRUE) {
+    if ($layout && isset($layout['is_nexteuropa']) && TRUE == $layout['is_nexteuropa']) {
       // If our display suite layout has a header region.
       if (isset($layout['regions']['left_header'])) {
         // Move the header_bottom to the node.
@@ -47,7 +50,7 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
       }
       ctools_class_add($layout['layout']);
 
-      if (isset($node->ds_switch) && $node->ds_switch != 'college') {
+      if (isset($node->ds_switch) && 'college' != $node->ds_switch) {
         $variables['node']->header_bottom_modifier = 'page-bottom-header--full-grey';
       }
 
@@ -60,8 +63,8 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
       }
 
       // Use page__ds_node.tpl unless it is an exception.
-      $custom_page_templates = ['page__gallery'];
-      if (empty(array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
+      $custom_page_templates = array('page__gallery');
+      if (empty(\array_intersect($variables['theme_hook_suggestions'], $custom_page_templates))) {
         $variables['theme_hook_suggestions'][] = 'page__ds_node';
       }
     }
@@ -92,7 +95,7 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
     '#footer_middle' => $variables['page']['footer_middle'],
   );
 
-  if (in_array('page__splash', $variables['theme_hook_suggestions'])) {
+  if (\in_array('page__splash', $variables['theme_hook_suggestions'], TRUE)) {
     $variables['logo'] = array(
       '#theme' => _atomium_extend_theme_hook('logo', $variables['theme_hook_original']),
       '#title' => t('Home - European Commission'),

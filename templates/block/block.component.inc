@@ -35,13 +35,13 @@ function ec_europa_atomium_definition_form_block(array $form, array &$form_state
   foreach ($blocks as $block) {
     $block_id = $block['module'] . ':' . $block['delta'];
 
-    if (!in_array($block_id, $block_whitelist)) {
+    if (!\in_array($block_id, $block_whitelist, TRUE)) {
       continue;
     }
 
     $form['blocks'][] = array(
       '#type' => 'fieldset',
-      '#title' => sprintf('Block ([module]:[delta]) (%s)', $block_id),
+      '#title' => \sprintf('Block ([module]:[delta]) (%s)', $block_id),
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
       'content' => _atomium_block_get_render_array($block['module'], $block['delta']),
@@ -53,6 +53,9 @@ function ec_europa_atomium_definition_form_block(array $form, array &$form_state
 
 /**
  * Implements hook_preprocess_hook().
+ *
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.NPathComplexity)
  */
 function ec_europa_preprocess_block(array &$variables, $hook) {
   $block = $variables['block'];
@@ -60,6 +63,7 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
   switch ($block->delta) {
     case 'nexteuropa_feedback':
       $variables['atomium']['attributes']['wrapper']->append('class', 'block--full-width');
+
       break;
 
     case 'menu-nexteuropa-site-links':
@@ -68,17 +72,20 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
       $variables['title'] = $block->subject;
       $variables['atomium']['attributes']['title']->append('class', array('ecl-h4', 'ecl-footer__title'));
       $block->subject = '';
+
       break;
 
     case 'menu-nexteuropa-service-links':
       $variables['title'] = '';
       $variables['atomium']['attributes']['title']->append('class', array('ecl-h4', 'ecl-footer__title'));
       $block->subject = '';
+
       break;
 
     case 'views_related_links':
       $variables['atomium']['attributes']['wrapper']->append('class', 'link-block');
       $variables['atomium']['attributes']['title']->append('class', 'link-block__title');
+
       break;
 
     case 'language_selector_site':
@@ -86,16 +93,18 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
       $variables['lang_name'] = $variables['elements']['label']['#markup'];
       $variables['link'] = url('splash') . '?' . drupal_get_destination()['destination'];
       $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-lang-select-sites');
+
       break;
 
     case 'inline_navigation':
       $variables['atomium']['attributes']['wrapper']->append('class', 'inpage-nav__wrapper');
       $variables['atomium']['attributes']['title']->append('class', 'inpage-nav__block-title');
+
       break;
   }
 
   // Page-level language switcher.
-  if (isset($block->bid) && $block->bid === 'language_selector_page-language_selector_page') {
+  if (isset($block->bid) && 'language_selector_page-language_selector_page' === $block->bid) {
     global $language;
 
     // selectify.js is the library to convert between ul and select.
@@ -117,7 +126,7 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
 
     if (!empty($variables['elements']['other']['#markup'])) {
       foreach ($variables['elements']['other']['#markup'] as $code => $lang) {
-        $options = [];
+        $options = array();
         $options['query'] = drupal_get_query_parameters();
         $options['query']['2nd-language'] = $code;
         $options['attributes']['lang'] = $code;
@@ -140,7 +149,7 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
   }
 
   // Site-level language switcher.
-  if (isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
+  if (isset($block->bid) && 'language_selector_site-language_selector_site' === $block->bid) {
     // Add the js to make it function.
     drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/lang-select-site.js');
   }
@@ -151,11 +160,11 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
     // Check if the block is a exposed form.
     // This is checked by looking at the $block->bid which in case
     // of views exposed filters, always contains 'views--exp-' string.
-    if (strpos($block->bid, 'views--exp-') !== FALSE) {
+    if (FALSE !== \strpos($block->bid, 'views--exp-')) {
       if (isset($block->context) && $context = context_load($block->context)) {
         // If our block is the first, we set the subject. This way, if we expose
         // a second block for the same view, we will not duplicate the title.
-        if (array_search($block->bid, array_keys($context->reactions['block']['blocks'])) === 0) {
+        if (0 === \array_search($block->bid, \array_keys($context->reactions['block']['blocks']), TRUE)) {
           $variables['atomium']['attributes']['wrapper']->append('class', 'filters');
           $variables['atomium']['attributes']['title']->append('class', 'filters__title');
 

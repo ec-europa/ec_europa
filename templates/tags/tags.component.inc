@@ -110,7 +110,7 @@ function ec_europa_preprocess_tags(array &$variables, $hook) {
       '#text' => $item['value'],
       '#path' => $item['href'],
     );
-  };
+  }
 }
 
 /**

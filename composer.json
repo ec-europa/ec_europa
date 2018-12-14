@@ -1,34 +1,39 @@
 {
     "name": "ec-europa/ec_europa",
     "description": "EC Europa base theme.",
-    "git-version": "0.0.4",
     "type": "drupal-theme",
     "license": "EUPL-1.1",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "openeuropa/code-review": "^0.2",
-        "openeuropa/task-runner": "^0.5",
+        "anahkiasen/underscore-php" : "dev-master",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/preserve-paths": "^0.1",
-        "drupal/drupal": "~7.0",
-        "drupal/composer_autoloader": "^1.0",
-        "drush/drush": "^8",
-        "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3",
-        "mikey179/vfsstream": "~1.2",
-        "nuvoleweb/robo-config": "~0.1",
-        "drupal/drupal-extension": "~3.3",
+        "drupal/admin_menu": "*",
         "drupal/atomium": "2.x-dev",
+        "drupal/composer_autoloader": "^1.0",
         "drupal/date": "*",
-        "drupal/views": "*",
-        "drupal/views_ui": "*",
-        "drupal/libraries": "*",
-        "drupal/entity_translation": "*",
         "drupal/date_views": "*",
         "drupal/date_popup": "*",
-        "drupal/date_api": "*"
+        "drupal/date_api": "*",
+        "drupal/devel": "*",
+        "drupal/drupal": "~7.0",
+        "drupal/drupal-extension": "~3.4",
+        "drupal/entity_translation": "*",
+        "drupal/libraries": "*",
+        "drupal/realistic_dummy_content": "*",
+        "drupal/views": "*",
+        "drush/drush": "^8",
+        "friendsofphp/php-cs-fixer": "^2.10",
+        "mikey179/vfsstream": "~1.2",
+        "nuvoleweb/robo-config": "~0.1",
+        "openeuropa/code-review": "^1.0.0-beta1",
+        "openeuropa/task-runner": "^1.0.0-beta4",
+        "peridot-php/leo": "~1.0",
+        "phpunit/phpunit": "^5",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3"
     },
     "repositories": [
         {
@@ -58,5 +63,8 @@
         "preserve-paths": [
             "build/sites/default"
         ]
+    },
+    "config": {
+        "sort-packages": true
     }
 }
