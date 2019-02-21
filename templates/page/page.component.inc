@@ -67,17 +67,25 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
     }
   }
 
-  $variables['site_header'] = array(
-    '#theme' => _atomium_extend_theme_hook('site_header', $variables['theme_hook_original']),
+  $site_header = array(
+    '#theme' => 'site_header',
   );
+  _atomium_extend_theme_property(
+    $site_header,
+    array($variables['theme_hook_original']));
+  $variables['site_header'] = $site_header;
 
-  $variables['page_header'] = array(
-    '#theme' => _atomium_extend_theme_hook('page_header', $variables['theme_hook_original']),
+  $page_header = array(
+    '#theme' => 'page_header',
     '#identity' => $variables['site_name'],
     '#title_prefix' => $variables['title_prefix'],
     '#title_suffix' => $variables['title_suffix'],
     '#title' => drupal_get_title(),
   );
+  _atomium_extend_theme_property(
+    $page_header,
+    array($variables['theme_hook_original']));
+  $variables['page_header'] = $page_header;
 
   if (isset($node)) {
     // Adding generic introduction field to be later rendered in page template.
@@ -86,24 +94,36 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
       ? field_view_field('node', $node, $introduction, array('label' => 'hidden')) : NULL;
   }
 
-  $variables['footer'] = array(
-    '#theme' => _atomium_extend_theme_hook('footer', $variables['theme_hook_original']),
+  $footer = array(
+    '#theme' => 'footer',
     '#footer_right' => $variables['page']['footer_right'],
     '#footer_middle' => $variables['page']['footer_middle'],
   );
+  _atomium_extend_theme_property(
+    $footer,
+    array($variables['theme_hook_original']));
+  $variables['footer'] = $footer;
 
   if (in_array('page__splash', $variables['theme_hook_suggestions'])) {
-    $variables['logo'] = array(
-      '#theme' => _atomium_extend_theme_hook('logo', $variables['theme_hook_original']),
+    $logo = array(
+      '#theme' => 'logo',
       '#title' => t('Home - European Commission'),
       '#attributes' => array(
         'class' => array('ecl-logo--big', 'ecl-u-mh-auto'),
       ),
     );
+    _atomium_extend_theme_property(
+      $logo,
+      array($variables['theme_hook_original']));
+    $variables['logo'] = $logo;
 
-    $variables['splash'] = array(
-      '#theme' => _atomium_extend_theme_hook('splash', $variables['theme_hook_original']),
+    $splash = array(
+      '#theme' => 'splash',
     );
+    _atomium_extend_theme_property(
+      $splash,
+      array($variables['theme_hook_original']));
+    $variables['splash'] = $splash;
   }
 
   // Remove member "action_links" if there is no items to render.

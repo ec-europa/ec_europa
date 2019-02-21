@@ -74,19 +74,27 @@ function ec_europa_preprocess_footer(array &$variables, $hook) {
   );
 
   foreach ($variables_block_mapping as $name => $data) {
-    $variables[$name] = _atomium_block_get_render_array($data[0], $data[1]);
+    $variables[$name] = _ec_europa_block_get_render_array(
+      $data[0],
+      $data[1],
+      array(
+        'suggestions parts' => array(
+          'footer',
+        ),
+      )
+    );
   }
 
   $variables['footer_left'] = array(
-    '#theme' => _atomium_extend_theme_hook('html_tag'),
+    '#theme_wrappers' => array('html_tag'),
     '#tag' => 'h4',
     '#attributes' => array(
       'class' => array(
         'ecl-h4',
       ),
     ),
-    array(
-      '#theme' => _atomium_extend_theme_hook('link', array('footer_left', $variables['theme_hook_original'])),
+    'title' => array(
+      '#theme' => 'link',
       '#path' => '<front>',
       '#text' => variable_get('site_name', ''),
       '#options' => array(
@@ -98,4 +106,11 @@ function ec_europa_preprocess_footer(array &$variables, $hook) {
       ),
     ),
   );
+
+  _atomium_extend_theme_wrappers_property(
+    $variables['footer_left'],
+    array('footer_left', $variables['theme_hook_original']));
+  _atomium_extend_theme_property(
+    $variables['footer_left']['title'],
+    $variables['footer_left']['#theme_wrappers']);
 }
