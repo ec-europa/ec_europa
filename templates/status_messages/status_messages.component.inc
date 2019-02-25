@@ -44,8 +44,7 @@ function ec_europa_atomium_definition_status_messages() {
           'Live Stream message',
         ),
         'status' => array(
-          'Status message 1',
-          'Status message 2',
+          'Status message',
         ),
       ),
     ),
@@ -72,26 +71,30 @@ function ec_europa_preprocess_status_messages(array &$variables, $hook) {
   );
 
   foreach ($variables['status_messages']['status_messages'] as $type => &$messages) {
-    if (!empty($status_modifier[$type])) {
-      $messages['modifier'] = $status_modifier[$type];
-    }
-
-    if ((empty($messages['messages']['#title'])) && (!empty($status_modifier[$type]))) {
+    if (!empty($status_modifier[$type]) && empty($messages['messages']['#title'])) {
       $messages['messages']['#title'] = $status_heading[$type];
     }
-    $messages['status_heading'] = $messages['messages']['#title'];
+    $messages['status_heading'] = array(
+      '#markup' => $messages['messages']['#title'],
+    );
 
     if (empty($messages['messages']['#attributes']['class'])) {
       $messages['messages']['#attributes']['class'] = array();
     }
-    $messages['messages']['#attributes']['class'][] = "ecl-message__body";
-    $messages['messages']['#attributes']['class'][] = "ecl-list";
 
-    $variables['atomium']['attributes']['status-' . $type]->append('role', 'alert');
-    $variables['atomium']['attributes']['status-' . $type]->append(
-      'class',
-      array('ecl-message--' . $messages['modifier'], 'ecl-message')
-    );
+    $messages['messages']['#attributes']['class'][] = 'ecl-message__body';
+    $messages['messages']['#attributes']['class'][] = 'ecl-list';
+    $variables['atomium']['attributes']['status-' . $type]
+      ->append('role', 'alert');
+
+    if (isset($status_modifier[$type])) {
+      $variables['atomium']['attributes']['status-' . $type]
+        ->append(
+          'class',
+          array('ecl-message--' . $status_modifier[$type], 'ecl-message')
+        );
+    }
+
     $messages['messages']['#wrapper'] = FALSE;
   }
 }
