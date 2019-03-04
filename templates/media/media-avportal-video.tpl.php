@@ -30,7 +30,7 @@
   </iframe>
 </div>
 
-<?php if(!empty($language_switcher)) : ?>
+<?php if (!empty($language_switcher)) : ?>
   <div class="language-switcher">
     <?php print $language_switcher; ?>
   </div>

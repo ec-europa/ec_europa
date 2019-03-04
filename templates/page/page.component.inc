@@ -34,9 +34,9 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
   $variables['page_logo_title'] = t('Home - @sitename', array('@sitename' => variable_get('site_name', 'European Commission')));
 
   // Check if Display Suite is handling node.
-  if (NULL !== $node && module_exists('ds')) {
+  if ($node !== NULL && module_exists('ds')) {
     $layout = ds_get_layout('node', $node->type, 'full');
-    if ($layout && isset($layout['is_nexteuropa']) && TRUE == $layout['is_nexteuropa']) {
+    if ($layout && isset($layout['is_nexteuropa']) && $layout['is_nexteuropa'] === TRUE) {
       // If our display suite layout has a header region.
       if (isset($layout['regions']['left_header'])) {
         // Move the header_bottom to the node.
@@ -50,7 +50,7 @@ function ec_europa_preprocess_page(array &$variables, $hook) {
       }
       ctools_class_add($layout['layout']);
 
-      if (isset($node->ds_switch) && 'college' != $node->ds_switch) {
+      if (isset($node->ds_switch) && $node->ds_switch !== 'college') {
         $variables['node']->header_bottom_modifier = 'page-bottom-header--full-grey';
       }
 

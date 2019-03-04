@@ -83,5 +83,4 @@ function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
       ) + $link,
     );
   }
-
 }

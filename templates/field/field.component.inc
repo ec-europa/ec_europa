@@ -27,11 +27,11 @@ function ec_europa_preprocess_field(array &$variables, $hook) {
       break;
   }
 
-  if ('ds' != $element['#field_type']) {
-    if ('entityreference' == $element['#field_type'] && 0 == $element['#field_translatable']) {
+  if ($element['#field_type'] !== 'ds') {
+    if ($element['#field_type'] === 'entityreference' && $element['#field_translatable'] === 0) {
       if (isset($element['#language'])
-        && LANGUAGE_NONE != $element['#language']
-        && $GLOBALS['language_content']->language != $element['#language']
+        && $element['#language'] !== LANGUAGE_NONE
+        && $GLOBALS['language_content']->language !== $element['#language']
       ) {
         $variables['attributes']['lang'] = $element['#language'];
       }
@@ -154,7 +154,7 @@ function ec_europa_preprocess_field__list_boolean__list_default__group_access__n
         '#content' => $item['#markup'],
       );
       // @todo: Should we compute the value from $wrapper for each items ?
-      $variant = (0 == $wrapper->group_access->value()) ? 'closed' : 'open';
+      $variant = ($wrapper->group_access->value() === 0) ? 'closed' : 'open';
       $item['#theme'] = _atomium_extend_theme_hook('labels', $variant);
     });
   }

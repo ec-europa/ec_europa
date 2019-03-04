@@ -41,7 +41,7 @@ function ec_europa_preprocess_language_selector_site_language_list(array &$varia
 
   // Update current language's link only.
   $languages = \array_map(function ($language) use ($language_current, $variables) {
-    if ($language_current->language == $language['#language']->language) {
+    if ($language_current->language === $language['#language']->language) {
       $language['#options']['attributes']['class'] = \array_merge(
         $language['#options']['attributes']['class'],
         array(

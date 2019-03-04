@@ -11,7 +11,7 @@
 function ec_europa_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form['views_bulk_operations'])) {
     foreach (element_children($form['views_bulk_operations']) as $child) {
-      if ('checkbox' == $form['views_bulk_operations'][$child]['#type']) {
+      if ($form['views_bulk_operations'][$child]['#type'] === 'checkbox') {
         $form['views_bulk_operations'][$child]['#title'] = ' ';
       }
     }

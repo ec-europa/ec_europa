@@ -23,7 +23,7 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
   $rows = array();
   $row_indexes = array();
 
-  if ('horizontal' == $options['alignment']) {
+  if ($options['alignment'] === 'horizontal') {
     $row = array();
     $col_count = 0;
     $row_count = 0;
@@ -33,7 +33,7 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
       $row[] = $item;
       $row_indexes[$row_count][$col_count] = $row_index;
       $col_count++;
-      if (0 == $count % $columns) {
+      if ($count % $columns === 0) {
         $rows[] = $row;
         $row = array();
         $col_count = 0;
@@ -61,11 +61,11 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
       $row_indexes[$row][$col] = $count;
       $row++;
 
-      if (!$remainders && $row == $num_rows) {
+      if (!$remainders && $row === $num_rows) {
         $row = 0;
         $col++;
       }
-      elseif ($remainders && $row == $num_rows + 1) {
+      elseif ($remainders && $row === $num_rows + 1) {
         $row = 0;
         $col++;
         $remainders--;
@@ -86,10 +86,10 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
       $row_classes[] = 'row-' . ($row_number + 1);
     }
     if ($row_class_special) {
-      if (0 == $row_number) {
+      if ($row_number === 0) {
         $row_classes[] = 'row-first';
       }
-      if (\count($rows) == ($row_number + 1)) {
+      if (\count($rows) === ($row_number + 1)) {
         $row_classes[] = 'row-last';
       }
     }
@@ -100,10 +100,10 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
         $column_classes[] = 'col-' . ($column_number + 1);
       }
       if ($row_class_special) {
-        if (0 == $column_number) {
+        if ($column_number === 0) {
           $column_classes[] = 'col-first';
         }
-        elseif (\count($rows[$row_number]) == ($column_number + 1)) {
+        elseif (\count($rows[$row_number]) === ($column_number + 1)) {
           $column_classes[] = 'col-last';
         }
       }

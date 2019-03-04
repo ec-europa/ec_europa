@@ -36,11 +36,11 @@ function ec_europa_file_widget($variables) {
     $hidden_elements = array();
     $upload_button = array();
     foreach (element_children($element) as $child) {
-      if ('hidden' === $element[$child]['#type']) {
+      if ($element[$child]['#type'] === 'hidden') {
         $hidden_elements[$child] = $element[$child];
         unset($element[$child]);
       }
-      elseif ('submit' === $element[$child]['#type']) {
+      elseif ($element[$child]['#type'] === 'submit') {
         $upload_button[$child] = $element[$child];
         $upload_button[$child]['#attributes']['class'][] = 'ecl-button--primary';
         unset($element[$child]);

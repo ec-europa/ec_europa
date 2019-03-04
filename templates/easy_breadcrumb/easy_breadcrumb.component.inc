@@ -82,12 +82,12 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
         'class' => array('ecl-breadcrumbs__link'),
       );
 
-      if (0 == $i) {
+      if ($i === 0) {
         $classes[] = 'ecl-breadcrumbs__segment--first';
         $attributes['class'][] = 'is-internal';
         $attributes += array('rel' => 'home');
       }
-      elseif ($i == ($s - 1)) {
+      elseif ($i === ($s - 1)) {
         $classes[] = 'ecl-breadcrumbs__segment--last';
       }
 
@@ -126,7 +126,7 @@ function _ec_europa_breadcrumb_menu(&$variables) {
     foreach ($menu_links as $key => $menu_item) {
       if (\is_numeric($key)) {
         // We don't want to show the home link in the home page.
-        if (!($front && '<front>' == $menu_item['#href'])) {
+        if (!($front && $menu_item['#href'] === '<front>')) {
           $options = array('language' => $language);
           $title = token_replace($menu_item['#title'], $menu_item,
             $options);

@@ -24,7 +24,7 @@ function ec_europa_preprocess_menu_tree__main_menu(array &$variables, $hook) {
         $menu = menu_load($item['#original_link']['menu_name']);
         $variables['title'] = $menu['title'];
 
-        if (1 == $variables['depth']) {
+        if ($variables['depth'] === 1) {
           $variables['atomium']['attributes']['wrapper']
             ->append('class', 'ecl-navigation-menu__root')
             ->append('id', 'nav-menu-expandable-root');
@@ -39,10 +39,9 @@ function ec_europa_preprocess_menu_tree__main_menu(array &$variables, $hook) {
     }
   }
 
-  if (1 == $variables['depth']) {
+  if ($variables['depth'] === 1) {
     $variables['atomium']['attributes']['wrapper']->append('aria-hidden', 'true');
   }
-
 }
 
 /**

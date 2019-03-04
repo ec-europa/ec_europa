@@ -44,10 +44,10 @@ function ec_europa_preprocess_link_blocks(array &$variables, $hook) {
     foreach ($variables['items'] as $key => $item) {
       $variables['atomium']['attributes'][$key]->append('class', 'ecl-link-block__item');
       $i++;
-      if (1 == $i) {
+      if ($i === 1) {
         $variables['atomium']['attributes'][$key]->append('class', 'first');
       }
-      if ($i == $num_items) {
+      if ($i === $num_items) {
         $variables['atomium']['attributes'][$key]->append('class', 'last');
       }
 

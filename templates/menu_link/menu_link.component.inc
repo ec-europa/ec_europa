@@ -22,7 +22,7 @@ function ec_europa_preprocess_menu_link__main_menu(array &$variables, $hook) {
 
   $link = $variables['element']['#original_link'];
   if ($link['in_active_trail']) {
-    if (1 == $link['depth']) {
+    if ($link['depth'] === 1) {
       $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-navigation-menu__item--active');
     }
     else {

@@ -104,7 +104,7 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
   }
 
   // Page-level language switcher.
-  if (isset($block->bid) && 'language_selector_page-language_selector_page' === $block->bid) {
+  if (isset($block->bid) && $block->bid === 'language_selector_page-language_selector_page') {
     global $language;
 
     // selectify.js is the library to convert between ul and select.
@@ -149,7 +149,7 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
   }
 
   // Site-level language switcher.
-  if (isset($block->bid) && 'language_selector_site-language_selector_site' === $block->bid) {
+  if (isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
     // Add the js to make it function.
     drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/lang-select-site.js');
   }
@@ -160,11 +160,11 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
     // Check if the block is a exposed form.
     // This is checked by looking at the $block->bid which in case
     // of views exposed filters, always contains 'views--exp-' string.
-    if (FALSE !== \strpos($block->bid, 'views--exp-')) {
+    if (\strpos($block->bid, 'views--exp-') !== FALSE) {
       if (isset($block->context) && $context = context_load($block->context)) {
         // If our block is the first, we set the subject. This way, if we expose
         // a second block for the same view, we will not duplicate the title.
-        if (0 === \array_search($block->bid, \array_keys($context->reactions['block']['blocks']), TRUE)) {
+        if (\array_search($block->bid, \array_keys($context->reactions['block']['blocks']), TRUE) === 0) {
           $variables['atomium']['attributes']['wrapper']->append('class', 'filters');
           $variables['atomium']['attributes']['title']->append('class', 'filters__title');
 

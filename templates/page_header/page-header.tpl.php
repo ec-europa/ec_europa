@@ -19,7 +19,7 @@
             <?php print render($meta); ?>
           </div>
         <?php endif; ?>
-        <?php if(!$ec_europa_basic_header): ?>
+        <?php if (!$ec_europa_basic_header): ?>
           <div class="ecl-page-header__title">
             <h1 class="ecl-heading ecl-heading--h1 ecl-u-color-white">
                 <?php print render($title); ?>
