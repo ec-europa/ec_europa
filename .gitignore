@@ -8,3 +8,4 @@ node_modules
 /runner.yml
 /.php_cs.cache
 docker-compose.*.yml
+behat.yml
