@@ -75,7 +75,7 @@ function ec_europa_preprocess_status_messages(array &$variables, $hook) {
       $messages['messages']['#title'] = $status_heading[$type];
     }
     $messages['status_heading'] = array(
-      '#markup' => $messages['messages']['#title']
+      '#markup' => $messages['messages']['#title'],
     );
 
     if (empty($messages['messages']['#attributes']['class'])) {
