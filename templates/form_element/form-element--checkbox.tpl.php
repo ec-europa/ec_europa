@@ -15,4 +15,7 @@
   <?php if ($element['#field_suffix']): ?>
     <span class="field-suffix"><?php render($element['#field_suffix']); ?></span>
   <?php endif; ?>
+  <?php if (!empty($description)): ?>
+    <p class="ecl-help-block"><?php print $element['#description']; ?></p>
+  <?php endif; ?>
 </div>
