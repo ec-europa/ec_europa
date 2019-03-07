@@ -1,12 +1,8 @@
 imports:
-  - { resource: vendor/openeuropa/code-review/dist/drupal-conventions.yml }
+  - { resource: vendor/drupol/drupal-conventions/config/drupal7/php5.6/grumphp.yml }
 parameters:
-  tasks.phpcs.ignore_patterns:
-    - build/
-    - vendor/
-  tasks.phpmd.exclude:
-    - build/
-    - vendor/
-    - templates/
-  tasks.git_commit_message.matchers:
-    - '/^(Issue #\d+|#\d+|EUTHEME-\d+|NEPT-\d+|OPENEUROPA-\d+): [A-Z].+\./'
+  extensions:
+    - drupol\DrupalConventions\GrumphpTasksExtension
+  extra_tasks:
+    phpunit:
+      always_execute: true

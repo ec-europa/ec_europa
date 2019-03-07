@@ -5,7 +5,7 @@
  * Contains template file.
  */
 ?>
-<h2 class="ecl-heading ecl-heading--h2"><?php print t('Components selector (&plusmn;@count)', array('@count' => count($definitions))) ?></h2>
+<h2 class="ecl-heading ecl-heading--h2"><?php print t('Components selector (&plusmn;@count)', array('@count' => \count($definitions))) ?></h2>
 
 <div>
     <select class="ecl-select" onchange="location = this.options[this.selectedIndex].value;">

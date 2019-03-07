@@ -22,7 +22,7 @@ function ec_europa_date_popup_process_alter(&$element, &$form_state, $context) {
  * TODO: Convert this into a preprocess function.
  */
 function ec_europa_file_link($variables) {
-  if (function_exists('_nexteuropa_formatters_file_markup')) {
+  if (\function_exists('_nexteuropa_formatters_file_markup')) {
     $file = $variables['file'];
 
     // Submit the language along witht the file.
@@ -33,9 +33,8 @@ function ec_europa_file_link($variables) {
 
     return _nexteuropa_formatters_file_markup($file);
   }
-  else {
-    return theme_file_link($variables);
-  }
+
+  return theme_file_link($variables);
 }
 
 /**
@@ -46,6 +45,7 @@ function ec_europa_file_link($variables) {
 function _ec_europa_term_heading($element) {
   $element['#prefix'] = '<div class="ecl-container"><div class="' . $element['main'] . '">';
   $element['#suffix'] = '</div></div>';
+
   return $element;
 }
 
@@ -127,10 +127,11 @@ function ec_europa_tableselect($variables) {
  */
 function _ec_europa_array_find($needle, array $haystack) {
   foreach ($haystack as $key => $value) {
-    if (is_string($value) && FALSE !== stripos($value, $needle)) {
+    if (\is_string($value) && \stripos($value, $needle) !== FALSE) {
       return $key;
     }
   }
+
   return FALSE;
 }
 
@@ -145,5 +146,5 @@ function _ec_europa_array_find($needle, array $haystack) {
  *   Boolean TRUE or FALSE, where TRUE indicates an external path.
  */
 function _ec_europa_url_is_external($path) {
-  return url_is_external($path) && !stripos(parse_url($path, PHP_URL_HOST), 'europa.eu') && FALSE === stripos(parse_url($path, PHP_URL_HOST), $_SERVER['HTTP_HOST']);
+  return url_is_external($path) && !\stripos(\parse_url($path, PHP_URL_HOST), 'europa.eu') && \stripos(\parse_url($path, PHP_URL_HOST), $_SERVER['HTTP_HOST']) === FALSE;
 }

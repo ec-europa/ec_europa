@@ -18,9 +18,9 @@ function ec_europa_atomium_theme_link_blocks() {
 
         'type' => 'ul',
         'attributes' => array(
-            'class' => array(
-              'ecl-link-block__list',
-            ),
+          'class' => array(
+            'ecl-link-block__list',
+          ),
         ),
         'wrapper' => TRUE,
         'wrapper_attributes' => array(
@@ -38,20 +38,20 @@ function ec_europa_atomium_theme_link_blocks() {
  */
 function ec_europa_preprocess_link_blocks(array &$variables, $hook) {
   if (!empty($variables['items'])) {
-    $num_items = count($variables['items']);
+    $num_items = \count($variables['items']);
     $i = 0;
 
     foreach ($variables['items'] as $key => $item) {
       $variables['atomium']['attributes'][$key]->append('class', 'ecl-link-block__item');
       $i++;
-      if ($i == 1) {
+      if ($i === 1) {
         $variables['atomium']['attributes'][$key]->append('class', 'first');
       }
-      if ($i == $num_items) {
+      if ($i === $num_items) {
         $variables['atomium']['attributes'][$key]->append('class', 'last');
       }
 
-      if (is_array($item) && isset($item['data'])) {
+      if (\is_array($item) && isset($item['data'])) {
         $item += array('class' => array());
         $variables['atomium']['attributes'][$key]->append('class', $item['class']);
         $item['data'] += array(
@@ -78,7 +78,7 @@ function ec_europa_preprocess_link_blocks(array &$variables, $hook) {
         );
       }
 
-      if (is_string($item)) {
+      if (\is_string($item)) {
         $variables['items'][$key] = array(
           '#theme' => 'html_tag__' . $variables['theme_hook_original'],
           '#tag' => 'li',
@@ -128,7 +128,7 @@ function ec_europa_atomium_definition_link_blocks() {
             '#path' => '/',
           ),
         ),
-      )
-    )
+      ),
+    ),
   );
 }

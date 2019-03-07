@@ -22,10 +22,10 @@ function ec_europa_preprocess_node(array &$variables, $hook) {
   $variables['site_name'] = variable_get('site_name');
   $variables['submitted'] = '';
   if (theme_get_setting('display_submitted')) {
-    $variables['submitted'] = t('Submitted by !username on !datetime', [
+    $variables['submitted'] = t('Submitted by !username on !datetime', array(
       '!username' => $variables['name'],
       '!datetime' => $variables['date'],
-    ]);
+    ));
   }
 
   // Override node_url if Legacy Link is set.

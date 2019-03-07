@@ -7,6 +7,9 @@
 
 /**
  * Implements hook_preprocess_hook().
+ *
+ * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+ * @SuppressWarnings(PHPMD.NPathComplexity)
  */
 function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
   $view = $variables['view'];
@@ -20,7 +23,7 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
   $rows = array();
   $row_indexes = array();
 
-  if ($options['alignment'] == 'horizontal') {
+  if ($options['alignment'] === 'horizontal') {
     $row = array();
     $col_count = 0;
     $row_count = 0;
@@ -30,7 +33,7 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
       $row[] = $item;
       $row_indexes[$row_count][$col_count] = $row_index;
       $col_count++;
-      if ($count % $columns == 0) {
+      if ($count % $columns === 0) {
         $rows[] = $row;
         $row = array();
         $col_count = 0;
@@ -39,7 +42,7 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
     }
     if ($row) {
       // Fill up the last line only if it's configured, but this is default.
-      if (!empty($handler->options['fill_single_line']) && count($rows)) {
+      if (!empty($handler->options['fill_single_line']) && \count($rows)) {
         for ($i = 0; $i < ($columns - $col_count); $i++) {
           $row[] = '';
         }
@@ -48,9 +51,9 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
     }
   }
   else {
-    $num_rows = floor(count($variables['rows']) / $columns);
+    $num_rows = \floor(\count($variables['rows']) / $columns);
     // The remainders are the 'odd' columns that are slightly longer.
-    $remainders = count($variables['rows']) % $columns;
+    $remainders = \count($variables['rows']) % $columns;
     $row = 0;
     $col = 0;
     foreach ($variables['rows'] as $count => $item) {
@@ -58,20 +61,20 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
       $row_indexes[$row][$col] = $count;
       $row++;
 
-      if (!$remainders && $row == $num_rows) {
+      if (!$remainders && $row === $num_rows) {
         $row = 0;
         $col++;
       }
-      elseif ($remainders && $row == $num_rows + 1) {
+      elseif ($remainders && $row === $num_rows + 1) {
         $row = 0;
         $col++;
         $remainders--;
       }
     }
-    for ($i = 0; $i < count($rows[0]); $i++) {
+    for ($i = 0; $i < \count($rows[0]); $i++) {
       // This should be string so that's okay :)
-      if (!isset($rows[count($rows) - 1][$i])) {
-        $rows[count($rows) - 1][$i] = '';
+      if (!isset($rows[\count($rows) - 1][$i])) {
+        $rows[\count($rows) - 1][$i] = '';
       }
     }
   }
@@ -83,31 +86,31 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
       $row_classes[] = 'row-' . ($row_number + 1);
     }
     if ($row_class_special) {
-      if ($row_number == 0) {
+      if ($row_number === 0) {
         $row_classes[] = 'row-first';
       }
-      if (count($rows) == ($row_number + 1)) {
+      if (\count($rows) === ($row_number + 1)) {
         $row_classes[] = 'row-last';
       }
     }
-    $vars['row_classes'][$row_number] = implode(' ', $row_classes);
+    $vars['row_classes'][$row_number] = \implode(' ', $row_classes);
     foreach ($rows[$row_number] as $column_number => $item) {
       $column_classes = array('');
       if ($default_row_class) {
         $column_classes[] = 'col-' . ($column_number + 1);
       }
       if ($row_class_special) {
-        if ($column_number == 0) {
+        if ($column_number === 0) {
           $column_classes[] = 'col-first';
         }
-        elseif (count($rows[$row_number]) == ($column_number + 1)) {
+        elseif (\count($rows[$row_number]) === ($column_number + 1)) {
           $column_classes[] = 'col-last';
         }
       }
       if (isset($row_indexes[$row_number][$column_number]) && $column_class = $view->style_plugin->get_row_class($row_indexes[$row_number][$column_number])) {
         $column_classes[] = $column_class;
       }
-      $vars['column_classes'][$row_number][$column_number] = implode(' ', $column_classes);
+      $vars['column_classes'][$row_number][$column_number] = \implode(' ', $column_classes);
     }
   }
   $vars['rows'] = $rows;

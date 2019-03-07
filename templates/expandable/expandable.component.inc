@@ -67,7 +67,7 @@ function ec_europa_preprocess_expandable(array &$variables, $hook) {
     ),
   );
 
-  if (isset($variables['button']) && TRUE == $variables['button']) {
+  if (isset($variables['button']) && $variables['button'] === TRUE) {
     $variables['title'] = array(
       '#theme' => _atomium_extend_theme_hook('button', $variables['theme_hook_original']),
       '#button_type' => 'button',

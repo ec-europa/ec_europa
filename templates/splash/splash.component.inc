@@ -62,9 +62,9 @@ function ec_europa_preprocess_splash(array &$variables, $hook) {
     );
   }
 
-  $variables['languages_list'] = array_chunk(
+  $variables['languages_list'] = \array_chunk(
     $variables['languages_list'],
-    round(count($variables['languages_list']) / 2)
+    \round(\count($variables['languages_list']) / 2)
   );
 
   foreach ($variables['languages_list'] as $index => &$language) {

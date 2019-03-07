@@ -1,34 +1,31 @@
 {
     "name": "ec-europa/ec_europa",
     "description": "EC Europa base theme.",
-    "git-version": "0.0.4",
     "type": "drupal-theme",
     "license": "EUPL-1.1",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "homepage": "https://github.com/ec-europa/ec_europa",
     "require-dev": {
-        "openeuropa/code-review": "^0.2",
-        "openeuropa/task-runner": "^0.5",
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6",
-        "drupal-composer/preserve-paths": "^0.1",
-        "drupal/drupal": "~7.0",
+        "composer/installers": "^1.6",
+        "drupal-composer/preserve-paths": "dev-master#7f99622800504c058e5230b63d3cd25809fa23ba",
+        "drupal/admin_menu": "3.0.0-rc6",
+        "drupal/atomium": "2.14",
         "drupal/composer_autoloader": "^1.0",
-        "drush/drush": "^8",
-        "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3",
-        "mikey179/vfsstream": "~1.2",
-        "nuvoleweb/robo-config": "~0.1",
-        "drupal/drupal-extension": "~3.3",
-        "drupal/atomium": "2.x-dev",
-        "drupal/date": "*",
-        "drupal/views": "*",
-        "drupal/views_ui": "*",
-        "drupal/libraries": "*",
-        "drupal/entity_translation": "*",
-        "drupal/date_views": "*",
-        "drupal/date_popup": "*",
-        "drupal/date_api": "*"
+        "drupal/date": "2.10",
+        "drupal/devel": "^1",
+        "drupal/drupal": "^7.64",
+        "drupal/drupal-extension": "~3.4",
+        "drupal/entity_translation": "^1",
+        "drupal/libraries": "2.5",
+        "drupal/realistic_dummy_content": "^2",
+        "drupal/views": "3.20",
+        "drupol/drupal-conventions": "^1.4.2",
+        "drush/drush": "^8.1.18",
+        "mikey179/vfsstream": "^1.6",
+        "openeuropa/task-runner": "1.0.0-beta4",
+        "peridot-php/leo": "~1.0",
+        "phpunit/phpunit": "^5",
+        "webflo/drupal-finder": "^1.1",
+        "webmozart/path-util": "^2.3"
     },
     "repositories": [
         {
@@ -43,11 +40,6 @@
         "behat": "./vendor/bin/behat"
     },
     "extra": {
-        "patches": {
-            "drupal/drupal": {
-                "https://www.drupal.org/node/2482549": "https://www.drupal.org/files/issues/ignore_node_module-2482549-27_0.patch"
-            }
-        },
         "installer-paths": {
             "build/": ["type:drupal-core"],
             "build/profiles/{$name}/": ["type:drupal-profile"],
@@ -58,5 +50,11 @@
         "preserve-paths": [
             "build/sites/default"
         ]
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "5.6"
+        }
     }
 }

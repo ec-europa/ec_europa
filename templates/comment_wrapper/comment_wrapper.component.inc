@@ -13,9 +13,10 @@ function ec_europa_preprocess_comment_wrapper(array &$variables, $hook) {
   $form['actions']['submit']['#value'] = t('Send');
   unset($form['author']);
 
-  $comments = array_filter($variables['content']['comments'], function ($index) use (&$variables) {
-    if (is_numeric($index)) {
+  $comments = \array_filter($variables['content']['comments'], function ($index) use (&$variables) {
+    if (\is_numeric($index)) {
       unset($variables['content']['comments'][$index]);
+
       return TRUE;
     }
   }, ARRAY_FILTER_USE_KEY);
@@ -28,7 +29,7 @@ function ec_europa_preprocess_comment_wrapper(array &$variables, $hook) {
         'ecl-listing',
       ),
     ),
-    '#items' => array_map(function ($comment) {
+    '#items' => \array_map(function ($comment) {
       return array(
         'class' => array(
           'ecl-list-item',

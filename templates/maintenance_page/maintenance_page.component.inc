@@ -12,7 +12,7 @@ function ec_europa_preprocess_maintenance_page(array &$variables, $hook) {
   $variables['theme_path'] = drupal_get_path('theme', 'ec_europa');
   $variables['front_page'] = url('<front>');
   $variables['content_column_class'] = 'ecl-col-12';
-  $variables['page_logo_title'] = t('Home - @sitename', ['@sitename' => variable_get('site_name', 'European Commission')]);
+  $variables['page_logo_title'] = t('Home - @sitename', array('@sitename' => variable_get('site_name', 'European Commission')));
   $variables['site_header'] = array(
     '#theme' => _atomium_extend_theme_hook('site_header', $variables['theme_hook_original']),
   );

@@ -14,7 +14,7 @@
   <?php print render($title_suffix['contextual_links']); ?>
 <?php endif; ?>
 
-<<?php print $ds_content_wrapper ?> class="ecl-row <?php print trim($ds_content_classes); ?>">
+<<?php print $ds_content_wrapper ?> class="ecl-row <?php print \trim($ds_content_classes); ?>">
 
 <?php print $ds_content; ?>
 

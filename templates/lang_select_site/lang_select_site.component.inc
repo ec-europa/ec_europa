@@ -10,6 +10,7 @@
  */
 function ec_europa_atomium_definition_lang_select_site() {
   global $language;
+
   return array(
     'label' => 'Site language selector',
     'description' => 'Site language selector.',
@@ -59,7 +60,7 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
   );
 
   // Build the list of links.
-  $languages = array_map(function ($language) use ($variables) {
+  $languages = \array_map(function ($language) use ($variables) {
     return array(
       '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
       '#text' => $language->name,
@@ -83,9 +84,9 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
   }, $languages_list[1]);
 
   // Update current language's link only.
-  $languages = array_map(function ($language) use ($language_current, $variables) {
-    if ($language_current->language == $language['#language']->language) {
-      $language['#options']['attributes']['class'] = array_merge(
+  $languages = \array_map(function ($language) use ($language_current, $variables) {
+    if ($language_current->language === $language['#language']->language) {
+      $language['#options']['attributes']['class'] = \array_merge(
         $language['#options']['attributes']['class'],
         array(
           'ecl-language-list__button--active',
@@ -117,13 +118,13 @@ function ec_europa_preprocess_lang_select_site(array &$variables, $hook) {
   }, $languages);
 
   // Split the array in 2 columns.
-  $languages = array_chunk(
+  $languages = \array_chunk(
     $languages,
-    round(count($languages) / 2)
+    \round(\count($languages) / 2)
   );
 
   // Wrap each column with a container.
-  array_walk($languages, function (&$language, $index) use ($variables) {
+  \array_walk($languages, function (&$language, $index) use ($variables) {
     $language['#theme'] = _atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']);
     $language['#tag'] = 'div';
     $language['#attributes'] = array(

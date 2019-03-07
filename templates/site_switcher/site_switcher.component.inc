@@ -44,7 +44,7 @@ function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
     'aria-label', 'breadcrumbs'
   );
 
-  $classes = array_pad(array(), 2, array('ecl-site-switcher__option'));
+  $classes = \array_pad(array(), 2, array('ecl-site-switcher__option'));
   $index = (int) theme_get_setting('ec_europa_improved_website', 'ec_europa');
   $classes[$index][] = 'ecl-site-switcher__option--is-selected';
 
@@ -83,5 +83,4 @@ function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
       ) + $link,
     );
   }
-
 }

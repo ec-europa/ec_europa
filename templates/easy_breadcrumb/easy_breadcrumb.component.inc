@@ -78,31 +78,31 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       }
       $classes[] = 'ecl-breadcrumbs__segment';
 
-      $attributes = [
-        'class' => ['ecl-breadcrumbs__link'],
-      ];
+      $attributes = array(
+        'class' => array('ecl-breadcrumbs__link'),
+      );
 
-      if ($i == 0) {
+      if ($i === 0) {
         $classes[] = 'ecl-breadcrumbs__segment--first';
         $attributes['class'][] = 'is-internal';
-        $attributes += ['rel' => 'home'];
+        $attributes += array('rel' => 'home');
       }
-      elseif ($i == ($s - 1)) {
+      elseif ($i === ($s - 1)) {
         $classes[] = 'ecl-breadcrumbs__segment--last';
       }
 
-      $class = implode(' ', $classes);
+      $class = \implode(' ', $classes);
       $full_item = $item['content'];
       if (isset($item['url'])) {
-        $full_item = l($item['content'], $item['url'], [
+        $full_item = l($item['content'], $item['url'], array(
           'attributes' => $attributes,
           'html' => TRUE,
-        ]);
+        ));
       }
 
       // TODO: Check if the active class actually appears.
-      $element_visibility = in_array('active',
-        $classes) ? ' element-invisible' : '';
+      $element_visibility = \in_array('active',
+        $classes, TRUE) ? ' element-invisible' : '';
       $html .= '<li class="' . $class . $element_visibility . '">' . $full_item . '</li>';
     }
   }
@@ -124,10 +124,10 @@ function _ec_europa_breadcrumb_menu(&$variables) {
   if (!empty($menu_links)) {
     $i = 0;
     foreach ($menu_links as $key => $menu_item) {
-      if (is_numeric($key)) {
+      if (\is_numeric($key)) {
         // We don't want to show the home link in the home page.
-        if (!($front && $menu_item['#href'] == '<front>')) {
-          $options = ['language' => $language];
+        if (!($front && $menu_item['#href'] === '<front>')) {
+          $options = array('language' => $language);
           $title = token_replace($menu_item['#title'], $menu_item,
             $options);
           $new_items[] = _easy_breadcrumb_build_item($title, array(),
@@ -139,7 +139,7 @@ function _ec_europa_breadcrumb_menu(&$variables) {
 
     if (!empty($new_items)) {
       // The menu is used as the starting point of the breadcrumb.
-      $variables['breadcrumb'] = array_merge($new_items,
+      $variables['breadcrumb'] = \array_merge($new_items,
         (array) $variables['breadcrumb']);
       // Alter the number of segments in the breadcrumb.
       $variables['segments_quantity'] += $i;
