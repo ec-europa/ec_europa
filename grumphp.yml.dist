@@ -4,5 +4,4 @@ parameters:
   extensions:
     - drupol\DrupalConventions\GrumphpTasksExtension
   extra_tasks:
-    phpunit:
-      always_execute: true
+    behat: ~
