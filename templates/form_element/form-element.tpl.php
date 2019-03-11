@@ -39,6 +39,6 @@
   <?php endif; ?>
 
   <?php if (!empty($description)): ?>
-    <p class="ecl-help-block"><?php print $element['#description']; ?></p>
+    <div class="description ecl-help-block"><?php print $element['#description']; ?></div>
   <?php endif; ?>
 </div>
