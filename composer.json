@@ -8,7 +8,7 @@
         "composer/installers": "^1.6",
         "drupal-composer/preserve-paths": "dev-master#7f99622800504c058e5230b63d3cd25809fa23ba",
         "drupal/admin_menu": "3.0.0-rc6",
-        "drupal/atomium": "2.14",
+        "drupal/atomium": "^2",
         "drupal/composer_autoloader": "^1.0",
         "drupal/date": "2.10",
         "drupal/devel": "^1",
