@@ -54,8 +54,21 @@ function ec_europa_atomium_definition_page_header() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_page_header(array &$variables, $hook) {
-  $variables['ec_europa_basic_header'] = theme_get_setting('ec_europa_basic_header', 'ec_europa');
+  $variables['ec_europa_basic_header'] = theme_get_setting(
+    'ec_europa_basic_header',
+    'ec_europa'
+  );
+
   if (module_exists('easy_breadcrumb')) {
-    $variables['breadcrumb'] = _atomium_block_get_render_array('easy_breadcrumb', 'easy_breadcrumb');
+    $block = block_load('easy_breadcrumb', 'easy_breadcrumb');
+
+    // If not block has been loaded, return empty array.
+    if (isset($block->status)) {
+      $block_render_array = _block_get_renderable_array(_block_render_blocks(array($block)));
+
+      _registryonsteroids_alter_update_block_render_array($block_render_array['easy_breadcrumb_easy_breadcrumb']);
+
+      $variables['breadcrumb'] = $block_render_array['easy_breadcrumb_easy_breadcrumb'];
+    }
   }
 }
