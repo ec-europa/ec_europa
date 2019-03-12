@@ -21,6 +21,7 @@
         "drupal/views": "^3.20",
         "drupol/drupal-conventions": "^1.4.5",
         "drush/drush": "^8.1.18",
+        "guzzlehttp/guzzle": "^6.3.3",
         "mikey179/vfsstream": "^1.6",
         "openeuropa/task-runner": "1.0.0-beta4",
         "symfony/browser-kit": "^3.4",
