@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_site_slogan() {
+function ec_europa_atomium_theme_site_slogan(array $existing, $type, $theme, $path) {
   return array(
     'site_slogan' => array(
       'variables' => array(

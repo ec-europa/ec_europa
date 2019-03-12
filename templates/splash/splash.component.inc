@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_splash() {
+function ec_europa_atomium_theme_splash(array $existing, $type, $theme, $path) {
   return array(
     'splash' => array(
       'template' => 'splash',

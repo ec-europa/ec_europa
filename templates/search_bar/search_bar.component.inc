@@ -19,7 +19,7 @@ function ec_europa_atomium_definition_search_bar() {
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_search_bar() {
+function ec_europa_atomium_theme_search_bar(array $existing, $type, $theme, $path) {
   return array(
     'search_bar' => array(
       'template' => 'search-bar',

@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_grid() {
+function ec_europa_atomium_theme_grid(array $existing, $type, $theme, $path) {
   return array(
     'grid' => array(
       'variables' => array(

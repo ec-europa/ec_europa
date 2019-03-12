@@ -27,7 +27,7 @@ function ec_europa_atomium_definition_lang_select_site() {
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_lang_select_site() {
+function ec_europa_atomium_theme_lang_select_site(array $existing, $type, $theme, $path) {
   return array(
     'lang_select_site' => array(
       'template' => 'lang-select-site',
