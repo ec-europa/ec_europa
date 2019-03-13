@@ -48,13 +48,16 @@ function ec_europa_preprocess_search_bar(array &$variables, $hook) {
   // Generate the search form.
   $variables['search_form'] = drupal_get_form('nexteuropa_europa_search_search_form');
 
-  // Add CSS to the form tag.
-  $variables['search_form']['#attributes']['class'][] = 'ecl-search-form';
+  // Use a temporary atomium attributes to generate the form attributes.
+  $variables['atomium']['attributes']['form']->setAttributes($variables['search_form']['#attributes']);
+  $variables['atomium']['attributes']['form']->append('class', 'ecl-search-form');
+  $variables['atomium']['attributes']['form']->merge($variables['attributes']);
+
+  $variables['search_form']['#attributes'] = $variables['atomium']['attributes']['form']->toArray();
 
   // Remove incompatible container from the form.
-  unset($variables['search_form']['search_input_group']['#prefix']);
-  unset($variables['search_form']['search_input_group']['#suffix']);
-
-  // Add CSS in search button.
-  $block_search_input['europa_search_submit']['#attributes']['class'][] = 'ecl-search-form__button';
+  unset(
+    $variables['search_form']['search_input_group']['#prefix'],
+    $variables['search_form']['search_input_group']['#suffix']
+  );
 }
