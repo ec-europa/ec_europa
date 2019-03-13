@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_meta() {
+function ec_europa_atomium_theme_meta(array $existing, $type, $theme, $path) {
   return array(
     'meta' => array(
       'variables' => array(

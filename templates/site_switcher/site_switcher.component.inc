@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_site_switcher() {
+function ec_europa_atomium_theme_site_switcher(array $existing, $type, $theme, $path) {
   return array(
     'site_switcher' => array(
       'template' => 'site-switcher',

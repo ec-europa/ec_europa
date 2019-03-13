@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_footer() {
+function ec_europa_atomium_theme_footer(array $existing, $type, $theme, $path) {
   return array(
     'footer' => array(
       'variables' => array(
