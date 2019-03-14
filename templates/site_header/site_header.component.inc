@@ -46,6 +46,9 @@ function ec_europa_atomium_theme_site_header(array $existing, $type, $theme, $pa
             ),
           ),
         ),
+        'site_slogan' => array(
+          '#theme' => _atomium_extend_theme_hook('site_slogan'),
+        ),
       ),
     ),
   );

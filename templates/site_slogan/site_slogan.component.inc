@@ -38,7 +38,7 @@ function ec_europa_atomium_definition_site_slogan() {
 function ec_europa_preprocess_site_slogan(array &$variables, $hook) {
   $variables[$variables['base_hook']] = array(
     $variables['base_hook'] => array(
-      '#markup' => $variables['markup'],
+      '#markup' => variable_get('site_slogan', ''),
     ),
   );
 }
