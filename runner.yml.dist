@@ -21,12 +21,12 @@ drupal:
         - build/sites/all/themes/ec_europa/build
       drupal_http_request_fails: false
   post_install:
-        - { task: "chmod", file: "${drupal.root}/sites/default/files", permissions: 0777, recursive: true }
-        - ./vendor/bin/drush --root=$(pwd)/build dis -y color comment dashboard dblog help overlay path search shortcut toolbar update
-        - ./vendor/bin/drush --root=$(pwd)/build pmu -y color comment dashboard dblog help overlay path search shortcut toolbar update
-        - ./vendor/bin/drush --root=$(pwd)/build en -y admin_menu admin_menu_toolbar admin_devel atomium composer_autoloader devel realistic_dummy_content
-        - ./vendor/bin/drush --root=$(pwd)/build vset theme_default ec_europa
-        - ./vendor/bin/drush --root=$(pwd)/build cc all
+    - { task: "chmod", file: "${drupal.root}/sites/default/files", permissions: 0777, recursive: true }
+    - ./vendor/bin/drush --root=$(pwd)/build dis -y color comment dashboard dblog help overlay path search shortcut toolbar update
+    - ./vendor/bin/drush --root=$(pwd)/build pmu -y color comment dashboard dblog help overlay path search shortcut toolbar update
+    - ./vendor/bin/drush --root=$(pwd)/build en -y admin_menu admin_menu_toolbar admin_devel atomium composer_autoloader devel realistic_dummy_content
+    - ./vendor/bin/drush --root=$(pwd)/build vset theme_default ec_europa
+    - ./vendor/bin/drush --root=$(pwd)/build cc all
   drush:
     options:
       ignored-directories:
@@ -51,3 +51,18 @@ commands:
     - { task: "process", source: "phpunit.xml.dist", destination: "phpunit.xml" }
   setup:behat:
     - { task: "process", source: "behat.yml.dist", destination: "behat.yml" }
+
+release:
+  tasks:
+    - { task: "remove", file: "ec_europa/assets" }
+    - { task: "remove", file: "ec_europa/templates" }
+    - { task: "copy", from: "assets", to: "ec_europa/assets" }
+    - { task: "copy", from: "templates", to: "ec_europa/templates" }
+    - task: "append"
+      file: "ec_europa/ec_europa.info"
+      text: |
+
+        # Information added by NextEuropa packaging script on ${release.date} at ${release.time}.
+        project = ec_europa
+        version = ${release.version}
+        datestamp = ${release.timestamp}
