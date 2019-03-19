@@ -1,8 +1,8 @@
 {
-  "name": "oe_theme",
+  "name": "ec_europa",
   "license": "EUPL-1.1",
-  "version": "0.0.1",
-  "description": "OpenEuropa base theme.",
+  "version": "1.0.0",
+  "description": "NextEuropa base theme.",
   "private": true,
   "scripts": {
     "build:copy": "ecl-builder copy",
