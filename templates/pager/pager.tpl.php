@@ -6,8 +6,8 @@
  */
 ?>
 <?php if (!empty($pager)): ?>
-<div class="ecl-pager__wrapper">
-  <ul class="ecl-pager">
+<nav class="ecl-pager" aria-label="Pagination navigation">
+  <ul class="ecl-pager__list">
 
     <?php if (isset($links['pager_previous'])): ?>
       <li class="ecl-pager__item ecl-pager__item--previous">
@@ -49,5 +49,5 @@
       </li>
     <?php endif ?>
   </ul>
-</div>
+</nav>
 <?php endif ?>
