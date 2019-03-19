@@ -54,7 +54,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body<?php print $atomium['attributes']['body'];?>>
+<body<?php print $atomium['attributes']['body']->append('class', 'ecl-typography');?>>
 <div class="ecl-skip-link__wrapper" id="skip-link">
   <a href="#main-content" class="ecl-skip-link"><?php print t('Skip to main content'); ?></a>
 </div>
