@@ -6,24 +6,6 @@
  */
 
 /**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_pager() {
-  return array(
-    'label' => 'Pager',
-    'description' => 'Nexteuropa Pager',
-    'preview' => array(
-      'pager_page_array' => array(
-        0 => \rand(0, 30),
-      ),
-      'pager_total' => array(
-        0 => 30,
-      ),
-    ),
-  );
-}
-
-/**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_pager(array &$variables, $hook) {
