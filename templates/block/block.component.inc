@@ -186,10 +186,3 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
     ->append('class', 'ecl-clearfix')
     ->append('id', $variables['block_html_id']);
 }
-
-/**
- * Implements hook_preprocess_hook().
- */
-function ec_europa_preprocess_block__content(array &$variables, $hook) {
-  //$variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
-}
