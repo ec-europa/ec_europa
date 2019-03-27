@@ -24,6 +24,6 @@ default:
         drupal_root: "${drupal.root}"
       region_map:
         footer: "#footer"
-        pager: ".ecl-pager__wrapper"
+        pager: ".ecl-pager"
   formatters:
     progress: ~
