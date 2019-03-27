@@ -20,7 +20,7 @@
       <?php if (($pager_last - $quantity >= 1) && (int) $cursor === (int) $pager_first): ?>
         <li class="ecl-pager__item ecl-pager__item--first">
           <a class="ecl-pager__link" title="<?php print $goto_title ?> 1" href="<?php print $links['pager_first']['url'] ?>">
-            <span class="ecl-u-sr-only">Page </span>1
+            <span class="ecl-u-sr-only">Page</span> 1
           </a>
         </li>
         <?php if ($pager_last - $quantity > 1): ?>
@@ -30,7 +30,7 @@
 
       <?php if ((int) $cursor === (int) $pager_current): ?>
         <li class="ecl-pager__item ecl-pager__item--current" aria-current="true">
-          <span class="ecl-pager__item-text"><?php print $page_label ?></span><?php print $pager_current ?>
+          <span class="ecl-pager__item-text"><?php print $page_label ?></span> <?php print $pager_current ?>
         </li>
       <?php else: ?>
         <li class="ecl-pager__item">
@@ -44,7 +44,7 @@
         <li class="ecl-pager__item ecl-pager__item--ellipsis">…</li>
         <li class="ecl-pager__item ecl-pager__item--last">
           <a class="ecl-pager__link" title="<?php print $goto_title ?> <?php print $pager_max ?>" href="<?php print $links['pager_last']['url'] ?>">
-            <span class="ecl-u-sr-only"><?php print $page_label ?></span><?php print $pager_max ?>
+            <span class="ecl-u-sr-only"><?php print $page_label ?></span> <?php print $pager_max ?>
           </a>
         </li>
       <?php endif ?>
