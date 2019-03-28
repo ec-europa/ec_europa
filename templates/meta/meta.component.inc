@@ -15,7 +15,7 @@ function ec_europa_atomium_theme_meta(array $existing, $type, $theme, $path) {
         'type' => NULL,
         'timestamp' => NULL,
         'date' => NULL,
-        'location'  => NULL,
+        'location' => NULL,
       ),
       'template' => 'meta',
     ),
@@ -33,7 +33,7 @@ function ec_europa_atomium_definition_meta() {
       'type' => 'News article',
       'timestamp' => '2015-07-06T17:44:28+02:00',
       'date' => '6 July 2015',
-      'location'  => 'Brussels',
+      'location' => 'Brussels',
     ),
   );
 }
