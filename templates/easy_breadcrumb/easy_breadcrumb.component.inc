@@ -79,7 +79,7 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       $classes[] = 'ecl-breadcrumbs__segment';
 
       $attributes = array(
-        'class' => array('ecl-breadcrumbs__link'),
+        'class' => array('ecl-breadcrumbs__link', 'ecl-link--inverted'),
       );
 
       if ($i === 0) {
@@ -91,24 +91,51 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
         $classes[] = 'ecl-breadcrumbs__segment--last';
       }
 
-      $class = \implode(' ', $classes);
-      $full_item = $item['content'];
+      $full_item = array(
+        'link' => array(
+          '#markup' => $item['content'],
+        ),
+      );
+
       if (isset($item['url'])) {
-        $full_item = l($item['content'], $item['url'], array(
-          'attributes' => $attributes,
-          'html' => TRUE,
-        ));
+        $full_item = array(
+          'link' => array(
+            '#theme' => _atomium_extend_theme_hook(
+              'link',
+              $variables['theme_hook_original']
+            ),
+            '#text' => $item['content'],
+            '#path' => $item['url'],
+            '#options' => array(
+              'attributes' => $attributes,
+              'html' => TRUE,
+            ),
+          ),
+        );
       }
 
       // TODO: Check if the active class actually appears.
-      $element_visibility = \in_array('active',
-        $classes, TRUE) ? ' element-invisible' : '';
-      $html .= '<li class="' . $class . $element_visibility . '">' . $full_item . '</li>';
+      if (\in_array('active', $classes, TRUE)) {
+        $classes[] = 'element-invisible';
+      }
+
+      $full_item += array(
+        '#theme_wrappers' => array(
+          'html_tag',
+        ),
+        '#tag' => 'li',
+        '#attributes' => array(
+          'class' => $classes,
+        ),
+      );
+
+      $html .= render($full_item);
     }
   }
 
   $variables['easy_breadcrumb'] = $html;
-  $variables['atomium']['attributes']['wrapper']->setAttribute('aria-label', 'breadcrumbs');
+  $variables['atomium']['attributes']['wrapper']
+    ->setAttribute('aria-label', 'breadcrumbs');
 }
 
 /**
