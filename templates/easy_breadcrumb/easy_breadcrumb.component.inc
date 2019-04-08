@@ -59,8 +59,8 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
     ->append(
       'class',
       array(
-      'ecl-breadcrumb',
-      'ecl-container',
+        'ecl-breadcrumb',
+        'ecl-container',
       )
     )
     ->append(
@@ -68,13 +68,12 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       'breadcrumb'
     );
 
-
   $variables['here'] = t('You are here');
 
   _ec_europa_breadcrumb_menu($variables);
   $breadcrumb = $variables['breadcrumb'];
   $segments_quantity = $variables['segments_quantity'];
-  $html = [];
+  $html = array();
 
   $s = count($breadcrumb);
 
@@ -88,7 +87,11 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       $classes[] = 'ecl-breadcrumb__segment';
 
       $attributes = array(
-        'class' => array('ecl-breadcrumb__link', 'ecl-link--inverted', 'ecl-breadcrumb__link', 'ecl-link--standalone'),
+        'class' => array(
+          'ecl-breadcrumb__link',
+          'ecl-link--inverted',
+          'ecl-link--standalone',
+        ),
       );
 
       if ($i === 0) {
@@ -96,7 +99,8 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
         $attributes['class'][] = 'is-internal';
         $attributes += array('rel' => 'home');
       }
-      elseif ($i === ($s - 1)) {
+
+      if ($i === ($s - 1)) {
         $classes[] = 'ecl-breadcrumb__segment--last';
       }
 
@@ -143,8 +147,6 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
   }
 
   $variables['easy_breadcrumb'] = $html;
-  $variables['atomium']['attributes']['wrapper']
-    ->setAttribute('aria-label', 'breadcrumbs');
 }
 
 /**
