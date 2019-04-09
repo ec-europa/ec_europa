@@ -1,7 +1,8 @@
 # EC Europa Theme
 
-[![Build Status](https://travis-ci.org/ec-europa/ec_europa.svg?branch=master)](https://travis-ci.org/ec-europa/ec_europa)
-
+[![Build Status](https://drone.fpfis.eu/api/badges/ec-europa/ec_europa/status.svg?branch=0.x)](https://drone.fpfis.eu/ec-europa/ec_europa) 
+[![GitHub issues](https://img.shields.io/github/issues/ec-europa/ec_europa.svg)](https://github.com/ec-europa/ec_europa/issues?q=is:open+is:issue) 
+[![Current Release](https://img.shields.io/github/release/ec-europa/ec_europa.svg)](https://github.com/ec-europa/ec_europa/releases)
 Repository containing the drupal theme for the NextEuropa platform.
 
 The EC-Europa theme is a Drupal 7 theme, implementing the styling defined for
@@ -72,9 +73,6 @@ render field value using ECL formatters.
 
 Writing tests specific to the EC Europa Theme project is optional (at the moment). Developers that would like to use
 Behat to test their work can do that by setting up a vanilla Drupal 7 site and installing the theme and its dependencies.
-
-The full list of steps can be found in the `before_script:` section of [.travis.yml](.travis.yml), although setup might
-vary depending on each developer's environment.
 
 Tests can be ran via:
 
