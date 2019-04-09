@@ -55,22 +55,30 @@ function ec_europa_atomium_definition_easy_breadcrumb() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', array(
-    'ecl-breadcrumbs',
-    'ecl-container',
-  ));
+  $variables['atomium']['attributes']['wrapper']
+    ->append(
+      'class',
+      array(
+        'ecl-breadcrumbs',
+        'ecl-container',
+      )
+    )
+    ->append(
+      'aria',
+      'breadcrumbs'
+    );
 
   $variables['here'] = t('You are here');
 
   _ec_europa_breadcrumb_menu($variables);
   $breadcrumb = $variables['breadcrumb'];
   $segments_quantity = $variables['segments_quantity'];
-  $html = '';
+  $html = array();
+
+  $s = count($breadcrumb);
 
   if ($segments_quantity > 0) {
-    for ($i = 0, $s = $segments_quantity; $i < $segments_quantity; ++$i) {
-      $item = $breadcrumb[$i];
-
+    foreach ($breadcrumb as $i => $item) {
       // Removing classes from $item['class'] array and adding BEM classes.
       $classes = array();
       if (isset($item['class'])) {
@@ -79,7 +87,11 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       $classes[] = 'ecl-breadcrumbs__segment';
 
       $attributes = array(
-        'class' => array('ecl-breadcrumbs__link', 'ecl-link--inverted'),
+        'class' => array(
+          'ecl-breadcrumbs__link',
+          'ecl-link--inverted',
+          'ecl-link--standalone',
+        ),
       );
 
       if ($i === 0) {
@@ -129,13 +141,11 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
         ),
       );
 
-      $html .= render($full_item);
+      $html[] = $full_item;
     }
   }
 
   $variables['easy_breadcrumb'] = $html;
-  $variables['atomium']['attributes']['wrapper']
-    ->setAttribute('aria-label', 'breadcrumbs');
 }
 
 /**
