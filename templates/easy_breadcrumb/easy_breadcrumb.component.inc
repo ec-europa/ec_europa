@@ -55,60 +55,98 @@ function ec_europa_atomium_definition_easy_breadcrumb() {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', array(
-    'ecl-breadcrumbs',
-    'ecl-container',
-  ));
+  $variables['atomium']['attributes']['wrapper']
+    ->append(
+      'class',
+      array(
+        'ecl-breadcrumb',
+        'ecl-container',
+      )
+    )
+    ->append(
+      'aria',
+      'breadcrumb'
+    );
 
   $variables['here'] = t('You are here');
 
   _ec_europa_breadcrumb_menu($variables);
   $breadcrumb = $variables['breadcrumb'];
   $segments_quantity = $variables['segments_quantity'];
-  $html = '';
+  $html = array();
+
+  $s = count($breadcrumb);
 
   if ($segments_quantity > 0) {
-    for ($i = 0, $s = $segments_quantity; $i < $segments_quantity; ++$i) {
-      $item = $breadcrumb[$i];
-
+    foreach ($breadcrumb as $i => $item) {
       // Removing classes from $item['class'] array and adding BEM classes.
       $classes = array();
       if (isset($item['class'])) {
         $classes = $item['class'];
       }
-      $classes[] = 'ecl-breadcrumbs__segment';
+      $classes[] = 'ecl-breadcrumb__segment';
 
       $attributes = array(
-        'class' => array('ecl-breadcrumbs__link'),
+        'class' => array(
+          'ecl-breadcrumb__link',
+          'ecl-link--inverted',
+          'ecl-link--standalone',
+        ),
       );
 
       if ($i === 0) {
-        $classes[] = 'ecl-breadcrumbs__segment--first';
+        $classes[] = 'ecl-breadcrumb__segment--first';
         $attributes['class'][] = 'is-internal';
         $attributes += array('rel' => 'home');
       }
-      elseif ($i === ($s - 1)) {
-        $classes[] = 'ecl-breadcrumbs__segment--last';
+
+      if ($i === ($s - 1)) {
+        $classes[] = 'ecl-breadcrumb__segment--last';
       }
 
-      $class = \implode(' ', $classes);
-      $full_item = $item['content'];
+      $full_item = array(
+        'link' => array(
+          '#markup' => $item['content'],
+        ),
+      );
+
       if (isset($item['url'])) {
-        $full_item = l($item['content'], $item['url'], array(
-          'attributes' => $attributes,
-          'html' => TRUE,
-        ));
+        $full_item = array(
+          'link' => array(
+            '#theme' => _atomium_extend_theme_hook(
+              'link',
+              $variables['theme_hook_original']
+            ),
+            '#text' => $item['content'],
+            '#path' => $item['url'],
+            '#options' => array(
+              'attributes' => $attributes,
+              'html' => TRUE,
+            ),
+          ),
+        );
       }
 
       // TODO: Check if the active class actually appears.
-      $element_visibility = \in_array('active',
-        $classes, TRUE) ? ' element-invisible' : '';
-      $html .= '<li class="' . $class . $element_visibility . '">' . $full_item . '</li>';
+      if (\in_array('active', $classes, TRUE)) {
+        $classes[] = 'element-invisible';
+      }
+
+      $full_item += array(
+        '#theme_wrappers' => array(
+          'html_tag',
+        ),
+        '#tag' => 'li',
+        '#attributes' => array(
+          'class' => $classes,
+        ),
+      );
+
+      $html[] = $full_item;
     }
   }
 
   $variables['easy_breadcrumb'] = $html;
-  $variables['atomium']['attributes']['wrapper']->setAttribute('aria-label', 'breadcrumbs');
 }
 
 /**
