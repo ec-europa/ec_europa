@@ -153,13 +153,12 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(arra
 function _ec_europa_menu_link_footer_alter(array $variables) {
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__menu-item');
   $variables['output']['#options']['attributes']['class'][] = 'ecl-footer__link';
+  $variables['output']['#options']['attributes']['class'][] = 'ecl-link--inverted';
 
   $classes = &$variables['output']['#options']['attributes']['class'];
-  if (!empty($classes) && \in_array('ecl-icon', $classes, TRUE)) {
+  if (\in_array('ecl-icon', $classes, TRUE)) {
     $classes[] = 'ecl-footer__social-icon';
   }
 
-  // As we pass the parameter with reference, this is not mandatory.
-  // It is just to ensure compatibility with the two way of working.
   return $variables;
 }
