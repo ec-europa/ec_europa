@@ -68,6 +68,22 @@ pipeline:
     commands:
     - ./vendor/bin/grumphp run --ansi
 
+  before-release:
+    image: fpfis/httpd-php-dev:7.1
+    commands:
+      - ./vendor/bin/run release:create-archive --tag=${DRONE_TAG}
+    when:
+      event: tag
+
+  github-release:
+    image: plugins/github-release
+    secrets: [ github_token ]
+    files: ec_europa-${DRONE_TAG}.tar.gz
+    when:
+      event: tag
+      matrix:
+        COMPOSER_BOUNDARY: highest
+
 matrix:
   PHP_VERSION:
   - 5.6

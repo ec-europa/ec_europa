@@ -1,22 +1,32 @@
 {
   "name": "ec_europa",
   "license": "EUPL-1.1",
-  "version": "0.0.4",
-  "description": "EC Europa base theme.",
+  "version": "1.0.0",
+  "description": "NextEuropa base theme.",
   "private": true,
   "scripts": {
     "build:copy": "ecl-builder copy",
-    "build:styles": "ecl-builder styles",
     "build:scripts": "ecl-builder scripts",
-    "build": "npm-run-all --parallel build:*"
+    "build:styles": "ecl-builder styles",
+    "build": "npm-run-all --parallel build:* -ln",
+    "watch:scripts": "chokidar \"./sass/**/*.js\" -i \"/node_modules/\" -c \"eslint {path} & npm run build:scripts\"",
+    "watch:styles": "chokidar \"./sass/**/*.scss\" -i \"/node_modules/\" -c \"stylelint {path} & npm run build:styles\"",
+    "watch": "npm-run-all --parallel watch:* -ln",
+    "prepare": "patch-package"
   },
   "dependencies": {
-    "@ec-europa/ecl-builder": "<1.0.0",
-    "@ec-europa/ecl-preset-full": "<1.0.0",
-    "npm-run-all": "4.0.2"
+    "@ecl/builder": "0.2.0",
+    "@ecl/ec-preset-website": "1.4.0",
+    "@ecl/stylelint-config": "0.2.0",
+    "chokidar-cli": "1.2.0",
+    "npm-run-all": "4.0.2",
+    "patch-package": "^5.1.1",
+    "stylelint": "9.1.1",
+    "stylelint-config-prettier": "2.1.0",
+    "stylelint-no-browser-hacks": "^1.1.0"
   },
   "engines": {
-    "node": ">=6.9.5",
-    "yarn": "^0.20.3"
+    "node": ">=8",
+    "yarn": ">=0.27.5"
   }
 }

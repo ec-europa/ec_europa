@@ -26,11 +26,9 @@
             </h1>
           </div>
           <?php if (!empty($introduction)): ?>
-            <div class="ecl-page-header__intro">
-              <p class="ecl-paragraph ecl-paragraph--l">
-                <?php print render($introduction); ?>
-              </p>
-            </div>
+            <p class="ecl-page-header__intro">
+              <?php print render($introduction); ?>
+            </p>
           <?php endif; ?>
         <?php endif; ?>
       </div>
