@@ -47,7 +47,8 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
     $items['pager_previous']['pager_previous']['#text'] = t('‹ Previous');
   }
 
-  // Change the display order between pager_first and pager_previous to match ECL.
+  // Change the display order between pager_first and pager_previous
+  // to match ECL.
   if (isset($items['pager_first'])) {
     $previous = $items['pager_previous'];
 
@@ -82,7 +83,7 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
     }
   }
 
-  $links = [];
+  $links = array();
   $has_ellipsis = FALSE;
   // This loops does 2 things.
   // 1) It saves an array with keys that are either pager_current or pager_link.
@@ -104,9 +105,14 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
   }
 
   // Find the index of the current element.
-  $index_current = array_search('pager_current', array_keys($links), TRUE);
+  $index_current = array_search(
+    'pager_current',
+    array_keys($links),
+    TRUE
+  );
 
-  // If there is an ellipsis and if the current element is within 4 elements before the end of the links array.
+  // If there is an ellipsis and if the current element is within 4 elements
+  // before the end of the links array.
   if ((count($links) - $index_current < 4) && $has_ellipsis === TRUE) {
     // In that case we delete the Next link.
     unset($items['pager_next']);
@@ -118,11 +124,11 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
     foreach (array_keys($items) as $key) {
       $base = atomium_get_base_hook($key);
 
-      if ('pager_current' === $base) {
+      if ($base === 'pager_current') {
         break;
       }
 
-      if ('pager_link' === $base) {
+      if ($base === 'pager_link') {
         if (!isset($links[$key])) {
           unset($items[$key]);
         }
