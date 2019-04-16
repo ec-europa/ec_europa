@@ -3,7 +3,6 @@ Feature: Pager
 
   Scenario: Pager behaves correctly with a high number of pages.
     Given "500" nodes of type "article"
-
     When I visit "/node"
     Then I should see "1 2 3 4 5 6 7 8 9 … 50 Next ›" in the "pager"
     And I should not see the link "‹ Previous"
