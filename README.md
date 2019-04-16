@@ -9,7 +9,7 @@ The EC-Europa theme is a Drupal 7 theme, implementing the styling defined for
 the Digital Transformation of the European Commission.
 This theme is based on a component driven design.
 
-This theme is bundled with the version 0.21 of [ECL](https://github.com/ec-europa/europa-component-library).
+This theme is bundled with the version 0.24 of [ECL](https://github.com/ec-europa/europa-component-library).
 
 Current supported browsers:
 
