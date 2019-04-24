@@ -119,6 +119,11 @@ Setup your environment by running:
 $ npm install
 ```
 
+Using docker
+```
+$ docker-compose exec -u node node npm install 
+```
+
 Build it by running:
 
 ```
