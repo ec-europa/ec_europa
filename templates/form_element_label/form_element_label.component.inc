@@ -39,7 +39,7 @@ function ec_europa_preprocess_form_element_label__form_element__checkbox(array &
       'required' => NULL,
     );
   }
-  $variables['atomium']['attributes']['wrapper']->removeAttribute('for');
+  $variables['atomium']['attributes']['wrapper']->delete('for');
 }
 
 /**
@@ -55,5 +55,5 @@ function ec_europa_preprocess_form_element_label__form_element__radio(array &$va
       'required' => NULL,
     );
   }
-  $variables['atomium']['attributes']['wrapper']->removeAttribute('for');
+  $variables['atomium']['attributes']['wrapper']->delete('for');
 }
