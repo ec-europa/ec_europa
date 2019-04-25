@@ -20,3 +20,4 @@ behat.yml
 # Ignore all files in the images folder other than the required icon.
 /assets/images/*
 !/assets/images/required.svg
+/templates/menu_link/menu_link.component.inc

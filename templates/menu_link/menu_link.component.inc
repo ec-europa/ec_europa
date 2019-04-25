@@ -160,7 +160,5 @@ function _ec_europa_menu_link_footer_alter(array $variables) {
     $classes[] = 'ecl-footer__social-icon';
   }
 
-  // As we pass the parameter with reference, this is not mandatory.
-  // It is just to ensure compatibility with the two way of working.
   return $variables;
 }
