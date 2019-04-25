@@ -92,6 +92,9 @@ function ec_europa_preprocess_form_element__checkbox(array &$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_form_element__textarea(array &$variables, $hook) {
+  if (empty($variables['element']['#id'])) {
+    return;
+  }
   $variables['label']['#attributes'] = array(
     'id' => array($variables['element']['#id'] . '_label'),
   );
