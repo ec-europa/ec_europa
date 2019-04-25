@@ -1,6 +1,7 @@
 # EC Europa Theme
-
-[![Build Status](https://travis-ci.org/ec-europa/ec_europa.svg?branch=master)](https://travis-ci.org/ec-europa/ec_europa)
+[![Build Status](https://drone.fpfis.eu/api/badges/ec-europa/ec_europa/status.svg?branch=master)](https://drone.fpfis.eu/ec-europa/ec_europa) 
+[![GitHub issues](https://img.shields.io/github/issues/ec-europa/ec_europa.svg)](https://github.com/ec-europa/ec_europa/issues?q=is:open+is:issue) 
+[![Current Release](https://img.shields.io/github/release/ec-europa/ec_europa.svg)](https://github.com/ec-europa/ec_europa/releases)
 
 Repository containing the drupal theme for the NextEuropa platform.
 
@@ -27,6 +28,7 @@ Table of content:
 - [Tests](#tests)
 - [Helper tools](#helper-tools)
 - [Developers notes](#developers-notes)
+  - [Development environment](#development-environment)
 
 ## Installation
 
@@ -71,19 +73,14 @@ render content using ECL formatters.
 This module extends nexteuropa_formatters with custom field formatters that
 render field value using ECL formatters.
 
+[Go to top](#table-of-content)
+
+
 ## Tests
 
-Writing tests specific to the EC Europa Theme project is optional (at the moment). Developers that would like to use
-Behat to test their work can do that by setting up a vanilla Drupal 7 site and installing the theme and its dependencies.
-
-The full list of steps can be found in the `before_script:` section of [.travis.yml](.travis.yml), although setup might
-vary depending on each developer's environment.
-
-Tests can be ran via:
-
-```
-$ ./vendor/bin/behat
-```
+Developers are encouraged to create tests as a best practice, especially functional testing using Behat, and by doing so 
+it should be on a vanilla Drupal 7 site and installing the theme and its dependencies, which can be easily achieved by 
+using Docker as shown on [development environment section](#development-environment).
 
 ## Developer notes
 
@@ -106,7 +103,33 @@ If you need to implement some specific content formats in the rich texts in your
 you just have to insert them in an "editor.css" file.<br />
 This file is to be put in a repository named "wysiwyg" placed at the root of the sub-theme.
 
-### Compile ECL
+[Go to top](#table-of-content)
+
+### Development environment
+
+#### Usage
+
+To start, run:
+
+```bash
+docker-compose up
+```
+
+It is advised to not daemonise `docker-compose` so it can be turned off (`CTRL+C`) quickly when it is not anymore needed.
+However, there is an option to run docker on background by using the flag `-d`:
+
+```bash
+docker-compose up -d
+```
+
+Then:
+
+```bash
+docker-compose exec web composer install
+docker-compose exec web ./vendor/bin/run drupal:site-install
+```
+
+#### Compile ECL
 
 Requirements:
 
@@ -114,20 +137,31 @@ Requirements:
 - [Yarn](https://yarnpkg.com/en/): `>= 0.20.3`
 
 Setup your environment by running:
+```bash
+docker-compose exec -u node node npm install 
+```
 
-```
-$ npm install
+```bash
+docker-compose exec -u node node npm build 
 ```
 
-Using docker
+or
+
+```bash
+npm install
 ```
-$ docker-compose exec -u node node npm install 
-```
+
 
 Build it by running:
 
+```bash
+docker-compose exec -u node node npm build 
 ```
-$ npm run build
+
+or
+
+```bash
+npm run build
 ```
 
 This will:
@@ -139,13 +173,45 @@ This will:
 
 For more details about these build steps, check [`ecl-builder` documentation](https://www.npmjs.com/package/@ec-europa/ecl-builder)
 
+[Go to top](#table-of-content)
+
 ## Update ECL
 
 Update the ECL by changing the `@ec-europa/ecl-components-preset-base` version in `package.json` and running:
 
-```
-$ npm run build
+```bash
+docker-compose exec -u node node npm build 
 ```
 
+or
+
+```bash
+npm run build
+```
 This will update assets such as images and fonts and re-compile CSS, resulting changes are meant to be committed to this
 repository since we cannot require theme users and/or deployment procedures to build the theme locally.
+
+#### On browser
+Using default configuration, the development site files should be available in the `build` directory and the development site
+should be available at: [http://127.0.0.1:8080/build](http://127.0.0.1:8080/build).
+
+#### Running the tests
+
+To run the grumphp checks:
+
+```bash
+docker-compose exec web ./vendor/bin/grumphp run
+```
+
+To run the behat tests:
+
+```bash
+docker-compose exec web ./vendor/bin/behat
+```
+
+or
+
+```bash
+./vendor/bin/behat
+```
+[Go to top](#table-of-content)
