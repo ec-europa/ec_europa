@@ -15,63 +15,59 @@ workspace:
 
 services:
   web:
-    image: fpfis/httpd-php-dev:${PHP_VERSION=5.6}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=5.6}
     environment:
-    - DOCUMENT_ROOT=/test/ec_europa
+      - DOCUMENT_ROOT=/test/ec_europa
     pull: true
   mysql:
     image: percona/percona-server:5.6
     environment:
-    - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
 pipeline:
   composer-install-lowest:
     group: prepare
-    image: fpfis/httpd-php-dev:${PHP_VERSION=5.6}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=5.6}
     volumes:
-    - /cache:/cache
+      - /cache:/cache
     commands:
       # Perform a composer install to work around an issue where an update
       # without a lock file present affects the resolving of dependencies.
       # Todo: Remove the `composer install` when the composer bug is fixed.
       # Ref. https://github.com/composer/composer/issues/7542
       # Ref. https://webgate.ec.europa.eu/CITnet/jira/browse/OPENEUROPA-1234
-      - rm /etc/php/${PHP_VERSION=5.6}/cli/conf.d/20-xdebug.ini
-      - rm /etc/php/${PHP_VERSION=5.6}/cli/conf.d/90-blackfire.ini
-      - composer install --ansi --no-suggest --no-progress
-      - composer update --prefer-lowest --ansi --no-suggest --no-progress
+      - composer install --no-ansi --no-suggest --no-progress
+      - composer update --prefer-lowest --no-ansi --no-suggest --no-progress
     when:
       matrix:
         COMPOSER_BOUNDARY: lowest
 
   composer-install-highest:
     group: prepare
-    image: fpfis/httpd-php-dev:${PHP_VERSION=5.6}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=5.6}
     volumes:
       - /cache:/cache
     commands:
-      - rm /etc/php/${PHP_VERSION=5.6}/cli/conf.d/20-xdebug.ini
-      - rm /etc/php/${PHP_VERSION=5.6}/cli/conf.d/90-blackfire.ini
-      - composer install --ansi --no-suggest --no-progress
+      - composer install --no-ansi --no-suggest --no-progress
     when:
       matrix:
         COMPOSER_BOUNDARY: highest
 
   site-install:
-    image: fpfis/httpd-php-dev:${PHP_VERSION=5.6}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=5.6}
     commands:
-    - ./vendor/bin/run drupal:site-install
+      - ./vendor/bin/taskman drupal:site-install
 
   grumphp:
     group: test
-    image: fpfis/httpd-php-dev:${PHP_VERSION=5.6}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=5.6}
     commands:
-    - ./vendor/bin/grumphp run --ansi
+      - ./vendor/bin/grumphp run --no-ansi --no-interaction
 
   before-release:
-    image: fpfis/httpd-php-dev:7.1
+    image: fpfis/httpd-php-ci:7.1
     commands:
-      - ./vendor/bin/run release:create-archive --tag=${DRONE_TAG}
+      - ./vendor/bin/taskman release:create-archive --tag=${DRONE_TAG}
     when:
       event: tag
 
@@ -86,9 +82,11 @@ pipeline:
 
 matrix:
   PHP_VERSION:
-  - 5.6
-  - 7.1
-  - 7.2
+    - 5.6
+    - 7.1
+    - 7.2
+    - 7.3
   COMPOSER_BOUNDARY:
-  - lowest
-  - highest
+    - lowest
+    - highest
+

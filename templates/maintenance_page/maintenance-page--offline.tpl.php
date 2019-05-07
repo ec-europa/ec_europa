@@ -14,8 +14,8 @@
  */
 ?>
 <!DOCTYPE html>
-<html<?php print $atomium['attributes']['html'];?>>
-<head<?php print $atomium['attributes']['head'];?>>
+<html<?php print $atomium['attributes']['html']; ?>>
+<head<?php print $atomium['attributes']['head']; ?>>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body<?php print $attributes;?>>
+<body<?php print $attributes; ?>>
 <div class="ecl-site-switcher ecl-site-switcher--header">
   <ul class="ecl-site-switcher__list ecl-container">
     <li class="ecl-site-switcher__option"><a class="ecl-link ecl-site-switcher__link" href="https://ec.europa.eu/commission/index_en">Commission and its priorities</a></li>

@@ -14,8 +14,8 @@
  */
 ?>
 <!DOCTYPE html>
-<html<?php print $atomium['attributes']['html'];?>>
-<head<?php print $atomium['attributes']['head'];?>>
+<html<?php print $atomium['attributes']['html']; ?>>
+<head<?php print $atomium['attributes']['head']; ?>>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,7 +24,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body<?php print $atomium['attributes']['body'];?>>
+<body<?php print $atomium['attributes']['body']; ?>>
 <div class="ecl-skip-link__wrapper" id="skip-link">
   <a href="#main-content" class="ecl-skip-link"><?php print t('Skip to main content'); ?></a>
 </div>
