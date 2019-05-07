@@ -126,7 +126,7 @@ Then:
 
 ```bash
 docker-compose exec web composer install
-docker-compose exec web ./vendor/bin/run drupal:site-install
+docker-compose exec web ./vendor/bin/taskman drupal:site-install
 ```
 
 #### Compile ECL
@@ -137,12 +137,13 @@ Requirements:
 - [Yarn](https://yarnpkg.com/en/): `>= 0.20.3`
 
 Setup your environment by running:
+
 ```bash
 docker-compose exec -u node node npm install 
 ```
 
 ```bash
-docker-compose exec -u node node npm build 
+docker-compose exec -u node node npm run build 
 ```
 
 or
@@ -151,11 +152,10 @@ or
 npm install
 ```
 
-
 Build it by running:
 
 ```bash
-docker-compose exec -u node node npm build 
+docker-compose exec -u node node npm run build 
 ```
 
 or
