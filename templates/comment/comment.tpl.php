@@ -73,7 +73,7 @@
     <a class="ecl-link ecl-heading ecl-heading--h3 ecl-comment__title" href="<?php print $path; ?>"><?php print $title ?></a>
     <?php print render($title_suffix); ?>
     <div class="ecl-comment__text">
-      <p class="ecl-paragraph"><?php hide($content['links']); print render($content);?></p>
+      <p class="ecl-paragraph"><?php hide($content['links']); print render($content); ?></p>
     </div>
     <div class="ecl-comment__operations">
       <?php print render($content['links']) ?>
