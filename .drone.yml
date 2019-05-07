@@ -60,7 +60,7 @@ pipeline:
   site-install:
     image: fpfis/httpd-php-dev:${PHP_VERSION=5.6}
     commands:
-    - ./vendor/bin/run drupal:site-install
+    - ./vendor/bin/taskman drupal:site-install
 
   grumphp:
     group: test
@@ -71,7 +71,7 @@ pipeline:
   before-release:
     image: fpfis/httpd-php-dev:7.1
     commands:
-      - ./vendor/bin/run release:create-archive --tag=${DRONE_TAG}
+      - ./vendor/bin/taskman release:create-archive --tag=${DRONE_TAG}
     when:
       event: tag
 
