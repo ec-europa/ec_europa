@@ -20,7 +20,7 @@
         "drupal/libraries": "^2.5",
         "drupal/realistic_dummy_content": "^2",
         "drupal/views": "^3.22",
-        "drupol/drupal-conventions": "^1.4.10",
+        "drupol/drupal-conventions": "^1.4.11",
         "drush/drush": "^8.2.3",
         "guzzlehttp/guzzle": "^6.3.3",
         "mikey179/vfsstream": "^1.6",
