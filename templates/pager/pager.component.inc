@@ -32,9 +32,9 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
 
   // Append Page on Current pager.
   if ($items['pager_current']['#markup']) {
-    $items["pager_current"]["#markup"] =
+    $items['pager_current']['#markup'] =
       '<span class="ecl-pager__item-text">Page</span> ' .
-      $items["pager_current"]["#markup"];
+      $items['pager_current']['#markup'];
   }
 
   // Update text to use Next instead of next.

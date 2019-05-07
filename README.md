@@ -101,7 +101,33 @@ If you need to implement some specific content formats in the rich texts in your
 you just have to insert them in an "editor.css" file.<br />
 This file is to be put in a repository named "wysiwyg" placed at the root of the sub-theme.
 
-### Compile ECL
+[Go to top](#table-of-content)
+
+### Development environment
+
+#### Usage
+
+To start, run:
+
+```bash
+docker-compose up
+```
+
+It is advised to not daemonise `docker-compose` so it can be turned off (`CTRL+C`) quickly when it is not anymore needed.
+However, there is an option to run docker on background by using the flag `-d`:
+
+```bash
+docker-compose up -d
+```
+
+Then:
+
+```bash
+docker-compose exec web composer install
+docker-compose exec web ./vendor/bin/taskman drupal:site-install
+```
+
+#### Compile ECL
 
 Requirements:
 
@@ -110,12 +136,20 @@ Requirements:
 
 Setup your environment by running:
 
+```bash
+docker-compose exec -u node node npm install 
+```
+
+```bash
+docker-compose exec -u node node npm run build 
 ```
 $ npm install
 ```
 
 Build it by running:
 
+```bash
+docker-compose exec -u node node npm run build 
 ```
 $ npm run build
 ```
