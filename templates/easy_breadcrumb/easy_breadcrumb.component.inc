@@ -106,7 +106,7 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
 
       $full_item = array(
         'link' => array(
-          '#markup' => $item['content'],
+          '#markup' => check_plain($item['content']),
         ),
       );
 
@@ -121,7 +121,6 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
             '#path' => $item['url'],
             '#options' => array(
               'attributes' => $attributes,
-              'html' => TRUE,
             ),
           ),
         );
