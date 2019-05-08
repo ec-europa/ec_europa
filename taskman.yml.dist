@@ -6,7 +6,7 @@ drupal:
   database:
     host: "mysql"
     port: "3306"
-    name: "atomium"
+    name: "ec_europa"
     user: "root"
     password: ""
   settings:
