@@ -1,8 +1,9 @@
-# EC Europa Theme
-
-[![Build Status](https://drone.fpfis.eu/api/badges/ec-europa/ec_europa/status.svg?branch=0.x)](https://drone.fpfis.eu/ec-europa/ec_europa) 
+[![Build Status](https://drone.fpfis.eu/api/badges/ec-europa/ec_europa/status.svg?branch=0.0.x)](https://drone.fpfis.eu/ec-europa/ec_europa) 
 [![GitHub issues](https://img.shields.io/github/issues/ec-europa/ec_europa.svg)](https://github.com/ec-europa/ec_europa/issues?q=is:open+is:issue) 
 [![Current Release](https://img.shields.io/github/release/ec-europa/ec_europa.svg)](https://github.com/ec-europa/ec_europa/releases)
+
+# EC Europa Theme
+
 Repository containing the drupal theme for the NextEuropa platform.
 
 The EC-Europa theme is a Drupal 7 theme, implementing the styling defined for
@@ -76,8 +77,8 @@ Behat to test their work can do that by setting up a vanilla Drupal 7 site and i
 
 Tests can be ran via:
 
-```
-$ ./vendor/bin/behat
+```bash
+./vendor/bin/behat
 ```
 
 ## Developer notes
@@ -140,18 +141,10 @@ Setup your environment by running:
 docker-compose exec -u node node npm install 
 ```
 
-```bash
-docker-compose exec -u node node npm run build 
-```
-$ npm install
-```
-
 Build it by running:
 
 ```bash
 docker-compose exec -u node node npm run build 
-```
-$ npm run build
 ```
 
 This will:
@@ -167,8 +160,8 @@ For more details about these build steps, check [`ecl-builder` documentation](ht
 
 Update the ECL by changing the `@ec-europa/ecl-components-preset-base` version in `package.json` and running:
 
-```
-$ npm run build
+```bash
+npm run build
 ```
 
 This will update assets such as images and fonts and re-compile CSS, resulting changes are meant to be committed to this
