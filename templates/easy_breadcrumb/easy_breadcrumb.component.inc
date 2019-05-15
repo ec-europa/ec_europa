@@ -92,18 +92,24 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       }
 
       $class = \implode(' ', $classes);
-      $full_item = $item['content'];
+      $content = decode_entities($item['content']);
+
       if (isset($item['url'])) {
-        $full_item = l($item['content'], $item['url'], array(
-          'attributes' => $attributes,
-          'html' => TRUE,
-        ));
+        $content = l(
+          $content,
+          $item['url'],
+          array(
+            'attributes' => $attributes,
+          )
+        );
+      } else {
+        check_plain($content);
       }
 
       // TODO: Check if the active class actually appears.
       $element_visibility = \in_array('active',
         $classes, TRUE) ? ' element-invisible' : '';
-      $html .= '<li class="' . $class . $element_visibility . '">' . $full_item . '</li>';
+      $html .= '<li class="' . $class . $element_visibility . '">' . $content . '</li>';
     }
   }
 
