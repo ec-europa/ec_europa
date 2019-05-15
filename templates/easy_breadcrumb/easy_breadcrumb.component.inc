@@ -102,7 +102,8 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
             'attributes' => $attributes,
           )
         );
-      } else {
+      }
+      else {
         check_plain($content);
       }
 

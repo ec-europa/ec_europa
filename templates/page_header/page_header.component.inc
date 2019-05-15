@@ -39,8 +39,8 @@ function ec_europa_atomium_definition_page_header() {
         '#type' => 'News article',
         '#timestamp' => '2015-07-06T17:44:28+02:00',
         '#date' => '6 July 2015',
-        '#location'  => 'Brussels',
-        '#attributes'  => array(
+        '#location' => 'Brussels',
+        '#attributes' => array(
           'class' => array(
             'ecl-meta--header',
           ),
