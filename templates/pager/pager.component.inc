@@ -6,77 +6,154 @@
  */
 
 /**
- * Implements hook_atomium_definition_hook().
- */
-function ec_europa_atomium_definition_pager() {
-  return array(
-    'label' => 'Pager',
-    'description' => 'Nexteuropa Pager',
-    'preview' => array(
-      'pager_page_array' => array(
-        0 => \rand(0, 30),
-      ),
-      'pager_total' => array(
-        0 => 30,
-      ),
-    ),
-  );
-}
-
-/**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_pager(array &$variables, $hook) {
-  global $pager_page_array, $pager_total;
-
-  if (empty($variables[$variables['base_hook']])) {
+  if (!isset($variables['pager']['pager']['#items'])) {
     return;
   }
 
-  // Max is the maximum page number.
+  // Add classes required by ECL.
+  $variables['pager']['pager']['#attributes']['class'][] = 'ecl-pager';
+  $variables['pager']['pager']['#wrapper_attributes']['class'][] = 'ecl-pager__wrapper';
+
+  // Compute the total number of element in this particular pager.
   $element = $variables['element'];
-  $quantity = $variables['quantity'];
-  $pager_max = $pager_total[$element];
-  $pager_middle = \ceil($quantity / 2);
-  $pager_current = $pager_page_array[$element] + 1;
-  $pager_first = $pager_current - $pager_middle + 1;
+  $pager_total = isset($GLOBALS['pager_total']) ?
+    $GLOBALS['pager_total'] :
+    array();
+  if (isset($variables['pager_total']) && $variables['pager_total'] !== NULL) {
+    $pager_total = $variables['pager_total'];
+  }
+  $pager_total_element = (int) $pager_total[$element];
 
-  $pager_last = $pager_current + $quantity - $pager_middle;
-  if ($pager_current < $pager_middle) {
-    $pager_last = $quantity;
+  // Syntax shortcut.
+  $items = &$variables['pager']['pager']['#items'];
+
+  // Append Page on Current pager.
+  if ($items['pager_current']['#markup']) {
+    $items['pager_current']['#markup'] =
+      '<span class="ecl-pager__item-text">Page</span> ' .
+      $items['pager_current']['#markup'];
   }
 
-  // Make sure that last page is not higher of total number of pages.
-  if ($pager_last > $pager_max) {
-    $pager_last = $pager_max;
+  // Update text to use Next instead of next.
+  if (isset($items['pager_next']['pager_next'])) {
+    $items['pager_next']['pager_next']['#text'] = t('Next ›');
   }
 
-  // If pages are less than $quantity then display them all.
-  if ($pager_max <= $quantity) {
-    $pager_first = 1;
-    $pager_last = $pager_max;
+  // Update text to use Previous instead of previous.
+  if (isset($items['pager_previous']['pager_previous'])) {
+    $items['pager_previous']['pager_previous']['#text'] = t('‹ Previous');
   }
 
-  // Pass along pager figures for later processing.
-  $variables['pager_first'] = $pager_first < 1 ? 1 : $pager_first;
-  $variables['pager_middle'] = $pager_middle;
-  $variables['pager_last'] = $pager_last;
-  $variables['pager_current'] = $pager_page_array[$element] + 1;
-  $variables['pager_max'] = $pager_max;
+  // Change the display order between pager_first and pager_previous
+  // to match ECL.
+  if (isset($items['pager_first'])) {
+    $previous = $items['pager_previous'];
 
-  foreach ($variables['pager']['pager']['#items'] as $key => $item) {
-    if (isset($item['link'])) {
-      $variables['links'][$key] = array(
-        'url' => url($item['link']['#path'], $item['link']['#options']),
-        'label' => $item['link']['#text'],
-      );
+    $items['pager_first']['pager_first']['#text'] = 1;
+    unset($items['pager_previous']);
+
+    $items = array('pager_previous' => $previous)
+      + $items;
+
+    // Case the pager_first is shown do not display pager_1.
+    if (isset($items['pager_link__1'])) {
+      unset($items['pager_link__1']);
     }
   }
 
-  $variables['previous_title'] = t('Go to previous page');
-  $variables['previous_label'] = t('@arrow Previous', array('@arrow' => '‹'));
-  $variables['next_title'] = t('Go to next page');
-  $variables['next_label'] = t('Next @arrow', array('@arrow' => '›'));
-  $variables['goto_title'] = t('Go to page');
-  $variables['page_label'] = t('Page');
+  // Case the pager_link__2 is shown do not display pager_ellipsis__2.
+  if (isset($items['pager_link__2'])) {
+    unset($items['pager_ellipsis__2']);
+  }
+
+  // Change the display order between pager_last and pager_next to match ECL.
+  if (isset($items['pager_last'])) {
+    $next = $items['pager_next'];
+    $items['pager_last']['pager_last']['#text'] = $pager_total_element;
+    unset($items['pager_next']);
+    $items += array('pager_next' => $next);
+
+    // Case the pager_last is shown do not display the last item number.
+    $last_page = 'pager_link__' . $pager_total_element;
+    if (isset($items[$last_page])) {
+      unset($items[$last_page]);
+    }
+  }
+
+  $links = array();
+  $has_ellipsis = FALSE;
+  // This loops does 2 things.
+  // 1) It saves an array with keys that are either pager_current or pager_link.
+  // 2) It checks if the pager has an ellipsis and set a variable accordingly.
+  foreach ($items as $key => $item) {
+    $base = atomium_get_base_hook($key);
+
+    if ($base === 'pager_current') {
+      $links[$key] = $key;
+    }
+
+    if ($base === 'pager_link') {
+      $links[$key] = $key;
+    }
+
+    if ($base === 'pager_ellipsis') {
+      $has_ellipsis = TRUE;
+    }
+  }
+
+  // Find the index of the current element.
+  $index_current = array_search(
+    'pager_current',
+    array_keys($links),
+    TRUE
+  );
+
+  // If there is an ellipsis and if the current element is within 4 elements
+  // before the end of the links array.
+  if ((count($links) - $index_current < 4) && $has_ellipsis === TRUE) {
+    // In that case we delete the Next link.
+    unset($items['pager_next']);
+
+    // Ensure that there is only 4 elements before the 'current' element.
+    $links = array_slice($links, $index_current - 4, 4);
+
+    // Remove the elements, and break as soon as we reach the current element.
+    foreach (array_keys($items) as $key) {
+      $base = atomium_get_base_hook($key);
+
+      if ($base === 'pager_current') {
+        break;
+      }
+
+      if ($base === 'pager_link') {
+        if (!isset($links[$key])) {
+          unset($items[$key]);
+        }
+      }
+    }
+  }
+
+  // Add classes required by ECL to remaining elements.
+  foreach ($items as $key => &$item) {
+    $base = atomium_get_base_hook($key);
+
+    $item['#attributes']['class'][] = 'ecl-pager__item';
+    $item[$base]['#attributes']['class'][] = 'ecl-pager__link';
+
+    $classMap = array(
+      'pager_first' => 'first',
+      'pager_previous' => 'previous',
+      'pager_last' => 'last',
+      'pager_next' => 'next',
+      'pager_current' => 'current',
+      'pager_ellipsis' => 'ellipsis',
+    );
+
+    if (isset($classMap[$base])) {
+      $item['#attributes']['class'][] = 'ecl-pager__item--' . $classMap[$base];
+    }
+  }
 }

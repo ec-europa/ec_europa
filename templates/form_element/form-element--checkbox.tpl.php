@@ -16,6 +16,6 @@
     <span class="field-suffix"><?php print render($element['#field_suffix']); ?></span>
   <?php endif; ?>
   <?php if (!empty($description)): ?>
-    <p class="ecl-help-block"><?php print $element['#description']; ?></p>
+    <p class="ecl-help-block"><?php print render($description); ?></p>
   <?php endif; ?>
 </div>

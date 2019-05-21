@@ -1,5 +1,8 @@
 @api
-Feature: Pager
+Feature: Pager functionality
+  In order to show functionality added by the Pager
+  As an authenticated user with admin role
+  I need to see the Next, Previous, ellipsis and other links in between
 
   Scenario: Pager behaves correctly with a high number of pages.
     Given "500" nodes of type "article"
