@@ -8,7 +8,7 @@
 /**
  * Implements hook_atomium_theme_hook().
  */
-function ec_europa_atomium_theme_page_header(array $existing, $type, $theme, $path) {
+function ec_europa_atomium_theme_page_header() {
   return array(
     'page_header' => array(
       'variables' => array(
