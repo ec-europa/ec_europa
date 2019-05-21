@@ -124,9 +124,7 @@ function ec_europa_preprocess_link(array &$variables, $hook) {
   }
 
   // Add the span tag for the icon.
-  /*
-   * @TODO: Do this.
-   */
+  // @TODO: Do this.
   /*
   if ($variables['atomium']['attributes']['element']
   ->exists('class', 'ecl-icon')) {
