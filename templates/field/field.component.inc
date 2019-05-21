@@ -40,7 +40,7 @@ function ec_europa_preprocess_field(array &$variables, $hook) {
     // Inject a specific class when a field might use the WYSIWYG editor.
     if (\in_array($element['#field_type'], array('text_with_summary', 'text_long'), TRUE)) {
       foreach (\array_keys($variables['items']) as $delta) {
-        $variables['atomium']['attributes'][$delta]->append('class', 'ecl-editor');
+        $variables[$variables['base_hook']][$variables['base_hook']]['#atomium']['attributes'][$delta]['class'][] = 'ecl-editor';
       }
     }
   }

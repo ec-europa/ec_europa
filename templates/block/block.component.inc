@@ -191,5 +191,9 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_block__content(array &$variables, $hook) {
+  if ($_GET['q'] === 'atomium-overview') {
+    return;
+  }
+
   $variables['atomium']['attributes']['content']->append('class', 'ecl-editor');
 }
