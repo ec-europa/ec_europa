@@ -62,7 +62,7 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
   $pager_links = _pager_get_item_keys($items, 'pager_link');
   $pager_first = _pager_get_item_keys($items, 'pager_first');
   $pager_current = _pager_get_item_keys($items, 'pager_current');
-  if (!empty($pager_first) && !empty($pager_links)) {
+  if ($ellipsis !== NULL && !empty($pager_first) && !empty($pager_links)) {
     // TRUE if the pager first page is different from the first pager link page.
     $condition1 = $items[$pager_links[0]]['#pager_page'] !== $items[$pager_first[0]]['#pager_page'] + 1;
     // TRUE if the pager first is different from the current pager link page.
@@ -164,7 +164,7 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
 
   // If there is an ellipsis and if the current element is within 4 elements
   // before the end of the links array.
-  if (((count($links) - $index_current < 4)) && $has_ellipsis === TRUE) {
+  if ($has_ellipsis === TRUE && ((count($links) - $index_current) < 4)) {
     // In that case we delete the Next link.
     $next_item_key = _pager_get_item_keys($items, 'pager_next');
     unset($items[$next_item_key[0]]);
@@ -221,7 +221,7 @@ function _pager_add_ecl_classes(array &$items) {
 }
 
 /**
- * Get the pager item/s by pagers type.
+ * Get the pager items by pager type.
  *
  * @param array $items
  *   The list of pager items.
@@ -232,16 +232,12 @@ function _pager_add_ecl_classes(array &$items) {
  *   A list of items belonging to the same pager type.
  */
 function _pager_get_items_by_pager_type(array $items, $pager_type) {
-  $pager_type_key = _pager_get_item_keys($items, $pager_type);
-  $pager_type_items = array();
-
-  foreach ($pager_type_key as $key) {
-    if (isset($items[$key])) {
-      $pager_type_items[] = $items[$key];
-    }
-  }
-
-  return $pager_type_items;
+  return array_values(
+    array_intersect_key(
+      $items,
+      array_flip(_pager_get_item_keys($items, $pager_type))
+    )
+  );
 }
 
 /**
@@ -256,15 +252,14 @@ function _pager_get_items_by_pager_type(array $items, $pager_type) {
  *   The array with $pager_type key within $items.
  */
 function _pager_get_item_keys(array $items, $pager_type) {
-  $keys = array();
-
-  foreach ($items as $index => $item) {
-    if ($item['#pager_item_type'] === $pager_type) {
-      $keys[] = $index;
-    }
-  }
-
-  return $keys;
+  return array_keys(
+    array_filter(
+      $items,
+      function ($item) use ($pager_type) {
+        return $item['#pager_item_type'] === $pager_type;
+      }
+    )
+  );
 }
 
 /**
