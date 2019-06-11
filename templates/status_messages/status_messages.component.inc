@@ -59,6 +59,9 @@ function ec_europa_preprocess_status_messages(array &$variables, $hook) {
     'success' => t('Success message'),
     'informative' => t('Informative message'),
     'live_stream' => t('Live Stream message'),
+    'status' => t('Status message'),
+    'warning' => t('Warning message'),
+    'error' => t('Error message'),
   );
 
   $status_modifier = array(
@@ -71,7 +74,7 @@ function ec_europa_preprocess_status_messages(array &$variables, $hook) {
   );
 
   foreach ($variables['status_messages']['status_messages'] as $type => &$messages) {
-    if (isset($status_modifier[$type], $status_heading[$type])) {
+    if (isset($status_heading[$type])) {
       $messages['messages']['#title'] = $status_heading[$type];
     }
 
