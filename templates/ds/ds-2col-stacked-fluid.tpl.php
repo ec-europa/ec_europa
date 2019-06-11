@@ -6,7 +6,6 @@
  */
 
 // @TODO update once new grid style is defined.
-
 // Add sidebar classes so that we can apply the correct width in css.
 if (($left && !$right) || ($right && !$left)) {
   $classes .= ' group-one-column';
