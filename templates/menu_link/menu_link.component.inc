@@ -64,6 +64,10 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links(array &$v
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-list-inline__item');
   $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'] = \array_diff(
     $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'],
+  // Assuring index class always exists.
+  $variables['menu_link']['menu_link']['#options']['attributes'] += array('class' => array());
+  $variables['menu_link']['menu_link']['#options']['attributes']['class'] = array_diff(
+    $variables['output']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
 }
@@ -82,6 +86,10 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media(array &$va
   $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-list-inline__item');
   $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'] = \array_diff(
     $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'],
+  // Assuring index class always exists.
+  $variables['menu_link']['menu_link']['#options']['attributes'] += array('class' => array());
+  $variables['menu_link']['menu_link']['#options']['attributes']['class'] = array_diff(
+    $variables['menu_link']['menu_link']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
 }
@@ -99,6 +107,10 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media__footer(ar
 function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links(array &$variables, $hook) {
   $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'] = \array_diff(
     $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'],
+  // Assuring index class always exists.
+  $variables['menu_link']['menu_link']['#options']['attributes'] += array('class' => array());
+  $variables['menu_link']['menu_link']['#options']['attributes']['class'] = array_diff(
+    $variables['menu_link']['menu_link']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
 }
@@ -116,6 +128,10 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links__footer(arra
 function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(array &$variables, $hook) {
   $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'] = \array_diff(
     $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'],
+  // Assuring index class always exists.
+  $variables['menu_link']['menu_link']['#options']['attributes'] += array('class' => array());
+  $variables['menu_link']['menu_link']['#options']['attributes']['class'] = array_diff(
+    $variables['menu_link']['menu_link']['#options']['attributes']['class'],
     array('ecl-link--standalone')
   );
 }
