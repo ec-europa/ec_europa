@@ -199,7 +199,7 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
  *   A list of pager items.
  */
 function _pager_add_ecl_classes(array &$items) {
-  foreach ($items as $key => &$item) {
+  foreach ($items as &$item) {
     $item_type = $item['#pager_item_type'];
 
     $item['#attributes']['class'][] = 'ecl-pager__item';

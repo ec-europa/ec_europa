@@ -23,9 +23,9 @@ function ec_europa_atomium_definition_form_radios(array $form, array &$form_stat
     '#title' => 'Radios component',
     '#type' => 'radios',
     '#options' => array(
-      'item1' => 'Item 1',
-      'item2' => 'Item 2',
-      'item3' => 'Item 3',
+      'item1' => t('Item 1'),
+      'item2' => t('Item 2'),
+      'item3' => t('Item 3'),
     ),
     '#default_value' => 'item2',
   );

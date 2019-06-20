@@ -22,20 +22,20 @@ function ec_europa_atomium_definition_form_textfield(array $form, array &$form_s
   $form['element1'] = array(
     '#title' => 'Normal input',
     '#type' => 'textfield',
-    '#description' => 'Description',
+    '#description' => t('Description'),
   );
 
   $form['element2'] = array(
     '#title' => 'Disabled input',
     '#type' => 'textfield',
-    '#description' => 'Description',
+    '#description' => t('Description'),
     '#disabled' => TRUE,
   );
 
   $form['element3'] = array(
     '#title' => 'Input with error',
     '#type' => 'textfield',
-    '#description' => 'Description',
+    '#description' => t('Description'),
     '#attributes' => array(
       'class' => array(
         'ecl-text-input--has-error',

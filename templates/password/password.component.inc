@@ -22,20 +22,20 @@ function ec_europa_atomium_definition_form_password(array $form, array &$form_st
   $form['element1'] = array(
     '#title' => 'Normal password.',
     '#type' => 'password',
-    '#description' => 'Description',
+    '#description' => t('Description'),
   );
 
   $form['element2'] = array(
     '#title' => 'Disabled password.',
     '#type' => 'password',
-    '#description' => 'Description',
+    '#description' => t('Description'),
     '#disabled' => TRUE,
   );
 
   $form['element3'] = array(
     '#title' => 'Password with error.',
     '#type' => 'password',
-    '#description' => 'Description',
+    '#description' => t('Description'),
     '#attributes' => array(
       'class' => array(
         'ecl-text-input--has-error',
