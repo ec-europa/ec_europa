@@ -34,7 +34,7 @@ function ec_europa_file_link($variables) {
     return _nexteuropa_formatters_file_markup($file);
   }
 
-  return theme_file_link($variables);
+  return theme('file_link', $variables);
 }
 
 /**
@@ -108,7 +108,7 @@ function ec_europa_tableselect($variables) {
   // Use the default implementation to render the table.
   // We cannot use theme('tableselect',...) or else we will end up in a loop.
   // Better solutions are welcome.
-  return theme_tableselect($variables);
+  return theme('tableselect', $variables);
 }
 
 /**
@@ -122,8 +122,6 @@ function ec_europa_tableselect($variables) {
  * @return mixed
  *   The key for needle if it is found in the
  *   array, FALSE otherwise.
- *
- * @author Bran van der Meer <branmovic@gmail.com>
  */
 function _ec_europa_array_find($needle, array $haystack) {
   foreach ($haystack as $key => $value) {
