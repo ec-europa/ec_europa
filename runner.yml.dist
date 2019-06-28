@@ -6,7 +6,7 @@ drupal:
   database:
     host: "mysql"
     port: "3306"
-    name: "atomium"
+    name: "ec_europa"
     user: "root"
     password: ""
   settings:
@@ -23,9 +23,7 @@ drupal:
   post_install:
         - ./vendor/bin/drush --root=$(pwd)/build dis -y color comment dashboard dblog help overlay path search shortcut toolbar update
         - ./vendor/bin/drush --root=$(pwd)/build pmu -y color comment dashboard dblog help overlay path search shortcut toolbar update
-        - ./vendor/bin/drush --root=$(pwd)/build en -y xautoload
-        - ./vendor/bin/drush --root=$(pwd)/build cc all
-        - ./vendor/bin/drush --root=$(pwd)/build en -y admin_menu admin_menu_toolbar admin_devel atomium composer_autoloader date date_api date_views date_popup devel ec_europa entity_translation libraries realistic_dummy_content registryonsteroids registryonsteroids_alter views views_ui
+        - ./vendor/bin/drush --root=$(pwd)/build en -y admin_menu admin_menu_toolbar admin_devel atomium composer_autoloader devel realistic_dummy_content
         - ./vendor/bin/drush --root=$(pwd)/build vset theme_default ec_europa
         - ./vendor/bin/drush --root=$(pwd)/build cc all
   drush:
