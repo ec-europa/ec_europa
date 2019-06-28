@@ -89,4 +89,3 @@ matrix:
   COMPOSER_BOUNDARY:
     - lowest
     - highest
-
