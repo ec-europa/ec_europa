@@ -27,8 +27,7 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
   $pager_curr =
     isset($pager_curr_key[0], $items[$pager_curr_key[0]]) ?
     $items[$pager_curr_key[0]]['#pager_i'] :
-    NULL
-  ;
+    NULL;
 
   foreach ($items as $k => $item) {
     if ($items[$k]['#pager_item_type'] !== 'pager_current' && $pager_curr === $items[$k]['#pager_i']) {
@@ -73,9 +72,9 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
   }
   // Display first and second ellipsis.
   if ($ellipsis) {
-     _manage_pager_ellipsis($ellipsis, $items);
+    _manage_pager_ellipsis($ellipsis, $items);
 
-     // PART III SWAP LAST AND NEXT.
+    // PART III SWAP LAST AND NEXT.
     _manage_pager_last_and_next_page($pager_total_items, $items);
 
     // PART IV Check whether to display pager last.
@@ -87,10 +86,7 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
     // Add classes required by ECL to the remaining elements.
     _pager_add_ecl_classes($items);
   }
-
-
 }
-
 
 /**
  * Compute pager ellipsis.
