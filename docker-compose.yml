@@ -4,7 +4,7 @@ services:
     image: fpfis/httpd-php-dev:7.1
     working_dir: /var/www/html
     ports:
-    - 8080
+    - 8080:8080
     volumes:
     - .:/var/www/html # Non Mac users.
     - ~/.composer:/var/www/.composer
