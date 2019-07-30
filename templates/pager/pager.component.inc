@@ -19,12 +19,18 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
 
   // Get total numbers of elements for the pager.
   $pager_total_items = _pager_get_total_items($variables);
+
   // Syntax shortcut.
   $items = &$variables['pager']['pager']['#items'];
 
   $pager_curr_key = _pager_get_item_keys($items, 'pager_current');
-  $pager_curr = $items[$pager_curr_key[0]]['#pager_i'];
-  foreach($items as $k => $item) {
+  $pager_curr =
+    isset($pager_curr_key[0], $items[$pager_curr_key[0]]) ?
+    $items[$pager_curr_key[0]]['#pager_i'] :
+    NULL
+  ;
+
+  foreach ($items as $k => $item) {
     if ($items[$k]['#pager_item_type'] !== 'pager_current' && $pager_curr === $items[$k]['#pager_i']) {
       hide($items[$k]['pager_item']);
     }
@@ -55,7 +61,7 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
     _manage_pager_page1_and_first_page($pager_links, $items);
   }
 
-  // PART II ELLIPSIS
+  // PART II ELLIPSIS.
   $ellipsis = NULL;
   // Remove all the ellipsis from the items array.
   $pager_ellipsis_keys = _pager_get_item_keys($items, 'pager_ellipsis');
@@ -66,29 +72,35 @@ function ec_europa_preprocess_pager(array &$variables, $hook) {
     unset($items[$key]);
   }
   // Display first and second ellipsis.
-  _manage_pager_ellipsis($ellipsis, $items);
+  if ($ellipsis) {
+     _manage_pager_ellipsis($ellipsis, $items);
 
-  // PART III SWAP LAST AND NEXT.
-  _manage_pager_last_and_next_page($pager_total_items, $items);
+     // PART III SWAP LAST AND NEXT.
+    _manage_pager_last_and_next_page($pager_total_items, $items);
 
-//  // PART IV Check whether to display pager last.
-  _manage_pager_last_link_and_last_page($items);
-//
-//  // PART V: Manage the links in between ellipsis.
-  _manage_pager_links_between_ellipsis($pager_total_items, $items);
+    // PART IV Check whether to display pager last.
+    _manage_pager_last_link_and_last_page($items);
 
-  // Add classes required by ECL to the remaining elements.
-  _pager_add_ecl_classes($items);
+    // PART V: Manage the links in between ellipsis.
+    _manage_pager_links_between_ellipsis($pager_total_items, $items);
+
+    // Add classes required by ECL to the remaining elements.
+    _pager_add_ecl_classes($items);
+  }
+
+
 }
+
 
 /**
  * Compute pager ellipsis.
  *
- * @param $ellipsis
- * @param $items
- *  The list of current pager items.
+ * @param array $ellipsis
+ *   The list of current pager items.
+ * @param array $items
+ *   The list of current pager items.
  */
-function _manage_pager_ellipsis(&$ellipsis, &$items) {
+function _manage_pager_ellipsis(array &$ellipsis, array &$items) {
   // Logic to append first ELLIPSIS.
   // Case the pager_first is shown do not display pager_1.
   $pager_links = _pager_get_item_keys($items, 'pager_link');
@@ -128,16 +140,20 @@ function _manage_pager_ellipsis(&$ellipsis, &$items) {
 
 /**
  * Manage the number of links to display between ellipsis.
- * eg: "… 3 4 5 6 Page 7 8 9 10 11 …".
- * eg: "< Previous 1 … 43 44 45 46 Page 47 48 49 50 Next >".
  *
- * @param $pager_total_items
- * @param $items
+ * Eg: "… 3 4 5 6 Page 7 8 9 10 11 …".
+ * Eg: "< Previous 1 … 43 44 45 46 Page 47 48 49 50 Next >".
+ *
+ * @param int $pager_total_items
+ *   The pager total number of items.
+ * @param array $items
+ *   The list of current pager items.
  */
-function _manage_pager_links_between_ellipsis($pager_total_items, &$items) {
+function _manage_pager_links_between_ellipsis(int $pager_total_items, array &$items) {
   $pager_last = _pager_get_item_keys($items, 'pager_last');
   $pager_current = _pager_get_item_keys($items, 'pager_current');
   $delta = 0;
+
   if (!empty($pager_last)) {
     $delta = $items[$pager_last[0]]['#pager_page'] - $items[$pager_current[0]]['#pager_page'];
   }
@@ -165,13 +181,14 @@ function _manage_pager_links_between_ellipsis($pager_total_items, &$items) {
 }
 
 /**
- * This function compute how and when to display page_1 and page_first
- * accordingly to ECL.
+ * This function compute how and when to display page_1 and page_first.
  *
+ * @param array $pager_links
+ *   The list of pager links.
  * @param array $items
- * The list of current pager items.
+ *   The list of current pager items.
  */
-function _manage_pager_page1_and_first_page($pager_links, &$items) {
+function _manage_pager_page1_and_first_page(array $pager_links, array &$items) {
   // Case the pager_first is shown do not display pager_1.
   $pager_first = _pager_get_item_keys($items, 'pager_first');
 
@@ -181,13 +198,14 @@ function _manage_pager_page1_and_first_page($pager_links, &$items) {
 }
 
 /**
- * This function compute how and when to display last pager_link
- * avoiding duplicated pager item (between last link and last pager).
+ * This function compute how and when to display last pager_link.
+ *
+ * Avoiding duplicated pager item (between last link and last pager).
  *
  * @param array $items
- * The list of current pager items.
+ *   The list of current pager items.
  */
-function _manage_pager_last_link_and_last_page(&$items) {
+function _manage_pager_last_link_and_last_page(array &$items) {
   // In case last item of pager_links is equal to pager_last, do not display it.
   $pager_link_keys = _pager_get_item_keys($items, 'pager_link');
   $pager_last_key = _pager_get_item_keys($items, 'pager_last');
@@ -203,10 +221,14 @@ function _manage_pager_last_link_and_last_page(&$items) {
 }
 
 /**
- * @param $pager_total_items
- * @param $items
+ * Manage pager_last and first, accordingly to ECL.
+ *
+ * @param int $pager_total_items
+ *   The pager total number of items.
+ * @param array $items
+ *   The list of current pager items.
  */
-function _manage_pager_last_and_next_page($pager_total_items, &$items) {
+function _manage_pager_last_and_next_page(int $pager_total_items, array &$items) {
   // Change the display order between pager_last and pager_next to match ECL.
   $last_item_key = _pager_get_item_keys($items, 'pager_last');
   $next_item_key = _pager_get_item_keys($items, 'pager_next');
@@ -284,7 +306,7 @@ function _pager_get_item_keys(array $items, $pager_type) {
   return array_keys(
     array_filter(
       $items,
-      function ($item) use ($pager_type) {
+      static function ($item) use ($pager_type) {
         return $item['#pager_item_type'] === $pager_type;
       }
     )
