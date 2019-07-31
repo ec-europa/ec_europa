@@ -41,12 +41,12 @@ function ec_europa_atomium_theme_search_bar(array $existing, $type, $theme, $pat
  * @see _ec_europa_preprocess_textfield__QueryText()
  */
 function ec_europa_preprocess_search_bar(array &$variables, $hook) {
-  if (!module_exists('nexteuropa_europa_search')) {
+  if (!\module_exists('nexteuropa_europa_search')) {
     return;
   }
 
   // Generate the search form.
-  $variables['search_form'] = drupal_get_form('nexteuropa_europa_search_search_form');
+  $variables['search_form'] = \drupal_get_form('nexteuropa_europa_search_search_form');
 
   // Use a temporary atomium attributes to generate the form attributes.
   $variables['atomium']['attributes']['form']->setAttributes($variables['search_form']['#attributes']);

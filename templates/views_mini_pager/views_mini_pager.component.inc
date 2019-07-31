@@ -30,7 +30,7 @@ function ec_europa_atomium_theme_views_mini_pager(array $existing, $type, $theme
  */
 function ec_europa_preprocess_views_mini_pager(array &$variables, $hook) {
   $variables[$variables['base_hook']] = array(
-    '#theme' => _atomium_extend_theme_hook('pager', $variables['theme_hook_original']),
+    '#theme' => \_atomium_extend_theme_hook('pager', $variables['theme_hook_original']),
     '#quantity' => 1,
   );
 }

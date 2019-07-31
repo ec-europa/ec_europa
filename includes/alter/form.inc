@@ -10,7 +10,7 @@
  */
 function ec_europa_form_alter(array &$form, array &$form_state, $form_id) {
   if (isset($form['views_bulk_operations'])) {
-    foreach (element_children($form['views_bulk_operations']) as $child) {
+    foreach (\element_children($form['views_bulk_operations']) as $child) {
       if ($form['views_bulk_operations'][$child]['#type'] === 'checkbox') {
         $form['views_bulk_operations'][$child]['#title'] = ' ';
       }
@@ -34,7 +34,7 @@ function ec_europa_form_views_exposed_form_alter(array &$form, array &$form_stat
   // Button value change on all the views exposed forms is due to a
   // design/ux requirement which uses the 'Refine results' label for all the
   // filter forms.
-  $form['submit']['#value'] = t('Refine results');
+  $form['submit']['#value'] = \t('Refine results');
   $form['submit']['#attributes']['class'][] = 'btn-primary';
   $form['submit']['#attributes']['class'][] = 'filters__btn-submit';
   $form['reset']['#attributes']['class'][] = 'filters__btn-reset';

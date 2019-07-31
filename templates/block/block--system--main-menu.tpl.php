@@ -45,8 +45,8 @@
  */
 ?>
 <section<?php print $atomium['attributes']['wrapper']; ?>>
-  <?php print render($title_prefix); ?>
-  <?php print render($title_suffix); ?>
+  <?php print \render($title_prefix); ?>
+  <?php print \render($title_suffix); ?>
   <nav class="ecl-navigation-menu" aria-label="Main Navigation">
     <div class="ecl-container">
       <button class="ecl-navigation-menu__toggle ecl-navigation-menu__hamburger ecl-navigation-menu__hamburger--squeeze" aria-controls="nav-menu-expandable-root" aria-expanded="false">
@@ -55,7 +55,7 @@
       </span>
         <span class="ecl-navigation-menu__hamburger-label">Menu</span>
       </button>
-      <?php print render($content); ?>
+      <?php print \render($content); ?>
     </div>
   </nav>
 </section>

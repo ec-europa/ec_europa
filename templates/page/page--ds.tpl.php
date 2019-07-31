@@ -86,53 +86,53 @@
 <?php if (!empty($page['header_top'])): ?>
 <section class="header-top">
   <div class="ecl-container">
-    <?php print render($page['header_top']); ?>
+    <?php print \render($page['header_top']); ?>
   </div>
 </section>
 <?php endif; ?>
 
-<?php print render($site_header); ?>
-<?php print render($page['header']); ?>
+<?php print \render($site_header); ?>
+<?php print \render($page['header']); ?>
 
 <?php if (!empty($page['header_bottom'])): ?>
   <nav class="page-navigation" role="navigation">
     <div class="ecl-container">
-      <?php print render($page['header_bottom']); ?>
+      <?php print \render($page['header_bottom']); ?>
     </div>
   </nav>
 <?php endif; ?>
 
 <?php if (!empty($page['navigation'])): ?>
-  <?php print render($page['navigation']); ?>
+  <?php print \render($page['navigation']); ?>
 <?php endif; ?>
 
 <?php if (!empty($page['utility'])): ?>
   <div class="utility">
     <div class="ecl-container">
-      <?php print render($page['utility']); ?>
+      <?php print \render($page['utility']); ?>
     </div>
   </div>
 <?php endif; ?>
 
 <section class="main-content">
-  <?php print render($page_header); ?>
+  <?php print \render($page_header); ?>
 
   <!-- Generic sections -->
   <div class="ecl-container">
     <?php if (!empty($page['help'])): ?>
-      <?php print render($page['help']); ?>
+      <?php print \render($page['help']); ?>
     <?php endif; ?>
 
     <?php if (!empty($action_links)): ?>
-      <ul class="action-links"><?php print render($action_links); ?></ul>
+      <ul class="action-links"><?php print \render($action_links); ?></ul>
     <?php endif; ?>
   </div>
 
-  <?php print render($page['content']); ?>
+  <?php print \render($page['content']); ?>
 
   <div class="ecl-container">
-    <?php print render($page['content_bottom']); ?>
+    <?php print \render($page['content_bottom']); ?>
   </div>
 </section>
 
-<?php print render($footer); ?>
+<?php print \render($footer); ?>

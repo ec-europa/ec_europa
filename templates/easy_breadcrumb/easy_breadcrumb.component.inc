@@ -60,9 +60,9 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
     'ecl-container',
   ));
 
-  $variables['here'] = t('You are here');
+  $variables['here'] = \t('You are here');
 
-  _ec_europa_breadcrumb_menu($variables);
+  \_ec_europa_breadcrumb_menu($variables);
   $breadcrumb = $variables['breadcrumb'];
   $segments_quantity = $variables['segments_quantity'];
   $html = '';
@@ -73,6 +73,7 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
 
       // Removing classes from $item['class'] array and adding BEM classes.
       $classes = array();
+
       if (isset($item['class'])) {
         $classes = $item['class'];
       }
@@ -92,10 +93,10 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       }
 
       $class = \implode(' ', $classes);
-      $content = decode_entities($item['content']);
+      $content = \decode_entities($item['content']);
 
       if (isset($item['url'])) {
-        $content = l(
+        $content = \l(
           $content,
           $item['url'],
           array(
@@ -104,12 +105,15 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
         );
       }
       else {
-        check_plain($content);
+        \check_plain($content);
       }
 
       // TODO: Check if the active class actually appears.
-      $element_visibility = \in_array('active',
-        $classes, TRUE) ? ' element-invisible' : '';
+      $element_visibility = \in_array(
+        'active',
+        $classes,
+        TRUE
+      ) ? ' element-invisible' : '';
       $html .= '<li class="' . $class . $element_visibility . '">' . $content . '</li>';
     }
   }
@@ -122,33 +126,42 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
  * Generate the first breadcrumb items basing on a custom menu.
  */
 function _ec_europa_breadcrumb_menu(&$variables) {
-  module_load_include('inc', 'easy_breadcrumb', 'includes/easy_breadcrumb.blocks');
+  \module_load_include('inc', 'easy_breadcrumb', 'includes/easy_breadcrumb.blocks');
 
-  $menu_links = menu_tree('menu-breadcrumb-menu');
+  $menu_links = \menu_tree('menu-breadcrumb-menu');
   $new_items = array();
   global $language;
-  $front = drupal_is_front_page();
+  $front = \drupal_is_front_page();
 
   if (!empty($menu_links)) {
     $i = 0;
+
     foreach ($menu_links as $key => $menu_item) {
       if (\is_numeric($key)) {
         // We don't want to show the home link in the home page.
         if (!($front && $menu_item['#href'] === '<front>')) {
           $options = array('language' => $language);
-          $title = token_replace($menu_item['#title'], $menu_item,
-            $options);
-          $new_items[] = _easy_breadcrumb_build_item($title, array(),
-            $menu_item['#href']);
-          $i++;
+          $title = \token_replace(
+            $menu_item['#title'],
+            $menu_item,
+            $options
+          );
+          $new_items[] = \_easy_breadcrumb_build_item(
+            $title,
+            array(),
+            $menu_item['#href']
+          );
+          ++$i;
         }
       }
     }
 
     if (!empty($new_items)) {
       // The menu is used as the starting point of the breadcrumb.
-      $variables['breadcrumb'] = \array_merge($new_items,
-        (array) $variables['breadcrumb']);
+      $variables['breadcrumb'] = \array_merge(
+        $new_items,
+        (array) $variables['breadcrumb']
+      );
       // Alter the number of segments in the breadcrumb.
       $variables['segments_quantity'] += $i;
     }

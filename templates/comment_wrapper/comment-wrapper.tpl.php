@@ -38,12 +38,12 @@
  */
 ?>
 <div<?php print $atomium['attributes']['wrapper']; ?>>
-  <?php print render($content['comments']); ?>
+  <?php print \render($content['comments']); ?>
 
   <?php if ($content['comment_form']): ?>
     <div id="comment-form-wrapper" class="comment__form-wrapper">
-      <h3 class="title comment-form"><?php print t('New comment'); ?></h3>
-      <?php print render($content['comment_form']); ?>
+      <h3 class="title comment-form"><?php print \t('New comment'); ?></h3>
+      <?php print \render($content['comment_form']); ?>
     </div>
   <?php endif; ?>
 </div>

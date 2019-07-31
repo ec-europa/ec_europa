@@ -54,5 +54,5 @@ function ec_europa_atomium_definition_form_radio(array $form, array &$form_state
  */
 function ec_europa_preprocess_radio(array &$variables, $hook) {
   $classes = array('ecl-radio__input', 'ecl-u-sr-only');
-  _ec_europa_form_set_css_class($variables, $classes);
+  \_ec_europa_form_set_css_class($variables, $classes);
 }

@@ -56,7 +56,7 @@
 </head>
 <body<?php print $atomium['attributes']['body']; ?>>
 <div class="ecl-skip-link__wrapper" id="skip-link">
-  <a href="#main-content" class="ecl-skip-link"><?php print t('Skip to main content'); ?></a>
+  <a href="#main-content" class="ecl-skip-link"><?php print \t('Skip to main content'); ?></a>
 </div>
 <?php print $page_top; ?>
 <?php print $page; ?>

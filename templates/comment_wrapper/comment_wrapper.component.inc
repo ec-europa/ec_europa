@@ -10,26 +10,26 @@
  */
 function ec_europa_preprocess_comment_wrapper(array &$variables, $hook) {
   $form = &$variables['content']['comment_form'];
-  $form['actions']['submit']['#value'] = t('Send');
+  $form['actions']['submit']['#value'] = \t('Send');
   unset($form['author']);
 
-  $comments = \array_filter($variables['content']['comments'], function ($index) use (&$variables) {
+  $comments = \array_filter($variables['content']['comments'], static function ($index) use (&$variables) {
     if (\is_numeric($index)) {
       unset($variables['content']['comments'][$index]);
 
       return TRUE;
     }
-  }, ARRAY_FILTER_USE_KEY);
+  }, \ARRAY_FILTER_USE_KEY);
 
   $variables['content']['comments']['comments'] = array(
-    '#theme' => _atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
+    '#theme' => \_atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
     '#wrapper' => FALSE,
     '#attributes' => array(
       'class' => array(
         'ecl-listing',
       ),
     ),
-    '#items' => \array_map(function ($comment) {
+    '#items' => \array_map(static function ($comment) {
       return array(
         'class' => array(
           'ecl-list-item',

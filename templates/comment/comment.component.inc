@@ -10,17 +10,17 @@
  */
 function ec_europa_preprocess_comment(array &$variables, $hook) {
   $comment = $variables['elements']['#comment'];
-  $variables['created'] = format_date($comment->created, 'ec_date');
-  $variables['title'] = check_plain($comment->subject);
+  $variables['created'] = \format_date($comment->created, 'ec_date');
+  $variables['title'] = \check_plain($comment->subject);
 
   $variables['content']['links']['#attributes']['class'][] = 'ecl-list--inline ecl-comment__operations';
 
-  \array_walk($variables['content']['links']['comment']['#links'], function (&$link) {
+  \array_walk($variables['content']['links']['comment']['#links'], static function (&$link) {
     $link['attributes']['class'] = array('ecl-comment__' . $link['title']);
   });
 
-  $variables['path'] = url(
-    current_path(),
+  $variables['path'] = \url(
+    \current_path(),
     array(
       'fragment' => 'comment-' . $comment->cid,
       'options' => array('absolute' => TRUE),

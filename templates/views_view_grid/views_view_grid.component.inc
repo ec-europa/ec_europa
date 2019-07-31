@@ -25,22 +25,25 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
     $col_count = 0;
     $row_count = 0;
     $count = 0;
+
     foreach ($variables['rows'] as $row_index => $item) {
-      $count++;
+      ++$count;
       $row[] = $item;
       $row_indexes[$row_count][$col_count] = $row_index;
-      $col_count++;
+      ++$col_count;
+
       if ($count % $columns === 0) {
         $rows[] = $row;
         $row = array();
         $col_count = 0;
-        $row_count++;
+        ++$row_count;
       }
     }
+
     if ($row) {
       // Fill up the last line only if it's configured, but this is default.
       if (!empty($handler->options['fill_single_line']) && \count($rows)) {
-        for ($i = 0; $i < ($columns - $col_count); $i++) {
+        for ($i = 0; $i < ($columns - $col_count); ++$i) {
           $row[] = '';
         }
       }
@@ -53,22 +56,24 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
     $remainders = \count($variables['rows']) % $columns;
     $row = 0;
     $col = 0;
+
     foreach ($variables['rows'] as $count => $item) {
       $rows[$row][$col] = $item;
       $row_indexes[$row][$col] = $count;
-      $row++;
+      ++$row;
 
       if (!$remainders && $row === $num_rows) {
         $row = 0;
-        $col++;
+        ++$col;
       }
       elseif ($remainders && $row === $num_rows + 1) {
         $row = 0;
-        $col++;
-        $remainders--;
+        ++$col;
+        --$remainders;
       }
     }
-    for ($i = 0, $iMax = \count($rows[0]); $i < $iMax; $i++) {
+
+    for ($i = 0, $iMax = \count($rows[0]); $i < $iMax; ++$i) {
       // This should be string so that's okay :)
       if (!isset($rows[\count($rows) - 1][$i])) {
         $rows[\count($rows) - 1][$i] = '';
@@ -79,23 +84,29 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
   // Apply the row classes.
   foreach ($rows as $row_number => $row) {
     $row_classes = array('');
+
     if ($default_row_class) {
       $row_classes[] = 'row-' . ($row_number + 1);
     }
+
     if ($row_class_special) {
       if ($row_number === 0) {
         $row_classes[] = 'row-first';
       }
+
       if (\count($rows) === ($row_number + 1)) {
         $row_classes[] = 'row-last';
       }
     }
     $variables['row_classes'][$row_number] = \implode(' ', $row_classes);
+
     foreach ($rows[$row_number] as $column_number => $item) {
       $column_classes = array('');
+
       if ($default_row_class) {
         $column_classes[] = 'col-' . ($column_number + 1);
       }
+
       if ($row_class_special) {
         if ($column_number === 0) {
           $column_classes[] = 'col-first';
@@ -104,6 +115,7 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
           $column_classes[] = 'col-last';
         }
       }
+
       if (isset($row_indexes[$row_number][$column_number]) && $column_class = $view->style_plugin->get_row_class($row_indexes[$row_number][$column_number])) {
         $column_classes[] = $column_class;
       }
@@ -116,12 +128,12 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
   // Add the summary to the list if set.
   // @todo: Check if $variables['attributes_array'] is used in the tpl.
   if (!empty($handler->options['summary'])) {
-    $variables['attributes_array'] = array('summary' => filter_xss_admin($handler->options['summary']));
+    $variables['attributes_array'] = array('summary' => \filter_xss_admin($handler->options['summary']));
   }
 
   // Add the caption to the list if set.
   if (!empty($handler->options['caption'])) {
-    $variables['caption'] = filter_xss_admin($handler->options['caption']);
+    $variables['caption'] = \filter_xss_admin($handler->options['caption']);
   }
   else {
     $variables['caption'] = '';

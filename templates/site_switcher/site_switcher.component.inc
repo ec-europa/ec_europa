@@ -41,26 +41,27 @@ function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
   $variables['atomium']['attributes']['wrapper']->append('class', array(
     'ecl-site-switcher',
   ))->append(
-    'aria-label', 'breadcrumbs'
+    'aria-label',
+    'breadcrumbs'
   );
 
   $classes = \array_pad(array(), 2, array('ecl-site-switcher__option'));
-  $index = (int) theme_get_setting('ec_europa_improved_website', 'ec_europa');
+  $index = (int) \theme_get_setting('ec_europa_improved_website', 'ec_europa');
   $classes[$index][] = 'ecl-site-switcher__option--is-selected';
 
   $links = array(
     array(
-      '#text' => t('Commission and its priorities'),
+      '#text' => \t('Commission and its priorities'),
       '#path' => 'https://ec.europa.eu/commission/index_' . $language->language,
     ),
     array(
-      '#text' => t('Policies, information and services'),
+      '#text' => \t('Policies, information and services'),
       '#path' => 'https://ec.europa.eu/info/index_' . $language->language,
     ),
   );
 
   $variables['links'] = array(
-    '#theme' => _atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
+    '#theme' => \_atomium_extend_theme_hook('item_list', $variables['theme_hook_original']),
     '#type' => 'ul',
     '#wrapper' => FALSE,
     '#attributes' => array(
@@ -73,7 +74,7 @@ function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
     $variables['links']['#items'][] = array(
       'class' => $classes[$key],
       'data' => array(
-        '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+        '#theme' => \_atomium_extend_theme_hook('link', $variables['theme_hook_original']),
         '#options' => array(
           'attributes' => array(
             'class' => array('ecl-link ecl-site-switcher__link'),

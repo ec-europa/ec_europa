@@ -11,4 +11,4 @@
  */
 ?>
 
-<?php print render($container); ?>
+<?php print \render($container); ?>

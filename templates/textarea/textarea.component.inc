@@ -53,5 +53,5 @@ function ec_europa_preprocess_textarea(array &$variables, $hook) {
   $variables['atomium']['attributes']['element']->setAttribute('role', 'textbox');
   $variables['atomium']['attributes']['element']->setAttribute('aria-multiline', 'true');
   $variables['atomium']['attributes']['element']->setAttribute('aria-labelledby', $variables['element']['#id'] . '_label');
-  $variables['element']['#value'] = check_plain($variables['element']['#value']);
+  $variables['element']['#value'] = \check_plain($variables['element']['#value']);
 }
