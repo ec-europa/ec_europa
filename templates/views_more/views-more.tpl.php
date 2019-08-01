@@ -17,6 +17,7 @@
 // Sometimes we have a special url and in these cases we manually replace it.
 // We strictly limit it, because this is not replacing substitutions.
 $available_blocks = array('latest_block', 'block');
+
 if ($view->name === 'announcements'
     && \in_array($view->current_display, $available_blocks, TRUE)
     && $view->display[$view->current_display]->handler->options['link_display'] === 'custom_url'):

@@ -9,7 +9,7 @@
   <<?php print $layout_wrapper . $layout_attributes; ?> class="<?php print $classes; ?>">
 
 <?php if (isset($title_suffix['contextual_links'])): ?>
-  <?php print render($title_suffix['contextual_links']); ?>
+  <?php print \render($title_suffix['contextual_links']); ?>
 <?php endif; ?>
 
 <?php if (empty($hidelink) && !empty($node_url)) : ?>

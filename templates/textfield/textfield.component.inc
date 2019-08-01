@@ -22,20 +22,20 @@ function ec_europa_atomium_definition_form_textfield(array $form, array &$form_s
   $form['element1'] = array(
     '#title' => 'Normal input',
     '#type' => 'textfield',
-    '#description' => t('Description'),
+    '#description' => \t('Description'),
   );
 
   $form['element2'] = array(
     '#title' => 'Disabled input',
     '#type' => 'textfield',
-    '#description' => t('Description'),
+    '#description' => \t('Description'),
     '#disabled' => TRUE,
   );
 
   $form['element3'] = array(
     '#title' => 'Input with error',
     '#type' => 'textfield',
-    '#description' => t('Description'),
+    '#description' => \t('Description'),
     '#attributes' => array(
       'class' => array(
         'ecl-text-input--has-error',
@@ -52,7 +52,7 @@ function ec_europa_atomium_definition_form_textfield(array $form, array &$form_s
 function ec_europa_preprocess_textfield(array &$variables, $hook) {
   $classes = array('ecl-text-input');
   $error_classes = array('ecl-text-input--has-error');
-  _ec_europa_form_set_css_class($variables, $classes, $error_classes);
+  \_ec_europa_form_set_css_class($variables, $classes, $error_classes);
 }
 
 /**
@@ -65,6 +65,6 @@ function ec_europa_preprocess_textfield(array &$variables, $hook) {
  */
 function ec_europa_preprocess_textfield__form__nexteuropa_europa_search_search_form__querytext(array &$variables, $hook) {
   $classes = array('ecl-search-form__textfield');
-  _ec_europa_form_set_css_class($variables, $classes);
+  \_ec_europa_form_set_css_class($variables, $classes);
   $variables['atomium']['attributes']['element']->setAttribute('size', 30);
 }

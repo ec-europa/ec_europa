@@ -106,7 +106,7 @@ function ec_europa_preprocess_tags(array &$variables, $hook) {
 
   foreach ($variables['items'] as $key => $item) {
     $variables['items'][$key] = array(
-      '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+      '#theme' => \_atomium_extend_theme_hook('link', $variables['theme_hook_original']),
       '#text' => $item['value'],
       '#path' => $item['href'],
     );
@@ -139,7 +139,7 @@ function ec_europa_preprocess_tags__facet_close(array &$variables, $hook) {
 
   foreach ($variables['tags'] as $key => $tag) {
     $variables['items'][$key] = array(
-      '#theme' => _atomium_extend_theme_hook('button', $variables['theme_hook_original']),
+      '#theme' => \_atomium_extend_theme_hook('button', $variables['theme_hook_original']),
       '#value' => $tag['value'],
     );
   }

@@ -18,24 +18,29 @@ function ec_europa_file_widget($variables) {
   $field_name = $element['#field_name'];
 
   // Checks if its to use the DT component in the front end.
-  $check_use = variable_get('dt_shared_functions_dt_file_use_component_' . $bundle . '_' . $field_name, TRUE);
+  $check_use = \variable_get('dt_shared_functions_dt_file_use_component_' . $bundle . '_' . $field_name, TRUE);
+
   if ($check_use) {
     $has_file = FALSE;
+
     if (!empty($element['#default_value']['fid'])) {
       $has_file = TRUE;
     }
 
     // Added the JS file to the element upload to be rendered.
-    $element['upload']['#attached']['js'][] = drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/file-upload.js';
+    $element['upload']['#attached']['js'][] = \drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/file-upload.js';
 
-    // Immediately render hidden elements before the rest of the output.
-    // The uploadprogress extension requires that the hidden identifier input
-    // element appears before the file input element. They must also be siblings
-    // inside the same parent element.
-    // @see https://www.drupal.org/node/2155419
+    /* Immediately render hidden elements before the rest of the output.
+     * The uploadprogress extension requires that the hidden identifier input
+     * element appears before the file input element. They must also be siblings
+     * inside the same parent element.
+     *
+     * @see https://www.drupal.org/node/2155419
+     */
     $hidden_elements = array();
     $upload_button = array();
-    foreach (element_children($element) as $child) {
+
+    foreach (\element_children($element) as $child) {
       if ($element[$child]['#type'] === 'hidden') {
         $hidden_elements[$child] = $element[$child];
         unset($element[$child]);
@@ -50,24 +55,26 @@ function ec_europa_file_widget($variables) {
     // The "form-managed-file" class is required for proper Ajax functionality.
     $output .= '<div class="file-widget form-managed-file input-group clearfix">';
 
-    $output .= render($hidden_elements);
-    $output .= drupal_render_children($element);
+    $output .= \render($hidden_elements);
+    $output .= \drupal_render_children($element);
 
     if (!$has_file) {
       $output .= '<div class="form-control file-upload__input form-file" tabindex="0">';
-      $output .= '<span class="file-upload__message">' . t('No file selected.') . '</span>';
+      $output .= '<span class="file-upload__message">' . \t('No file selected.') . '</span>';
       $output .= '</div>';
     }
     $output .= '<span class="input-group-btn">';
+
     if (!$has_file) {
-      $output .= '<label class="btn btn-default file-upload__label" for="' . $element['upload']['#id'] . '" tabindex="1">' . t('Browse') . '</label>';
+      $output .= '<label class="btn btn-default file-upload__label" for="' . $element['upload']['#id'] . '" tabindex="1">' . \t('Browse') . '</label>';
     }
 
     // Checks if the upload button is to added to the front end.
-    $check_upload = variable_get('dt_shared_functions_dt_file_show_upload_' . $bundle . '_' . $field_name, TRUE);
+    $check_upload = \variable_get('dt_shared_functions_dt_file_show_upload_' . $bundle . '_' . $field_name, TRUE);
+
     if ($check_upload) {
       // The newline is to give the same space that we have in the style guide.
-      $output .= "\n" . drupal_render($upload_button);
+      $output .= "\n" . \drupal_render($upload_button);
     }
 
     $output .= '</span>';

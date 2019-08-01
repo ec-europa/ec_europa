@@ -23,9 +23,9 @@ function ec_europa_atomium_definition_form_checkboxes(array $form, array &$form_
     '#title' => 'Simple example',
     '#type' => 'checkboxes',
     '#options' => array(
-      'item1' => t('Item 1'),
-      'item2' => t('Item 2'),
-      'item3' => t('Item 3'),
+      'item1' => \t('Item 1'),
+      'item2' => \t('Item 2'),
+      'item3' => \t('Item 3'),
     ),
     '#default_value' => array('item2'),
   );
@@ -55,7 +55,7 @@ function ec_europa_preprocess_checkboxes(array &$variables, $hook) {
     }
 
     $variables['small_description'] = array(
-      '#markup' => t('List of options for @title', array('@title' => $title)),
+      '#markup' => \t('List of options for @title', array('@title' => $title)),
     );
   }
 }

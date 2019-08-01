@@ -21,6 +21,7 @@ function ec_europa_preprocess_menu_link__main_menu(array &$variables, $hook) {
   $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'][] = 'ecl-navigation-menu__link';
 
   $link = $variables['element']['#original_link'];
+
   if ($link['in_active_trail']) {
     if ($link['depth'] === 1) {
       $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-navigation-menu__item--active');
@@ -72,7 +73,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links(array &$v
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links__footer(array &$variables, $hook) {
-  $variables = _ec_europa_menu_link_footer_alter($variables);
+  $variables = \_ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
@@ -90,7 +91,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media(array &$va
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media__footer(array &$variables, $hook) {
-  $variables = _ec_europa_menu_link_footer_alter($variables);
+  $variables = \_ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
@@ -107,7 +108,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links(array &$vari
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links__footer(array &$variables, $hook) {
-  $variables = _ec_europa_menu_link_footer_alter($variables);
+  $variables = \_ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
@@ -124,21 +125,21 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(array &$vari
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__nexteuropa_site_social_media(array &$variables, $hook) {
-  $variables = _ec_europa_menu_link_footer_alter($variables);
+  $variables = \_ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__nexteuropa_site_custom_links(array &$variables, $hook) {
-  $variables = _ec_europa_menu_link_footer_alter($variables);
+  $variables = \_ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(array &$variables, $hook) {
-  $variables = _ec_europa_menu_link_footer_alter($variables);
+  $variables = \_ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
@@ -156,6 +157,7 @@ function _ec_europa_menu_link_footer_alter(array $variables) {
   $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'][] = 'ecl-link--inverted';
 
   $classes = &$variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'];
+
   if (\in_array('ecl-icon', $classes, TRUE)) {
     $classes[] = 'ecl-footer__social-icon';
   }

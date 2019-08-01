@@ -26,7 +26,7 @@
     width="<?php print $width; ?>"
     height="<?php print $height; ?>" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen=""
     id="videoplayer<?php print $video_id; ?>" scrolling="no"
-    src="<?php print $ec_embedded_video_url ?>">
+    src="<?php print $ec_embedded_video_url; ?>">
   </iframe>
 </div>
 

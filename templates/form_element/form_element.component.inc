@@ -22,6 +22,7 @@ function ec_europa_preprocess_form_element__radio(array &$variables, $hook) {
     'ecl-form-label'
   );
   $variables['atomium']['attributes']['label']->append('class', 'ecl-radio');
+
   if (isset($element['#id'])) {
     $variables['atomium']['attributes']['label']->append(
       'for',
@@ -31,7 +32,7 @@ function ec_europa_preprocess_form_element__radio(array &$variables, $hook) {
 
   // Unlike text field and textarea, the "error" class is added on the label;
   // not on the element itself.
-  if (_ec_europa_has_form_element_errors($element)) {
+  if (\_ec_europa_has_form_element_errors($element)) {
     $variables['atomium']['attributes']['label']->append(
       'class',
       'ecl-radio--has-error'
@@ -63,6 +64,7 @@ function ec_europa_preprocess_form_element__checkbox(array &$variables, $hook) {
     'ecl-form-label'
   );
   $variables['atomium']['attributes']['label']->append('class', 'ecl-checkbox');
+
   if (isset($element['#id'])) {
     $variables['atomium']['attributes']['label']->append(
       'for',
@@ -72,7 +74,7 @@ function ec_europa_preprocess_form_element__checkbox(array &$variables, $hook) {
 
   // Unlike text field and textarea, the "error" class is added on the label;
   // not on the element itself.
-  if (_ec_europa_has_form_element_errors($element)) {
+  if (\_ec_europa_has_form_element_errors($element)) {
     $variables['atomium']['attributes']['label']->append(
       'class',
       'ecl-checkbox--has-error'

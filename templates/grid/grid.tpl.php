@@ -10,7 +10,7 @@
         <div class="ecl-row">
           <?php foreach ($columns as $item): ?>
               <div class="ecl-col">
-                <?php print render($item); ?>
+                <?php print \render($item); ?>
               </div>
           <?php endforeach; ?>
         </div>

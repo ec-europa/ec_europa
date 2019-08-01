@@ -41,7 +41,7 @@ function ec_europa_atomium_definition_form_expandable(array $form, array &$form_
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_expandable(array &$variables, $hook) {
-  $id = drupal_html_id($variables['id']);
+  $id = \drupal_html_id($variables['id']);
 
   $variables['atomium']['attributes']['content'] = array(
     'id' => $id,
@@ -50,7 +50,7 @@ function ec_europa_preprocess_expandable(array &$variables, $hook) {
   );
 
   $variables['title'] = array(
-    '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+    '#theme' => \_atomium_extend_theme_hook('link', $variables['theme_hook_original']),
     '#text' => $variables['title'],
     '#path' => '#',
     '#options' => array(
@@ -69,7 +69,7 @@ function ec_europa_preprocess_expandable(array &$variables, $hook) {
 
   if (isset($variables['button']) && $variables['button'] === TRUE) {
     $variables['title'] = array(
-      '#theme' => _atomium_extend_theme_hook('button', $variables['theme_hook_original']),
+      '#theme' => \_atomium_extend_theme_hook('button', $variables['theme_hook_original']),
       '#button_type' => 'button',
       '#value' => $variables['title']['#text'],
       '#attributes' => array(

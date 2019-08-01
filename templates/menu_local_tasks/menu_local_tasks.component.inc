@@ -13,13 +13,12 @@ function ec_europa_preprocess_menu_local_tasks(array &$variables, $hook) {
   if (isset($variables['primary']) && !empty($variables['primary'])) {
     // Quite the theme implementation set in Atomium in order to
     // define the template as expected.
-    unset($variables['primary']['#theme']);
-    unset($variables['primary']['#type']);
+    unset($variables['primary']['#theme'], $variables['primary']['#type']);
 
     $variables['menu_tab_links'] = $variables['primary']['#items'];
 
     // Set the default nav title which is mandatory in the Europa component.
-    $variables['primary']['#title'] = t('Navigation');
+    $variables['primary']['#title'] = \t('Navigation');
   }
 
   if (isset($variables['secondary']) && !empty($variables['secondary'])) {
