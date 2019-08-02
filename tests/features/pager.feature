@@ -8,7 +8,6 @@ Feature: Pager functionality
     Given "500" nodes of type "article"
 
     When I visit "/node"
-    And I break
     Then I should see "Page 1 2 3 4 5 6 7 8 9 … 50 Next ›" in the "pager"
     And I should not see the link "‹ Previous"
 

@@ -73,12 +73,13 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
       }
     }
 
+    /* @see https://git.drupalcode.org/project/views/blob/7.x-3.x/theme/views-view-grid.tpl.php#L26
     for ($i = 0, $iMax = \count($rows[0]); $i < $iMax; ++$i) {
-      // This should be string so that's okay :)
-      if (!isset($rows[\count($rows) - 1][$i])) {
-        $rows[\count($rows) - 1][$i] = '';
-      }
+    // This should be string so that's okay :)
+    if (!isset($rows[\count($rows) - 1][$i])) {
+    $rows[\count($rows) - 1][$i] = '';
     }
+    }*/
   }
 
   // Apply the row classes.
