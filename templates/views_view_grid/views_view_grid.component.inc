@@ -76,12 +76,12 @@ function ec_europa_preprocess_views_view_grid(array &$variables, $hook) {
       }
     }
 
-    for ($i = 0; $i < \count($rows[0]); $i++) {
-      // This should be string so that's okay :)
-      if (!isset($rows[\count($rows) - 1][$i])) {
-        $rows[\count($rows) - 1][$i] = '';
-      }
-    }
+    //    for ($i = 0; $i < \count($rows[0]); $i++) {
+    //      // This should be string so that's okay :)
+    //      if (!isset($rows[\count($rows) - 1][$i])) {
+    //        $rows[\count($rows) - 1][$i] = '';
+    //      }
+    //    }
   }
 
   // Apply the row classes.
