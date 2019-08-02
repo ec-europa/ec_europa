@@ -19,4 +19,4 @@
  * @ingroup views_templates
  */
 ?>
-<?php print render($table); ?>
+<?php print \render($table); ?>

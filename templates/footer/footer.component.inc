@@ -74,7 +74,7 @@ function ec_europa_preprocess_footer(array &$variables, $hook) {
   );
 
   foreach ($variables_block_mapping as $name => $data) {
-    $variables[$name] = _atomium_block_get_render_array($data[0], $data[1]);
+    $variables[$name] = \_atomium_block_get_render_array($data[0], $data[1]);
   }
 
   $variables['footer_left'] = array(
@@ -86,7 +86,7 @@ function ec_europa_preprocess_footer(array &$variables, $hook) {
       ),
     ),
     array(
-      '#markup' => variable_get('site_name', ''),
+      '#markup' => \variable_get('site_name', ''),
     ),
   );
 }

@@ -52,5 +52,5 @@ function ec_europa_atomium_definition_form_password(array $form, array &$form_st
 function ec_europa_preprocess_password(array &$variables, $hook) {
   $classes = array('ecl-text-input');
   $error_classes = array('ecl-text-input--has-error');
-  _ec_europa_form_set_css_class($variables, $classes, $error_classes);
+  \_ec_europa_form_set_css_class($variables, $classes, $error_classes);
 }

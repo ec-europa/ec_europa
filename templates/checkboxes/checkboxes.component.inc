@@ -55,7 +55,7 @@ function ec_europa_preprocess_checkboxes(array &$variables, $hook) {
     }
 
     $variables['small_description'] = array(
-      '#markup' => t('List of options for @title', array('@title' => $title)),
+      '#markup' => \t('List of options for @title', array('@title' => $title)),
     );
   }
 }

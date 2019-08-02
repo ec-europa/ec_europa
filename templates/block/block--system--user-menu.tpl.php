@@ -45,12 +45,12 @@
  */
 ?>
 <section<?php print $atomium['attributes']['wrapper']->append('class', array('ecl-u-f-r')); ?>>
-  <?php print render($title_prefix); ?>
-  <?php print render($title_suffix); ?>
+  <?php print \render($title_prefix); ?>
+  <?php print \render($title_suffix); ?>
   <?php if (!empty($content)): ?>
     <nav<?php print $atomium['attributes']['nav']->append('class', 'ecl-navigation-list-wrapper'); ?>>
-      <h2 class="ecl-u-sr-only"><?php print render($title); ?></h2>
-      <?php print render($content); ?>
+      <h2 class="ecl-u-sr-only"><?php print \render($title); ?></h2>
+      <?php print \render($content); ?>
     </nav>
   <?php endif; ?>
 </section>

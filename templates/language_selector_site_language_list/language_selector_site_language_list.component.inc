@@ -10,15 +10,15 @@
  */
 function ec_europa_preprocess_language_selector_site_language_list(array &$variables, $hook) {
   $language_current = $GLOBALS['language'];
-  $languages_list = language_list('enabled');
+  $languages_list = \language_list('enabled');
 
   $destination = isset($_GET['destination']) ? $_GET['destination'] : '<front>';
-  $path_components = drupal_parse_url(url($destination));
+  $path_components = \drupal_parse_url(\url($destination));
 
   // Build the list of links.
-  $languages = \array_map(function ($language) use ($variables, $path_components) {
+  $languages = \array_map(static function ($language) use ($variables, $path_components) {
     return array(
-      '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+      '#theme' => \_atomium_extend_theme_hook('link', $variables['theme_hook_original']),
       '#text' => $language->name,
       '#path' => $path_components['path'],
       '#options' => array(
@@ -40,7 +40,7 @@ function ec_europa_preprocess_language_selector_site_language_list(array &$varia
   }, $languages_list[1]);
 
   // Update current language's link only.
-  $languages = \array_map(function ($language) use ($language_current, $variables) {
+  $languages = \array_map(static function ($language) use ($language_current, $variables) {
     if ($language_current->language === $language['#language']->language) {
       $language['#options']['attributes']['class'] = \array_merge(
         $language['#options']['attributes']['class'],
@@ -54,7 +54,7 @@ function ec_europa_preprocess_language_selector_site_language_list(array &$varia
       $language['#options']['html'] = TRUE;
       $language['#text'] = array(
         array(
-          '#theme' => _atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']),
+          '#theme' => \_atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']),
           '#tag' => 'span',
           '#attributes' => array(
             'class' => array(
@@ -80,8 +80,8 @@ function ec_europa_preprocess_language_selector_site_language_list(array &$varia
   );
 
   // Wrap each column with a container.
-  \array_walk($languages, function (&$language, $index) use ($variables) {
-    $language['#theme'] = _atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']);
+  \array_walk($languages, static function (&$language, $index) use ($variables) {
+    $language['#theme'] = \_atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']);
     $language['#tag'] = 'div';
     $language['#attributes'] = array(
       'class' => array(

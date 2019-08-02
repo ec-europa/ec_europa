@@ -45,15 +45,15 @@
  */
 ?>
 <section<?php print $atomium['attributes']['wrapper']->append('class', 'ecl-link-block'); ?>>
-  <?php print render($title_prefix); ?>
+  <?php print \render($title_prefix); ?>
   <?php if (!empty($title)): ?>
-    <div<?php print $atomium['attributes']['title']->append('class', 'ecl-link-block__title'); ?>><?php print render($title); ?></div>
+    <div<?php print $atomium['attributes']['title']->append('class', 'ecl-link-block__title'); ?>><?php print \render($title); ?></div>
   <?php endif; ?>
-  <?php print render($title_suffix); ?>
+  <?php print \render($title_suffix); ?>
 
   <?php if (!empty($content)): ?>
   <div<?php print $atomium['attributes']['content']; ?>>
-    <?php print render($content); ?>
+    <?php print \render($content); ?>
   </div>
   <?php endif; ?>
 </section>

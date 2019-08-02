@@ -5,4 +5,4 @@
  * Contains template file.
  */
 ?>
-<?php print render($views_mini_pager); ?>
+<?php print \render($views_mini_pager); ?>
