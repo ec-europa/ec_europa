@@ -148,7 +148,7 @@ function _manage_pager_ellipsis(array &$ellipsis, array &$items) {
  * @param array $items
  *   The list of current pager items.
  */
-function _manage_pager_links_between_ellipsis(int $pager_total_items, array &$items) {
+function _manage_pager_links_between_ellipsis($pager_total_items, array &$items) {
   $pager_last = \_pager_get_item_keys($items, 'pager_last');
   $pager_current = \_pager_get_item_keys($items, 'pager_current');
   $delta = 0;
@@ -229,7 +229,7 @@ function _manage_pager_last_link_and_last_page(array &$items) {
  * @param array $items
  *   The list of current pager items.
  */
-function _manage_pager_last_and_next_page(int $pager_total_items, array &$items) {
+function _manage_pager_last_and_next_page($pager_total_items, array &$items) {
   // Change the display order between pager_last and pager_next to match ECL.
   $last_item_key = \_pager_get_item_keys($items, 'pager_last');
   $next_item_key = \_pager_get_item_keys($items, 'pager_next');
