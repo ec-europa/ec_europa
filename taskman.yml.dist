@@ -38,6 +38,13 @@ drupal:
         - sites/all/themes/ec_europa/build
         - build/sites/all/themes/ec_europa/build
       uri: "${drupal.base_url}"
+github:
+  changelog:
+    user: ec-europa
+    project: ec_europa
+    release:
+      branch: '0.0.x'
+    between-tags: "$(git tag --sort=-creatordate --merged '${github.changelog.release.branch}' | tr '\n' ',')"
 
 commands:
   drupal:site-setup:
