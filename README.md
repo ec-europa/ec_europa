@@ -166,3 +166,30 @@ npm run build
 
 This will update assets such as images and fonts and re-compile CSS, resulting changes are meant to be committed to this
 repository since we cannot require theme users and/or deployment procedures to build the theme locally.
+
+
+## Release/changelog tool by taskman
+
+For a list of available commands run:
+
+```
+./vendor/bin/taskman
+```
+
+### Generate changelog
+
+Place your token in `taskman.yml` file:
+
+```yaml
+github:
+  token: YOUR_TOKEN
+```
+
+and then:
+
+```bash
+./vendor/bin/taskman github:changelog
+```
+
+For more information about how to customise the building process check [PHP Taskman](https://github.com/php-taskman/core)
+project page.
