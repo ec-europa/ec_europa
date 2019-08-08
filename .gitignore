@@ -9,3 +9,5 @@ node_modules
 /.php_cs.cache
 docker-compose.*.yml
 behat.yml
+/taskman.yml
+.env
