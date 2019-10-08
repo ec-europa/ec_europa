@@ -5,7 +5,7 @@
  * template.php
  */
 
-\atomium_include('ec_europa', 'includes/alter');
+atomium_include('ec_europa', 'includes/alter');
 
 /**
  * Implements hook_date_popup_process_alter().
@@ -31,10 +31,10 @@ function ec_europa_file_link($variables) {
       $file->language = $langcode;
     }
 
-    return \_nexteuropa_formatters_file_markup($file);
+    return _nexteuropa_formatters_file_markup($file);
   }
 
-  return \theme('file_link', $variables);
+  return theme('file_link', $variables);
 }
 
 /**
@@ -75,7 +75,7 @@ function _ec_europa_form_set_css_class(array &$variables, array $classes = array
   if (isset($variables['element'])) {
     $element = $variables['element'];
 
-    if (!empty($error_classes) && \_ec_europa_has_form_element_errors($element)) {
+    if (!empty($error_classes) && _ec_europa_has_form_element_errors($element)) {
       $variables['atomium']['attributes']['element']->append('class', $error_classes);
     }
   }
@@ -96,7 +96,7 @@ function _ec_europa_form_set_css_class(array &$variables, array $classes = array
  *   True if validation errors exist; otherwise FALSE.
  */
 function _ec_europa_has_form_element_errors(array $form_element) {
-  return isset($form_element['#parents']) && \form_get_error($form_element) !== NULL && !empty($form_element['#validated']);
+  return isset($form_element['#parents']) && form_get_error($form_element) !== NULL && !empty($form_element['#validated']);
 }
 
 /**
@@ -104,12 +104,12 @@ function _ec_europa_has_form_element_errors(array $form_element) {
  */
 function ec_europa_tableselect($variables) {
   // Add a custom JS file that overrides a specific JS function.
-  \drupal_add_js(\path_to_theme() . '/templates/table/tableselect.js', array('group' => JS_THEME));
+  drupal_add_js(path_to_theme() . '/templates/table/tableselect.js', array('group' => JS_THEME));
 
   // Use the default implementation to render the table.
   // We cannot use theme('tableselect',...) or else we will end up in a loop.
   // Better solutions are welcome.
-  return \theme('tableselect', $variables);
+  return theme('tableselect', $variables);
 }
 
 /**
@@ -145,5 +145,5 @@ function _ec_europa_array_find($needle, array $haystack) {
  *   Boolean TRUE or FALSE, where TRUE indicates an external path.
  */
 function _ec_europa_url_is_external($path) {
-  return \url_is_external($path) && !\mb_stripos(\parse_url($path, \PHP_URL_HOST), 'europa.eu') && \mb_stripos(\parse_url($path, \PHP_URL_HOST), $_SERVER['HTTP_HOST']) === FALSE;
+  return url_is_external($path) && !\mb_stripos(\parse_url($path, \PHP_URL_HOST), 'europa.eu') && \mb_stripos(\parse_url($path, \PHP_URL_HOST), $_SERVER['HTTP_HOST']) === FALSE;
 }

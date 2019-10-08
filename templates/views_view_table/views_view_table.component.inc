@@ -27,7 +27,7 @@ function ec_europa_preprocess_views_view_table(array &$variables, $hook) {
   }
 
   $variables['table'] = array(
-    '#theme' => \_atomium_extend_theme_hook('table', $variables['theme_hook_original']),
+    '#theme' => _atomium_extend_theme_hook('table', $variables['theme_hook_original']),
     '#rows' => $variables['rows'],
     '#header' => $variables['header'],
     '#caption' => $variables['caption'],

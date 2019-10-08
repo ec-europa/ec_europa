@@ -29,8 +29,8 @@ function ec_europa_atomium_definition_form_block(array $form, array &$form_state
     'system:user-menu',
   );
 
-  \module_load_include('inc', 'block', 'block.admin');
-  $blocks = \block_admin_display_prepare_blocks($theme_key);
+  module_load_include('inc', 'block', 'block.admin');
+  $blocks = block_admin_display_prepare_blocks($theme_key);
 
   foreach ($blocks as $block) {
     $block_id = $block['module'] . ':' . $block['delta'];
@@ -44,7 +44,7 @@ function ec_europa_atomium_definition_form_block(array $form, array &$form_state
       '#title' => \sprintf('Block ([module]:[delta]) (%s)', $block_id),
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
-      'content' => \_atomium_block_get_render_array($block['module'], $block['delta']),
+      'content' => _atomium_block_get_render_array($block['module'], $block['delta']),
     );
   }
 
@@ -91,7 +91,7 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
     case 'language_selector_site':
       $variables['lang_code'] = $variables['elements']['code']['#markup'];
       $variables['lang_name'] = $variables['elements']['label']['#markup'];
-      $variables['link'] = \url('splash') . '?' . \drupal_get_destination()['destination'];
+      $variables['link'] = url('splash') . '?' . drupal_get_destination()['destination'];
       $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-lang-select-sites');
 
       break;
@@ -108,8 +108,8 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
     global $language;
 
     // selectify.js is the library to convert between ul and select.
-    \drupal_add_js(\drupal_get_path('theme', 'ec_europa') . '/assets/scripts/selectify.js');
-    \drupal_add_js(\drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/lang-switcher.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/selectify.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/lang-switcher.js');
 
     // Initialize variables.
     $not_available = '';
@@ -127,14 +127,14 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
     if (!empty($variables['elements']['other']['#markup'])) {
       foreach ($variables['elements']['other']['#markup'] as $code => $lang) {
         $options = array();
-        $options['query'] = \drupal_get_query_parameters();
+        $options['query'] = drupal_get_query_parameters();
         $options['query']['2nd-language'] = $code;
         $options['attributes']['lang'] = $code;
         $options['attributes']['hreflang'] = $code;
         $options['attributes']['rel'] = 'alternate';
         $options['language'] = $language;
 
-        $other .= '<li class="lang-select-page__option lang-select-page__other">' . \l($lang->native, \current_path(), $options) . '</li>';
+        $other .= '<li class="lang-select-page__option lang-select-page__other">' . l($lang->native, current_path(), $options) . '</li>';
       }
     }
 
@@ -151,7 +151,7 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
   // Site-level language switcher.
   if (isset($block->bid) && $block->bid === 'language_selector_site-language_selector_site') {
     // Add the js to make it function.
-    \drupal_add_js(\drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/lang-select-site.js');
+    drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/lang-select-site.js');
   }
 
   $variables['atomium']['attributes']['title']->append('class', 'block__title');
@@ -161,21 +161,21 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
     // This is checked by looking at the $block->bid which in case
     // of views exposed filters, always contains 'views--exp-' string.
     if (\mb_strpos($block->bid, 'views--exp-') !== FALSE) {
-      if (isset($block->context) && $context = \context_load($block->context)) {
+      if (isset($block->context) && $context = context_load($block->context)) {
         // If our block is the first, we set the subject. This way, if we expose
         // a second block for the same view, we will not duplicate the title.
         if (\array_search($block->bid, \array_keys($context->reactions['block']['blocks']), TRUE) === 0) {
           $variables['atomium']['attributes']['wrapper']->append('class', 'filters');
           $variables['atomium']['attributes']['title']->append('class', 'filters__title');
 
-          $block->subject = \t('Refine results');
+          $block->subject = t('Refine results');
 
           // Passing block id to Drupal.settings in order to pass it through
           // data attribute in the collapsible panel.
-          \drupal_add_js(array('ec_europa' => array('exposedBlockId' => $variables['block_html_id'])), 'setting');
+          drupal_add_js(array('ec_europa' => array('exposedBlockId' => $variables['block_html_id'])), 'setting');
 
           // Adding filters.js file.
-          \drupal_add_js(\drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/filters.js');
+          drupal_add_js(drupal_get_path('theme', 'ec_europa') . '/assets/scripts/components/filters.js');
         }
       }
     }

@@ -8,7 +8,7 @@
 <span id="<?php print $id; ?>" class="<?php print $classes; ?> file--image"<?php print $attributes; ?>>
   <?php
   // We hide the links now so that we can render them later.
-  \hide($content['links']);
-  print \render($content);
+  hide($content['links']);
+  print render($content);
   ?>
 </span>

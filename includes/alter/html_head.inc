@@ -12,7 +12,7 @@
  */
 function ec_europa_html_head_alter(array &$head_elements) {
   // Creating favicons links and meta tags for the html header.
-  $europa_theme_png_path = \base_path() . \drupal_get_path('theme', 'ec_europa') . '/images/png/favicon/';
+  $europa_theme_png_path = base_path() . drupal_get_path('theme', 'ec_europa') . '/images/png/favicon/';
 
   $elements = array(
     array(

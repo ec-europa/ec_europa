@@ -19,11 +19,11 @@ function ec_europa_preprocess_node(array &$variables, $hook) {
   else {
     $variables['content_column_class'] = 'ecl-col-md-12';
   }
-  $variables['site_name'] = \variable_get('site_name');
+  $variables['site_name'] = variable_get('site_name');
   $variables['submitted'] = '';
 
-  if (\theme_get_setting('display_submitted')) {
-    $variables['submitted'] = \t('Submitted by !username on !datetime', array(
+  if (theme_get_setting('display_submitted')) {
+    $variables['submitted'] = t('Submitted by !username on !datetime', array(
       '!username' => $variables['name'],
       '!datetime' => $variables['date'],
     ));
@@ -39,7 +39,7 @@ function ec_europa_preprocess_node(array &$variables, $hook) {
   }
 
   // Add the language attribute.
-  if (\module_exists('entity_translation')) {
-    $variables['atomium']['attributes']['wrapper']->append('lang', \entity_translation_get_existing_language('node', $variables['node']));
+  if (module_exists('entity_translation')) {
+    $variables['atomium']['attributes']['wrapper']->append('lang', entity_translation_get_existing_language('node', $variables['node']));
   }
 }

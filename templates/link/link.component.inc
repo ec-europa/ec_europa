@@ -112,7 +112,7 @@ function ec_europa_preprocess_link(array &$variables, $hook) {
 
   // Add the class for the external links.
   // @todo: This is not working as it should.
-  if (\_ec_europa_url_is_external($variables['path'])
+  if (_ec_europa_url_is_external($variables['path'])
     && (!$variables['atomium']['attributes']['element']->exists('class', 'ecl-icon'))
     && (!$variables['atomium']['attributes']['element']->exists('class', 'ecl-icon-social'))
   ) {

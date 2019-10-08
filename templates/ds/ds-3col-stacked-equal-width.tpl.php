@@ -10,7 +10,7 @@
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="ds-3col-stacked-equal <?php print $classes; ?> clearfix">
 
   <?php if (isset($title_suffix['contextual_links'])): ?>
-  <?php print \render($title_suffix['contextual_links']); ?>
+  <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
   <<?php print $header_wrapper; ?> class="group-header<?php print $header_classes; ?>">

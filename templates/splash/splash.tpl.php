@@ -16,4 +16,4 @@
  */
 ?>
 
-<div<?php print $atomium['attributes']['wrapper']; ?>><?php print \render($languages_list); ?></div>
+<div<?php print $atomium['attributes']['wrapper']; ?>><?php print render($languages_list); ?></div>

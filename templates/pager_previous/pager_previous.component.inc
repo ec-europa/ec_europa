@@ -9,5 +9,5 @@
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_pager_previous(array &$variables, $hook) {
-  $variables[$variables['base_hook']][$variables['base_hook']]['#text'] = \t('‹ Previous');
+  $variables[$variables['base_hook']][$variables['base_hook']]['#text'] = t('‹ Previous');
 }

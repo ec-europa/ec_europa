@@ -8,13 +8,13 @@
 <div class="timeline">
     <div class="timeline__item">
         <div class="timeline__item-title">
-          <?php print \render($title); ?>
+          <?php print render($title); ?>
         </div>
         <div class="timeline__text">
-          <?php print \render($text); ?>
+          <?php print render($text); ?>
         </div>
     </div>
     <div class="timeline__footer">
-        <?php print \render($footer); ?>
+        <?php print render($footer); ?>
     </div>
 </div>

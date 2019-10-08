@@ -73,7 +73,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links(array &$v
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_service_links__footer(array &$variables, $hook) {
-  $variables = \_ec_europa_menu_link_footer_alter($variables);
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
@@ -91,7 +91,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media(array &$va
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_social_media__footer(array &$variables, $hook) {
-  $variables = \_ec_europa_menu_link_footer_alter($variables);
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
@@ -108,7 +108,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links(array &$vari
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_inst_links__footer(array &$variables, $hook) {
-  $variables = \_ec_europa_menu_link_footer_alter($variables);
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
@@ -125,21 +125,21 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(array &$vari
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__nexteuropa_site_social_media(array &$variables, $hook) {
-  $variables = \_ec_europa_menu_link_footer_alter($variables);
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__nexteuropa_site_custom_links(array &$variables, $hook) {
-  $variables = \_ec_europa_menu_link_footer_alter($variables);
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(array &$variables, $hook) {
-  $variables = \_ec_europa_menu_link_footer_alter($variables);
+  $variables = _ec_europa_menu_link_footer_alter($variables);
 }
 
 /**

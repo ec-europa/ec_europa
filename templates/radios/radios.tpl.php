@@ -15,7 +15,7 @@
 
 <div<?php print $atomium['attributes']['wrapper']; ?>>
   <?php if (!empty($description)): ?>
-    <p<?php print $atomium['attributes']['description']; ?>><?php print \render($description); ?></p>
+    <p<?php print $atomium['attributes']['description']; ?>><?php print render($description); ?></p>
   <?php endif; ?>
   <?php print $element['#children']; ?>
 </div>

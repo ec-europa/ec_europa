@@ -11,7 +11,7 @@
  * @SuppressWarnings(PHPMD)
  */
 function ec_europa_js_alter(array &$js) {
-  if (\module_exists('libraries') && ($path_fancybox = \libraries_get_path('fancybox'))) {
+  if (module_exists('libraries') && ($path_fancybox = libraries_get_path('fancybox'))) {
     unset(
       $js[$path_fancybox . '/jquery.fancybox.pack.js'],
       $js[$path_fancybox . '/helpers/jquery.fancybox-thumbs.js'],

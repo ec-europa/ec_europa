@@ -45,12 +45,12 @@
  */
 ?>
 <section<?php print $atomium['attributes']['wrapper']; ?>>
-  <?php print \render($title_prefix); ?>
-  <?php print \render($title_suffix); ?>
+  <?php print render($title_prefix); ?>
+  <?php print render($title_suffix); ?>
 
   <?php if (!empty($title['#markup'])): ?>
-    <p class="ecl-footer__label"><?php print \render($title); ?></p>
+    <p class="ecl-footer__label"><?php print render($title); ?></p>
   <?php endif; ?>
 
-  <?php print \render($content); ?>
+  <?php print render($content); ?>
 </section>

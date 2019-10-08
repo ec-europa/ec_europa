@@ -62,21 +62,21 @@
 ?>
 <div<?php print $atomium['attributes']['wrapper']->append('class', 'ecl-row ecl-comment'); ?>>
   <div class="ecl-comment__image-wrapper">
-    <?php print \render($picture); ?>
+    <?php print render($picture); ?>
   </div>
   <div class="ecl-comment__body">
     <div class="ecl-comment__meta">
       <span class="ecl-comment__author"><?php print $author; ?></span> |
       <span class="ecl-comment__date"><?php print $created; ?></span>
     </div>
-    <?php print \render($title_prefix); ?>
+    <?php print render($title_prefix); ?>
     <a class="ecl-link ecl-heading ecl-heading--h3 ecl-comment__title" href="<?php print $path; ?>"><?php print $title; ?></a>
-    <?php print \render($title_suffix); ?>
+    <?php print render($title_suffix); ?>
     <div class="ecl-comment__text">
-      <p class="ecl-paragraph"><?php \hide($content['links']); print \render($content); ?></p>
+      <p class="ecl-paragraph"><?php hide($content['links']); print render($content); ?></p>
     </div>
     <div class="ecl-comment__operations">
-      <?php print \render($content['links']); ?>
+      <?php print render($content['links']); ?>
     </div>
   </div>
 </div>

@@ -9,5 +9,5 @@
   <?php if (!empty($label)): ?>
     <span<?php print $atomium['attributes']['title']; ?>><?php print $label; ?></span>
   <?php endif; ?>
-  <?php print \render($items); ?>
+  <?php print render($items); ?>
 </div>

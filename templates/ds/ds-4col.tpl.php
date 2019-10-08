@@ -8,7 +8,7 @@
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="ds-4col <?php print $classes; ?>">
 
   <?php if (isset($title_suffix['contextual_links'])): ?>
-  <?php print \render($title_suffix['contextual_links']); ?>
+  <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
   <<?php print $ds_content_wrapper; print $layout_attributes; ?> class="ecl-row <?php print $classes; ?>">

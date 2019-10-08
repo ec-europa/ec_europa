@@ -43,7 +43,7 @@ function ec_europa_preprocess_splash(array &$variables, $hook) {
 
   foreach ($variables['languages_list_array'] as $language) {
     $variables['languages_list'][] = array(
-      '#theme' => \_atomium_extend_theme_hook('link', $variables['theme_hook_original']),
+      '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
       '#text' => $language->name,
       '#path' => $variables['path'],
       '#options' => array(
@@ -69,7 +69,7 @@ function ec_europa_preprocess_splash(array &$variables, $hook) {
   );
 
   foreach ($variables['languages_list'] as $index => &$language) {
-    $language['#theme'] = \_atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']);
+    $language['#theme'] = _atomium_extend_theme_hook('html_tag', $variables['theme_hook_original']);
     $language['#tag'] = 'div';
     $language['#attributes'] = array(
       'class' => array(

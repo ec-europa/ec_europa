@@ -8,7 +8,7 @@
 <div class="listing listing--navigation">
 
   <?php if (isset($title_suffix['contextual_links'])): ?>
-    <?php print \render($title_suffix['contextual_links']); ?>
+    <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
   <?php if (!empty($node_url)): ?>
