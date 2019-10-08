@@ -60,9 +60,9 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
     'ecl-container',
   ));
 
-  $variables['here'] = \t('You are here');
+  $variables['here'] = t('You are here');
 
-  \_ec_europa_breadcrumb_menu($variables);
+  _ec_europa_breadcrumb_menu($variables);
   $breadcrumb = $variables['breadcrumb'];
   $segments_quantity = $variables['segments_quantity'];
   $html = '';
@@ -93,10 +93,10 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       }
 
       $class = \implode(' ', $classes);
-      $content = \decode_entities($item['content']);
+      $content = decode_entities($item['content']);
 
       if (isset($item['url'])) {
-        $content = \l(
+        $content = l(
           $content,
           $item['url'],
           array(
@@ -105,7 +105,7 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
         );
       }
       else {
-        \check_plain($content);
+        check_plain($content);
       }
 
       // TODO: Check if the active class actually appears.
@@ -126,12 +126,12 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
  * Generate the first breadcrumb items basing on a custom menu.
  */
 function _ec_europa_breadcrumb_menu(&$variables) {
-  \module_load_include('inc', 'easy_breadcrumb', 'includes/easy_breadcrumb.blocks');
+  module_load_include('inc', 'easy_breadcrumb', 'includes/easy_breadcrumb.blocks');
 
-  $menu_links = \menu_tree('menu-breadcrumb-menu');
+  $menu_links = menu_tree('menu-breadcrumb-menu');
   $new_items = array();
   global $language;
-  $front = \drupal_is_front_page();
+  $front = drupal_is_front_page();
 
   if (!empty($menu_links)) {
     $i = 0;
@@ -141,12 +141,12 @@ function _ec_europa_breadcrumb_menu(&$variables) {
         // We don't want to show the home link in the home page.
         if (!($front && $menu_item['#href'] === '<front>')) {
           $options = array('language' => $language);
-          $title = \token_replace(
+          $title = token_replace(
             $menu_item['#title'],
             $menu_item,
             $options
           );
-          $new_items[] = \_easy_breadcrumb_build_item(
+          $new_items[] = _easy_breadcrumb_build_item(
             $title,
             array(),
             $menu_item['#href']

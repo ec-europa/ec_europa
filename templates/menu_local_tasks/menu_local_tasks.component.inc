@@ -18,7 +18,7 @@ function ec_europa_preprocess_menu_local_tasks(array &$variables, $hook) {
     $variables['menu_tab_links'] = $variables['primary']['#items'];
 
     // Set the default nav title which is mandatory in the Europa component.
-    $variables['primary']['#title'] = \t('Navigation');
+    $variables['primary']['#title'] = t('Navigation');
   }
 
   if (isset($variables['secondary']) && !empty($variables['secondary'])) {

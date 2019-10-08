@@ -10,7 +10,7 @@
 <?php endif; ?>
   <?php if ($title): ?>
     <div class="ecl-link-block__title">
-    <?php print \render($title); ?>
+    <?php print render($title); ?>
     </div>
   <?php endif; ?>
 
@@ -19,7 +19,7 @@
       <<?php print $type; ?><?php print $atomium['attributes']['list']; ?>>
   <?php endif; ?>
   <?php foreach ($variables['items'] as $item): ?>
-    <?php print \render($item); ?>
+    <?php print render($item); ?>
   <?php endforeach; ?>
   <?php if ($type): ?>
 </<?php print $type; ?>>

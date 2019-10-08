@@ -10,7 +10,7 @@
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="ecl-container <?php print $classes; ?>">
 
   <?php if (isset($title_suffix['contextual_links'])): ?>
-  <?php print \render($title_suffix['contextual_links']); ?>
+  <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
 
   <<?php print $header_wrapper; ?> class="ecl-row<?php print $header_classes; ?>">

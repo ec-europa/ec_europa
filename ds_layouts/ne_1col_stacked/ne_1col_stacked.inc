@@ -10,12 +10,12 @@
  */
 function ds_ne_1col_stacked() {
   return array(
-    'label' => \t('NE: 1col stacked'),
+    'label' => t('NE: 1col stacked'),
     'regions' => array(
-      'left_header' => \t('Left Header'),
-      'right_header' => \t('Right Header'),
-      'top' => \t('Top'),
-      'central' => \t('Main'),
+      'left_header' => t('Left Header'),
+      'right_header' => t('Right Header'),
+      'top' => t('Top'),
+      'central' => t('Main'),
     ),
     // Add this line if there is a default css file.
     'css' => TRUE,

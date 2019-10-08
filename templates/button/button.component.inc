@@ -30,7 +30,7 @@ function ec_europa_atomium_definition_form_button(array $form, array &$form_stat
 
   foreach ($variants as $value => $variant) {
     $form['buttons'][] = array(
-      '#theme' => \_atomium_extend_theme_hook('button', $variant),
+      '#theme' => _atomium_extend_theme_hook('button', $variant),
       '#button_type' => 'button',
       '#title' => $value,
       '#value' => $value,

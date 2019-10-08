@@ -11,7 +11,7 @@
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="ecl-container <?php print $classes; ?>">
 
 <?php if (isset($title_suffix['contextual_links'])): ?>
-  <?php print \render($title_suffix['contextual_links']); ?>
+  <?php print render($title_suffix['contextual_links']); ?>
 <?php endif; ?>
 
 <<?php print $ds_content_wrapper; ?> class="ecl-row <?php print \trim($ds_content_classes); ?>">

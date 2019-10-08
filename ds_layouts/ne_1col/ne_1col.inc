@@ -10,9 +10,9 @@
  */
 function ds_ne_1col() {
   return array(
-    'label' => \t('NE: 1col'),
+    'label' => t('NE: 1col'),
     'regions' => array(
-      'main' => \t('Main'),
+      'main' => t('Main'),
     ),
     // Add this line if there is a default css file.
     'css' => TRUE,
