@@ -44,7 +44,7 @@ function ec_europa_preprocess_splash(array &$variables, $hook) {
   foreach ($variables['languages_list_array'] as $language) {
     $variables['languages_list'][] = array(
       '#theme' => _atomium_extend_theme_hook('link', $variables['theme_hook_original']),
-      '#text' => $language->name,
+      '#text' => $language->native,
       '#path' => $variables['path'],
       '#options' => array(
         'attributes' => array(
