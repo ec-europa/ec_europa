@@ -50,9 +50,9 @@ function ec_europa_preprocess_splash(array &$variables, $hook) {
         'attributes' => array(
           'class' => array(
             'ecl-button',
+            'ecl-button--default',
             'ecl-button--block',
-            'ecl-button--splash-page',
-            'ecl-u-mb-xxxs',
+            'ecl-language-list__button',
           ),
           'lang' => $language->language,
           'hreflang' => $language->language,
