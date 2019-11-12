@@ -49,7 +49,7 @@
   <?php print render($title_suffix); ?>
 
   <?php if (!empty($title['#markup'])): ?>
-    <p class="ecl-footer__label"><?php print render($title); ?></p>
+    <p class="ecl-footer__custom-label"><?php print render($title); ?></p>
   <?php endif; ?>
 
   <?php print render($content); ?>

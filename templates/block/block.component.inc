@@ -70,7 +70,7 @@ function ec_europa_preprocess_block(array &$variables, $hook) {
     case 'menu-nexteuropa-social-media':
     case 'menu-nexteuropa-inst-links':
       $variables['title'] = $block->subject;
-      $variables['atomium']['attributes']['title']->append('class', array('ecl-h4', 'ecl-footer__title'));
+      $variables['atomium']['attributes']['title']->append('class', array('ecl-heading', 'ecl-heading--h4', 'ecl-footer__column-title'));
       $block->subject = '';
 
       break;

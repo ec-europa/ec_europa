@@ -125,13 +125,18 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links(array &$vari
  */
 function ec_europa_preprocess_menu_link__nexteuropa_site_social_media(array &$variables, $hook) {
   $variables = _ec_europa_menu_link_footer_alter($variables);
+  $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'] = \array_diff(
+    $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'],
+    array('ecl-link--standalone')
+  );
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_link__nexteuropa_site_custom_links(array &$variables, $hook) {
-  $variables = _ec_europa_menu_link_footer_alter($variables);
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__list-item');
+  $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'] = array('ecl-link', 'ecl-footer__link');
 }
 
 /**
@@ -151,7 +156,7 @@ function ec_europa_preprocess_menu_link__menu_nexteuropa_site_links__footer(arra
  *   The array of variables.
  */
 function _ec_europa_menu_link_footer_alter(array $variables) {
-  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__menu-item');
+  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__list-item');
   $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'][] = 'ecl-footer__link';
   $variables[$variables['base_hook']][$variables['base_hook']]['#options']['attributes']['class'][] = 'ecl-link--inverted';
 

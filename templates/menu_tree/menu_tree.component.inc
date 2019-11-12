@@ -74,21 +74,21 @@ function ec_europa_preprocess_menu_tree__menu_service_tools(array &$variables, $
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_tree__menu_nexteuropa_social_media(array &$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--inline'));
+  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-list', 'ecl-list--unstyled', 'ecl-list--inline', 'ecl-footer__list', 'ecl-footer__list--inline', 'ecl-footer__social-links'));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_tree__menu_nexteuropa_inst_links(array &$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__menu');
+  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-list', 'ecl-list--unstyled', 'ecl-footer__list'));
 }
 
 /**
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_tree__menu_nexteuropa_site_links(array &$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', 'ecl-footer__menu');
+  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-list', 'ecl-list--unstyled', 'ecl-footer__list'));
 }
 
 /**
@@ -98,9 +98,12 @@ function ec_europa_preprocess_menu_tree__nexteuropa_site_social_media(array &$va
   $variables['atomium']['attributes']['wrapper']->append(
     'class',
     array(
-      'ecl-footer__menu',
+      'ecl-list',
       'ecl-list--inline',
+      'ecl-footer__list',
+      'ecl-footer__list--inline',
       'ecl-footer__social-links',
+      'ecl-u-d-inline',
     )
   );
 }
@@ -109,5 +112,5 @@ function ec_europa_preprocess_menu_tree__nexteuropa_site_social_media(array &$va
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_menu_tree__nexteuropa_site_custom_links(array &$variables, $hook) {
-  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-footer__menu', 'ecl-list--unstyled'));
+  $variables['atomium']['attributes']['wrapper']->append('class', array('ecl-list', 'ecl-list--unstyled', 'ecl-footer__list'));
 }

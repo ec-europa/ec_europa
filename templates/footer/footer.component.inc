@@ -292,7 +292,12 @@ function ec_europa_preprocess_footer(array &$variables, $hook) {
       '#tag' => 'h4',
       '#attributes' => array(
         'class' => array(
-          'ecl-h4',
+          'ecl-heading',
+          'ecl-heading--h4',
+          'ecl-u-mt-xxxs',
+          'ecl-u-mb-none',
+          'ecl-footer__column-title',
+          'ecl-footer__custom-title-identity',
         ),
       ),
       array(
