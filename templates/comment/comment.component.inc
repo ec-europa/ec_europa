@@ -13,10 +13,10 @@ function ec_europa_preprocess_comment(array &$variables, $hook) {
   $variables['created'] = format_date($comment->created, 'ec_date');
   $variables['title'] = check_plain($comment->subject);
 
-  $variables['content']['links']['#attributes']['class'][] = 'ecl-list--inline ecl-comment__operations';
+  $variables['content']['links']['#attributes']['class'][] = 'ecl-list ecl-list--inline ecl-comment__operations';
 
   \array_walk($variables['content']['links']['comment']['#links'], function (&$link) {
-    $link['attributes']['class'] = array('ecl-comment__' . $link['title']);
+    $link['attributes']['class'] = array('ecl-comment__' . $link['title'], 'ecl-link');
   });
 
   $variables['path'] = url(

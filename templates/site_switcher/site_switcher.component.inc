@@ -83,4 +83,7 @@ function ec_europa_preprocess_site_switcher(array &$variables, $hook) {
       ) + $link,
     );
   }
+
+  // Style .ecl-site-switcher__option--is-selected .ecl-site-switcher__link is gone.
+  $variables['links']['#items']['1']['data']['#options']['attributes']['class'][] = 'ecl-link--inverted';
 }

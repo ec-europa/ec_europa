@@ -60,7 +60,6 @@ function ec_europa_preprocess_easy_breadcrumb(array &$variables, $hook) {
       'class',
       array(
         'ecl-breadcrumb',
-        'ecl-container',
       )
     )
     ->append(
