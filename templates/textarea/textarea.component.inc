@@ -48,7 +48,6 @@ function ec_europa_atomium_definition_form_textarea(array $form, array &$form_st
  * Implements hook_preprocess_hook().
  */
 function ec_europa_preprocess_textarea(array &$variables, $hook) {
-  $variables['atomium']['attributes']['element']->merge($variables['element']['#attributes']);
   $variables['atomium']['attributes']['element']->append('class', 'ecl-textarea');
   $variables['atomium']['attributes']['element']->setAttribute('role', 'textbox');
   $variables['atomium']['attributes']['element']->setAttribute('aria-multiline', 'true');
