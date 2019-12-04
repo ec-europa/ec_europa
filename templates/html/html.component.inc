@@ -25,6 +25,7 @@ function ec_europa_preprocess_html(array &$variables, $hook) {
   }
 
   $variables['atomium']['attributes']['html']
+    ->append('class', 'no-js')
     ->append('lang', $language->language)
     ->append('dir', $language->dir)
     ->delete('prefix');

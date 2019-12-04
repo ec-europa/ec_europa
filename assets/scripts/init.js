@@ -7,6 +7,9 @@
             $('.ecl-navigation-menu__toggle').once('ecEuropaExpandable', function() {
                 ECL.initExpandables('.ecl-navigation-menu__toggle');
             });
+            if ($('html').hasClass('js')) {
+              $('html').removeClass('no-js');
+            }
         }
     };
 }(jQuery));
