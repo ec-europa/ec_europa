@@ -3,3 +3,11 @@
     margin: 0;
     text-decoration: underline;
 }
+.ecl-textarea:focus {
+    border-color: #fbc11d;
+    outline: 3px solid #fbc11d;
+}
+.ecl-textarea--has-error {
+  border-color: #da2130;
+  border-width: 2px;
+}
