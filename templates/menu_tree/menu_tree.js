@@ -11,4 +11,9 @@
             });
         }
     };
+    Drupal.behaviors.megaMenu = {
+        attach: function (context, settings) {
+          ECL.megamenu();
+        }
+    };
 })(jQuery);
