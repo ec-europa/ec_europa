@@ -109,7 +109,7 @@ function ec_europa_tableselect($variables) {
   // Use the default implementation to render the table.
   // We cannot use theme('tableselect',...) or else we will end up in a loop.
   // Better solutions are welcome.
-  return theme('tableselect', $variables);
+  return theme_tableselect($variables);
 }
 
 /**
