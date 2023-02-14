@@ -23,8 +23,8 @@ Current supported browsers:
 
 Table of content:
 =================
-- [Installation](#a-installation)
-- [Styleguide](#styleguide)
+- [Installation](#installation)
+- [Styleguide](#style-guide)
 - [Tests](#tests)
 - [Helper tools](#helper-tools)
 - [Developers notes](#developers-notes)
